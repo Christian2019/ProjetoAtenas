@@ -1,13 +1,7 @@
 Gerador de Mapa
  Tiles
-  Agua
-  Chao Contruivel
-  Estrada
-  Chao da cidade
   Muro
-  Ponte
-  Grama(4 Niveis de Filtro)
-   
+
  Cenario
   Agua
   Caminho de passagem dos inimigos
