@@ -1,13 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://cb86td4m1hepw"]
+[gd_scene load_steps=7 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="Texture2D" uid="uid://bgsy0yjj66dwd" path="res://Assets/Images/4023455132_414b7f28af_b.jpg" id="1_ipgh4"]
 [ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="3_dbgxm"]
 [ext_resource type="Script" path="res://Scripts/BackgroundMusic.gd" id="4_1h7yp"]
+[ext_resource type="PackedScene" uid="uid://ba8lsakijrbpv" path="res://Scenes/tiles.tscn" id="4_ajpl0"]
 [ext_resource type="PackedScene" uid="uid://b8uain7bgtuua" path="res://Scenes/player.tscn" id="5_si4pj"]
+[ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="6_t7mfi"]
 
 [node name="Game" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [2757.0]
+metadata/_edit_vertical_guides_ = [2555.0]
 
 [node name="BackGround" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1296, -45)
 scale = Vector2(6.29771, 6.29771)
 texture = ExtResource("1_ipgh4")
@@ -16,6 +21,13 @@ texture = ExtResource("1_ipgh4")
 stream = ExtResource("3_dbgxm")
 script = ExtResource("4_1h7yp")
 
+[node name="Tiles" parent="." instance=ExtResource("4_ajpl0")]
+position = Vector2(4, 192)
+scale = Vector2(4, 4)
+
 [node name="Player" parent="." instance=ExtResource("5_si4pj")]
-position = Vector2(80, 57)
+position = Vector2(1263, 992)
 scale = Vector2(2, 2)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("6_t7mfi")

@@ -1,0 +1,47 @@
+Gerador de Mapa
+ Tiles
+  Agua
+  Chao Contruivel
+  Estrada
+  Chao da cidade
+  Muro
+  Ponte
+  Grama(4 Niveis de Filtro)
+   
+ Cenario
+  Agua
+  Caminho de passagem dos inimigos
+  Local Para contrucoes
+  Ponte 
+  Local De Mineracao
+   4 camadas de profundidade 
+  Base
+   6 contrucoes lugar central e 3 portoes
+
+HUD
+ Vida do personagem
+ Quantidade de Recursos
+ Poderes
+ Linha do tempo para proxima wave
+ 
+
+Inimigos
+ Boss
+ Normal
+
+Mineracao
+ Mineradores
+ Camada de resistencia
+ Pedra, Madeira, Ouro
+
+Contrucoes de Melhoria
+ Torres, Lutadores, Mineradores, Poderes Divinos, Heroi Luta, Heroi Mineracao
+
+Combate:
+ Contrucoes de combate
+ 
+ Luta
+ 
+ Poderes
+  Passagem Celeste
+	

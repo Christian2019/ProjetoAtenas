@@ -1,6 +1,6 @@
 extends Node2D
 
-var speed = 2
+var speed = 5
 
 func _ready():
 	$Animation.play("Right")

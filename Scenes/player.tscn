@@ -127,4 +127,4 @@ script = ExtResource("1_0mv22")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ddi15")
-animation = &"Down"
+animation = &"Up"
