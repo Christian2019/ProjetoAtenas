@@ -1,4 +1,3 @@
 res://default_env.tres
 res://Scenes/Game.tscn
-res://Scripts/Start.gd
-res://Scripts/AudioStreamPlayer.gd
+res://Scripts/BackgroundMusic.gd

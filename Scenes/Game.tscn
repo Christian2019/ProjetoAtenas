@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccya6dijvwv5s"]
+[gd_scene load_steps=6 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="Texture2D" uid="uid://bgsy0yjj66dwd" path="res://Assets/Images/4023455132_414b7f28af_b.jpg" id="1_ipgh4"]
 [ext_resource type="Texture2D" uid="uid://brp7dugyjpg03" path="res://Assets/Images/GOWIIIKratos.png" id="2_7wpxo"]
-[ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/SnapInsta.io - Age of Mythology Soundtrack (Full) (128 kbps).mp3" id="3_lkhc3"]
-[ext_resource type="Script" path="res://Scripts/AudioStreamPlayer.gd" id="4_o3rqc"]
+[ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="3_dbgxm"]
+[ext_resource type="Script" path="res://Scripts/BackgroundMusic.gd" id="4_1h7yp"]
 
 [sub_resource type="SpriteFrames" id="1"]
 animations = [{
@@ -28,6 +28,6 @@ position = Vector2(421.5, 222.286)
 scale = Vector2(0.0907405, 0.0907405)
 sprite_frames = SubResource("1")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_lkhc3")
-script = ExtResource("4_o3rqc")
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dbgxm")
+script = ExtResource("4_1h7yp")
