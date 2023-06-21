@@ -1,3 +1,4 @@
 res://default_env.tres
 res://Scenes/Game.tscn
-res://Scripts/BackgroundMusic.gd
+res://Scenes/player.tscn
+res://Scripts/player.gd

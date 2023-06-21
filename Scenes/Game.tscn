@@ -1,33 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://cb86td4m1hepw"]
+[gd_scene load_steps=5 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="Texture2D" uid="uid://bgsy0yjj66dwd" path="res://Assets/Images/4023455132_414b7f28af_b.jpg" id="1_ipgh4"]
-[ext_resource type="Texture2D" uid="uid://brp7dugyjpg03" path="res://Assets/Images/GOWIIIKratos.png" id="2_7wpxo"]
 [ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="3_dbgxm"]
 [ext_resource type="Script" path="res://Scripts/BackgroundMusic.gd" id="4_1h7yp"]
-
-[sub_resource type="SpriteFrames" id="1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_7wpxo")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[ext_resource type="PackedScene" uid="uid://b8uain7bgtuua" path="res://Scenes/player.tscn" id="5_si4pj"]
 
 [node name="Game" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="BackGround" type="Sprite2D" parent="."]
 position = Vector2(1296, -45)
 scale = Vector2(6.29771, 6.29771)
 texture = ExtResource("1_ipgh4")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(421.5, 222.286)
-scale = Vector2(0.0907405, 0.0907405)
-sprite_frames = SubResource("1")
-
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_dbgxm")
 script = ExtResource("4_1h7yp")
+
+[node name="Player" parent="." instance=ExtResource("5_si4pj")]
+position = Vector2(80, 57)
+scale = Vector2(2, 2)
