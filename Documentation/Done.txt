@@ -1,5 +1,10 @@
 Gerador de Mapa
- Tiles
+ Mineraveis (arvore pedra, ouro)
+
+Matriz quadrados 
+ Luz de selecao
+
+Tiles
   Muro
   Portao
   Agua
@@ -8,6 +13,3 @@ Gerador de Mapa
   Chao da cidade
   Ponte
   Grama(4 Niveis de Filtro)
-
-Matriz quadrados 
- Luz de selecao

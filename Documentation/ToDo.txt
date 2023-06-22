@@ -1,9 +1,3 @@
-Matriz quadrados 
- Luz de selecao
-
-Gerador de Mapa
- Mineraveis (arvore pedra, ouro)
-
 HUD
  Vida do personagem
  Quantidade de Recursos

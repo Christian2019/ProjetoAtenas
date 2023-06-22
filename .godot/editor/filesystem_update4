@@ -1,11 +1,9 @@
 res://default_env.tres
-res://Scenes/tiles.tscn
-res://Assets/Images/Tiles/TileMap.tres
 res://Scenes/Game.tscn
+res://Assets/Images/Tiles/TileMap.tres
 res://Scenes/player.tscn
+res://Scenes/tiles.tscn
 res://Scenes/matriz.tscn
 res://Scenes/quadrant.tscn
-res://Scripts/quadrant.gd
-res://Scripts/player.gd
 res://Scripts/matriz.gd
-res://Scripts/FPS.gd
+res://Scripts/quadrant.gd
