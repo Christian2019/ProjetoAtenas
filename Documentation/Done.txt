@@ -1,5 +1,7 @@
 Gerador de Mapa
  Tiles
+  Muro
+  Portao
   Agua
   Chao Contruivel
   Estrada

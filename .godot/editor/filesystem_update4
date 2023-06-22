@@ -1,6 +1,5 @@
 res://default_env.tres
+res://Scenes/tiles.tscn
+res://Assets/Images/Tiles/TileMap.tres
 res://Scenes/Game.tscn
 res://Scenes/player.tscn
-res://Scenes/tiles.tscn
-res://Scripts/Camera2D.gd
-res://Scripts/player.gd

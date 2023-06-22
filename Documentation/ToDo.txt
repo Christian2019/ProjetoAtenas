@@ -1,16 +1,8 @@
-Gerador de Mapa
- Tiles
-  Muro
+Matriz quadrados 
+ Luz de selecao
 
- Cenario
-  Agua
-  Caminho de passagem dos inimigos
-  Local Para contrucoes
-  Ponte 
-  Local De Mineracao
-   4 camadas de profundidade 
-  Base
-   6 contrucoes lugar central e 3 portoes
+Gerador de Mapa
+ Mineraveis (arvore pedra, ouro)
 
 HUD
  Vida do personagem
@@ -20,7 +12,7 @@ HUD
  
 
 Inimigos
- Boss
+ Boss (leviathan)
  Normal
 
 Mineracao
