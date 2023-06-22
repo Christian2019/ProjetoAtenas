@@ -8,3 +8,6 @@ Gerador de Mapa
   Chao da cidade
   Ponte
   Grama(4 Niveis de Filtro)
+
+Matriz quadrados 
+ Luz de selecao

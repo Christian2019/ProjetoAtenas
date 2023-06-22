@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqji3jr451ges"]
+
+[ext_resource type="Script" path="res://Scripts/matriz.gd" id="1_hx5mo"]
+[ext_resource type="PackedScene" uid="uid://t3dku3vo8c2s" path="res://Scenes/quadrant.tscn" id="1_ty08n"]
+
+[node name="matriz" type="Node2D"]
+script = ExtResource("1_hx5mo")
+
+[node name="quadrant" parent="." instance=ExtResource("1_ty08n")]

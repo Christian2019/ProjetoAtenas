@@ -1,4 +1,8 @@
+Label
+CollisionShape2D
+Area2D
+Node2D
+ColorRect
 Camera2D
 TileMap
-Node2D
 AnimatedSprite2D

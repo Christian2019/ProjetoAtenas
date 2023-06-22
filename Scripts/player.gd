@@ -10,6 +10,8 @@ func _ready():
 func _process(delta):
 	animationController()
 	moveController()	
+	get_parent()
+	
 
 func animationController():
 	if Input.is_action_pressed("Move_Down"):
