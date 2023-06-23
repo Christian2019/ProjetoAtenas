@@ -1,0 +1,192 @@
+[gd_scene load_steps=8 format=3 uid="uid://b18nigm5wn5ab"]
+
+[ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
+[ext_resource type="FontFile" uid="uid://duy38o6o71nij" path="res://Assets/Fonts/Kurland.otf" id="2_owy1r"]
+[ext_resource type="Texture2D" uid="uid://dngj5ixcj4v7" path="res://Assets/Images/HUD/hearth.png" id="3_ew26g"]
+[ext_resource type="Texture2D" uid="uid://ywre30ix5f7t" path="res://Assets/Images/Resources/wood.png" id="4_ujb4v"]
+[ext_resource type="Texture2D" uid="uid://dlwvyo6ejssc" path="res://Assets/Images/Resources/gold.png" id="5_dhfbp"]
+[ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="6_41dw3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_22btt"]
+font = ExtResource("2_owy1r")
+font_size = 20
+
+[node name="HUD" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+position = Vector2(55.1263, 47.4255)
+scale = Vector2(0.562808, 0.557017)
+texture = ExtResource("1_2qrhs")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background"]
+position = Vector2(165, 48)
+scale = Vector2(0.562808, 0.557017)
+texture = ExtResource("1_2qrhs")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background"]
+position = Vector2(275, 48)
+scale = Vector2(0.562808, 0.557017)
+texture = ExtResource("1_2qrhs")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Background"]
+position = Vector2(384, 49)
+scale = Vector2(0.562808, 0.557017)
+texture = ExtResource("1_2qrhs")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Background"]
+position = Vector2(493, 49)
+scale = Vector2(0.562808, 0.557017)
+texture = ExtResource("1_2qrhs")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Background"]
+position = Vector2(602.874, 49.5745)
+scale = Vector2(0.562808, 0.557017)
+texture = ExtResource("1_2qrhs")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Background"]
+position = Vector2(712.747, 50.149)
+scale = Vector2(0.562808, 0.557017)
+texture = ExtResource("1_2qrhs")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Background"]
+position = Vector2(822.747, 50.149)
+scale = Vector2(0.562808, 0.557017)
+texture = ExtResource("1_2qrhs")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Background"]
+position = Vector2(931.747, 51.149)
+scale = Vector2(0.562808, 0.557017)
+texture = ExtResource("1_2qrhs")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Background"]
+position = Vector2(1040.75, 51.149)
+scale = Vector2(0.562808, 0.557017)
+texture = ExtResource("1_2qrhs")
+
+[node name="Frontground" type="Node2D" parent="."]
+
+[node name="HP" type="Node2D" parent="Frontground"]
+position = Vector2(-40, -61)
+
+[node name="Label" type="Label" parent="Frontground/HP"]
+offset_left = 46.0
+offset_top = 69.0
+offset_right = 233.0
+offset_bottom = 113.0
+text = "HP 100/100"
+label_settings = SubResource("LabelSettings_22btt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Frontground/HP"]
+position = Vector2(98, 126)
+scale = Vector2(0.0543479, 0.0543479)
+texture = ExtResource("3_ew26g")
+
+[node name="Wood" type="Node2D" parent="Frontground"]
+position = Vector2(110, -61)
+
+[node name="Label" type="Label" parent="Frontground/Wood"]
+offset_left = 14.0
+offset_top = 68.0
+offset_right = 201.0
+offset_bottom = 112.0
+text = "Wood 100"
+label_settings = SubResource("LabelSettings_22btt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Frontground/Wood"]
+position = Vector2(59, 123)
+scale = Vector2(3.3, 3.3)
+texture = ExtResource("4_ujb4v")
+
+[node name="Gold" type="Node2D" parent="Frontground"]
+position = Vector2(220, -61)
+
+[node name="Label" type="Label" parent="Frontground/Gold"]
+offset_left = 15.0
+offset_top = 68.0
+offset_right = 202.0
+offset_bottom = 112.0
+text = "Gold 100"
+label_settings = SubResource("LabelSettings_22btt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Frontground/Gold"]
+position = Vector2(56, 126)
+scale = Vector2(3.3, 3.3)
+texture = ExtResource("5_dhfbp")
+
+[node name="Stone" type="Node2D" parent="Frontground"]
+position = Vector2(330, -61)
+
+[node name="Label" type="Label" parent="Frontground/Stone"]
+offset_left = 15.0
+offset_top = 68.0
+offset_right = 202.0
+offset_bottom = 112.0
+text = "Stone 100"
+label_settings = SubResource("LabelSettings_22btt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Frontground/Stone"]
+position = Vector2(56, 126)
+scale = Vector2(3.3, 3.3)
+texture = ExtResource("6_41dw3")
+
+[node name="Powers" type="Node2D" parent="Frontground"]
+position = Vector2(427, -63)
+
+[node name="Label" type="Label" parent="Frontground/Powers"]
+offset_left = 151.0
+offset_top = 72.0
+offset_right = 338.0
+offset_bottom = 116.0
+text = "Powers"
+label_settings = SubResource("LabelSettings_22btt")
+
+[node name="Spaces" type="Node2D" parent="Frontground/Powers"]
+position = Vector2(0, -2)
+scale = Vector2(1.038, 1.038)
+
+[node name="ColorRect" type="ColorRect" parent="Frontground/Powers/Spaces"]
+offset_left = 54.9133
+offset_top = 104.046
+offset_right = 76.9133
+offset_bottom = 126.046
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Frontground/Powers/Spaces"]
+offset_left = 157.996
+offset_top = 104.046
+offset_right = 179.996
+offset_bottom = 126.046
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Frontground/Powers/Spaces"]
+offset_left = 266.859
+offset_top = 104.046
+offset_right = 288.859
+offset_bottom = 126.046
+color = Color(1, 0, 0, 1)
+
+[node name="TimeLine" type="Node2D" parent="Frontground"]
+
+[node name="Label" type="Label" parent="Frontground/TimeLine"]
+offset_left = 822.0
+offset_top = 9.0
+offset_right = 1009.0
+offset_bottom = 53.0
+text = "Time to Next Wave"
+label_settings = SubResource("LabelSettings_22btt")
+
+[node name="Label2" type="Label" parent="Frontground/TimeLine"]
+offset_left = 877.0
+offset_top = 73.0
+offset_right = 917.0
+offset_bottom = 99.0
+text = "30s"
+
+[node name="ColorRect" type="ColorRect" parent="Frontground/TimeLine"]
+offset_left = 805.0
+offset_top = 43.0
+offset_right = 1005.0
+offset_bottom = 65.0
+color = Color(1, 0, 0, 1)

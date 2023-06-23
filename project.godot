@@ -11,13 +11,20 @@ config_version=5
 [application]
 
 config/name="Projeto Atenas"
-run/main_scene="res://Scenes/Game.tscn"
+run/main_scene="res://Scenes/ViewPort.tscn"
 config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 
 [autoload]
 
 Start="*res://Scripts/Start.gd"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=600
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
 
 [gui]
 

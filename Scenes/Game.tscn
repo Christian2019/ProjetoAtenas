@@ -1,12 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cb86td4m1hepw"]
+[gd_scene load_steps=6 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="3_dbgxm"]
 [ext_resource type="Script" path="res://Scripts/BackgroundMusic.gd" id="4_1h7yp"]
 [ext_resource type="PackedScene" uid="uid://ba8lsakijrbpv" path="res://Scenes/tiles.tscn" id="4_ajpl0"]
 [ext_resource type="PackedScene" uid="uid://b8uain7bgtuua" path="res://Scenes/player.tscn" id="5_si4pj"]
-[ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="6_t7mfi"]
 [ext_resource type="PackedScene" uid="uid://bqji3jr451ges" path="res://Scenes/matriz.tscn" id="7_nup2t"]
-[ext_resource type="Script" path="res://Scripts/FPS.gd" id="7_pc82f"]
 
 [node name="Game" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [2752.0]
@@ -19,17 +17,6 @@ script = ExtResource("4_1h7yp")
 [node name="Tiles" parent="." instance=ExtResource("4_ajpl0")]
 position = Vector2(4, 192)
 scale = Vector2(4, 4)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource("6_t7mfi")
-
-[node name="FPS" type="Label" parent="Camera2D"]
-offset_left = 504.0
-offset_top = -295.0
-offset_right = 554.0
-offset_bottom = -269.0
-text = "FPS:60"
-script = ExtResource("7_pc82f")
 
 [node name="matriz" parent="." instance=ExtResource("7_nup2t")]
 
