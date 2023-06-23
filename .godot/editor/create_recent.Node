@@ -1,10 +1,10 @@
+Sprite2D
+Node2D
 Label
 LineEdit
 Line2D
-Node2D
 ColorRect
 ReferenceRect
-Sprite2D
 Camera2D
 SubViewport
 SubViewportContainer

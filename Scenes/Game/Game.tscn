@@ -1,0 +1,51 @@
+[gd_scene load_steps=12 format=3 uid="uid://cb86td4m1hepw"]
+
+[ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="1_28pgp"]
+[ext_resource type="Script" path="res://Scripts/BackgroundMusic.gd" id="2_1c6e5"]
+[ext_resource type="PackedScene" uid="uid://ba8lsakijrbpv" path="res://Scenes/Game/tiles.tscn" id="3_lg0li"]
+[ext_resource type="PackedScene" uid="uid://bqji3jr451ges" path="res://Scenes/Game/matriz.tscn" id="4_di3q4"]
+[ext_resource type="PackedScene" uid="uid://b8uain7bgtuua" path="res://Scenes/Game/player.tscn" id="5_x6q60"]
+[ext_resource type="PackedScene" uid="uid://cqst01u1tcjrv" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_DivinePower.tscn" id="6_i4pfo"]
+[ext_resource type="PackedScene" uid="uid://be8jy3gf588ph" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_Fighters.tscn" id="7_5w6qj"]
+[ext_resource type="PackedScene" uid="uid://bwdc4mn3tym23" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_Workers.tscn" id="8_t3l0u"]
+[ext_resource type="PackedScene" uid="uid://gsectpa52hfj" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_Towers.tscn" id="9_jeuhr"]
+[ext_resource type="PackedScene" uid="uid://yj0y1bkmdwpi" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_Hero.tscn" id="10_ohrki"]
+[ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple.tscn" id="10_v6y37"]
+
+[node name="Game" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [2752.0]
+metadata/_edit_vertical_guides_ = [2560.0]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_28pgp")
+script = ExtResource("2_1c6e5")
+
+[node name="Tiles" parent="." instance=ExtResource("3_lg0li")]
+position = Vector2(4, 192)
+scale = Vector2(4, 4)
+
+[node name="matriz" parent="." instance=ExtResource("4_di3q4")]
+
+[node name="UpgradeContructions" type="Node2D" parent="."]
+
+[node name="Upgrade_DivinePower" parent="UpgradeContructions" instance=ExtResource("6_i4pfo")]
+position = Vector2(1139, 879)
+
+[node name="Upgrade_Fighters" parent="UpgradeContructions" instance=ExtResource("7_5w6qj")]
+position = Vector2(1417, 877)
+
+[node name="Upgrade_Workers" parent="UpgradeContructions" instance=ExtResource("8_t3l0u")]
+position = Vector2(1284, 1121)
+
+[node name="Upgrade_Towers" parent="UpgradeContructions" instance=ExtResource("9_jeuhr")]
+position = Vector2(1414, 1149)
+
+[node name="Upgrade_Hero" parent="UpgradeContructions" instance=ExtResource("10_ohrki")]
+position = Vector2(1137, 1144)
+
+[node name="Temple" parent="." instance=ExtResource("10_v6y37")]
+position = Vector2(1283, 943)
+scale = Vector2(0.622, 0.622)
+
+[node name="Player" parent="." instance=ExtResource("5_x6q60")]
+position = Vector2(1157, 967)

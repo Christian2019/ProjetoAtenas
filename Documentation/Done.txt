@@ -1,3 +1,12 @@
+Contrucoes de Melhoria
+ Torres, Lutadores, Mineradores, Poderes Divinos, Heroi Luta, Heroi Mineracao
+
+HUD e ViewPort
+ Vida do personagem
+ Quantidade de Recursos
+ Poderes
+ Linha do tempo para proxima wave
+
 Gerador de Mapa
  Mineraveis (arvore pedra, ouro)
 

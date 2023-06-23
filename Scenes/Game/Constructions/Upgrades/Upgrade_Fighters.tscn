@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://be8jy3gf588ph"]
+
+[ext_resource type="Texture2D" uid="uid://okfxk5dm5ug1" path="res://Assets/Images/Constructions/Upgrades/Fighters.png" id="1_os5of"]
+
+[node name="Upgrade_Fighters" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_os5of")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqst01u1tcjrv"]
+
+[ext_resource type="Texture2D" uid="uid://b3kqyirv866yr" path="res://Assets/Images/Constructions/Upgrades/DivinePowers.png" id="1_bi51g"]
+
+[node name="Upgrade_DivinePower" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bi51g")

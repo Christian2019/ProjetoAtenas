@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cawqbopdr275u"]
+
+[ext_resource type="Texture2D" uid="uid://ds3xll5d3cnrc" path="res://Assets/Images/Constructions/Temple.png" id="1_8v1rt"]
+
+[node name="Temple" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8v1rt")

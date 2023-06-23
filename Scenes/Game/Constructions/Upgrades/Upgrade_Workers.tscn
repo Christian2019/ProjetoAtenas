@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwdc4mn3tym23"]
+
+[ext_resource type="Texture2D" uid="uid://bwic5fvhsehca" path="res://Assets/Images/Constructions/Upgrades/Workers.png" id="1_a1ol6"]
+
+[node name="Upgrade_Workers" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a1ol6")

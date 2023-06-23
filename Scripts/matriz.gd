@@ -8,7 +8,7 @@ var resources = []
 var max_linhas = 43
 var max_colunas = 40
 
-var quadrant = preload("res://Scenes/quadrant.tscn")
+var quadrant = preload("res://Scenes/Game/quadrant.tscn")
 var start = false
 
 func _process(delta):

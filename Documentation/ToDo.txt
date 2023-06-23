@@ -1,21 +1,14 @@
-HUD
- Vida do personagem
- Quantidade de Recursos
- Poderes
- Linha do tempo para proxima wave
- 
-
-Inimigos
- Boss (leviathan)
- Normal
+Contrucoes de Melhoria
+ Torres, Lutadores, Mineradores, Poderes Divinos, Heroi Luta, Heroi Mineracao
 
 Mineracao
  Mineradores
  Camada de resistencia
  Pedra, Madeira, Ouro
 
-Contrucoes de Melhoria
- Torres, Lutadores, Mineradores, Poderes Divinos, Heroi Luta, Heroi Mineracao
+Inimigos
+ Boss (leviathan)
+ Normal
 
 Combate:
  Contrucoes de combate

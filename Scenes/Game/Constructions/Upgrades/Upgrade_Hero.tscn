@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://yj0y1bkmdwpi"]
+
+[ext_resource type="Texture2D" uid="uid://bjgqjixj4d783" path="res://Assets/Images/Constructions/Upgrades/Hero.png" id="1_5ecpr"]
+
+[node name="Upgrade_Hero" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5ecpr")

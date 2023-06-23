@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxof24y8ypg6y"
-path="res://.godot/imported/bordaPoder.png-aab18514637c0826527f2cf08304cf74.ctex"
+uid="uid://bjgqjixj4d783"
+path="res://.godot/imported/Hero.png-ba4cbd5eaf2327df47a4c1890052a866.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/HUD/bordaPoder.png"
-dest_files=["res://.godot/imported/bordaPoder.png-aab18514637c0826527f2cf08304cf74.ctex"]
+source_file="res://Assets/Images/Constructions/Upgrades/Hero.png"
+dest_files=["res://.godot/imported/Hero.png-ba4cbd5eaf2327df47a4c1890052a866.ctex"]
 
 [params]
 
