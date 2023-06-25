@@ -1,5 +1,9 @@
-Sprite2D
+CollisionShape2D
+Area2D
 Node2D
+AnimatedSprite2D
+Timer
+Sprite2D
 Label
 LineEdit
 Line2D
@@ -8,7 +12,4 @@ ReferenceRect
 Camera2D
 SubViewport
 SubViewportContainer
-AnimatedSprite2D
-CollisionShape2D
-Area2D
 TileMap

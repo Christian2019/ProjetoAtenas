@@ -1,20 +1,13 @@
-Contrucoes de Melhoria
- Torres, Lutadores, Mineradores, Poderes Divinos, Heroi Luta, Heroi Mineracao
+Inimigos andando e matar em 1 hit
 
-Mineracao
- Mineradores
- Camada de resistencia
- Pedra, Madeira, Ouro
+Contrucao de torres e torres atacam
 
-Inimigos
- Boss (leviathan)
- Normal
-
-Combate:
- Contrucoes de combate
- 
- Luta
- 
- Poderes
+Poderes
   Passagem Celeste
+
+Mineradores
+
+
+Boss (leviathan)
+
 	

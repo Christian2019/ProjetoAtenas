@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/BackgroundMusic.gd" id="2_1c6e5"]
 [ext_resource type="PackedScene" uid="uid://ba8lsakijrbpv" path="res://Scenes/Game/tiles.tscn" id="3_lg0li"]
 [ext_resource type="PackedScene" uid="uid://bqji3jr451ges" path="res://Scenes/Game/matriz.tscn" id="4_di3q4"]
-[ext_resource type="PackedScene" uid="uid://b8uain7bgtuua" path="res://Scenes/Game/player.tscn" id="5_x6q60"]
+[ext_resource type="PackedScene" uid="uid://cq8fbkkwauxoo" path="res://Scenes/Game/player.tscn" id="5_x6q60"]
 [ext_resource type="PackedScene" uid="uid://cqst01u1tcjrv" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_DivinePower.tscn" id="6_i4pfo"]
 [ext_resource type="PackedScene" uid="uid://be8jy3gf588ph" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_Fighters.tscn" id="7_5w6qj"]
 [ext_resource type="PackedScene" uid="uid://bwdc4mn3tym23" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_Workers.tscn" id="8_t3l0u"]
@@ -49,3 +49,6 @@ scale = Vector2(0.622, 0.622)
 
 [node name="Player" parent="." instance=ExtResource("5_x6q60")]
 position = Vector2(1157, 967)
+scale = Vector2(1.289, 1.289)
+
+[node name="Collectable_instances" type="Node2D" parent="."]
