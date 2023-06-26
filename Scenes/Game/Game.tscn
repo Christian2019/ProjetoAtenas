@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cb86td4m1hepw"]
+[gd_scene load_steps=14 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="1_28pgp"]
+[ext_resource type="Script" path="res://Scripts/Game.gd" id="1_ff1wb"]
 [ext_resource type="Script" path="res://Scripts/BackgroundMusic.gd" id="2_1c6e5"]
 [ext_resource type="PackedScene" uid="uid://ba8lsakijrbpv" path="res://Scenes/Game/tiles.tscn" id="3_lg0li"]
 [ext_resource type="PackedScene" uid="uid://bqji3jr451ges" path="res://Scenes/Game/matriz.tscn" id="4_di3q4"]
@@ -11,8 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://gsectpa52hfj" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_Towers.tscn" id="9_jeuhr"]
 [ext_resource type="PackedScene" uid="uid://yj0y1bkmdwpi" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_Hero.tscn" id="10_ohrki"]
 [ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple.tscn" id="10_v6y37"]
+[ext_resource type="PackedScene" uid="uid://dgeirnlkialpt" path="res://Scenes/Game/Enemies/Spawner.tscn" id="13_6sse8"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_ff1wb")
 metadata/_edit_horizontal_guides_ = [2752.0]
 metadata/_edit_vertical_guides_ = [2560.0]
 
@@ -48,7 +51,22 @@ position = Vector2(1283, 943)
 scale = Vector2(0.622, 0.622)
 
 [node name="Player" parent="." instance=ExtResource("5_x6q60")]
-position = Vector2(1157, 967)
+position = Vector2(1169, 1020)
 scale = Vector2(1.289, 1.289)
 
 [node name="Collectable_instances" type="Node2D" parent="."]
+
+[node name="Spawners" type="Node2D" parent="."]
+
+[node name="Spawner_W" parent="Spawners" instance=ExtResource("13_6sse8")]
+position = Vector2(31, 1011)
+
+[node name="Spawner_N" parent="Spawners" instance=ExtResource("13_6sse8")]
+position = Vector2(1285, 18)
+direction_move = "S"
+
+[node name="Spawner_E" parent="Spawners" instance=ExtResource("13_6sse8")]
+position = Vector2(2508, 1016)
+direction_move = "W"
+
+[node name="Enemies" type="Node2D" parent="."]

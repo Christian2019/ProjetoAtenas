@@ -8,7 +8,6 @@ var resources = []
 var max_linhas = 43
 var max_colunas = 40
 
-var quadrant = preload("res://Scenes/Game/quadrant.tscn")
 var start = false
 
 func _process(delta):
@@ -18,7 +17,7 @@ func _process(delta):
 		var rng = RandomNumberGenerator.new()
 		for linha in range(0,max_linhas,1):
 			for coluna in range(0,max_colunas,1):
-				var quadrant_instance = quadrant.instantiate()
+				var quadrant_instance = PreLoadeds.quadrant.instantiate()
 				quadrant_instance.name = str("linha", linha , "_coluna", coluna)
 				quadrant_instance.position= Vector2(64*coluna,64*linha)
 				if (linha>(max_linhas/2)+1):

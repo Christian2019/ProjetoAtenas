@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://dnymo0eupd5qs"]
+
+[ext_resource type="Texture2D" uid="uid://bm5foycjs0yjv" path="res://Assets/Images/Enemies/minotaur_walking.png" id="1_86d6s"]
+[ext_resource type="Script" path="res://Scripts/Minotaur.gd" id="1_ldkc1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wt8o"]
+atlas = ExtResource("1_86d6s")
+region = Rect2(0, 0, 70, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xljmu"]
+atlas = ExtResource("1_86d6s")
+region = Rect2(70, 0, 70, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxv61"]
+atlas = ExtResource("1_86d6s")
+region = Rect2(140, 0, 70, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0ile"]
+atlas = ExtResource("1_86d6s")
+region = Rect2(210, 0, 70, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jg8sw"]
+atlas = ExtResource("1_86d6s")
+region = Rect2(280, 0, 70, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74126"]
+atlas = ExtResource("1_86d6s")
+region = Rect2(350, 0, 70, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuu5o"]
+atlas = ExtResource("1_86d6s")
+region = Rect2(420, 0, 70, 55)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wt8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xljmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxv61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0ile")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jg8sw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74126")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuu5o")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 9.0
+}]
+
+[node name="Minotaur" type="Node2D"]
+script = ExtResource("1_ldkc1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_grjig")
+animation = &"Walking"
+frame_progress = 0.164933

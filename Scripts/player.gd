@@ -8,8 +8,6 @@ var gold =0
 
 var carryingItem
 
-var collectable = preload("res://Scenes/Game/Collectable.tscn")
-
 var playerRight=true
 
 var contactQuadrants = []
@@ -45,7 +43,7 @@ func mining():
 		if closerQuadrant!=null:
 			if closerQuadrant.get_node("Resource").visible:
 				closerQuadrant.get_node("Resource").visible=false
-				var collectable_instance = collectable.instantiate()
+				var collectable_instance = PreLoadeds.collectable.instantiate()
 				
 				if (closerQuadrant.get_node("Resource").animation=="wood"):
 					collectable_instance.get_node("AnimatedSprite2D").animation="wood"

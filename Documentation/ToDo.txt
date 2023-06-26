@@ -1,4 +1,4 @@
-Inimigos andando e matar em 1 hit
+Matar em 1 hit inimigos
 
 Contrucao de torres e torres atacam
 
