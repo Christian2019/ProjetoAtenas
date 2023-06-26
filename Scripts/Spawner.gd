@@ -8,7 +8,7 @@ extends Node2D
 
 #timerCreator(functionName,time,parameters,node): paramenters: []
 
-var wave_timer = 10
+var wave_timer = 60
 var enemies_interval_spawn = 1.5
 var enemies_quantity = 5
 

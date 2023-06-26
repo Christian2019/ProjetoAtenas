@@ -34,7 +34,7 @@ func _process(delta):
 	mining()
 
 func mining():
-	if Input.is_action_just_pressed("Select"):
+	if Input.is_action_pressed("Select"):
 		if (playerRight):
 			$CutAnimation.flip_h=false
 		else:

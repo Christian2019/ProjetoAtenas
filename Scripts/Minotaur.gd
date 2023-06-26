@@ -1,6 +1,9 @@
 extends "res://Scripts/Enemy.gd"
 
 var speed = 1
+var isMoving=true
+
+var playerInside=false
 
 func _ready():
 	super._ready()
@@ -12,5 +15,21 @@ func _ready():
 	
 func _process(delta):
 	super._process(delta)
-	move(speed)
+	if (isMoving):
+		move(speed)
+	if (playerInside):
+		if Input.is_action_pressed("Select"):
+			call_deferred("free")
 
+
+func _on_area_2d_area_entered(area):
+	if (area.get_parent().name=="Doors"):
+		isMoving=false
+		$AnimatedSprite2D.play("Attacking")
+	elif (area.get_parent().name=="Player"):
+		playerInside=true
+
+
+func _on_area_2d_area_exited(area):
+	if (area.get_parent().name=="Player"):
+		playerInside=false

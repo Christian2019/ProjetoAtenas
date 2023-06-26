@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cb86td4m1hepw"]
+[gd_scene load_steps=17 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="1_28pgp"]
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="1_ff1wb"]
@@ -14,6 +14,15 @@
 [ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple.tscn" id="10_v6y37"]
 [ext_resource type="PackedScene" uid="uid://dgeirnlkialpt" path="res://Scenes/Game/Enemies/Spawner.tscn" id="13_6sse8"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76bgx"]
+size = Vector2(65, 128.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kavo2"]
+size = Vector2(129, 62.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8f6t"]
+size = Vector2(65, 128.5)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ff1wb")
 metadata/_edit_horizontal_guides_ = [2752.0]
@@ -28,31 +37,6 @@ position = Vector2(4, 192)
 scale = Vector2(4, 4)
 
 [node name="matriz" parent="." instance=ExtResource("4_di3q4")]
-
-[node name="UpgradeContructions" type="Node2D" parent="."]
-
-[node name="Upgrade_DivinePower" parent="UpgradeContructions" instance=ExtResource("6_i4pfo")]
-position = Vector2(1139, 879)
-
-[node name="Upgrade_Fighters" parent="UpgradeContructions" instance=ExtResource("7_5w6qj")]
-position = Vector2(1417, 877)
-
-[node name="Upgrade_Workers" parent="UpgradeContructions" instance=ExtResource("8_t3l0u")]
-position = Vector2(1284, 1121)
-
-[node name="Upgrade_Towers" parent="UpgradeContructions" instance=ExtResource("9_jeuhr")]
-position = Vector2(1414, 1149)
-
-[node name="Upgrade_Hero" parent="UpgradeContructions" instance=ExtResource("10_ohrki")]
-position = Vector2(1137, 1144)
-
-[node name="Temple" parent="." instance=ExtResource("10_v6y37")]
-position = Vector2(1283, 943)
-scale = Vector2(0.622, 0.622)
-
-[node name="Player" parent="." instance=ExtResource("5_x6q60")]
-position = Vector2(1169, 1020)
-scale = Vector2(1.289, 1.289)
 
 [node name="Collectable_instances" type="Node2D" parent="."]
 
@@ -70,3 +54,50 @@ position = Vector2(2508, 1016)
 direction_move = "W"
 
 [node name="Enemies" type="Node2D" parent="."]
+
+[node name="Center" type="Node2D" parent="."]
+
+[node name="UpgradeContructions" type="Node2D" parent="Center"]
+
+[node name="Upgrade_DivinePower" parent="Center/UpgradeContructions" instance=ExtResource("6_i4pfo")]
+position = Vector2(1139, 879)
+
+[node name="Upgrade_Fighters" parent="Center/UpgradeContructions" instance=ExtResource("7_5w6qj")]
+position = Vector2(1417, 877)
+
+[node name="Upgrade_Workers" parent="Center/UpgradeContructions" instance=ExtResource("8_t3l0u")]
+position = Vector2(1284, 1121)
+
+[node name="Upgrade_Towers" parent="Center/UpgradeContructions" instance=ExtResource("9_jeuhr")]
+position = Vector2(1414, 1149)
+
+[node name="Upgrade_Hero" parent="Center/UpgradeContructions" instance=ExtResource("10_ohrki")]
+position = Vector2(1137, 1144)
+
+[node name="Temple" parent="Center" instance=ExtResource("10_v6y37")]
+position = Vector2(1283, 943)
+scale = Vector2(0.622, 0.622)
+
+[node name="Doors" type="Node2D" parent="Center"]
+
+[node name="DoorLeft" type="Area2D" parent="Center/Doors"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Center/Doors/DoorLeft"]
+position = Vector2(1056, 1024)
+shape = SubResource("RectangleShape2D_76bgx")
+
+[node name="DoorUp" type="Area2D" parent="Center/Doors"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Center/Doors/DoorUp"]
+position = Vector2(1279.5, 798.875)
+shape = SubResource("RectangleShape2D_kavo2")
+
+[node name="DoorLeft3" type="Area2D" parent="Center/Doors"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Center/Doors/DoorLeft3"]
+position = Vector2(1504, 1024)
+shape = SubResource("RectangleShape2D_m8f6t")
+
+[node name="Player" parent="." instance=ExtResource("5_x6q60")]
+position = Vector2(1139, 997)
+scale = Vector2(1.289, 1.289)
