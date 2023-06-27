@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bal2wn8bf7iai"]
+
+[ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="1_24s2u"]
+[ext_resource type="Script" path="res://Scripts/Projectile.gd" id="1_d5k6n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lae8y"]
+
+[node name="Projectile" type="Node2D"]
+script = ExtResource("1_d5k6n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_24s2u")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_lae8y")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

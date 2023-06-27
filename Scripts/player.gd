@@ -32,6 +32,16 @@ func _process(delta):
 	moveController()	
 	getCloserQuadrant()
 	mining()
+	contruction()
+
+func contruction():
+	if (Input.is_action_just_pressed("CreateTower")):
+		if (closerQuadrant!=null and closerQuadrant.allowToConstruct):
+			var tower_instance = PreLoadeds.tower.instantiate()
+			tower_instance.position = closerQuadrant.position
+			closerQuadrant.tower = tower_instance
+			get_parent().get_node("Towers").add_child(tower_instance)
+	
 
 func mining():
 	if Input.is_action_pressed("Select"):

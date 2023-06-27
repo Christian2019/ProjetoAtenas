@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cb86td4m1hepw"]
+[gd_scene load_steps=21 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="1_28pgp"]
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="1_ff1wb"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://yj0y1bkmdwpi" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_Hero.tscn" id="10_ohrki"]
 [ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple.tscn" id="10_v6y37"]
 [ext_resource type="PackedScene" uid="uid://dgeirnlkialpt" path="res://Scenes/Game/Enemies/Spawner.tscn" id="13_6sse8"]
+[ext_resource type="Script" path="res://Scripts/Towers.gd" id="14_1dkqe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_76bgx"]
 size = Vector2(65, 128.5)
@@ -22,6 +23,15 @@ size = Vector2(129, 62.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m8f6t"]
 size = Vector2(65, 128.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_quhwa"]
+size = Vector2(1013.75, 179)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4src2"]
+size = Vector2(750.75, 186)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcwlt"]
+size = Vector2(749.75, 186)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ff1wb")
@@ -101,3 +111,36 @@ shape = SubResource("RectangleShape2D_m8f6t")
 [node name="Player" parent="." instance=ExtResource("5_x6q60")]
 position = Vector2(1139, 997)
 scale = Vector2(1.289, 1.289)
+
+[node name="Towers" type="Node2D" parent="."]
+script = ExtResource("14_1dkqe")
+
+[node name="ConstructionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ConstructionArea"]
+position = Vector2(507.25, 865)
+shape = SubResource("RectangleShape2D_quhwa")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ConstructionArea"]
+position = Vector2(509, 1182)
+shape = SubResource("RectangleShape2D_quhwa")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="ConstructionArea"]
+position = Vector2(2048.88, 864.5)
+shape = SubResource("RectangleShape2D_quhwa")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="ConstructionArea"]
+position = Vector2(2046.75, 1185)
+shape = SubResource("RectangleShape2D_quhwa")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="ConstructionArea"]
+position = Vector2(1122, 383.375)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_4src2")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="ConstructionArea"]
+position = Vector2(1440, 383.125)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_jcwlt")
+
+[node name="Projectiles" type="Node2D" parent="."]

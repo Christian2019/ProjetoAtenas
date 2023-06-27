@@ -1,5 +1,3 @@
-Contrucao de torres e torres atacam
-
 Poderes
   Passagem Celeste
 

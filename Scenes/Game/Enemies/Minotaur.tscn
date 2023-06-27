@@ -124,7 +124,7 @@ script = ExtResource("1_ldkc1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_grjig")
 animation = &"Walking"
-frame_progress = 0.838446
+frame_progress = 0.694488
 
 [node name="Area2D" type="Area2D" parent="."]
 
