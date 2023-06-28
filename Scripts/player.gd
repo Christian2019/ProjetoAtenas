@@ -37,7 +37,7 @@ func _process(delta):
 func contruction():
 	if (Input.is_action_just_pressed("CreateTower")):
 		if (closerQuadrant!=null and closerQuadrant.allowToConstruct):
-			var tower_instance = PreLoadeds.tower.instantiate()
+			var tower_instance = PreLoads.tower.instantiate()
 			tower_instance.position = closerQuadrant.position
 			closerQuadrant.tower = tower_instance
 			get_parent().get_node("Towers").add_child(tower_instance)
@@ -53,7 +53,7 @@ func mining():
 		if closerQuadrant!=null:
 			if closerQuadrant.get_node("Resource").visible:
 				closerQuadrant.get_node("Resource").visible=false
-				var collectable_instance = PreLoadeds.collectable.instantiate()
+				var collectable_instance = PreLoads.collectable.instantiate()
 				
 				if (closerQuadrant.get_node("Resource").animation=="wood"):
 					collectable_instance.get_node("AnimatedSprite2D").animation="wood"

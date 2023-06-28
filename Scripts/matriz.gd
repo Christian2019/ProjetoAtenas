@@ -17,7 +17,7 @@ func _process(delta):
 		var rng = RandomNumberGenerator.new()
 		for linha in range(0,max_linhas,1):
 			for coluna in range(0,max_colunas,1):
-				var quadrant_instance = PreLoadeds.quadrant.instantiate()
+				var quadrant_instance = PreLoads.quadrant.instantiate()
 				quadrant_instance.name = str("linha", linha , "_coluna", coluna)
 				quadrant_instance.position= Vector2(64*coluna,64*linha)
 				if (linha>(max_linhas/2)+1):

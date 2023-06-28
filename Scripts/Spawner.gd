@@ -39,7 +39,7 @@ func createWave():
 
 func createEnemy():
 	if (enemy_type=="Minotaur"):
-		spawnEnemy(PreLoadeds.minotaur.instantiate())
+		spawnEnemy(PreLoads.minotaur.instantiate())
 
 func spawnEnemy(enemy):
 	enemy.direction = direction_move

@@ -9,7 +9,6 @@ func _process(delta):
 		lookEnemies()
 
 func lookEnemies():
-	var closerEnemy
 	var enemies = get_parent().get_parent().get_node("Enemies").get_children()
 	for i in range(0,enemies.size(),1):
 		var enemy = enemies[i]
@@ -21,7 +20,7 @@ func lookEnemies():
 func shoot(enemy):
 	allowToShoot=false
 	Global.timerCreator("setAllowToShoot",reloadTime,[true],self)
-	var arrow = PreLoadeds.tower_projectile.instantiate()
+	var arrow = PreLoads.tower_projectile.instantiate()
 	arrow.position = position
 	arrow.position.x+=28
 	arrow.target=enemy
