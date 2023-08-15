@@ -10,3 +10,9 @@ res://Scenes/Game/Enemies/Minotaur.tscn
 res://Scenes/Game/tiles.tscn
 res://Scenes/MainScenes/Game_ViewPort.tscn
 res://Scenes/Game/Collectable.tscn
+res://Scripts/matriz.gd
+res://Scenes/Game/matriz.tscn
+res://Scenes/Game/Constructions/Portal.tscn
+res://Scenes/Game/Constructions/Temple.tscn
+res://Scripts/Portal.gd
+res://Scenes/Game/Constructions/Pool.tscn

@@ -15,18 +15,27 @@ func _process(delta):
 		createResources()
 		start = true
 		var rng = RandomNumberGenerator.new()
-		for linha in range(0,max_linhas,1):
+		for linha in range(23,max_linhas,1):
 			for coluna in range(0,max_colunas,1):
 				var quadrant_instance = PreLoads.quadrant.instantiate()
 				quadrant_instance.name = str("linha", linha , "_coluna", coluna)
 				quadrant_instance.position= Vector2(64*coluna,64*linha)
-				if (linha>(max_linhas/2)+1):
+				if (linha>(max_linhas/2)+1 and canUse(linha,coluna)):
 					var index = rng.randi_range(0, resources.size()-1)
 					if (resources[index]!="empty"):
 						quadrant_instance.get_node("Resource").visible=true
 						quadrant_instance.get_node("Resource").animation=resources[index]
 					resources.remove_at(index)
 				add_child(quadrant_instance)
+
+func canUse(linha,coluna):
+	#Evitar o templo
+	
+	if (linha<(max_linhas/2)+(max_linhas/8)):
+		if (coluna>max_colunas/2-8 and coluna<max_colunas/2+8 ):
+			return false
+	return true
+	
 
 func createResources():
 	

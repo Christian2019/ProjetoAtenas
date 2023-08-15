@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cb86td4m1hepw"]
+[gd_scene load_steps=14 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="1_28pgp"]
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="1_ff1wb"]
@@ -6,32 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://ba8lsakijrbpv" path="res://Scenes/Game/tiles.tscn" id="3_lg0li"]
 [ext_resource type="PackedScene" uid="uid://bqji3jr451ges" path="res://Scenes/Game/matriz.tscn" id="4_di3q4"]
 [ext_resource type="PackedScene" uid="uid://cq8fbkkwauxoo" path="res://Scenes/Game/player.tscn" id="5_x6q60"]
-[ext_resource type="PackedScene" uid="uid://cqst01u1tcjrv" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_DivinePower.tscn" id="6_i4pfo"]
-[ext_resource type="PackedScene" uid="uid://be8jy3gf588ph" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_Fighters.tscn" id="7_5w6qj"]
-[ext_resource type="PackedScene" uid="uid://bwdc4mn3tym23" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_Workers.tscn" id="8_t3l0u"]
-[ext_resource type="PackedScene" uid="uid://gsectpa52hfj" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_Towers.tscn" id="9_jeuhr"]
-[ext_resource type="PackedScene" uid="uid://yj0y1bkmdwpi" path="res://Scenes/Game/Constructions/Upgrades/Upgrade_Hero.tscn" id="10_ohrki"]
+[ext_resource type="Texture2D" uid="uid://b4tu2enafngd1" path="res://Assets/Images/Constructions/DefenderPointImage.png" id="7_1yn2y"]
+[ext_resource type="PackedScene" uid="uid://dumjr4t8822i1" path="res://Scenes/Game/Constructions/Portal.tscn" id="8_rpnsu"]
+[ext_resource type="PackedScene" uid="uid://c0rurmnfon8nm" path="res://Scenes/Game/Constructions/Pool.tscn" id="9_iifxh"]
 [ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple.tscn" id="10_v6y37"]
+[ext_resource type="PackedScene" uid="uid://dtu5sjvquowls" path="res://Scenes/Game/Constructions/Defenses/Tower.tscn" id="11_arq70"]
 [ext_resource type="PackedScene" uid="uid://dgeirnlkialpt" path="res://Scenes/Game/Enemies/Spawner.tscn" id="13_6sse8"]
 [ext_resource type="Script" path="res://Scripts/Towers.gd" id="14_1dkqe"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_76bgx"]
-size = Vector2(65, 128.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kavo2"]
-size = Vector2(129, 62.25)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8f6t"]
-size = Vector2(65, 128.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_quhwa"]
-size = Vector2(1013.75, 179)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4src2"]
-size = Vector2(750.75, 186)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcwlt"]
-size = Vector2(749.75, 186)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ff1wb")
@@ -66,47 +47,23 @@ direction_move = "W"
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Center" type="Node2D" parent="."]
+position = Vector2(25, -393)
 
-[node name="UpgradeContructions" type="Node2D" parent="Center"]
+[node name="DefenderPoint" type="Sprite2D" parent="Center"]
+position = Vector2(1269, 1003)
+scale = Vector2(0.781056, 0.781056)
+texture = ExtResource("7_1yn2y")
 
-[node name="Upgrade_DivinePower" parent="Center/UpgradeContructions" instance=ExtResource("6_i4pfo")]
-position = Vector2(1139, 879)
+[node name="Portals" type="Node2D" parent="Center"]
 
-[node name="Upgrade_Fighters" parent="Center/UpgradeContructions" instance=ExtResource("7_5w6qj")]
-position = Vector2(1417, 877)
+[node name="Portal" parent="Center/Portals" instance=ExtResource("8_rpnsu")]
+position = Vector2(1330, 992)
 
-[node name="Upgrade_Workers" parent="Center/UpgradeContructions" instance=ExtResource("8_t3l0u")]
-position = Vector2(1284, 1121)
+[node name="Portal2" parent="Center/Portals" instance=ExtResource("8_rpnsu")]
+position = Vector2(1289, 2058)
 
-[node name="Upgrade_Towers" parent="Center/UpgradeContructions" instance=ExtResource("9_jeuhr")]
-position = Vector2(1414, 1149)
-
-[node name="Upgrade_Hero" parent="Center/UpgradeContructions" instance=ExtResource("10_ohrki")]
-position = Vector2(1137, 1144)
-
-[node name="Temple" parent="Center" instance=ExtResource("10_v6y37")]
-position = Vector2(1283, 943)
-scale = Vector2(0.622, 0.622)
-
-[node name="Doors" type="Node2D" parent="Center"]
-
-[node name="DoorLeft" type="Area2D" parent="Center/Doors"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Center/Doors/DoorLeft"]
-position = Vector2(1056, 1024)
-shape = SubResource("RectangleShape2D_76bgx")
-
-[node name="DoorUp" type="Area2D" parent="Center/Doors"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Center/Doors/DoorUp"]
-position = Vector2(1279.5, 798.875)
-shape = SubResource("RectangleShape2D_kavo2")
-
-[node name="DoorLeft3" type="Area2D" parent="Center/Doors"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Center/Doors/DoorLeft3"]
-position = Vector2(1504, 1024)
-shape = SubResource("RectangleShape2D_m8f6t")
+[node name="Pool" parent="Center" instance=ExtResource("9_iifxh")]
+position = Vector2(1223, 1000)
 
 [node name="Player" parent="." instance=ExtResource("5_x6q60")]
 position = Vector2(1139, 997)
@@ -115,32 +72,21 @@ scale = Vector2(1.289, 1.289)
 [node name="Towers" type="Node2D" parent="."]
 script = ExtResource("14_1dkqe")
 
+[node name="Tower" parent="Towers" instance=ExtResource("11_arq70")]
+position = Vector2(1214, 515)
+
+[node name="Tower2" parent="Towers" instance=ExtResource("11_arq70")]
+position = Vector2(1366, 516)
+
+[node name="Tower3" parent="Towers" instance=ExtResource("11_arq70")]
+position = Vector2(1216, 665)
+
+[node name="Tower4" parent="Towers" instance=ExtResource("11_arq70")]
+position = Vector2(1365, 666)
+
 [node name="ConstructionArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ConstructionArea"]
-position = Vector2(507.25, 865)
-shape = SubResource("RectangleShape2D_quhwa")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="ConstructionArea"]
-position = Vector2(509, 1182)
-shape = SubResource("RectangleShape2D_quhwa")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="ConstructionArea"]
-position = Vector2(2048.88, 864.5)
-shape = SubResource("RectangleShape2D_quhwa")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="ConstructionArea"]
-position = Vector2(2046.75, 1185)
-shape = SubResource("RectangleShape2D_quhwa")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="ConstructionArea"]
-position = Vector2(1122, 383.375)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_4src2")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="ConstructionArea"]
-position = Vector2(1440, 383.125)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_jcwlt")
-
 [node name="Projectiles" type="Node2D" parent="."]
+
+[node name="Temple" parent="." instance=ExtResource("10_v6y37")]
+position = Vector2(1317, 1501)
