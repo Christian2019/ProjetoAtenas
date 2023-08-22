@@ -11,3 +11,9 @@ res://Scenes/Game/quadrant.tscn
 res://Scenes/Game/Constructions/Defenses/Tower.tscn
 res://Scenes/Game/Constructions/Pool.tscn
 res://Scripts/Minotaur.gd
+res://Scenes/Game/Classes/Warrior.tscn
+res://Scripts/PreLoads.gd
+res://Scripts/quadrant.gd
+res://Scripts/Collectable.gd
+res://Scripts/Classes/Warrior/Warrior.gd
+res://Scripts/Classes/Warrior/Warrior_Attack1.gd

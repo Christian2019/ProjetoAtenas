@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=3 uid="uid://c1gks6vngfiqu"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior.gd" id="1_m86b2"]
+[ext_resource type="Texture2D" uid="uid://be0jxocrlx0v4" path="res://Assets/Images/Player/cutAnimation.png" id="2_0voec"]
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_Attack1.gd" id="2_mljmw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_taocq"]
+atlas = ExtResource("2_0voec")
+region = Rect2(0, 0, 209, 259)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18kcs"]
+atlas = ExtResource("2_0voec")
+region = Rect2(209, 0, 209, 259)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6edoi"]
+atlas = ExtResource("2_0voec")
+region = Rect2(418, 0, 209, 259)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s2uy"]
+atlas = ExtResource("2_0voec")
+region = Rect2(627, 0, 209, 259)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l0r1"]
+atlas = ExtResource("2_0voec")
+region = Rect2(836, 0, 209, 259)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytbvk"]
+atlas = ExtResource("2_0voec")
+region = Rect2(1045, 0, 209, 259)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qc0tj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_taocq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18kcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6edoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s2uy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7l0r1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytbvk")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"Normal",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_84ap5"]
+size = Vector2(50, 62)
+
+[node name="Warrior" type="Node2D"]
+script = ExtResource("1_m86b2")
+
+[node name="Warrior_Attack1" type="Node2D" parent="."]
+script = ExtResource("2_mljmw")
+
+[node name="Animation" type="AnimatedSprite2D" parent="Warrior_Attack1"]
+position = Vector2(0, 5.68434e-14)
+scale = Vector2(0.241627, 0.241627)
+sprite_frames = SubResource("SpriteFrames_qc0tj")
+animation = &"Normal"
+frame = 3
+frame_progress = 0.929413
+
+[node name="Area2D" type="Area2D" parent="Warrior_Attack1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Warrior_Attack1/Area2D"]
+shape = SubResource("RectangleShape2D_84ap5")

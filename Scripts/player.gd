@@ -1,6 +1,27 @@
 extends Node2D
+##Stats
+var move_Speed = 5
+var attack_Speed = 1 ## precisa ser >0
 
-var speed = 5
+var playerClass = PreLoads.warrior
+
+##Abilities Var
+
+##Type Normal Zeus...
+var attack1_type = "Normal"
+var attack2_type = "Normal"
+var turret_type = "Normal"
+var dash_type = "Normal"
+var ultimate_type = "Normal"
+
+## Se esta em CD
+var permissions = [
+	{"attack1_canUse" : true},
+	{"attack2_canUse" : true},
+	{"turret_canUse" : true},
+	{"dash_canUse" : true},
+	{"ultimate_canUse" : true},
+	]
 
 var wood =0
 var stone =0
@@ -17,7 +38,7 @@ var closerQuadrant
 
 func _ready():
 	$Animation.play("Right")
-	##$Animation.modulate.a = 0.5
+	
 	
 
 var start_b = true
@@ -32,8 +53,8 @@ func _process(delta):
 	animationController()
 	commandController()	
 	getCloserQuadrant()
-	mining()
-	contruction()
+	#mining()
+	#contruction()
 
 func commandController():
 	moveController()
@@ -43,10 +64,33 @@ func commandController():
 	dashController()
 	ultimateController()
 	
+func creatAttackInstance(classChild):
+	##Criando uma instancia do tipo do ataque da classe
+	var classInstance = playerClass.instantiate()
+	var attackInstance=classInstance.get_child(classChild)
+	classInstance.remove_child(attackInstance)
+	classInstance.queue_free()
 	
-func attack1Controller():	
-	if (Input.is_action_just_pressed("Attack1")):
-		print("Attack1")
+	##Bloqueando o uso da skill pelo cd da skill / tua attack speed
+	permissions[classChild]=false
+	Global.timerCreator("enableAttackUse",attackInstance.cd/attack_Speed,[classChild],self)	
+	
+	return attackInstance
+   
+func enableAttackUse(classChild):
+	permissions[classChild]=true
+	
+	
+func attack1Controller():
+	var classChild=0	
+	if (Input.is_action_pressed("Attack1") and permissions[classChild]):
+		var attackInstance = creatAttackInstance(classChild)
+		get_parent().get_node("Projectiles").add_child(attackInstance)
+		attackInstance.global_position=global_position
+		attackInstance.get_node("Animation").play()
+
+		
+		
 func attack2Controller():
 	if (Input.is_action_just_pressed("Attack2")):
 		print("Attack2")
@@ -56,6 +100,7 @@ func turretController():
 func dashController():
 	if (Input.is_action_just_pressed("Dash")):
 		print("Dash")
+		##$Animation.modulate.a = 0.5
 func ultimateController():
 	if (Input.is_action_just_pressed("Ultimate")):
 		print("Ultimate")
@@ -124,19 +169,18 @@ func moveController():
 	var speedModifier=1
 	if Input.is_action_pressed("Move_Down") or Input.is_action_pressed("Move_Up"):
 		if Input.is_action_pressed("Move_Right") or Input.is_action_pressed("Move_Left"):
-			speedModifier=1/(2**0.5)
-			print(speedModifier)
+			speedModifier=1/(2**0.5)			
 	
 	if Input.is_action_pressed("Move_Down"):
-		position.y+=speed*speedModifier
+		position.y+=move_Speed*speedModifier
 	elif Input.is_action_pressed("Move_Up"):
-		position.y-=speed*speedModifier
+		position.y-=move_Speed*speedModifier
 	if Input.is_action_pressed("Move_Right"):
 		playerRight=true
-		position.x+=speed*speedModifier
+		position.x+=move_Speed*speedModifier
 	elif Input.is_action_pressed("Move_Left"):
 		playerRight=false
-		position.x-=speed*speedModifier
+		position.x-=move_Speed*speedModifier
 
 
 func _on_timer_timeout():

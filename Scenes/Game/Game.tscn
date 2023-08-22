@@ -34,14 +34,14 @@ scale = Vector2(4, 4)
 [node name="Spawners" type="Node2D" parent="."]
 
 [node name="Spawner_W" parent="Spawners" instance=ExtResource("13_6sse8")]
-position = Vector2(31, 1011)
+position = Vector2(31, 629)
 
 [node name="Spawner_N" parent="Spawners" instance=ExtResource("13_6sse8")]
-position = Vector2(1285, 18)
+position = Vector2(1299, 18)
 direction_move = "S"
 
 [node name="Spawner_E" parent="Spawners" instance=ExtResource("13_6sse8")]
-position = Vector2(2508, 1016)
+position = Vector2(2494, 589)
 direction_move = "W"
 
 [node name="Enemies" type="Node2D" parent="."]
