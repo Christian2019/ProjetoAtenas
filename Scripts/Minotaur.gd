@@ -18,7 +18,7 @@ func _process(delta):
 	if (isMoving):
 		move(speed)
 	if (playerInside):
-		if Input.is_action_pressed("Select"):
+		if Input.is_action_pressed("Attack1"):
 			call_deferred("free")
 
 

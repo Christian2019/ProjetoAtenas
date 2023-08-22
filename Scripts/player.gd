@@ -17,7 +17,7 @@ var closerQuadrant
 
 func _ready():
 	$Animation.play("Right")
-	$Animation.modulate.a = 0.5
+	##$Animation.modulate.a = 0.5
 	
 
 var start_b = true
@@ -30,13 +30,38 @@ func start():
 func _process(delta):
 	start()
 	animationController()
-	moveController()	
+	commandController()	
 	getCloserQuadrant()
 	mining()
 	contruction()
 
+func commandController():
+	moveController()
+	attack1Controller()
+	attack2Controller()
+	turretController()
+	dashController()
+	ultimateController()
+	
+	
+func attack1Controller():	
+	if (Input.is_action_just_pressed("Attack1")):
+		print("Attack1")
+func attack2Controller():
+	if (Input.is_action_just_pressed("Attack2")):
+		print("Attack2")
+func turretController():
+	if (Input.is_action_just_pressed("Turret")):
+		print("Turret")
+func dashController():
+	if (Input.is_action_just_pressed("Dash")):
+		print("Dash")
+func ultimateController():
+	if (Input.is_action_just_pressed("Ultimate")):
+		print("Ultimate")
+
 func contruction():
-	if (Input.is_action_just_pressed("CreateTower")):
+	if (Input.is_action_just_pressed("Turret")):
 		if (closerQuadrant!=null and closerQuadrant.allowToConstruct):
 			var tower_instance = PreLoads.tower.instantiate()
 			tower_instance.position = closerQuadrant.position
@@ -45,7 +70,7 @@ func contruction():
 	
 
 func mining():
-	if Input.is_action_pressed("Select"):
+	if Input.is_action_pressed("Attack1"):
 		if (playerRight):
 			$CutAnimation.flip_h=false
 		else:
@@ -96,16 +121,22 @@ func animationController():
 		
 	
 func moveController():
+	var speedModifier=1
+	if Input.is_action_pressed("Move_Down") or Input.is_action_pressed("Move_Up"):
+		if Input.is_action_pressed("Move_Right") or Input.is_action_pressed("Move_Left"):
+			speedModifier=1/(2**0.5)
+			print(speedModifier)
+	
 	if Input.is_action_pressed("Move_Down"):
-		position.y+=speed
+		position.y+=speed*speedModifier
 	elif Input.is_action_pressed("Move_Up"):
-		position.y-=speed
-	elif Input.is_action_pressed("Move_Right"):
+		position.y-=speed*speedModifier
+	if Input.is_action_pressed("Move_Right"):
 		playerRight=true
-		position.x+=speed
+		position.x+=speed*speedModifier
 	elif Input.is_action_pressed("Move_Left"):
 		playerRight=false
-		position.x-=speed
+		position.x-=speed*speedModifier
 
 
 func _on_timer_timeout():
