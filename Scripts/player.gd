@@ -17,6 +17,7 @@ var closerQuadrant
 
 func _ready():
 	$Animation.play("Right")
+	$Animation.modulate.a = 0.5
 	
 
 var start_b = true
