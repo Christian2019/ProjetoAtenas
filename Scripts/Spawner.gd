@@ -21,7 +21,7 @@ var start_bool = true
 func start():
 	if (start_bool):
 		start_bool=false
-		createWave()
+		#createWave()
 
 func _process(delta):
 	if (!enable):

@@ -1,5 +1,3 @@
-Alterar o mapa para o novo modelo
-
 Combate basico
 
 Spawn de inimigos combate e funcionamento de waves

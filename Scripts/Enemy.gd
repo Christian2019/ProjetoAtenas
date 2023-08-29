@@ -1,17 +1,10 @@
 extends Node2D
 
-var direction
+var centerPoint
 
 func _ready():
-	pass
-
+	centerPoint = get_parent().get_parent().get_node("Center/CenterArea/CollisionShape2D")
 
 func _process(delta):
 	pass
 
-
-func move(speed):
-	if (direction=="S"):
-		position.y+=speed
-	else:
-		position.x+=speed
