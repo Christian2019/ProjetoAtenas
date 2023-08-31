@@ -53,7 +53,7 @@ func _process(delta):
 	animationController()
 	commandController()	
 	getCloserQuadrant()
-	#mining()
+	mining()
 	#contruction()
 
 func commandController():

@@ -1,14 +1,8 @@
 res://default_env.tres
-res://Scenes/Game/Game.tscn
+res://Scenes/Game/Enemies/Minotaur.tscn
 res://Assets/Images/Tiles/TileMap.tres
+res://Scenes/Game/Game.tscn
 res://Scenes/Game/Classes/Warrior.tscn
 res://Scenes/Game/HUD.tscn
-res://Scripts/WaveController.gd
-res://Scripts/SoundController.gd
-res://Scenes/Game/Enemies/Minotaur.tscn
-res://Scripts/Minotaur.gd
 res://Scenes/Game/Enemies/Enemy.tscn
-res://Scripts/Enemy.gd
-res://Scripts/Spawner.gd
-res://Scripts/HUD.gd
-res://Scripts/BackgroundMusic.gd
+res://Scripts/player.gd
