@@ -1,3 +1,6 @@
 res://default_env.tres
 res://Scenes/GameStore/MainPage.tscn
-res://Scripts/HUD_Scripts/MainPage.gd
+res://Assets/Images/Tiles/TileMap.tres
+res://Scenes/Game/Game.tscn
+res://Scenes/Game/player.tscn
+res://Scenes/Game/HUD.tscn

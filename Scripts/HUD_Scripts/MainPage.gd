@@ -10,6 +10,8 @@ var scrollGood = preload("res://Assets/Images/Store/ScrollGood.png")
 var scrollLegendary = preload("res://Assets/Images/Store/ScrollLegendary.png")
 var scrollNormal = preload("res://Assets/Images/Store/ScrollNormal.png")
 
+var player = preload("res://Scripts/player.gd")
+
 var random_value = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
@@ -17,8 +19,13 @@ func _ready():
 	pages = [get_node("BG/SHOP"),get_node("BG/Mineração"),get_node("BG/Personagem"),get_node("BG/Defender Point")]
 	buttons = [get_node("BG/MKenuMenu/Shop"),get_node("BG/MKenuMenu/Mineração"),get_node("BG/MKenuMenu/Personagem"),get_node("BG/MKenuMenu/Defender Point")]
 	scrolls = [get_node("BG/SHOP/SCROLL1"),get_node("BG/SHOP/SCROLL2"),get_node("BG/SHOP/SCROLL3"),get_node("BG/SHOP/SCROLL4")]
+	$BG/SHOP/MINHAS_COISAS___TROCA/MinhasCoisas.disabled=true
 	get_node("BG/MKenuMenu/Shop").disabled=true;
 	scrollsSelect()
+	get_node("BG/MKenuMenu/Ouro").text="Gold:∞"
+	get_node("BG/MKenuMenu/Wood").text=str("Wood:∞")
+	get_node("BG/MKenuMenu/Stone").text= str("Stone:∞")
+	
 	pass # Replace with function body.1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,14 +37,18 @@ func scrollsSelect():
 	for i in range(0,len(buttons)):
 		var type = random_value.randi_range(0,3)
 		#var type = 0
+		if(i>0):
+			scrolls[i].get_node("Text").text="INDISPONÍVEL"
+			scrolls[i].disabled=true
+		
 		if(type==0):
 			scrolls[i].texture_normal=scrollNormal  
 		elif(type==1):
-			scrolls[i].texture_normal=scrollGood 
+			scrolls[i].texture_normal=scrollGood  
 		elif(type==2):
-			scrolls[i].texture_normal=scrollxtreme 
+			scrolls[i].texture_normal=scrollxtreme  
 		elif(type==3):
-			scrolls[i].texture_normal=scrollLegendary 
+			scrolls[i].texture_normal=scrollLegendary  
 
 #AINDA EM DESENVOLVIMENTO, DEVO ENCONTRAR UMA FORMA MELHOR PRA FAZER ISSO KKKKKKK
 func transition(numPage): 
