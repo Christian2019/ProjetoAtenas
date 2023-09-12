@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqduy4u8regjo"]
+[gd_scene load_steps=6 format=3 uid="uid://bqduy4u8regjo"]
 
 [ext_resource type="Script" path="res://Scripts/HUD_Scripts/MainPage.gd" id="1_1jfau"]
 [ext_resource type="Texture2D" uid="uid://dlwvyo6ejssc" path="res://Assets/Images/Resources/gold.png" id="2_gs4pr"]
 [ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="3_7tjk8"]
 [ext_resource type="Texture2D" uid="uid://ywre30ix5f7t" path="res://Assets/Images/Resources/wood.png" id="4_rya8q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sr6eu"]
+size = Vector2(121, 115)
 
 [node name="MainPage" type="Node2D"]
 script = ExtResource("1_1jfau")
@@ -132,14 +135,14 @@ Range:                                     0"
 [node name="MINHAS_COISAS___TROCA" type="Node2D" parent="BG/SHOP"]
 
 [node name="MINHASCOISAS" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
-visible = false
 offset_left = 5.0
 offset_top = 275.0
 offset_right = 855.0
-offset_bottom = 602.0
+offset_bottom = 605.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
 
 [node name="TROCA" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
+visible = false
 offset_left = 5.0
 offset_top = 275.0
 offset_right = 855.0
@@ -147,6 +150,7 @@ offset_bottom = 602.0
 color = Color(0.517647, 0.517647, 0.517647, 1)
 
 [node name="Gold trade" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+layout_mode = 0
 offset_left = 17.0
 offset_top = 12.0
 offset_right = 838.0
@@ -163,6 +167,7 @@ text = "1 GOLD
 20 STONE"
 
 [node name="Trade100Wood" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade"]
+layout_mode = 0
 offset_left = 702.0
 offset_top = 16.0
 offset_right = 794.0
@@ -175,14 +180,16 @@ position = Vector2(72, 42)
 scale = Vector2(4.4375, 4.6875)
 texture = ExtResource("2_gs4pr")
 
-[node name="Gold trade2" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+[node name="Stone Trade" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+layout_mode = 0
 offset_left = 17.0
 offset_top = 100.0
 offset_right = 838.0
 offset_bottom = 185.0
 color = Color(0.589844, 0.589844, 0.589844, 1)
 
-[node name="Trade1Gold" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade2"]
+[node name="Trade1Gold" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Stone Trade"]
+layout_mode = 0
 offset_left = 612.0
 offset_top = 16.0
 offset_right = 695.0
@@ -190,7 +197,8 @@ offset_bottom = 71.0
 text = "20 STONE
 1 GOLD"
 
-[node name="Trade50Wood" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade2"]
+[node name="Trade50Wood" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Stone Trade"]
+layout_mode = 0
 offset_left = 702.0
 offset_top = 16.0
 offset_right = 794.0
@@ -198,24 +206,26 @@ offset_bottom = 71.0
 text = "1 STONE
 50 WOOD"
 
-[node name="Wood" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade2"]
+[node name="Wood" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Stone Trade"]
 position = Vector2(72, 42)
 scale = Vector2(4.4375, 4.6875)
 texture = ExtResource("3_7tjk8")
 
-[node name="Gold trade3" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+[node name="Wood Trade" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+layout_mode = 0
 offset_left = 17.0
 offset_top = 188.0
 offset_right = 838.0
 offset_bottom = 273.0
 color = Color(0.589844, 0.589844, 0.589844, 1)
 
-[node name="Wood" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade3"]
+[node name="Wood" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Wood Trade"]
 position = Vector2(72, 42)
 scale = Vector2(4.4375, 4.6875)
 texture = ExtResource("4_rya8q")
 
-[node name="TradeWood" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade3"]
+[node name="TradeWood" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Wood Trade"]
+layout_mode = 0
 offset_left = 605.0
 offset_top = 14.0
 offset_right = 697.0
@@ -223,7 +233,8 @@ offset_bottom = 69.0
 text = "100 WOOD
 1 GOLD"
 
-[node name="TradeWood100x" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade3"]
+[node name="TradeWood100x" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Wood Trade"]
+layout_mode = 0
 offset_left = 702.0
 offset_top = 14.0
 offset_right = 794.0
@@ -313,6 +324,27 @@ offset_bottom = 73.0
 [node name="Mineração" type="Node2D" parent="BG"]
 visible = false
 
+[node name="Movimento" type="ColorRect" parent="BG/Mineração"]
+offset_left = 23.0
+offset_top = 79.0
+offset_right = 788.0
+offset_bottom = 235.0
+color = Color(0.592157, 0.592157, 0.592157, 1)
+
+[node name="Movimento2" type="ColorRect" parent="BG/Mineração"]
+offset_left = 23.0
+offset_top = 240.0
+offset_right = 788.0
+offset_bottom = 396.0
+color = Color(0.592157, 0.592157, 0.592157, 1)
+
+[node name="Movimento3" type="ColorRect" parent="BG/Mineração"]
+offset_left = 23.0
+offset_top = 401.0
+offset_right = 788.0
+offset_bottom = 557.0
+color = Color(0.592157, 0.592157, 0.592157, 1)
+
 [node name="STATUS" type="ColorRect" parent="BG/Mineração"]
 offset_left = 802.0
 offset_top = 39.0
@@ -321,6 +353,7 @@ offset_bottom = 604.0
 color = Color(0.486275, 0.462745, 0.466667, 1)
 
 [node name="Title" type="Label" parent="BG/Mineração/STATUS"]
+layout_mode = 0
 offset_left = 97.0
 offset_top = -1.0
 offset_right = 137.0
@@ -328,33 +361,180 @@ offset_bottom = 25.0
 text = "Items
 "
 
-[node name="Movimento" type="ColorRect" parent="BG/Mineração"]
-offset_left = 23.0
-offset_top = 59.0
-offset_right = 788.0
-offset_bottom = 187.0
-color = Color(0.592157, 0.592157, 0.592157, 1)
+[node name="CaixasDeItem" type="Node2D" parent="BG/Mineração"]
+position = Vector2(0, -28)
 
-[node name="Capacidade de carregamento" type="ColorRect" parent="BG/Mineração"]
-offset_left = 23.0
-offset_top = 188.0
-offset_right = 788.0
-offset_bottom = 316.0
-color = Color(0.592157, 0.592157, 0.592157, 1)
+[node name="Item1" type="Area2D" parent="BG/Mineração/CaixasDeItem"]
+position = Vector2(131, 179)
 
-[node name="Dano Mineração" type="ColorRect" parent="BG/Mineração"]
-offset_left = 23.0
-offset_top = 317.0
-offset_right = 788.0
-offset_bottom = 445.0
-color = Color(0.592157, 0.592157, 0.592157, 1)
+[node name="ColorRect" type="ColorRect" parent="BG/Mineração/CaixasDeItem/Item1"]
+offset_left = -61.0
+offset_top = -57.0
+offset_right = 60.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
 
-[node name="Transporte e Carga" type="ColorRect" parent="BG/Mineração"]
-offset_left = 23.0
-offset_top = 446.0
-offset_right = 788.0
-offset_bottom = 574.0
-color = Color(0.592157, 0.592157, 0.592157, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/CaixasDeItem/Item1"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item2" type="Area2D" parent="BG/Mineração/CaixasDeItem"]
+
+[node name="ColorRect" type="ColorRect" parent="BG/Mineração/CaixasDeItem/Item2"]
+offset_left = 238.0
+offset_top = 122.0
+offset_right = 359.0
+offset_bottom = 236.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/CaixasDeItem/Item2"]
+position = Vector2(298, 179)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item3" type="Area2D" parent="BG/Mineração/CaixasDeItem"]
+
+[node name="ColorRect" type="ColorRect" parent="BG/Mineração/CaixasDeItem/Item3"]
+offset_left = 415.0
+offset_top = 124.0
+offset_right = 536.0
+offset_bottom = 238.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/CaixasDeItem/Item3"]
+position = Vector2(476, 181)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item4" type="Area2D" parent="BG/Mineração/CaixasDeItem"]
+position = Vector2(298, 179)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Mineração/CaixasDeItem/Item4"]
+offset_left = 303.0
+offset_top = -57.0
+offset_right = 424.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/CaixasDeItem/Item4"]
+position = Vector2(365, -1)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="ItensDefesas" type="Node2D" parent="BG/Mineração"]
+position = Vector2(-2, -124)
+
+[node name="Item5" type="Area2D" parent="BG/Mineração/ItensDefesas"]
+position = Vector2(133, 440)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Mineração/ItensDefesas/Item5"]
+offset_left = -61.0
+offset_top = -57.0
+offset_right = 60.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/ItensDefesas/Item5"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item6" type="Area2D" parent="BG/Mineração/ItensDefesas"]
+position = Vector2(2, 261)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Mineração/ItensDefesas/Item6"]
+offset_left = 238.0
+offset_top = 122.0
+offset_right = 359.0
+offset_bottom = 236.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/ItensDefesas/Item6"]
+position = Vector2(298, 179)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item7" type="Area2D" parent="BG/Mineração/ItensDefesas"]
+position = Vector2(2, 261)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Mineração/ItensDefesas/Item7"]
+offset_left = 415.0
+offset_top = 124.0
+offset_right = 536.0
+offset_bottom = 238.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/ItensDefesas/Item7"]
+position = Vector2(476, 181)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item8" type="Area2D" parent="BG/Mineração/ItensDefesas"]
+position = Vector2(300, 440)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Mineração/ItensDefesas/Item8"]
+offset_left = 303.0
+offset_top = -57.0
+offset_right = 424.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/ItensDefesas/Item8"]
+position = Vector2(365, -1)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Line3" type="Node2D" parent="BG/Mineração"]
+position = Vector2(3, 40)
+
+[node name="Item5" type="Area2D" parent="BG/Mineração/Line3"]
+position = Vector2(133, 440)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Mineração/Line3/Item5"]
+offset_left = -61.0
+offset_top = -57.0
+offset_right = 60.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/Line3/Item5"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item6" type="Area2D" parent="BG/Mineração/Line3"]
+position = Vector2(2, 261)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Mineração/Line3/Item6"]
+offset_left = 238.0
+offset_top = 122.0
+offset_right = 359.0
+offset_bottom = 236.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/Line3/Item6"]
+position = Vector2(298, 179)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item7" type="Area2D" parent="BG/Mineração/Line3"]
+position = Vector2(2, 261)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Mineração/Line3/Item7"]
+offset_left = 415.0
+offset_top = 124.0
+offset_right = 536.0
+offset_bottom = 238.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/Line3/Item7"]
+position = Vector2(476, 181)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item8" type="Area2D" parent="BG/Mineração/Line3"]
+position = Vector2(300, 440)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Mineração/Line3/Item8"]
+offset_left = 303.0
+offset_top = -57.0
+offset_right = 424.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/Line3/Item8"]
+position = Vector2(365, -1)
+shape = SubResource("RectangleShape2D_sr6eu")
 
 [node name="Personagem" type="Node2D" parent="BG"]
 visible = false
@@ -367,6 +547,7 @@ offset_bottom = 604.0
 color = Color(0.486275, 0.462745, 0.466667, 1)
 
 [node name="Title" type="Label" parent="BG/Personagem/STATUS"]
+layout_mode = 0
 offset_left = 97.0
 offset_top = -1.0
 offset_right = 137.0
@@ -382,10 +563,125 @@ offset_bottom = 318.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
 
 [node name="Movimento" type="ColorRect" parent="BG/Personagem/Movimento"]
+layout_mode = 0
 offset_top = 262.0
 offset_right = 765.0
 offset_bottom = 520.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
+
+[node name="CaixasDeItem" type="Node2D" parent="BG/Personagem"]
+
+[node name="Item1" type="Area2D" parent="BG/Personagem/CaixasDeItem"]
+position = Vector2(131, 179)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Personagem/CaixasDeItem/Item1"]
+offset_left = -61.0
+offset_top = -57.0
+offset_right = 60.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/CaixasDeItem/Item1"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item2" type="Area2D" parent="BG/Personagem/CaixasDeItem"]
+
+[node name="ColorRect" type="ColorRect" parent="BG/Personagem/CaixasDeItem/Item2"]
+offset_left = 238.0
+offset_top = 122.0
+offset_right = 359.0
+offset_bottom = 236.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/CaixasDeItem/Item2"]
+position = Vector2(298, 179)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item3" type="Area2D" parent="BG/Personagem/CaixasDeItem"]
+
+[node name="ColorRect" type="ColorRect" parent="BG/Personagem/CaixasDeItem/Item3"]
+offset_left = 415.0
+offset_top = 124.0
+offset_right = 536.0
+offset_bottom = 238.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/CaixasDeItem/Item3"]
+position = Vector2(476, 181)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item4" type="Area2D" parent="BG/Personagem/CaixasDeItem"]
+position = Vector2(298, 179)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Personagem/CaixasDeItem/Item4"]
+offset_left = 303.0
+offset_top = -57.0
+offset_right = 424.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/CaixasDeItem/Item4"]
+position = Vector2(365, -1)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="ItensDefesas" type="Node2D" parent="BG/Personagem"]
+
+[node name="Item5" type="Area2D" parent="BG/Personagem/ItensDefesas"]
+position = Vector2(133, 440)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Personagem/ItensDefesas/Item5"]
+offset_left = -61.0
+offset_top = -57.0
+offset_right = 60.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/ItensDefesas/Item5"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item6" type="Area2D" parent="BG/Personagem/ItensDefesas"]
+position = Vector2(2, 261)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Personagem/ItensDefesas/Item6"]
+offset_left = 238.0
+offset_top = 122.0
+offset_right = 359.0
+offset_bottom = 236.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/ItensDefesas/Item6"]
+position = Vector2(298, 179)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item7" type="Area2D" parent="BG/Personagem/ItensDefesas"]
+position = Vector2(2, 261)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Personagem/ItensDefesas/Item7"]
+offset_left = 415.0
+offset_top = 124.0
+offset_right = 536.0
+offset_bottom = 238.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/ItensDefesas/Item7"]
+position = Vector2(476, 181)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item8" type="Area2D" parent="BG/Personagem/ItensDefesas"]
+position = Vector2(300, 440)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Personagem/ItensDefesas/Item8"]
+offset_left = 303.0
+offset_top = -57.0
+offset_right = 424.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/ItensDefesas/Item8"]
+position = Vector2(365, -1)
+shape = SubResource("RectangleShape2D_sr6eu")
 
 [node name="Defender Point" type="Node2D" parent="BG"]
 visible = false
@@ -398,6 +694,7 @@ offset_bottom = 604.0
 color = Color(0.486275, 0.462745, 0.466667, 1)
 
 [node name="Title" type="Label" parent="BG/Defender Point/STATUS"]
+layout_mode = 0
 offset_left = 97.0
 offset_top = -1.0
 offset_right = 137.0
@@ -425,6 +722,181 @@ offset_top = 402.0
 offset_right = 788.0
 offset_bottom = 558.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
+
+[node name="CaixasDeItem" type="Node2D" parent="BG/Defender Point"]
+position = Vector2(-2, -28)
+
+[node name="Item1" type="Area2D" parent="BG/Defender Point/CaixasDeItem"]
+position = Vector2(131, 179)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/CaixasDeItem/Item1"]
+offset_left = -61.0
+offset_top = -57.0
+offset_right = 60.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/CaixasDeItem/Item1"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item2" type="Area2D" parent="BG/Defender Point/CaixasDeItem"]
+
+[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/CaixasDeItem/Item2"]
+offset_left = 238.0
+offset_top = 122.0
+offset_right = 359.0
+offset_bottom = 236.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/CaixasDeItem/Item2"]
+position = Vector2(298, 179)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item3" type="Area2D" parent="BG/Defender Point/CaixasDeItem"]
+
+[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/CaixasDeItem/Item3"]
+offset_left = 415.0
+offset_top = 124.0
+offset_right = 536.0
+offset_bottom = 238.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/CaixasDeItem/Item3"]
+position = Vector2(476, 181)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item4" type="Area2D" parent="BG/Defender Point/CaixasDeItem"]
+position = Vector2(298, 179)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/CaixasDeItem/Item4"]
+offset_left = 303.0
+offset_top = -57.0
+offset_right = 424.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/CaixasDeItem/Item4"]
+position = Vector2(365, -1)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="ItensDefesas" type="Node2D" parent="BG/Defender Point"]
+position = Vector2(-4, -124)
+
+[node name="Item5" type="Area2D" parent="BG/Defender Point/ItensDefesas"]
+position = Vector2(133, 440)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/ItensDefesas/Item5"]
+offset_left = -61.0
+offset_top = -57.0
+offset_right = 60.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/ItensDefesas/Item5"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item6" type="Area2D" parent="BG/Defender Point/ItensDefesas"]
+position = Vector2(2, 261)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/ItensDefesas/Item6"]
+offset_left = 238.0
+offset_top = 122.0
+offset_right = 359.0
+offset_bottom = 236.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/ItensDefesas/Item6"]
+position = Vector2(298, 179)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item7" type="Area2D" parent="BG/Defender Point/ItensDefesas"]
+position = Vector2(2, 261)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/ItensDefesas/Item7"]
+offset_left = 415.0
+offset_top = 124.0
+offset_right = 536.0
+offset_bottom = 238.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/ItensDefesas/Item7"]
+position = Vector2(476, 181)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item8" type="Area2D" parent="BG/Defender Point/ItensDefesas"]
+position = Vector2(300, 440)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/ItensDefesas/Item8"]
+offset_left = 303.0
+offset_top = -57.0
+offset_right = 424.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/ItensDefesas/Item8"]
+position = Vector2(365, -1)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Line3" type="Node2D" parent="BG/Defender Point"]
+position = Vector2(1, 40)
+
+[node name="Item5" type="Area2D" parent="BG/Defender Point/Line3"]
+position = Vector2(133, 440)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/Line3/Item5"]
+offset_left = -61.0
+offset_top = -57.0
+offset_right = 60.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/Line3/Item5"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item6" type="Area2D" parent="BG/Defender Point/Line3"]
+position = Vector2(2, 261)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/Line3/Item6"]
+offset_left = 238.0
+offset_top = 122.0
+offset_right = 359.0
+offset_bottom = 236.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/Line3/Item6"]
+position = Vector2(298, 179)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item7" type="Area2D" parent="BG/Defender Point/Line3"]
+position = Vector2(2, 261)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/Line3/Item7"]
+offset_left = 415.0
+offset_top = 124.0
+offset_right = 536.0
+offset_bottom = 238.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/Line3/Item7"]
+position = Vector2(476, 181)
+shape = SubResource("RectangleShape2D_sr6eu")
+
+[node name="Item8" type="Area2D" parent="BG/Defender Point/Line3"]
+position = Vector2(300, 440)
+
+[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/Line3/Item8"]
+offset_left = 303.0
+offset_top = -57.0
+offset_right = 424.0
+offset_bottom = 57.0
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/Line3/Item8"]
+position = Vector2(365, -1)
+shape = SubResource("RectangleShape2D_sr6eu")
 
 [connection signal="pressed" from="BG/MKenuMenu/Shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="BG/MKenuMenu/Mineração" to="." method="_on_mineração_pressed"]

@@ -6,9 +6,20 @@ var buttons;
 var scrolls; 
 
 var scrollxtreme = preload("res://Assets/Images/Store/ScrollExtreme.png")
+var scrollxtremeHover = preload("res://Assets/Images/Store/ScrollExtremeHover.png")
+
 var scrollGood = preload("res://Assets/Images/Store/ScrollGood.png")
+var scrollGoodHover = preload("res://Assets/Images/Store/ScrollGoodHover.png")
+
 var scrollLegendary = preload("res://Assets/Images/Store/ScrollLegendary.png")
+var scrollLegendaryHover = preload("res://Assets/Images/Store/ScrollLegendaryHover.png")
+
 var scrollNormal = preload("res://Assets/Images/Store/ScrollNormal.png")
+var scrollNormalHover = preload("res://Assets/Images/Store/ScrollNormalHover.png")
+
+var item = preload("res://Assets/Images/Store/RockItem.png")
+var item_hover = preload("res://Assets/Images/Store/RockItemHover.png")
+
 
 var player = preload("res://Scripts/player.gd")
 
@@ -35,21 +46,34 @@ func _process(delta):
 #Adiciono aqui um valor aleatorio (Originalmente, adicionar a um objeto) 
 func scrollsSelect():
 	for i in range(0,len(buttons)):
+		print(i) 
 		var type = random_value.randi_range(0,3)
-		#var type = 0
-		if(i>0):
+		
+		if(i==1):
+			scrolls[i].texture_normal= item
+			scrolls[i].texture_hover=item_hover
+			scrolls[i].texture_pressed= item
+			
+		if(i>1):
 			scrolls[i].get_node("Text").text="INDISPONÍVEL"
 			scrolls[i].disabled=true
-		
+			
 		if(type==0):
 			scrolls[i].texture_normal=scrollNormal  
+			scrolls[i].texture_hover=scrollNormalHover 
+			scrolls[i].texture_pressed = scrollNormal
 		elif(type==1):
 			scrolls[i].texture_normal=scrollGood  
+			scrolls[i].texture_hover=scrollGoodHover
+			scrolls[i].texture_pressed = scrollGood
 		elif(type==2):
 			scrolls[i].texture_normal=scrollxtreme  
+			scrolls[i].texture_hover=scrollxtremeHover
+			scrolls[i].texture_pressed = scrollxtreme
 		elif(type==3):
 			scrolls[i].texture_normal=scrollLegendary  
-
+			scrolls[i].texture_hover=scrollLegendaryHover  
+			scrolls[i].texture_pressed = scrollLegendary 
 #AINDA EM DESENVOLVIMENTO, DEVO ENCONTRAR UMA FORMA MELHOR PRA FAZER ISSO KKKKKKK
 func transition(numPage): 
 	for i in range(0,len(pages)):
