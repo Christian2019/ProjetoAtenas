@@ -1,6 +1,5 @@
-[gd_scene load_steps=12 format=3 uid="uid://c1gks6vngfiqu"]
+[gd_scene load_steps=11 format=3 uid="uid://c1gks6vngfiqu"]
 
-[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior.gd" id="1_m86b2"]
 [ext_resource type="Texture2D" uid="uid://be0jxocrlx0v4" path="res://Assets/Images/Player/cutAnimation.png" id="2_0voec"]
 [ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_Attack1.gd" id="2_mljmw"]
 
@@ -64,7 +63,6 @@ animations = [{
 size = Vector2(50, 62)
 
 [node name="Warrior" type="Node2D"]
-script = ExtResource("1_m86b2")
 
 [node name="Warrior_Attack1" type="Node2D" parent="."]
 script = ExtResource("2_mljmw")
@@ -74,10 +72,12 @@ position = Vector2(0, 5.68434e-14)
 scale = Vector2(0.241627, 0.241627)
 sprite_frames = SubResource("SpriteFrames_qc0tj")
 animation = &"Normal"
-frame = 3
-frame_progress = 0.929413
+autoplay = "Normal"
+frame_progress = 0.522762
 
 [node name="Area2D" type="Area2D" parent="Warrior_Attack1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Warrior_Attack1/Area2D"]
 shape = SubResource("RectangleShape2D_84ap5")
+
+[connection signal="area_entered" from="Warrior_Attack1/Area2D" to="Warrior_Attack1" method="_on_area_2d_area_entered"]

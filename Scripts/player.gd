@@ -5,6 +5,9 @@ var attack_Speed = 1 ## precisa ser >0
 
 var playerClass = PreLoads.warrior
 
+#Controle do ultimo movimento, pode ser N,S,W,E,NE,NW,SE,SW. Usado para controle da direacao do ataque
+var lastMovement = "E"
+
 ##Abilities Var
 
 ##Type Normal Zeus...
@@ -38,8 +41,7 @@ var closerQuadrant
 
 func _ready():
 	$Animation.play("Right")
-	
-	
+
 
 var start_b = true
 func start():
@@ -53,7 +55,7 @@ func _process(delta):
 	animationController()
 	commandController()	
 	getCloserQuadrant()
-	mining()
+	#mining()
 	#contruction()
 
 func commandController():
@@ -87,10 +89,10 @@ func attack1Controller():
 		var attackInstance = creatAttackInstance(classChild)
 		get_parent().get_node("Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position
-		attackInstance.get_node("Animation").play()
+		attackInstance.direction=lastMovement
+		if ($Animation.is_playing()):
+			attackInstance.playerSpeed=move_Speed
 
-		
-		
 func attack2Controller():
 	if (Input.is_action_just_pressed("Attack2")):
 		print("Attack2")
@@ -181,7 +183,28 @@ func moveController():
 	elif Input.is_action_pressed("Move_Left"):
 		playerRight=false
 		position.x-=move_Speed*speedModifier
+		
+	lastMoveController()
 
+
+func lastMoveController():
+	if Input.is_action_pressed("Move_Down"):
+		lastMovement="S"
+		if Input.is_action_pressed("Move_Right"):
+			lastMovement="SE"
+		elif Input.is_action_pressed("Move_Left"):
+			lastMovement="SW"
+	elif Input.is_action_pressed("Move_Up"):
+		lastMovement="N"
+		if Input.is_action_pressed("Move_Right"):
+			lastMovement="NE"
+		elif Input.is_action_pressed("Move_Left"):
+			lastMovement="NW"
+	elif Input.is_action_pressed("Move_Right"):
+		lastMovement="E"
+	elif Input.is_action_pressed("Move_Left"):
+		lastMovement="W"
+		
 
 func _on_timer_timeout():
 	pass

@@ -12,5 +12,8 @@ func timerCreator(functionName,time,parameters,node):
 		call_deferred("add_child",timer)
 		
 func timeOut(timer,node,functionName,parameters):
-	node.callv(functionName,parameters)
 	remove_child(timer)
+	if node==null:
+		return
+	node.callv(functionName,parameters)
+	

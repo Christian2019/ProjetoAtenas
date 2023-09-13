@@ -1,5 +1,6 @@
 extends "res://Scripts/Enemy.gd"
 
+var hp = 3
 var speed = 1
 var isMoving=true
 
@@ -12,15 +13,23 @@ func _ready():
 
 func _process(delta):
 	super._process(delta)
+	if (hp<=0):
+		die()
+		return
+	
 	if (isMoving):
 		move()
 	if (playerInside or centerPointInside):
 		isMoving=false
 		if ($AnimatedSprite2D.animation!= "Attacking"):
 			$AnimatedSprite2D.animation= "Attacking"
-		if Input.is_action_pressed("Attack1"):
-			call_deferred("free")
-	
+		
+
+func die():
+	#Animacao de morte
+	queue_free()
+	#call_deferred("free")
+
 func move():
 	if ($AnimatedSprite2D.animation!= "Walking"):
 		$AnimatedSprite2D.animation= "Walking"
