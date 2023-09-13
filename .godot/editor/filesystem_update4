@@ -6,3 +6,7 @@ res://Scenes/Game/player.tscn
 res://Scenes/Game/Game.tscn
 res://Scenes/Game/Enemies/Enemy.tscn
 res://Scenes/Game/Classes/Warrior/Warrior_Attack1.tscn
+res://Scenes/Game/Constructions/Defenses/Projectile.tscn
+res://Scripts/Projectile.gd
+res://Scenes/Game/Constructions/Defenses/Tower.tscn
+res://Scripts/Classes/Warrior/Warrior_Attack1.gd

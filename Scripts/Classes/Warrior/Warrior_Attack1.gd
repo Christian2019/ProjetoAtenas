@@ -6,16 +6,17 @@ var direction = "E"
 var playerSpeed=0
 
 #Dano por frame (respeitando nextHitDelay)
-var damage = 1
+var damage = 5
 
 #->Determinado pela skill
 #Por frame
-var speed = 8
+var speed = 1
 
 #Duracao em segundos
-var cd = 0.2
-var max_duration = 1
-var nextHitDelay = 1
+var cd = 2
+var max_duration = 10
+#var nextHitDelay = 10
+var nextHitDelay = 0.1
 
 #Monstros que foram atingidos pelo ataque
 var monstersHit = []
