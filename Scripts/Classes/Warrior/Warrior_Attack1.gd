@@ -83,7 +83,7 @@ func addMonster(monster):
 		monstersHit.append({"monster":monster,"onHitDelay":false})
 	elif !checkIfExist(monster.name):
 		monstersHit.append({"monster":monster,"onHitDelay":false})
-	print(monstersHit)
+
 
 func checkIfExist(name):
 	for i in range(0,monstersHit.size(),1):
