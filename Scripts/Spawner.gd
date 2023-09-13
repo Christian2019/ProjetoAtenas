@@ -23,7 +23,7 @@ func start():
 		start_bool=false
 		#createWave()
 
-func _process(delta):
+func _process(_delta):
 	if (!enable):
 		return
 	start()

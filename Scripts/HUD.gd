@@ -3,7 +3,7 @@ extends Node2D
 var tick =0
 var waitTick=2
 
-func _process(delta):
+func _process(_delta):
 	if (tick == waitTick):
 		updateTimeToNextWave()
 		updateResources()

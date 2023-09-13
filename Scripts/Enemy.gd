@@ -5,7 +5,7 @@ var centerPoint
 func _ready():
 	centerPoint = get_parent().get_parent().get_node("Center/CenterArea/CollisionShape2D")
 
-func _process(delta):
+func _process(_delta):
 	pass
 
 

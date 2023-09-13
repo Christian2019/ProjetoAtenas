@@ -1,33 +1,33 @@
-[gd_scene load_steps=11 format=3 uid="uid://c1gks6vngfiqu"]
+[gd_scene load_steps=11 format=3 uid="uid://c408xykbxejnq"]
 
-[ext_resource type="Texture2D" uid="uid://be0jxocrlx0v4" path="res://Assets/Images/Player/cutAnimation.png" id="2_0voec"]
-[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_Attack1.gd" id="2_mljmw"]
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_Attack1.gd" id="1_50rb5"]
+[ext_resource type="Texture2D" uid="uid://be0jxocrlx0v4" path="res://Assets/Images/Player/cutAnimation.png" id="2_puen5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_taocq"]
-atlas = ExtResource("2_0voec")
+atlas = ExtResource("2_puen5")
 region = Rect2(0, 0, 209, 259)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18kcs"]
-atlas = ExtResource("2_0voec")
+atlas = ExtResource("2_puen5")
 region = Rect2(209, 0, 209, 259)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6edoi"]
-atlas = ExtResource("2_0voec")
+atlas = ExtResource("2_puen5")
 region = Rect2(418, 0, 209, 259)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7s2uy"]
-atlas = ExtResource("2_0voec")
+atlas = ExtResource("2_puen5")
 region = Rect2(627, 0, 209, 259)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7l0r1"]
-atlas = ExtResource("2_0voec")
+atlas = ExtResource("2_puen5")
 region = Rect2(836, 0, 209, 259)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ytbvk"]
-atlas = ExtResource("2_0voec")
+atlas = ExtResource("2_puen5")
 region = Rect2(1045, 0, 209, 259)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_qc0tj"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_8w6ou"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -59,25 +59,23 @@ animations = [{
 "speed": 30.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_84ap5"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivf5m"]
 size = Vector2(50, 62)
 
-[node name="Warrior" type="Node2D"]
+[node name="Warrior_Attack1" type="Node2D"]
+script = ExtResource("1_50rb5")
 
-[node name="Warrior_Attack1" type="Node2D" parent="."]
-script = ExtResource("2_mljmw")
-
-[node name="Animation" type="AnimatedSprite2D" parent="Warrior_Attack1"]
+[node name="Animation" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 5.68434e-14)
 scale = Vector2(0.241627, 0.241627)
-sprite_frames = SubResource("SpriteFrames_qc0tj")
+sprite_frames = SubResource("SpriteFrames_8w6ou")
 animation = &"Normal"
 autoplay = "Normal"
-frame_progress = 0.522762
 
-[node name="Area2D" type="Area2D" parent="Warrior_Attack1"]
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Warrior_Attack1/Area2D"]
-shape = SubResource("RectangleShape2D_84ap5")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ivf5m")
 
-[connection signal="area_entered" from="Warrior_Attack1/Area2D" to="Warrior_Attack1" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

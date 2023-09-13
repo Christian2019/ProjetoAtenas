@@ -50,7 +50,7 @@ func start():
 		Global.player = self
 	
 
-func _process(delta):
+func _process(__delta):
 	start()
 	animationController()
 	commandController()	
@@ -68,13 +68,11 @@ func commandController():
 	
 func creatAttackInstance(classChild):
 	##Criando uma instancia do tipo do ataque da classe
-	var classInstance = playerClass.instantiate()
-	var attackInstance=classInstance.get_child(classChild)
-	classInstance.remove_child(attackInstance)
-	classInstance.queue_free()
-	
+	var attackInstance = playerClass[classChild].instantiate()
+
 	##Bloqueando o uso da skill pelo cd da skill / tua attack speed
 	permissions[classChild]=false
+	
 	Global.timerCreator("enableAttackUse",attackInstance.cd/attack_Speed,[classChild],self)	
 	
 	return attackInstance

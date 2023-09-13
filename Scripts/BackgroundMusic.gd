@@ -8,4 +8,4 @@ func _ready():
 func random(min,max):
 	var rng = RandomNumberGenerator.new()
 	return int (rng.randf_range(min, max))
-	volume_db
+

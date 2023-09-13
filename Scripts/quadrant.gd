@@ -6,7 +6,7 @@ var tower
 
 var allowToConstruct=false
 
-func _process(delta):
+func _process(_delta):
 	permissions()
 	
 

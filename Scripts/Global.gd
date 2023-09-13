@@ -13,7 +13,8 @@ func timerCreator(functionName,time,parameters,node):
 		
 func timeOut(timer,node,functionName,parameters):
 	remove_child(timer)
-	if node==null:
-		return
-	node.callv(functionName,parameters)
+	call_deferred("doAction",node,functionName,parameters)
 	
+func doAction(node,functionName,parameters):
+	if is_instance_valid(node) and !node.is_queued_for_deletion():
+		node.callv(functionName,parameters)

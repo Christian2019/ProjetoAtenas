@@ -11,8 +11,8 @@ func _ready():
 	super._ready()
 	$AnimatedSprite2D.play("Walking")
 
-func _process(delta):
-	super._process(delta)
+func _process(_delta):
+	super._process(_delta)
 	if (hp<=0):
 		die()
 		return
@@ -27,8 +27,7 @@ func _process(delta):
 
 func die():
 	#Animacao de morte
-	queue_free()
-	#call_deferred("free")
+	call_deferred("queue_free")
 
 func move():
 	if ($AnimatedSprite2D.animation!= "Walking"):

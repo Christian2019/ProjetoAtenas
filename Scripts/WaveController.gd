@@ -17,7 +17,7 @@ func _ready():
 	passTime()
 
 
-func _process(delta):
+func _process(_delta):
 	if (battleTime and timer ==0 and enemies.get_child_count()==0):
 		battleEnd()	
 
