@@ -1,19 +1,29 @@
 extends "res://Scripts/Enemy.gd"
 
-var hp = 3
+var maxHp=30
+var hp = maxHp
+
+var maxHpBarWidth
+var hpBarWidth = maxHpBarWidth
+
 var speed = 1
 var isMoving=true
 
 var playerInside=false
 var centerPointInside=false
 
+
+
 func _ready():
 	super._ready()
 	$AnimatedSprite2D.play("Walking")
+	maxHpBarWidth=$HPBar/Red.size.x
+
 
 func _process(_delta):
 	super._process(_delta)
 	if (hp<=0):
+		hp=0
 		die()
 		return
 	
@@ -23,7 +33,11 @@ func _process(_delta):
 		isMoving=false
 		if ($AnimatedSprite2D.animation!= "Attacking"):
 			$AnimatedSprite2D.animation= "Attacking"
-		
+	hpBarController()
+
+func hpBarController():
+	hpBarWidth=maxHpBarWidth*hp/maxHp
+	$HPBar/Green.size.x=hpBarWidth
 
 func die():
 	#Animacao de morte
