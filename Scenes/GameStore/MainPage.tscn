@@ -80,6 +80,7 @@ offset_right = 997.0
 offset_bottom = 33.0
 
 [node name="SHOP" type="Node2D" parent="BG"]
+visible = false
 position = Vector2(1, 0)
 
 [node name="LOJA" type="ColorRect" parent="BG/SHOP"]
@@ -102,6 +103,16 @@ offset_left = 70.0
 offset_right = 114.0
 offset_bottom = 26.0
 text = "Items"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BG/SHOP/ITEMS"]
+offset_left = 7.0
+offset_top = 36.0
+offset_right = 172.0
+offset_bottom = 303.0
+
+[node name="Itens" type="GridContainer" parent="BG/SHOP/ITEMS/ScrollContainer"]
+layout_mode = 2
+columns = 2
 
 [node name="STATUS" type="ColorRect" parent="BG/SHOP"]
 offset_left = 855.0
@@ -140,6 +151,16 @@ offset_top = 275.0
 offset_right = 855.0
 offset_bottom = 605.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
+layout_mode = 0
+offset_left = 7.0
+offset_right = 850.0
+offset_bottom = 288.0
+
+[node name="Itens" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/ScrollContainer"]
+layout_mode = 2
+columns = 4
 
 [node name="TROCA" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
 visible = false
@@ -537,16 +558,15 @@ position = Vector2(365, -1)
 shape = SubResource("RectangleShape2D_sr6eu")
 
 [node name="Personagem" type="Node2D" parent="BG"]
-visible = false
 
-[node name="STATUS" type="ColorRect" parent="BG/Personagem"]
+[node name="ITEMS" type="ColorRect" parent="BG/Personagem"]
 offset_left = 802.0
 offset_top = 39.0
 offset_right = 1033.0
 offset_bottom = 604.0
 color = Color(0.486275, 0.462745, 0.466667, 1)
 
-[node name="Title" type="Label" parent="BG/Personagem/STATUS"]
+[node name="Title" type="Label" parent="BG/Personagem/ITEMS"]
 layout_mode = 0
 offset_left = 97.0
 offset_top = -1.0
@@ -554,6 +574,16 @@ offset_right = 137.0
 offset_bottom = 25.0
 text = "Items
 "
+
+[node name="MyItems" type="ScrollContainer" parent="BG/Personagem/ITEMS"]
+offset_left = 7.0
+offset_top = 36.0
+offset_right = 226.0
+offset_bottom = 556.0
+
+[node name="Itens" type="GridContainer" parent="BG/Personagem/ITEMS/MyItems"]
+layout_mode = 2
+columns = 2
 
 [node name="Movimento" type="ColorRect" parent="BG/Personagem"]
 offset_left = 23.0
@@ -898,9 +928,52 @@ color = Color(0.172549, 0.172549, 0.172549, 1)
 position = Vector2(365, -1)
 shape = SubResource("RectangleShape2D_sr6eu")
 
+[node name="Warning" type="Button" parent="."]
+visible = false
+offset_left = -49.0
+offset_top = -19.0
+offset_right = 1057.0
+offset_bottom = 672.0
+disabled = true
+
+[node name="Background" type="ColorRect" parent="Warning"]
+offset_left = 262.0
+offset_top = 127.0
+offset_right = 861.0
+offset_bottom = 394.0
+color = Color(0, 0, 0, 0.403922)
+
+[node name="YES" type="Button" parent="Warning/Background"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 212.0
+offset_right = 270.0
+offset_bottom = 255.0
+text = "SIM"
+
+[node name="NOPE" type="Button" parent="Warning/Background"]
+offset_left = 327.0
+offset_top = 212.0
+offset_right = 580.0
+offset_bottom = 255.0
+text = "NÃO"
+
+[node name="Label" type="Label" parent="Warning/Background"]
+offset_left = 130.0
+offset_top = 116.0
+offset_right = 473.0
+offset_bottom = 154.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Tem certeza que quer comprar este item?"
+
 [connection signal="pressed" from="BG/MKenuMenu/Shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="BG/MKenuMenu/Mineração" to="." method="_on_mineração_pressed"]
 [connection signal="pressed" from="BG/MKenuMenu/Personagem" to="." method="_on_personagem_pressed"]
 [connection signal="pressed" from="BG/MKenuMenu/Defender Point" to="." method="_on_defender_point_pressed"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/MinhasCoisas" to="." method="_on_minhas_coisas_pressed"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/Troca" to="." method="_on_troca_pressed"]
+[connection signal="pressed" from="BG/SHOP/SCROLL1" to="." method="_on_scroll_1_pressed"]
+[connection signal="pressed" from="BG/SHOP/SCROLL2" to="." method="_on_scroll_2_pressed"]
+[connection signal="pressed" from="Warning/Background/YES" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="Warning/Background/YES" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Warning/Background/NOPE" to="." method="_on_nope_pressed"]
