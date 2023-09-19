@@ -6,17 +6,17 @@ var direction = "E"
 var playerSpeed=0
 
 #Dano por frame (respeitando nextHitDelay)
-var damage = 5
+var damage = 10
 
 #->Determinado pela skill
 #Por frame
-var speed = 1
+var speed = 10
 
 #Duracao em segundos
-var cd = 2
-var max_duration = 10
+var cd = 3
+var max_duration = 0.5
 #var nextHitDelay = 10
-var nextHitDelay = 0.1
+var nextHitDelay = 1
 
 #Monstros que foram atingidos pelo ataque
 var monstersHit = []
@@ -24,19 +24,68 @@ var monstersHit = []
 #Monstros em contato com o ataque
 var monstersInArea = []
 
+var collidinWithPlayer=false
+
+var reverseOrder=false
+
+var attacktype=0
+
+
 func _ready():
 	Global.timerCreator("destroy",max_duration,[],self)
+	Global.timerCreator("enableReverseOrder",max_duration/2,[],self)
+	$Animation.visible=false
+
+	
+
+var waitFrames=0
+var waitMaxFrames=1
+func waitFunc():
+	if (waitFrames>=waitMaxFrames):
+		if (waitFrames>waitMaxFrames):
+			return
+		animation()
+	waitFrames+=1	
+
+
+func _process(_delta):
+	waitFunc()
+	move()
+	damageAction()
+	destroy()
+
+func animation():
+	$Animation.stop()
+	$Animation.visible=true
+	$Animation.frame=attacktype
+	
+	if direction=="NE":
+		$Animation.rotate(deg_to_rad(45))
+	elif direction=="E":
+		$Animation.rotate(deg_to_rad(90))
+	elif direction=="SE":
+		$Animation.rotate(deg_to_rad(135))
+	elif direction=="S":
+		$Animation.rotate(deg_to_rad(180))
+	elif direction=="SW":
+		$Animation.rotate(deg_to_rad(225))
+	elif direction=="W":
+		$Animation.rotate(deg_to_rad(270))
+	elif direction=="NW":
+		$Animation.rotate(deg_to_rad(315))
+
+func enableReverseOrder():
+	reverseOrder=true
+	
 
 func destroy():
-	call_deferred("queue_free")
+	if (reverseOrder and collidinWithPlayer):
+		Global.player.permissions[0]=true
+		call_deferred("queue_free")
 
 func removeNextHitDelay(arrayPosition):
 	if (itsValid(monstersHit[arrayPosition])):
 		monstersHit[arrayPosition].onHitDelay=false
-
-func _process(_delta):
-	move()
-	damageAction()
 	
 func damageAction():
 	if (monstersInArea.is_empty()):
@@ -50,8 +99,13 @@ func damageAction():
 					Global.timerCreator("removeNextHitDelay",nextHitDelay,[i],self)
 
 func move():
+	if reverseOrder:
+		var dx = (speed+playerSpeed)*cos(get_angle_to(Global.player.global_position))
+		var dy = (speed+playerSpeed)*sin(get_angle_to(Global.player.global_position))
+		position+=Vector2(dx,dy)
+		return
+		
 	var speedModifier=1
-	
 	#Corrigi a velocidade na diagonal
 	if direction=="NE" or direction=="NW" or direction=="SE" or direction=="SW":
 		speedModifier=1/(2**0.5)			
@@ -74,10 +128,14 @@ func move():
 func _on_area_2d_area_entered(area):
 	if area.get_parent().get_parent().name == "Enemies":
 		call_deferred("addMonster",area.get_parent())
+	if area.get_parent().name == "Player":
+		collidinWithPlayer=true
 		
 func _on_area_2d_area_exited(area):
 	if area.get_parent().get_parent().name == "Enemies":
 		call_deferred("removeMonster",area.get_parent())
+	if area.get_parent().name == "Player":
+		collidinWithPlayer=false
 
 func removeMonster(monster):
 	monstersInArea.erase(monster)

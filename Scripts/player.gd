@@ -10,12 +10,13 @@ var lastMovement = "E"
 
 ##Abilities Var
 
-##Type Normal Zeus...
-var attack1_type = "Normal"
-var attack2_type = "Normal"
-var turret_type = "Normal"
-var dash_type = "Normal"
-var ultimate_type = "Normal"
+var actions = [
+	{"attack1_type" : 0},
+	{"attack2_type" : 0},
+	{"turret_type" : 0},
+	{"dash_type" : 0},
+	{"ultimate_type" : 0},
+	]
 
 ## Se esta em CD
 var permissions = [
@@ -55,9 +56,15 @@ func _process(__delta):
 	animationController()
 	commandController()	
 	getCloserQuadrant()
+	debug()
 	#mining()
 	#contruction()
-
+func debug():
+	if Input.is_action_just_pressed("ChangeAttack1"):
+		actions[0]={"attack1_type" : actions[0].values()[0]+1}
+		if (actions[0].values()[0]==3):
+			actions[0]={"attack1_type" : 0}
+			
 func commandController():
 	moveController()
 	attack1Controller()
@@ -73,7 +80,9 @@ func creatAttackInstance(classChild):
 	##Bloqueando o uso da skill pelo cd da skill / tua attack speed
 	permissions[classChild]=false
 	
-	Global.timerCreator("enableAttackUse",attackInstance.cd/attack_Speed,[classChild],self)	
+	#Global.timerCreator("enableAttackUse",attackInstance.cd/attack_Speed,[classChild],self)	
+	
+	attackInstance.attacktype=actions[classChild].values()[0]
 	
 	return attackInstance
    
