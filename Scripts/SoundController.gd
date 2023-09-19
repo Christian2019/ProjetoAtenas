@@ -2,7 +2,7 @@ extends Node2D
 
 var waveMusicPlaying = false
 
-var transitionTime = 10
+var transitionTime = 5
 	
 func startBattleMusic():
 	$WaveMusic.playing=true

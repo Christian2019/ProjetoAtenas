@@ -1,9 +1,9 @@
 extends Node2D
 
-var startTimer = 5
+var startTimer = 60
 var timer = startTimer
 
-var battleTimer = startTimer
+var battleTimer = startTimer/2
 var peaceTimer = startTimer
 
 var battleTime=false
@@ -33,7 +33,7 @@ func passTime():
 
 func battleStart():
 	battleTime=true
-	timer = startTimer
+	timer = battleTimer
 	soundController.startBattleMusic()
 	passTime()
 	createEnemies()

@@ -3,7 +3,7 @@ extends Node2D
 #->Determinado pelo player
 #Pode ser N,S,W,E,NE,NW,SE,SW 
 var direction = "E"
-var playerSpeed=0
+var relativePosition= Vector2(0,0)
 
 #Dano por frame (respeitando nextHitDelay)
 var damage = 10
@@ -29,7 +29,6 @@ var collidinWithPlayer=false
 var reverseOrder=false
 
 var attacktype=0
-
 
 func _ready():
 	Global.timerCreator("destroy",max_duration,[],self)
@@ -100,30 +99,31 @@ func damageAction():
 
 func move():
 	if reverseOrder:
-		var dx = (speed+playerSpeed)*cos(get_angle_to(Global.player.global_position))
-		var dy = (speed+playerSpeed)*sin(get_angle_to(Global.player.global_position))
-		position+=Vector2(dx,dy)
-		return
+		var dx = (speed)*cos(get_angle_to(Global.player.global_position))
+		var dy = (speed)*sin(get_angle_to(Global.player.global_position))
+		relativePosition+=Vector2(dx,dy)
+	else:
+		var speedModifier=1
+		#Corrigi a velocidade na diagonal
+		if direction=="NE" or direction=="NW" or direction=="SE" or direction=="SW":
+			speedModifier=1/(2**0.5)			
 		
-	var speedModifier=1
-	#Corrigi a velocidade na diagonal
-	if direction=="NE" or direction=="NW" or direction=="SE" or direction=="SW":
-		speedModifier=1/(2**0.5)			
-	
-	#Y+
-	if direction=="SE" or direction=="S" or direction=="SW":
-		global_position.y+=(speed+playerSpeed)*speedModifier
-	#Y-
-	if direction=="NE" or direction=="N" or direction=="NW":
-		global_position.y-=(speed+playerSpeed)*speedModifier
-	
-	#X+
-	if direction=="SE" or direction=="E" or direction=="NE":
-		global_position.x+=(speed+playerSpeed)*speedModifier
-	
-	#X-
-	if direction=="SW" or direction=="W" or direction=="NW":
-		global_position.x-=(speed+playerSpeed)*speedModifier
+		#Y+
+		if direction=="SE" or direction=="S" or direction=="SW":
+			relativePosition.y+=(speed)*speedModifier
+		#Y-
+		if direction=="NE" or direction=="N" or direction=="NW":
+			relativePosition.y-=(speed)*speedModifier
+		
+		#X+
+		if direction=="SE" or direction=="E" or direction=="NE":
+			relativePosition.x+=(speed)*speedModifier
+		
+		#X-
+		if direction=="SW" or direction=="W" or direction=="NW":
+			relativePosition.x-=(speed)*speedModifier
+		
+	global_position= Global.player.global_position+relativePosition
 		
 func _on_area_2d_area_entered(area):
 	if area.get_parent().get_parent().name == "Enemies":

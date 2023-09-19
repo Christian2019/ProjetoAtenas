@@ -1,6 +1,6 @@
 extends Node2D
 ##Stats
-var move_Speed = 5
+var move_Speed = 10
 var attack_Speed = 1 ## precisa ser >0
 
 var playerClass = PreLoads.warrior
@@ -40,6 +40,8 @@ var contactQuadrants = []
 var closerQuadrant 
 #{vector2,index}
 
+var farming =false
+
 func _ready():
 	$Animation.play("Right")
 
@@ -57,7 +59,7 @@ func _process(__delta):
 	commandController()	
 	getCloserQuadrant()
 	debug()
-	#mining()
+	mining()
 	#contruction()
 func debug():
 	if Input.is_action_just_pressed("ChangeAttack1"):
@@ -67,6 +69,8 @@ func debug():
 			
 func commandController():
 	moveController()
+	if (farming):
+		return
 	attack1Controller()
 	attack2Controller()
 	turretController()
@@ -83,7 +87,7 @@ func creatAttackInstance(classChild):
 	#Global.timerCreator("enableAttackUse",attackInstance.cd/attack_Speed,[classChild],self)	
 	
 	attackInstance.attacktype=actions[classChild].values()[0]
-	
+
 	return attackInstance
    
 func enableAttackUse(classChild):
@@ -97,8 +101,6 @@ func attack1Controller():
 		get_parent().get_node("Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position
 		attackInstance.direction=lastMovement
-		if ($Animation.is_playing()):
-			attackInstance.playerSpeed=move_Speed
 
 func attack2Controller():
 	if (Input.is_action_just_pressed("Attack2")):
@@ -124,6 +126,9 @@ func contruction():
 	
 
 func mining():
+	if (!farming):
+		return
+		
 	if Input.is_action_pressed("Attack1"):
 		if (playerRight):
 			$CutAnimation.flip_h=false
@@ -181,20 +186,53 @@ func moveController():
 			speedModifier=1/(2**0.5)			
 	
 	if Input.is_action_pressed("Move_Down"):
-		position.y+=move_Speed*speedModifier
+		#position.y+=move_Speed*speedModifier
+		tryToMove(0,move_Speed*speedModifier)
 	elif Input.is_action_pressed("Move_Up"):
-		position.y-=move_Speed*speedModifier
+		#position.y-=move_Speed*speedModifier
+		tryToMove(0,move_Speed*speedModifier*(-1))
 	if Input.is_action_pressed("Move_Right"):
 		playerRight=true
-		position.x+=move_Speed*speedModifier
+		#position.x+=move_Speed*speedModifier
+		tryToMove(move_Speed*speedModifier,0)
 	elif Input.is_action_pressed("Move_Left"):
 		playerRight=false
-		position.x-=move_Speed*speedModifier
+		#position.x-=move_Speed*speedModifier
+		tryToMove(move_Speed*speedModifier*(-1),0)
+
 		
 	lastMoveController()
 
+func tryToMove(speedX,speedY):
+	var topSpeed = 150
+	if (abs(speedX)>topSpeed):
+		speedX=speedX*topSpeed/abs(speedX)
+	if (abs(speedY)>topSpeed):
+		speedY=speedY*topSpeed/abs(speedY)
+		
+	var nextTryPosition = Vector2(position.x+speedX,position.y+speedY)
+	if (!Global.areaBoxCollision(self,nextTryPosition,$Body,Global.Game.get_node("BockedAreas").get_children())):
+		position.y+=speedY
+		position.x+=speedX
+	else:
+		#Faz o movimento limitando a velocidade para que encaixe perfeitamente
+		
+		var testSpeedStep=0.01
+		var testSpeedValue=testSpeedStep
+		nextTryPosition = Vector2(position.x+speedX*testSpeedValue,position.y+speedY*testSpeedValue)
+		
+		while (!Global.areaBoxCollision(self,nextTryPosition,$Body,Global.Game.get_node("BockedAreas").get_children())):
+			testSpeedValue+=testSpeedStep
+			nextTryPosition = Vector2(position.x+speedX*testSpeedValue,position.y+speedY*testSpeedValue)
+		
+		testSpeedValue-=testSpeedStep
+		position.y+=speedY*testSpeedValue
+		position.x+=speedX*testSpeedValue
+		
+	
 
 func lastMoveController():
+
 	if Input.is_action_pressed("Move_Down"):
 		lastMovement="S"
 		if Input.is_action_pressed("Move_Right"):

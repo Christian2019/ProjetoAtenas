@@ -15,3 +15,5 @@ func _on_area_2d_area_entered(area):
 				
 			player.call_deferred("remove_child",player.carryingItem)
 			player.carryingItem=null
+	
+
