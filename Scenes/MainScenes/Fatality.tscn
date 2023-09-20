@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://butuan5er7o5a"]
+[gd_scene load_steps=4 format=3 uid="uid://butuan5er7o5a"]
 
 [ext_resource type="Script" path="res://Scripts/Fatality.gd" id="1_ptcrv"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/fatality.ogv" id="1_yhu8r"]
+[ext_resource type="AudioStream" uid="uid://ptqt4rl1wcxb" path="res://Assets/Sounds/fatality.mp3" id="3_yvl5s"]
 
 [node name="Fatality" type="Node2D"]
 script = ExtResource("1_ptcrv")
@@ -18,3 +19,7 @@ stream = ExtResource("1_yhu8r")
 volume_db = 9.7
 autoplay = true
 expand = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yvl5s")
+autoplay = true
