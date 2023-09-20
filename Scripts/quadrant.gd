@@ -6,7 +6,7 @@ var tower
 
 var allowToConstruct=false
 
-func _process(delta):
+func _process(_delta):
 	permissions()
 	
 
@@ -25,6 +25,9 @@ func _on_area_entered(area):
 		
 	if (area.get_parent().name=="Player"):
 		area.get_parent().contactQuadrants.append(self)
+		
+	if (area.get_parent().name=="Temple"):
+		visible=false
 		
 
 

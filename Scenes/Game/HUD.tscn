@@ -3,16 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
 [ext_resource type="Script" path="res://Scripts/HUD.gd" id="1_60mgy"]
 [ext_resource type="FontFile" uid="uid://duy38o6o71nij" path="res://Assets/Fonts/Kurland.otf" id="2_owy1r"]
-[ext_resource type="Texture2D" uid="uid://dngj5ixcj4v7" path="res://Assets/Images/HUD/hearth.png" id="3_ew26g"]
+[ext_resource type="Texture2D" uid="uid://cg4c8qydgkpag" path="res://Assets/Images/HUD/hearth2.png" id="3_07ur1"]
 [ext_resource type="Texture2D" uid="uid://ywre30ix5f7t" path="res://Assets/Images/Resources/wood.png" id="4_ujb4v"]
 [ext_resource type="Texture2D" uid="uid://dlwvyo6ejssc" path="res://Assets/Images/Resources/gold.png" id="5_dhfbp"]
 [ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="6_41dw3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_22btt"]
 font = ExtResource("2_owy1r")
-font_size = 20
 
 [node name="HUD" type="Node2D"]
+scale = Vector2(0.937977, 0.52452)
 script = ExtResource("1_60mgy")
 
 [node name="Background" type="Node2D" parent="."]
@@ -72,27 +72,58 @@ texture = ExtResource("1_2qrhs")
 [node name="HP" type="Node2D" parent="Frontground"]
 position = Vector2(-40, -61)
 
+[node name="ColorRect" type="ColorRect" parent="Frontground/HP"]
+offset_left = 70.0
+offset_top = 99.0
+offset_right = 124.0
+offset_bottom = 149.0
+color = Color(0.882353, 0, 0.00392157, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Frontground/HP"]
+position = Vector2(94.6389, 109.139)
+scale = Vector2(0.565866, 0.551601)
+texture = ExtResource("3_07ur1")
+
 [node name="Label" type="Label" parent="Frontground/HP"]
-offset_left = 46.0
-offset_top = 69.0
-offset_right = 233.0
-offset_bottom = 113.0
+offset_left = 45.3306
+offset_top = 68.6342
+offset_right = 232.331
+offset_bottom = 112.634
 text = "HP 100/100"
 label_settings = SubResource("LabelSettings_22btt")
 
-[node name="Sprite2D" type="Sprite2D" parent="Frontground/HP"]
-position = Vector2(98, 126)
-scale = Vector2(0.0543479, 0.0543479)
-texture = ExtResource("3_ew26g")
+[node name="CenterPointHp" type="Node2D" parent="Frontground"]
+position = Vector2(71.4303, -61.0082)
+
+[node name="ColorRect" type="ColorRect" parent="Frontground/CenterPointHp"]
+offset_left = 70.0
+offset_top = 99.0
+offset_right = 124.0
+offset_bottom = 149.0
+color = Color(0.882353, 0, 0.00392157, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Frontground/CenterPointHp"]
+position = Vector2(94.6389, 109.139)
+scale = Vector2(0.565866, 0.551601)
+texture = ExtResource("3_07ur1")
+
+[node name="Label" type="Label" parent="Frontground/CenterPointHp"]
+offset_left = 45.3306
+offset_top = 68.6342
+offset_right = 232.331
+offset_bottom = 112.634
+theme_override_font_sizes/font_size = 1
+text = "CHP 1000/1000"
+label_settings = SubResource("LabelSettings_22btt")
 
 [node name="Wood" type="Node2D" parent="Frontground"]
-position = Vector2(110, -61)
+position = Vector2(219.622, -61.0082)
 
 [node name="Label" type="Label" parent="Frontground/Wood"]
-offset_left = 14.0
-offset_top = 68.0
-offset_right = 201.0
-offset_bottom = 112.0
+offset_left = 23.4547
+offset_top = 68.6342
+offset_right = 210.455
+offset_bottom = 112.634
 text = "Wood 100"
 label_settings = SubResource("LabelSettings_22btt")
 
@@ -102,13 +133,13 @@ scale = Vector2(3.3, 3.3)
 texture = ExtResource("4_ujb4v")
 
 [node name="Gold" type="Node2D" parent="Frontground"]
-position = Vector2(220, -61)
+position = Vector2(329.622, -61.0082)
 
 [node name="Label" type="Label" parent="Frontground/Gold"]
-offset_left = 15.0
-offset_top = 68.0
-offset_right = 202.0
-offset_bottom = 112.0
+offset_left = 24.4547
+offset_top = 68.6342
+offset_right = 211.455
+offset_bottom = 112.634
 text = "Gold 100"
 label_settings = SubResource("LabelSettings_22btt")
 
@@ -118,13 +149,13 @@ scale = Vector2(3.3, 3.3)
 texture = ExtResource("5_dhfbp")
 
 [node name="Stone" type="Node2D" parent="Frontground"]
-position = Vector2(330, -61)
+position = Vector2(439.622, -61.0082)
 
 [node name="Label" type="Label" parent="Frontground/Stone"]
-offset_left = 15.0
-offset_top = 68.0
-offset_right = 202.0
-offset_bottom = 112.0
+offset_left = 24.4547
+offset_top = 68.6342
+offset_right = 211.455
+offset_bottom = 112.634
 text = "Stone 100"
 label_settings = SubResource("LabelSettings_22btt")
 
@@ -149,10 +180,10 @@ position = Vector2(0, -2)
 scale = Vector2(1.038, 1.038)
 
 [node name="ColorRect" type="ColorRect" parent="Frontground/Powers/Spaces"]
-offset_left = 54.9133
-offset_top = 104.046
-offset_right = 76.9133
-offset_bottom = 126.046
+offset_left = 126.83
+offset_top = 104.865
+offset_right = 148.83
+offset_bottom = 126.865
 color = Color(1, 0, 0, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Frontground/Powers/Spaces"]
@@ -163,10 +194,10 @@ offset_bottom = 126.046
 color = Color(1, 0, 0, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="Frontground/Powers/Spaces"]
-offset_left = 266.859
-offset_top = 104.046
-offset_right = 288.859
-offset_bottom = 126.046
+offset_left = 192.564
+offset_top = 104.865
+offset_right = 214.564
+offset_bottom = 126.865
 color = Color(1, 0, 0, 1)
 
 [node name="TimeLine" type="Node2D" parent="Frontground"]

@@ -4,7 +4,7 @@ var reloadTime = 5
 var allowToShoot = true
 var minDistance = 261
 
-func _process(delta):
+func _process(_delta):
 	if (allowToShoot):
 		lookEnemies()
 

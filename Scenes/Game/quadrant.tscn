@@ -47,7 +47,7 @@ visible = false
 position = Vector2(32, 32)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_kmr3q")
-animation = &"wood"
+animation = &"gold"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false

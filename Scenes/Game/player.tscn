@@ -1,8 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://cq8fbkkwauxoo"]
+[gd_scene load_steps=34 format=3 uid="uid://cq8fbkkwauxoo"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_0mv22"]
 [ext_resource type="Texture2D" uid="uid://dgo7fp55j5bmt" path="res://Assets/Images/Player/kratos_by_wrriter_d2wrdvq-fullview.png" id="2_87jvl"]
 [ext_resource type="Texture2D" uid="uid://be0jxocrlx0v4" path="res://Assets/Images/Player/cutAnimation.png" id="3_m0ngc"]
+[ext_resource type="Texture2D" uid="uid://dq86388qxvwk" path="res://Assets/Images/Player/axe_spin_spritesheet.png" id="4_n0xky"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dbqgp"]
 atlas = ExtResource("2_87jvl")
@@ -147,6 +148,38 @@ region = Rect2(836, 0, 209, 259)
 atlas = ExtResource("3_m0ngc")
 region = Rect2(1045, 0, 209, 259)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgflb"]
+atlas = ExtResource("4_n0xky")
+region = Rect2(0, 0, 148, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bohqw"]
+atlas = ExtResource("4_n0xky")
+region = Rect2(148, 0, 148, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2p72t"]
+atlas = ExtResource("4_n0xky")
+region = Rect2(296, 0, 148, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1pda"]
+atlas = ExtResource("4_n0xky")
+region = Rect2(444, 0, 148, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nel51"]
+atlas = ExtResource("4_n0xky")
+region = Rect2(592, 0, 148, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxnrf"]
+atlas = ExtResource("4_n0xky")
+region = Rect2(740, 0, 148, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6n8n8"]
+atlas = ExtResource("4_n0xky")
+region = Rect2(888, 0, 148, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5eptj"]
+atlas = ExtResource("4_n0xky")
+region = Rect2(1036, 0, 148, 148)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_pwiwe"]
 animations = [{
 "frames": [{
@@ -177,6 +210,38 @@ animations = [{
 "loop": true,
 "name": &"Atack",
 "speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgflb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bohqw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2p72t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1pda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nel51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxnrf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6n8n8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5eptj")
+}],
+"loop": false,
+"name": &"Axe",
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5b8iw"]
@@ -193,15 +258,9 @@ animation = &"Right"
 position = Vector2(0, 5.68434e-14)
 scale = Vector2(0.241627, 0.241627)
 sprite_frames = SubResource("SpriteFrames_pwiwe")
-animation = &"Atack"
-frame_progress = 0.835195
+animation = &"Axe"
 
 [node name="Body" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
 shape = SubResource("RectangleShape2D_5b8iw")
-
-[node name="Timer" type="Timer" parent="."]
-autostart = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
