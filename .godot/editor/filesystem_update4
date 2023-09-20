@@ -3,3 +3,5 @@ res://Scenes/GameStore/Item.tscn
 res://Scenes/GameStore/ItemSelectable.gd
 res://Scenes/GameStore/MainPage.tscn
 res://Scenes/GameStore/PersonagemLoja.gd
+res://Scripts/HUD_Scripts/ItemSelectable.gd
+res://Scripts/HUD_Scripts/PersonagemLoja.gd

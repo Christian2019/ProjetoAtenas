@@ -2,7 +2,7 @@ extends Node2D
 
 
 var canGrab = 0
-var position_board
+var position_board= Vector2(0,0)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -10,12 +10,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var get_parent = get_parent()
-	
-	if(canGrab==1):
-		if(Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)): 
-			get_parent.remove_child(self)
-			position = position_board
+	var get_parent = get_parent() 
 	pass
 
 
