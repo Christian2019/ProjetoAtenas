@@ -1,5 +1,6 @@
 extends Node2D
 ##Stats
+var hp = 100
 var move_Speed = 10
 var attack_Speed = 1 ## precisa ser >0
 
