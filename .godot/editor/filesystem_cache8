@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695226912
-default_env.tres::Environment::8363765569308027888::1695088806::0::1::::<><>::
+::res://::1695233380
+default_env.tres::Environment::8363765569308027888::1695233455::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1693530105::0::1::::<><>::
 icon.png::CompressedTexture2D::8961917463339288538::1693530105::1693530105::1::::<><>::
 ToDo.txt::TextFile::-1::1693530336::0::1::::<><>::
@@ -94,11 +94,11 @@ Upgrade_Workers.tscn::PackedScene::3936942250661967250::1693530105::0::1::::<><>
 Enemy.tscn::PackedScene::7196750213752992923::1693675609::0::1::::<><>::res://Scripts/Enemy.gd
 Minotaur.tscn::PackedScene::8122017009690902834::1693675609::0::1::::<><>::uid://bm5foycjs0yjv
 Spawner.tscn::PackedScene::7589169418623710141::1693530105::0::1::::<><>::res://Scripts/Spawner.gd<>uid://cqckp6m67tu1q
-::res://Scenes/GameStore/::1695088806
-Item.tscn::PackedScene::3789408077711027493::1695088806::0::1::::<><>::uid://d0xhqa10j30ok::::res://icon.png<>res://Scenes/GameStore/ItemSelectable.gd
-ItemSelectable.gd::GDScript::-1::1695088783::0::1::::<>Node2D<>::
-MainPage.tscn::PackedScene::3516894069668338984::1695088806::0::1::::<><>::res://Scripts/HUD_Scripts/MainPage.gd<>uid://dlwvyo6ejssc::::res://Assets/Images/Resources/gold.png<>uid://bav7b1tv76dwv::::res://Assets/Images/Resources/stone.png<>uid://ywre30ix5f7t::::res://Assets/Images/Resources/wood.png<>res://Scenes/GameStore/PersonagemLoja.gd
-PersonagemLoja.gd::GDScript::-1::1694983876::0::1::::<>Node2D<>::
+::res://Scenes/GameStore/::1695233380
+Item.tscn::PackedScene::3789408077711027493::1695233455::0::1::::<><>::uid://d0xhqa10j30ok::::res://icon.png<>res://Scenes/GameStore/ItemSelectable.gd
+ItemSelectable.gd::GDScript::-1::1695233339::0::1::::<>Node2D<>::
+MainPage.tscn::PackedScene::3516894069668338984::1695233455::0::1::::<><>::res://Scripts/HUD_Scripts/MainPage.gd<>uid://dlwvyo6ejssc::::res://Assets/Images/Resources/gold.png<>uid://bav7b1tv76dwv::::res://Assets/Images/Resources/stone.png<>uid://ywre30ix5f7t::::res://Assets/Images/Resources/wood.png<>res://Scenes/GameStore/PersonagemLoja.gd
+PersonagemLoja.gd::GDScript::-1::1695231008::0::1::::<>Node2D<>::
 ::res://Scenes/MainScenes/::1694983985
 Game_ViewPort.tscn::PackedScene::7418050984438387124::1694983985::0::1::::<><>::uid://cb86td4m1hepw
 ::res://Scripts/::1694117986
