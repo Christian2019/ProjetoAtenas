@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddxmhluvr7sb1"]
+[gd_scene load_steps=8 format=3 uid="uid://ddxmhluvr7sb1"]
 
 [ext_resource type="PackedScene" uid="uid://cb86td4m1hepw" path="res://Scenes/Game/Game.tscn" id="1_no1qw"]
 [ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="2_ah0pv"]
 [ext_resource type="PackedScene" uid="uid://b18nigm5wn5ab" path="res://Scenes/Game/HUD.tscn" id="3_agpu4"]
 [ext_resource type="FontFile" uid="uid://duy38o6o71nij" path="res://Assets/Fonts/Kurland.otf" id="4_xvseb"]
 [ext_resource type="Script" path="res://Scripts/FPS.gd" id="5_c2jos"]
+[ext_resource type="PackedScene" uid="uid://bqduy4u8regjo" path="res://Scenes/Temple/TempleScreen.tscn" id="6_rsejt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4aqw1"]
 font = ExtResource("4_xvseb")
@@ -43,3 +44,6 @@ offset_bottom = 77.8115
 text = "FPS:60"
 label_settings = SubResource("LabelSettings_4aqw1")
 script = ExtResource("5_c2jos")
+
+[node name="Temple" parent="." instance=ExtResource("6_rsejt")]
+visible = false

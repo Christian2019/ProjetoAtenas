@@ -22,5 +22,5 @@ func _process(delta):
 		if ($Label.modulate.a>=1):
 			reverse=false
 
-	if Input.is_action_just_pressed("Attack1"):
+	if Input.is_action_just_pressed("Select"):
 		get_tree().change_scene_to_file("res://Scenes/MainScenes/Loading.tscn")
