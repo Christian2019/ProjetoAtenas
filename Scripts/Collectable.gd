@@ -3,7 +3,7 @@ extends Node2D
 var isCarrying=false
 
 
-func _process(delta):
+func _process(_delta):
 	if (isCarrying):
 		global_position=Global.player.global_position
 

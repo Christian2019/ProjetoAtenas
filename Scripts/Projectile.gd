@@ -8,12 +8,14 @@ var speed = 3
 
 var liveTime=5
 
-var canKill=true
+var damage = 1
+
+var canDamage = true
 
 func _ready():
 	Global.timerCreator("call_deferred",liveTime,["free"],self)
 
-func _process(delta):
+func _process(_delta):
 	if (target!=null):
 		moveLocation = Vector2(target.position.x,target.position.y)
 	move()
@@ -23,7 +25,7 @@ func _process(delta):
 func move():
 	if (moveLocation==null):
 		visible=false
-		canKill=false
+		canDamage=false
 		return
 		
 	if (position.distance_to(moveLocation)>speed):
@@ -31,19 +33,19 @@ func move():
 		var dy = speed*sin(get_angle_to(moveLocation))
 		position+=Vector2(dx,dy)
 	else:
-		canKill=false
+		canDamage=false
 	
 func hit(enemy):
 	if (enemy!=null):
-		enemy.call_deferred("free")
+		enemy.hp-=damage
 	visible=false
 
 func _on_area_2d_area_entered(area):
-	if (!canKill):
+	if (!canDamage):
 		return
 		
 	if 	(area.get_parent().get_parent().name=="Enemies"):
-		canKill=false
+		canDamage=false
 		
 		if (target!=null and area.get_parent().name==target.name):
 			Global.timerCreator("hit",0.2,[area.get_parent()],self)

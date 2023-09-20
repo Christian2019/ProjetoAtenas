@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dnymo0eupd5qs"]
+[gd_scene load_steps=21 format=3 uid="uid://dnymo0eupd5qs"]
 
 [ext_resource type="Texture2D" uid="uid://bm5foycjs0yjv" path="res://Assets/Images/Enemies/minotaur_walking.png" id="1_86d6s"]
 [ext_resource type="Script" path="res://Scripts/Minotaur.gd" id="1_ldkc1"]
@@ -118,18 +118,37 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
 size = Vector2(76, 70)
 
+[sub_resource type="Theme" id="Theme_teygp"]
+
 [node name="Minotaur" type="Node2D"]
 script = ExtResource("1_ldkc1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_grjig")
 animation = &"Walking"
-frame_progress = 0.694488
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_pmar3")
+
+[node name="HPBar" type="Node2D" parent="."]
+
+[node name="Red" type="ColorRect" parent="HPBar"]
+modulate = Color(1, 0.231373, 0.231373, 1)
+offset_left = -38.0
+offset_top = -47.0
+offset_right = 37.0
+offset_bottom = -34.0
+theme = SubResource("Theme_teygp")
+
+[node name="Green" type="ColorRect" parent="HPBar"]
+modulate = Color(0.486275, 1, 0.231373, 1)
+offset_left = -38.0
+offset_top = -47.0
+offset_right = 37.0
+offset_bottom = -34.0
+theme = SubResource("Theme_teygp")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

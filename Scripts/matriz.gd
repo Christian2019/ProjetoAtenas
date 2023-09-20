@@ -10,7 +10,7 @@ var max_colunas = 40
 
 var start = false
 
-func _process(delta):
+func _process(_delta):
 	if (!start):
 		createResources()
 		start = true

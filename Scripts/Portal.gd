@@ -6,7 +6,7 @@ var playerIn=false
 
 var player
 
-func _process(delta):
+func _process(_delta):
 	if (playerIn and canTeleport):
 		canTeleportFunction()
 		Global.timerCreator("canTeleportFunction",1,[],self)
@@ -21,6 +21,7 @@ func canTeleportFunction():
 		get_parent().get_child(i).canTeleport=!get_parent().get_child(i).canTeleport
 
 func sendToTeleport(child):
+	player.farming= !player.farming
 	player.global_position = get_parent().get_child(child).global_position
 			
 
