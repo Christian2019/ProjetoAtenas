@@ -14,3 +14,6 @@ res://Scenes/MainScenes/Loading.tscn
 res://Scripts/player.gd
 res://Scripts/Minotaur.gd
 res://Scripts/Pool.gd
+res://Scenes/Game/Constructions/center.tscn
+res://Scripts/center.gd
+res://Scripts/HUD.gd

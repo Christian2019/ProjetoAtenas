@@ -8,21 +8,28 @@ var maxBarSizeX
 var timerTick=0
 var timerTime=0
 
-#Hp bar
+#Hp bar player
 var hpHearthYStartPosition
 var maxHpHearthStartSizeY
 
-
+#Hp bar centerPoint
+var centerPointhpHearthYStartPosition
+var centerPointmaxHpHearthStartSizeY
 
 func _ready():
 	maxBarSizeX=$Frontground/TimeLine/ColorRect.size.x
 	
 	maxHpHearthStartSizeY=$Frontground/HP/ColorRect.size.y
 	hpHearthYStartPosition= $Frontground/HP/ColorRect.position.y
+	
+	
+	centerPointmaxHpHearthStartSizeY= $Frontground/CenterPointHp/ColorRect.size.y
+	centerPointhpHearthYStartPosition=$Frontground/CenterPointHp/ColorRect.position.y
 
 func _process(_delta):
 	timerControllerBar()
 	hpBarController()
+	centerPointhpBarController()
 	
 	if (tick == waitTick):
 		updateTimeToNextWave()
@@ -38,6 +45,17 @@ func hpBarController():
 	var hpHearthSizeY = maxHpHearthStartSizeY*Global.player.hp/Global.player.maxHp
 	$Frontground/HP/ColorRect.size.y=int(hpHearthSizeY)
 	$Frontground/HP/ColorRect.position.y= int(hpHearthPostionY)
+
+	
+func centerPointhpBarController():
+	$Frontground/CenterPointHp/Label.text = str("CHP ",Global.Game.get_node("Center").hp,"/",Global.Game.get_node("Center").maxHp )
+	var centerPointhpHearthPostionY = centerPointhpHearthYStartPosition+centerPointmaxHpHearthStartSizeY-(centerPointmaxHpHearthStartSizeY*Global.Game.get_node("Center").hp/Global.Game.get_node("Center").maxHp)
+	var centerPointhpHearthSizeY = centerPointmaxHpHearthStartSizeY*Global.Game.get_node("Center").hp/Global.Game.get_node("Center").maxHp
+	$Frontground/CenterPointHp/ColorRect.size.y=int(centerPointhpHearthSizeY)
+	$Frontground/CenterPointHp/ColorRect.position.y= int(centerPointhpHearthPostionY)
+
+	
+
 
 func updateResources():
 	$Frontground/Wood/Label.text =  str("Wood ",Global.player.wood)

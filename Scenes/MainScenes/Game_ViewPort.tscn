@@ -8,6 +8,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_4aqw1"]
 font = ExtResource("4_xvseb")
+font_size = 27
 font_color = Color(1, 0, 0, 1)
 
 [node name="ViewPort" type="Node2D"]
@@ -35,10 +36,10 @@ position = Vector2(-3, -1.19209e-07)
 scale = Vector2(0.937318, 0.597639)
 
 [node name="FPS" type="Label" parent="HUD"]
-offset_left = 745.0
-offset_top = 6.0
-offset_right = 844.0
-offset_bottom = 47.0
+offset_left = 677.465
+offset_top = 36.8115
+offset_right = 776.465
+offset_bottom = 77.8115
 text = "FPS:60"
 label_settings = SubResource("LabelSettings_4aqw1")
 script = ExtResource("5_c2jos")

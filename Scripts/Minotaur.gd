@@ -62,6 +62,11 @@ func attack():
 	if (centerPointInside and !nextHitDelayCenterPoint):
 		nextHitDelayCenterPoint=true
 		Global.timerCreator("enableHit",nextHitDelay,[1],self)
+		
+		Global.Game.get_node("Center").hp-=damage
+		Global.Game.get_node("Center").activateFeedback()
+		if (Global.Game.get_node("Center").hp<0):
+			Global.Game.get_node("Center").hp=0
 	
 
 func hpBarController():
