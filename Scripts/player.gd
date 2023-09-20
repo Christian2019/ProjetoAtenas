@@ -1,5 +1,6 @@
 extends Node2D
 ##Stats
+
 var dead = false
 var maxHp=100
 var hp = maxHp
@@ -45,6 +46,10 @@ var closerQuadrant
 
 var farming =false
 
+##Feedback por levar dano
+var feedBackAtive=false
+var reverseAlphaChange=false
+
 func _ready():
 	$Animation.play("Right")
 
@@ -72,7 +77,29 @@ func _process(__delta):
 	getCloserQuadrant()
 	debug()
 	mining()
+	feedback()
 	#contruction()
+	
+func feedback():
+	if (feedBackAtive):
+		var feedbackSpeed=0.04
+		if (!reverseAlphaChange):
+			modulate.a -= feedbackSpeed
+			if (modulate.a<=0.0):
+				reverseAlphaChange=true
+		else:
+			modulate.a += feedbackSpeed
+			if (modulate.a>=1):
+				reverseAlphaChange=false
+
+func activateFeedback():
+	if (!feedBackAtive):
+		feedBackAtive=true
+		Global.timerCreator("disableFeeback",1,[],self)
+		
+func disableFeeback():
+	feedBackAtive=false
+	modulate.a=1
 	
 func restartGame():
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/Fatality.tscn")

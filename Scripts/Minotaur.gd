@@ -55,6 +55,7 @@ func attack():
 		nextHitDelayPlayer=true
 		Global.timerCreator("enableHit",nextHitDelay,[0],self)
 		Global.player.hp-=damage
+		Global.player.activateFeedback()
 		if (Global.player.hp<0):
 			Global.player.hp=0
 			
