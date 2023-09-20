@@ -3,6 +3,7 @@ extends Node
 var player
 var Game
 
+#Exemplo Global.timerCreator("destroy",max_duration,[i],self)
 func timerCreator(functionName,time,parameters,node):
 		var timer = Timer.new()
 		timer.connect("timeout",Callable(self, "timeOut").bind(timer,node,functionName,parameters))

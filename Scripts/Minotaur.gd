@@ -2,6 +2,11 @@ extends "res://Scripts/Enemy.gd"
 
 var maxHp=30
 var hp = maxHp
+var damage = 10
+
+var nextHitDelayPlayer=false
+var nextHitDelayCenterPoint=false
+var nextHitDelay = 1
 
 var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
@@ -19,6 +24,11 @@ func _ready():
 	$AnimatedSprite2D.play("Walking")
 	maxHpBarWidth=$HPBar/Red.size.x
 
+func enableHit(nextHitDelayTarget):
+	if nextHitDelayTarget==0:
+		nextHitDelayPlayer=false
+	else:
+		nextHitDelayCenterPoint=false
 
 func _process(_delta):
 	super._process(_delta)
@@ -31,9 +41,27 @@ func _process(_delta):
 		move()
 	if (playerInside or centerPointInside):
 		isMoving=false
-		if ($AnimatedSprite2D.animation!= "Attacking"):
-			$AnimatedSprite2D.animation= "Attacking"
+		attack()
+	else:
+		isMoving=true
+		
 	hpBarController()
+
+func attack():
+	if ($AnimatedSprite2D.animation!= "Attacking"):
+		$AnimatedSprite2D.animation= "Attacking"
+		
+	if (playerInside and !nextHitDelayPlayer):
+		nextHitDelayPlayer=true
+		Global.timerCreator("enableHit",nextHitDelay,[0],self)
+		Global.player.hp-=damage
+		if (Global.player.hp<0):
+			Global.player.hp=0
+			
+	if (centerPointInside and !nextHitDelayCenterPoint):
+		nextHitDelayCenterPoint=true
+		Global.timerCreator("enableHit",nextHitDelay,[1],self)
+	
 
 func hpBarController():
 	hpBarWidth=maxHpBarWidth*hp/maxHp
@@ -46,7 +74,7 @@ func die():
 func move():
 	if ($AnimatedSprite2D.animation!= "Walking"):
 		$AnimatedSprite2D.animation= "Walking"
-	
+
 	var centerPointX= centerPoint.position.x
 	var centerPointY= centerPoint.position.y
 	var distanceXtoCenter = position.x-centerPointX

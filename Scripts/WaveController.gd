@@ -1,6 +1,6 @@
 extends Node2D
 
-var startTimer = 30
+var startTimer = 10
 var timer = startTimer
 
 var battleTimer = startTimer/2

@@ -3,23 +3,26 @@ extends Node2D
 var tick =0
 var waitTick=2
 
-var speed = 1
-var isMoving=true
-
-var playerInside=false
-var centerPointInside=false
-
+#Timer
 var maxBarSizeX
 var timerTick=0
 var timerTime=0
 
+#Hp bar
+var hpHearthYStartPosition
+var maxHpHearthStartSizeY
+
+
 
 func _ready():
 	maxBarSizeX=$Frontground/TimeLine/ColorRect.size.x
-
+	
+	maxHpHearthStartSizeY=$Frontground/HP/ColorRect.size.y
+	hpHearthYStartPosition= $Frontground/HP/ColorRect.position.y
 
 func _process(_delta):
 	timerControllerBar()
+	hpBarController()
 	
 	if (tick == waitTick):
 		updateTimeToNextWave()
@@ -28,7 +31,14 @@ func _process(_delta):
 	
 	if (tick < waitTick):
 		tick+=1
-		
+
+func hpBarController():
+	$Frontground/HP/Label.text = str("HP ",Global.player.hp,"/",Global.player.maxHp )
+	var hpHearthPostionY = hpHearthYStartPosition+maxHpHearthStartSizeY-(maxHpHearthStartSizeY*Global.player.hp/Global.player.maxHp)
+	var hpHearthSizeY = maxHpHearthStartSizeY*Global.player.hp/Global.player.maxHp
+	$Frontground/HP/ColorRect.size.y=int(hpHearthSizeY)
+	$Frontground/HP/ColorRect.position.y= int(hpHearthPostionY)
+
 func updateResources():
 	$Frontground/Wood/Label.text =  str("Wood ",Global.player.wood)
 	$Frontground/Gold/Label.text =  str("Gold ",Global.player.gold)

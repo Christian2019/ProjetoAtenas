@@ -9,3 +9,8 @@ res://Scripts/HUD.gd
 res://Scripts/WaveController.gd
 res://Scenes/Game/Enemies/Enemy.tscn
 res://Scenes/Game/Enemies/Minotaur.tscn
+res://Scripts/Minotaur.gd
+res://Scenes/Game/Classes/Warrior/Warrior_Attack1.tscn
+res://Scripts/Global.gd
+res://Scenes/MainScenes/Fatality.tscn
+res://Scripts/Fatality.gd

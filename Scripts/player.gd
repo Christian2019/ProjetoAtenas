@@ -1,6 +1,8 @@
 extends Node2D
 ##Stats
-var hp = 100
+var dead = false
+var maxHp=100
+var hp = maxHp
 var move_Speed = 10
 var attack_Speed = 1 ## precisa ser >0
 
@@ -55,13 +57,26 @@ func start():
 	
 
 func _process(__delta):
-	start()
+	if (dead):
+		return
+	
+	if (hp==0):
+		dead=true
+		#Global.timerCreator("restartGame",5,[],self)
+		restartGame()
+		return
+		
+	start()	
 	animationController()
 	commandController()	
 	getCloserQuadrant()
 	debug()
 	mining()
 	#contruction()
+	
+func restartGame():
+	get_tree().change_scene_to_file("res://Scenes/MainScenes/Fatality.tscn")
+	
 func debug():
 	if Input.is_action_just_pressed("ChangeAttack1"):
 		actions[0]={"attack1_type" : actions[0].values()[0]+1}
