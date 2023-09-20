@@ -2,6 +2,7 @@ extends Node
 
 var player
 var Game
+var Temple
 
 #Exemplo Global.timerCreator("destroy",max_duration,[i],self)
 func timerCreator(functionName,time,parameters,node):

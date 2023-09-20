@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt8u8583eoi18"]
+
+[ext_resource type="Texture2D" uid="uid://d0xhqa10j30ok" path="res://icon.png" id="1_ixwxd"]
+[ext_resource type="Script" path="res://Scripts/Temple_Scripts/ItemSelectable.gd" id="1_ojlw8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q50ic"]
+size = Vector2(64, 64)
+
+[node name="Item" type="Node2D"]
+position = Vector2(32, 32)
+script = ExtResource("1_ojlw8")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("1_ixwxd")
+
+[node name="AreaSelect" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaSelect"]
+shape = SubResource("RectangleShape2D_q50ic")
+
+[connection signal="mouse_entered" from="AreaSelect" to="." method="_on_area_select_mouse_entered"]
+[connection signal="mouse_exited" from="AreaSelect" to="." method="_on_area_select_mouse_exited"]
