@@ -1,9 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0rurmnfon8nm"]
+[gd_scene load_steps=4 format=3 uid="uid://c0rurmnfon8nm"]
 
 [ext_resource type="Texture2D" uid="uid://c54g4r5h7thq8" path="res://Assets/Images/Constructions/pool.png" id="1_ke3tf"]
+[ext_resource type="Script" path="res://Scripts/Pool.gd" id="1_puot0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27t6k"]
+size = Vector2(49, 52)
 
 [node name="Pool" type="Node2D"]
+script = ExtResource("1_puot0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_ke3tf")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_27t6k")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

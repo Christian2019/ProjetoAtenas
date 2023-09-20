@@ -46,7 +46,7 @@ var closerQuadrant
 
 var farming =false
 
-##Feedback por levar dano
+##Feedback por levar dano ou curar
 var feedBackAtive=false
 var reverseAlphaChange=false
 
