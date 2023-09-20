@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqduy4u8regjo"]
+[gd_scene load_steps=7 format=3 uid="uid://bqduy4u8regjo"]
 
 [ext_resource type="Script" path="res://Scripts/HUD_Scripts/MainPage.gd" id="1_1jfau"]
 [ext_resource type="Texture2D" uid="uid://dlwvyo6ejssc" path="res://Assets/Images/Resources/gold.png" id="2_gs4pr"]
 [ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="3_7tjk8"]
 [ext_resource type="Texture2D" uid="uid://ywre30ix5f7t" path="res://Assets/Images/Resources/wood.png" id="4_rya8q"]
+[ext_resource type="Script" path="res://Scenes/GameStore/PersonagemLoja.gd" id="5_ytn8d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sr6eu"]
 size = Vector2(121, 115)
@@ -105,6 +106,7 @@ offset_bottom = 26.0
 text = "Items"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="BG/SHOP/ITEMS"]
+layout_mode = 0
 offset_left = 7.0
 offset_top = 36.0
 offset_right = 172.0
@@ -558,6 +560,7 @@ position = Vector2(365, -1)
 shape = SubResource("RectangleShape2D_sr6eu")
 
 [node name="Personagem" type="Node2D" parent="BG"]
+script = ExtResource("5_ytn8d")
 
 [node name="ITEMS" type="ColorRect" parent="BG/Personagem"]
 offset_left = 802.0
@@ -576,6 +579,7 @@ text = "Items
 "
 
 [node name="MyItems" type="ScrollContainer" parent="BG/Personagem/ITEMS"]
+layout_mode = 0
 offset_left = 7.0
 offset_top = 36.0
 offset_right = 226.0
@@ -937,6 +941,7 @@ offset_bottom = 672.0
 disabled = true
 
 [node name="Background" type="ColorRect" parent="Warning"]
+layout_mode = 0
 offset_left = 262.0
 offset_top = 127.0
 offset_right = 861.0
@@ -952,6 +957,7 @@ offset_bottom = 255.0
 text = "SIM"
 
 [node name="NOPE" type="Button" parent="Warning/Background"]
+layout_mode = 0
 offset_left = 327.0
 offset_top = 212.0
 offset_right = 580.0
@@ -959,6 +965,7 @@ offset_bottom = 255.0
 text = "NÃO"
 
 [node name="Label" type="Label" parent="Warning/Background"]
+layout_mode = 0
 offset_left = 130.0
 offset_top = 116.0
 offset_right = 473.0

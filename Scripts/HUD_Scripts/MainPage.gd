@@ -141,17 +141,7 @@ func _on_scroll_1_pressed():
 func _on_scroll_2_pressed():
 	$Warning.visible = true
 	lastItemClicked=2 
-	pass # Replace with function body.
-
- 
-func _my_Items():
-	var myItems = get_node("BG/Personagem/ITEMS/MyItems/Itens")
-	#Passar por um for para pegar info dos objetos comprados pelo player
-	for i in itens_personagem:
-		#PEGAR CENA
-		print("OI")
-		
-
+	pass # Replace with function body. 
 
 func _on_yes_pressed():
 	$Warning.visible=false;

@@ -1,7 +1,5 @@
 res://default_env.tres
+res://Scenes/GameStore/Item.tscn
+res://Scenes/GameStore/ItemSelectable.gd
 res://Scenes/GameStore/MainPage.tscn
-res://Assets/Images/Tiles/TileMap.tres
-res://Scenes/Game/Game.tscn
-res://Scenes/Game/player.tscn
-res://Scenes/Game/HUD.tscn
-res://Scripts/HUD_Scripts/MainPage.gd
+res://Scenes/GameStore/PersonagemLoja.gd

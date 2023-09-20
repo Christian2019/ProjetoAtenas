@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://duy38o6o71nij" path="res://Assets/Fonts/Kurland.otf" id="4_xvseb"]
 [ext_resource type="Script" path="res://Scripts/FPS.gd" id="5_c2jos"]
 
+
 [sub_resource type="LabelSettings" id="LabelSettings_4aqw1"]
 font = ExtResource("4_xvseb")
 font_color = Color(1, 0, 0, 1)
