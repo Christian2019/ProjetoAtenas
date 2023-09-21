@@ -156,8 +156,15 @@ func dashController():
 		print("Dash")
 		##$Animation.modulate.a = 0.5
 func ultimateController():
+	var classChild=1	
 	if (Input.is_action_just_pressed("Ultimate")):
 		print("Ultimate")
+		var attackInstance = creatAttackInstance(classChild)
+		#get_parent().get_node("Projectiles").add_child(attackInstance)
+		Global.Game.get_node("Night").visible=true
+		add_child(attackInstance)
+		#attackInstance.global_position=global_position
+		#attackInstance.direction=lastMovement
 
 func contruction():
 	if (Input.is_action_just_pressed("Turret")):

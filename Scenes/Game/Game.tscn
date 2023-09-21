@@ -106,3 +106,9 @@ shape = SubResource("RectangleShape2D_1cg8r")
 [node name="DownEdge" type="CollisionShape2D" parent="BockedAreas"]
 position = Vector2(2827.75, 3726.38)
 shape = SubResource("RectangleShape2D_7pbkn")
+
+[node name="Night" type="ColorRect" parent="."]
+visible = false
+offset_right = 2570.0
+offset_bottom = 2758.0
+color = Color(0, 0, 0, 0.647059)
