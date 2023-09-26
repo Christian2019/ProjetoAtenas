@@ -61,6 +61,7 @@ func _process(_delta):
 	damageAction()
 
 func startPosition():
+	"""
 	var speedModifier=1
 	#Corrigi a velocidade na diagonal
 	if direction=="NE" or direction=="NW" or direction=="SE" or direction=="SW":
@@ -80,7 +81,8 @@ func startPosition():
 	#X-
 	if direction=="SW" or direction=="W" or direction=="NW":
 		relativePosition.x-=(startDistanceFromPlayer)*speedModifier
-	
+	"""
+	relativePosition.x=startDistanceFromPlayer
 	global_position= Global.player.global_position+relativePosition
 
 func startAnimation():
@@ -88,6 +90,7 @@ func startAnimation():
 	$Animation.visible=true
 	$Animation.frame=attacktype
 	
+	"""
 	if direction=="NE":
 		$Animation.rotate(deg_to_rad(45))
 	elif direction=="E":
@@ -102,7 +105,8 @@ func startAnimation():
 		$Animation.rotate(deg_to_rad(270))
 	elif direction=="NW":
 		$Animation.rotate(deg_to_rad(315))
-		
+	"""
+	$Animation.rotate(deg_to_rad(90))
 	startRotationAngle=rad_to_deg($Animation.rotation)
 	$Animation.flip_v=true
 	angle= startRotationAngle
