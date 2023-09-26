@@ -10,3 +10,8 @@ res://Scenes/Game/Classes/Warrior/WarriorUltimate.tscn
 res://Scenes/Game/Classes/Warrior/Warrior_Attack1.tscn
 res://Scripts/Temple_Scripts/TempleSound.gd
 res://Scripts/Game.gd
+res://Scenes/Game/Classes/Warrior/Warrior_Attack2.tscn
+res://Scripts/Classes/Warrior/Warrior_Attack2.gd
+res://Scripts/PreLoads.gd
+res://Scripts/player.gd
+res://Scripts/Classes/Warrior/Warrior_Attack1.gd

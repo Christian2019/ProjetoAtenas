@@ -15,7 +15,7 @@ var lastMovement = "E"
 ##Abilities Var
 
 var actions = [
-	{"attack1_type" : 0},
+	{"attack1_type" : 1},
 	{"attack2_type" : 0},
 	{"turret_type" : 0},
 	{"dash_type" : 0},
@@ -109,6 +109,10 @@ func debug():
 		actions[0]={"attack1_type" : actions[0].values()[0]+1}
 		if (actions[0].values()[0]==3):
 			actions[0]={"attack1_type" : 0}
+	elif Input.is_action_just_pressed("ChangeAttack2"):
+		actions[1]={"attack2_type" : actions[1].values()[0]+1}
+		if (actions[1].values()[0]==3):
+			actions[1]={"attack2_type" : 0}
 			
 func commandController():
 	moveController()
@@ -146,8 +150,13 @@ func attack1Controller():
 		attackInstance.direction=lastMovement
 
 func attack2Controller():
-	if (Input.is_action_just_pressed("Attack2")):
-		print("Attack2")
+	var classChild=1	
+	if (Input.is_action_pressed("Attack2") and permissions[classChild]):
+		var attackInstance = creatAttackInstance(classChild)
+		get_parent().get_node("Projectiles").add_child(attackInstance)
+		attackInstance.global_position=global_position
+		attackInstance.direction=lastMovement
+		
 func turretController():
 	if (Input.is_action_just_pressed("Turret")):
 		print("Turret")
@@ -156,7 +165,7 @@ func dashController():
 		print("Dash")
 		##$Animation.modulate.a = 0.5
 func ultimateController():
-	var classChild=1	
+	var classChild=2	
 	if (Input.is_action_just_pressed("Ultimate")):
 		print("Ultimate")
 		var attackInstance = creatAttackInstance(classChild)

@@ -9,6 +9,7 @@ var tower_projectile = preload("res://Scenes/Game/Constructions/Defenses/Project
 ##Classes
 var warrior = [
 	preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1.tscn"),
+	preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2.tscn"),
 	preload("res://Scenes/Game/Classes/Warrior/WarriorUltimate.tscn")
 ]
 

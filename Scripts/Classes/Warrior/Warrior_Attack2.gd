@@ -1,15 +1,17 @@
 extends Node2D
 
+
 #->Determinado pelo player
 #Pode ser N,S,W,E,NE,NW,SE,SW 
 var direction = "E"
 var relativePosition= Vector2(0,0)
 
+var startDistanceFromPlayer = 50
+
 #Dano por frame (respeitando nextHitDelay)
 var damage = 10
 
-#->Determinado pela skill
-#Por frame
+#->Graus por frame
 var speed = 10
 
 #Duracao em segundos
@@ -30,9 +32,14 @@ var reverseOrder=false
 
 var attacktype=0
 
+var startRotationAngle
+
+var angle
+
+
 func _ready():
-	Global.timerCreator("enableReverseOrder",max_duration/2,[],self)
 	$Animation.visible=false
+	
 
 	
 
@@ -42,17 +49,41 @@ func waitFunc():
 	if (waitFrames>=waitMaxFrames):
 		if (waitFrames>waitMaxFrames):
 			return
-		animation()
+		startAnimation()
+		startPosition()
 	waitFrames+=1	
 
 
 func _process(_delta):
 	waitFunc()
-	move()
+	if (waitFrames>waitMaxFrames):
+		move()
 	damageAction()
-	destroy()
 
-func animation():
+func startPosition():
+	var speedModifier=1
+	#Corrigi a velocidade na diagonal
+	if direction=="NE" or direction=="NW" or direction=="SE" or direction=="SW":
+		speedModifier=1/(2**0.5)			
+	
+	#Y+
+	if direction=="SE" or direction=="S" or direction=="SW":
+		relativePosition.y+=(startDistanceFromPlayer)*speedModifier
+	#Y-
+	if direction=="NE" or direction=="N" or direction=="NW":
+		relativePosition.y-=(startDistanceFromPlayer)*speedModifier
+	
+	#X+
+	if direction=="SE" or direction=="E" or direction=="NE":
+		relativePosition.x+=(startDistanceFromPlayer)*speedModifier
+	
+	#X-
+	if direction=="SW" or direction=="W" or direction=="NW":
+		relativePosition.x-=(startDistanceFromPlayer)*speedModifier
+	
+	global_position= Global.player.global_position+relativePosition
+
+func startAnimation():
 	$Animation.stop()
 	$Animation.visible=true
 	$Animation.frame=attacktype
@@ -71,15 +102,15 @@ func animation():
 		$Animation.rotate(deg_to_rad(270))
 	elif direction=="NW":
 		$Animation.rotate(deg_to_rad(315))
+		
+	startRotationAngle=rad_to_deg($Animation.rotation)
+	$Animation.flip_v=true
+	angle= startRotationAngle
+
+
 
 func enableReverseOrder():
 	reverseOrder=true
-	
-
-func destroy():
-	if (reverseOrder and collidinWithPlayer):
-		Global.player.permissions[0]=true
-		call_deferred("queue_free")
 
 func removeNextHitDelay(arrayPosition):
 	if (itsValid(monstersHit[arrayPosition])):
@@ -97,32 +128,16 @@ func damageAction():
 					Global.timerCreator("removeNextHitDelay",nextHitDelay,[i],self)
 
 func move():
-	if reverseOrder:
-		var dx = (speed)*cos(get_angle_to(Global.player.global_position))
-		var dy = (speed)*sin(get_angle_to(Global.player.global_position))
-		relativePosition+=Vector2(dx,dy)
-	else:
-		var speedModifier=1
-		#Corrigi a velocidade na diagonal
-		if direction=="NE" or direction=="NW" or direction=="SE" or direction=="SW":
-			speedModifier=1/(2**0.5)			
-		
-		#Y+
-		if direction=="SE" or direction=="S" or direction=="SW":
-			relativePosition.y+=(speed)*speedModifier
-		#Y-
-		if direction=="NE" or direction=="N" or direction=="NW":
-			relativePosition.y-=(speed)*speedModifier
-		
-		#X+
-		if direction=="SE" or direction=="E" or direction=="NE":
-			relativePosition.x+=(speed)*speedModifier
-		
-		#X-
-		if direction=="SW" or direction=="W" or direction=="NW":
-			relativePosition.x-=(speed)*speedModifier
-		
+	angle+=speed
+	relativePosition.y=startDistanceFromPlayer*cos(deg_to_rad(angle))
+	relativePosition.x=startDistanceFromPlayer*sin(deg_to_rad(angle))
+	$Animation.rotation=deg_to_rad(-angle)
 	global_position= Global.player.global_position+relativePosition
+	
+	if (angle>=startRotationAngle+360):
+		Global.player.permissions[1]=true
+		call_deferred("queue_free")
+		
 		
 func _on_area_2d_area_entered(area):
 	if area.get_parent().get_parent().name == "Enemies":
