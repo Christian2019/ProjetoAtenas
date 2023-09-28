@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cb86td4m1hepw"]
+[gd_scene load_steps=18 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="1_28pgp"]
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="1_ff1wb"]
@@ -11,8 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cq8fbkkwauxoo" path="res://Scenes/Game/player.tscn" id="5_x6q60"]
 [ext_resource type="PackedScene" uid="uid://cx37jdnas0rb1" path="res://Scenes/Game/Constructions/center.tscn" id="9_06qfi"]
 [ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple.tscn" id="10_v6y37"]
-[ext_resource type="PackedScene" uid="uid://dtu5sjvquowls" path="res://Scenes/Game/Constructions/Defenses/Tower.tscn" id="11_arq70"]
-[ext_resource type="Script" path="res://Scripts/Towers.gd" id="14_1dkqe"]
+[ext_resource type="Script" path="res://Scripts/Turrets.gd" id="10_xlj11"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcbql"]
 size = Vector2(2565, 196)
@@ -59,31 +58,19 @@ scale = Vector2(4, 4)
 
 [node name="Center" parent="." instance=ExtResource("9_06qfi")]
 
-[node name="Player" parent="." instance=ExtResource("5_x6q60")]
-position = Vector2(1139, 997)
-scale = Vector2(1.289, 1.289)
-
-[node name="Towers" type="Node2D" parent="."]
-script = ExtResource("14_1dkqe")
-
-[node name="Tower" parent="Towers" instance=ExtResource("11_arq70")]
-position = Vector2(1214, 515)
-
-[node name="Tower2" parent="Towers" instance=ExtResource("11_arq70")]
-position = Vector2(1366, 516)
-
-[node name="Tower3" parent="Towers" instance=ExtResource("11_arq70")]
-position = Vector2(1216, 665)
-
-[node name="Tower4" parent="Towers" instance=ExtResource("11_arq70")]
-position = Vector2(1365, 666)
-
 [node name="ConstructionArea" type="Area2D" parent="."]
 
 [node name="Projectiles" type="Node2D" parent="."]
 
+[node name="Turrets" type="Node2D" parent="."]
+script = ExtResource("10_xlj11")
+
 [node name="Temple" parent="." instance=ExtResource("10_v6y37")]
 position = Vector2(1317, 1637)
+
+[node name="Player" parent="." instance=ExtResource("5_x6q60")]
+position = Vector2(1139, 997)
+scale = Vector2(1.289, 1.289)
 
 [node name="BockedAreas" type="Area2D" parent="."]
 

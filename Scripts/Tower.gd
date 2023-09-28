@@ -9,7 +9,7 @@ func _process(_delta):
 		lookEnemies()
 
 func lookEnemies():
-	var enemies = get_parent().get_parent().get_node("Enemies").get_children()
+	var enemies = get_parent().get_parent().get_parent().get_node("Enemies").get_children()
 	for i in range(0,enemies.size(),1):
 		var enemy = enemies[i]
 		if (!positionConditionAllow(enemy)):
@@ -24,7 +24,7 @@ func shoot(enemy):
 	arrow.position = position
 	arrow.position.x+=28
 	arrow.target=enemy
-	get_parent().get_parent().get_node("Projectiles").add_child(arrow)
+	get_parent().get_parent().get_parent().get_node("Projectiles").add_child(arrow)
 	
 	
 func setAllowToShoot(b):

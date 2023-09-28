@@ -103,16 +103,19 @@ func disableFeeback():
 	
 func restartGame():
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/Fatality.tscn")
-	
+
 func debug():
 	if Input.is_action_just_pressed("ChangeAttack1"):
-		actions[0]={"attack1_type" : actions[0].values()[0]+1}
-		if (actions[0].values()[0]==3):
-			actions[0]={"attack1_type" : 0}
+		changeAction(0)
 	elif Input.is_action_just_pressed("ChangeAttack2"):
-		actions[1]={"attack2_type" : actions[1].values()[0]+1}
-		if (actions[1].values()[0]==3):
-			actions[1]={"attack2_type" : 0}
+		changeAction(1)
+	elif Input.is_action_just_pressed("ChangeTurret"):
+		changeAction(2)
+			
+func changeAction(i):
+	actions[i]={str(actions[i].keys()[0]) : actions[i].values()[0]+1}
+	if (actions[i].values()[0]==3):
+		actions[i]={str(actions[i].keys()[0]) : 0}
 			
 func commandController():
 	moveController()
@@ -158,14 +161,21 @@ func attack2Controller():
 		attackInstance.direction=lastMovement
 		
 func turretController():
+	var classChild=2	
 	if (Input.is_action_just_pressed("Turret")):
 		print("Turret")
+		var attackInstance = creatAttackInstance(classChild)
+		Global.Game.get_node("Turrets").add_child(attackInstance)
+		attackInstance.global_position=global_position
+		
+		
 func dashController():
 	if (Input.is_action_just_pressed("Dash")):
 		print("Dash")
 		##$Animation.modulate.a = 0.5
+		
 func ultimateController():
-	var classChild=2	
+	var classChild=3	
 	if (Input.is_action_just_pressed("Ultimate")):
 		print("Ultimate")
 		var attackInstance = creatAttackInstance(classChild)
