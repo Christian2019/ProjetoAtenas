@@ -24,7 +24,6 @@ animations = [{
 }]
 
 [node name="HUD" type="Node2D"]
-scale = Vector2(0.937977, 0.52452)
 script = ExtResource("1_60mgy")
 
 [node name="Background" type="Node2D" parent="."]
