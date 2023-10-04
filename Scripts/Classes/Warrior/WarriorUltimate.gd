@@ -6,7 +6,7 @@ var attacktype=0
 var damage = 1
 var enableDamage=false
 #Duracao em segundos
-var cd = 1
+var cd = 20
 var max_duration = 0.5
 #var nextHitDelay = 10
 var nextHitDelay = 0.01

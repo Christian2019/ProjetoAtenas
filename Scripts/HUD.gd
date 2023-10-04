@@ -57,8 +57,8 @@ func ultimate():
 			$Frontground/Ultimate/ColorRect.visible=false
 			if (ultimate_frame!=0):
 				ultimate_frame=0
-				var ultimatecdBoxSizeY = ultimatecdBoxStartSizeY*(max_ultimate_frame-ultimate_frame)/max_ultimate_frame
-				var ultimatecdBoxPostionY = ultimatecdBoxYStartPosition+ultimatecdBoxStartSizeY-ultimatecdBoxSizeY
+				var ultimatecdBoxPostionY = ultimatecdBoxYStartPosition+ultimatecdBoxStartSizeY-(ultimatecdBoxStartSizeY*(max_ultimate_frame-ultimate_frame)/max_ultimate_frame)
+				var ultimatecdBoxSizeY = (ultimatecdBoxYStartPosition+ultimatecdBoxStartSizeY)-ultimatecdBoxPostionY
 				$Frontground/Ultimate/ColorRect.size.y=int(ultimatecdBoxSizeY)
 				$Frontground/Ultimate/ColorRect.position.y= int(ultimatecdBoxPostionY)
 		return
@@ -66,8 +66,9 @@ func ultimate():
 		$Frontground/Ultimate/ColorRect.visible=true
 	ultimate_frame+=1
 			
-	var ultimatecdBoxSizeY = ultimatecdBoxStartSizeY*(max_ultimate_frame-ultimate_frame)/max_ultimate_frame
-	var ultimatecdBoxPostionY = ultimatecdBoxYStartPosition+ultimatecdBoxStartSizeY-ultimatecdBoxSizeY
+	
+	var ultimatecdBoxPostionY = ultimatecdBoxYStartPosition+ultimatecdBoxStartSizeY-(ultimatecdBoxStartSizeY*(max_ultimate_frame-ultimate_frame)/max_ultimate_frame)
+	var ultimatecdBoxSizeY = (ultimatecdBoxYStartPosition+ultimatecdBoxStartSizeY)-ultimatecdBoxPostionY
 	$Frontground/Ultimate/ColorRect.size.y=int(ultimatecdBoxSizeY)
 	$Frontground/Ultimate/ColorRect.position.y= int(ultimatecdBoxPostionY)
 

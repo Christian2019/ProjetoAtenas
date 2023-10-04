@@ -1,5 +1,7 @@
 res://default_env.tres
-res://Scenes/MainScenes/Game_ViewPort.tscn
-res://Assets/Images/Tiles/TileMap.tres
-res://Scenes/Game/Classes/Warrior/WarriorUltimate.tscn
 res://Scenes/Game/HUD.tscn
+res://Assets/Images/Tiles/TileMap.tres
+res://Scripts/HUD.gd
+res://Scenes/Game/Classes/Warrior/WarriorUltimate.tscn
+res://Scenes/MainScenes/Game_ViewPort.tscn
+res://Scripts/Classes/Warrior/WarriorUltimate.gd
