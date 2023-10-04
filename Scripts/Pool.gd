@@ -2,7 +2,7 @@ extends Node2D
 
 var heal=1
 var nextHealDelayPlayer=false
-var nextHealDealy=1
+var nextHealDealy=0.1
 
 var playerInArea=false
 

@@ -41,10 +41,10 @@ position = Vector2(-3, -1.19209e-07)
 scale = Vector2(0.937318, 0.597639)
 
 [node name="FPS" type="Label" parent="HUD"]
-offset_left = 677.465
-offset_top = 36.8115
-offset_right = 776.465
-offset_bottom = 77.8115
+offset_left = 886.572
+offset_top = 40.158
+offset_right = 985.572
+offset_bottom = 81.158
 text = "FPS:60"
 label_settings = SubResource("LabelSettings_4aqw1")
 script = ExtResource("5_c2jos")

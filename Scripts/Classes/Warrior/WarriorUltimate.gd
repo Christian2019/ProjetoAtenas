@@ -6,7 +6,7 @@ var attacktype=0
 var damage = 1
 var enableDamage=false
 #Duracao em segundos
-var cd = 3
+var cd = 1
 var max_duration = 0.5
 #var nextHitDelay = 10
 var nextHitDelay = 0.01
@@ -22,11 +22,13 @@ func _ready():
 	Global.timerCreator("pauseZeusVideo",10,[],self)
 	$VideoStreamPlayer.modulate.a=0
 	Global.timerCreator("destroy",14,[],self)
+	Global.hud.max_ultimate_frame=(14+cd)*60
 
 func pauseZeusVideo():
 	$VideoStreamPlayer.paused=true
 
 func destroy():
+	Global.timerCreator("enableAttackUse",cd,[4],Global.player)
 	Global.Game.get_node("SoundController").enableDisableSound()
 	Global.Game.get_node("Night").visible=false
 	queue_free()

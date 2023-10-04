@@ -9,7 +9,7 @@ var reverseAlphaChange=false
 
 var heal=1
 var nextHealDelay=false
-var nextHealDealy=1
+var nextHealDealy=0.1
 
 func _process(delta):
 	if (hp==0):

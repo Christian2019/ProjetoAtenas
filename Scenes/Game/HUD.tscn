@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b18nigm5wn5ab"]
+[gd_scene load_steps=11 format=3 uid="uid://b18nigm5wn5ab"]
 
 [ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
 [ext_resource type="Script" path="res://Scripts/HUD.gd" id="1_60mgy"]
@@ -7,9 +7,21 @@
 [ext_resource type="Texture2D" uid="uid://ywre30ix5f7t" path="res://Assets/Images/Resources/wood.png" id="4_ujb4v"]
 [ext_resource type="Texture2D" uid="uid://dlwvyo6ejssc" path="res://Assets/Images/Resources/gold.png" id="5_dhfbp"]
 [ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="6_41dw3"]
+[ext_resource type="Texture2D" uid="uid://b30q73hel4bo6" path="res://Assets/Images/Player/zeusUlt.png" id="8_3iihb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_22btt"]
 font = ExtResource("2_owy1r")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yngw4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_3iihb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="HUD" type="Node2D"]
 scale = Vector2(0.937977, 0.52452)
@@ -164,62 +176,49 @@ position = Vector2(56, 126)
 scale = Vector2(3.3, 3.3)
 texture = ExtResource("6_41dw3")
 
-[node name="Powers" type="Node2D" parent="Frontground"]
+[node name="Ultimate" type="Node2D" parent="Frontground"]
 position = Vector2(427, -63)
 
-[node name="Label" type="Label" parent="Frontground/Powers"]
-offset_left = 151.0
-offset_top = 72.0
-offset_right = 338.0
-offset_bottom = 116.0
-text = "Powers"
+[node name="Label" type="Label" parent="Frontground/Ultimate"]
+offset_left = 145.509
+offset_top = 64.9065
+offset_right = 332.509
+offset_bottom = 108.907
+text = "Ultimate"
 label_settings = SubResource("LabelSettings_22btt")
 
-[node name="Spaces" type="Node2D" parent="Frontground/Powers"]
-position = Vector2(0, -2)
-scale = Vector2(1.038, 1.038)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Frontground/Ultimate"]
+position = Vector2(171.406, 122.102)
+scale = Vector2(0.124137, 0.13171)
+sprite_frames = SubResource("SpriteFrames_yngw4")
 
-[node name="ColorRect" type="ColorRect" parent="Frontground/Powers/Spaces"]
-offset_left = 126.83
-offset_top = 104.865
-offset_right = 148.83
-offset_bottom = 126.865
-color = Color(1, 0, 0, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="Frontground/Powers/Spaces"]
-offset_left = 157.996
-offset_top = 104.046
-offset_right = 179.996
-offset_bottom = 126.046
-color = Color(1, 0, 0, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="Frontground/Powers/Spaces"]
-offset_left = 192.564
-offset_top = 104.865
-offset_right = 214.564
-offset_bottom = 126.865
-color = Color(1, 0, 0, 1)
+[node name="ColorRect" type="ColorRect" parent="Frontground/Ultimate"]
+offset_left = 153.0
+offset_top = 84.0
+offset_right = 190.0
+offset_bottom = 160.0
+color = Color(1, 1, 1, 0.678431)
 
 [node name="TimeLine" type="Node2D" parent="Frontground"]
 
 [node name="Label" type="Label" parent="Frontground/TimeLine"]
-offset_left = 822.0
-offset_top = 9.0
-offset_right = 1009.0
-offset_bottom = 53.0
+offset_left = 683.328
+offset_top = 9.53252
+offset_right = 870.328
+offset_bottom = 53.5325
 text = "Time to Next Wave"
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="Label2" type="Label" parent="Frontground/TimeLine"]
-offset_left = 877.0
-offset_top = 73.0
-offset_right = 917.0
-offset_bottom = 99.0
+offset_left = 738.328
+offset_top = 73.5325
+offset_right = 778.328
+offset_bottom = 99.5325
 text = "30s"
 
 [node name="ColorRect" type="ColorRect" parent="Frontground/TimeLine"]
-offset_left = 805.0
-offset_top = 43.0
-offset_right = 1005.0
-offset_bottom = 65.0
+offset_left = 666.328
+offset_top = 43.5325
+offset_right = 866.328
+offset_bottom = 65.5325
 color = Color(1, 0, 0, 1)

@@ -2,7 +2,7 @@ extends "res://Scripts/Enemy.gd"
 
 var maxHp=30
 var hp = maxHp
-var damage = 10
+var damage = 1
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false

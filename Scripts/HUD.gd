@@ -16,7 +16,15 @@ var maxHpHearthStartSizeY
 var centerPointhpHearthYStartPosition
 var centerPointmaxHpHearthStartSizeY
 
+#Ultimate cd
+var ultimate_frame=0
+var max_ultimate_frame
+var ultimatecdBoxYStartPosition
+var ultimatecdBoxStartSizeY
+
 func _ready():
+	Global.hud=self
+	
 	maxBarSizeX=$Frontground/TimeLine/ColorRect.size.x
 	
 	maxHpHearthStartSizeY=$Frontground/HP/ColorRect.size.y
@@ -25,11 +33,15 @@ func _ready():
 	
 	centerPointmaxHpHearthStartSizeY= $Frontground/CenterPointHp/ColorRect.size.y
 	centerPointhpHearthYStartPosition=$Frontground/CenterPointHp/ColorRect.position.y
+		
+	ultimatecdBoxYStartPosition= $Frontground/Ultimate/ColorRect.position.y
+	ultimatecdBoxStartSizeY=$Frontground/Ultimate/ColorRect.size.y
 
 func _process(_delta):
 	timerControllerBar()
 	hpBarController()
 	centerPointhpBarController()
+	ultimate()
 	
 	if (tick == waitTick):
 		updateTimeToNextWave()
@@ -38,6 +50,28 @@ func _process(_delta):
 	
 	if (tick < waitTick):
 		tick+=1
+
+func ultimate():
+	if (Global.player.permissions[4]):
+		if ($Frontground/Ultimate/ColorRect.visible):
+			$Frontground/Ultimate/ColorRect.visible=false
+			if (ultimate_frame!=0):
+				ultimate_frame=0
+				var ultimatecdBoxSizeY = ultimatecdBoxStartSizeY*(max_ultimate_frame-ultimate_frame)/max_ultimate_frame
+				var ultimatecdBoxPostionY = ultimatecdBoxYStartPosition+ultimatecdBoxStartSizeY-ultimatecdBoxSizeY
+				$Frontground/Ultimate/ColorRect.size.y=int(ultimatecdBoxSizeY)
+				$Frontground/Ultimate/ColorRect.position.y= int(ultimatecdBoxPostionY)
+		return
+	if (!$Frontground/Ultimate/ColorRect.visible):
+		$Frontground/Ultimate/ColorRect.visible=true
+	ultimate_frame+=1
+			
+	var ultimatecdBoxSizeY = ultimatecdBoxStartSizeY*(max_ultimate_frame-ultimate_frame)/max_ultimate_frame
+	var ultimatecdBoxPostionY = ultimatecdBoxYStartPosition+ultimatecdBoxStartSizeY-ultimatecdBoxSizeY
+	$Frontground/Ultimate/ColorRect.size.y=int(ultimatecdBoxSizeY)
+	$Frontground/Ultimate/ColorRect.position.y= int(ultimatecdBoxPostionY)
+
+
 
 func hpBarController():
 	$Frontground/HP/Label.text = str("HP ",Global.player.hp,"/",Global.player.maxHp )

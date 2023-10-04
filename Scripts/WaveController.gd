@@ -3,12 +3,14 @@ extends Node2D
 var startTimer = 5
 var timer = startTimer
 
-var battleTimer = startTimer/2
+var battleTimer = 10
 
 var battleTime=false
 
 var soundController
 var enemies
+
+var enemiesPerSecond=10
 
 func _ready():
 	soundController= get_parent().get_node("SoundController")
@@ -47,7 +49,8 @@ func battleEnd():
 
 func createEnemies():
 	if (battleTime and timer>0):
-		spawnEnemy(PreLoads.minotaur.instantiate())
+		for i in range(0,enemiesPerSecond,1):
+			spawnEnemy(PreLoads.minotaur.instantiate())
 		Global.timerCreator("createEnemies",1,[],self)
 		
 func spawnEnemy(enemy):
