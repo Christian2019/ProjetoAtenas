@@ -23,7 +23,7 @@ func _ready():
 	return
 
 func audioInstances():
-	var quantityOfInstances=5
+	var quantityOfInstances=3
 	for i in range(0,$SoundController.get_child_count(),1):
 		var arrow = $SoundController.get_child(i)
 		var sound = arrow.get_child(0)
@@ -80,60 +80,44 @@ func getCloserEnemy(enemies):
 	
 
 func move():
+	#Pega o angulo entre a turret e inimigo e normaliza entre 0 e 360
 	var angleToEnemy = rad_to_deg(global_position.angle_to_point(closerEnemy.global_position))
+	if (angleToEnemy<0):
+		angleToEnemy=angleToEnemy+360
 	
-	if (angleToEnemy!=$Animations/Up.rotation_degrees):
-		if angleToEnemy>$Animations/Up.rotation_degrees:
-			$Animations/Up.rotation_degrees+=rotationSpeed
-			if angleToEnemy<$Animations/Up.rotation_degrees:
-				$Animations/Up.rotation_degrees=angleToEnemy
-		else:
-			$Animations/Up.rotation_degrees-=rotationSpeed
-			if angleToEnemy>$Animations/Up.rotation_degrees:
-				$Animations/Up.rotation_degrees=angleToEnemy
+	#Normaliza o angulo da animacao entre 0 e 360
+	if ($Animations/Up.rotation_degrees<0):
+		$Animations/Up.rotation_degrees=$Animations/Up.rotation_degrees+360
+	if ($Animations/Up.rotation_degrees>360):
+		$Animations/Up.rotation_degrees=$Animations/Up.rotation_degrees-360
+
+	#Se a distancia angular entre os pontos for menor que a velocidade de rotacao iguala o angulo das duas e retorna
+	if (abs($Animations/Up.rotation_degrees-angleToEnemy)<rotationSpeed):
+		$Animations/Up.rotation_degrees=angleToEnemy
+		return
 	
+	#Decide se o caminho mais curto eh rotacionar na direcao horaria ou anti horararia	
+	var directionclockwise= getDirection(angleToEnemy)
 	
-"""
-func _on_area_2d_area_entered(area):
-	if area.get_parent().get_parent().name == "Enemies":
-		call_deferred("addMonster",area.get_parent())
-	if area.get_parent().name == "Player":
-		collidinWithPlayer=true
+	if (directionclockwise):
+		$Animations/Up.rotation_degrees+=rotationSpeed
+	else:
+		$Animations/Up.rotation_degrees-=rotationSpeed
+
+
+func getDirection(angleToEnemy):
+	var distanceClockwise
+	var distanceAntiClockwise
+	
+	if (angleToEnemy<$Animations/Up.rotation_degrees):
+		distanceClockwise= 360-$Animations/Up.rotation_degrees+angleToEnemy
+		distanceAntiClockwise= $Animations/Up.rotation_degrees-angleToEnemy
+	else:
+		distanceClockwise= angleToEnemy-$Animations/Up.rotation_degrees
+		distanceAntiClockwise=360-angleToEnemy+$Animations/Up.rotation_degrees
 		
-func _on_area_2d_area_exited(area):
-	if area.get_parent().get_parent().name == "Enemies":
-		call_deferred("removeMonster",area.get_parent())
-	if area.get_parent().name == "Player":
-		collidinWithPlayer=false
-
-func removeMonster(monster):
-	monstersInArea.erase(monster)
-			
-func addMonster(monster):
-	monstersInArea.append(monster)
-	
-	if (monstersHit.is_empty()):
-		monstersHit.append({"monster":monster,"onHitDelay":false,"objectReference":weakref(monster)})
-	elif !checkIfExist(monster.name):
-		monstersHit.append({"monster":monster,"onHitDelay":false,"objectReference":weakref(monster)})
-
-func checkIfExist(name):
-	for i in range(0,monstersHit.size(),1):
-		if itsValid(monstersHit[i]):
-			var monsterName= monstersHit[i].monster.name
-			if (monsterName==name):
-				return true
-	return false
-
-func itsValid(element):
-	if (element.objectReference.get_ref()):
+	if (distanceClockwise<distanceAntiClockwise):
 		return true
-	return false
 
-func getMonsterHitIndex(monster):
-	for i in range(0,monstersHit.size(),1):
-		if itsValid(monstersHit[i]):
-			if (monstersHit[i].monster.name==monster.name):
-				return i
+	return false
 	
-"""

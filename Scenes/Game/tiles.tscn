@@ -3,6 +3,10 @@
 [ext_resource type="TileSet" uid="uid://b7f3qfsvvnmrt" path="res://Assets/Images/Tiles/TileMap.tres" id="1_aitpp"]
 [ext_resource type="Texture2D" uid="uid://37j5mkm8pwh7" path="res://Assets/Images/Tiles/mockups.png" id="2_njtf2"]
 
+[sub_resource type="TileSet" id="TileSet_kqol7"]
+
+[sub_resource type="TileSet" id="TileSet_vxrxi"]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hvr52"]
 texture = ExtResource("2_njtf2")
 0:0/0 = 0
@@ -3177,12 +3181,6 @@ texture = ExtResource("2_njtf2")
 49:60/0 = 0
 50:60/0 = 0
 51:60/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_kqol7"]
-sources/0 = SubResource("TileSetAtlasSource_hvr52")
-
-[sub_resource type="TileSet" id="TileSet_vxrxi"]
-sources/0 = SubResource("TileSetAtlasSource_hvr52")
 
 [sub_resource type="TileSet" id="TileSet_5jk36"]
 sources/0 = SubResource("TileSetAtlasSource_hvr52")
