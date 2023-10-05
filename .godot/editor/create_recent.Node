@@ -1,11 +1,11 @@
 AnimatedSprite2D
+AudioStreamPlayer
+ColorRect
+Node2D
 Area2D
 CollisionShape2D
-Node2D
-AudioStreamPlayer
 Sprite2D
 VideoStreamPlayer
-ColorRect
 Label
 Node
 AudioStreamPlayer2D

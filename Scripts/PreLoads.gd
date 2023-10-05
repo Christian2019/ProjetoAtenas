@@ -11,7 +11,8 @@ var warrior = [
 	preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1.tscn"),
 	preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2.tscn"),
 	preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/Warrior_Turret.tscn"),
-	preload("res://Scenes/Game/Classes/Warrior/WarriorUltimate.tscn"),
+	preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash.tscn"),
 	preload("res://Scenes/Game/Classes/Warrior/WarriorUltimate.tscn")
 ]
 var warrior_arrow = preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/WarriorArrow.tscn")
+var dashShadow= preload("res://Scenes/Game/Classes/Warrior/WarriorDash/DashShadow.tscn")

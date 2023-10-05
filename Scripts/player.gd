@@ -4,7 +4,7 @@ extends Node2D
 var dead = false
 var maxHp=100
 var hp = maxHp
-var move_Speed = 10
+var move_Speed = 5
 var attack_Speed = 1 ## precisa ser >0
 
 var playerClass = PreLoads.warrior
@@ -45,6 +45,7 @@ var closerQuadrant
 #{vector2,index}
 
 var farming =false
+var dashing = false
 
 ##Feedback por levar dano ou curar
 var feedBackAtive=false
@@ -118,9 +119,14 @@ func changeAction(i):
 		actions[i]={str(actions[i].keys()[0]) : 0}
 			
 func commandController():
+	if (dashing):
+		return
+	
 	moveController()
+	
 	if (farming):
 		return
+	
 	attack1Controller()
 	attack2Controller()
 	turretController()
@@ -170,20 +176,23 @@ func turretController():
 		
 		
 func dashController():
-	if (Input.is_action_just_pressed("Dash")):
+	var classChild=3	
+	if (Input.is_action_just_pressed("Dash") and permissions[classChild]):
 		print("Dash")
-		##$Animation.modulate.a = 0.5
+		var attackInstance = creatAttackInstance(classChild)
+		attackInstance.direction= lastMovement
+		add_child(attackInstance)
+		enableDisableAnimation()
+		
 		
 func ultimateController():
 	var classChild=4	
 	if (Input.is_action_just_pressed("Ultimate") and permissions[classChild]):
 		print("Ultimate")
 		var attackInstance = creatAttackInstance(classChild)
-		#get_parent().get_node("Projectiles").add_child(attackInstance)
 		Global.Game.get_node("Night").visible=true
 		add_child(attackInstance)
-		#attackInstance.global_position=global_position
-		#attackInstance.direction=lastMovement
+
 
 
 func contruction():
@@ -233,6 +242,8 @@ func getCloserQuadrant():
 		closerQuadrant.get_node("ColorRect").visible=true	
 	
 func animationController():
+	if (dashing):
+		return
 	if ($CutAnimation.frame==6):
 		$CutAnimation.frame=0
 		$CutAnimation.stop()
@@ -247,7 +258,11 @@ func animationController():
 	else:
 		$Animation.stop()
 		
-		
+func enableDisableAnimation():
+	if($Animation.is_playing()):
+		$Animation.stop()
+	else:
+		$Animation.play()	
 	
 func moveController():
 	var speedModifier=1
@@ -284,6 +299,7 @@ func tryToMove(speedX,speedY):
 	if (!Global.areaBoxCollision(self,nextTryPosition,$Body,Global.Game.get_node("BockedAreas").get_children())):
 		position.y+=speedY
 		position.x+=speedX
+		return true
 	else:
 		#Faz o movimento limitando a velocidade para que encaixe perfeitamente
 		
@@ -298,6 +314,7 @@ func tryToMove(speedX,speedY):
 		testSpeedValue-=testSpeedStep
 		position.y+=speedY*testSpeedValue
 		position.x+=speedX*testSpeedValue
+		return false
 		
 	
 
@@ -320,6 +337,7 @@ func lastMoveController():
 	elif Input.is_action_pressed("Move_Left"):
 		lastMovement="W"
 		
+
 
 func _on_timer_timeout():
 	pass
