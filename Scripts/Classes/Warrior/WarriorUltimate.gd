@@ -6,11 +6,13 @@ var attacktype=0
 var damage = 1
 var enableDamage=false
 #Duracao em segundos
-var cd = 20
-var max_duration = 0.5
+var cd = 5
+
 #var nextHitDelay = 10
 var nextHitDelay = 0.01
 
+var frame=0
+var max_duration = 14
 #Monstros que foram atingidos pelo ataque
 var monstersHit = []
 
@@ -19,10 +21,11 @@ var monstersInArea = []
 
 func _ready():
 	Global.Game.get_node("SoundController").enableDisableSound()
-	Global.timerCreator("pauseZeusVideo",10,[],self)
-	$VideoStreamPlayer.modulate.a=0
-	Global.timerCreator("destroy",14,[],self)
-	Global.hud.max_ultimate_frame=(14+cd)*60
+	#Global.timerCreator("pauseZeusVideo",10,[],self)
+	#$VideoStreamPlayer.modulate.a=0
+	$Sprite2D.modulate.a=0
+	Global.timerCreator("destroy", max_duration,[],self)
+	Global.hud.max_ultimate_frame=( max_duration+cd)*60
 
 func pauseZeusVideo():
 	$VideoStreamPlayer.paused=true
@@ -34,8 +37,10 @@ func destroy():
 	queue_free()
 
 func _process(delta):
-	$VideoStreamPlayer.modulate.a+=0.005
+	#$VideoStreamPlayer.modulate.a+=0.005
+	$Sprite2D.modulate.a=float(frame)/float(max_duration*60)
 	damageAction()
+	frame+=1
 
 func damageAction():
 	if (monstersInArea.is_empty()):
