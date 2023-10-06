@@ -198,6 +198,13 @@ offset_right = 190.0
 offset_bottom = 160.0
 color = Color(1, 1, 1, 0.678431)
 
+[node name="ColorRect2" type="ColorRect" parent="Frontground/Ultimate"]
+offset_left = 153.0
+offset_top = 84.0
+offset_right = 190.0
+offset_bottom = 160.0
+color = Color(1, 0, 0, 0.423529)
+
 [node name="TimeLine" type="Node2D" parent="Frontground"]
 
 [node name="Label" type="Label" parent="Frontground/TimeLine"]

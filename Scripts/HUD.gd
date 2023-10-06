@@ -18,9 +18,10 @@ var centerPointmaxHpHearthStartSizeY
 
 #Ultimate cd
 var ultimate_frame=0
-var max_ultimate_frame
+var max_ultimate_frame=0
 var ultimatecdBoxYStartPosition
 var ultimatecdBoxStartSizeY
+
 
 func _ready():
 	Global.hud=self
@@ -55,14 +56,24 @@ func ultimate():
 	if (Global.player.permissions[4]):
 		if ($Frontground/Ultimate/ColorRect.visible):
 			$Frontground/Ultimate/ColorRect.visible=false
+			$Frontground/Ultimate/ColorRect2.visible=false
 			if (ultimate_frame!=0):
 				ultimate_frame=0
+				max_ultimate_frame=0
 				var ultimatecdBoxPostionY = ultimatecdBoxYStartPosition+ultimatecdBoxStartSizeY-(ultimatecdBoxStartSizeY*(max_ultimate_frame-ultimate_frame)/max_ultimate_frame)
 				var ultimatecdBoxSizeY = (ultimatecdBoxYStartPosition+ultimatecdBoxStartSizeY)-ultimatecdBoxPostionY
 				$Frontground/Ultimate/ColorRect.size.y=int(ultimatecdBoxSizeY)
 				$Frontground/Ultimate/ColorRect.position.y= int(ultimatecdBoxPostionY)
 		return
+	
+	if(max_ultimate_frame==0):
+		if (!$Frontground/Ultimate/ColorRect2.visible):
+			$Frontground/Ultimate/ColorRect2.visible=true
+		
+		return
+	
 	if (!$Frontground/Ultimate/ColorRect.visible):
+		$Frontground/Ultimate/ColorRect2.visible=false
 		$Frontground/Ultimate/ColorRect.visible=true
 	ultimate_frame+=1
 			

@@ -31,6 +31,8 @@ func audioInstances():
 			arrow.add_child(sound.duplicate())
 
 func _process(_delta):
+	if (Global.player.playerOnCenterPoint):
+		destroy()
 	var enemies = Global.Game.get_node("Enemies").get_children()
 	if enemies.size() == 0:
 		return

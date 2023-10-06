@@ -21,23 +21,19 @@ var monstersInArea = []
 
 func _ready():
 	Global.Game.get_node("SoundController").enableDisableSound()
-	#Global.timerCreator("pauseZeusVideo",10,[],self)
-	#$VideoStreamPlayer.modulate.a=0
 	$Sprite2D.modulate.a=0
 	Global.timerCreator("destroy", max_duration,[],self)
-	Global.hud.max_ultimate_frame=( max_duration+cd)*60
-
-func pauseZeusVideo():
-	$VideoStreamPlayer.paused=true
 
 func destroy():
+	Global.hud.max_ultimate_frame=(cd)*60
 	Global.timerCreator("enableAttackUse",cd,[4],Global.player)
 	Global.Game.get_node("SoundController").enableDisableSound()
 	Global.Game.get_node("Night").visible=false
 	queue_free()
 
 func _process(delta):
-	#$VideoStreamPlayer.modulate.a+=0.005
+	if (Global.player.playerOnCenterPoint):
+		destroy()
 	$Sprite2D.modulate.a=float(frame)/float(max_duration*60)
 	damageAction()
 	frame+=1

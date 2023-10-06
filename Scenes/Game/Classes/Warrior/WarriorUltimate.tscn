@@ -1,10 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://hivlcm55i6jy"]
+[gd_scene load_steps=16 format=3 uid="uid://hivlcm55i6jy"]
 
 [ext_resource type="AudioStream" uid="uid://cwb8astmjglgm" path="res://Assets/Sounds/thunder.wav" id="1_jt03y"]
 [ext_resource type="Script" path="res://Scripts/Classes/Warrior/WarriorUltimate.gd" id="1_t7q3d"]
 [ext_resource type="Texture2D" uid="uid://dyq77bc1xhaea" path="res://Assets/Images/Player/thunder.png" id="2_0kwug"]
 [ext_resource type="AudioStream" uid="uid://ch1danorl6kw4" path="res://Assets/Sounds/zeusvoice.mp3" id="2_v8i1d"]
-[ext_resource type="VideoStream" path="res://Assets/Videos/zeusvideo.ogv" id="4_vh0fq"]
 [ext_resource type="Texture2D" uid="uid://gtkm5i1qkq6u" path="res://Assets/Images/Player/zeusUlt3.png" id="6_ejars"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gnbrf"]
@@ -92,15 +91,6 @@ sprite_frames = SubResource("SpriteFrames_2gk0k")
 autoplay = "default"
 frame = 7
 frame_progress = 0.629515
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-visible = false
-z_index = 1
-offset_left = -125.0
-offset_top = -208.0
-offset_right = 127.0
-offset_bottom = -94.0
-stream = ExtResource("4_vh0fq")
 
 [node name="Area2D" type="Area2D" parent="."]
 

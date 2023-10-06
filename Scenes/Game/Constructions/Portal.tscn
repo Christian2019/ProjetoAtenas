@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dumjr4t8822i1"]
+[gd_scene load_steps=10 format=3 uid="uid://dumjr4t8822i1"]
 
 [ext_resource type="Texture2D" uid="uid://ccvsq38n6ndp" path="res://Assets/Images/Constructions/portal.png" id="1_e44e2"]
 [ext_resource type="Script" path="res://Scripts/Portal.gd" id="1_rujxd"]
+[ext_resource type="AudioStream" uid="uid://dpgg7xpjip22f" path="res://Assets/Sounds/teleport.mp3" id="3_epklh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vg67t"]
 atlas = ExtResource("1_e44e2")
@@ -56,6 +57,10 @@ frame_progress = 0.29227
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-1, 5)
 shape = SubResource("RectangleShape2D_bo3xm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_epklh")
+volume_db = 4.407
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

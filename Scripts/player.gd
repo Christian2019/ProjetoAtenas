@@ -51,6 +51,8 @@ var dashing = false
 var feedBackAtive=false
 var reverseAlphaChange=false
 
+var playerOnCenterPoint=false
+
 func _ready():
 	$Animation.play("Right")
 
@@ -124,7 +126,7 @@ func commandController():
 	
 	moveController()
 	
-	if (farming):
+	if (farming or playerOnCenterPoint):
 		return
 	
 	attack1Controller()
@@ -341,3 +343,13 @@ func lastMoveController():
 
 func _on_timer_timeout():
 	pass
+
+
+func _on_body_area_entered(area):
+	if area.get_parent().name == "Center":
+		playerOnCenterPoint=true
+
+
+func _on_body_area_exited(area):
+	if area.get_parent().name == "Center":
+		playerOnCenterPoint=false
