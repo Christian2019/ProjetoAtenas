@@ -4,7 +4,7 @@ extends Node2D
 var canGrab = 0
 var position_board= Vector2(0,0)
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready(): 
 	pass # Replace with function body.
 
 

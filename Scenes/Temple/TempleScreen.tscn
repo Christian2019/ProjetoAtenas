@@ -1,10 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqduy4u8regjo"]
+[gd_scene load_steps=12 format=3 uid="uid://bqduy4u8regjo"]
 
 [ext_resource type="Script" path="res://Scripts/Temple_Scripts/MainPage.gd" id="1_n2wv5"]
 [ext_resource type="Texture2D" uid="uid://dlwvyo6ejssc" path="res://Assets/Images/Resources/gold.png" id="2_2mha2"]
+[ext_resource type="Script" path="res://Scripts/Temple_Scripts/ShopScript.gd" id="2_m5fe6"]
 [ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="3_yti6q"]
 [ext_resource type="Texture2D" uid="uid://ywre30ix5f7t" path="res://Assets/Images/Resources/wood.png" id="4_rq8w3"]
 [ext_resource type="Script" path="res://Scripts/Temple_Scripts/PersonagemLoja.gd" id="5_1cq4t"]
+[ext_resource type="Script" path="res://Scripts/Temple_Scripts/Mineração.gd" id="6_b0i47"]
+[ext_resource type="PackedScene" uid="uid://12buwcnhifsh" path="res://Scenes/Temple/OpcaoUpgrade.tscn" id="7_ydes4"]
+[ext_resource type="Texture2D" uid="uid://d0xhqa10j30ok" path="res://icon.png" id="8_l0soo"]
+[ext_resource type="Script" path="res://Scripts/Temple_Scripts/Defender Point.gd" id="10_imkf7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sr6eu"]
 size = Vector2(121, 115)
@@ -19,7 +24,7 @@ offset_right = 1029.0
 offset_bottom = 604.0
 color = Color(0.337255, 0.337255, 0.337255, 1)
 
-[node name="MKenuMenu" type="ColorRect" parent="BG"]
+[node name="MenuPrincipal" type="ColorRect" parent="BG"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = -3.0
@@ -27,61 +32,60 @@ offset_right = 1034.0
 offset_bottom = 40.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
 
-[node name="Shop" type="Button" parent="BG/MKenuMenu"]
-layout_mode = 0
+[node name="Labels" type="Node2D" parent="BG/MenuPrincipal"]
+
+[node name="Ouro" type="Label" parent="BG/MenuPrincipal/Labels"]
+offset_left = 790.0
+offset_top = 10.0
+offset_right = 830.0
+offset_bottom = 33.0
+
+[node name="Wood" type="Label" parent="BG/MenuPrincipal/Labels"]
+offset_left = 867.0
+offset_top = 10.0
+offset_right = 907.0
+offset_bottom = 33.0
+
+[node name="Stone" type="Label" parent="BG/MenuPrincipal/Labels"]
+offset_left = 955.0
+offset_top = 10.0
+offset_right = 995.0
+offset_bottom = 33.0
+
+[node name="Abas" type="Node2D" parent="BG/MenuPrincipal"]
+
+[node name="Shop" type="Button" parent="BG/MenuPrincipal/Abas"]
 offset_left = 21.0
 offset_top = 7.0
 offset_right = 103.0
 offset_bottom = 38.0
 text = "Shop"
 
-[node name="Mineração" type="Button" parent="BG/MKenuMenu"]
-layout_mode = 0
+[node name="Mineração" type="Button" parent="BG/MenuPrincipal/Abas"]
 offset_left = 108.0
 offset_top = 7.0
 offset_right = 198.0
 offset_bottom = 38.0
 text = "Mineração"
 
-[node name="Personagem" type="Button" parent="BG/MKenuMenu"]
-layout_mode = 0
+[node name="Personagem" type="Button" parent="BG/MenuPrincipal/Abas"]
 offset_left = 202.0
 offset_top = 7.0
 offset_right = 307.0
 offset_bottom = 38.0
 text = "Personagem"
 
-[node name="Defender Point" type="Button" parent="BG/MKenuMenu"]
-layout_mode = 0
+[node name="Defender Point" type="Button" parent="BG/MenuPrincipal/Abas"]
 offset_left = 311.0
 offset_top = 7.0
 offset_right = 436.0
 offset_bottom = 38.0
 text = "Defender Point"
 
-[node name="Ouro" type="Label" parent="BG/MKenuMenu"]
-layout_mode = 0
-offset_left = 818.0
-offset_top = 10.0
-offset_right = 858.0
-offset_bottom = 33.0
-
-[node name="Wood" type="Label" parent="BG/MKenuMenu"]
-layout_mode = 0
-offset_left = 888.0
-offset_top = 10.0
-offset_right = 928.0
-offset_bottom = 33.0
-
-[node name="Stone" type="Label" parent="BG/MKenuMenu"]
-layout_mode = 0
-offset_left = 957.0
-offset_top = 10.0
-offset_right = 997.0
-offset_bottom = 33.0
-
 [node name="SHOP" type="Node2D" parent="BG"]
+visible = false
 position = Vector2(1, 0)
+script = ExtResource("2_m5fe6")
 
 [node name="LOJA" type="ColorRect" parent="BG/SHOP"]
 offset_left = 5.0
@@ -255,7 +259,7 @@ offset_bottom = 69.0
 text = "100 WOOD
 1 GOLD"
 
-[node name="TradeWood100x" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Wood Trade"]
+[node name="TradeWoodStone" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Wood Trade"]
 layout_mode = 0
 offset_left = 702.0
 offset_top = 14.0
@@ -278,7 +282,9 @@ offset_right = 222.0
 offset_bottom = 601.0
 text = "Troca"
 
-[node name="SCROLL1" type="TextureButton" parent="BG/SHOP"]
+[node name="Botoes" type="Node2D" parent="BG/SHOP"]
+
+[node name="SCROLL1" type="TextureButton" parent="BG/SHOP/Botoes"]
 offset_left = 10.0
 offset_top = 90.0
 offset_right = 220.0
@@ -286,14 +292,14 @@ offset_bottom = 215.0
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Text" type="Label" parent="BG/SHOP/SCROLL1"]
+[node name="Text" type="Label" parent="BG/SHOP/Botoes/SCROLL1"]
 layout_mode = 0
 offset_left = 85.0
 offset_top = 50.0
 offset_right = 125.0
 offset_bottom = 73.0
 
-[node name="SCROLL2" type="TextureButton" parent="BG/SHOP"]
+[node name="SCROLL2" type="TextureButton" parent="BG/SHOP/Botoes"]
 offset_left = 223.0
 offset_top = 90.0
 offset_right = 433.0
@@ -301,7 +307,7 @@ offset_bottom = 215.0
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Text" type="Label" parent="BG/SHOP/SCROLL2"]
+[node name="Text" type="Label" parent="BG/SHOP/Botoes/SCROLL2"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 50.0
@@ -311,7 +317,7 @@ offset_bottom = 73.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SCROLL3" type="TextureButton" parent="BG/SHOP"]
+[node name="SCROLL3" type="TextureButton" parent="BG/SHOP/Botoes"]
 offset_left = 432.0
 offset_top = 90.0
 offset_right = 642.0
@@ -319,7 +325,7 @@ offset_bottom = 215.0
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Text" type="Label" parent="BG/SHOP/SCROLL3"]
+[node name="Text" type="Label" parent="BG/SHOP/Botoes/SCROLL3"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 50.0
@@ -327,7 +333,7 @@ offset_top = 50.0
 offset_right = 90.0
 offset_bottom = 73.0
 
-[node name="SCROLL4" type="TextureButton" parent="BG/SHOP"]
+[node name="SCROLL4" type="TextureButton" parent="BG/SHOP/Botoes"]
 offset_left = 642.0
 offset_top = 90.0
 offset_right = 852.0
@@ -335,7 +341,7 @@ offset_bottom = 215.0
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Text" type="Label" parent="BG/SHOP/SCROLL4"]
+[node name="Text" type="Label" parent="BG/SHOP/Botoes/SCROLL4"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 50.0
@@ -345,6 +351,7 @@ offset_bottom = 73.0
 
 [node name="Mineração" type="Node2D" parent="BG"]
 visible = false
+script = ExtResource("6_b0i47")
 
 [node name="Movimento" type="ColorRect" parent="BG/Mineração"]
 offset_left = 23.0
@@ -571,10 +578,9 @@ color = Color(0.486275, 0.462745, 0.466667, 1)
 
 [node name="Title" type="Label" parent="BG/Personagem/ITEMS"]
 layout_mode = 0
-offset_left = 97.0
-offset_top = -1.0
-offset_right = 137.0
-offset_bottom = 25.0
+offset_left = 90.0
+offset_right = 139.0
+offset_bottom = 26.0
 text = "Status"
 
 [node name="Movimento" type="ColorRect" parent="BG/Personagem"]
@@ -591,119 +597,64 @@ offset_right = 765.0
 offset_bottom = 520.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
 
-[node name="CaixasDeItem" type="Node2D" parent="BG/Personagem"]
+[node name="Level Attack" type="Node2D" parent="BG/Personagem"]
+position = Vector2(27, 8)
 
-[node name="Item1" type="Area2D" parent="BG/Personagem/CaixasDeItem"]
-position = Vector2(131, 179)
+[node name="Level1" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
+position = Vector2(64, 110)
+scale = Vector2(2, 2)
+whatUpgrades = "Attack"
+valor = 2
+textura = ExtResource("8_l0soo")
 
-[node name="ColorRect" type="ColorRect" parent="BG/Personagem/CaixasDeItem/Item1"]
-offset_left = -61.0
-offset_top = -57.0
-offset_right = 60.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
+[node name="Level2" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
+position = Vector2(231, 110)
+scale = Vector2(2, 2)
+whatUpgrades = "Attack"
+valor = 2
+textura = ExtResource("8_l0soo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/CaixasDeItem/Item1"]
-position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_sr6eu")
+[node name="Level3" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
+position = Vector2(393, 110)
+scale = Vector2(2, 2)
+whatUpgrades = "Attack"
+textura = ExtResource("8_l0soo")
 
-[node name="Item2" type="Area2D" parent="BG/Personagem/CaixasDeItem"]
+[node name="Level4" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
+position = Vector2(553, 110)
+scale = Vector2(2, 2)
+whatUpgrades = "Attack"
+textura = ExtResource("8_l0soo")
 
-[node name="ColorRect" type="ColorRect" parent="BG/Personagem/CaixasDeItem/Item2"]
-offset_left = 238.0
-offset_top = 122.0
-offset_right = 359.0
-offset_bottom = 236.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
+[node name="Level Defesa" type="Node2D" parent="BG/Personagem"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/CaixasDeItem/Item2"]
-position = Vector2(298, 179)
-shape = SubResource("RectangleShape2D_sr6eu")
+[node name="Level1" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
+position = Vector2(98, 367)
+scale = Vector2(2, 2)
+whatUpgrades = "Defense"
+valor = 2
+textura = ExtResource("8_l0soo")
 
-[node name="Item3" type="Area2D" parent="BG/Personagem/CaixasDeItem"]
+[node name="Level2" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
+position = Vector2(265, 367)
+scale = Vector2(2, 2)
+whatUpgrades = "Defense"
+valor = 2
+textura = ExtResource("8_l0soo")
 
-[node name="ColorRect" type="ColorRect" parent="BG/Personagem/CaixasDeItem/Item3"]
-offset_left = 415.0
-offset_top = 124.0
-offset_right = 536.0
-offset_bottom = 238.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
+[node name="Level3" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
+position = Vector2(427, 367)
+scale = Vector2(2, 2)
+whatUpgrades = "Defense"
+valor = 4
+textura = ExtResource("8_l0soo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/CaixasDeItem/Item3"]
-position = Vector2(476, 181)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item4" type="Area2D" parent="BG/Personagem/CaixasDeItem"]
-position = Vector2(298, 179)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Personagem/CaixasDeItem/Item4"]
-offset_left = 303.0
-offset_top = -57.0
-offset_right = 424.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/CaixasDeItem/Item4"]
-position = Vector2(365, -1)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="ItensDefesas" type="Node2D" parent="BG/Personagem"]
-
-[node name="Item5" type="Area2D" parent="BG/Personagem/ItensDefesas"]
-position = Vector2(133, 440)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Personagem/ItensDefesas/Item5"]
-offset_left = -61.0
-offset_top = -57.0
-offset_right = 60.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/ItensDefesas/Item5"]
-position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item6" type="Area2D" parent="BG/Personagem/ItensDefesas"]
-position = Vector2(2, 261)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Personagem/ItensDefesas/Item6"]
-offset_left = 238.0
-offset_top = 122.0
-offset_right = 359.0
-offset_bottom = 236.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/ItensDefesas/Item6"]
-position = Vector2(298, 179)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item7" type="Area2D" parent="BG/Personagem/ItensDefesas"]
-position = Vector2(2, 261)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Personagem/ItensDefesas/Item7"]
-offset_left = 415.0
-offset_top = 124.0
-offset_right = 536.0
-offset_bottom = 238.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/ItensDefesas/Item7"]
-position = Vector2(476, 181)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item8" type="Area2D" parent="BG/Personagem/ItensDefesas"]
-position = Vector2(300, 440)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Personagem/ItensDefesas/Item8"]
-offset_left = 303.0
-offset_top = -57.0
-offset_right = 424.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Personagem/ItensDefesas/Item8"]
-position = Vector2(365, -1)
-shape = SubResource("RectangleShape2D_sr6eu")
+[node name="Level4" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
+position = Vector2(587, 367)
+scale = Vector2(2, 2)
+whatUpgrades = "Defense"
+valor = 5
+textura = ExtResource("8_l0soo")
 
 [node name="Warning2" type="Button" parent="BG/Personagem"]
 visible = false
@@ -747,7 +698,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Tem certeza que quer evoluir esta habilidade?"
 
 [node name="Defender Point" type="Node2D" parent="BG"]
-visible = false
+script = ExtResource("10_imkf7")
 
 [node name="STATUS" type="ColorRect" parent="BG/Defender Point"]
 offset_left = 802.0
@@ -767,199 +718,76 @@ text = "Status
 
 [node name="Movimento" type="ColorRect" parent="BG/Defender Point"]
 offset_left = 23.0
-offset_top = 80.0
+offset_top = 60.0
 offset_right = 788.0
-offset_bottom = 236.0
+offset_bottom = 318.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
 
-[node name="Movimento2" type="ColorRect" parent="BG/Defender Point"]
-offset_left = 23.0
-offset_top = 241.0
-offset_right = 788.0
-offset_bottom = 397.0
+[node name="Movimento" type="ColorRect" parent="BG/Defender Point/Movimento"]
+layout_mode = 0
+offset_top = 262.0
+offset_right = 765.0
+offset_bottom = 520.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
 
-[node name="Movimento3" type="ColorRect" parent="BG/Defender Point"]
-offset_left = 23.0
-offset_top = 402.0
-offset_right = 788.0
-offset_bottom = 558.0
-color = Color(0.592157, 0.592157, 0.592157, 1)
+[node name="MaxHP" type="Node2D" parent="BG/Defender Point"]
+position = Vector2(27, 8)
 
-[node name="CaixasDeItem" type="Node2D" parent="BG/Defender Point"]
-position = Vector2(-2, -28)
+[node name="Level1" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
+position = Vector2(64, 110)
+scale = Vector2(2, 2)
+whatUpgrades = "Attack"
+valor = 2
+textura = ExtResource("8_l0soo")
 
-[node name="Item1" type="Area2D" parent="BG/Defender Point/CaixasDeItem"]
-position = Vector2(131, 179)
+[node name="Level2" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
+position = Vector2(231, 110)
+scale = Vector2(2, 2)
+whatUpgrades = "Attack"
+valor = 2
+textura = ExtResource("8_l0soo")
 
-[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/CaixasDeItem/Item1"]
-offset_left = -61.0
-offset_top = -57.0
-offset_right = 60.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
+[node name="Level3" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
+position = Vector2(393, 110)
+scale = Vector2(2, 2)
+whatUpgrades = "Attack"
+textura = ExtResource("8_l0soo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/CaixasDeItem/Item1"]
-position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_sr6eu")
+[node name="Level4" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
+position = Vector2(553, 110)
+scale = Vector2(2, 2)
+whatUpgrades = "Attack"
+textura = ExtResource("8_l0soo")
 
-[node name="Item2" type="Area2D" parent="BG/Defender Point/CaixasDeItem"]
+[node name="Health Delay" type="Node2D" parent="BG/Defender Point"]
 
-[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/CaixasDeItem/Item2"]
-offset_left = 238.0
-offset_top = 122.0
-offset_right = 359.0
-offset_bottom = 236.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
+[node name="Level1" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
+position = Vector2(98, 367)
+scale = Vector2(2, 2)
+whatUpgrades = "Defense"
+valor = 2
+textura = ExtResource("8_l0soo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/CaixasDeItem/Item2"]
-position = Vector2(298, 179)
-shape = SubResource("RectangleShape2D_sr6eu")
+[node name="Level2" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
+position = Vector2(265, 367)
+scale = Vector2(2, 2)
+whatUpgrades = "Defense"
+valor = 2
+textura = ExtResource("8_l0soo")
 
-[node name="Item3" type="Area2D" parent="BG/Defender Point/CaixasDeItem"]
+[node name="Level3" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
+position = Vector2(427, 367)
+scale = Vector2(2, 2)
+whatUpgrades = "Defense"
+valor = 4
+textura = ExtResource("8_l0soo")
 
-[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/CaixasDeItem/Item3"]
-offset_left = 415.0
-offset_top = 124.0
-offset_right = 536.0
-offset_bottom = 238.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/CaixasDeItem/Item3"]
-position = Vector2(476, 181)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item4" type="Area2D" parent="BG/Defender Point/CaixasDeItem"]
-position = Vector2(298, 179)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/CaixasDeItem/Item4"]
-offset_left = 303.0
-offset_top = -57.0
-offset_right = 424.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/CaixasDeItem/Item4"]
-position = Vector2(365, -1)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="ItensDefesas" type="Node2D" parent="BG/Defender Point"]
-position = Vector2(-4, -124)
-
-[node name="Item5" type="Area2D" parent="BG/Defender Point/ItensDefesas"]
-position = Vector2(133, 440)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/ItensDefesas/Item5"]
-offset_left = -61.0
-offset_top = -57.0
-offset_right = 60.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/ItensDefesas/Item5"]
-position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item6" type="Area2D" parent="BG/Defender Point/ItensDefesas"]
-position = Vector2(2, 261)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/ItensDefesas/Item6"]
-offset_left = 238.0
-offset_top = 122.0
-offset_right = 359.0
-offset_bottom = 236.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/ItensDefesas/Item6"]
-position = Vector2(298, 179)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item7" type="Area2D" parent="BG/Defender Point/ItensDefesas"]
-position = Vector2(2, 261)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/ItensDefesas/Item7"]
-offset_left = 415.0
-offset_top = 124.0
-offset_right = 536.0
-offset_bottom = 238.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/ItensDefesas/Item7"]
-position = Vector2(476, 181)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item8" type="Area2D" parent="BG/Defender Point/ItensDefesas"]
-position = Vector2(300, 440)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/ItensDefesas/Item8"]
-offset_left = 303.0
-offset_top = -57.0
-offset_right = 424.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/ItensDefesas/Item8"]
-position = Vector2(365, -1)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Line3" type="Node2D" parent="BG/Defender Point"]
-position = Vector2(1, 40)
-
-[node name="Item5" type="Area2D" parent="BG/Defender Point/Line3"]
-position = Vector2(133, 440)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/Line3/Item5"]
-offset_left = -61.0
-offset_top = -57.0
-offset_right = 60.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/Line3/Item5"]
-position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item6" type="Area2D" parent="BG/Defender Point/Line3"]
-position = Vector2(2, 261)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/Line3/Item6"]
-offset_left = 238.0
-offset_top = 122.0
-offset_right = 359.0
-offset_bottom = 236.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/Line3/Item6"]
-position = Vector2(298, 179)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item7" type="Area2D" parent="BG/Defender Point/Line3"]
-position = Vector2(2, 261)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/Line3/Item7"]
-offset_left = 415.0
-offset_top = 124.0
-offset_right = 536.0
-offset_bottom = 238.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/Line3/Item7"]
-position = Vector2(476, 181)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item8" type="Area2D" parent="BG/Defender Point/Line3"]
-position = Vector2(300, 440)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Defender Point/Line3/Item8"]
-offset_left = 303.0
-offset_top = -57.0
-offset_right = 424.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Defender Point/Line3/Item8"]
-position = Vector2(365, -1)
-shape = SubResource("RectangleShape2D_sr6eu")
+[node name="Level4" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
+position = Vector2(587, 367)
+scale = Vector2(2, 2)
+whatUpgrades = "Defense"
+valor = 5
+textura = ExtResource("8_l0soo")
 
 [node name="Warning" type="Button" parent="."]
 visible = false
@@ -1002,16 +830,20 @@ offset_bottom = 154.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Tem certeza que quer comprar este item?"
 
-[connection signal="pressed" from="BG/MKenuMenu/Shop" to="." method="_on_shop_pressed"]
-[connection signal="pressed" from="BG/MKenuMenu/Mineração" to="." method="_on_mineração_pressed"]
-[connection signal="pressed" from="BG/MKenuMenu/Personagem" to="." method="_on_personagem_pressed"]
-[connection signal="pressed" from="BG/MKenuMenu/Defender Point" to="." method="_on_defender_point_pressed"]
-[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/MinhasCoisas" to="." method="_on_minhas_coisas_pressed"]
-[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/Troca" to="." method="_on_troca_pressed"]
-[connection signal="pressed" from="BG/SHOP/SCROLL1" to="." method="_on_scroll_1_pressed"]
-[connection signal="pressed" from="BG/SHOP/SCROLL2" to="." method="_on_scroll_2_pressed"]
-[connection signal="mouse_entered" from="BG/Personagem/CaixasDeItem/Item1" to="BG/Personagem" method="_on_item_1_mouse_entered"]
-[connection signal="mouse_exited" from="BG/Personagem/CaixasDeItem/Item1" to="BG/Personagem" method="_on_item_1_mouse_exited"]
+[connection signal="pressed" from="BG/MenuPrincipal/Abas/Shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="BG/MenuPrincipal/Abas/Mineração" to="." method="_on_mineração_pressed"]
+[connection signal="pressed" from="BG/MenuPrincipal/Abas/Personagem" to="." method="_on_personagem_pressed"]
+[connection signal="pressed" from="BG/MenuPrincipal/Abas/Defender Point" to="." method="_on_defender_point_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade/Trade20Stone" to="BG/SHOP" method="_on_trade_20_stone_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade/Trade100Wood" to="BG/SHOP" method="_on_trade_100_wood_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Stone Trade/Trade1Gold" to="BG/SHOP" method="_on_trade_1_gold_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Stone Trade/Trade50Wood" to="BG/SHOP" method="_on_trade_50_wood_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Wood Trade/TradeWood" to="BG/SHOP" method="_on_trade_wood_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Wood Trade/TradeWoodStone" to="BG/SHOP" method="_on_trade_wood_stone_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/MinhasCoisas" to="BG/SHOP" method="_on_minhas_coisas_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/Troca" to="BG/SHOP" method="_on_troca_pressed"]
+[connection signal="pressed" from="BG/SHOP/Botoes/SCROLL1" to="." method="_on_scroll_1_pressed"]
+[connection signal="pressed" from="BG/SHOP/Botoes/SCROLL2" to="." method="_on_scroll_2_pressed"]
 [connection signal="pressed" from="BG/Personagem/Warning2/Background/YES" to="BG/Personagem" method="_on_yes_pressed"]
 [connection signal="pressed" from="BG/Personagem/Warning2/Background/NOPE" to="BG/Personagem" method="_on_nope_pressed"]
 [connection signal="pressed" from="Warning/Background/YES" to="." method="_on_yes_pressed"]

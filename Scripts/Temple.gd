@@ -7,6 +7,7 @@ func _process(delta):
 		if Input.is_action_just_pressed("Select"):
 			get_tree().paused = true
 			Global.Temple.visible=true
+			Global.Temple.get_node("BG/SHOP").scrollsSelect()
 			
 			
 
@@ -24,10 +25,6 @@ func _on_area_2d_area_entered(area):
 				
 			player.call_deferred("remove_child",player.carryingItem)
 			player.carryingItem=null
-
-		
-
-
 
 func _on_area_2d_area_exited(area):
 	if (area.get_parent().name=="Player"):
