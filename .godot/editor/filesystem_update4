@@ -2,3 +2,4 @@ res://default_env.tres
 res://Scenes/Temple/TempleScreen.tscn
 res://Scenes/Temple/OpcaoUpgrade.tscn
 res://Scripts/Temple_Scripts/OpcaoUpgrade.gd
+res://Scripts/Temple_Scripts/Defender Point.gd

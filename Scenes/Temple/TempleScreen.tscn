@@ -83,7 +83,6 @@ offset_bottom = 38.0
 text = "Defender Point"
 
 [node name="SHOP" type="Node2D" parent="BG"]
-visible = false
 position = Vector2(1, 0)
 script = ExtResource("2_m5fe6")
 
@@ -698,6 +697,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Tem certeza que quer evoluir esta habilidade?"
 
 [node name="Defender Point" type="Node2D" parent="BG"]
+visible = false
 script = ExtResource("10_imkf7")
 
 [node name="STATUS" type="ColorRect" parent="BG/Defender Point"]
@@ -736,27 +736,31 @@ position = Vector2(27, 8)
 [node name="Level1" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
 position = Vector2(64, 110)
 scale = Vector2(2, 2)
-whatUpgrades = "Attack"
+areaUpgrades = 1
+whatUpgrades = "Heal Delay"
 valor = 2
 textura = ExtResource("8_l0soo")
 
 [node name="Level2" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
 position = Vector2(231, 110)
 scale = Vector2(2, 2)
-whatUpgrades = "Attack"
+areaUpgrades = 1
+whatUpgrades = "Heal Delay"
 valor = 2
 textura = ExtResource("8_l0soo")
 
 [node name="Level3" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
 position = Vector2(393, 110)
 scale = Vector2(2, 2)
-whatUpgrades = "Attack"
+areaUpgrades = 1
+whatUpgrades = "Heal Delay"
 textura = ExtResource("8_l0soo")
 
 [node name="Level4" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
 position = Vector2(553, 110)
 scale = Vector2(2, 2)
-whatUpgrades = "Attack"
+areaUpgrades = 1
+whatUpgrades = "Heal Delay"
 textura = ExtResource("8_l0soo")
 
 [node name="Health Delay" type="Node2D" parent="BG/Defender Point"]
@@ -764,28 +768,32 @@ textura = ExtResource("8_l0soo")
 [node name="Level1" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
 position = Vector2(98, 367)
 scale = Vector2(2, 2)
-whatUpgrades = "Defense"
+areaUpgrades = 1
+whatUpgrades = "Max HP"
 valor = 2
 textura = ExtResource("8_l0soo")
 
 [node name="Level2" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
 position = Vector2(265, 367)
 scale = Vector2(2, 2)
-whatUpgrades = "Defense"
+areaUpgrades = 1
+whatUpgrades = "Max HP"
 valor = 2
 textura = ExtResource("8_l0soo")
 
 [node name="Level3" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
 position = Vector2(427, 367)
 scale = Vector2(2, 2)
-whatUpgrades = "Defense"
+areaUpgrades = 1
+whatUpgrades = "Max HP"
 valor = 4
 textura = ExtResource("8_l0soo")
 
 [node name="Level4" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
 position = Vector2(587, 367)
 scale = Vector2(2, 2)
-whatUpgrades = "Defense"
+areaUpgrades = 1
+whatUpgrades = "Max HP"
 valor = 5
 textura = ExtResource("8_l0soo")
 

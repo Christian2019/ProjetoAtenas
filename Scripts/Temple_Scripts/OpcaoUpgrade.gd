@@ -24,9 +24,11 @@ func _on_texture_button_pressed():
 	if(areaUpgrades==1):
 		if(whatUpgrades=="Heal Delay"):
 			#AUMENTAR NIVEL DO CENTRO
+			get_parent().get_parent().current_level_MaxHP+=1 
 			pass
 		elif(whatUpgrades=="Max HP"):
 			#DAR MAIS VIDA AO CENTRO
+			get_parent().get_parent().current_level_HealthDelay+=1 
 			pass
 #UPGRADE MINERACAO
 	if(areaUpgrades==2):
