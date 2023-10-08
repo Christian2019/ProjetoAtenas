@@ -1,5 +1,7 @@
 res://default_env.tres
 res://Scenes/Temple/TempleScreen.tscn
+res://Scripts/Temple_Scripts/Mineração.gd
 res://Scenes/Temple/OpcaoUpgrade.tscn
-res://Scripts/Temple_Scripts/OpcaoUpgrade.gd
 res://Scripts/Temple_Scripts/Defender Point.gd
+res://Scripts/Temple_Scripts/PersonagemLoja.gd
+res://Scripts/Temple_Scripts/OpcaoUpgrade.gd

@@ -9,10 +9,8 @@
 [ext_resource type="Script" path="res://Scripts/Temple_Scripts/Mineração.gd" id="6_b0i47"]
 [ext_resource type="PackedScene" uid="uid://12buwcnhifsh" path="res://Scenes/Temple/OpcaoUpgrade.tscn" id="7_ydes4"]
 [ext_resource type="Texture2D" uid="uid://d0xhqa10j30ok" path="res://icon.png" id="8_l0soo"]
+[ext_resource type="Texture2D" uid="uid://cg4c8qydgkpag" path="res://Assets/Images/HUD/hearth2.png" id="10_g6gdm"]
 [ext_resource type="Script" path="res://Scripts/Temple_Scripts/Defender Point.gd" id="10_imkf7"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sr6eu"]
-size = Vector2(121, 115)
 
 [node name="Temple" type="Node2D"]
 script = ExtResource("1_n2wv5")
@@ -389,180 +387,104 @@ offset_bottom = 25.0
 text = "Status
 "
 
-[node name="CaixasDeItem" type="Node2D" parent="BG/Mineração"]
-position = Vector2(0, -28)
+[node name="POWER" type="Node2D" parent="BG/Mineração"]
+position = Vector2(33, -30)
 
-[node name="Item1" type="Area2D" parent="BG/Mineração/CaixasDeItem"]
-position = Vector2(131, 179)
+[node name="Level1" parent="BG/Mineração/POWER" instance=ExtResource("7_ydes4")]
+position = Vector2(52, 131)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Power"
+valor = 2
+textura = ExtResource("8_l0soo")
 
-[node name="ColorRect" type="ColorRect" parent="BG/Mineração/CaixasDeItem/Item1"]
-offset_left = -61.0
-offset_top = -57.0
-offset_right = 60.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
+[node name="Level2" parent="BG/Mineração/POWER" instance=ExtResource("7_ydes4")]
+position = Vector2(219, 131)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Power"
+valor = 2
+textura = ExtResource("8_l0soo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/CaixasDeItem/Item1"]
-position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_sr6eu")
+[node name="Level3" parent="BG/Mineração/POWER" instance=ExtResource("7_ydes4")]
+position = Vector2(381, 131)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Power"
+textura = ExtResource("8_l0soo")
 
-[node name="Item2" type="Area2D" parent="BG/Mineração/CaixasDeItem"]
+[node name="Level4" parent="BG/Mineração/POWER" instance=ExtResource("7_ydes4")]
+position = Vector2(541, 131)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Power"
+textura = ExtResource("8_l0soo")
 
-[node name="ColorRect" type="ColorRect" parent="BG/Mineração/CaixasDeItem/Item2"]
-offset_left = 238.0
-offset_top = 122.0
-offset_right = 359.0
-offset_bottom = 236.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/CaixasDeItem/Item2"]
-position = Vector2(298, 179)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item3" type="Area2D" parent="BG/Mineração/CaixasDeItem"]
-
-[node name="ColorRect" type="ColorRect" parent="BG/Mineração/CaixasDeItem/Item3"]
-offset_left = 415.0
-offset_top = 124.0
-offset_right = 536.0
-offset_bottom = 238.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/CaixasDeItem/Item3"]
-position = Vector2(476, 181)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item4" type="Area2D" parent="BG/Mineração/CaixasDeItem"]
-position = Vector2(298, 179)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Mineração/CaixasDeItem/Item4"]
-offset_left = 303.0
-offset_top = -57.0
-offset_right = 424.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/CaixasDeItem/Item4"]
-position = Vector2(365, -1)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="ItensDefesas" type="Node2D" parent="BG/Mineração"]
+[node name="LUCK" type="Node2D" parent="BG/Mineração"]
 position = Vector2(-2, -124)
 
-[node name="Item5" type="Area2D" parent="BG/Mineração/ItensDefesas"]
-position = Vector2(133, 440)
+[node name="Level1" parent="BG/Mineração/LUCK" instance=ExtResource("7_ydes4")]
+position = Vector2(81, 383)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Luck"
+valor = 2
+textura = ExtResource("8_l0soo")
 
-[node name="ColorRect" type="ColorRect" parent="BG/Mineração/ItensDefesas/Item5"]
-offset_left = -61.0
-offset_top = -57.0
-offset_right = 60.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
+[node name="Level2" parent="BG/Mineração/LUCK" instance=ExtResource("7_ydes4")]
+position = Vector2(248, 383)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Luck"
+valor = 2
+textura = ExtResource("8_l0soo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/ItensDefesas/Item5"]
-position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_sr6eu")
+[node name="Level3" parent="BG/Mineração/LUCK" instance=ExtResource("7_ydes4")]
+position = Vector2(410, 383)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Luck"
+textura = ExtResource("8_l0soo")
 
-[node name="Item6" type="Area2D" parent="BG/Mineração/ItensDefesas"]
-position = Vector2(2, 261)
+[node name="Level4" parent="BG/Mineração/LUCK" instance=ExtResource("7_ydes4")]
+position = Vector2(570, 383)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Luck"
+textura = ExtResource("8_l0soo")
 
-[node name="ColorRect" type="ColorRect" parent="BG/Mineração/ItensDefesas/Item6"]
-offset_left = 238.0
-offset_top = 122.0
-offset_right = 359.0
-offset_bottom = 236.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/ItensDefesas/Item6"]
-position = Vector2(298, 179)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item7" type="Area2D" parent="BG/Mineração/ItensDefesas"]
-position = Vector2(2, 261)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Mineração/ItensDefesas/Item7"]
-offset_left = 415.0
-offset_top = 124.0
-offset_right = 536.0
-offset_bottom = 238.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/ItensDefesas/Item7"]
-position = Vector2(476, 181)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item8" type="Area2D" parent="BG/Mineração/ItensDefesas"]
-position = Vector2(300, 440)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Mineração/ItensDefesas/Item8"]
-offset_left = 303.0
-offset_top = -57.0
-offset_right = 424.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/ItensDefesas/Item8"]
-position = Vector2(365, -1)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Line3" type="Node2D" parent="BG/Mineração"]
+[node name="IDK" type="Node2D" parent="BG/Mineração"]
 position = Vector2(3, 40)
 
-[node name="Item5" type="Area2D" parent="BG/Mineração/Line3"]
-position = Vector2(133, 440)
+[node name="Level1" parent="BG/Mineração/IDK" instance=ExtResource("7_ydes4")]
+position = Vector2(81, 383)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "IDK"
+valor = 2
+textura = ExtResource("8_l0soo")
 
-[node name="ColorRect" type="ColorRect" parent="BG/Mineração/Line3/Item5"]
-offset_left = -61.0
-offset_top = -57.0
-offset_right = 60.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
+[node name="Level2" parent="BG/Mineração/IDK" instance=ExtResource("7_ydes4")]
+position = Vector2(248, 383)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "IDK"
+valor = 2
+textura = ExtResource("8_l0soo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/Line3/Item5"]
-position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_sr6eu")
+[node name="Level3" parent="BG/Mineração/IDK" instance=ExtResource("7_ydes4")]
+position = Vector2(410, 383)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "IDK"
+textura = ExtResource("8_l0soo")
 
-[node name="Item6" type="Area2D" parent="BG/Mineração/Line3"]
-position = Vector2(2, 261)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Mineração/Line3/Item6"]
-offset_left = 238.0
-offset_top = 122.0
-offset_right = 359.0
-offset_bottom = 236.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/Line3/Item6"]
-position = Vector2(298, 179)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item7" type="Area2D" parent="BG/Mineração/Line3"]
-position = Vector2(2, 261)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Mineração/Line3/Item7"]
-offset_left = 415.0
-offset_top = 124.0
-offset_right = 536.0
-offset_bottom = 238.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/Line3/Item7"]
-position = Vector2(476, 181)
-shape = SubResource("RectangleShape2D_sr6eu")
-
-[node name="Item8" type="Area2D" parent="BG/Mineração/Line3"]
-position = Vector2(300, 440)
-
-[node name="ColorRect" type="ColorRect" parent="BG/Mineração/Line3/Item8"]
-offset_left = 303.0
-offset_top = -57.0
-offset_right = 424.0
-offset_bottom = 57.0
-color = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Mineração/Line3/Item8"]
-position = Vector2(365, -1)
-shape = SubResource("RectangleShape2D_sr6eu")
+[node name="Level4" parent="BG/Mineração/IDK" instance=ExtResource("7_ydes4")]
+position = Vector2(570, 383)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "IDK"
+textura = ExtResource("8_l0soo")
 
 [node name="Personagem" type="Node2D" parent="BG"]
 visible = false
@@ -603,27 +525,33 @@ position = Vector2(27, 8)
 position = Vector2(64, 110)
 scale = Vector2(2, 2)
 whatUpgrades = "Attack"
-valor = 2
+valor = 5
 textura = ExtResource("8_l0soo")
+textura_disable = ExtResource("10_g6gdm")
 
 [node name="Level2" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
 position = Vector2(231, 110)
 scale = Vector2(2, 2)
 whatUpgrades = "Attack"
-valor = 2
+valor = 10
 textura = ExtResource("8_l0soo")
+textura_disable = ExtResource("10_g6gdm")
 
 [node name="Level3" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
 position = Vector2(393, 110)
 scale = Vector2(2, 2)
 whatUpgrades = "Attack"
+valor = 15
 textura = ExtResource("8_l0soo")
+textura_disable = ExtResource("10_g6gdm")
 
 [node name="Level4" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
 position = Vector2(553, 110)
 scale = Vector2(2, 2)
 whatUpgrades = "Attack"
+valor = 20
 textura = ExtResource("8_l0soo")
+textura_disable = ExtResource("10_g6gdm")
 
 [node name="Level Defesa" type="Node2D" parent="BG/Personagem"]
 
@@ -631,29 +559,33 @@ textura = ExtResource("8_l0soo")
 position = Vector2(98, 367)
 scale = Vector2(2, 2)
 whatUpgrades = "Defense"
-valor = 2
+valor = 5
 textura = ExtResource("8_l0soo")
+textura_disable = ExtResource("10_g6gdm")
 
 [node name="Level2" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
 position = Vector2(265, 367)
 scale = Vector2(2, 2)
 whatUpgrades = "Defense"
-valor = 2
+valor = 10
 textura = ExtResource("8_l0soo")
+textura_disable = ExtResource("10_g6gdm")
 
 [node name="Level3" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
 position = Vector2(427, 367)
 scale = Vector2(2, 2)
 whatUpgrades = "Defense"
-valor = 4
+valor = 15
 textura = ExtResource("8_l0soo")
+textura_disable = ExtResource("10_g6gdm")
 
 [node name="Level4" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
 position = Vector2(587, 367)
 scale = Vector2(2, 2)
 whatUpgrades = "Defense"
-valor = 5
+valor = 20
 textura = ExtResource("8_l0soo")
+textura_disable = ExtResource("10_g6gdm")
 
 [node name="Warning2" type="Button" parent="BG/Personagem"]
 visible = false
