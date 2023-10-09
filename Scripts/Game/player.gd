@@ -156,7 +156,7 @@ func attack1Controller():
 	var classChild=0	
 	if (Input.is_action_pressed("Attack1") and permissions[classChild]):
 		var attackInstance = creatAttackInstance(classChild)
-		get_parent().get_node("Projectiles").add_child(attackInstance)
+		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position
 		attackInstance.direction=lastMovement
 
@@ -164,7 +164,7 @@ func attack2Controller():
 	var classChild=1	
 	if (Input.is_action_pressed("Attack2") and permissions[classChild]):
 		var attackInstance = creatAttackInstance(classChild)
-		get_parent().get_node("Projectiles").add_child(attackInstance)
+		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position
 		attackInstance.direction=lastMovement
 		
@@ -173,7 +173,7 @@ func turretController():
 	if (Input.is_action_just_pressed("Turret")):
 		print("Turret")
 		var attackInstance = creatAttackInstance(classChild)
-		Global.Game.get_node("Turrets").add_child(attackInstance)
+		Global.Game.get_node("Instances/Turrets").add_child(attackInstance)
 		attackInstance.global_position=global_position
 		
 		
@@ -298,7 +298,7 @@ func tryToMove(speedX,speedY):
 		speedY=speedY*topSpeed/abs(speedY)
 		
 	var nextTryPosition = Vector2(position.x+speedX,position.y+speedY)
-	if (!Global.areaBoxCollision(self,nextTryPosition,$Body,Global.Game.get_node("BockedAreas").get_children())):
+	if (!Global.areaBoxCollision(self,nextTryPosition,$Body,Global.Game.get_node("Zones/BockedAreas").get_children())):
 		position.y+=speedY
 		position.x+=speedX
 		return true
@@ -309,7 +309,7 @@ func tryToMove(speedX,speedY):
 		var testSpeedValue=testSpeedStep
 		nextTryPosition = Vector2(position.x+speedX*testSpeedValue,position.y+speedY*testSpeedValue)
 		
-		while (!Global.areaBoxCollision(self,nextTryPosition,$Body,Global.Game.get_node("BockedAreas").get_children())):
+		while (!Global.areaBoxCollision(self,nextTryPosition,$Body,Global.Game.get_node("Zones/BockedAreas").get_children())):
 			testSpeedValue+=testSpeedStep
 			nextTryPosition = Vector2(position.x+speedX*testSpeedValue,position.y+speedY*testSpeedValue)
 		

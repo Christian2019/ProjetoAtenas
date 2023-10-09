@@ -18,7 +18,7 @@ var item = preload("res://Assets/Images/Store/RockItem.png")
 var item_hover = preload("res://Assets/Images/Store/RockItemHover.png")
 
 #Player
-var player = preload("res://Scripts/player.gd")
+var player = Global.player
 
 #LastItemClicked
 var lastItemClicked = 0

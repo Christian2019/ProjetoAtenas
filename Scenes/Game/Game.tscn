@@ -1,18 +1,18 @@
 [gd_scene load_steps=19 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="1_28pgp"]
-[ext_resource type="Script" path="res://Scripts/Game.gd" id="1_ff1wb"]
-[ext_resource type="Script" path="res://Scripts/BackgroundMusic.gd" id="2_1c6e5"]
-[ext_resource type="Script" path="res://Scripts/WaveController.gd" id="2_fwy3j"]
-[ext_resource type="Script" path="res://Scripts/SoundController.gd" id="3_fm8f8"]
+[ext_resource type="Script" path="res://Scripts/Game/Game.gd" id="1_mli3i"]
+[ext_resource type="Script" path="res://Scripts/Game/WaveController.gd" id="2_4sqky"]
+[ext_resource type="Script" path="res://Scripts/Game/SoundController.gd" id="3_g1b5a"]
 [ext_resource type="PackedScene" uid="uid://ba8lsakijrbpv" path="res://Scenes/Game/tiles.tscn" id="3_lg0li"]
 [ext_resource type="PackedScene" uid="uid://bqji3jr451ges" path="res://Scenes/Game/matriz.tscn" id="4_di3q4"]
 [ext_resource type="AudioStream" uid="uid://cg4ug0aknwkdt" path="res://Assets/Sounds/Wave.mp3" id="4_uxdaf"]
+[ext_resource type="Script" path="res://Scripts/Game/BackgroundMusic.gd" id="5_cydk0"]
 [ext_resource type="PackedScene" uid="uid://cq8fbkkwauxoo" path="res://Scenes/Game/player.tscn" id="5_x6q60"]
 [ext_resource type="AudioStream" uid="uid://b44vxel7hbyp4" path="res://Assets/Sounds/Player/Dash.mp3" id="7_wo1sy"]
 [ext_resource type="PackedScene" uid="uid://cx37jdnas0rb1" path="res://Scenes/Game/Constructions/center.tscn" id="9_06qfi"]
 [ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple.tscn" id="10_v6y37"]
-[ext_resource type="Script" path="res://Scripts/Turrets.gd" id="10_xlj11"]
+[ext_resource type="Script" path="res://Scripts/Instances/Turrets.gd" id="13_2l3jl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcbql"]
 size = Vector2(2565, 196)
@@ -30,19 +30,19 @@ size = Vector2(8122, 1516.25)
 size = Vector2(5764.5, 1939.25)
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_ff1wb")
+script = ExtResource("1_mli3i")
 metadata/_edit_horizontal_guides_ = [2752.0]
 metadata/_edit_vertical_guides_ = [2560.0]
 
 [node name="WaveController" type="Node2D" parent="."]
-script = ExtResource("2_fwy3j")
+script = ExtResource("2_4sqky")
 
 [node name="SoundController" type="Node2D" parent="."]
-script = ExtResource("3_fm8f8")
+script = ExtResource("3_g1b5a")
 
 [node name="AOEMusic" type="AudioStreamPlayer" parent="SoundController"]
 stream = ExtResource("1_28pgp")
-script = ExtResource("2_1c6e5")
+script = ExtResource("5_cydk0")
 
 [node name="WaveMusic" type="AudioStreamPlayer" parent="SoundController"]
 stream = ExtResource("4_uxdaf")
@@ -50,53 +50,55 @@ stream = ExtResource("4_uxdaf")
 [node name="Dash" type="AudioStreamPlayer" parent="SoundController"]
 stream = ExtResource("7_wo1sy")
 
-[node name="Tiles" parent="." instance=ExtResource("3_lg0li")]
+[node name="Zones" type="Node2D" parent="."]
+
+[node name="Mining Zones" parent="Zones" instance=ExtResource("3_lg0li")]
 position = Vector2(4, 192)
 scale = Vector2(4, 4)
 
-[node name="matriz" parent="." instance=ExtResource("4_di3q4")]
+[node name="BockedAreas" type="Area2D" parent="Zones"]
 
-[node name="Collectable_instances" type="Node2D" parent="."]
+[node name="CenterOfTheMap" type="CollisionShape2D" parent="Zones/BockedAreas"]
+position = Vector2(1277.5, 1377)
+shape = SubResource("RectangleShape2D_mcbql")
+
+[node name="LeftEdge" type="CollisionShape2D" parent="Zones/BockedAreas"]
+position = Vector2(-1222.5, 2361)
+shape = SubResource("RectangleShape2D_0ndam")
+
+[node name="RightEdge" type="CollisionShape2D" parent="Zones/BockedAreas"]
+position = Vector2(4137, 1371)
+shape = SubResource("RectangleShape2D_ac2oe")
+
+[node name="UpEdge" type="CollisionShape2D" parent="Zones/BockedAreas"]
+position = Vector2(1644, -757.875)
+shape = SubResource("RectangleShape2D_1cg8r")
+
+[node name="DownEdge" type="CollisionShape2D" parent="Zones/BockedAreas"]
+position = Vector2(2827.75, 3726.38)
+shape = SubResource("RectangleShape2D_7pbkn")
+
+[node name="Center" parent="Zones" instance=ExtResource("9_06qfi")]
+
+[node name="Temple" parent="Zones" instance=ExtResource("10_v6y37")]
+position = Vector2(1317, 1637)
+
+[node name="Matriz" parent="." instance=ExtResource("4_di3q4")]
 
 [node name="Enemies" type="Node2D" parent="."]
-
-[node name="Center" parent="." instance=ExtResource("9_06qfi")]
-
-[node name="ConstructionArea" type="Area2D" parent="."]
-
-[node name="Projectiles" type="Node2D" parent="."]
-
-[node name="Turrets" type="Node2D" parent="."]
-script = ExtResource("10_xlj11")
-
-[node name="Temple" parent="." instance=ExtResource("10_v6y37")]
-position = Vector2(1317, 1637)
 
 [node name="Player" parent="." instance=ExtResource("5_x6q60")]
 position = Vector2(1139, 997)
 scale = Vector2(1.289, 1.289)
 
-[node name="BockedAreas" type="Area2D" parent="."]
+[node name="Instances" type="Node2D" parent="."]
 
-[node name="CenterOfTheMap" type="CollisionShape2D" parent="BockedAreas"]
-position = Vector2(1277.5, 1377)
-shape = SubResource("RectangleShape2D_mcbql")
+[node name="Turrets" type="Node2D" parent="Instances"]
+script = ExtResource("13_2l3jl")
 
-[node name="LeftEdge" type="CollisionShape2D" parent="BockedAreas"]
-position = Vector2(-1222.5, 2361)
-shape = SubResource("RectangleShape2D_0ndam")
+[node name="Projectiles" type="Node2D" parent="Instances"]
 
-[node name="RightEdge" type="CollisionShape2D" parent="BockedAreas"]
-position = Vector2(4137, 1371)
-shape = SubResource("RectangleShape2D_ac2oe")
-
-[node name="UpEdge" type="CollisionShape2D" parent="BockedAreas"]
-position = Vector2(1644, -757.875)
-shape = SubResource("RectangleShape2D_1cg8r")
-
-[node name="DownEdge" type="CollisionShape2D" parent="BockedAreas"]
-position = Vector2(2827.75, 3726.38)
-shape = SubResource("RectangleShape2D_7pbkn")
+[node name="Collectable_instances" type="Node2D" parent="Instances"]
 
 [node name="Night" type="ColorRect" parent="."]
 visible = false

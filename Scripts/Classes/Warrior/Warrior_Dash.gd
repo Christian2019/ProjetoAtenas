@@ -5,7 +5,7 @@ var attacktype=0
 var quantityOfShadows=5
 
 var duration = 0.3
-var cd = 1
+var cd = 0.4
 
 var speed = 10
 
@@ -59,7 +59,7 @@ func move():
 func createShadow():
 	var dashShadow = PreLoads.dashShadow.instantiate()
 	dashShadow.add_child(Global.player.get_node("Animation").duplicate())
-	Global.Game.get_node("Projectiles").add_child(dashShadow)
+	Global.Game.get_node("Instances/Projectiles").add_child(dashShadow)
 	dashShadow.global_position=global_position
 	dashShadow.scale= Global.player.scale
 	dashShadow.duration = int(duration*60)

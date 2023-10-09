@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://tifvlyj5mymv"]
 
-[ext_resource type="Script" path="res://Scripts/Loading.gd" id="1_7bt5c"]
+[ext_resource type="Script" path="res://Scripts/MainScenes/Loading.gd" id="1_7bt5c"]
 [ext_resource type="FontFile" uid="uid://duy38o6o71nij" path="res://Assets/Fonts/Kurland.otf" id="2_lrpxh"]
 
 [node name="Loading" type="Node2D"]

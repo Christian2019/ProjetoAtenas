@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://t3dku3vo8c2s"]
 
-[ext_resource type="Script" path="res://Scripts/quadrant.gd" id="1_dennn"]
+[ext_resource type="Script" path="res://Scripts/Game/quadrant.gd" id="1_dennn"]
 [ext_resource type="Texture2D" uid="uid://dlwvyo6ejssc" path="res://Assets/Images/Resources/gold.png" id="2_1ye0y"]
 [ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="3_rlrk7"]
 [ext_resource type="Texture2D" uid="uid://ywre30ix5f7t" path="res://Assets/Images/Resources/wood.png" id="4_f0mny"]

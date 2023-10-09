@@ -94,9 +94,9 @@ func hpBarController():
 
 	
 func centerPointhpBarController():
-	$Frontground/CenterPointHp/Label.text = str("CHP ",Global.Game.get_node("Center").hp,"/",Global.Game.get_node("Center").maxHp )
-	var centerPointhpHearthPostionY = centerPointhpHearthYStartPosition+centerPointmaxHpHearthStartSizeY-(centerPointmaxHpHearthStartSizeY*Global.Game.get_node("Center").hp/Global.Game.get_node("Center").maxHp)
-	var centerPointhpHearthSizeY = centerPointmaxHpHearthStartSizeY*Global.Game.get_node("Center").hp/Global.Game.get_node("Center").maxHp
+	$Frontground/CenterPointHp/Label.text = str("CHP ",Global.Game.get_node("Zones/Center").hp,"/",Global.Game.get_node("Zones/Center").maxHp )
+	var centerPointhpHearthPostionY = centerPointhpHearthYStartPosition+centerPointmaxHpHearthStartSizeY-(centerPointmaxHpHearthStartSizeY*Global.Game.get_node("Zones/Center").hp/Global.Game.get_node("Zones/Center").maxHp)
+	var centerPointhpHearthSizeY = centerPointmaxHpHearthStartSizeY*Global.Game.get_node("Zones/Center").hp/Global.Game.get_node("Zones/Center").maxHp
 	$Frontground/CenterPointHp/ColorRect.size.y=int(centerPointhpHearthSizeY)
 	$Frontground/CenterPointHp/ColorRect.position.y= int(centerPointhpHearthPostionY)
 

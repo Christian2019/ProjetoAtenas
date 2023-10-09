@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cawqbopdr275u"]
 
 [ext_resource type="Texture2D" uid="uid://ds3xll5d3cnrc" path="res://Assets/Images/Constructions/Temple.png" id="1_8v1rt"]
-[ext_resource type="Script" path="res://Scripts/Temple.gd" id="1_48bon"]
+[ext_resource type="Script" path="res://Scripts/Zones/Temple.gd" id="1_48bon"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umayb"]
 size = Vector2(120, 189)

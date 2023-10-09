@@ -1,17 +1,17 @@
 [gd_scene load_steps=8 format=3 uid="uid://cx37jdnas0rb1"]
 
+[ext_resource type="Script" path="res://Scripts/Zones/Center/center.gd" id="1_fab01"]
 [ext_resource type="Texture2D" uid="uid://b4tu2enafngd1" path="res://Assets/Images/Constructions/DefenderPointImage.png" id="1_mxnoc"]
-[ext_resource type="Script" path="res://Scripts/center.gd" id="1_skr6i"]
 [ext_resource type="PackedScene" uid="uid://dumjr4t8822i1" path="res://Scenes/Game/Constructions/Portal.tscn" id="2_dx06x"]
 [ext_resource type="PackedScene" uid="uid://c0rurmnfon8nm" path="res://Scenes/Game/Constructions/Pool.tscn" id="3_ul00y"]
-[ext_resource type="Script" path="res://Scripts/Towers.gd" id="5_82io3"]
+[ext_resource type="Script" path="res://Scripts/Zones/Center/Towers.gd" id="5_r7e7g"]
 [ext_resource type="PackedScene" uid="uid://dtu5sjvquowls" path="res://Scenes/Game/Constructions/Defenses/Tower.tscn" id="6_idgco"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4cda"]
 size = Vector2(253, 261)
 
 [node name="Center" type="Node2D"]
-script = ExtResource("1_skr6i")
+script = ExtResource("1_fab01")
 
 [node name="DefenderPoint" type="Sprite2D" parent="."]
 position = Vector2(1298, 607)
@@ -37,7 +37,7 @@ position = Vector2(1298.5, 610.5)
 shape = SubResource("RectangleShape2D_t4cda")
 
 [node name="Towers" type="Node2D" parent="."]
-script = ExtResource("5_82io3")
+script = ExtResource("5_r7e7g")
 
 [node name="Tower" parent="Towers" instance=ExtResource("6_idgco")]
 position = Vector2(1214, 515)

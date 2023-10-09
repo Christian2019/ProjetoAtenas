@@ -1,63 +1,63 @@
 [gd_scene load_steps=21 format=3 uid="uid://dnymo0eupd5qs"]
 
-[ext_resource type="Texture2D" uid="uid://bm5foycjs0yjv" path="res://Assets/Images/Enemies/minotaur_walking.png" id="1_86d6s"]
-[ext_resource type="Script" path="res://Scripts/Minotaur.gd" id="1_ldkc1"]
-[ext_resource type="Texture2D" uid="uid://cjgxl1cwgtejq" path="res://Assets/Images/Enemies/minotaur_attacking.png" id="2_giedk"]
+[ext_resource type="Script" path="res://Scripts/Enemies/Id001.gd" id="1_42fch"]
+[ext_resource type="Texture2D" uid="uid://cjgxl1cwgtejq" path="res://Assets/Images/Enemies/minotaur_attacking.png" id="2_sidps"]
+[ext_resource type="Texture2D" uid="uid://bm5foycjs0yjv" path="res://Assets/Images/Enemies/minotaur_walking.png" id="3_bvqdo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nxo3h"]
-atlas = ExtResource("2_giedk")
+atlas = ExtResource("2_sidps")
 region = Rect2(0, 0, 77, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7a3qw"]
-atlas = ExtResource("2_giedk")
+atlas = ExtResource("2_sidps")
 region = Rect2(77, 0, 77, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iaihn"]
-atlas = ExtResource("2_giedk")
+atlas = ExtResource("2_sidps")
 region = Rect2(154, 0, 77, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ywws6"]
-atlas = ExtResource("2_giedk")
+atlas = ExtResource("2_sidps")
 region = Rect2(231, 0, 77, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_indhd"]
-atlas = ExtResource("2_giedk")
+atlas = ExtResource("2_sidps")
 region = Rect2(308, 0, 77, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qrjmk"]
-atlas = ExtResource("2_giedk")
+atlas = ExtResource("2_sidps")
 region = Rect2(385, 0, 77, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bb7bg"]
-atlas = ExtResource("2_giedk")
+atlas = ExtResource("2_sidps")
 region = Rect2(462, 0, 77, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m1sbk"]
-atlas = ExtResource("1_86d6s")
+atlas = ExtResource("3_bvqdo")
 region = Rect2(0, 0, 70, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_taqfi"]
-atlas = ExtResource("1_86d6s")
+atlas = ExtResource("3_bvqdo")
 region = Rect2(70, 0, 70, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xkaq1"]
-atlas = ExtResource("1_86d6s")
+atlas = ExtResource("3_bvqdo")
 region = Rect2(140, 0, 70, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vlm1j"]
-atlas = ExtResource("1_86d6s")
+atlas = ExtResource("3_bvqdo")
 region = Rect2(210, 0, 70, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qh3yb"]
-atlas = ExtResource("1_86d6s")
+atlas = ExtResource("3_bvqdo")
 region = Rect2(280, 0, 70, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8lrge"]
-atlas = ExtResource("1_86d6s")
+atlas = ExtResource("3_bvqdo")
 region = Rect2(350, 0, 70, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3alsp"]
-atlas = ExtResource("1_86d6s")
+atlas = ExtResource("3_bvqdo")
 region = Rect2(420, 0, 70, 70)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
@@ -120,8 +120,8 @@ size = Vector2(76, 70)
 
 [sub_resource type="Theme" id="Theme_teygp"]
 
-[node name="Minotaur" type="Node2D"]
-script = ExtResource("1_ldkc1")
+[node name="Id001" type="Node2D"]
+script = ExtResource("1_42fch")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_grjig")

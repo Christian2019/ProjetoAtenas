@@ -1,3 +1,10 @@
+res://Scripts/MainScenes/Game_ViewPort
+res://Scripts/MainScenes
+res://Scripts/Instances
+res://Scripts/Zones
+res://Scripts/Zones/Center
+res://Scripts/Enemies
+res://Scenes/Game/Enemies
 res://Scripts/Classes/Warrior
 res://Assets/Images/Player
 res://Scripts
@@ -13,4 +20,3 @@ res://Assets/Images/Resources/collectable
 res://Assets/Images/Resources
 res://Assets/Images/Tiles
 res://Scenes
-res://Assets/Images

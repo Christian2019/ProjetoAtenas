@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dumjr4t8822i1"]
 
 [ext_resource type="Texture2D" uid="uid://ccvsq38n6ndp" path="res://Assets/Images/Constructions/portal.png" id="1_e44e2"]
-[ext_resource type="Script" path="res://Scripts/Portal.gd" id="1_rujxd"]
+[ext_resource type="Script" path="res://Scripts/Zones/Center/Portal.gd" id="1_rujxd"]
 [ext_resource type="AudioStream" uid="uid://dpgg7xpjip22f" path="res://Assets/Sounds/teleport.mp3" id="3_epklh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vg67t"]

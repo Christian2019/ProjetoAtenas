@@ -1,5 +1,6 @@
-extends "res://Scripts/Enemy.gd"
+extends Node2D
 
+var id=1
 var maxHp=30
 var hp = maxHp
 var damage = 1
@@ -17,10 +18,11 @@ var isMoving=true
 var playerInside=false
 var centerPointInside=false
 
+var target
+
 
 
 func _ready():
-	super._ready()
 	$AnimatedSprite2D.play("Walking")
 	maxHpBarWidth=$HPBar/Red.size.x
 
@@ -31,11 +33,12 @@ func enableHit(nextHitDelayTarget):
 		nextHitDelayCenterPoint=false
 
 func _process(_delta):
-	super._process(_delta)
 	if (hp<=0):
 		hp=0
 		die()
 		return
+		
+	getCloserTarget()
 	
 	if (isMoving):
 		move()
@@ -46,6 +49,16 @@ func _process(_delta):
 		isMoving=true
 		
 	hpBarController()
+	
+func getCloserTarget():
+	
+	var center = Global.Game.get_node("Zones/Center/CenterArea/CollisionShape2D")
+	var player = Global.player
+	
+	if (global_position.distance_to(player.global_position)<global_position.distance_to(center.global_position)):
+		target=player
+	else:
+		target=center
 
 func attack():
 	if ($AnimatedSprite2D.animation!= "Attacking"):
@@ -63,10 +76,10 @@ func attack():
 		nextHitDelayCenterPoint=true
 		Global.timerCreator("enableHit",nextHitDelay,[1],self)
 		
-		Global.Game.get_node("Center").hp-=damage
-		Global.Game.get_node("Center").activateFeedback()
-		if (Global.Game.get_node("Center").hp<0):
-			Global.Game.get_node("Center").hp=0
+		Global.Game.get_node("Zones/Center").hp-=damage
+		Global.Game.get_node("Zones/Center").activateFeedback()
+		if (Global.Game.get_node("Zones/Center").hp<0):
+			Global.Game.get_node("Zones/Center").hp=0
 	
 
 func hpBarController():
@@ -81,20 +94,20 @@ func move():
 	if ($AnimatedSprite2D.animation!= "Walking"):
 		$AnimatedSprite2D.animation= "Walking"
 
-	var centerPointX= centerPoint.position.x
-	var centerPointY= centerPoint.position.y
-	var distanceXtoCenter = position.x-centerPointX
-	var distanceYtoCenter = position.y-centerPointY
+	var targetPointX= target.position.x
+	var targetPointY= target.position.y
+	var distanceXtotTarget = position.x-targetPointX
+	var distanceYtoTarget = position.y-targetPointY
 	
-	var absoluteTotalValue = abs(distanceYtoCenter)+abs(distanceXtoCenter)
+	var absoluteTotalValue = abs(distanceYtoTarget)+abs(distanceXtotTarget)
 	
-	var speedXModifier = speed*(distanceXtoCenter/absoluteTotalValue)
-	var speedYModifier = speed*(distanceYtoCenter/absoluteTotalValue)
+	var speedXModifier = speed*(distanceXtotTarget/absoluteTotalValue)
+	var speedYModifier = speed*(distanceYtoTarget/absoluteTotalValue)
 
 	position.x -= speedXModifier
 	position.y -= speedYModifier
 	
-	if (distanceXtoCenter>0):
+	if (distanceXtotTarget>0):
 		$AnimatedSprite2D.flip_h=true
 	else:
 		$AnimatedSprite2D.flip_h=false

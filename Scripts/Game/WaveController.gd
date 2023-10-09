@@ -10,7 +10,7 @@ var battleTime=false
 var soundController
 var enemies
 
-var enemiesPerSecond=10
+var enemiesPerSecond=1
 
 func _ready():
 	soundController= get_parent().get_node("SoundController")
@@ -50,7 +50,7 @@ func battleEnd():
 func createEnemies():
 	if (battleTime and timer>0):
 		for i in range(0,enemiesPerSecond,1):
-			spawnEnemy(PreLoads.minotaur.instantiate())
+			spawnEnemy(PreLoads.id001.instantiate())
 		Global.timerCreator("createEnemies",1,[],self)
 		
 func spawnEnemy(enemy):

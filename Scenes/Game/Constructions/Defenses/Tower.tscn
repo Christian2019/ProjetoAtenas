@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dtu5sjvquowls"]
 
-[ext_resource type="Script" path="res://Scripts/Tower.gd" id="1_2xse4"]
+[ext_resource type="Script" path="res://Scripts/Zones/Center/Tower.gd" id="1_2xse4"]
 [ext_resource type="Texture2D" uid="uid://didbvwb3a40wu" path="res://Assets/Images/Constructions/Defenses/tower.png" id="1_p5m73"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ah2ey"]
