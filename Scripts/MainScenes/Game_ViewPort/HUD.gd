@@ -22,6 +22,9 @@ var max_ultimate_frame=0
 var ultimatecdBoxYStartPosition
 var ultimatecdBoxStartSizeY
 
+var waveController
+var actualWave
+
 
 func _ready():
 	Global.hud=self
@@ -39,18 +42,17 @@ func _ready():
 	ultimatecdBoxStartSizeY=$Frontground/Ultimate/ColorRect.size.y
 
 func _process(_delta):
-	timerControllerBar()
+	getWave()
 	hpBarController()
 	centerPointhpBarController()
 	ultimate()
-	
-	if (tick == waitTick):
-		updateTimeToNextWave()
-		updateResources()
+	timerControllerBar()
+	updateResources()
 
-	
-	if (tick < waitTick):
-		tick+=1
+
+func getWave():
+	waveController=Global.Game.get_node("WaveController")
+	actualWave=waveController.get_child(waveController.wave-1)
 
 func ultimate():
 	if (Global.player.permissions[4]):
@@ -108,29 +110,25 @@ func updateResources():
 	$Frontground/Gold/Label.text =  str("Gold ",Global.player.gold)
 	$Frontground/Stone/Label.text =  str("Stone ",Global.player.stone)
 	
-func updateTimeToNextWave():
-	if (Global.Game.get_node("WaveController").battleTime):
-		return
-	$Frontground/TimeLine/Label2.text = str(Global.Game.get_node("WaveController").timer,"s")
-	if (Global.Game.get_node("WaveController").timer!=timerTime):
-		timerTime=Global.Game.get_node("WaveController").timer
-		timerTick=60*timerTime
 
 func timerControllerBar():
-	timerTick-=1
-	if (Global.Game.get_node("WaveController").battleTime):
-		$Frontground/TimeLine/ColorRect.size.x=0
+	$Frontground/TimeLine/Label2.text = str(waveController.timer,"s")
+	var frame
+	var maxFrame
+	
+	if (waveController.mining):
+		$Frontground/TimeLine/Label.text= "Time to Next Wave"
+		frame=actualWave.miningFrame
+		maxFrame=actualWave.mining_max_duration_frames
+	else:
 		$Frontground/TimeLine/Label.text= "Battle Time!"
-		$Frontground/TimeLine/Label2.text = ""
-		return
-	var totalWaitTimeFrames = Global.Game.get_node("WaveController").startTimer*60
-	$Frontground/TimeLine/Label.text= "Time to Next Wave"
+		frame=actualWave.battleFrame
+		maxFrame=actualWave.battle_max_duration_frames
 
-	if (timerTick>0.25*totalWaitTimeFrames):
+	if (frame<0.75*maxFrame):
 		$Frontground/TimeLine/ColorRect.color=Color.GREEN
 	else:
 		$Frontground/TimeLine/ColorRect.color=Color.RED
 	
-	var barSizeX = maxBarSizeX*timerTick/totalWaitTimeFrames
-	$Frontground/TimeLine/ColorRect.size.x=barSizeX
+	$Frontground/TimeLine/ColorRect.size.x=int(maxBarSizeX*(maxFrame-frame)/maxFrame)
 

@@ -7,6 +7,9 @@ var tower_projectile = preload("res://Scenes/Game/Constructions/Defenses/Project
 
 ###Enemies
 
+##X
+var x = preload("res://Scenes/Game/Enemies/X.tscn")
+
 ##Normal
 
 #Minotaur

@@ -1,69 +1,56 @@
 extends Node2D
 
-var startTimer = 5
-var timer = startTimer
+var wave = 1
 
-var battleTimer = 10
+var timer = 0
 
-var battleTime=false
+var mining = true
 
-var soundController
-var enemies
+var xDuration=1
 
-var enemiesPerSecond=1
-
-func _ready():
-	soundController= get_parent().get_node("SoundController")
-	enemies = get_parent().get_node("Enemies")
-	passTime()
-
-
-func _process(_delta):
-	if (battleTime and timer ==0 and enemies.get_child_count()==0):
-		battleEnd()	
-
-
-
-func passTime():
-	timer-=1
-	if timer==0:
-		if (!battleTime):
-			battleStart()
-	else:
-		Global.timerCreator("passTime",1,[],self)
+var maxWave=1
 
 func battleStart():
-	battleTime=true
-	timer = battleTimer
-	soundController.startBattleMusic()
-	passTime()
-	createEnemies()
-
-
+	Global.Game.get_node("SoundController").startBattleMusic()
+	mining=false
 	
 func battleEnd():
-	battleTime=false
-	timer = startTimer
-	soundController.endBattleMusic()
-	passTime()
+	Global.Game.get_node("SoundController").endBattleMusic()
+	mining=true
+	clearWave()
 
-func createEnemies():
-	if (battleTime and timer>0):
-		for i in range(0,enemiesPerSecond,1):
-			spawnEnemy(PreLoads.id001.instantiate())
-		Global.timerCreator("createEnemies",1,[],self)
-		
-func spawnEnemy(enemy):
-	enemy.position = getAllowRandomSpawnPosition()
-	enemy.name = "Minotaur"
+func clearWave():
+	clearChildren("Enemies")
+	clearChildren("Instances/Turrets")
+	clearChildren("Instances/Projectiles")
+	clearChildren("Instances/X")
+
+func clearChildren(path):
+	for i in range(0,Global.Game.get_node(path).get_child_count(),1):
+		var instance = Global.Game.get_node(path).get_child(i)
+		instance.queue_free()
+
+func spawnX(enemy):
+	var vector= getAllowRandomSpawnPosition()
+	enemy.global_position = vector
+	var x = PreLoads.x.instantiate()
+	x.global_position=vector
+	Global.Game.get_node("Instances/X").call_deferred("add_child",x)
+	Global.timerCreator("spawnEnemy",xDuration,[enemy,x],self)
+	
+
+func spawnEnemy(enemy,x):
+	if (mining):
+		return
+	x.queue_free()
 	get_parent().get_node("Enemies").call_deferred("add_child",enemy)
 
 func getAllowRandomSpawnPosition():
 	var rng = RandomNumberGenerator.new()
-	var x = rng.randi_range(0, 2500)
-	var y = rng.randi_range(0, 1275)
-	if (x>1174 and x<1428 and y>483 and y<734):
-		getAllowRandomSpawnPosition()
+	var x = rng.randi_range(50, 2450)
+	var y = rng.randi_range(50, 1225)
+	if (x>1100 and x<1500 and y>437 and y<761):
+		return getAllowRandomSpawnPosition()
 	return Vector2(x,y)
 
 	

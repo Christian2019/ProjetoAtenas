@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://7d8ismuue0ka"]
+
+[ext_resource type="Script" path="res://Scripts/Enemies/X.gd" id="1_8x088"]
+[ext_resource type="Texture2D" uid="uid://gvfd28hjyvj3" path="res://Assets/Images/Enemies/X.png" id="1_ie084"]
+
+[node name="X" type="Node2D"]
+script = ExtResource("1_8x088")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.65285, 0.65285)
+texture = ExtResource("1_ie084")

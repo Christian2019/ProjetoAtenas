@@ -32,7 +32,8 @@ func destroy():
 	queue_free()
 
 func _process(delta):
-	if (Global.player.playerOnCenterPoint):
+
+	if (Global.player.playerOnCenterPoint or Global.Game.get_node("WaveController").mining):
 		destroy()
 	$Sprite2D.modulate.a=float(frame)/float(max_duration*60)
 	damageAction()

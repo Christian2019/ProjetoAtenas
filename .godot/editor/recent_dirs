@@ -1,9 +1,11 @@
+res://Scripts/Enemies
+res://Scripts/Game/Waves
+res://Scenes/Game
 res://Scripts/MainScenes/Game_ViewPort
 res://Scripts/MainScenes
 res://Scripts/Instances
 res://Scripts/Zones
 res://Scripts/Zones/Center
-res://Scripts/Enemies
 res://Scenes/Game/Enemies
 res://Scripts/Classes/Warrior
 res://Assets/Images/Player
@@ -18,5 +20,3 @@ res://Assets/Images/Constructions/Defenses
 res://Assets/Images/Enemies
 res://Assets/Images/Resources/collectable
 res://Assets/Images/Resources
-res://Assets/Images/Tiles
-res://Scenes

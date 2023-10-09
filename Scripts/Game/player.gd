@@ -126,7 +126,7 @@ func commandController():
 	
 	moveController()
 	
-	if (farming or playerOnCenterPoint):
+	if (farming or playerOnCenterPoint or Global.Game.get_node("WaveController").mining):
 		return
 	
 	attack1Controller()
@@ -229,7 +229,7 @@ func mining():
 					collectable_instance.get_node("AnimatedSprite2D").animation="stone"
 				
 				collectable_instance.global_position=closerQuadrant.get_node("Resource").global_position
-				get_parent().get_node("Collectable_instances").add_child(collectable_instance)
+				Global.Game.get_node("Instances/Collectable_instances").add_child(collectable_instance)
 	
 				
 func getCloserQuadrant():

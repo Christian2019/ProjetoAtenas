@@ -2,7 +2,7 @@
 
 [ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="1_28pgp"]
 [ext_resource type="Script" path="res://Scripts/Game/Game.gd" id="1_mli3i"]
-[ext_resource type="Script" path="res://Scripts/Game/WaveController.gd" id="2_4sqky"]
+[ext_resource type="PackedScene" uid="uid://d2y033wavrob3" path="res://Scenes/Game/Wave_controller.tscn" id="2_ixmr8"]
 [ext_resource type="Script" path="res://Scripts/Game/SoundController.gd" id="3_g1b5a"]
 [ext_resource type="PackedScene" uid="uid://ba8lsakijrbpv" path="res://Scenes/Game/tiles.tscn" id="3_lg0li"]
 [ext_resource type="PackedScene" uid="uid://bqji3jr451ges" path="res://Scenes/Game/matriz.tscn" id="4_di3q4"]
@@ -34,8 +34,7 @@ script = ExtResource("1_mli3i")
 metadata/_edit_horizontal_guides_ = [2752.0]
 metadata/_edit_vertical_guides_ = [2560.0]
 
-[node name="WaveController" type="Node2D" parent="."]
-script = ExtResource("2_4sqky")
+[node name="WaveController" parent="." instance=ExtResource("2_ixmr8")]
 
 [node name="SoundController" type="Node2D" parent="."]
 script = ExtResource("3_g1b5a")
@@ -99,6 +98,8 @@ script = ExtResource("13_2l3jl")
 [node name="Projectiles" type="Node2D" parent="Instances"]
 
 [node name="Collectable_instances" type="Node2D" parent="Instances"]
+
+[node name="X" type="Node2D" parent="Instances"]
 
 [node name="Night" type="ColorRect" parent="."]
 visible = false
