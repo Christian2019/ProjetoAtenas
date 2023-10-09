@@ -1,7 +1,11 @@
 extends Node
-
+#Colectables
 var collectable = preload("res://Scenes/Game/Collectable.tscn")
+var dracma = preload("res://Scenes/Game/Dracma.tscn")
+
 var quadrant = preload("res://Scenes/Game/quadrant.tscn")
+
+#Center
 var tower = preload("res://Scenes/Game/Constructions/Defenses/Tower.tscn")
 var tower_projectile = preload("res://Scenes/Game/Constructions/Defenses/Projectile.tscn")
 

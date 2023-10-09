@@ -18,12 +18,15 @@ func enableDisableSound():
 		enableSound=false
 		for i in range(0,get_child_count(),1):
 			var sound = get_child(i)
-			sound.set_volume_db(-40) 
+			if (sound.get_child_count()==0):
+				sound.set_volume_db(-40) 
+				
 	else:
 		enableSound=true
 		for i in range(0,get_child_count(),1):
 			var sound = get_child(i)
-			sound.set_volume_db(0)
+			if (sound.get_child_count()==0):
+				sound.set_volume_db(0)
 
 func controllMusic(timer,waveMusic):
 	timer+=1

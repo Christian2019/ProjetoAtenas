@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cb86td4m1hepw"]
+[gd_scene load_steps=20 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="1_28pgp"]
 [ext_resource type="Script" path="res://Scripts/Game/Game.gd" id="1_mli3i"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://Scripts/Game/BackgroundMusic.gd" id="5_cydk0"]
 [ext_resource type="PackedScene" uid="uid://cq8fbkkwauxoo" path="res://Scenes/Game/player.tscn" id="5_x6q60"]
 [ext_resource type="AudioStream" uid="uid://b44vxel7hbyp4" path="res://Assets/Sounds/Player/Dash.mp3" id="7_wo1sy"]
+[ext_resource type="AudioStream" uid="uid://b3exwrsopj804" path="res://Assets/Sounds/Game/Resources/dracma.mp3" id="8_a6cos"]
 [ext_resource type="PackedScene" uid="uid://cx37jdnas0rb1" path="res://Scenes/Game/Constructions/center.tscn" id="9_06qfi"]
 [ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple.tscn" id="10_v6y37"]
 [ext_resource type="Script" path="res://Scripts/Instances/Turrets.gd" id="13_2l3jl"]
@@ -48,6 +49,24 @@ stream = ExtResource("4_uxdaf")
 
 [node name="Dash" type="AudioStreamPlayer" parent="SoundController"]
 stream = ExtResource("7_wo1sy")
+
+[node name="Dracma" type="Node2D" parent="SoundController"]
+
+[node name="Sound" type="AudioStreamPlayer" parent="SoundController/Dracma"]
+stream = ExtResource("8_a6cos")
+volume_db = 24.0
+
+[node name="Sound2" type="AudioStreamPlayer" parent="SoundController/Dracma"]
+stream = ExtResource("8_a6cos")
+volume_db = 24.0
+
+[node name="Sound3" type="AudioStreamPlayer" parent="SoundController/Dracma"]
+stream = ExtResource("8_a6cos")
+volume_db = 24.0
+
+[node name="Sound4" type="AudioStreamPlayer" parent="SoundController/Dracma"]
+stream = ExtResource("8_a6cos")
+volume_db = 24.0
 
 [node name="Zones" type="Node2D" parent="."]
 
@@ -100,6 +119,8 @@ script = ExtResource("13_2l3jl")
 [node name="Collectable_instances" type="Node2D" parent="Instances"]
 
 [node name="X" type="Node2D" parent="Instances"]
+
+[node name="Dracmas" type="Node2D" parent="Instances"]
 
 [node name="Night" type="ColorRect" parent="."]
 visible = false

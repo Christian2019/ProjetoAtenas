@@ -31,9 +31,11 @@ var permissions = [
 	{"ultimate_canUse" : true},
 	]
 
+#Resources
 var wood =0
 var stone =0
 var gold =0
+var dracma=0
 
 var carryingItem
 
