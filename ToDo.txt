@@ -1,17 +1,13 @@
-Combate basico
+dragma bag
 
-Spawn de inimigos combate e funcionamento de waves
+waves hud
 
-Status
+dragma hud
 
-Skills
+dragma bag hud
 
-Loja
+goblin
 
-Mineracao
-
-Itens
-
-a
+wave 2....20....endless
 
 

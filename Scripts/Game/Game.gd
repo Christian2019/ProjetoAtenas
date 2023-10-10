@@ -10,6 +10,10 @@ func start():
 
 func _process(_delta):
 	start()
+	if (Input.is_action_just_pressed("zoomOut")):
+		Global.camera.zoom.x=0.5
+		Global.camera.zoom.y=0.5
 
-
-		
+	if (Input.is_action_just_pressed("zoomIn")):
+		Global.camera.zoom.x=1
+		Global.camera.zoom.y=1

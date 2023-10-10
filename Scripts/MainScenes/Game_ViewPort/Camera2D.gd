@@ -7,6 +7,7 @@ var mapFinalYPosition = 2757
 
 func _ready():
 	print(get_viewport().size)
+	Global.camera=self
 
 
 

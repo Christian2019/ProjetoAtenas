@@ -56,7 +56,7 @@ func getWave():
 
 func ultimate():
 	if (Global.player.permissions[4]):
-		if ($Frontground/Ultimate/ColorRect.visible):
+		if ($Frontground/Ultimate/ColorRect.visible or $Frontground/Ultimate/ColorRect2.visible):
 			$Frontground/Ultimate/ColorRect.visible=false
 			$Frontground/Ultimate/ColorRect2.visible=false
 			if (ultimate_frame!=0):

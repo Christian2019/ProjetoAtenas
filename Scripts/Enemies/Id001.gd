@@ -57,6 +57,10 @@ func getCloserTarget():
 	var center = Global.Game.get_node("Zones/Center/CenterArea/CollisionShape2D")
 	var player = Global.player
 	
+	if (player.playerOnCenterPoint or player.farming):
+		target=center
+		return
+	
 	if (global_position.distance_to(player.global_position)<global_position.distance_to(center.global_position)):
 		target=player
 	else:

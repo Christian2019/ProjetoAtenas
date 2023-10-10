@@ -4,6 +4,7 @@ var player
 var Game
 var Temple
 var hud
+var camera
 
 var startNode
 

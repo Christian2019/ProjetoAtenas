@@ -17,6 +17,9 @@ func battleStart():
 func battleEnd():
 	Global.Game.get_node("SoundController").endBattleMusic()
 	mining=true
+	for i in range(0,Global.player.permissions.size(),1):
+		Global.player.permissions[i]=true
+	
 	clearWave()
 
 func clearWave():
@@ -28,7 +31,10 @@ func clearWave():
 func clearChildren(path):
 	for i in range(0,Global.Game.get_node(path).get_child_count(),1):
 		var instance = Global.Game.get_node(path).get_child(i)
-		instance.queue_free()
+		if (instance.has_method("destroy")):
+			instance.destroy()
+		else:
+			instance.queue_free()
 
 func spawnX(enemy):
 	var vector= getAllowRandomSpawnPosition()
