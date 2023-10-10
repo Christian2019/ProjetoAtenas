@@ -1,7 +1,7 @@
 extends Node2D
 
 #Dano por frame (respeitando nextHitDelay)
-var damage = 0.1
+var damage = 1
 
 #Em graus
 var rotationSpeed = 4

@@ -36,6 +36,7 @@ var wood =0
 var stone =0
 var gold =0
 var dracma=0
+var dracmaBag=0
 
 var carryingItem
 

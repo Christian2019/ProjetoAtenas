@@ -6,7 +6,13 @@ var moving = false
 
 var speed = 6
 
+var endTurn = false
+
 func _process(delta):
+	if (Global.Game.get_node("WaveController").mining):
+		endTurn=true
+		moving=true
+		
 	if (!moving):
 		if (global_position.distance_to(Global.player.global_position)<basic_radios):
 			moving=true
@@ -16,7 +22,14 @@ func _process(delta):
 
 func _on_area_2d_area_entered(area):
 	if (area.get_parent().name=="Player"):
-		area.get_parent().dracma+=1
+		if (!endTurn):				
+			if (area.get_parent().dracmaBag>0):
+				area.get_parent().dracmaBag-=1
+				area.get_parent().dracma+=2
+			else:
+				area.get_parent().dracma+=1
+		else:
+			area.get_parent().dracmaBag+=1
 		playSound()
 		queue_free()
 

@@ -48,7 +48,18 @@ func _process(_delta):
 	ultimate()
 	timerControllerBar()
 	updateResources()
+	dracma()
+	dracmaBag()
+	wave()
 
+func dracma():
+	$Frontground/Dracma/Label2.text= str(Global.player.dracma)
+
+func dracmaBag():
+	$Frontground/DracmaBag/Label2.text= str(Global.player.dracmaBag)
+	
+func wave():
+	$Frontground/Wave/Label2.text=str(waveController.wave)
 
 func getWave():
 	waveController=Global.Game.get_node("WaveController")
@@ -117,7 +128,8 @@ func timerControllerBar():
 	var maxFrame
 	
 	if (waveController.mining):
-		$Frontground/TimeLine/Label.text= "Time to Next Wave"
+		$Frontground/TimeLine/Label.text= "Time to Next
+ Wave"
 		frame=actualWave.miningFrame
 		maxFrame=actualWave.mining_max_duration_frames
 	else:
