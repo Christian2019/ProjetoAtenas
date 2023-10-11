@@ -2,6 +2,7 @@ extends Node
 #Colectables
 var collectable = preload("res://Scenes/Game/Collectable.tscn")
 var dracma = preload("res://Scenes/Game/Dracma.tscn")
+var item = preload("res://Scenes/Game/Item.tscn")
 
 var quadrant = preload("res://Scenes/Game/quadrant.tscn")
 
@@ -18,6 +19,9 @@ var x = preload("res://Scenes/Game/Enemies/X.tscn")
 
 #Minotaur
 var id001 = preload("res://Scenes/Game/Enemies/Id001.tscn")
+
+#Goblin
+var id002 = preload("res://Scenes/Game/Enemies/Id002.tscn")
 
 
 ##Classes

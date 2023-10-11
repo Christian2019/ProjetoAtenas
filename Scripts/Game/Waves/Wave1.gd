@@ -45,3 +45,10 @@ func spawn(frame,quantity,enemy):
 		return
 	for i in range(0,quantity,1):
 		get_parent().spawnX(enemy.instantiate())
+		
+	##Goblin
+	var x = RandomNumberGenerator.new().randi_range(0, 99)
+	var chance = 50
+	print("Number role: ",x)
+	if (x<chance):
+		get_parent().spawnX(PreLoads.id002.instantiate())

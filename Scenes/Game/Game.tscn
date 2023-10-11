@@ -54,19 +54,19 @@ stream = ExtResource("7_wo1sy")
 
 [node name="Sound" type="AudioStreamPlayer" parent="SoundController/Dracma"]
 stream = ExtResource("8_a6cos")
-volume_db = 24.0
+volume_db = 12.857
 
 [node name="Sound2" type="AudioStreamPlayer" parent="SoundController/Dracma"]
 stream = ExtResource("8_a6cos")
-volume_db = 24.0
+volume_db = 12.857
 
 [node name="Sound3" type="AudioStreamPlayer" parent="SoundController/Dracma"]
 stream = ExtResource("8_a6cos")
-volume_db = 24.0
+volume_db = 12.857
 
 [node name="Sound4" type="AudioStreamPlayer" parent="SoundController/Dracma"]
 stream = ExtResource("8_a6cos")
-volume_db = 24.0
+volume_db = 12.857
 
 [node name="Zones" type="Node2D" parent="."]
 
@@ -121,6 +121,8 @@ script = ExtResource("13_2l3jl")
 [node name="X" type="Node2D" parent="Instances"]
 
 [node name="Dracmas" type="Node2D" parent="Instances"]
+
+[node name="Itens" type="Node2D" parent="Instances"]
 
 [node name="Night" type="ColorRect" parent="."]
 visible = false
