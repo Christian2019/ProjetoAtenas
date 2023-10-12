@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b18nigm5wn5ab"]
+[gd_scene load_steps=18 format=3 uid="uid://b18nigm5wn5ab"]
 
 [ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/HUD.gd" id="1_60mgy"]
@@ -10,11 +10,34 @@
 [ext_resource type="Texture2D" uid="uid://b30q73hel4bo6" path="res://Assets/Images/Player/zeusUlt.png" id="8_3iihb"]
 [ext_resource type="Texture2D" uid="uid://bx5egd2vqgwfq" path="res://Assets/Images/Resources/dracma.png" id="8_dexhj"]
 [ext_resource type="Texture2D" uid="uid://bbh8wdh8h0npk" path="res://Assets/Images/Resources/dracmaBag.png" id="9_y7mq3"]
-[ext_resource type="Texture2D" uid="uid://bsnfphv05rlds" path="res://Assets/Images/HUD/waves/wave1.png" id="10_rih83"]
+[ext_resource type="Texture2D" uid="uid://bm5foycjs0yjv" path="res://Assets/Images/Enemies/id001/minotaur_walking.png" id="10_nr6ij"]
+[ext_resource type="Texture2D" uid="uid://taffsqwio88u" path="res://Assets/Images/Enemies/id003/minotaur_walking.png" id="11_2pgyk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_22btt"]
 font = ExtResource("2_owy1r")
 font_size = 13
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjbww"]
+atlas = ExtResource("10_nr6ij")
+region = Rect2(0, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a331d"]
+atlas = ExtResource("11_2pgyk")
+region = Rect2(0, 0, 70, 70)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g7qxd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjbww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a331d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yngw4"]
 animations = [{
@@ -249,10 +272,9 @@ text = "20
 "
 label_settings = SubResource("LabelSettings_22btt")
 
-[node name="Sprite2D" type="Sprite2D" parent="Frontground/Wave"]
-position = Vector2(58.8321, 119)
-scale = Vector2(0.864285, 0.864286)
-texture = ExtResource("10_rih83")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Frontground/Wave"]
+position = Vector2(61, 119)
+sprite_frames = SubResource("SpriteFrames_g7qxd")
 
 [node name="Ultimate" type="Node2D" parent="Frontground"]
 position = Vector2(651, -61)

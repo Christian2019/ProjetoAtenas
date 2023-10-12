@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2y033wavrob3"]
+[gd_scene load_steps=4 format=3 uid="uid://d2y033wavrob3"]
 
 [ext_resource type="Script" path="res://Scripts/Game/WaveController.gd" id="1_hdkja"]
 [ext_resource type="Script" path="res://Scripts/Game/Waves/Wave1.gd" id="2_ao4dt"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave2.gd" id="3_tqif5"]
 
 [node name="WaveController" type="Node2D"]
 script = ExtResource("1_hdkja")
@@ -10,6 +11,7 @@ script = ExtResource("1_hdkja")
 script = ExtResource("2_ao4dt")
 
 [node name="Wave2" type="Node2D" parent="."]
+script = ExtResource("3_tqif5")
 
 [node name="Wave3" type="Node2D" parent="."]
 

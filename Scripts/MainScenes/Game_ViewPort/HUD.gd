@@ -60,6 +60,8 @@ func dracmaBag():
 	
 func wave():
 	$Frontground/Wave/Label2.text=str(waveController.wave)
+	if ($Frontground/Wave/AnimatedSprite2D.frame!=(waveController.wave-1)):
+		$Frontground/Wave/AnimatedSprite2D.frame=(waveController.wave-1)
 
 func getWave():
 	waveController=Global.Game.get_node("WaveController")
@@ -131,7 +133,7 @@ func timerControllerBar():
 		$Frontground/TimeLine/Label.text= "Time to Next
  Wave"
 		frame=actualWave.miningFrame
-		maxFrame=actualWave.mining_max_duration_frames
+		maxFrame=actualWave.get_parent().mining_max_duration_frames
 	else:
 		$Frontground/TimeLine/Label.text= "Battle Time!"
 		frame=actualWave.battleFrame

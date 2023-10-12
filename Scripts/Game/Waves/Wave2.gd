@@ -1,6 +1,6 @@
 extends Node2D
 
-var battle_max_duration_frames = 20*60
+var battle_max_duration_frames = 25*60
 
 var miningFrame=0
 
@@ -8,7 +8,7 @@ var battleFrame=0
 
 
 func _process(delta):
-	if (get_parent().wave!=1):
+	if (get_parent().wave!=2):
 		return
 	if (get_parent().mining):
 		get_parent().timer=int((get_parent().mining_max_duration_frames-miningFrame)/60)
@@ -29,13 +29,17 @@ func _process(delta):
 			return
 	
 func waveBehavior():
-	spawn(0*60,4,PreLoads.id001,true)
-	spawn(5*60,5,PreLoads.id001,true)
-	spawn(8*60,6,PreLoads.id001,true)
-	spawn(11*60,3,PreLoads.id001,true)
-	spawn(13*60,4,PreLoads.id001,true)
-	spawn(16*60,3,PreLoads.id001,true)
-	spawn(19*60,4,PreLoads.id001,true)
+	spawn(1*60,2,PreLoads.id003,true)
+	spawn(4*60,3,PreLoads.id003,true)
+	spawn(6*60,3,PreLoads.id003,true)
+	spawn(10*60,3,PreLoads.id003,true)
+	spawn(10*60,4,PreLoads.id001,true)
+	spawn(13*60,4,PreLoads.id003,true)
+	spawn(15*60,4,PreLoads.id001,true)
+	spawn(16*60,4,PreLoads.id003,true)
+	spawn(19*60,2,PreLoads.id003,true)
+	spawn(20*60,4,PreLoads.id001,true)
+	spawn(22*60,4,PreLoads.id003,true)
 
 	
 func spawn(frame,quantity,enemy,goblin):
