@@ -1,7 +1,10 @@
-res://Assets/Images/Enemies/id003
-res://Assets/Images/Enemies/id001
+res://Assets/Images/HUD/waves
+res://Assets/Images/Enemies/id004/result
 res://Scripts/Game/Waves
 res://Scripts/Enemies
+res://Assets/Images/Enemies/id004
+res://Assets/Images/Enemies/id003
+res://Assets/Images/Enemies/id001
 res://Scripts/Game
 res://Assets/Images
 res://Assets/Images/Enemies/lootGoblin
@@ -17,7 +20,4 @@ res://Assets/Images/Player
 res://Scripts
 res://Scripts/Temple_Scripts
 res://Scenes/Game/Constructions
-res://Assets/Videos
-res://Scripts/Classes
-res://Assets/Images/Constructions
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

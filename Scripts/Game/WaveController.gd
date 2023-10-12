@@ -1,6 +1,7 @@
 extends Node2D
 
-var mining_max_duration_frames = 10*60
+#Se for inferior a 5 segundos vai dar problema com a trnasicao da musica
+var mining_max_duration_frames = 5*60
 
 var wave = 1
 
@@ -10,7 +11,7 @@ var mining = true
 
 var xDuration=1
 
-var maxWave=2
+var maxWave=3
 
 func battleStart():
 	Global.Game.get_node("SoundController").startBattleMusic()
@@ -66,4 +67,26 @@ func getAllowRandomSpawnPosition():
 		return getAllowRandomSpawnPosition()
 	return Vector2(x,y)
 
-	
+func waveTimer(waveChild):
+	if (wave!=waveChild.wave):
+		return
+	if (mining):
+		timer=int((mining_max_duration_frames-waveChild.miningFrame)/60)
+		waveChild.miningFrame+=1
+		if (waveChild.miningFrame==mining_max_duration_frames):
+			battleStart()
+	else:
+		waveChild.waveBehavior()
+		timer=int((waveChild.battle_max_duration_frames-waveChild.battleFrame)/60)
+		waveChild.battleFrame+=1
+		if (waveChild.battleFrame>=waveChild.battle_max_duration_frames):
+			
+			if (wave<maxWave):
+				wave+=1
+			else:
+				wave=1
+			
+			waveChild.miningFrame=0
+			waveChild.battleFrame=0	
+			battleEnd()
+			return

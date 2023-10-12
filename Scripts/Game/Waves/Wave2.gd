@@ -6,27 +6,11 @@ var miningFrame=0
 
 var battleFrame=0
 
+var wave=2
+
 
 func _process(delta):
-	if (get_parent().wave!=2):
-		return
-	if (get_parent().mining):
-		get_parent().timer=int((get_parent().mining_max_duration_frames-miningFrame)/60)
-		miningFrame+=1
-		if (miningFrame==get_parent().mining_max_duration_frames):
-			get_parent().battleStart()
-	else:
-		waveBehavior()
-		get_parent().timer=int((battle_max_duration_frames-battleFrame)/60)
-		battleFrame+=1
-		if (battleFrame>=battle_max_duration_frames):
-			if (get_parent().wave<get_parent().maxWave):
-				get_parent().wave+=1
-			else:
-				miningFrame=0
-				battleFrame=0
-			get_parent().battleEnd()
-			return
+	get_parent().waveTimer(self)
 	
 func waveBehavior():
 	spawn(1*60,2,PreLoads.id003,true)

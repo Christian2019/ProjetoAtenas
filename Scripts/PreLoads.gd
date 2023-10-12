@@ -26,6 +26,9 @@ var id002 = preload("res://Scenes/Game/Enemies/Id002.tscn")
 #MinotaurBlue
 var id003 = preload("res://Scenes/Game/Enemies/Id003.tscn")
 
+#MinotaurAxe
+var id004 = preload("res://Scenes/Game/Enemies/Id004.tscn")
+
 
 ##Classes
 var warrior = [
