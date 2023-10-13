@@ -14,7 +14,6 @@ func _process(delta):
 	
 func waveBehavior():
 	#spawn(1*60,3,PreLoads.id004,true)
-	#"""
 	spawn(1*60,4,PreLoads.id001,true)
 	spawn(4*60,6,PreLoads.id001,true)
 	spawn(6*60,4,PreLoads.id001,true)
@@ -34,7 +33,7 @@ func waveBehavior():
 	spawn(25*60,4,PreLoads.id001,true)
 	spawn(25*60,3,PreLoads.id004,true)
 	spawn(25*60,4,PreLoads.id003,true)
-	#"""	
+	
 	
 func spawn(frame,quantity,enemy,goblin):
 	if (frame!=battleFrame):
