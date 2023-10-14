@@ -1,9 +1,9 @@
 extends Node2D
 
-var id=4
-var maxHp=300
+var id=6
+var maxHp=500
 var hp = maxHp
-var damage = 1
+var damage = 2
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
@@ -12,7 +12,7 @@ var nextHitDelay = 1
 var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
-var speed = 1
+var speed = 3
 var isMoving=true
 
 var playerInside=false
@@ -26,13 +26,13 @@ var charging=false
 var loading=false
 var canCharge=true
 var chargeSpeed = 10
-var chargeLoading=2
+var chargeLoading=1
 var chargeCD=5
 var chargeFrame=0
 var chargeMaxFrame=2.5*60
 #var minRadiusFromPlayer=chargeSpeed*chargeMaxFrame
 var minRadiusFromPlayer=500
-var chargeDamage=10
+var chargeDamage=20
 
 
 func _ready():

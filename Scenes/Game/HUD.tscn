@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b18nigm5wn5ab"]
+[gd_scene load_steps=19 format=3 uid="uid://b18nigm5wn5ab"]
 
 [ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/HUD.gd" id="1_60mgy"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c8h4x6cdrpqpk" path="res://Assets/Images/HUD/waves/wave2.png" id="11_kusy4"]
 [ext_resource type="Texture2D" uid="uid://bys0o6q3rv1kr" path="res://Assets/Images/HUD/waves/wave3.png" id="12_1ax7q"]
 [ext_resource type="Texture2D" uid="uid://bxth4dkos64s" path="res://Assets/Images/HUD/waves/wave4.png" id="13_581s8"]
+[ext_resource type="Texture2D" uid="uid://coxsmj54lptwp" path="res://Assets/Images/HUD/waves/wave5.png" id="14_6fkh8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_22btt"]
 font = ExtResource("2_owy1r")
@@ -33,6 +34,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("13_581s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6fkh8")
 }],
 "loop": true,
 "name": &"default",
@@ -275,8 +279,7 @@ label_settings = SubResource("LabelSettings_22btt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Frontground/Wave"]
 position = Vector2(61, 119)
 sprite_frames = SubResource("SpriteFrames_g7qxd")
-frame = 2
-frame_progress = 0.0870768
+frame = 4
 
 [node name="Ultimate" type="Node2D" parent="Frontground"]
 position = Vector2(651, -61)

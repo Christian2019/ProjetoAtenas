@@ -21,3 +21,7 @@ res://Scripts/Game/WaveController.gd
 res://Scripts/Game/Waves/Wave3.gd
 res://Scripts/Game/Waves/Wave4.gd
 res://Scenes/Game/HUD.tscn
+res://Scenes/Game/Enemies/Id006.tscn
+res://Scripts/Enemies/Id006.gd
+res://Scripts/Game/Waves/Wave5.gd
+res://Scripts/Enemies/Id004.gd
