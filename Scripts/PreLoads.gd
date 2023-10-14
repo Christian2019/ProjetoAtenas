@@ -36,6 +36,10 @@ var arrowCircle = preload("res://Scenes/Game/Enemies/Id005/ArrowCircle.tscn")
 #Minotaur3
 var id006 = preload("res://Scenes/Game/Enemies/Id006.tscn")
 
+#Pegasus
+var id007 = preload("res://Scenes/Game/Enemies/id007/Id007.tscn")
+var ryuseiken = preload("res://Scenes/Game/Enemies/id007/Ryuseiken.tscn")
+
 
 ##Classes
 var warrior = [

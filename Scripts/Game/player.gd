@@ -2,7 +2,7 @@ extends Node2D
 ##Stats
 
 var dead = false
-var maxHp=100
+var maxHp=999
 var hp = maxHp
 var move_Speed = 5
 var attack_Speed = 1 ## precisa ser >0
@@ -71,7 +71,7 @@ func _process(__delta):
 	if (dead):
 		return
 	
-	if (hp==0):
+	if (hp<=0):
 		dead=true
 		#Global.timerCreator("restartGame",5,[],self)
 		restartGame()

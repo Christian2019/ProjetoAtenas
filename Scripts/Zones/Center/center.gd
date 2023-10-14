@@ -12,7 +12,7 @@ var nextHealDelay=false
 var nextHealDealy=0.1
 
 func _process(delta):
-	if (hp==0):
+	if (hp<=0):
 		Global.player.hp=0
 		return
 	feedback()
