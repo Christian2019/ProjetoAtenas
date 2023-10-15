@@ -1,0 +1,105 @@
+[gd_scene load_steps=15 format=3 uid="uid://dekj6pahbucbr"]
+
+[ext_resource type="Texture2D" uid="uid://ceaob0ribacvm" path="res://Assets/Images/Enemies/id008/attacking/dragon_attacking_frame0.png" id="1_0nt2e"]
+[ext_resource type="Texture2D" uid="uid://5dde728mjc4w" path="res://Assets/Images/Enemies/id008/flying.png" id="1_evicp"]
+[ext_resource type="Texture2D" uid="uid://bba5unawsnkjl" path="res://Assets/Images/Enemies/id008/attacking/dragon_attacking_frame1.png" id="2_8fbua"]
+[ext_resource type="Texture2D" uid="uid://byuq8c16o5ehb" path="res://Assets/Images/Enemies/id008/attacking/dragon_attacking_frame2.png" id="3_fuydq"]
+[ext_resource type="Texture2D" uid="uid://cgdvcn6wpu52u" path="res://Assets/Images/Enemies/id008/attacking/dragon_attacking_frame3.png" id="4_71wgg"]
+[ext_resource type="Texture2D" uid="uid://b36abbolih6y0" path="res://Assets/Images/Enemies/id008/attacking/dragon_attacking_frame4.png" id="5_kj54g"]
+[ext_resource type="Texture2D" uid="uid://c7sevf76kq1gf" path="res://Assets/Images/Enemies/id008/attacking/dragon_attacking_frame5.png" id="6_tv80n"]
+[ext_resource type="Texture2D" uid="uid://c67uhbibqin68" path="res://Assets/Images/Enemies/id008/attacking/dragon_attacking_frame6.png" id="7_atobp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxfh6"]
+atlas = ExtResource("1_evicp")
+region = Rect2(0, 0, 181, 136)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_useho"]
+atlas = ExtResource("1_evicp")
+region = Rect2(181, 0, 181, 136)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcmnx"]
+atlas = ExtResource("1_evicp")
+region = Rect2(362, 0, 181, 136)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0nt2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8fbua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fuydq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_71wgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kj54g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tv80n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_atobp")
+}],
+"loop": true,
+"name": &"Attacking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxfh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_useho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcmnx")
+}],
+"loop": true,
+"name": &"Flying",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
+size = Vector2(69, 54)
+
+[sub_resource type="Theme" id="Theme_teygp"]
+
+[node name="Dragon" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 1.90735e-06)
+scale = Vector2(0.39895, 0.423918)
+sprite_frames = SubResource("SpriteFrames_grjig")
+animation = &"Attacking"
+frame_progress = 0.832897
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-46, -46)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(46.5, 47)
+shape = SubResource("RectangleShape2D_pmar3")
+
+[node name="HPBar" type="Node2D" parent="."]
+position = Vector2(-40, -8)
+
+[node name="Red" type="ColorRect" parent="HPBar"]
+modulate = Color(1, 0.231373, 0.231373, 1)
+offset_left = 5.0
+offset_top = -35.0
+offset_right = 76.0
+offset_bottom = -18.0
+theme = SubResource("Theme_teygp")
+
+[node name="Green" type="ColorRect" parent="HPBar"]
+modulate = Color(0.486275, 1, 0.231373, 1)
+offset_left = 5.0
+offset_top = -35.0
+offset_right = 76.0
+offset_bottom = -18.0
+theme = SubResource("Theme_teygp")

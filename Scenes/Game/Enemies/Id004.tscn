@@ -604,8 +604,9 @@ script = ExtResource("1_xq5sd")
 position = Vector2(-9, -11)
 scale = Vector2(0.792069, 0.792069)
 sprite_frames = SubResource("SpriteFrames_grjig")
-animation = &"Walking"
-frame_progress = 0.905803
+animation = &"Charging"
+frame = 2
+frame_progress = 0.285962
 
 [node name="Area2D" type="Area2D" parent="."]
 

@@ -3,7 +3,7 @@ extends Node2D
 #Se for inferior a 5 segundos vai dar problema com a trnasicao da musica
 var mining_max_duration_frames = 5*60
 
-var wave = 7
+var wave = 6
 
 var timer = 0
 

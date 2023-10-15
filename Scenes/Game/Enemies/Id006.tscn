@@ -90,7 +90,6 @@ position = Vector2(0, -4)
 scale = Vector2(0.792069, 0.792069)
 sprite_frames = SubResource("SpriteFrames_grjig")
 animation = &"Walking"
-frame_progress = 0.788363
 
 [node name="Area2D" type="Area2D" parent="."]
 

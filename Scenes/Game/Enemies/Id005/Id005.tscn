@@ -70,8 +70,10 @@ script = ExtResource("1_1rilg")
 position = Vector2(2, -2)
 scale = Vector2(0.369192, 0.365027)
 sprite_frames = SubResource("SpriteFrames_grjig")
-animation = &"Attacking"
+animation = &"Flying"
 autoplay = "Flying"
+frame = 2
+frame_progress = 0.41365
 
 [node name="Area2D" type="Area2D" parent="."]
 
