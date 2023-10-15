@@ -18,8 +18,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("Exit"):
 			get_tree().paused = false
 			visible=false
- 
-#AINDA EM DESENVOLVIMENTO, DEVO ENCONTRAR UMA FORMA MELHOR PRA FAZER ISSO KKKKKKK
+  
 func transition(numPage): 
 	for i in range(0,len(pages)):
 		if(i==numPage-1):
@@ -43,4 +42,4 @@ func _on_personagem_pressed():
 
 func _on_defender_point_pressed():
 	#Paginas devem fazer a transicao aqui
-	transition(4)  
+	transition(4)   

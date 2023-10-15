@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696737186
-default_env.tres::Environment::8363765569308027888::1696734904::0::1::::<><>::
+::res://::1697389090
+default_env.tres::Environment::8363765569308027888::1697386417::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1693530105::0::1::::<><>::
 icon.png::CompressedTexture2D::8961917463339288538::1693530105::1693530105::1::::<><>::
 ToDo.txt::TextFile::-1::1695242543::0::1::::<><>::
@@ -110,10 +110,10 @@ Fatality.tscn::PackedScene::3830635802989632452::1695242543::0::1::::<><>::res:/
 Game_ViewPort.tscn::PackedScene::7418050984438387124::1695595190::0::1::::<><>::uid://cb86td4m1hepw
 Loading.tscn::PackedScene::1350444753072594925::1695242543::0::1::::<><>::res://Scripts/Loading.gd<>uid://duy38o6o71nij
 Menu.tscn::PackedScene::962977223449213015::1695487757::0::1::::<><>::res://Scripts/Menu.gd<>uid://dxsn2vwpfc331
-::res://Scenes/Temple/::1696734904
-Item.tscn::PackedScene::3789408077711027493::1696353525::0::1::::<><>::res://Scripts/Temple_Scripts/ItemSelectable.gd
-OpcaoUpgrade.tscn::PackedScene::1880745726022968015::1696734904::0::1::::<><>::res://Scripts/Temple_Scripts/OpcaoUpgrade.gd
-TempleScreen.tscn::PackedScene::3516894069668338984::1696734904::0::1::::<><>::res://Scripts/Temple_Scripts/MainPage.gd<>uid://dlwvyo6ejssc::::res://Assets/Images/Resources/gold.png<>res://Scripts/Temple_Scripts/ShopScript.gd<>uid://bav7b1tv76dwv::::res://Assets/Images/Resources/stone.png<>uid://ywre30ix5f7t::::res://Assets/Images/Resources/wood.png<>res://Scripts/Temple_Scripts/PersonagemLoja.gd<>res://Scripts/Temple_Scripts/Mineração.gd<>uid://12buwcnhifsh::::res://Scenes/Temple/OpcaoUpgrade.tscn<>uid://d0xhqa10j30ok::::res://icon.png<>res://Scripts/Temple_Scripts/Defender Point.gd
+::res://Scenes/Temple/::1697386417
+Item.tscn::PackedScene::3789408077711027493::1697149279::0::1::::<><>::res://Scripts/Temple_Scripts/ItemSelectable.gd<>uid://cac3r40tcc1so
+OpcaoUpgrade.tscn::PackedScene::1880745726022968015::1696996868::0::1::::<><>::res://Scripts/Temple_Scripts/OpcaoUpgrade.gd
+TempleScreen.tscn::PackedScene::3516894069668338984::1697386417::0::1::::<><>::res://Scripts/Temple_Scripts/MainPage.gd<>uid://dlwvyo6ejssc::::res://Assets/Images/Resources/gold.png<>res://Scripts/Temple_Scripts/ShopScript.gd<>uid://bav7b1tv76dwv::::res://Assets/Images/Resources/stone.png<>uid://ywre30ix5f7t::::res://Assets/Images/Resources/wood.png<>res://Scripts/Temple_Scripts/PersonagemLoja.gd<>res://Scripts/Temple_Scripts/Mineração.gd<>uid://12buwcnhifsh::::res://Scenes/Temple/OpcaoUpgrade.tscn<>uid://d0xhqa10j30ok::::res://icon.png<>uid://cg4c8qydgkpag::::res://Assets/Images/HUD/hearth2.png<>res://Scripts/Temple_Scripts/Defender Point.gd
 ::res://Scripts/::1695595188
 BackgroundMusic.gd::GDScript::-1::1695242543::0::1::::<>AudioStreamPlayer<>::
 Camera2D.gd::GDScript::-1::1695242543::0::1::::<>Camera2D<>::
@@ -145,11 +145,11 @@ WaveController.gd::GDScript::-1::1695242543::0::1::::<>Node2D<>::
 ::res://Scripts/Classes/Warrior/::1695242543
 Warrior.gd::GDScript::-1::1695242543::0::1::::<>Node<>::
 Warrior_Attack1.gd::GDScript::-1::1695242543::0::1::::<>Node2D<>::
-::res://Scripts/Temple_Scripts/::1696734902
-Defender Point.gd::GDScript::-1::1696646963::0::1::::<>Node2D<>::
-ItemSelectable.gd::GDScript::-1::1696300120::0::1::::<>Node2D<>::
-MainPage.gd::GDScript::-1::1695589671::0::1::::<>Node2D<>::
-Mineração.gd::GDScript::-1::1696734836::0::1::::<>Node2D<>::
-OpcaoUpgrade.gd::GDScript::-1::1696734902::0::1::::<>Node2D<>::
-PersonagemLoja.gd::GDScript::-1::1696537456::0::1::::<>Node2D<>::
-ShopScript.gd::GDScript::-1::1695589647::0::1::::<>Node2D<>::
+::res://Scripts/Temple_Scripts/::1697339889
+Defender Point.gd::GDScript::-1::1696888677::0::1::::<>Node2D<>::
+ItemSelectable.gd::GDScript::-1::1697146890::0::1::::<>Node2D<>::
+MainPage.gd::GDScript::-1::1697073926::0::1::::<>Node2D<>::
+Mineração.gd::GDScript::-1::1696888540::0::1::::<>Node2D<>::
+OpcaoUpgrade.gd::GDScript::-1::1696892854::0::1::::<>Node2D<>::
+PersonagemLoja.gd::GDScript::-1::1696888668::0::1::::<>Node2D<>::
+ShopScript.gd::GDScript::-1::1697339889::0::1::::<>Node2D<>::
