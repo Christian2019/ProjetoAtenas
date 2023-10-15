@@ -1,7 +1,8 @@
+res://Assets/Images/Enemies/id008
+res://Scripts/Enemies
 res://Assets/Images/HUD/waves
 res://Scripts/Instances
 res://Scripts/Game/Waves
-res://Scripts/Enemies
 res://Assets/Images/Enemies/id007
 res://Assets/Images
 res://Assets/Images/Enemies/id006
@@ -19,5 +20,4 @@ res://Scripts/Zones
 res://Scripts/Zones/Center
 res://Scenes/Game/Enemies
 res://Scripts/Classes/Warrior
-res://Assets/Images/Player
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

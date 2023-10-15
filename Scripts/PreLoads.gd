@@ -40,6 +40,8 @@ var id006 = preload("res://Scenes/Game/Enemies/Id006.tscn")
 var id007 = preload("res://Scenes/Game/Enemies/id007/Id007.tscn")
 var ryuseiken = preload("res://Scenes/Game/Enemies/id007/Ryuseiken.tscn")
 
+#Dragon
+var id008 = preload("res://Scenes/Game/Enemies/id008/Id008.tscn")
 
 ##Classes
 var warrior = [
