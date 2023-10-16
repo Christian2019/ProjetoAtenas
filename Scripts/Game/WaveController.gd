@@ -3,7 +3,7 @@ extends Node2D
 #Se for inferior a 5 segundos vai dar problema com a trnasicao da musica
 var mining_max_duration_frames = 5*60
 
-var wave = 7
+var wave = 8
 
 var timer = 0
 
@@ -11,7 +11,7 @@ var mining = true
 
 var xDuration=1
 
-var maxWave=7
+var maxWave=8
 
 func battleStart():
 	Global.Game.get_node("SoundController").startBattleMusic()
