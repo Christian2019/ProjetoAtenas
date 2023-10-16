@@ -47,5 +47,8 @@ func die():
 	
 func spawDragon():
 	print("Dragon!")
+	var dragon = PreLoads.dragon.instantiate()
+	Global.Game.get_node("Enemies").add_child(dragon)
+	dragon.global_position=global_position
 	queue_free()
 	

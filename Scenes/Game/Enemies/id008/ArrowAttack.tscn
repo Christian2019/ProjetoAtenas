@@ -1,8 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://uucel4xa5lyu"]
+[gd_scene load_steps=7 format=3 uid="uid://uucel4xa5lyu"]
 
 [ext_resource type="Texture2D" uid="uid://0574faxgvsx8" path="res://Assets/Images/Enemies/id008/fullBar.png" id="1_6q5mh"]
+[ext_resource type="Script" path="res://Scripts/Instances/ArrowAttack.gd" id="1_aveqm"]
 [ext_resource type="Texture2D" uid="uid://bu8eu3dm0q653" path="res://Assets/Images/Enemies/id008/emptyBar.png" id="2_02ts7"]
 [ext_resource type="Texture2D" uid="uid://ch1f36rxnv24m" path="res://Assets/Images/Enemies/id008/fireTexture.png" id="3_2m307"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
+size = Vector2(106.5, 9)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
 animations = [{
@@ -23,34 +27,34 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
-size = Vector2(97, 10)
-
 [node name="ArrowAttack" type="Node2D"]
+script = ExtResource("1_aveqm")
 
-[node name="Animation" type="AnimatedSprite2D" parent="."]
-position = Vector2(-18.1785, -2)
-scale = Vector2(0.39895, 0.423918)
-sprite_frames = SubResource("SpriteFrames_grjig")
-animation = &"Damage"
-
-[node name="ColorRect" type="ColorRect" parent="Animation"]
-z_index = -1
-offset_left = -70.0
-offset_top = -2.0
-offset_right = 160.0
-offset_bottom = 14.0
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -54.0
+offset_top = -4.0
+offset_right = 52.0
+offset_bottom = 5.0
 color = Color(0.905882, 0.0627451, 0.054902, 0.509804)
 
-[node name="Sprite2D" type="Sprite2D" parent="Animation"]
-z_index = -1
-position = Vector2(45.6185, 5.89736)
-scale = Vector2(5.91026, 0.825631)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-54, -3)
+scale = Vector2(2.71795, 0.405349)
 texture = ExtResource("3_2m307")
+centered = false
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(-64.1785, -48)
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+position = Vector2(19.8679, -111.015)
+scale = Vector2(0.367924, 2.46701)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(65.5, 48)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(-1.25, 48.5)
 shape = SubResource("RectangleShape2D_pmar3")
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+position = Vector2(-22, -2)
+scale = Vector2(0.462041, 0.490957)
+sprite_frames = SubResource("SpriteFrames_grjig")
+animation = &"Loading"
+
+[connection signal="area_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_area_entered"]

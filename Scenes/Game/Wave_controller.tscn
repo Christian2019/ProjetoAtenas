@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/Game/Waves/Wave4.gd" id="5_ck3nm"]
 [ext_resource type="Script" path="res://Scripts/Game/Waves/Wave5.gd" id="6_as2g2"]
 [ext_resource type="Script" path="res://Scripts/Game/Waves/Wave6.gd" id="7_qyb54"]
-[ext_resource type="Script" path="res://Scenes/Game/Wave7.gd" id="8_o8w1o"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave7.gd" id="8_dr4a3"]
 
 [node name="WaveController" type="Node2D"]
 script = ExtResource("1_hdkja")
@@ -31,7 +31,7 @@ script = ExtResource("6_as2g2")
 script = ExtResource("7_qyb54")
 
 [node name="Wave7" type="Node2D" parent="."]
-script = ExtResource("8_o8w1o")
+script = ExtResource("8_dr4a3")
 
 [node name="Wave8" type="Node2D" parent="."]
 

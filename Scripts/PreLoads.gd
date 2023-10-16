@@ -42,6 +42,8 @@ var ryuseiken = preload("res://Scenes/Game/Enemies/id007/Ryuseiken.tscn")
 
 #Dragon
 var id008 = preload("res://Scenes/Game/Enemies/id008/Id008.tscn")
+var dragon = preload("res://Scenes/Game/Enemies/id008/Dragon.tscn")
+var arrowAttack = preload("res://Scenes/Game/Enemies/id008/ArrowAttack.tscn")
 
 ##Classes
 var warrior = [

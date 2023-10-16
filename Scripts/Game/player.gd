@@ -180,6 +180,7 @@ func turretController():
 		attackInstance.global_position=global_position
 		
 		
+		
 func dashController():
 	var classChild=3	
 	if (Input.is_action_just_pressed("Dash") and permissions[classChild]):

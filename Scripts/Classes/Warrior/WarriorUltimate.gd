@@ -3,7 +3,7 @@ extends Node2D
 var attacktype=0
 
 #Dano por frame (respeitando nextHitDelay)
-var damage = 1
+var damage = 5
 var enableDamage=false
 #Duracao em segundos
 var cd = 5

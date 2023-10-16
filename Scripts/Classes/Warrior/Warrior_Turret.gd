@@ -1,7 +1,7 @@
 extends Node2D
 
 #Dano por frame (respeitando nextHitDelay)
-var damage = 10
+var damage = 40
 
 #Em graus
 var rotationSpeed = 4
@@ -13,10 +13,13 @@ var canShoot=true
 var max_duration = 30
 
 var attacktype=0
+var randomTurret=true
 
 var closerEnemy
 
 func _ready():
+	if (randomTurret):
+			attacktype=RandomNumberGenerator.new().randi_range(0, 2)
 	animation()
 	audioInstances()
 	Global.timerCreator("destroy",max_duration,[],self)

@@ -17,3 +17,16 @@ res://Scenes/Game/Enemies/Id003.tscn
 res://Scenes/Game/Enemies/Id004.tscn
 res://Scenes/Game/Enemies/Id005/Id005.tscn
 res://Scenes/Game/Enemies/Id006.tscn
+res://Scripts/PreLoads.gd
+res://Scripts/Enemies/Id008.gd
+res://Scripts/Enemies/Id008_Dragon.gd
+res://Scenes/Game/Wave7.gd
+res://Scripts/Instances/ArrowAttack.gd
+res://Scripts/Game/Waves/Wave7.gd
+res://Scripts/Classes/Warrior/Warrior_Turret.gd
+res://Scenes/Game/Classes/Warrior/WarriorTurret/WarriorArrow.tscn
+res://Scripts/Game/player.gd
+res://Scripts/Zones/Center/center.gd
+res://Scenes/Game/Classes/Warrior/WarriorUltimate.tscn
+res://Scripts/Classes/Warrior/WarriorUltimate.gd
+res://Scenes/MainScenes/Game_ViewPort.tscn
