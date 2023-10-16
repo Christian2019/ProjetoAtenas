@@ -1,0 +1,157 @@
+[gd_scene load_steps=21 format=3 uid="uid://c6dg5vqluqma6"]
+
+[ext_resource type="Script" path="res://Scripts/Enemies/Id011.gd" id="1_u4l7y"]
+[ext_resource type="Texture2D" uid="uid://cnqwv07v7lvyb" path="res://Assets/Images/Enemies/id011/minotaur_attacking.png" id="1_wesqj"]
+[ext_resource type="Texture2D" uid="uid://ix5l6w281w8w" path="res://Assets/Images/Enemies/id011/minotaur_walking.png" id="2_5qfsk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e7ic"]
+atlas = ExtResource("1_wesqj")
+region = Rect2(0, 0, 158, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i76no"]
+atlas = ExtResource("1_wesqj")
+region = Rect2(158, 0, 158, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lfhm"]
+atlas = ExtResource("1_wesqj")
+region = Rect2(316, 0, 158, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbtm3"]
+atlas = ExtResource("1_wesqj")
+region = Rect2(474, 0, 158, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4o4s8"]
+atlas = ExtResource("1_wesqj")
+region = Rect2(632, 0, 158, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk4g1"]
+atlas = ExtResource("1_wesqj")
+region = Rect2(790, 0, 158, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31mcr"]
+atlas = ExtResource("1_wesqj")
+region = Rect2(948, 0, 158, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yesul"]
+atlas = ExtResource("2_5qfsk")
+region = Rect2(0, 0, 163, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wupn"]
+atlas = ExtResource("2_5qfsk")
+region = Rect2(163, 0, 163, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llrhj"]
+atlas = ExtResource("2_5qfsk")
+region = Rect2(326, 0, 163, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puv4v"]
+atlas = ExtResource("2_5qfsk")
+region = Rect2(489, 0, 163, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfmcu"]
+atlas = ExtResource("2_5qfsk")
+region = Rect2(652, 0, 163, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usd6l"]
+atlas = ExtResource("2_5qfsk")
+region = Rect2(815, 0, 163, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2co0"]
+atlas = ExtResource("2_5qfsk")
+region = Rect2(978, 0, 163, 155)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e7ic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i76no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lfhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbtm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4o4s8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk4g1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31mcr")
+}],
+"loop": true,
+"name": &"Attacking",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yesul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wupn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_llrhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puv4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfmcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usd6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2co0")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
+size = Vector2(157, 132)
+
+[sub_resource type="Theme" id="Theme_teygp"]
+
+[node name="Id011" type="Node2D"]
+script = ExtResource("1_u4l7y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(14, 23)
+sprite_frames = SubResource("SpriteFrames_grjig")
+animation = &"Walking"
+frame_progress = 0.394485
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(11.5, 31)
+shape = SubResource("RectangleShape2D_pmar3")
+
+[node name="HPBar" type="Node2D" parent="."]
+
+[node name="Red" type="ColorRect" parent="HPBar"]
+modulate = Color(1, 0.231373, 0.231373, 1)
+offset_left = -66.0
+offset_top = -55.0
+offset_right = 90.0
+offset_bottom = -34.0
+theme = SubResource("Theme_teygp")
+
+[node name="Green" type="ColorRect" parent="HPBar"]
+modulate = Color(0.486275, 1, 0.231373, 1)
+offset_left = -66.0
+offset_top = -55.0
+offset_right = 90.0
+offset_bottom = -34.0
+theme = SubResource("Theme_teygp")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

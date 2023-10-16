@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b18nigm5wn5ab"]
+[gd_scene load_steps=24 format=3 uid="uid://b18nigm5wn5ab"]
 
 [ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/HUD.gd" id="1_60mgy"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://enhn0dupvb3s" path="res://Assets/Images/HUD/waves/wave7.png" id="16_at322"]
 [ext_resource type="Texture2D" uid="uid://c4bqokigkd1xr" path="res://Assets/Images/HUD/waves/wave8.png" id="17_3cmjo"]
 [ext_resource type="Texture2D" uid="uid://bfxfl80s5xqds" path="res://Assets/Images/HUD/waves/wave9.png" id="18_g0fqi"]
+[ext_resource type="Texture2D" uid="uid://ctq6xiqvtaxn3" path="res://Assets/Images/HUD/waves/wave10.png" id="19_cu78b"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_22btt"]
 font = ExtResource("2_owy1r")
@@ -53,6 +54,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("18_g0fqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cu78b")
 }],
 "loop": true,
 "name": &"default",

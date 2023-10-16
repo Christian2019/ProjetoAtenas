@@ -1,7 +1,8 @@
 res://Assets/Images/HUD/waves
-res://Scripts/Enemies
-res://Assets/Images/Enemies/id010
 res://Scripts/Game/Waves
+res://Scripts/Enemies
+res://Assets/Images/Enemies/id011
+res://Assets/Images/Enemies/id010
 res://Assets/Images/Enemies/id009
 res://Scripts/Instances
 res://Assets/Images/Enemies/id008
@@ -19,5 +20,4 @@ res://Assets/Images/Enemies/lootGoblin
 res://Scenes/Game
 res://Scripts/MainScenes/Game_ViewPort
 res://Scripts/MainScenes
-res://Scripts/Zones
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas
