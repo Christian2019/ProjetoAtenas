@@ -53,7 +53,7 @@ func _process(_delta):
 	if (playerInside and target.name=="Player" or centerPointInside and target.get_parent().get_parent().name=="Center"):
 		isMoving=false
 		attack()
-	else:
+	elif $AnimatedSprite2D.frame==5:
 		isMoving=true
 		
 	hpBarController()

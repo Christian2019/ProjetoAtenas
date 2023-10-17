@@ -9,3 +9,7 @@ res://Scripts/PreLoads.gd
 res://Scenes/Game/HUD.tscn
 res://Scripts/Game/WaveController.gd
 res://Scenes/Game/player.tscn
+res://Scripts/Game/Waves/Wave12.gd
+res://Scenes/Game/Enemies/Id013.tscn
+res://Scripts/Global.gd
+res://Scripts/Game/SoundController.gd

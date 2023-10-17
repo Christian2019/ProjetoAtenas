@@ -3,15 +3,28 @@ var enableSound = true
 
 var transitionTime = 5
 
+var waveMusic
+var farmingMusic
 
-func startBattleMusic():
-	$WaveMusic.playing=true
-	controllMusic(0,true)
+func _ready():
+	waveMusic=$WaveMusic
+	farmingMusic=$AOEMusic
+
+
+func startBattleMusic(wave):
+	if (wave==11 or wave==14 or wave==17):
+		waveMusic=$EliteMusic
+		controllMusic(0,true,10)
+	else:
+		waveMusic=$WaveMusic
+		controllMusic(0,true,0)
+	waveMusic.playing=true
+	
 	
 
 func endBattleMusic():
-	$AOEMusic.playing=true
-	controllMusic(0,false)
+	farmingMusic.playing=true
+	controllMusic(0,false,0)
 	
 func enableDisableSound():
 	if (enableSound):
@@ -28,22 +41,23 @@ func enableDisableSound():
 			if (sound.get_child_count()==0):
 				sound.set_volume_db(0)
 
-func controllMusic(timer,waveMusic):
+func controllMusic(timer,waveTime,startVolume):
 	timer+=1
-	print(timer)
-	if (waveMusic):
+	if (waveTime):
 		if (enableSound):
-			$AOEMusic.set_volume_db(timer*(-1))
-			$WaveMusic.set_volume_db(timer-transitionTime) 
+			farmingMusic.set_volume_db(timer*(-1))
+			waveMusic.set_volume_db(startVolume+timer-transitionTime) 
 		if (timer == transitionTime):
-			$AOEMusic.playing=false
+			farmingMusic.playing=false
 		else:
-			Global.timerCreator("controllMusic",0.5,[timer,true],self)
+			Global.timerCreator("controllMusic",0.5,[timer,true,startVolume],self)
 	else:
 		if (enableSound):
-			$AOEMusic.set_volume_db(timer-transitionTime-5)
-			$WaveMusic.set_volume_db(timer*(-1)) 
+			farmingMusic.set_volume_db(startVolume+timer-transitionTime-5)
+			waveMusic.set_volume_db(timer*(-1)) 
 		if (timer == transitionTime):
-			$WaveMusic.playing=false
+			waveMusic.playing=false
 		else:
-			Global.timerCreator("controllMusic",0.5,[timer,false],self)
+			Global.timerCreator("controllMusic",0.5,[timer,false,startVolume],self)
+			
+

@@ -12,10 +12,12 @@ var mining = true
 
 var xDuration=1
 
+func _ready():
+	Global.WaveController=self
 
 
 func battleStart():
-	Global.Game.get_node("SoundController").startBattleMusic()
+	Global.Game.get_node("SoundController").startBattleMusic(wave)
 	mining=false
 	
 func battleEnd():

@@ -5,6 +5,7 @@ var Game
 var Temple
 var hud
 var camera
+var WaveController
 
 var startNode
 

@@ -1,8 +1,8 @@
+AudioStreamPlayer
 ColorRect
 Sprite2D
 AnimatedSprite2D
 Node2D
-AudioStreamPlayer
 CollisionShape2D
 Area2D
 VideoStreamPlayer
