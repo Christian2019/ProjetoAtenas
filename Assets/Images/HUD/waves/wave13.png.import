@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://broj538phy2et"
-path="res://.godot/imported/fireTexture.png-368287a9049639f9dce1a0f4f3387e23.ctex"
+uid="uid://d1h8iml8hxpuu"
+path="res://.godot/imported/wave13.png-f25a0118a02aeab81529296f50973490.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Enemies/id013/fireTexture.png"
-dest_files=["res://.godot/imported/fireTexture.png-368287a9049639f9dce1a0f4f3387e23.ctex"]
+source_file="res://Assets/Images/HUD/waves/wave13.png"
+dest_files=["res://.godot/imported/wave13.png-f25a0118a02aeab81529296f50973490.ctex"]
 
 [params]
 

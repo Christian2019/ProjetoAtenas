@@ -57,6 +57,10 @@ var id011 = preload("res://Scenes/Game/Enemies/Id011.tscn")
 #Griffin
 var id012 = preload("res://Scenes/Game/Enemies/Id012.tscn")
 
+#Golem
+var id014 = preload("res://Scenes/Game/Enemies/id014/Id014.tscn")
+var arrowAttackId014 = preload("res://Scenes/Game/Enemies/id014/ArrowAttackId014.tscn")
+
 ##Elites:
 #Butcher
 var id013 = preload("res://Scenes/Game/Enemies/id013/Id013.tscn")

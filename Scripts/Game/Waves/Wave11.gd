@@ -8,9 +8,6 @@ var battleFrame=0
 
 var wave=11
 
-
-
-
 func _process(delta):
 	get_parent().waveTimer(self)
 	
@@ -24,8 +21,6 @@ func waveBehavior():
 		spawn((i+3)*60,5,PreLoads.id001,true)
 		spawn((i+4)*60,2,PreLoads.id005,true)
 
-	
-	
 func spawn(frame,quantity,enemy,goblin):
 	if (frame!=battleFrame):
 		return
