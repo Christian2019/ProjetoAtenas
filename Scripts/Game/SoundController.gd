@@ -9,22 +9,28 @@ var farmingMusic
 func _ready():
 	waveMusic=$WaveMusic
 	farmingMusic=$AOEMusic
+	farmingMusic.set_volume_db(-20)
+	farmingMusic.playing=true
 
 
-func startBattleMusic(wave):
-	if (wave==11 or wave==14 or wave==17):
+func startBattleMusic(elite):
+	if (elite):
 		waveMusic=$EliteMusic
-		controllMusic(0,true,10)
+		#controllMusic(0,true,-10)
+		waveMusic.set_volume_db(-10)
+		
 	else:
 		waveMusic=$WaveMusic
-		controllMusic(0,true,0)
+		#controllMusic(0,true,-20)
+		waveMusic.set_volume_db(-20)
 	waveMusic.playing=true
-	
+	farmingMusic.playing=false
 	
 
 func endBattleMusic():
 	farmingMusic.playing=true
-	controllMusic(0,false,0)
+	waveMusic.playing=false
+	#controllMusic(0,false,-20)
 	
 func enableDisableSound():
 	if (enableSound):

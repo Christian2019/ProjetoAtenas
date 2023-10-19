@@ -1,7 +1,9 @@
-res://Assets/Images/Enemies/id013
-res://Scripts/Game/Waves
 res://Assets/Images/HUD/waves
+res://Assets/Images/Enemies/id013
 res://Scripts/Enemies
+res://Scripts/Zones
+res://Assets/Images/Enemies/lavaAnimation
+res://Scripts/Game/Waves
 res://Assets/Images/Enemies/id012
 res://Assets/Images/Enemies/id011
 res://Assets/Images/Enemies/id010
@@ -18,6 +20,4 @@ res://Assets/Images/Enemies/id004
 res://Assets/Images/Enemies/id003
 res://Assets/Images/Enemies/id001
 res://Scripts/Game
-res://Assets/Images/Enemies/lootGoblin
-res://Scenes/Game
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

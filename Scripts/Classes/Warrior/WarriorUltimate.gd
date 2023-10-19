@@ -20,14 +20,12 @@ var monstersHit = []
 var monstersInArea = []
 
 func _ready():
-	Global.Game.get_node("SoundController").enableDisableSound()
 	$Sprite2D.modulate.a=0
 	Global.timerCreator("destroy", max_duration,[],self)
 
 func destroy():
 	Global.hud.max_ultimate_frame=(cd)*60
 	Global.timerCreator("enableAttackUse",cd,[4],Global.player)
-	Global.Game.get_node("SoundController").enableDisableSound()
 	Global.Game.get_node("Night").visible=false
 	queue_free()
 

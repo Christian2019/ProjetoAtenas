@@ -1,6 +1,7 @@
 extends AudioStreamPlayer
 
 func _ready():
+	return
 	var startTime = random(0,stream.get_length())
 	play(startTime)
 	print("Musica tempo de inicio: ",startTime,"s")

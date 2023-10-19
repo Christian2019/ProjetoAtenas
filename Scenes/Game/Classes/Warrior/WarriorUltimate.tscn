@@ -78,10 +78,12 @@ script = ExtResource("1_t7q3d")
 
 [node name="Thunder" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_jt03y")
+volume_db = -15.0
 autoplay = true
 
 [node name="ZeusVoice" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_v8i1d")
+volume_db = -10.0
 autoplay = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

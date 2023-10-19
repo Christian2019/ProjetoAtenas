@@ -2,7 +2,7 @@ extends Node2D
 ##Stats
 
 var dead = false
-var maxHp=999
+var maxHp=99999
 var hp = maxHp
 var move_Speed = 5
 var attack_Speed = 1 ## precisa ser >0

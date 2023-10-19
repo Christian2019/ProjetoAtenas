@@ -1,10 +1,9 @@
 extends Node2D
 
-#Se for inferior a 5 segundos vai dar problema com a trnasicao da musica
 var mining_max_duration_frames = 5*60
 
 var wave = 11
-var maxWave=11
+var maxWave=12
 
 var timer = 0
 
@@ -17,10 +16,16 @@ func _ready():
 
 
 func battleStart():
-	Global.Game.get_node("SoundController").startBattleMusic(wave)
+	if (wave==11 or wave==14 or wave==17):
+		Global.Game.get_node("SoundController").startBattleMusic(true)
+		Global.Game.get_node("Zones/ModifyGround").start(0, 0.4)
+	else:
+		Global.Game.get_node("SoundController").startBattleMusic(false)
 	mining=false
 	
 func battleEnd():
+	if (wave==11 or wave==14 or wave==17):
+		Global.Game.get_node("Zones/ModifyGround").finish()
 	Global.Game.get_node("SoundController").endBattleMusic()
 	mining=true
 	for i in range(0,Global.player.permissions.size(),1):
@@ -43,7 +48,7 @@ func clearChildren(path):
 			instance.queue_free()
 
 func spawnX(enemy):
-	var vector= getAllowRandomSpawnPosition()
+	var vector= getAllowRandomSpawnPosition(enemy)
 	enemy.global_position = vector
 	var x = PreLoads.x.instantiate()
 	x.global_position=vector
@@ -62,13 +67,29 @@ func spawnEnemy(enemy,x):
 	x.queue_free()
 	get_parent().get_node("Enemies").call_deferred("add_child",enemy)
 
-func getAllowRandomSpawnPosition():
+func getAllowRandomSpawnPosition(enemy):
 	var rng = RandomNumberGenerator.new()
 	var x = rng.randi_range(50, 2450)
 	var y = rng.randi_range(50, 1225)
-	if (x>1100 and x<1500 and y>437 and y<761):
-		return getAllowRandomSpawnPosition()
+	if !tryFit(x,y,enemy):
+		return getAllowRandomSpawnPosition(enemy)
 	return Vector2(x,y)
+
+func tryFit(x,y,Enemy):
+		
+	var blockedAreas =	[]
+	
+	for i in range(0,Global.Game.get_node("Zones/BockedAreas").get_child_count(),1):
+		blockedAreas.append(Global.Game.get_node("Zones/BockedAreas").get_child(i))
+		
+	blockedAreas.append(Global.Game.get_node("Zones/Center/CenterArea/CollisionShape2D"))
+		
+	var TryPosition = Vector2(x,y)
+	
+	if (!Global.areaBoxCollision(self,TryPosition,Enemy.get_node("Area2D"),blockedAreas)):
+		return true
+	else:
+		return false
 
 func waveTimer(waveChild):
 	if (wave!=waveChild.wave):
@@ -83,7 +104,7 @@ func waveTimer(waveChild):
 		timer=int((waveChild.battle_max_duration_frames-waveChild.battleFrame)/60)
 		waveChild.battleFrame+=1
 		if (waveChild.battleFrame>=waveChild.battle_max_duration_frames):
-			
+			battleEnd()
 			if (wave<maxWave):
 				wave+=1
 			else:
@@ -91,5 +112,5 @@ func waveTimer(waveChild):
 			
 			waveChild.miningFrame=0
 			waveChild.battleFrame=0	
-			battleEnd()
+			
 			return

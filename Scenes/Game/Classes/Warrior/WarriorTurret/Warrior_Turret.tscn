@@ -83,18 +83,18 @@ sprite_frames = SubResource("SpriteFrames_ayskb")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SoundController/FireArrow"]
 stream = ExtResource("4_vbqur")
-volume_db = -0.465
+volume_db = -20.0
 
 [node name="LightningArrow" type="Node2D" parent="SoundController"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SoundController/LightningArrow"]
 stream = ExtResource("5_p60ld")
-volume_db = -9.695
+volume_db = -20.0
 
 [node name="WaterArrow" type="Node2D" parent="SoundController"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SoundController/WaterArrow"]
 stream = ExtResource("6_nlx7r")
-volume_db = -5.382
+volume_db = -20.0
 
 [node name="Projectiles" type="Node2D" parent="."]

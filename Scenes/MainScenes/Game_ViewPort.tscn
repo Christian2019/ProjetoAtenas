@@ -59,9 +59,12 @@ script = ExtResource("7_qdux6")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TempleNode/TempleSound"]
 stream = ExtResource("8_2m48l")
+volume_db = -10.0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="TempleNode/TempleSound"]
 stream = ExtResource("9_b71q1")
+volume_db = -10.0
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="TempleNode/TempleSound"]
 stream = ExtResource("10_dt5os")
+volume_db = -10.0
