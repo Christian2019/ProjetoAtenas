@@ -1,12 +1,14 @@
 res://Assets/Images/HUD/waves
-res://Scripts/Game/Waves
-res://Assets/Images/Enemies/id014
+res://Assets/Images/Enemies/id015/energyBallAnimation
 res://Scripts/Enemies
+res://Scripts/Game/Waves
+res://Assets/Images/Enemies/id015/walking
+res://Assets/Images/Background
+res://Assets/Images/Enemies/id014
 res://Assets/Images/Enemies/id014/Attacking
 res://Assets/Images/Enemies/id014/Walking
 res://Assets/Images/Enemies/id013
 res://Scripts/Zones
-res://Assets/Images/Enemies/lavaAnimation
 res://Assets/Images/Enemies/id012
 res://Assets/Images/Enemies/id011
 res://Assets/Images/Enemies/id010
@@ -18,6 +20,4 @@ res://Assets/Images/Enemies/id007
 res://Assets/Images
 res://Assets/Images/Enemies/id006
 res://Assets/Images/Enemies/id005
-res://Assets/Images/Enemies/id004/result
-res://Assets/Images/Enemies/id004
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b25qk265fx6bq"
-path="res://.godot/imported/scene00004.png-180e747f9da263129ad119d247545a21.ctex"
+uid="uid://2krbaswfgqvr"
+path="res://.godot/imported/wave14.png-9947456f9db5a2db10a7e8feaeb4b7e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Enemies/lavaAnimation/scene00004.png"
-dest_files=["res://.godot/imported/scene00004.png-180e747f9da263129ad119d247545a21.ctex"]
+source_file="res://Assets/Images/HUD/waves/wave14.png"
+dest_files=["res://.godot/imported/wave14.png-9947456f9db5a2db10a7e8feaeb4b7e0.ctex"]
 
 [params]
 

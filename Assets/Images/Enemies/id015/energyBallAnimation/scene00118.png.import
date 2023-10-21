@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uwvh432swoh3"
-path="res://.godot/imported/scene00001.png-c5be26ae0a26afafa3fb2e881a6da9b8.ctex"
+uid="uid://cwf3hgvukhm2f"
+path="res://.godot/imported/scene00118.png-49b88ecf57f3ae17b29bd3e37ac73e58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Enemies/lavaAnimation/scene00001.png"
-dest_files=["res://.godot/imported/scene00001.png-c5be26ae0a26afafa3fb2e881a6da9b8.ctex"]
+source_file="res://Assets/Images/Enemies/id015/energyBallAnimation/scene00118.png"
+dest_files=["res://.godot/imported/scene00118.png-49b88ecf57f3ae17b29bd3e37ac73e58.ctex"]
 
 [params]
 

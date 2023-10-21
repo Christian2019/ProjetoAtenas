@@ -2,8 +2,8 @@ extends Node2D
 
 var mining_max_duration_frames = 1*60
 
-var wave = 13
-var maxWave=13
+var wave = 14
+var maxWave=14
 
 var timer = 0
 
@@ -18,7 +18,11 @@ func _ready():
 func battleStart():
 	if (wave==11 or wave==14 or wave==17):
 		Global.Game.get_node("SoundController").startBattleMusic(true)
-		Global.Game.get_node("Zones/ModifyGround").start(0, 0.4)
+		var frameBackground=0
+		if (wave==14):
+			frameBackground=1
+			
+		Global.Game.get_node("Zones/ModifyGround").start(0, 0.4,frameBackground)
 	else:
 		Global.Game.get_node("SoundController").startBattleMusic(false)
 	mining=false

@@ -17,12 +17,13 @@ func _process(delta):
 		precessFrame+=1
 
 
-func start(ground, mV):
+func start(ground, mV,backGroundframe):
 	precessFrame=ground
 	started=true
 	precessFrame=0
 	visible=true
 	maxVisibility=mV
+	frame=backGroundframe
 	
 	
 func finish():

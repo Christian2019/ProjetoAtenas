@@ -14,19 +14,19 @@
 [ext_resource type="PackedScene" uid="uid://cx37jdnas0rb1" path="res://Scenes/Game/Constructions/center.tscn" id="9_06qfi"]
 [ext_resource type="AudioStream" uid="uid://cla1mp3rm1x6x" path="res://Assets/Sounds/Game/Enemies/EliteMusic.mp3" id="9_km2ap"]
 [ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple.tscn" id="10_v6y37"]
+[ext_resource type="Texture2D" uid="uid://uwvh432swoh3" path="res://Assets/Images/Background/lava.png" id="11_yl6m5"]
+[ext_resource type="Texture2D" uid="uid://8rpgue6jlk7a" path="res://Assets/Images/Background/ice.png" id="12_w2isy"]
 [ext_resource type="Script" path="res://Scripts/Instances/Turrets.gd" id="13_2l3jl"]
 [ext_resource type="Script" path="res://Scripts/Zones/ModifyGround.gd" id="13_cmk2b"]
-[ext_resource type="Texture2D" uid="uid://uwvh432swoh3" path="res://Assets/Images/Enemies/lavaAnimation/scene00001.png" id="17_bwell"]
-[ext_resource type="Texture2D" uid="uid://b25qk265fx6bq" path="res://Assets/Images/Enemies/lavaAnimation/scene00004.png" id="18_3e41f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ma21g"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("17_bwell")
+"texture": ExtResource("11_yl6m5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_3e41f")
+"texture": ExtResource("12_w2isy")
 }],
 "loop": true,
 "name": &"default",
@@ -97,7 +97,6 @@ visible = false
 position = Vector2(1286, 642)
 scale = Vector2(2.50976, 1.25195)
 sprite_frames = SubResource("SpriteFrames_ma21g")
-frame_progress = 0.412655
 script = ExtResource("13_cmk2b")
 
 [node name="BockedAreas" type="Area2D" parent="Zones"]

@@ -66,6 +66,11 @@ var arrowAttackId014 = preload("res://Scenes/Game/Enemies/id014/ArrowAttackId014
 var id013 = preload("res://Scenes/Game/Enemies/id013/Id013.tscn")
 var arrowAttackId013 = preload("res://Scenes/Game/Enemies/id013/ArrowAttackId013.tscn")
 
+#Death
+var id015 =preload("res://Scenes/Game/Enemies/id015/Id015.tscn")
+var energyBall= preload("res://Scenes/Game/Enemies/id015/EnergyBall.tscn")
+
+
 ##Classes
 var warrior = [
 	preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1.tscn"),

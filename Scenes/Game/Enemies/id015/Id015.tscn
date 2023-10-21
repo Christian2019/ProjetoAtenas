@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://caglhtamlk073"]
+
+[ext_resource type="Script" path="res://Scripts/Enemies/Id015.gd" id="1_1sirt"]
+[ext_resource type="Texture2D" uid="uid://buthjnpvrh86f" path="res://Assets/Images/Enemies/id015/walking/scene00001.png" id="2_h57g8"]
+[ext_resource type="Texture2D" uid="uid://fwfufm1cigs1" path="res://Assets/Images/Enemies/id015/walking/scene00004.png" id="3_wo0b0"]
+[ext_resource type="Texture2D" uid="uid://dp5asmi8l26fd" path="res://Assets/Images/Enemies/id015/walking/scene00007.png" id="4_4sd20"]
+[ext_resource type="Texture2D" uid="uid://4x2eitj3qku6" path="res://Assets/Images/Enemies/id015/walking/scene00010.png" id="5_r3mgx"]
+[ext_resource type="Texture2D" uid="uid://c0bcot3jmi8gu" path="res://Assets/Images/Enemies/id015/walking/scene00013.png" id="6_jm6wo"]
+[ext_resource type="Texture2D" uid="uid://eaf8qs3ubqww" path="res://Assets/Images/Enemies/id015/walking/scene00016.png" id="7_lsuf0"]
+[ext_resource type="Texture2D" uid="uid://bwogguukkqq34" path="res://Assets/Images/Enemies/id015/walking/scene00019.png" id="8_xva4y"]
+[ext_resource type="AudioStream" uid="uid://ktvkyruf14hi" path="res://Assets/Sounds/Game/Enemies/id015.mp3" id="9_io2tx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h57g8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wo0b0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4sd20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r3mgx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jm6wo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lsuf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xva4y")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
+size = Vector2(316, 272)
+
+[sub_resource type="Theme" id="Theme_teygp"]
+
+[node name="Id015" type="Node2D"]
+script = ExtResource("1_1sirt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(15, -3)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_grjig")
+animation = &"Walking"
+autoplay = "Walking"
+frame_progress = 0.28351
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_pmar3")
+
+[node name="HPBar" type="Node2D" parent="."]
+
+[node name="Red" type="ColorRect" parent="HPBar"]
+modulate = Color(1, 0.231373, 0.231373, 1)
+offset_left = -158.0
+offset_top = -160.0
+offset_right = 159.0
+offset_bottom = -126.0
+theme = SubResource("Theme_teygp")
+
+[node name="Green" type="ColorRect" parent="HPBar"]
+modulate = Color(0.486275, 1, 0.231373, 1)
+offset_left = -158.0
+offset_top = -160.0
+offset_right = 160.0
+offset_bottom = -126.0
+theme = SubResource("Theme_teygp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_io2tx")
+volume_db = 3.714
+autoplay = true

@@ -11,3 +11,7 @@ func disableEnableVisibility():
 	else:
 		Global.timerCreator("disableEnableVisibility",0.3,[],self)
 	visible=!visible
+
+func useSpriteBlue():
+	$Sprite2D.visible=false
+	$Sprite2D2.visible=true
