@@ -144,6 +144,7 @@ script = ExtResource("13_2l3jl")
 [node name="Collectable_instances" type="Node2D" parent="Instances"]
 
 [node name="X" type="Node2D" parent="Instances"]
+z_index = 1
 
 [node name="Dracmas" type="Node2D" parent="Instances"]
 

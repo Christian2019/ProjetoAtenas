@@ -2,8 +2,8 @@ extends Node2D
 
 var mining_max_duration_frames = 1*60
 
-var wave = 14
-var maxWave=14
+var wave = 15
+var maxWave=15
 
 var timer = 0
 

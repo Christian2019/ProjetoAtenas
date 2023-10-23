@@ -61,6 +61,10 @@ var id012 = preload("res://Scenes/Game/Enemies/Id012.tscn")
 var id014 = preload("res://Scenes/Game/Enemies/id014/Id014.tscn")
 var arrowAttackId014 = preload("res://Scenes/Game/Enemies/id014/ArrowAttackId014.tscn")
 
+#Hydra
+var id016 = preload("res://Scenes/Game/Enemies/id016/Id016.tscn")
+var fireball = preload("res://Scenes/Game/Enemies/id016/FireBall.tscn")
+
 ##Elites:
 #Butcher
 var id013 = preload("res://Scenes/Game/Enemies/id013/Id013.tscn")
