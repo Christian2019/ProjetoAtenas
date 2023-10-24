@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cb86td4m1hepw"]
+[gd_scene load_steps=27 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="1_28pgp"]
 [ext_resource type="Script" path="res://Scripts/Game/Game.gd" id="1_mli3i"]
@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://8rpgue6jlk7a" path="res://Assets/Images/Background/ice.png" id="12_w2isy"]
 [ext_resource type="Script" path="res://Scripts/Instances/Turrets.gd" id="13_2l3jl"]
 [ext_resource type="Script" path="res://Scripts/Zones/ModifyGround.gd" id="13_cmk2b"]
+[ext_resource type="Texture2D" uid="uid://bkj82dthavt7" path="res://Assets/Images/Background/wind.png" id="13_yo1y8"]
+[ext_resource type="PackedScene" uid="uid://cda1cjd6fv7rn" path="res://Scenes/Game/Enemies/id018/Id018.tscn" id="20_vfl8g"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ma21g"]
 animations = [{
@@ -27,6 +29,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_w2isy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yo1y8")
 }],
 "loop": true,
 "name": &"default",
@@ -155,3 +160,6 @@ visible = false
 offset_right = 2570.0
 offset_bottom = 2758.0
 color = Color(0, 0, 0, 0.647059)
+
+[node name="Id018" parent="." instance=ExtResource("20_vfl8g")]
+position = Vector2(1009, 598)

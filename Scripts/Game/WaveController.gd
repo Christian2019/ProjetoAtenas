@@ -2,8 +2,8 @@ extends Node2D
 
 var mining_max_duration_frames = 1*60
 
-var wave = 16
-var maxWave=16
+var wave = 17
+var maxWave=17
 
 var timer = 0
 
@@ -21,6 +21,8 @@ func battleStart():
 		var frameBackground=0
 		if (wave==14):
 			frameBackground=1
+		elif (wave==17):
+			frameBackground=2
 			
 		Global.Game.get_node("Zones/ModifyGround").start(0, 0.4,frameBackground)
 	else:

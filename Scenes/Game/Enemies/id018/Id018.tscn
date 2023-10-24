@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://cda1cjd6fv7rn"]
+
+[ext_resource type="Texture2D" uid="uid://demnaekgk731y" path="res://Assets/Images/Enemies/id018/Flying/scene00001.png" id="1_8tef0"]
+[ext_resource type="Texture2D" uid="uid://mrkrhdkj886h" path="res://Assets/Images/Enemies/id018/Flying/scene00004.png" id="2_581nt"]
+[ext_resource type="Texture2D" uid="uid://c141qgcpxftd" path="res://Assets/Images/Enemies/id018/Flying/scene00007.png" id="3_wdsk4"]
+[ext_resource type="Texture2D" uid="uid://bc184ssbnaekr" path="res://Assets/Images/Enemies/id018/Flying/scene00010.png" id="4_acuke"]
+[ext_resource type="AudioStream" uid="uid://c0o2aho46uq0d" path="res://Assets/Sounds/Game/Enemies/id018.mp3" id="5_uxer0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8tef0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_581nt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wdsk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_acuke")
+}],
+"loop": true,
+"name": &"Flying",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
+size = Vector2(316, 272)
+
+[sub_resource type="Theme" id="Theme_teygp"]
+
+[node name="Id018" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.881366, 0.881366)
+sprite_frames = SubResource("SpriteFrames_grjig")
+animation = &"Flying"
+autoplay = "Flying"
+frame = 1
+frame_progress = 0.292457
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_pmar3")
+
+[node name="HPBar" type="Node2D" parent="."]
+
+[node name="Red" type="ColorRect" parent="HPBar"]
+modulate = Color(1, 0.231373, 0.231373, 1)
+offset_left = -158.0
+offset_top = -160.0
+offset_right = 159.0
+offset_bottom = -126.0
+theme = SubResource("Theme_teygp")
+
+[node name="Green" type="ColorRect" parent="HPBar"]
+modulate = Color(0.486275, 1, 0.231373, 1)
+offset_left = -158.0
+offset_top = -160.0
+offset_right = 160.0
+offset_bottom = -126.0
+theme = SubResource("Theme_teygp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_uxer0")
+volume_db = -7.429
+autoplay = true
