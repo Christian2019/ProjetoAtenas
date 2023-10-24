@@ -3,7 +3,10 @@ extends Node2D
 var id=1
 var maxHp=30
 var hp = maxHp
-var damage = 1
+var damages = {
+	"damage":1.0
+	}
+
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
@@ -35,6 +38,7 @@ func enableHit(nextHitDelayTarget):
 		nextHitDelayCenterPoint=false
 
 func _process(_delta):
+
 	if (hp<=0):
 		hp=0
 		die()
@@ -73,7 +77,8 @@ func attack():
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
 		Global.timerCreator("enableHit",nextHitDelay,[0],self)
-		Global.player.hp-=damage
+		Global.player.hp-=damages.damage
+		
 		Global.player.activateFeedback()
 		if (Global.player.hp<0):
 			Global.player.hp=0
@@ -82,7 +87,7 @@ func attack():
 		nextHitDelayCenterPoint=true
 		Global.timerCreator("enableHit",nextHitDelay,[1],self)
 		
-		Global.Game.get_node("Zones/Center").hp-=damage
+		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
 		if (Global.Game.get_node("Zones/Center").hp<0):
 			Global.Game.get_node("Zones/Center").hp=0

@@ -3,7 +3,10 @@ extends Node2D
 var id=16
 var maxHp=500
 var hp = maxHp
-var damage = 1
+var damages = {
+	"damage":1.0,
+	"projectileDamage":10.0
+	}
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
@@ -28,10 +31,6 @@ var stage=0
 var onCD=false
 var totalCd=5
 var headCd=0.5
-
-var fireBallspeed=4
-var fireballDamage=10
-
 
 var moveTarget
 
@@ -119,15 +118,15 @@ func createFireBall(headPosition):
 		fireball.angle= angle
 		Global.Game.get_node("Instances/Projectiles").add_child(fireball)
 		fireball.global_position=headPosition
-		fireball.damage= fireballDamage
-		fireball.speed = fireBallspeed
+		fireball.damage= damages.projectileDamage
+
 
 func contactDamage():
 	##Colisao por contado
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
 		Global.timerCreator("enableHit",nextHitDelay,[0],self)
-		Global.player.hp-=damage
+		Global.player.hp-=damages.damage
 		Global.player.activateFeedback()
 		if (Global.player.hp<0):
 			Global.player.hp=0
@@ -136,7 +135,7 @@ func contactDamage():
 		nextHitDelayCenterPoint=true
 		Global.timerCreator("enableHit",nextHitDelay,[1],self)
 		
-		Global.Game.get_node("Zones/Center").hp-=damage
+		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
 		if (Global.Game.get_node("Zones/Center").hp<0):
 			Global.Game.get_node("Zones/Center").hp=0

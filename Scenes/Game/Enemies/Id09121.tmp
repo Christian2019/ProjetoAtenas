@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=3 uid="uid://drrflica21i6q"]
+
+[ext_resource type="Texture2D" uid="uid://dnmslkvlal71r" path="res://Assets/Images/Enemies/id017/scene00001.png" id="1_8ss8q"]
+[ext_resource type="Script" path="res://Scripts/Enemies/Id017.gd" id="1_kah2c"]
+[ext_resource type="Texture2D" uid="uid://tw8hh104d3pe" path="res://Assets/Images/Enemies/id017/scene00004.png" id="2_aptiy"]
+[ext_resource type="Texture2D" uid="uid://g6ov4ffr37ar" path="res://Assets/Images/Enemies/id017/scene00007.png" id="3_85c6i"]
+[ext_resource type="Texture2D" uid="uid://bbj5bhgfnkr5q" path="res://Assets/Images/Enemies/id017/scene00010.png" id="4_dv00i"]
+[ext_resource type="Texture2D" uid="uid://7yj3xv1efbvf" path="res://Assets/Images/Enemies/id017/aura100x100.png" id="5_wvof6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8ss8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_aptiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_85c6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dv00i")
+}],
+"loop": true,
+"name": &"Moving",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
+size = Vector2(120, 59)
+
+[sub_resource type="Theme" id="Theme_teygp"]
+
+[node name="Id017" type="Node2D"]
+script = ExtResource("1_kah2c")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.162459, 0.160625)
+sprite_frames = SubResource("SpriteFrames_grjig")
+animation = &"Moving"
+autoplay = "Moving"
+frame_progress = 0.584038
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_pmar3")
+
+[node name="HPBar" type="Node2D" parent="."]
+position = Vector2(4, -5)
+scale = Vector2(0.518061, 0.518061)
+
+[node name="Red" type="ColorRect" parent="HPBar"]
+modulate = Color(1, 0.231373, 0.231373, 1)
+offset_left = -123.538
+offset_top = -69.4899
+offset_right = 110.462
+offset_bottom = -46.4899
+theme = SubResource("Theme_teygp")
+
+[node name="Green" type="ColorRect" parent="HPBar"]
+modulate = Color(0.486275, 1, 0.231373, 1)
+offset_left = -124.0
+offset_top = -69.4899
+offset_right = 110.0
+offset_bottom = -46.4899
+theme = SubResource("Theme_teygp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("5_wvof6")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

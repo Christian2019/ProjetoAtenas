@@ -4,7 +4,10 @@ var id=7
 var maxHp=500
 var hp = maxHp
 var lastHpCheck=maxHp
-var damage = 1
+var damages = {
+	"damage":1.0,
+	"projectileDamage":10.0
+	}
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
@@ -64,6 +67,7 @@ func shoot():
 	ryuseiken.angle= RandomNumberGenerator.new().randi_range(0, 360)
 	Global.Game.get_node("Instances/Projectiles").add_child(ryuseiken)
 	ryuseiken.global_position=global_position
+	ryuseiken.damage=damages.projectileDamage
 
 
 func attack():
@@ -78,7 +82,7 @@ func attack():
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
 		Global.timerCreator("enableHit",nextHitDelay,[0],self)
-		Global.player.hp-=damage
+		Global.player.hp-=damages.damage
 		Global.player.activateFeedback()
 		if (Global.player.hp<0):
 			Global.player.hp=0
@@ -87,7 +91,7 @@ func attack():
 		nextHitDelayCenterPoint=true
 		Global.timerCreator("enableHit",nextHitDelay,[1],self)
 		
-		Global.Game.get_node("Zones/Center").hp-=damage
+		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
 		if (Global.Game.get_node("Zones/Center").hp<0):
 			Global.Game.get_node("Zones/Center").hp=0

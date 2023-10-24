@@ -3,7 +3,10 @@ extends Node2D
 var id=6
 var maxHp=500
 var hp = maxHp
-var damage = 2
+var damages = {
+	"damage":2.0,
+	"chargeDamage":20.0
+	}
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
@@ -32,7 +35,7 @@ var chargeFrame=0
 var chargeMaxFrame=2.5*60
 #var minRadiusFromPlayer=chargeSpeed*chargeMaxFrame
 var minRadiusFromPlayer=500
-var chargeDamage=20
+
 
 
 func _ready():
@@ -87,7 +90,7 @@ func chargeFunction():
 		if (global_position.distance_to(Global.player.global_position)<minRadiusFromPlayer and chargeFrame<chargeMaxFrame):
 			chargeFrame+=1
 			if (playerInside):
-				Global.player.hp-=chargeDamage
+				Global.player.hp-=damages.chargeDamage
 				Global.player.activateFeedback()
 				chargeFrame=chargeMaxFrame
 				if (Global.player.hp<0):
@@ -192,7 +195,7 @@ func attack():
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
 		Global.timerCreator("enableHit",nextHitDelay,[0],self)
-		Global.player.hp-=damage
+		Global.player.hp-=damages.damage
 		Global.player.activateFeedback()
 		if (Global.player.hp<0):
 			Global.player.hp=0
@@ -201,7 +204,7 @@ func attack():
 		nextHitDelayCenterPoint=true
 		Global.timerCreator("enableHit",nextHitDelay,[1],self)
 		
-		Global.Game.get_node("Zones/Center").hp-=damage
+		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
 		if (Global.Game.get_node("Zones/Center").hp<0):
 			Global.Game.get_node("Zones/Center").hp=0

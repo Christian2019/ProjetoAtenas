@@ -3,7 +3,9 @@ extends Node2D
 var id=2
 var maxHp=100
 var hp = maxHp
-var damage = 1
+var damages = {
+	"damage":1.0
+	}
 
 var nextHitDelayPlayer=false
 var nextHitDelay = 1
@@ -86,7 +88,7 @@ func contactDamage():
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
 		Global.timerCreator("enableHit",nextHitDelay,[],self)
-		Global.player.hp-=damage
+		Global.player.hp-=damages.damage
 		Global.player.activateFeedback()
 		if (Global.player.hp<0):
 			Global.player.hp=0

@@ -3,7 +3,10 @@ extends Node2D
 var id=5
 var maxHp=300
 var hp = maxHp
-var damage = 1
+var damages = {
+	"damage":1.0,
+	"arrowDamage":10.0
+	}
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
@@ -70,6 +73,7 @@ func shoot():
 	arrow.angle=angleToTarget
 	Global.Game.get_node("Instances/Projectiles").add_child(arrow)
 	arrow.global_position=global_position
+	arrow.damage=damages.arrowDamage
 
 func getCloserTarget():
 	Global.timerCreator("getCloserTarget",1,[],self)
@@ -100,7 +104,7 @@ func attack():
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
 		Global.timerCreator("enableHit",nextHitDelay,[0],self)
-		Global.player.hp-=damage
+		Global.player.hp-=damages.damage
 		Global.player.activateFeedback()
 		if (Global.player.hp<0):
 			Global.player.hp=0
@@ -109,7 +113,7 @@ func attack():
 		nextHitDelayCenterPoint=true
 		Global.timerCreator("enableHit",nextHitDelay,[1],self)
 		
-		Global.Game.get_node("Zones/Center").hp-=damage
+		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
 		if (Global.Game.get_node("Zones/Center").hp<0):
 			Global.Game.get_node("Zones/Center").hp=0

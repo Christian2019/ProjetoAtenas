@@ -3,7 +3,10 @@ extends Node2D
 var id=15
 var maxHp=30000
 var hp = maxHp
-var damage = 1
+var damages = {
+	"damage":1.0,
+	"projectileDamage":50.0
+	}
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
@@ -131,15 +134,14 @@ func stage1Func():
 			energyBall.angle= rad_to_deg(global_position.angle_to_point(target.global_position))+i
 			Global.Game.get_node("Instances/Projectiles").add_child(energyBall)
 			energyBall.global_position=global_position
-			energyBall.speed=8
-			energyBall.damage=50
+			energyBall.damage=damages.projectileDamage
 		
 func contactDamage():
 	##Colisao por contado
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
 		Global.timerCreator("enableHit",nextHitDelay,[0],self)
-		Global.player.hp-=damage
+		Global.player.hp-=damages.damage
 		Global.player.activateFeedback()
 		if (Global.player.hp<0):
 			Global.player.hp=0
@@ -148,7 +150,7 @@ func contactDamage():
 		nextHitDelayCenterPoint=true
 		Global.timerCreator("enableHit",nextHitDelay,[1],self)
 		
-		Global.Game.get_node("Zones/Center").hp-=damage
+		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
 		if (Global.Game.get_node("Zones/Center").hp<0):
 			Global.Game.get_node("Zones/Center").hp=0

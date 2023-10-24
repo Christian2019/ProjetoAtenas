@@ -3,6 +3,9 @@ extends Node2D
 var id=8
 var maxHp=500
 var hp = maxHp
+var damages = {}
+
+var speed=0
 
 var dracmas=1
 

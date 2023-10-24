@@ -3,7 +3,10 @@ extends Node2D
 var id=13
 var maxHp=20000
 var hp = maxHp
-var damage = 1
+var damages = {
+	"damage":1.0,
+	"arrowDamage":50.0
+	}
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
@@ -32,8 +35,6 @@ var cd1 = 1
 var cd2 = 0.75
 
 var onCD=false
-
-var arrowDamage=50
 
 var moveBackWardsX=false
 var moveBackWardsY=false
@@ -102,7 +103,7 @@ func attack():
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
 		Global.timerCreator("enableHit",nextHitDelay,[0],self)
-		Global.player.hp-=damage
+		Global.player.hp-=damages.damage
 		Global.player.activateFeedback()
 		if (Global.player.hp<0):
 			Global.player.hp=0
@@ -111,7 +112,7 @@ func attack():
 		nextHitDelayCenterPoint=true
 		Global.timerCreator("enableHit",nextHitDelay,[1],self)
 		
-		Global.Game.get_node("Zones/Center").hp-=damage
+		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
 		if (Global.Game.get_node("Zones/Center").hp<0):
 			Global.Game.get_node("Zones/Center").hp=0
@@ -166,7 +167,7 @@ func spawnArrow(rel_position,angle):
 	arrowAttack.rotation_degrees= angle
 	Global.Game.get_node("Instances/Projectiles").add_child(arrowAttack)
 	arrowAttack.global_position=arrow_position
-	arrowAttack.damage= arrowDamage
+	arrowAttack.damage= damages.arrowDamage
 		
 
 func die():
