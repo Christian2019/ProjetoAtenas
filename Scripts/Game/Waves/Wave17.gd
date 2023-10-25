@@ -13,16 +13,17 @@ func _process(delta):
 	get_parent().waveTimer(self)
 	
 func waveBehavior():
-	return
+	spawn(8*60,1,PreLoads.id018,true)
 	for i in range(0,int(battle_max_duration_frames/60),10):
-		spawn((i+1)*60,1,PreLoads.id017,true)
-		spawn((i+1)*60,2,PreLoads.id011,true)
-		spawn((i+5)*60,2,PreLoads.id011,true)
-		spawn((i+6)*60,15,PreLoads.id001,true)
+		spawn((i+1)*60,6,PreLoads.id001,true)
+		spawn((i+6)*60,6,PreLoads.id001,true)
+		if i>10:
+			spawn((i+9)*60,2,PreLoads.id011,true)
 		if i>20:
-			spawn((i+8)*60,4,PreLoads.id010,true)
-		if i>30:
-			spawn((i+4)*60,4,PreLoads.id009,true)
+			spawn((i+2)*60,6,PreLoads.id010,true)
+			spawn((i+5)*60,6,PreLoads.id009,true)
+		if i>40:
+			spawn((i+3)*60,2,PreLoads.id016,true)
 
 
 func spawn(frame,quantity,enemy,goblin):

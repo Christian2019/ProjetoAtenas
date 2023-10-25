@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cda1cjd6fv7rn"]
+[gd_scene load_steps=10 format=3 uid="uid://cda1cjd6fv7rn"]
 
 [ext_resource type="Texture2D" uid="uid://demnaekgk731y" path="res://Assets/Images/Enemies/id018/Flying/scene00001.png" id="1_8tef0"]
+[ext_resource type="Script" path="res://Scripts/Enemies/Id018.gd" id="1_unoaf"]
 [ext_resource type="Texture2D" uid="uid://mrkrhdkj886h" path="res://Assets/Images/Enemies/id018/Flying/scene00004.png" id="2_581nt"]
 [ext_resource type="Texture2D" uid="uid://c141qgcpxftd" path="res://Assets/Images/Enemies/id018/Flying/scene00007.png" id="3_wdsk4"]
 [ext_resource type="Texture2D" uid="uid://bc184ssbnaekr" path="res://Assets/Images/Enemies/id018/Flying/scene00010.png" id="4_acuke"]
@@ -32,6 +33,7 @@ size = Vector2(316, 272)
 [sub_resource type="Theme" id="Theme_teygp"]
 
 [node name="Id018" type="Node2D"]
+script = ExtResource("1_unoaf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.881366, 0.881366)
@@ -69,3 +71,6 @@ theme = SubResource("Theme_teygp")
 stream = ExtResource("5_uxer0")
 volume_db = -7.429
 autoplay = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
