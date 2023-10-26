@@ -31,6 +31,9 @@ var permissions = [
 	{"ultimate_canUse" : true},
 	]
 
+## Se esta atacando
+var isAttacking = false
+
 #Resources
 var wood =0
 var stone =0
@@ -40,6 +43,7 @@ var dracmaBag=0
 
 var carryingItem
 
+var playerDown=true
 var playerRight=true
 
 var contactQuadrants = []
@@ -57,7 +61,7 @@ var reverseAlphaChange=false
 var playerOnCenterPoint=false
 
 func _ready():
-	$Animation.play("Right")
+	lastMovement="E"
 
 
 var start_b = true
@@ -171,6 +175,10 @@ func attack2Controller():
 		attackInstance.global_position=global_position
 		attackInstance.direction=lastMovement
 		
+		playAnimation ("Attack2")
+		isAttacking = true
+		
+		
 func turretController():
 	var classChild=2	
 	if (Input.is_action_just_pressed("Turret")):
@@ -248,22 +256,55 @@ func getCloserQuadrant():
 		closerQuadrant.get_node("ColorRect").visible=true	
 	
 func animationController():
-	if (dashing):
+	if (isAttacking):
 		return
+	
+	if (dashing):
+		playAnimation ("Dash")
+		return
+	
 	if ($CutAnimation.frame==6):
 		$CutAnimation.frame=0
 		$CutAnimation.stop()
-	if Input.is_action_pressed("Move_Down"):
-		$Animation.play("Down")
+	
+	if Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Left"):
+		$Animation.play("Run_Down_Left")
+	elif Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Right"):
+		$Animation.play("Run_Down_Right")
+	elif Input.is_action_pressed("Move_Up") and Input.is_action_pressed("Move_Left"):
+		$Animation.play("Run_Up_Left")
+	elif Input.is_action_pressed("Move_Up") and Input.is_action_pressed("Move_Right"):
+		$Animation.play("Run_Up_Right")
+	elif Input.is_action_pressed("Move_Down"):
+		$Animation.play("Run_Down")
 	elif Input.is_action_pressed("Move_Up"):
-		$Animation.play("Up")
+		$Animation.play("Run_Up")
 	elif Input.is_action_pressed("Move_Right"):
-		$Animation.play("Right")
+		$Animation.play("Run_Right")
 	elif Input.is_action_pressed("Move_Left"):
-		$Animation.play("Left")
+		$Animation.play("Run_Left")
 	else:
-		$Animation.stop()
+		playAnimation ("Idle")
 		
+
+func playAnimation (animName):
+	if lastMovement=="S":
+		$Animation.play(animName+"_Down")
+	elif lastMovement=="SE":
+		$Animation.play(animName+"_Down_Right")
+	elif lastMovement=="SW":
+		$Animation.play(animName+"_Down_Left")
+	elif lastMovement=="N":
+		$Animation.play(animName+"_Up")
+	elif lastMovement=="NE":
+		$Animation.play(animName+"_Up_Right")
+	elif lastMovement=="NW":
+		$Animation.play(animName+"_Up_Left")
+	elif lastMovement=="E":
+		$Animation.play(animName+"_Right")
+	elif lastMovement=="W":
+		$Animation.play(animName+"_Left")
+
 func enableDisableAnimation():
 	if($Animation.is_playing()):
 		$Animation.stop()
@@ -357,3 +398,8 @@ func _on_body_area_entered(area):
 func _on_body_area_exited(area):
 	if area.get_parent().name == "Center":
 		playerOnCenterPoint=false
+
+
+func _on_animation_animation_looped():
+	if (isAttacking):
+		isAttacking = false
