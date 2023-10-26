@@ -42,6 +42,7 @@ func bossIsDead():
 	return true		
 
 func type0():
+	speed=boss.t0Speed
 	angle+=speed
 	var relativePosition= Vector2(0,0)
 	relativePosition.y=startDistanceFromBoss*cos(deg_to_rad(angle))

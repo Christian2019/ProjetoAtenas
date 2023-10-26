@@ -107,10 +107,12 @@ func die():
 func stageController():
 	if ((float(hp)<0.75*float(maxHp) or wave.battleFrame>33*60) and stage==0):
 		stage=1
+		t0Speed=2
 		onCD=false
 		$AudioStreamPlayer.play(0)
 	elif ((float(hp)<0.40*float(maxHp) or wave.battleFrame>66*60) and stage==1):
 		stage=2
+		t0Speed=3
 		$AudioStreamPlayer.play(0)
 
 
@@ -226,8 +228,8 @@ func getTarget():
 func randomVariation():
 	var v = Vector2(0,0)
 	var rng =RandomNumberGenerator.new()
-	v.x=rng.randi_range(0, t1radios)
-	v.y=rng.randi_range(0, t1radios)
+	v.x=rng.randi_range(0, t1radios*2)-t1radios
+	v.y=rng.randi_range(0, t1radios*2)-t1radios
 	return v
 	
 func stage2Func():
