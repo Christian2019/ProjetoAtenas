@@ -7,5 +7,4 @@ res://Scenes/Game/Enemies/id018/Id018.tscn
 res://Scenes/Game/Enemies/id018/FireEnergy.tscn
 res://Scenes/Game/Enemies/Id011.tscn
 res://Scenes/Game/player.tscn
-res://Scripts/Game/player.gd
 res://Scenes/Game/Classes/Warrior/Warrior_Attack2.tscn
