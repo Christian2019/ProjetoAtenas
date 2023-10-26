@@ -1,10 +1,11 @@
 res://default_env.tres
-res://Scenes/Game/Enemies/id018/Id018.tscn
+res://Scenes/Game/Enemies/Id019.tscn
 res://Assets/Images/Tiles/TileMap.tres
-res://Scripts/Enemies/Id018.gd
 res://Scenes/Game/Game.tscn
 res://Scenes/Game/HUD.tscn
 res://Scenes/Game/Wave_controller.tscn
-res://Scenes/Game/Enemies/id018/FireEnergy.tscn
-res://Scenes/Game/Enemies/Id011.tscn
-res://Scripts/Instances/FireEnergy.gd
+res://Scenes/Game/Enemies/Id009.tscn
+res://Scripts/Enemies/Id019.gd
+res://Scripts/Game/WaveController.gd
+res://Scripts/Game/Waves/Wave18.gd
+res://Scripts/PreLoads.gd

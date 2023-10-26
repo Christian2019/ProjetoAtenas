@@ -1,0 +1,125 @@
+[gd_scene load_steps=20 format=3 uid="uid://daa0vmc4a1vga"]
+
+[ext_resource type="Script" path="res://Scripts/Enemies/Id019.gd" id="1_2c847"]
+[ext_resource type="Texture2D" uid="uid://fkd6hyu1d5uy" path="res://Assets/Images/Enemies/id019/Attacking/scene00055.png" id="1_22yv5"]
+[ext_resource type="Texture2D" uid="uid://5or6012yg5qi" path="res://Assets/Images/Enemies/id019/Attacking/scene00058.png" id="2_8qckv"]
+[ext_resource type="Texture2D" uid="uid://2f5g0bdquc3c" path="res://Assets/Images/Enemies/id019/Attacking/scene00061.png" id="3_p8w6l"]
+[ext_resource type="Texture2D" uid="uid://fh8pmr8wu1pi" path="res://Assets/Images/Enemies/id019/Attacking/scene00064.png" id="4_7an5r"]
+[ext_resource type="Texture2D" uid="uid://cevvt7nmkteul" path="res://Assets/Images/Enemies/id019/Attacking/scene00067.png" id="5_d0tsk"]
+[ext_resource type="Texture2D" uid="uid://i5x5ajf70ib8" path="res://Assets/Images/Enemies/id019/Running/scene00028.png" id="6_nlvcm"]
+[ext_resource type="Texture2D" uid="uid://buyaog2qwpvup" path="res://Assets/Images/Enemies/id019/Running/scene00031.png" id="7_jr6es"]
+[ext_resource type="Texture2D" uid="uid://b1l6lhkaq50qn" path="res://Assets/Images/Enemies/id019/Running/scene00034.png" id="8_fascd"]
+[ext_resource type="Texture2D" uid="uid://c647ka13do2jr" path="res://Assets/Images/Enemies/id019/Running/scene00037.png" id="9_h1kgx"]
+[ext_resource type="Texture2D" uid="uid://d388p05jwdn2x" path="res://Assets/Images/Enemies/id019/Running/scene00040.png" id="10_itpud"]
+[ext_resource type="Texture2D" uid="uid://bhqhlnpderbms" path="res://Assets/Images/Enemies/id019/Walking/scene00013.png" id="11_k6s8u"]
+[ext_resource type="Texture2D" uid="uid://dmxv7nadng7tw" path="res://Assets/Images/Enemies/id019/Walking/scene00016.png" id="12_ai07f"]
+[ext_resource type="Texture2D" uid="uid://pab0enpm5m28" path="res://Assets/Images/Enemies/id019/Walking/scene00019.png" id="13_yr5oh"]
+[ext_resource type="Texture2D" uid="uid://dpjrqgqltb5s3" path="res://Assets/Images/Enemies/id019/Walking/scene00022.png" id="14_d65d3"]
+[ext_resource type="Texture2D" uid="uid://dq1463tsdg1l1" path="res://Assets/Images/Enemies/id019/Walking/scene00025.png" id="15_65k4i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_22yv5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8qckv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p8w6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7an5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_d0tsk")
+}],
+"loop": true,
+"name": &"Attacking",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_nlvcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jr6es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fascd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h1kgx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_itpud")
+}],
+"loop": true,
+"name": &"Running",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_k6s8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ai07f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yr5oh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_d65d3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_65k4i")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
+size = Vector2(162, 145.625)
+
+[sub_resource type="Theme" id="Theme_teygp"]
+
+[node name="Id019" type="Node2D"]
+script = ExtResource("1_2c847")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -4)
+scale = Vector2(0.792069, 0.792069)
+sprite_frames = SubResource("SpriteFrames_grjig")
+animation = &"Walking"
+autoplay = "Walking"
+frame_progress = 0.771573
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -4.8125)
+shape = SubResource("RectangleShape2D_pmar3")
+
+[node name="HPBar" type="Node2D" parent="."]
+position = Vector2(-44, -43)
+
+[node name="Red" type="ColorRect" parent="HPBar"]
+modulate = Color(1, 0.231373, 0.231373, 1)
+offset_left = -38.0
+offset_top = -51.0
+offset_right = 126.0
+offset_bottom = -34.0
+theme = SubResource("Theme_teygp")
+
+[node name="Green" type="ColorRect" parent="HPBar"]
+modulate = Color(0.486275, 1, 0.231373, 1)
+offset_left = -38.0
+offset_top = -51.0
+offset_right = 126.0
+offset_bottom = -34.0
+theme = SubResource("Theme_teygp")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
