@@ -1,11 +1,8 @@
 res://default_env.tres
-res://Scenes/Game/Enemies/Id019.tscn
-res://Assets/Images/Tiles/TileMap.tres
 res://Scenes/Game/Game.tscn
+res://Assets/Images/Tiles/TileMap.tres
 res://Scenes/Game/HUD.tscn
 res://Scenes/Game/Wave_controller.tscn
 res://Scenes/Game/Enemies/Id009.tscn
-res://Scripts/Enemies/Id019.gd
-res://Scripts/Game/WaveController.gd
-res://Scripts/Game/Waves/Wave18.gd
-res://Scripts/PreLoads.gd
+res://Scenes/Game/Enemies/Id019.tscn
+res://Scenes/Game/Enemies/id013/Id013.tscn
