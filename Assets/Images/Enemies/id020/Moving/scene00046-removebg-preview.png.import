@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdfd3c8ihymgx"
-path="res://.godot/imported/2D-Fantasy-Minotaurs-Sprite-Sheets2.webp-6c3e776a04d10652f3207e7a55d478a8.ctex"
+uid="uid://fqr2f42ulxd2"
+path="res://.godot/imported/scene00046-removebg-preview.png-c034add3a7e580349abb8fec8c99752b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/2D-Fantasy-Minotaurs-Sprite-Sheets2.webp"
-dest_files=["res://.godot/imported/2D-Fantasy-Minotaurs-Sprite-Sheets2.webp-6c3e776a04d10652f3207e7a55d478a8.ctex"]
+source_file="res://Assets/Images/Enemies/id020/Moving/scene00046-removebg-preview.png"
+dest_files=["res://.godot/imported/scene00046-removebg-preview.png-c034add3a7e580349abb8fec8c99752b.ctex"]
 
 [params]
 

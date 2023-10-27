@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fqr2f42ulxd2"
-path="res://.godot/imported/scene00046-removebg-preview.png-9d67bb51b0fa7817502ee865b18045a1.ctex"
+uid="uid://g62pmfywwhnx"
+path="res://.godot/imported/scene00037-removebg-preview.png-20f46c83e3f7749ad34dca0557224a05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Enemies/id020/Walking/scene00046-removebg-preview.png"
-dest_files=["res://.godot/imported/scene00046-removebg-preview.png-9d67bb51b0fa7817502ee865b18045a1.ctex"]
+source_file="res://Assets/Images/Enemies/id020/Moving/scene00037-removebg-preview.png"
+dest_files=["res://.godot/imported/scene00037-removebg-preview.png-20f46c83e3f7749ad34dca0557224a05.ctex"]
 
 [params]
 

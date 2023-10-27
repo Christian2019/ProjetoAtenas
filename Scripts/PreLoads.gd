@@ -71,6 +71,10 @@ var id017 = preload("res://Scenes/Game/Enemies/Id017.tscn")
 #Minotaur6
 var id019 = preload("res://Scenes/Game/Enemies/Id019.tscn")
 
+#Worm
+var id020 = preload("res://Scenes/Game/Enemies/id020/Id020.tscn")
+var poison = preload("res://Scenes/Game/Enemies/id020/Poison.tscn")
+
 ##Elites:
 #Butcher
 var id013 = preload("res://Scenes/Game/Enemies/id013/Id013.tscn")
