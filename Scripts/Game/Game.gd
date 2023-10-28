@@ -15,5 +15,5 @@ func _process(_delta):
 		Global.camera.zoom.y=0.5
 
 	if (Input.is_action_just_pressed("zoomIn")):
-		Global.camera.zoom.x=1
-		Global.camera.zoom.y=1
+		Global.camera.zoom.x=0.75
+		Global.camera.zoom.y=0.75
