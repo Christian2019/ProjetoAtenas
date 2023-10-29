@@ -28,7 +28,7 @@ var collidinWithPlayer=false
 
 var reverseOrder=false
 
-var attacktype=0
+var quality="common"
 
 func _ready():
 	Global.timerCreator("enableReverseOrder",max_duration/2,[],self)
@@ -55,8 +55,7 @@ func _process(_delta):
 func animation():
 	$Animation.stop()
 	$Animation.visible=true
-	$Animation.frame=attacktype
-	
+	$Animation.frame=0
 	if direction=="NE":
 		$Animation.rotate(deg_to_rad(45))
 	elif direction=="E":

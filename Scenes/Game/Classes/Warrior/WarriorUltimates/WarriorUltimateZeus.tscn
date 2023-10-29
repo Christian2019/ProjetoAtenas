@@ -1,0 +1,110 @@
+[gd_scene load_steps=16 format=3 uid="uid://hivlcm55i6jy"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/WarriorUltimate.gd" id="1_sy0il"]
+[ext_resource type="AudioStream" uid="uid://cwb8astmjglgm" path="res://Assets/Sounds/thunder.wav" id="2_7x0ai"]
+[ext_resource type="AudioStream" uid="uid://ch1danorl6kw4" path="res://Assets/Sounds/zeusvoice.mp3" id="3_puwtv"]
+[ext_resource type="Texture2D" uid="uid://dyq77bc1xhaea" path="res://Assets/Images/Player/thunder.png" id="4_nxeup"]
+[ext_resource type="Texture2D" uid="uid://gtkm5i1qkq6u" path="res://Assets/Images/Player/zeusUlt3.png" id="5_3b2ki"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnbrf"]
+atlas = ExtResource("4_nxeup")
+region = Rect2(0, 0, 250, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocowt"]
+atlas = ExtResource("4_nxeup")
+region = Rect2(250, 0, 250, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7myp"]
+atlas = ExtResource("4_nxeup")
+region = Rect2(500, 0, 250, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymkrp"]
+atlas = ExtResource("4_nxeup")
+region = Rect2(750, 0, 250, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8tp7"]
+atlas = ExtResource("4_nxeup")
+region = Rect2(0, 333, 250, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdan8"]
+atlas = ExtResource("4_nxeup")
+region = Rect2(250, 333, 250, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxajj"]
+atlas = ExtResource("4_nxeup")
+region = Rect2(500, 333, 250, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obd34"]
+atlas = ExtResource("4_nxeup")
+region = Rect2(750, 333, 250, 333)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2gk0k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnbrf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocowt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7myp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymkrp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8tp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdan8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxajj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obd34")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2tay"]
+size = Vector2(236, 237)
+
+[node name="WarriorUltimateZeus" type="Node2D"]
+script = ExtResource("1_sy0il")
+
+[node name="Thunder" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_7x0ai")
+volume_db = -15.0
+autoplay = true
+
+[node name="ZeusVoice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_puwtv")
+volume_db = -10.0
+autoplay = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(7, 91)
+sprite_frames = SubResource("SpriteFrames_2gk0k")
+autoplay = "default"
+frame = 7
+frame_progress = 0.629515
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, -21.5)
+shape = SubResource("RectangleShape2D_h2tay")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-2, -117)
+scale = Vector2(0.305556, 0.305556)
+texture = ExtResource("5_3b2ki")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

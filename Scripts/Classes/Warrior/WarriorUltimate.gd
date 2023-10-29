@@ -1,6 +1,6 @@
 extends Node2D
 
-var attacktype=0
+var quality="common"
 
 #Dano por frame (respeitando nextHitDelay)
 var damage = 5

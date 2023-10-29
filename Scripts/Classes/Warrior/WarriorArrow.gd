@@ -1,6 +1,6 @@
 extends Node2D
 
-var attacktype=0
+
 var speed=10
 var angle
 var damage
@@ -13,7 +13,7 @@ func _ready():
 func animation():
 	$AnimatedSprite2D.stop()
 	$AnimatedSprite2D.visible=true
-	$AnimatedSprite2D.frame=attacktype
+	$AnimatedSprite2D.frame=0
 
 
 func _process(delta):

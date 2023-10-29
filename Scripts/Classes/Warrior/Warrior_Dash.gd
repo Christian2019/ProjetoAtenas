@@ -1,6 +1,6 @@
 extends Node2D
 
-var attacktype=0
+var quality="common"
 
 var quantityOfShadows=5
 

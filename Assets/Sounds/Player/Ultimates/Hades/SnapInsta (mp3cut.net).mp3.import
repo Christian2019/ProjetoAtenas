@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3tr5im0vbthn"
+path="res://.godot/imported/SnapInsta (mp3cut.net).mp3-50e812d8995c414cd64544a80a0e3a18.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Player/Ultimates/Hades/SnapInsta (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/SnapInsta (mp3cut.net).mp3-50e812d8995c414cd64544a80a0e3a18.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

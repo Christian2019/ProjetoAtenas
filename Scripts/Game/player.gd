@@ -7,20 +7,18 @@ var hp = maxHp
 var move_Speed = 5
 var attack_Speed = 1 ## precisa ser >0
 
-var playerClass = PreLoads.warrior
-
 #Controle do ultimo movimento, pode ser N,S,W,E,NE,NW,SE,SW. Usado para controle da direacao do ataque
 var lastMovement = "E"
 
-##Abilities Var
+##Skills Ativos
+var attack1={"skill":PreLoads.warrior_attack1_noGod, "quality": "common"}
+var attack2={"skill":PreLoads.warrior_attack2_noGod, "quality": "common"}
+var turret={"skill":PreLoads.warrior_turret_zeus, "quality": "common"}
+var dash={"skill":PreLoads.warrior_dash_noGod, "quality": "common"}
+var ultimate={"skill":PreLoads.warrior_ultimate_zeus, "quality": "common"}
 
-var actions = [
-	{"attack1_type" : 1},
-	{"attack2_type" : 0},
-	{"turret_type" : 0},
-	{"dash_type" : 0},
-	{"ultimate_type" : 0},
-	]
+#Passivos
+
 
 ## Se esta em CD
 var permissions = [
@@ -45,7 +43,6 @@ var playerRight=true
 var contactQuadrants = []
 
 var closerQuadrant 
-#{vector2,index}
 
 var farming =false
 var dashing = false
@@ -58,14 +55,7 @@ var playerOnCenterPoint=false
 
 func _ready():
 	$Animation.play("Right")
-
-
-var start_b = true
-func start():
-	if (start_b):
-		start_b = false
-		Global.player = self
-	
+	Global.player = self
 
 func _process(__delta):
 	if (dead):
@@ -73,179 +63,20 @@ func _process(__delta):
 	
 	if (hp<=0):
 		dead=true
-		#Global.timerCreator("restartGame",5,[],self)
 		restartGame()
 		return
-		
-	start()	
+
 	animationController()
 	commandController()	
 	getCloserQuadrant()
-	debug()
+	
 	mining()
 	feedback()
+	
 	#contruction()
-	
-func feedback():
-	if (feedBackAtive):
-		var feedbackSpeed=0.04
-		if (!reverseAlphaChange):
-			modulate.a -= feedbackSpeed
-			if (modulate.a<=0.0):
-				reverseAlphaChange=true
-		else:
-			modulate.a += feedbackSpeed
-			if (modulate.a>=1):
-				reverseAlphaChange=false
 
-func activateFeedback():
-	if (!feedBackAtive):
-		feedBackAtive=true
-		Global.timerCreator("disableFeeback",1,[],self)
-		
-func disableFeeback():
-	feedBackAtive=false
-	modulate.a=1
-	
 func restartGame():
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/Fatality.tscn")
-
-func debug():
-	if Input.is_action_just_pressed("ChangeAttack1"):
-		changeAction(0)
-	elif Input.is_action_just_pressed("ChangeAttack2"):
-		changeAction(1)
-	elif Input.is_action_just_pressed("ChangeTurret"):
-		changeAction(2)
-			
-func changeAction(i):
-	actions[i]={str(actions[i].keys()[0]) : actions[i].values()[0]+1}
-	if (actions[i].values()[0]==3):
-		actions[i]={str(actions[i].keys()[0]) : 0}
-			
-func commandController():
-	if (dashing):
-		return
-	
-	moveController()
-	
-	if (farming or playerOnCenterPoint or Global.Game.get_node("WaveController").mining):
-		return
-	
-	attack1Controller()
-	attack2Controller()
-	turretController()
-	dashController()
-	ultimateController()
-	
-func creatAttackInstance(classChild):
-	##Criando uma instancia do tipo do ataque da classe
-	var attackInstance = playerClass[classChild].instantiate()
-
-	##Bloqueando o uso da skill pelo cd da skill / tua attack speed
-	permissions[classChild]=false
-	
-	#Global.timerCreator("enableAttackUse",attackInstance.cd/attack_Speed,[classChild],self)	
-	
-	attackInstance.attacktype=actions[classChild].values()[0]
-
-	return attackInstance
-   
-func enableAttackUse(classChild):
-	permissions[classChild]=true
-	
-	
-func attack1Controller():
-	var classChild=0	
-	if (Input.is_action_pressed("Attack1") and permissions[classChild]):
-		var attackInstance = creatAttackInstance(classChild)
-		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
-		attackInstance.global_position=global_position
-		attackInstance.direction=lastMovement
-
-func attack2Controller():
-	var classChild=1	
-	if (Input.is_action_pressed("Attack2") and permissions[classChild]):
-		var attackInstance = creatAttackInstance(classChild)
-		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
-		attackInstance.global_position=global_position
-		attackInstance.direction=lastMovement
-		
-func turretController():
-	var classChild=2	
-	if (Input.is_action_just_pressed("Turret")):
-		print("Turret")
-		var attackInstance = creatAttackInstance(classChild)
-		Global.Game.get_node("Instances/Turrets").add_child(attackInstance)
-		attackInstance.global_position=global_position
-		
-		
-		
-func dashController():
-	var classChild=3	
-	if (Input.is_action_just_pressed("Dash") and permissions[classChild]):
-		print("Dash")
-		var attackInstance = creatAttackInstance(classChild)
-		attackInstance.direction= lastMovement
-		add_child(attackInstance)
-		enableDisableAnimation()
-		
-		
-func ultimateController():
-	var classChild=4	
-	if (Input.is_action_just_pressed("Ultimate") and permissions[classChild]):
-		print("Ultimate")
-		var attackInstance = creatAttackInstance(classChild)
-		Global.Game.get_node("Night").visible=true
-		add_child(attackInstance)
-
-
-
-func contruction():
-	if (Input.is_action_just_pressed("Turret")):
-		if (closerQuadrant!=null and closerQuadrant.allowToConstruct):
-			var tower_instance = PreLoads.tower.instantiate()
-			tower_instance.position = closerQuadrant.position
-			closerQuadrant.tower = tower_instance
-			get_parent().get_node("Towers").add_child(tower_instance)
-	
-
-func mining():
-	if (!farming):
-		return
-		
-	if Input.is_action_pressed("Attack1"):
-		if (playerRight):
-			$CutAnimation.flip_h=false
-		else:
-			$CutAnimation.flip_h=true
-		$CutAnimation.play()
-		if closerQuadrant!=null:
-			if closerQuadrant.get_node("Resource").visible:
-				closerQuadrant.get_node("Resource").visible=false
-				var collectable_instance = PreLoads.collectable.instantiate()
-				
-				if (closerQuadrant.get_node("Resource").animation=="wood"):
-					collectable_instance.get_node("AnimatedSprite2D").animation="wood"
-				elif (closerQuadrant.get_node("Resource").animation=="gold"):
-					collectable_instance.get_node("AnimatedSprite2D").animation="gold"
-				elif (closerQuadrant.get_node("Resource").animation=="stone"):
-					collectable_instance.get_node("AnimatedSprite2D").animation="stone"
-				
-				collectable_instance.global_position=closerQuadrant.get_node("Resource").global_position
-				Global.Game.get_node("Instances/Collectable_instances").add_child(collectable_instance)
-	
-				
-func getCloserQuadrant():
-	for i in range(0,contactQuadrants.size(),1):
-		contactQuadrants[i].get_node("ColorRect").visible=false
-		if (closerQuadrant==null):
-			closerQuadrant=contactQuadrants[i]
-		elif(position.distance_to(contactQuadrants[i].position)<position.distance_to(closerQuadrant.position)):
-			closerQuadrant.get_node("ColorRect").visible=false
-			closerQuadrant=contactQuadrants[i]
-	if (closerQuadrant!=null):
-		closerQuadrant.get_node("ColorRect").visible=true	
 	
 func animationController():
 	if (dashing):
@@ -263,12 +94,21 @@ func animationController():
 		$Animation.play("Left")
 	else:
 		$Animation.stop()
-		
-func enableDisableAnimation():
-	if($Animation.is_playing()):
-		$Animation.stop()
-	else:
-		$Animation.play()	
+
+func commandController():
+	if (dashing):
+		return
+	
+	moveController()
+	
+	if (farming or playerOnCenterPoint or Global.Game.get_node("WaveController").mining):
+		return
+	
+	attack1Controller()
+	attack2Controller()
+	turretController()
+	dashController()
+	ultimateController()
 	
 func moveController():
 	var speedModifier=1
@@ -293,7 +133,7 @@ func moveController():
 
 		
 	lastMoveController()
-
+	
 func tryToMove(speedX,speedY):
 	var topSpeed = 150
 	if (abs(speedX)>topSpeed):
@@ -322,8 +162,6 @@ func tryToMove(speedX,speedY):
 		position.x+=speedX*testSpeedValue
 		return false
 		
-	
-
 func lastMoveController():
 
 	if Input.is_action_pressed("Move_Down"):
@@ -342,12 +180,147 @@ func lastMoveController():
 		lastMovement="E"
 	elif Input.is_action_pressed("Move_Left"):
 		lastMovement="W"
+
+   
+func enableAttackUse(classChild):
+	permissions[classChild]=true
+
+func attack1Controller():
+	var classChild=0	
+	if (Input.is_action_pressed("Attack1") and permissions[classChild]):
+		var attackInstance = creatAttackInstance(classChild)
+		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
+		attackInstance.global_position=global_position
+		attackInstance.direction=lastMovement
 		
+func creatAttackInstance(classChild):
+	##Criando uma instancia do tipo do ataque da classe
+	var attackInstance
+	
+	if (classChild==0):
+		attackInstance= attack1.skill.instantiate()
+		attackInstance.quality= attack1.quality
+	elif(classChild==1):
+		attackInstance= attack2.skill.instantiate()
+		attackInstance.quality= attack2.quality
+	elif(classChild==2):
+		attackInstance= turret.skill.instantiate()
+		attackInstance.quality= turret.quality
+	elif(classChild==3):
+		attackInstance= dash.skill.instantiate()
+		attackInstance.quality= dash.quality
+	elif(classChild==4):
+		attackInstance= ultimate.skill.instantiate()
+		attackInstance.quality= ultimate.quality
 
+	##Bloqueando o uso da skill pelo cd da skill / tua attack speed
+	permissions[classChild]=false
 
-func _on_timer_timeout():
-	pass
+	return attackInstance
 
+func attack2Controller():
+	var classChild=1	
+	if (Input.is_action_pressed("Attack2") and permissions[classChild]):
+		var attackInstance = creatAttackInstance(classChild)
+		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
+		attackInstance.global_position=global_position
+		attackInstance.direction=lastMovement
+		
+func turretController():
+	var classChild=2	
+	if (Input.is_action_just_pressed("Turret")):
+		print("Turret")
+		var attackInstance = creatAttackInstance(classChild)
+		Global.Game.get_node("Instances/Turrets").add_child(attackInstance)
+		attackInstance.global_position=global_position
+
+func dashController():
+	var classChild=3	
+	if (Input.is_action_just_pressed("Dash") and permissions[classChild]):
+		print("Dash")
+		var attackInstance = creatAttackInstance(classChild)
+		attackInstance.direction= lastMovement
+		add_child(attackInstance)
+		enableDisableAnimation()
+		
+func enableDisableAnimation():
+	if($Animation.is_playing()):
+		$Animation.stop()
+	else:
+		$Animation.play()	
+		
+func ultimateController():
+	var classChild=4	
+	if (Input.is_action_just_pressed("Ultimate") and permissions[classChild]):
+		print("Ultimate")
+		var attackInstance = creatAttackInstance(classChild)
+		Global.Game.get_node("Night").visible=true
+		add_child(attackInstance)
+	
+func getCloserQuadrant():
+	for i in range(0,contactQuadrants.size(),1):
+		contactQuadrants[i].get_node("ColorRect").visible=false
+		if (closerQuadrant==null):
+			closerQuadrant=contactQuadrants[i]
+		elif(position.distance_to(contactQuadrants[i].position)<position.distance_to(closerQuadrant.position)):
+			closerQuadrant.get_node("ColorRect").visible=false
+			closerQuadrant=contactQuadrants[i]
+	if (closerQuadrant!=null):
+		closerQuadrant.get_node("ColorRect").visible=true
+		
+func mining():
+	if (!farming):
+		return
+		
+	if Input.is_action_pressed("Attack1"):
+		if (playerRight):
+			$CutAnimation.flip_h=false
+		else:
+			$CutAnimation.flip_h=true
+		$CutAnimation.play()
+		if closerQuadrant!=null:
+			if closerQuadrant.get_node("Resource").visible:
+				closerQuadrant.get_node("Resource").visible=false
+				var collectable_instance = PreLoads.collectable.instantiate()
+				
+				if (closerQuadrant.get_node("Resource").animation=="wood"):
+					collectable_instance.get_node("AnimatedSprite2D").animation="wood"
+				elif (closerQuadrant.get_node("Resource").animation=="gold"):
+					collectable_instance.get_node("AnimatedSprite2D").animation="gold"
+				elif (closerQuadrant.get_node("Resource").animation=="stone"):
+					collectable_instance.get_node("AnimatedSprite2D").animation="stone"
+				
+				collectable_instance.global_position=closerQuadrant.get_node("Resource").global_position
+				Global.Game.get_node("Instances/Collectable_instances").add_child(collectable_instance)	
+
+func feedback():
+	if (feedBackAtive):
+		var feedbackSpeed=0.04
+		if (!reverseAlphaChange):
+			modulate.a -= feedbackSpeed
+			if (modulate.a<=0.0):
+				reverseAlphaChange=true
+		else:
+			modulate.a += feedbackSpeed
+			if (modulate.a>=1):
+				reverseAlphaChange=false
+
+func activateFeedback():
+	if (!feedBackAtive):
+		feedBackAtive=true
+		Global.timerCreator("disableFeeback",1,[],self)
+		
+func disableFeeback():
+	feedBackAtive=false
+	modulate.a=1
+
+func contruction():
+	if (Input.is_action_just_pressed("Turret")):
+		if (closerQuadrant!=null and closerQuadrant.allowToConstruct):
+			var tower_instance = PreLoads.tower.instantiate()
+			tower_instance.position = closerQuadrant.position
+			closerQuadrant.tower = tower_instance
+			get_parent().get_node("Towers").add_child(tower_instance)
 
 func _on_body_area_entered(area):
 	if area.get_parent().name == "Center":

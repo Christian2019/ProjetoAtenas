@@ -12,14 +12,13 @@ var canShoot=true
 
 var max_duration = 30
 
-var attacktype=0
+var quality="common"
+
 var randomTurret=true
 
 var closerEnemy
 
 func _ready():
-	if (randomTurret):
-			attacktype=RandomNumberGenerator.new().randi_range(0, 2)
 	animation()
 	audioInstances()
 	Global.timerCreator("destroy",max_duration,[],self)
@@ -50,7 +49,6 @@ func shoot():
 	Global.timerCreator("enbaleShoot",cd,[],self)
 	playsound()
 	var arrow = PreLoads.warrior_arrow.instantiate()
-	arrow.attacktype=attacktype
 	arrow.angle=$Animations/Up.rotation_degrees
 	arrow.damage=damage
 	$Projectiles.add_child(arrow)
@@ -59,7 +57,7 @@ func enbaleShoot():
 	canShoot=true
 
 func playsound():
-	var sounds = $SoundController.get_child(attacktype).get_children()
+	var sounds = $SoundController.get_child(0).get_children()
 	for i in range(0, sounds.size(),1):
 		if (!sounds[i].playing):
 			sounds[i].playing=true
@@ -70,7 +68,7 @@ func animation():
 		var child= $Animations.get_child(i)
 		child.stop()
 		child.visible=true
-		child.frame=attacktype
+		child.frame=0
 
 
 func destroy():

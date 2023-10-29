@@ -30,7 +30,7 @@ var collidinWithPlayer=false
 
 var reverseOrder=false
 
-var attacktype=0
+var quality="common"
 
 var startRotationAngle
 
@@ -88,7 +88,7 @@ func startPosition():
 func startAnimation():
 	$Animation.stop()
 	$Animation.visible=true
-	$Animation.frame=attacktype
+	$Animation.frame=0
 	
 	"""
 	if direction=="NE":

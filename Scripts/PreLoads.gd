@@ -90,12 +90,53 @@ var fireEnergy= preload("res://Scenes/Game/Enemies/id018/FireEnergy.tscn")
 
 
 ##Classes
-var warrior = [
-	preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1.tscn"),
-	preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2.tscn"),
-	preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/Warrior_Turret.tscn"),
-	preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash.tscn"),
-	preload("res://Scenes/Game/Classes/Warrior/WarriorUltimate.tscn")
-]
-var warrior_arrow = preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/WarriorArrow.tscn")
+##Warrior
+
+#Attack1
+var warrior_attack1_noGod=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1.tscn")
+var warrior_attack1_zeus
+var warrior_attack1_poseidon
+var warrior_attack1_hades
+var warrior_attack1_divine_ZeusPoseion
+var warrior_attack1_divine_ZeusHades
+var warrior_attack1_divine_HadesPoseion
+
+#Attack2
+var warrior_attack2_noGod=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2.tscn")
+var warrior_attack2_zeus
+var warrior_attack2_poseidon
+var warrior_attack2_hades
+var warrior_attack2_divine_ZeusPoseidon
+var warrior_attack2_divine_ZeusHades
+var warrior_attack2_divine_HadesPoseidon
+
+#Dash
+var warrior_dash_noGod=preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash.tscn")
+var warrior_dash_zeus
+var warrior_dash_poseidon
+var warrior_dash_hades
+var warrior_dash_divine_ZeusPoseidon
+var warrior_dash_divine_ZeusHades
+var warrior_dash_divine_HadesPoseidon
 var dashShadow= preload("res://Scenes/Game/Classes/Warrior/WarriorDash/DashShadow.tscn")
+
+#Turret
+var warrior_turret_zeus=preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/Warrior_Turret.tscn")
+var warrior_turret_hades
+var warrior_turret_poseidon
+var warrior_turret_divine_ZeusPoseidon
+var warrior_turret_divine_ZeusHades
+var warrior_turret_divine_HadesPoseidon
+var warrior_arrow = preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/WarriorArrow.tscn")
+
+#Ultimate
+var warrior_ultimate_zeus=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimateZeus.tscn")
+var warrior_ultimate_hades
+var warrior_ultimate_poseidon
+var warrior_ultimate_divine_ZeusPoseidon
+var warrior_ultimate_divine_ZeusHades
+var warrior_ultimate_divine_HadesPoseidon
+
+
+
+
