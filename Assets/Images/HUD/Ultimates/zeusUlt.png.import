@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs3huelgoy0ey"
-path="res://.godot/imported/zeusUlt2.png-0129f19f201878cf25e772c0c66f5eaa.ctex"
+uid="uid://b30q73hel4bo6"
+path="res://.godot/imported/zeusUlt.png-3c5ba930fcdbc4e271676e7bf5adae1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Player/zeusUlt2.png"
-dest_files=["res://.godot/imported/zeusUlt2.png-0129f19f201878cf25e772c0c66f5eaa.ctex"]
+source_file="res://Assets/Images/HUD/Ultimates/zeusUlt.png"
+dest_files=["res://.godot/imported/zeusUlt.png-3c5ba930fcdbc4e271676e7bf5adae1c.ctex"]
 
 [params]
 

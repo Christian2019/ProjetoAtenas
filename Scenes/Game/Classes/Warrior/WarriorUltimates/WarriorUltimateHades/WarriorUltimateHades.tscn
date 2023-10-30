@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bl0vx8ctmva5o"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimateHades/WarriorUltimateHades.gd" id="1_rxtwm"]
+[ext_resource type="AudioStream" uid="uid://ucmrldp0cqk3" path="res://Assets/Sounds/Player/Ultimates/Hades/SnapInsta.io - The Final Combat (128 kbps).mp3" id="2_nqayi"]
+[ext_resource type="AudioStream" uid="uid://b3tr5im0vbthn" path="res://Assets/Sounds/Player/Ultimates/Hades/SnapInsta (mp3cut.net).mp3" id="3_hlepq"]
+[ext_resource type="Texture2D" uid="uid://d15y3okhk15k6" path="res://Assets/Images/Player/Ultimates/Hades/hades-removebg-preview.png" id="4_khaan"]
+
+[node name="WarriorUltimateHades" type="Node2D"]
+script = ExtResource("1_rxtwm")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_nqayi")
+volume_db = -15.0
+
+[node name="Voice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_hlepq")
+volume_db = 15.0
+autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-2, -117)
+scale = Vector2(0.305556, 0.305556)
+texture = ExtResource("4_khaan")

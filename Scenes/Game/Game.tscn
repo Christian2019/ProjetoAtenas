@@ -138,6 +138,8 @@ scale = Vector2(1.289, 1.289)
 
 [node name="Enemies" type="Node2D" parent="."]
 
+[node name="Allies" type="Node2D" parent="."]
+
 [node name="Instances" type="Node2D" parent="."]
 
 [node name="Turrets" type="Node2D" parent="Instances"]

@@ -36,7 +36,8 @@ func battleEnd():
 	mining=true
 	for i in range(0,Global.player.permissions.size(),1):
 		Global.player.permissions[i]=true
-	
+
+	Global.player.ultimateWaveActivations=0
 	clearWave()
 
 func clearWave():
@@ -44,6 +45,8 @@ func clearWave():
 	clearChildren("Instances/Turrets")
 	clearChildren("Instances/Projectiles")
 	clearChildren("Instances/X")
+	clearChildren("Allies")
+	
 
 func clearChildren(path):
 	for i in range(0,Global.Game.get_node(path).get_child_count(),1):
