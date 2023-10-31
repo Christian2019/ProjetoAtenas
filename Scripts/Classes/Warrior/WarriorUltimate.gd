@@ -22,6 +22,7 @@ var monstersInArea = []
 func _ready():
 	$Sprite2D.modulate.a=0
 	Global.timerCreator("destroy", max_duration,[],self)
+	Global.Game.get_node("Night").visible=true
 
 func destroy():
 	Global.hud.max_ultimate_frame=(cd)*60

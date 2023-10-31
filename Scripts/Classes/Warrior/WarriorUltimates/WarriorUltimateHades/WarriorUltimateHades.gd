@@ -17,6 +17,7 @@ var Allycerberus
 
 
 func _ready():
+	Global.Game.get_node("Night").visible=true
 	$Sprite2D.modulate.a=0
 	Global.timerCreator("destroy", max_duration,[],self)
 	$Music.play(10)

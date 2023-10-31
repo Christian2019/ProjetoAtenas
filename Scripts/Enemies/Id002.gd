@@ -116,9 +116,9 @@ func move():
 		getTarget()
 		
 	var movement = getSpeedModifier()
-	while (!tryToMove(movement.x,movement.y)):
+	if (!tryToMove(movement.x,movement.y)):
 		getTarget()
-		movement = getSpeedModifier()
+
 
 	if (movement.z<0):
 		$AnimatedSprite2D.flip_h=true

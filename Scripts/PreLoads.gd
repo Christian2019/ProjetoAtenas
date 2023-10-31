@@ -132,7 +132,7 @@ var warrior_arrow = preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/War
 #Ultimate
 var warrior_ultimate_zeus=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimateZeus.tscn")
 var warrior_ultimate_hades= preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimateHades/WarriorUltimateHades.tscn")
-var warrior_ultimate_poseidon
+var warrior_ultimate_poseidon= preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon/WarriorUltimatePoseidon.tscn")
 var warrior_ultimate_divine_ZeusPoseidon
 var warrior_ultimate_divine_ZeusHades
 var warrior_ultimate_divine_HadesPoseidon

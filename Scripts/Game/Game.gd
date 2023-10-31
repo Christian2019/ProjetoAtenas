@@ -17,3 +17,13 @@ func _process(_delta):
 	if (Input.is_action_just_pressed("zoomIn")):
 		Global.camera.zoom.x=0.75
 		Global.camera.zoom.y=0.75
+		
+	if (Input.is_action_just_pressed("IncresseWave")):
+		if (Global.WaveController.wave+1>Global.WaveController.maxWave):
+			Global.WaveController.wave=1
+		else:
+			Global.WaveController.wave+=1	
+	elif (Input.is_action_just_pressed("DecressWave")):
+		if (Global.WaveController.wave>1):
+			Global.WaveController.wave-=1
+	

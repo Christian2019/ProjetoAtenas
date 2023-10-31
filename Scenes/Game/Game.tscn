@@ -156,6 +156,8 @@ z_index = 1
 
 [node name="Itens" type="Node2D" parent="Instances"]
 
+[node name="Ultimates" type="Node2D" parent="Instances"]
+
 [node name="Night" type="ColorRect" parent="."]
 visible = false
 offset_right = 2570.0

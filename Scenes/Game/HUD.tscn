@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://b18nigm5wn5ab"]
+[gd_scene load_steps=35 format=3 uid="uid://b18nigm5wn5ab"]
 
 [ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/HUD.gd" id="1_60mgy"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://gawpunthm68w" path="res://Assets/Images/HUD/waves/wave19.png" id="28_b4n51"]
 [ext_resource type="Texture2D" uid="uid://b30q73hel4bo6" path="res://Assets/Images/HUD/Ultimates/zeusUlt.png" id="29_35oqo"]
 [ext_resource type="Texture2D" uid="uid://4xs1mdhghkr" path="res://Assets/Images/HUD/Ultimates/hadesUltHUD.png" id="30_5voq0"]
+[ext_resource type="Texture2D" uid="uid://c3ce7u01og0rt" path="res://Assets/Images/HUD/Ultimates/poseidonUltHUD.png" id="31_bp4i7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_22btt"]
 font = ExtResource("2_owy1r")
@@ -108,6 +109,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
 }],
 "loop": true,
 "name": &"default",
@@ -366,7 +370,7 @@ label_settings = SubResource("LabelSettings_22btt")
 position = Vector2(171.5, 122)
 scale = Vector2(0.0622902, 0.106592)
 sprite_frames = SubResource("SpriteFrames_yngw4")
-frame = 1
+frame = 2
 
 [node name="ColorRect" type="ColorRect" parent="Frontground/Ultimate"]
 offset_left = 153.0

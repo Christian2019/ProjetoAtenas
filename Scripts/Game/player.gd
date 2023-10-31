@@ -15,7 +15,7 @@ var attack1={"skill":PreLoads.warrior_attack1_noGod, "quality": "common"}
 var attack2={"skill":PreLoads.warrior_attack2_noGod, "quality": "common"}
 var turret={"skill":PreLoads.warrior_turret_zeus, "quality": "common"}
 var dash={"skill":PreLoads.warrior_dash_noGod, "quality": "common"}
-var ultimate={"skill":PreLoads.warrior_ultimate_hades, "quality": "common"}
+var ultimate={"skill":PreLoads.warrior_ultimate_poseidon, "quality": "common"}
 var ultimateMaxActivations=5
 var ultimateWaveActivations=0
 #Passivos
@@ -256,8 +256,8 @@ func ultimateController():
 		print("Ultimate")
 		ultimateWaveActivations+=1
 		var attackInstance = creatAttackInstance(classChild)
-		Global.Game.get_node("Night").visible=true
-		add_child(attackInstance)
+		Global.Game.get_node("Instances/Ultimates").add_child(attackInstance)
+		attackInstance.global_position=global_position
 	
 func getCloserQuadrant():
 	for i in range(0,contactQuadrants.size(),1):
