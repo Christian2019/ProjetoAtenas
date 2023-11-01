@@ -15,6 +15,10 @@ var tower_projectile = preload("res://Scenes/Game/Constructions/Defenses/Project
 ##X
 var x = preload("res://Scenes/Game/Enemies/X.tscn")
 
+#LabelDamage
+
+var labelDamage= preload("res://Scenes/Game/SpawnDamage.tscn")
+
 ##Normal
 
 #Minotaur

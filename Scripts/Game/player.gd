@@ -1,11 +1,21 @@
 extends Node2D
-##Stats
 
 var dead = false
+
+##Stats
 var maxHp=99999
 var hp = maxHp
-var move_Speed = 5
+var hpRegeneration=0
+var lifeSteal=0
+var percentDamage=0
+var baseDamage=0
 var attack_Speed = 1 ## precisa ser >0
+var percentCritDamage=0
+var armor=0
+var dodge=0
+var maxDodge=70
+var move_Speed = 5
+var luck=0
 
 #Controle do ultimo movimento, pode ser N,S,W,E,NE,NW,SE,SW. Usado para controle da direacao do ataque
 var lastMovement = "E"
@@ -37,22 +47,22 @@ var gold =0
 var dracma=0
 var dracmaBag=0
 
+#Farming
 var carryingItem
 
-var playerRight=true
+
 
 var contactQuadrants = []
-
 var closerQuadrant 
 
 var farming =false
+var playerOnCenterPoint=false
 var dashing = false
+var playerRight=true
 
 ##Feedback por levar dano ou curar
 var feedBackAtive=false
 var reverseAlphaChange=false
-
-var playerOnCenterPoint=false
 
 func _ready():
 	$Animation.play("Right")
