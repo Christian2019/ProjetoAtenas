@@ -15,7 +15,7 @@ var attack1={"skill":PreLoads.warrior_attack1_noGod, "quality": "common"}
 var attack2={"skill":PreLoads.warrior_attack2_noGod, "quality": "common"}
 var turret={"skill":PreLoads.warrior_turret_zeus, "quality": "common"}
 var dash={"skill":PreLoads.warrior_dash_noGod, "quality": "common"}
-var ultimate={"skill":PreLoads.warrior_ultimate_poseidon, "quality": "common"}
+var ultimate={"skill":PreLoads.warrior_ultimate_poseidon, "quality": "legendary"}
 var ultimateMaxActivations=5
 var ultimateWaveActivations=0
 #Passivos

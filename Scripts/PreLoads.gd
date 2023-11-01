@@ -138,5 +138,6 @@ var warrior_ultimate_divine_ZeusHades
 var warrior_ultimate_divine_HadesPoseidon
 var hades_skeleton=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimateHades/skeleton.tscn")
 var hades_cerberus=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimateHades/cerberus.tscn")
+var poseidon_tentacle=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon/WarriorUltimatePoseidonTentacle.tscn")
 
 
