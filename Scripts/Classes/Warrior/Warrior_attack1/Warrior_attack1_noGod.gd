@@ -28,31 +28,22 @@ var collidinWithPlayer=false
 
 var reverseOrder=false
 
-var quality="common"
+var quality="legendary"
+
 
 func _ready():
 	Global.timerCreator("enableReverseOrder",max_duration/2,[],self)
 	$Animation.visible=false
 
-	
-
-var waitFrames=0
-var waitMaxFrames=1
-func waitFunc():
-	if (waitFrames>=waitMaxFrames):
-		if (waitFrames>waitMaxFrames):
-			return
-		animation()
-	waitFrames+=1	
-
-
 func _process(_delta):
-	waitFunc()
+	animation()
 	move()
 	damageAction()
 	destroy()
 
 func animation():
+	if ($Animation.visible):
+		return
 	$Animation.stop()
 	$Animation.visible=true
 	$Animation.frame=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cb86td4m1hepw"]
+[gd_scene load_steps=28 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="1_28pgp"]
 [ext_resource type="Script" path="res://Scripts/Game/Game.gd" id="1_mli3i"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cx37jdnas0rb1" path="res://Scenes/Game/Constructions/center.tscn" id="9_06qfi"]
 [ext_resource type="AudioStream" uid="uid://cla1mp3rm1x6x" path="res://Assets/Sounds/Game/Enemies/EliteMusic.mp3" id="9_km2ap"]
 [ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple.tscn" id="10_v6y37"]
+[ext_resource type="Texture2D" uid="uid://tgat8lil5tbh" path="res://Assets/Images/Background/map.png" id="11_8uskw"]
 [ext_resource type="Texture2D" uid="uid://uwvh432swoh3" path="res://Assets/Images/Background/lava.png" id="11_yl6m5"]
 [ext_resource type="Texture2D" uid="uid://8rpgue6jlk7a" path="res://Assets/Images/Background/ice.png" id="12_w2isy"]
 [ext_resource type="Script" path="res://Scripts/Instances/Turrets.gd" id="13_2l3jl"]
@@ -96,6 +97,11 @@ stream = ExtResource("8_a6cos")
 stream = ExtResource("9_km2ap")
 
 [node name="Zones" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Zones"]
+position = Vector2(1276.75, 1379.25)
+scale = Vector2(2.908, 3.54774)
+texture = ExtResource("11_8uskw")
 
 [node name="Mining Zones" parent="Zones" instance=ExtResource("3_lg0li")]
 position = Vector2(4, 192)

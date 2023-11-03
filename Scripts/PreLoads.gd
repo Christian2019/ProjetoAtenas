@@ -97,13 +97,15 @@ var fireEnergy= preload("res://Scenes/Game/Enemies/id018/FireEnergy.tscn")
 ##Warrior
 
 #Attack1
-var warrior_attack1_noGod=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1.tscn")
-var warrior_attack1_zeus
+var warrior_attack1_noGod=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_noGod.tscn")
+var warrior_attack1_zeus=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Zeus/Warrior_attack1_Zeus.tscn")
 var warrior_attack1_poseidon
 var warrior_attack1_hades
 var warrior_attack1_divine_ZeusPoseion
 var warrior_attack1_divine_ZeusHades
 var warrior_attack1_divine_HadesPoseion
+
+var warrior_attack1_zeus_lightning=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Zeus/Lightining.tscn")
 
 #Attack2
 var warrior_attack2_noGod=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2.tscn")

@@ -3189,6 +3189,7 @@ sources/0 = SubResource("TileSetAtlasSource_hvr52")
 metadata/_edit_horizontal_guides_ = [640.0, 320.0, 560.0, 480.0, 400.0]
 
 [node name="TileMap" type="TileMap" parent="."]
+visible = false
 position = Vector2(-241, -32)
 tile_set = ExtResource("1_aitpp")
 format = 2

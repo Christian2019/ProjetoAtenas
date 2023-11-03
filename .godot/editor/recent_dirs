@@ -1,3 +1,6 @@
+res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Zeus
+res://Assets/Images/Player/Attack1/Zeus/Lightning
+res://Scripts/Classes/Warrior/Warrior_attack1
 res://Scripts/Game
 res://Assets/Images/Player/Ultimates/Poseidon/wave
 res://Assets/Images/HUD/Ultimates
@@ -17,7 +20,4 @@ res://Scripts/Game/Waves
 res://Assets/Images/Enemies/id020/Moving
 res://Assets/Images/Enemies/id019/Walking
 res://Assets/Images/Enemies/id019/Running
-res://Assets/Images/Enemies/id019/Attacking
-res://Assets/Images/Enemies/id018/FireEnergyAnimation
-res://Assets/Images/Enemies/id018/Flying
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

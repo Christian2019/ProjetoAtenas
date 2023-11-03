@@ -1,9 +1,5 @@
 extends Node2D
 
-
-func _ready():
-	Global.MathController=self
-	
 #Effects
 var electrified=[]
 
@@ -18,10 +14,24 @@ func addEntityElectrified(element,extraPercentDamage):
 func eletrifiedFunc():
 	for i in range(0,electrified.size(),1):
 		if (electrified[i].frame==electrified[i].maxFrame):
-			removeObj(electrified[i],electrified)
+			call_deferred("removeObj",electrified[i],electrified)
 		else:
 			electrified[i]= {"element":electrified[i].element,"objectReference":weakref(electrified[i].element),"frame":(electrified[i].frame+1),
 		"maxFrame":electrified[i].maxFrame,"extraPercentDamage":electrified[i].extraPercentDamage}
+
+func clearArrays():
+	electrified.clear()
+
+func _ready():
+	Global.MathController=self
+	Global.timerCreator("printEffectsArrays",1,[],self)
+	
+	
+func printEffectsArrays():
+	return
+	Global.timerCreator("printEffectsArrays",1,[],self)
+	print(electrified)
+	
 
 func _process(delta):
 	eletrifiedFunc()
@@ -35,6 +45,8 @@ func damageController(damage,target):
 	elif (target.name!="Center"):
 		
 	#Effects
+		if(checkIfExist(target.name,electrified)):
+			finalDamage=damage*electrified[getElementIndex(target,electrified)].extraPercentDamage
 	
 	
 	#Se o target for o enemy recebe os bonus dos status ofensivos
