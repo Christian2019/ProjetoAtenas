@@ -1,12 +1,15 @@
 extends Node2D
 
-var basic_radios = 100 
+var basic_radios
 
 var moving = false
 
 var speed = 6
 
 var endTurn = false
+
+func _ready():
+	basic_radios = Global.player.collect_radios
 
 func _process(delta):
 	if (Global.Game.get_node("WaveController").mining):

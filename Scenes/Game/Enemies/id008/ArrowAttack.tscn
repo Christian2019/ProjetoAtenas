@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://0574faxgvsx8" path="res://Assets/Images/Enemies/id008/fullBar.png" id="1_6q5mh"]
 [ext_resource type="Script" path="res://Scripts/Instances/ArrowAttack.gd" id="1_aveqm"]
-[ext_resource type="Texture2D" uid="uid://bu8eu3dm0q653" path="res://Assets/Images/Enemies/id008/emptyBar.png" id="2_02ts7"]
-[ext_resource type="Texture2D" uid="uid://ch1f36rxnv24m" path="res://Assets/Images/Enemies/id008/fireTexture.png" id="3_2m307"]
+[ext_resource type="Texture2D" uid="uid://bu8eu3dm0q653" path="res://Assets/Images/Enemies/ArrowAttack/emptyBar.png" id="2_02ts7"]
+[ext_resource type="Texture2D" uid="uid://ch1f36rxnv24m" path="res://Assets/Images/Enemies/ArrowAttack/fireTexture.png" id="3_2m307"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
 size = Vector2(106.5, 9)

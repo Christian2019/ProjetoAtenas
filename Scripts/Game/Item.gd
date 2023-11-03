@@ -1,6 +1,6 @@
 extends Node2D
 
-var basic_radios = 100 
+var basic_radios
 
 var moving = false
 
@@ -9,6 +9,7 @@ var speed = 6
 var endTurn = false
 
 func _ready():
+	basic_radios = Global.player.collect_radios
 	var rng = RandomNumberGenerator.new().randi_range(0, 209)
 	$Itens.frame=rng 
 

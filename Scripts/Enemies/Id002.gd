@@ -88,7 +88,7 @@ func contactDamage():
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
 		Global.timerCreator("enableHit",nextHitDelay,[],self)
-		Global.player.hp-=damages.damage
+		Global.MathController.damageController(damages.damage,Global.player)
 		Global.player.activateFeedback()
 		if (Global.player.hp<0):
 			Global.player.hp=0

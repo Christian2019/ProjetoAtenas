@@ -126,10 +126,8 @@ func contactDamage():
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
 		Global.timerCreator("enableHit",nextHitDelay,[0],self)
-		Global.player.hp-=damages.damage
+		Global.MathController.damageController(damages.damage,Global.player)
 		Global.player.activateFeedback()
-		if (Global.player.hp<0):
-			Global.player.hp=0
 			
 	if (centerPointInside and !nextHitDelayCenterPoint):
 		nextHitDelayCenterPoint=true
@@ -137,15 +135,11 @@ func contactDamage():
 		
 		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
-		if (Global.Game.get_node("Zones/Center").hp<0):
-			Global.Game.get_node("Zones/Center").hp=0
-	
+
 
 func hpBarController():
 	hpBarWidth=maxHpBarWidth*hp/maxHp
 	$HPBar/Green.size.x=hpBarWidth
-	
-
 
 func die():
 	if heads!=1:

@@ -90,11 +90,10 @@ func chargeFunction():
 		if (global_position.distance_to(Global.player.global_position)<minRadiusFromPlayer and chargeFrame<chargeMaxFrame):
 			chargeFrame+=1
 			if (playerInside):
-				Global.player.hp-=damages.chargeDamage
+				Global.MathController.damageController(damages.chargeDamage,Global.player)
 				Global.player.activateFeedback()
 				chargeFrame=chargeMaxFrame
-				if (Global.player.hp<0):
-					Global.player.hp=0
+				
 			chargeMove()
 		else:
 			chargeFrame=0
@@ -195,10 +194,9 @@ func attack():
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
 		Global.timerCreator("enableHit",nextHitDelay,[0],self)
-		Global.player.hp-=damages.damage
+		Global.MathController.damageController(damages.damage,Global.player)
 		Global.player.activateFeedback()
-		if (Global.player.hp<0):
-			Global.player.hp=0
+	
 			
 	if (centerPointInside and !nextHitDelayCenterPoint):
 		nextHitDelayCenterPoint=true
@@ -206,8 +204,7 @@ func attack():
 		
 		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
-		if (Global.Game.get_node("Zones/Center").hp<0):
-			Global.Game.get_node("Zones/Center").hp=0
+	
 	
 
 func hpBarController():

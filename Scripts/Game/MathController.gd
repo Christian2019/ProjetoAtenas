@@ -50,25 +50,73 @@ func _process(delta):
 
 func damageController(damage,target):
 	var finalDamage=damage
+	var crit=false
+	var miss=false
 	if (target.name=="Player"):
-		#Se o target for player recebe os bonus dos status defensivos
-		spawnDamage(finalDamage,target)
-	elif (target.name!="Center"):
 		
+		#Armor
+		var armor=Global.player.armor
+		var armorTankMultiplier
+		if (armor>=0):
+			armorTankMultiplier = 1+ (armor*0.05)
+		else:
+			armor *=-1
+			armorTankMultiplier = 1/ (1+(armor*0.05))
+		
+		finalDamage/=armorTankMultiplier
+		
+		#Dodge
+		if (Global.player.dodge>0):
+			var dodge
+			if(Global.player.dodge>Global.player.maxDodge):
+				dodge=Global.player.maxDodge
+			else:
+				dodge=Global.player.dodge
+			
+			var r = RandomNumberGenerator.new().randi_range(0, 100)
+			if (r<=dodge):
+				miss=true
+				finalDamage=0
+
+		spawnDamage(finalDamage,target,crit,true,miss,false)
+		
+	elif (target.name!="Center"):
+
+		#Stats Damage Extra
+		finalDamage*=Global.player.baseDamage*Global.player.percentDamage
+
+		#Crit
+		if (Global.player.percentCritDamage>0):
+			var r = RandomNumberGenerator.new().randi_range(0, 100)
+			if (r<=int(Global.player.percentCritDamage*100)):
+				finalDamage*=2
+				crit=true
+		
+		#LifeStealChance
+		if (Global.player.lifeStealChance>0):
+			var r = RandomNumberGenerator.new().randi_range(0, 100)
+			if (r<=int(Global.player.lifeStealChance*100)):
+				Global.player.hp+=1
+				if Global.player.hp>Global.player.maxHp:
+					Global.player.hp=Global.player.maxHp
+				spawnDamage(finalDamage,Global.player,crit,false,miss,true)
+
 	#Effects
 		if(checkIfExist(target.name,electrified)):
-			finalDamage=damage*electrified[getElementIndex(target,electrified)].extraPercentDamage
+			finalDamage=finalDamage*electrified[getElementIndex(target,electrified)].extraPercentDamage
 	
 	
-	#Se o target for o enemy recebe os bonus dos status ofensivos
-	
-		spawnDamage(finalDamage,target)
+		spawnDamage(finalDamage,target,crit,false,miss,false)
 
 	target.hp-=finalDamage
 
-func spawnDamage(finalDamage,target):
+func spawnDamage(finalDamage,target,crit,colorBlue,miss,lifeSteal):
 	var labeldamage=PreLoads.labelDamage.instantiate()
 	labeldamage.damage=finalDamage
+	labeldamage.crit=crit
+	labeldamage.colorBlue=colorBlue
+	labeldamage.miss=miss
+	labeldamage.lifeSteal=lifeSteal
 	add_child(labeldamage)
 	labeldamage.global_position=target.global_position
 	

@@ -16,23 +16,23 @@
 [ext_resource type="AudioStream" uid="uid://cla1mp3rm1x6x" path="res://Assets/Sounds/Game/Enemies/EliteMusic.mp3" id="9_km2ap"]
 [ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple.tscn" id="10_v6y37"]
 [ext_resource type="Texture2D" uid="uid://tgat8lil5tbh" path="res://Assets/Images/Background/map.png" id="11_8uskw"]
-[ext_resource type="Texture2D" uid="uid://uwvh432swoh3" path="res://Assets/Images/Background/lava.png" id="11_yl6m5"]
-[ext_resource type="Texture2D" uid="uid://8rpgue6jlk7a" path="res://Assets/Images/Background/ice.png" id="12_w2isy"]
 [ext_resource type="Script" path="res://Scripts/Instances/Turrets.gd" id="13_2l3jl"]
 [ext_resource type="Script" path="res://Scripts/Zones/ModifyGround.gd" id="13_cmk2b"]
-[ext_resource type="Texture2D" uid="uid://bkj82dthavt7" path="res://Assets/Images/Background/wind.png" id="13_yo1y8"]
+[ext_resource type="Texture2D" uid="uid://djfg2b82q3e1v" path="res://Assets/Images/Background/Elementos/Lava.png" id="13_khncd"]
+[ext_resource type="Texture2D" uid="uid://b7hblsmp8buki" path="res://Assets/Images/Background/Elementos/Ice.png" id="14_1sbx1"]
+[ext_resource type="Texture2D" uid="uid://vr7n6dsjomd5" path="res://Assets/Images/Background/Elementos/Clouds.png" id="15_jndto"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ma21g"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_yl6m5")
+"texture": ExtResource("13_khncd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_w2isy")
+"texture": ExtResource("14_1sbx1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_yo1y8")
+"texture": ExtResource("15_jndto")
 }],
 "loop": true,
 "name": &"default",
@@ -99,8 +99,8 @@ stream = ExtResource("9_km2ap")
 [node name="Zones" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Zones"]
-position = Vector2(1276.75, 1379.25)
-scale = Vector2(2.908, 3.54774)
+position = Vector2(1280.5, 1377)
+scale = Vector2(2.92686, 3.55355)
 texture = ExtResource("11_8uskw")
 
 [node name="Mining Zones" parent="Zones" instance=ExtResource("3_lg0li")]
@@ -109,8 +109,8 @@ scale = Vector2(4, 4)
 
 [node name="ModifyGround" type="AnimatedSprite2D" parent="Zones"]
 visible = false
-position = Vector2(1286, 642)
-scale = Vector2(2.50976, 1.25195)
+position = Vector2(1281, 635.5)
+scale = Vector2(2.562, 3.29124)
 sprite_frames = SubResource("SpriteFrames_ma21g")
 script = ExtResource("13_cmk2b")
 

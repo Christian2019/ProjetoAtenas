@@ -17,7 +17,7 @@ func _process(delta):
 func _on_area_2d_area_entered(area):
 	if (area.get_parent().name=="Player" or area.get_parent().name=="Center"):
 		var enemy = area.get_parent()
-		enemy.hp-=damage
+		Global.MathController.damageController(damage,enemy)
 		enemy.activateFeedback()
 		queue_free()
 	if (area.name=="BockedAreas"):

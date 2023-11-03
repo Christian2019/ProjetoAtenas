@@ -6,16 +6,17 @@ var dead = false
 var maxHp=99999
 var hp = maxHp
 var hpRegeneration=0
-var lifeSteal=0
-var percentDamage=0
-var baseDamage=0
-var attack_Speed = 1 ## precisa ser >0
-var percentCritDamage=0
-var armor=0
-var dodge=0
+var lifeStealChance=0.1
+var percentDamage=1.4
+var baseDamage=1.0
+var attack_Speed = 1.0
+var percentCritDamage=0.5
+var armor=20
+var dodge=50
 var maxDodge=70
 var move_Speed = 5
 var luck=0
+var collect_radios=200
 
 #Controle do ultimo movimento, pode ser N,S,W,E,NE,NW,SE,SW. Usado para controle da direacao do ataque
 var lastMovement = "E"
@@ -73,6 +74,7 @@ func _process(__delta):
 		return
 	
 	if (hp<=0):
+		hp=0
 		dead=true
 		restartGame()
 		return

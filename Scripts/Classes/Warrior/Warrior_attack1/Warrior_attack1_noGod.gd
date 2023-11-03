@@ -32,8 +32,13 @@ var quality="legendary"
 
 
 func _ready():
+	attackSpeedModifier()
 	Global.timerCreator("enableReverseOrder",max_duration/2,[],self)
 	$Animation.visible=false
+	
+func attackSpeedModifier():
+	max_duration=max_duration/Global.player.attack_Speed
+	speed=speed*Global.player.attack_Speed
 
 func _process(_delta):
 	animation()

@@ -5,17 +5,6 @@ extends Node2D
 var direction = "E"
 var relativePosition= Vector2(0,0)
 
-#Dano por frame (respeitando nextHitDelay)
-var damage = 10
-
-#->Determinado pela skill
-#Por frame
-var speed = 10
-
-#Duracao em segundos
-var cd = 3
-var max_duration = 0.5
-#var nextHitDelay = 10
 var nextHitDelay = 1
 
 #Monstros que foram atingidos pelo ataque
@@ -28,30 +17,47 @@ var collidinWithPlayer=false
 
 var reverseOrder=false
 
-var quality="legendary"
-
-var extraPercentDamage=0
-
 var createdLightning=false
 
-var lightningDamage=50
+#Variaveis modificaveis pelo jogador:
+
+var quality="legendary"
 
 var extraBounces
 
+#Damages 
+var lightningDamage
+var damage = 10
+
+#AttackSpeeds
+var speed = 10
+var max_duration = 0.5
+
+#LegendaryExtra
+var extraPercentDamage=0
 
 func _ready():
+	attackSpeedModifier()
 	Global.timerCreator("enableReverseOrder",max_duration/2,[],self)
 	$Animation.visible=false
 	qualityStatus()
 
+func attackSpeedModifier():
+	max_duration=max_duration/Global.player.attack_Speed
+	speed=speed*Global.player.attack_Speed
+
 func qualityStatus():
 	if ( quality=="common"):
+		lightningDamage=10
 		extraBounces=2
 	elif ( quality=="rare"):
+		lightningDamage=12
 		extraBounces=4
 	elif ( quality=="epic"):
+		lightningDamage=15
 		extraBounces=6
 	elif ( quality=="legendary"):
+		lightningDamage=20
 		extraPercentDamage=1.5
 		extraBounces=8
 
