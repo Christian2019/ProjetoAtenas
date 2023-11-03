@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b18nigm5wn5ab"]
+[gd_scene load_steps=40 format=3 uid="uid://b18nigm5wn5ab"]
 
 [ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/HUD.gd" id="1_60mgy"]
@@ -102,6 +102,100 @@ animations = [{
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yngw4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0f3i7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3g5ue"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4n63o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ecpgq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k2oq7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -410,3 +504,76 @@ offset_top = 46.0
 offset_right = 974.0
 offset_bottom = 68.0
 color = Color(1, 0, 0, 1)
+
+[node name="Skills" type="Node2D" parent="Frontground"]
+scale = Vector2(1.72, 1.72)
+
+[node name="Selected" type="ColorRect" parent="Frontground/Skills"]
+offset_left = 7.55814
+offset_top = 183.721
+offset_right = 25.5581
+offset_bottom = 211.721
+color = Color(0.00184107, 0.00184107, 0.00184107, 1)
+
+[node name="Label" type="Label" parent="Frontground/Skills/Selected"]
+layout_mode = 0
+offset_left = 3.48837
+offset_top = 1.74417
+offset_right = 43.4884
+offset_bottom = 27.7442
+text = "0"
+
+[node name="Attack1_Border" type="ColorRect" parent="Frontground/Skills"]
+offset_left = 7.0
+offset_top = 214.0
+offset_right = 26.0
+offset_bottom = 247.0
+
+[node name="Attack1" type="AnimatedSprite2D" parent="Frontground/Skills/Attack1_Border"]
+position = Vector2(9.56977, 16)
+scale = Vector2(0.0244695, 0.040404)
+sprite_frames = SubResource("SpriteFrames_0f3i7")
+
+[node name="Attack2_Border" type="ColorRect" parent="Frontground/Skills"]
+offset_left = 8.0
+offset_top = 251.0
+offset_right = 27.0
+offset_bottom = 284.0
+
+[node name="Attack2" type="AnimatedSprite2D" parent="Frontground/Skills/Attack2_Border"]
+position = Vector2(9.15116, 16.4462)
+scale = Vector2(0.0225119, 0.0391523)
+sprite_frames = SubResource("SpriteFrames_3g5ue")
+
+[node name="Turret" type="ColorRect" parent="Frontground/Skills"]
+offset_left = 7.55814
+offset_top = 287.209
+offset_right = 26.5581
+offset_bottom = 320.209
+
+[node name="Turret" type="AnimatedSprite2D" parent="Frontground/Skills/Turret"]
+position = Vector2(9.30233, 16)
+scale = Vector2(0.0254483, 0.040404)
+sprite_frames = SubResource("SpriteFrames_4n63o")
+
+[node name="Dash" type="ColorRect" parent="Frontground/Skills"]
+offset_left = 7.55814
+offset_top = 323.209
+offset_right = 26.5581
+offset_bottom = 356.209
+
+[node name="Dash" type="AnimatedSprite2D" parent="Frontground/Skills/Dash"]
+position = Vector2(9.59302, 16)
+scale = Vector2(0.0244695, 0.040404)
+sprite_frames = SubResource("SpriteFrames_ecpgq")
+
+[node name="Ultimate" type="ColorRect" parent="Frontground/Skills"]
+offset_left = 8.13954
+offset_top = 359.302
+offset_right = 27.1395
+offset_bottom = 392.302
+
+[node name="Ultimate" type="AnimatedSprite2D" parent="Frontground/Skills/Ultimate"]
+position = Vector2(9.01163, 16.3648)
+scale = Vector2(0.0225119, 0.0393806)
+sprite_frames = SubResource("SpriteFrames_k2oq7")

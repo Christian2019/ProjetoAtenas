@@ -146,4 +146,5 @@ var hades_skeleton=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/W
 var hades_cerberus=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimateHades/cerberus.tscn")
 var poseidon_tentacle=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon/WarriorUltimatePoseidonTentacle.tscn")
 
-
+#Effects
+var eletrified =preload("res://Scenes/Game/Effects/Electrified.tscn")

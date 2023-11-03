@@ -2,7 +2,7 @@ extends Node2D
 
 var mining_max_duration_frames = 1*60
 
-var wave = 1
+var wave = 19
 var maxWave=19
 
 var timer = 0
@@ -73,7 +73,7 @@ func spawnGoblin():
 		spawnX(PreLoads.id002.instantiate())	
 
 func spawnEnemy(enemy,x):
-	if (mining):
+	if (mining or !is_instance_valid(x)  or !is_instance_valid(enemy)):
 		return
 	x.queue_free()
 	get_parent().get_node("Enemies").call_deferred("add_child",enemy)

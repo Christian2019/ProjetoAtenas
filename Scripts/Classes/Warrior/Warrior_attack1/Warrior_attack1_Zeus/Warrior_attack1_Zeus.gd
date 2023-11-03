@@ -46,10 +46,14 @@ func _ready():
 
 func qualityStatus():
 	if ( quality=="common"):
-		return
+		extraBounces=2
+	elif ( quality=="rare"):
+		extraBounces=4
+	elif ( quality=="epic"):
+		extraBounces=6
 	elif ( quality=="legendary"):
 		extraPercentDamage=1.5
-		extraBounces=10
+		extraBounces=8
 
 
 func _process(_delta):

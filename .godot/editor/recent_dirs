@@ -1,9 +1,9 @@
-res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Zeus
 res://Assets/Images/Player/Attack1/Zeus/Lightning
+res://Assets/Images/HUD/Ultimates
+res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Zeus
 res://Scripts/Classes/Warrior/Warrior_attack1
 res://Scripts/Game
 res://Assets/Images/Player/Ultimates/Poseidon/wave
-res://Assets/Images/HUD/Ultimates
 res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon
 res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimateHades
 res://Assets/Images/Player/Ultimates/Hades/Cerberus/Moving
