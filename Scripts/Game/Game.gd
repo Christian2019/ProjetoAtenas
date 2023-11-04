@@ -72,6 +72,8 @@ func getSkill():
 			return PreLoads.warrior_attack1_noGod
 		elif s0==1:
 			return PreLoads.warrior_attack1_zeus
+		elif s0==3:
+			return PreLoads.warrior_attack1_poseidon
 	
 	return null
 	

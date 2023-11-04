@@ -121,6 +121,9 @@ func removeNextHitDelay(arrayPosition):
 		monstersHit[arrayPosition].onHitDelay=false
 	
 func damageAction():
+	if (Global.MathController.heavyDamageHits>Global.MathController.heavyDamageMaxHits and !Global.MathController.heavyDamageOn):
+		heavyDamage()
+	
 	if (monstersInArea.is_empty()):
 		return
 	for j in range(0,monstersInArea.size(),1):
@@ -130,6 +133,17 @@ func damageAction():
 					Global.MathController.damageController(damage,monstersHit[i].monster)
 					monstersHit[i].onHitDelay=true
 					Global.timerCreator("removeNextHitDelay",nextHitDelay,[i],self)
+
+func heavyDamage():
+	Global.MathController.heavyDamageOn=true
+	var heavyDamageInterval=0.05
+	Global.MathController.heavyDamageInstance(0)
+	var hd= PreLoads.warrior_attack1_poseidon_heavyDamage.instantiate()
+	Global.Game.get_node("Instances/Explosions").add_child(hd)
+	hd.global_position=global_position
+	
+	for i in range(1,Global.MathController.heavyDamageInstances,1):
+		Global.timerCreator("heavyDamageInstance",(heavyDamageInterval*i),[i],Global.MathController)
 
 func move():
 	angle+=speed

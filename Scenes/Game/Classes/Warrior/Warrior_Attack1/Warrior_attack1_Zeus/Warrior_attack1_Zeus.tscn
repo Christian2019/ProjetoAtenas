@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bgt0udi4c71cf"]
+[gd_scene load_steps=13 format=3 uid="uid://bgt0udi4c71cf"]
 
 [ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Zeus/Warrior_attack1_Zeus.gd" id="1_hj2tx"]
 [ext_resource type="Texture2D" uid="uid://be0jxocrlx0v4" path="res://Assets/Images/Player/cutAnimation.png" id="2_fjw37"]
@@ -27,14 +27,6 @@ region = Rect2(836, 0, 209, 259)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ytbvk"]
 atlas = ExtResource("2_fjw37")
 region = Rect2(1045, 0, 209, 259)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0n12k"]
-atlas = ExtResource("3_55w4w")
-region = Rect2(0, 0, 408, 1419)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jb8kc"]
-atlas = ExtResource("3_55w4w")
-region = Rect2(408, 0, 408, 1419)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vpeon"]
 atlas = ExtResource("3_55w4w")
@@ -73,12 +65,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0n12k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jb8kc")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_vpeon")
 }],
 "loop": true,
@@ -93,7 +79,7 @@ size = Vector2(50, 62)
 script = ExtResource("1_hj2tx")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.0522622, 0.0522622)
+scale = Vector2(0.0604448, 0.0604448)
 sprite_frames = SubResource("SpriteFrames_8w6ou")
 animation = &"Swords"
 autoplay = "Swords"

@@ -1,6 +1,10 @@
 extends Node2D
+###Effects
 
-#Effects
+##Attack1
+
+#Zeus
+
 var electrified=[]
 
 func addEntityElectrified(element,extraPercentDamage):
@@ -19,7 +23,6 @@ func addEntityElectrified(element,extraPercentDamage):
 		electrified[i]= {"element":electrified[i].element,"objectReference":weakref(electrified[i].element),"frame":0,
 		"maxFrame":electrified[i].maxFrame,"extraPercentDamage":electrified[i].extraPercentDamage,"electrifiedAnimation":electrified[i].electrifiedAnimation}
 
-
 func eletrifiedFunc():
 	for i in range(0,electrified.size(),1):
 		if (electrified[i].frame==electrified[i].maxFrame):
@@ -30,8 +33,40 @@ func eletrifiedFunc():
 			electrified[i]= {"element":electrified[i].element,"objectReference":weakref(electrified[i].element),"frame":(electrified[i].frame+1),
 		"maxFrame":electrified[i].maxFrame,"extraPercentDamage":electrified[i].extraPercentDamage,"electrifiedAnimation":electrified[i].electrifiedAnimation}
 
+#Poseidon
+
+var waterDamage=[]
+
+func addEntityWaterDamage(element,extraDamagePerConsHit):
+	if (waterDamage.is_empty() or !checkIfExist(element.name,waterDamage)):
+		var obj= {"element":element,"objectReference":weakref(element),"ConsHit":1,
+		"extraDamagePerConsHit":extraDamagePerConsHit}
+		waterDamage.append(obj)
+
+	else:
+		var i=getElementIndex(element,waterDamage)
+		waterDamage[i].ConsHit+=1
+
+var heavyDamageHits=0
+var heavyDamageMaxHits=20
+var heavyDamageOn=false
+var heavyDamageInstances=0
+
+func heavyDamageInstance(i):
+	if (Global.MathController.heavyDamageInstances-1==i):
+		Global.MathController.heavyDamageOn=false
+		Global.MathController.heavyDamageHits=0
+	
+	var attackInstance = Global.player.creatAttackInstance(0)
+	Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
+	attackInstance.global_position=Global.player.global_position
+	attackInstance.direction=Global.player.lastMovement
+
+
 func clearArrays():
 	electrified.clear()
+	waterDamage.clear()
+	heavyDamageHits=0
 
 func _ready():
 	Global.MathController=self
@@ -46,6 +81,7 @@ func printEffectsArrays():
 
 func _process(delta):
 	eletrifiedFunc()
+
 		
 
 func damageController(damage,target):
@@ -81,6 +117,9 @@ func damageController(damage,target):
 		spawnDamage(finalDamage,target,crit,true,miss,false)
 		
 	elif (target.name!="Center"):
+		
+		#Effects
+		finalDamage=effects(target,finalDamage)
 
 		#Stats Damage Extra
 		finalDamage*=Global.player.baseDamage*Global.player.percentDamage
@@ -101,14 +140,23 @@ func damageController(damage,target):
 					Global.player.hp=Global.player.maxHp
 				spawnDamage(finalDamage,Global.player,crit,false,miss,true)
 
-	#Effects
-		if(checkIfExist(target.name,electrified)):
-			finalDamage=finalDamage*electrified[getElementIndex(target,electrified)].extraPercentDamage
-	
-	
 		spawnDamage(finalDamage,target,crit,false,miss,false)
 
 	target.hp-=finalDamage
+
+
+	
+func effects(target,finalDamage):
+	
+	if (checkIfExist(target.name,waterDamage)):
+		var wd=waterDamage[getElementIndex(target,waterDamage)]
+		finalDamage+=(wd.ConsHit*wd.extraDamagePerConsHit)
+		
+	if(checkIfExist(target.name,electrified)):
+		finalDamage*=electrified[getElementIndex(target,electrified)].extraPercentDamage
+	
+	
+	return finalDamage
 
 func spawnDamage(finalDamage,target,crit,colorBlue,miss,lifeSteal):
 	var labeldamage=PreLoads.labelDamage.instantiate()

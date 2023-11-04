@@ -18,7 +18,7 @@ func _ready():
 	if (miss):
 		$Label.text="Miss"
 	else:
-		$Label.text=str(damage)
+		$Label.text=str(int(damage))
 	
 	if (crit):
 		$Label.scale*=1.5

@@ -20,10 +20,9 @@ var reverseOrder=false
 var createdLightning=false
 
 #Variaveis modificaveis pelo jogador:
+var extraBounces
 
 var quality="legendary"
-
-var extraBounces
 
 #Damages 
 var lightningDamage

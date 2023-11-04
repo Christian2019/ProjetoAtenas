@@ -1,0 +1,65 @@
+[gd_scene load_steps=14 format=3 uid="uid://ca5p5neo4o3ve"]
+
+[ext_resource type="Script" path="res://Scripts/explosion.gd" id="1_exwa2"]
+[ext_resource type="Texture2D" uid="uid://dhotvmxw8duxw" path="res://Assets/Images/Player/Attack1/Poseidon/heavyDamage/scene00001.png" id="1_pfy03"]
+[ext_resource type="Texture2D" uid="uid://dg2wdsj2coef7" path="res://Assets/Images/Player/Attack1/Poseidon/heavyDamage/scene00004.png" id="2_1boc8"]
+[ext_resource type="Texture2D" uid="uid://c0t86im56mjv5" path="res://Assets/Images/Player/Attack1/Poseidon/heavyDamage/scene00007.png" id="3_87pts"]
+[ext_resource type="Texture2D" uid="uid://8njp1y73ufc1" path="res://Assets/Images/Player/Attack1/Poseidon/heavyDamage/scene00010.png" id="4_ad2ld"]
+[ext_resource type="Texture2D" uid="uid://df3jbr6aamb2u" path="res://Assets/Images/Player/Attack1/Poseidon/heavyDamage/scene00013.png" id="5_k1bqt"]
+[ext_resource type="Texture2D" uid="uid://bo7xwur5cmv20" path="res://Assets/Images/Player/Attack1/Poseidon/heavyDamage/scene00016.png" id="6_xx1eb"]
+[ext_resource type="Texture2D" uid="uid://84gshjpc62ql" path="res://Assets/Images/Player/Attack1/Poseidon/heavyDamage/scene00019.png" id="7_yh157"]
+[ext_resource type="Texture2D" uid="uid://dt7y4kbxnu1ev" path="res://Assets/Images/Player/Attack1/Poseidon/heavyDamage/scene00022.png" id="8_xk33j"]
+[ext_resource type="Texture2D" uid="uid://drrplhgcoc2bi" path="res://Assets/Images/Player/Attack1/Poseidon/heavyDamage/scene00025.png" id="9_ps2mr"]
+[ext_resource type="Texture2D" uid="uid://c5g7rgowv3g15" path="res://Assets/Images/Player/Attack1/Poseidon/heavyDamage/scene00028.png" id="10_p6hi0"]
+[ext_resource type="AudioStream" uid="uid://b4vup3xqmytso" path="res://Assets/Sounds/Player/Attack1/Poseidon/heavyDamage.mp3" id="11_48f7u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7t64p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pfy03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1boc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_87pts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ad2ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_k1bqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xx1eb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yh157")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xk33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ps2mr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_p6hi0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="heavyDamage" type="Node2D"]
+script = ExtResource("1_exwa2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7t64p")
+autoplay = "default"
+frame = 6
+frame_progress = 0.684915
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_48f7u")
+autoplay = true
