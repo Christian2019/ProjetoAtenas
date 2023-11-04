@@ -55,12 +55,12 @@ script = ExtResource("1_20pbk")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_qwsk5")
-volume_db = -10.0
+volume_db = -15.0
 autoplay = true
 
 [node name="Voice" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_mj1mw")
-volume_db = -10.0
+volume_db = -20.0
 autoplay = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -70,7 +70,7 @@ scale = Vector2(0.305556, 0.305556)
 texture = ExtResource("3_tiqx5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(6, 6)
+scale = Vector2(0.708963, 0.859972)
 sprite_frames = SubResource("SpriteFrames_7yl5c")
 autoplay = "default"
 frame_progress = 0.995664
@@ -88,6 +88,7 @@ texture = ExtResource("13_4xka6")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_v3fha")
+volume_db = -10.0
 
 [connection signal="area_entered" from="AnimatedSprite2D/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="AnimatedSprite2D/Area2D" to="." method="_on_area_2d_area_exited"]

@@ -8,17 +8,19 @@ var cd = 5
 var frame=0
 var max_duration = 15
 
+var nextHitDelay = 1
+
 var maxWaveScale
 
 var maxKnockback=10000
-var knockBackSpeed=5
+var knockBackSpeed=50
 #Monstros que foram atingidos pelo ataque
 var monstersHit = []
 
 #Monstros em contato com o ataque
 var monstersInArea = []
 
-var damage = 1000
+var damage = 10
 var tentaclesQuantity
 var krakenAlly
 
@@ -29,7 +31,7 @@ func _ready():
 	$AnimatedSprite2D.modulate.a=0.2
 	Global.timerCreator("destroy", max_duration,[],self)
 	qualityStatus()
-	maxWaveScale=$AnimatedSprite2D.scale
+	maxWaveScale=Vector2(6,6)
 
 func qualityStatus():
 	#Cooldown: 60/20/5/5/5s Max activations per wave 1/2/2/3/4
@@ -94,15 +96,33 @@ func _process(delta):
 	$Sprite2D.modulate.a=float(frame)/float(max_duration*60)
 	var s = float(frame*maxWaveScale.x)/float(max_duration*60)
 	$AnimatedSprite2D.scale= Vector2(s,s)
-	knockBack()
+	damageAction()
 
 	frame+=1
+	
+func removeNextHitDelay(arrayPosition):
+	if (itsValid(monstersHit[arrayPosition])):
+		monstersHit[arrayPosition].onHitDelay=false
+	
+func damageAction():
+	if (monstersInArea.is_empty()):
+		return
+	for j in range(0,monstersInArea.size(),1):
+			var i = getMonsterHitIndex(monstersInArea[j])
+			if itsValid(monstersHit[i]):
+				if (!monstersHit[i].onHitDelay):
+					
+					Global.MathController.damageController(damage,monstersHit[i].monster)
+					knockBack()
+					monstersHit[i].onHitDelay=true
+					Global.timerCreator("removeNextHitDelay",nextHitDelay,[i],self)
 
 func destroy():
 	Global.hud.max_ultimate_frame=(cd)*60
 	Global.timerCreator("enableAttackUse",cd,[4],Global.player)
 	Global.Game.get_node("Night").visible=false
-	krakenAlly.queue_free()
+	if (quality=="legendary"):
+		krakenAlly.queue_free()
 	queue_free()
 
 func knockBack():
@@ -112,8 +132,9 @@ func knockBack():
 		if (monsterHitObject.knockback>=maxKnockback):
 			continue
 		var angle= global_position.angle_to_point(monster.global_position)
-		monstersHit[getMonsterHitIndex(monster)]={"monster":monster,"knockback":monsterHitObject.knockback+knockBackSpeed,"objectReference":weakref(monster)}
+		monstersHit[getMonsterHitIndex(monster)].knockback+=knockBackSpeed
 		tryToMove(knockBackSpeed*cos(angle),knockBackSpeed*sin(angle),monster)
+
 		
 		
 func tryToMove(speedX,speedY,monster):
@@ -155,8 +176,8 @@ func addMonster(monster):
 	monstersInArea.append(monster)
 	
 	if (monstersHit.is_empty() or !checkIfExist(monster.name)):
-		monstersHit.append({"monster":monster,"knockback":0,"objectReference":weakref(monster)})
-		monster.hp-=damage
+		monstersHit.append({"monster":monster,"onHitDelay":false,"knockback":0,"objectReference":weakref(monster)})
+		
 
 
 func checkIfExist(name):
