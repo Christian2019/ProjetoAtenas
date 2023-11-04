@@ -62,4 +62,5 @@ frame_progress = 0.684915
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_48f7u")
+volume_db = -10.0
 autoplay = true
