@@ -199,7 +199,7 @@ func enableAttackUse(classChild):
 	permissions[classChild]=true
 
 func attack1Controller():
-	if (Global.MathController.heavyDamageOn):
+	if (Global.MathController.attack1_poseidon.heavyDamageOn):
 		return
 	var classChild=0	
 	if (Input.is_action_pressed("Attack1") and permissions[classChild]):
@@ -346,3 +346,9 @@ func _on_body_area_entered(area):
 func _on_body_area_exited(area):
 	if area.get_parent().name == "Center":
 		playerOnCenterPoint=false
+
+
+func _on_timer_timeout():
+	return
+	#print("attackspeed: ",attack_Speed)
+	print("lifesteal: ",lifeStealChance)

@@ -1,12 +1,12 @@
-AudioStreamPlayer
-Node2D
 AnimatedSprite2D
+Timer
+Node2D
+AudioStreamPlayer
 ColorRect
 Label
 Sprite2D
 CollisionShape2D
 Area2D
-Timer
 VideoStreamPlayer
 Node
 AudioStreamPlayer2D

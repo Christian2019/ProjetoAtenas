@@ -1,13 +1,25 @@
 extends Node2D
 
-var speed=16
+var speed=20
 var angle
 var damage=1000
 var target
 var targetIndex=0
 var extraBounces=0
 
+func getRandomEnemy():
+	var enemies= Global.Game.get_node("Enemies").get_children()
+	if (targetIndex>extraBounces or enemies.size()<2):
+		queue_free()
+		return
+	var rng = RandomNumberGenerator.new().randi_range(0, enemies.size()-1)
+	if is_instance_valid(target):
+		while (enemies[rng]==target):
+			rng = RandomNumberGenerator.new().randi_range(0, enemies.size()-1)
+	targetIndex+=1
+	target=enemies[rng]
 	
+"""
 func getCloserEnemy():
 	var enemies= Global.Game.get_node("Enemies").get_children()
 	if (targetIndex>extraBounces or enemies.size()<2):
@@ -32,7 +44,7 @@ func getCloserEnemy():
 		queue_free()
 	else:
 		target=closerEnemy
-
+"""	
 
 func _process(delta):
 	move()
@@ -47,13 +59,13 @@ func getAngle():
 
 func move():
 	if !(is_instance_valid(target)):
-		getCloserEnemy()
+		getRandomEnemy()
 		return
 		
 	if  global_position.distance_to(target.global_position)<speed:
 		
 		Global.MathController.damageController(damage,target)
-		getCloserEnemy()
+		getRandomEnemy()
 		return
 		
 	global_position.x+=speed*cos(deg_to_rad(angle))

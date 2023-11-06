@@ -113,7 +113,7 @@ var fireEnergy= preload("res://Scenes/Game/Enemies/id018/FireEnergy.tscn")
 var warrior_attack1_noGod=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_noGod.tscn")
 var warrior_attack1_zeus=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Zeus/Warrior_attack1_Zeus.tscn")
 var warrior_attack1_poseidon =preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Poseidon/Warrior_attack1_Poseidon.tscn")
-var warrior_attack1_hades
+var warrior_attack1_hades=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Hades/Warrior_attack1_Hades.tscn")
 var warrior_attack1_divine_ZeusPoseion
 var warrior_attack1_divine_ZeusHades
 var warrior_attack1_divine_HadesPoseion
@@ -161,4 +161,5 @@ var hades_cerberus=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/W
 var poseidon_tentacle=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon/WarriorUltimatePoseidonTentacle.tscn")
 
 #Effects
-var eletrified =preload("res://Scenes/Game/Effects/Electrified.tscn")
+var eletrified =preload("res://Scenes/Game/Math_controller/Effects/Electrified.tscn")
+var twister = preload("res://Scenes/Game/Math_controller/Effects/Twister.tscn")

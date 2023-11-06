@@ -41,8 +41,6 @@ func _ready():
 	$Animation.visible=false
 	
 
-	
-
 var waitFrames=0
 var waitMaxFrames=1
 func waitFunc():
@@ -61,27 +59,6 @@ func _process(_delta):
 	damageAction()
 
 func startPosition():
-	"""
-	var speedModifier=1
-	#Corrigi a velocidade na diagonal
-	if direction=="NE" or direction=="NW" or direction=="SE" or direction=="SW":
-		speedModifier=1/(2**0.5)			
-	
-	#Y+
-	if direction=="SE" or direction=="S" or direction=="SW":
-		relativePosition.y+=(startDistanceFromPlayer)*speedModifier
-	#Y-
-	if direction=="NE" or direction=="N" or direction=="NW":
-		relativePosition.y-=(startDistanceFromPlayer)*speedModifier
-	
-	#X+
-	if direction=="SE" or direction=="E" or direction=="NE":
-		relativePosition.x+=(startDistanceFromPlayer)*speedModifier
-	
-	#X-
-	if direction=="SW" or direction=="W" or direction=="NW":
-		relativePosition.x-=(startDistanceFromPlayer)*speedModifier
-	"""
 	relativePosition.x=startDistanceFromPlayer
 	global_position= Global.player.global_position+relativePosition
 
@@ -89,23 +66,7 @@ func startAnimation():
 	$Animation.stop()
 	$Animation.visible=true
 	$Animation.frame=0
-	
-	"""
-	if direction=="NE":
-		$Animation.rotate(deg_to_rad(45))
-	elif direction=="E":
-		$Animation.rotate(deg_to_rad(90))
-	elif direction=="SE":
-		$Animation.rotate(deg_to_rad(135))
-	elif direction=="S":
-		$Animation.rotate(deg_to_rad(180))
-	elif direction=="SW":
-		$Animation.rotate(deg_to_rad(225))
-	elif direction=="W":
-		$Animation.rotate(deg_to_rad(270))
-	elif direction=="NW":
-		$Animation.rotate(deg_to_rad(315))
-	"""
+
 	$Animation.rotate(deg_to_rad(90))
 	startRotationAngle=rad_to_deg($Animation.rotation)
 	$Animation.flip_v=true
@@ -121,8 +82,8 @@ func removeNextHitDelay(arrayPosition):
 		monstersHit[arrayPosition].onHitDelay=false
 	
 func damageAction():
-	if (Global.MathController.heavyDamageHits>Global.MathController.heavyDamageMaxHits and !Global.MathController.heavyDamageOn):
-		heavyDamage()
+	if (Global.MathController.attack1_poseidon.heavyDamageHits>Global.MathController.attack1_poseidon.heavyDamageMaxHits and !Global.MathController.attack1_poseidon.heavyDamageOn):
+		Global.MathController.attack1_poseidon.heavyDamageActivation()
 	
 	if (monstersInArea.is_empty()):
 		return
@@ -134,16 +95,8 @@ func damageAction():
 					monstersHit[i].onHitDelay=true
 					Global.timerCreator("removeNextHitDelay",nextHitDelay,[i],self)
 
-func heavyDamage():
-	Global.MathController.heavyDamageOn=true
-	var heavyDamageInterval=0.05
-	Global.MathController.heavyDamageInstance(0)
-	var hd= PreLoads.warrior_attack1_poseidon_heavyDamage.instantiate()
-	Global.Game.get_node("Instances/Explosions").add_child(hd)
-	hd.global_position=global_position
+
 	
-	for i in range(1,Global.MathController.heavyDamageInstances,1):
-		Global.timerCreator("heavyDamageInstance",(heavyDamageInterval*i),[i],Global.MathController)
 
 func move():
 	angle+=speed

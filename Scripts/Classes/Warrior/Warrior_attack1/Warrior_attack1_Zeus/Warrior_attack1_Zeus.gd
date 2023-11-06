@@ -48,17 +48,17 @@ func attackSpeedModifier():
 func qualityStatus():
 	if ( quality=="common"):
 		lightningDamage=10
-		extraBounces=2
+		extraBounces=5
 	elif ( quality=="rare"):
 		lightningDamage=12
-		extraBounces=4
+		extraBounces=10
 	elif ( quality=="epic"):
 		lightningDamage=15
-		extraBounces=6
+		extraBounces=15
 	elif ( quality=="legendary"):
 		lightningDamage=20
 		extraPercentDamage=1.5
-		extraBounces=8
+		extraBounces=20
 
 
 func _process(_delta):
@@ -109,7 +109,7 @@ func damageAction():
 			if itsValid(monstersHit[i]):
 				if (!monstersHit[i].onHitDelay):
 					if (quality=="legendary"):
-						Global.MathController.addEntityElectrified(monstersHit[i].monster,extraPercentDamage)
+						Global.MathController.attack1_zeus.addEntityElectrified(monstersHit[i].monster,extraPercentDamage)
 					Global.MathController.damageController(damage,monstersHit[i].monster)
 					if (!createdLightning):
 						createdLightning=true

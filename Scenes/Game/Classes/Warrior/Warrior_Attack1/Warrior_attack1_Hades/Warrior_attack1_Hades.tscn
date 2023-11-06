@@ -1,0 +1,93 @@
+[gd_scene load_steps=13 format=3 uid="uid://bbwvc1c05vido"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Hades/Warrior_attack1_Hades.gd" id="1_64y2p"]
+[ext_resource type="Texture2D" uid="uid://be0jxocrlx0v4" path="res://Assets/Images/Player/cutAnimation.png" id="2_vyuv8"]
+[ext_resource type="Texture2D" uid="uid://g8sg7h87abc3" path="res://Assets/Images/Player/all_swords.png" id="3_mk6pg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_taocq"]
+atlas = ExtResource("2_vyuv8")
+region = Rect2(0, 0, 209, 259)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18kcs"]
+atlas = ExtResource("2_vyuv8")
+region = Rect2(209, 0, 209, 259)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6edoi"]
+atlas = ExtResource("2_vyuv8")
+region = Rect2(418, 0, 209, 259)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s2uy"]
+atlas = ExtResource("2_vyuv8")
+region = Rect2(627, 0, 209, 259)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l0r1"]
+atlas = ExtResource("2_vyuv8")
+region = Rect2(836, 0, 209, 259)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytbvk"]
+atlas = ExtResource("2_vyuv8")
+region = Rect2(1045, 0, 209, 259)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4vda"]
+atlas = ExtResource("3_mk6pg")
+region = Rect2(0, 0, 408, 1419)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8w6ou"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_taocq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18kcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6edoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s2uy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7l0r1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytbvk")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"Normal",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4vda")
+}],
+"loop": true,
+"name": &"Swords",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivf5m"]
+size = Vector2(50, 62)
+
+[node name="Warrior_attack1_Hades" type="Node2D"]
+script = ExtResource("1_64y2p")
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.0604448, 0.0604448)
+sprite_frames = SubResource("SpriteFrames_8w6ou")
+animation = &"Swords"
+autoplay = "Swords"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ivf5m")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

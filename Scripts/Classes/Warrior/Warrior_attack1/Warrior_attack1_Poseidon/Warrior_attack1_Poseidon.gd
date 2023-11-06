@@ -56,7 +56,7 @@ func qualityStatus():
 		extraDamagePerConsHit=6
 	elif ( quality=="legendary"):
 		extraDamagePerConsHit=8
-		Global.MathController.heavyDamageInstances=20
+		Global.MathController.attack1_poseidon.heavyDamageInstances=20
 
 
 func _process(_delta):
@@ -108,12 +108,12 @@ func damageAction():
 			if itsValid(monstersHit[i]):
 				if (!monstersHit[i].onHitDelay):
 					
-					Global.MathController.addEntityWaterDamage(monstersHit[i].monster,extraDamagePerConsHit)
+					Global.MathController.attack1_poseidon.addEntityWaterDamage(monstersHit[i].monster,extraDamagePerConsHit)
 					
 					if ( quality=="legendary"):
-						if !Global.MathController.heavyDamageOn:
-							Global.MathController.heavyDamageHits+=1
-						if (Global.MathController.heavyDamageHits==Global.MathController.heavyDamageMaxHits):
+						if !Global.MathController.attack1_poseidon.heavyDamageOn:
+							Global.MathController.attack1_poseidon.heavyDamageHits+=1
+						if (Global.MathController.attack1_poseidon.heavyDamageHits==Global.MathController.attack1_poseidon.heavyDamageMaxHits):
 							$AudioStreamPlayer.play(0)
 					
 					Global.MathController.damageController(damage,monstersHit[i].monster)

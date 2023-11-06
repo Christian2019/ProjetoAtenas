@@ -265,5 +265,9 @@ animation = &"Axe"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
 shape = SubResource("RectangleShape2D_5b8iw")
 
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="area_entered" from="Body" to="." method="_on_body_area_entered"]
 [connection signal="area_exited" from="Body" to="." method="_on_body_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
