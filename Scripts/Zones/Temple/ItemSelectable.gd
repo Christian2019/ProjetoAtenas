@@ -1,10 +1,11 @@
 extends Node2D
 
 
-var canGrab = 0
-var position_board= Vector2(0,0)
+@export var texture = Texture.new()
+@export var texture_hover = Texture.new()
+@export var texture_inactive = Texture.new()
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready(): 
 	pass # Replace with function body.
 
 
@@ -12,13 +13,14 @@ func _ready():
 func _process(delta):
 	var get_parent = get_parent() 
 	pass
-
-
-func _on_area_select_mouse_entered():
-	canGrab=1
+	
+func _on_area_select_area_entered(area):
+	$Dados.visible=true
+	$Icon.texture = texture_hover
 	pass # Replace with function body.
 
 
-func _on_area_select_mouse_exited():
-	canGrab=0
+func _on_area_select_area_exited(area):
+	$Dados.visible=false
+	$Icon.texture = texture
 	pass # Replace with function body.

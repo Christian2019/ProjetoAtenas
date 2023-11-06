@@ -12,14 +12,14 @@ func _ready():
 		soundsPosition.append(0.0)
 
 func _process(delta):
-	if (get_parent().get_node("Temple").visible and !playing and !playerMute):
+	if (Global.TempleScreen.visible and !playing and !playerMute):
 		rngMusic()
 		enableSound()
 	
-	elif (!get_parent().get_node("Temple").visible and playing):
+	elif (!Global.TempleScreen.visible and playing):
 		disableSound()
 	
-	elif (get_parent().get_node("Temple").visible and Input.is_action_just_pressed("Mute")):
+	elif (Global.TempleScreen.visible and Input.is_action_just_pressed("Mute")):
 		if (playing):
 			playerMute=true
 			disableSound()

@@ -14,7 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://b3exwrsopj804" path="res://Assets/Sounds/Game/Resources/dracma.mp3" id="8_a6cos"]
 [ext_resource type="PackedScene" uid="uid://cx37jdnas0rb1" path="res://Scenes/Game/Constructions/center.tscn" id="9_06qfi"]
 [ext_resource type="AudioStream" uid="uid://cla1mp3rm1x6x" path="res://Assets/Sounds/Game/Enemies/EliteMusic.mp3" id="9_km2ap"]
-[ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple.tscn" id="10_v6y37"]
+[ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple/Temple.tscn" id="10_v6y37"]
 [ext_resource type="Texture2D" uid="uid://tgat8lil5tbh" path="res://Assets/Images/Background/map.png" id="11_8uskw"]
 [ext_resource type="Script" path="res://Scripts/Instances/Turrets.gd" id="13_2l3jl"]
 [ext_resource type="Script" path="res://Scripts/Zones/ModifyGround.gd" id="13_cmk2b"]

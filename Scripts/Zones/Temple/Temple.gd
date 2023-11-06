@@ -2,13 +2,14 @@ extends Node2D
 
 var areaPlayerEnter=false
 
+
 func _process(delta):
 	if areaPlayerEnter:
 		if Input.is_action_just_pressed("Select"):
 			get_tree().paused = true
-			Global.Temple.visible=true
+			Global.TempleScreen.visible=true
 			
-			
+	
 
 func _on_area_2d_area_entered(area):
 	if (area.get_parent().name=="Player"):

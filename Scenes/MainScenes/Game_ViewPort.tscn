@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://b18nigm5wn5ab" path="res://Scenes/Game/HUD.tscn" id="3_agpu4"]
 [ext_resource type="FontFile" uid="uid://duy38o6o71nij" path="res://Assets/Fonts/Kurland.otf" id="4_xvseb"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/FPS.gd" id="5_c2jos"]
-[ext_resource type="PackedScene" uid="uid://bqduy4u8regjo" path="res://Scenes/Temple/TempleScreen.tscn" id="6_rsejt"]
-[ext_resource type="Script" path="res://Scripts/Temple_Scripts/TempleSound.gd" id="7_qdux6"]
+[ext_resource type="PackedScene" uid="uid://bqduy4u8regjo" path="res://Scenes/Game/Constructions/Temple/TempleScreen.tscn" id="6_rsejt"]
+[ext_resource type="Script" path="res://Scripts/Zones/Temple/TempleSound.gd" id="7_qdux6"]
 [ext_resource type="AudioStream" uid="uid://ds3mklsrsnkgd" path="res://Assets/Sounds/temple.mp3" id="8_2m48l"]
 [ext_resource type="AudioStream" uid="uid://gtus0eflv3pn" path="res://Assets/Sounds/temple2.mp3" id="9_b71q1"]
 [ext_resource type="AudioStream" uid="uid://46o6fk67h64y" path="res://Assets/Sounds/temple3.mp3" id="10_dt5os"]
@@ -51,8 +51,9 @@ label_settings = SubResource("LabelSettings_4aqw1")
 script = ExtResource("5_c2jos")
 
 [node name="TempleNode" type="Node2D" parent="."]
+position = Vector2(0, -1)
 
-[node name="Temple" parent="TempleNode" instance=ExtResource("6_rsejt")]
+[node name="TempleScreen" parent="TempleNode" instance=ExtResource("6_rsejt")]
 visible = false
 
 [node name="TempleSound" type="Node2D" parent="TempleNode"]
