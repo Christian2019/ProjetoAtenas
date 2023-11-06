@@ -199,6 +199,8 @@ func enableAttackUse(classChild):
 	permissions[classChild]=true
 
 func attack1Controller():
+	if (Global.MathController.heavyDamageOn):
+		return
 	var classChild=0	
 	if (Input.is_action_pressed("Attack1") and permissions[classChild]):
 		var attackInstance = creatAttackInstance(classChild)

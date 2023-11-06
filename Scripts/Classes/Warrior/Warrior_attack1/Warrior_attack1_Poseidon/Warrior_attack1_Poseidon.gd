@@ -34,6 +34,8 @@ var max_duration = 0.5
 #LegendaryExtra
 var extraPercentDamage=0
 
+var heavyDamageOn=false
+
 func _ready():
 	attackSpeedModifier()
 	Global.timerCreator("enableReverseOrder",max_duration/2,[],self)
@@ -90,7 +92,8 @@ func enableReverseOrder():
 
 func destroy():
 	if (reverseOrder and collidinWithPlayer):
-		Global.player.permissions[0]=true
+		if (!heavyDamageOn):
+			Global.player.permissions[0]=true
 		call_deferred("queue_free")
 
 func removeNextHitDelay(arrayPosition):
@@ -111,7 +114,7 @@ func damageAction():
 						if !Global.MathController.heavyDamageOn:
 							Global.MathController.heavyDamageHits+=1
 						if (Global.MathController.heavyDamageHits==Global.MathController.heavyDamageMaxHits):
-							$AudioStreamPlayer.play()
+							$AudioStreamPlayer.play(0)
 					
 					Global.MathController.damageController(damage,monstersHit[i].monster)
 					

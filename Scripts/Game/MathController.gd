@@ -53,15 +53,16 @@ var heavyDamageOn=false
 var heavyDamageInstances=0
 
 func heavyDamageInstance(i):
-	if (Global.MathController.heavyDamageInstances-1==i):
-		Global.MathController.heavyDamageOn=false
-		Global.MathController.heavyDamageHits=0
-	
 	var attackInstance = Global.player.creatAttackInstance(0)
 	Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
 	attackInstance.global_position=Global.player.global_position
 	attackInstance.direction=Global.player.lastMovement
-
+	if (Global.MathController.heavyDamageInstances-1==i):
+		Global.MathController.heavyDamageOn=false
+		Global.MathController.heavyDamageHits=0
+		attackInstance.heavyDamageOn=false
+	else:
+		attackInstance.heavyDamageOn=true
 
 func clearArrays():
 	electrified.clear()
