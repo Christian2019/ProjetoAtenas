@@ -290,7 +290,8 @@ func dashController():
 		var attackInstance = creatAttackInstance(classChild)
 		attackInstance.direction= lastMovement
 		add_child(attackInstance)
-		enableDisableAnimation()
+		playAnimation("Dash")
+		#enableDisableAnimation()
 		
 func enableDisableAnimation():
 	if($Animation.is_playing()):
