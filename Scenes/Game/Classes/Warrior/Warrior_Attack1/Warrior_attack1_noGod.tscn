@@ -1,8 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://c408xykbxejnq"]
+[gd_scene load_steps=19 format=3 uid="uid://c408xykbxejnq"]
 
 [ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_noGod.gd" id="1_wm2jy"]
 [ext_resource type="Texture2D" uid="uid://be0jxocrlx0v4" path="res://Assets/Images/Player/cutAnimation.png" id="2_g1m3v"]
 [ext_resource type="Texture2D" uid="uid://g8sg7h87abc3" path="res://Assets/Images/Player/all_swords.png" id="3_4fwnu"]
+[ext_resource type="Texture2D" uid="uid://2575554y0rm4" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/attack1_180_001.png" id="4_qv8x7"]
+[ext_resource type="Texture2D" uid="uid://18mah77d1rlt" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/attack1_180_004.png" id="5_bbit4"]
+[ext_resource type="Texture2D" uid="uid://ck2ynydlbye60" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/attack1_180_007.png" id="6_s5nbu"]
+[ext_resource type="Texture2D" uid="uid://dlxf8fnh12roq" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/attack1_180_010.png" id="7_l11a3"]
+[ext_resource type="Texture2D" uid="uid://kgb2e5nrqnv0" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/attack1_180_013.png" id="8_7clg6"]
+[ext_resource type="Texture2D" uid="uid://crpoa6mdnyd5o" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/attack1_180_016.png" id="9_enhyk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_taocq"]
 atlas = ExtResource("2_g1m3v")
@@ -66,6 +72,24 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nhktp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qv8x7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bbit4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_s5nbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l11a3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7clg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_enhyk")
 }],
 "loop": true,
 "name": &"Swords",

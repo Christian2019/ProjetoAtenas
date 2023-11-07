@@ -24,7 +24,7 @@ var collect_radios=200
 var lastMovement = "E"
 
 ##Skills Ativos
-var attack1={"skill":PreLoads.warrior_attack1_zeus, "quality": "legendary"}
+var attack1={"skill":PreLoads.warrior_attack1_poseidon, "quality": "legendary"}
 var attack2={"skill":PreLoads.warrior_attack2_noGod, "quality": "common"}
 var turret={"skill":PreLoads.warrior_turret_zeus, "quality": "common"}
 var dash={"skill":PreLoads.warrior_dash_noGod, "quality": "common"}
@@ -449,5 +449,5 @@ func _on_animation_animation_looped():
 
 func _on_vfx_attack_2_animation_looped():
 	if (animAttacking):
-		animAttacking=false
+		#animAttacking=false
 		fx_Attack2.set_visible(false)

@@ -206,4 +206,4 @@ animations = [{
 [node name="Animation" type="AnimatedSprite2D"]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ddi15")
-animation = &"Attack1_Down"
+animation = &"Idle_Up_Right"

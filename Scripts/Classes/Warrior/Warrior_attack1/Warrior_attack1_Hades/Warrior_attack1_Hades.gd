@@ -65,9 +65,9 @@ func _process(_delta):
 func animation():
 	if ($Animation.visible):
 		return
-	$Animation.stop()
+	#$Animation.stop()
 	$Animation.visible=true
-	$Animation.frame=0
+	$Animation.frame=1
 	if direction=="NE":
 		$Animation.rotate(deg_to_rad(45))
 	elif direction=="E":

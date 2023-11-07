@@ -1,8 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://bbwvc1c05vido"]
+[gd_scene load_steps=19 format=3 uid="uid://bbwvc1c05vido"]
 
 [ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Hades/Warrior_attack1_Hades.gd" id="1_64y2p"]
 [ext_resource type="Texture2D" uid="uid://be0jxocrlx0v4" path="res://Assets/Images/Player/cutAnimation.png" id="2_vyuv8"]
-[ext_resource type="Texture2D" uid="uid://g8sg7h87abc3" path="res://Assets/Images/Player/all_swords.png" id="3_mk6pg"]
+[ext_resource type="Texture2D" uid="uid://d3o3ys3oxuv3c" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1_hades/attack1_0_001.png" id="3_tjgkl"]
+[ext_resource type="Texture2D" uid="uid://c7u0cwtov1aci" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1_hades/attack1_0_004.png" id="4_otdet"]
+[ext_resource type="Texture2D" uid="uid://bq1kh08s0dapy" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1_hades/attack1_0_007.png" id="5_hljrx"]
+[ext_resource type="Texture2D" uid="uid://fwoknj0c8gdy" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1_hades/attack1_0_010.png" id="6_lotjs"]
+[ext_resource type="Texture2D" uid="uid://b2nsy7fntro20" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1_hades/attack1_0_013.png" id="7_qnjax"]
+[ext_resource type="Texture2D" uid="uid://wcyq82fdfpma" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1_hades/attack1_0_016.png" id="8_hakrj"]
+[ext_resource type="Texture2D" uid="uid://ddwnog3h6k5yv" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1_hades/attack1_0_019.png" id="9_b8umw"]
+[ext_resource type="Texture2D" uid="uid://dgamdwsuykyqu" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1_hades/attack1_0_022.png" id="10_61nv1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_taocq"]
 atlas = ExtResource("2_vyuv8")
@@ -27,10 +34,6 @@ region = Rect2(836, 0, 209, 259)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ytbvk"]
 atlas = ExtResource("2_vyuv8")
 region = Rect2(1045, 0, 209, 259)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q4vda"]
-atlas = ExtResource("3_mk6pg")
-region = Rect2(0, 0, 408, 1419)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8w6ou"]
 animations = [{
@@ -65,11 +68,32 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q4vda")
+"texture": ExtResource("3_tjgkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_otdet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hljrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lotjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qnjax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hakrj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_b8umw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_61nv1")
 }],
 "loop": true,
 "name": &"Swords",
-"speed": 5.0
+"speed": 20.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivf5m"]
@@ -79,10 +103,10 @@ size = Vector2(50, 62)
 script = ExtResource("1_64y2p")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.0604448, 0.0604448)
 sprite_frames = SubResource("SpriteFrames_8w6ou")
 animation = &"Swords"
 autoplay = "Swords"
+frame = 3
 
 [node name="Area2D" type="Area2D" parent="."]
 
