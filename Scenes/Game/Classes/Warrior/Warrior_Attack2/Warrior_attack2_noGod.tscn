@@ -79,6 +79,7 @@ size = Vector2(50, 62)
 script = ExtResource("1_nkcrr")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
+visible = false
 scale = Vector2(0.0522622, 0.0522622)
 sprite_frames = SubResource("SpriteFrames_stbqe")
 animation = &"Swords"

@@ -31,9 +31,24 @@ var startRotationAngle
 
 var angle
 
+var animation
+
 func _ready():
-	$Animation.visible=false
+	
+	startRotationAngle=90
+	angle= startRotationAngle
+	relativePosition.x=startDistanceFromPlayer
+	global_position= Global.player.global_position+relativePosition
+	
+	createAnimation()
 	attackSpeedModifier()
+	
+func createAnimation():
+	var anim = PreLoads.warrior_attack2_animations_effect.instantiate()
+	Global.player.add_child(anim)
+	anim.global_position=Global.player.global_position
+	animation=anim
+	
 	
 func attackSpeedModifier():
 	max_duration = max_duration/Global.player.attack_Speed
@@ -41,10 +56,30 @@ func attackSpeedModifier():
 
 
 func _process(_delta):
-	animation()
+	animationUpdate()
 	move()
 	damageAction()
-
+func animationUpdate():
+	var lastMovement= Global.player.lastMovement
+	var animName="Normal"
+	
+	if lastMovement=="S":
+		animation.play(animName+"_Down")
+	elif lastMovement=="SE":
+		animation.play(animName+"_Down_Right")
+	elif lastMovement=="SW":
+		animation.play(animName+"_Down_Left")
+	elif lastMovement=="N":
+		animation.play(animName+"_Up")
+	elif lastMovement=="NE":
+		animation.play(animName+"_Up_Right")
+	elif lastMovement=="NW":
+		animation.play(animName+"_Up_Left")
+	elif lastMovement=="E":
+		animation.play(animName+"_Right")
+	elif lastMovement=="W":
+		animation.play(animName+"_Left")
+"""
 func animation():
 	if ($Animation.visible):
 		return
@@ -59,9 +94,11 @@ func animation():
 	
 	relativePosition.x=startDistanceFromPlayer
 	global_position= Global.player.global_position+relativePosition
+"""
 
 func destroy():
 	Global.player.permissions[1]=true
+	animation.call_deferred("queue_free")
 	call_deferred("queue_free")
 
 func damageAction():
