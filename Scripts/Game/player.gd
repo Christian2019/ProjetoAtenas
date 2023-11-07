@@ -273,7 +273,7 @@ func attack2Controller():
 		var attackInstance = creatAttackInstance(classChild)
 		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position
-		attackInstance.direction=lastMovement
+		
 		
 func turretController():
 	var classChild=2	
@@ -383,7 +383,7 @@ func _on_body_area_exited(area):
 
 
 func _on_timer_timeout():
-
+	return
 	print("STATUS:")
 	print("hpRegeneration: ",hpRegeneration)
 	print("lifesteal: ",lifeStealChance)

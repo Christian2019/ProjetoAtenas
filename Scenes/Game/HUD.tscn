@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://b18nigm5wn5ab"]
+[gd_scene load_steps=52 format=3 uid="uid://b18nigm5wn5ab"]
 
 [ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/HUD.gd" id="1_60mgy"]
@@ -174,6 +174,23 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ne6kt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_h8ujo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_afn4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_53nyw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_3g5ue"]
 animations = [{
 "frames": [{
@@ -188,6 +205,32 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nege3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_h8ujo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_afn4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_53nyw")
 }],
 "loop": true,
 "name": &"default",
@@ -198,6 +241,9 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
 "texture": ExtResource("29_35oqo")
 }, {
 "duration": 1.0,
@@ -205,6 +251,32 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1laxi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_h8ujo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_afn4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_53nyw")
 }],
 "loop": true,
 "name": &"default",
@@ -225,6 +297,32 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_288fq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_h8ujo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_afn4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_53nyw")
 }],
 "loop": true,
 "name": &"default",
@@ -235,6 +333,9 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
 "texture": ExtResource("29_35oqo")
 }, {
 "duration": 1.0,
@@ -242,6 +343,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
 }],
 "loop": true,
 "name": &"default",
@@ -566,7 +676,6 @@ offset_right = 26.0
 offset_bottom = 247.0
 
 [node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Attack1_Border"]
-visible = false
 position = Vector2(10.4419, 15.7732)
 scale = Vector2(0.0968992, 0.090032)
 sprite_frames = SubResource("SpriteFrames_mfcji")
@@ -585,6 +694,12 @@ offset_top = 251.0
 offset_right = 27.0
 offset_bottom = 284.0
 
+[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Attack2_Border"]
+position = Vector2(10.0233, 15.8604)
+scale = Vector2(0.0968992, 0.090032)
+sprite_frames = SubResource("SpriteFrames_ne6kt")
+autoplay = "default"
+
 [node name="Attack2" type="AnimatedSprite2D" parent="Frontground/Skills/Attack2_Border"]
 position = Vector2(9.15116, 16.4462)
 scale = Vector2(0.0225119, 0.0391523)
@@ -595,6 +710,12 @@ offset_left = 7.55814
 offset_top = 287.209
 offset_right = 26.5581
 offset_bottom = 320.209
+
+[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Turret"]
+position = Vector2(9.30232, 15.698)
+scale = Vector2(0.0968992, 0.090032)
+sprite_frames = SubResource("SpriteFrames_nege3")
+autoplay = "default"
 
 [node name="Turret" type="AnimatedSprite2D" parent="Frontground/Skills/Turret"]
 position = Vector2(9.30233, 16)
@@ -607,6 +728,12 @@ offset_top = 323.209
 offset_right = 26.5581
 offset_bottom = 356.209
 
+[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Dash"]
+position = Vector2(9.30232, 15.7446)
+scale = Vector2(0.0968992, 0.090032)
+sprite_frames = SubResource("SpriteFrames_1laxi")
+autoplay = "default"
+
 [node name="Dash" type="AnimatedSprite2D" parent="Frontground/Skills/Dash"]
 position = Vector2(9.59302, 16)
 scale = Vector2(0.0244695, 0.040404)
@@ -617,6 +744,12 @@ offset_left = 8.13954
 offset_top = 359.302
 offset_right = 27.1395
 offset_bottom = 392.302
+
+[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Ultimate"]
+position = Vector2(9.88371, 15.698)
+scale = Vector2(0.0968992, 0.090032)
+sprite_frames = SubResource("SpriteFrames_288fq")
+autoplay = "default"
 
 [node name="Ultimate" type="AnimatedSprite2D" parent="Frontground/Skills/Ultimate"]
 position = Vector2(9.01163, 16.3648)

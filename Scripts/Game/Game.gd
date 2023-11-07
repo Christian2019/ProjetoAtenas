@@ -1,21 +1,65 @@
 extends Node2D
+	
+var selected=0
+var changeSkillHud=true
+var skills=[{"skill":3,"quality":2},
+{"skill":3,"quality":0},
+{"skill":3,"quality":0},
+{"skill":0,"quality":0},
+{"skill":0,"quality":0}
+]
 
+var attack1=[PreLoads.warrior_attack1_noGod,
+	PreLoads.warrior_attack1_zeus,
+	PreLoads.warrior_attack1_poseidon,
+	PreLoads.warrior_attack1_hades,
+	PreLoads.warrior_attack1_divine_ZeusPoseion,
+	PreLoads.warrior_attack1_divine_ZeusHades,
+	PreLoads.warrior_attack1_divine_HadesPoseidon]
+
+var attack2=[PreLoads.warrior_attack2_noGod,
+	PreLoads.warrior_attack2_zeus,
+	PreLoads.warrior_attack2_poseidon,
+	PreLoads.warrior_attack2_hades,
+	PreLoads.warrior_attack2_divine_ZeusPoseidon,
+	PreLoads.warrior_attack2_divine_ZeusHades,
+	PreLoads.warrior_attack2_divine_HadesPoseidon]
+
+var turret=[PreLoads.warrior_turret_noGod,
+	PreLoads.warrior_turret_zeus,
+	PreLoads.warrior_turret_poseidon,
+	PreLoads.warrior_turret_hades,
+	PreLoads.warrior_turret_divine_ZeusPoseidon,
+	PreLoads.warrior_turret_divine_ZeusHades,
+	PreLoads.warrior_turret_divine_HadesPoseidon]
+
+var dash=[PreLoads.warrior_dash_noGod,
+	PreLoads.warrior_dash_zeus,
+	PreLoads.warrior_dash_poseidon,
+	PreLoads.warrior_dash_hades,
+	PreLoads.warrior_dash_divine_ZeusPoseidon,
+	PreLoads.warrior_dash_divine_ZeusHades,
+	PreLoads.warrior_dash_divine_HadesPoseidon]
+
+var ultimate=[PreLoads.warrior_ultimate_noGod,
+	PreLoads.warrior_ultimate_zeus,
+	PreLoads.warrior_ultimate_poseidon,
+	PreLoads.warrior_ultimate_hades,
+	PreLoads.warrior_ultimate_divine_ZeusPoseidon,
+	PreLoads.warrior_ultimate_divine_ZeusHades,
+	PreLoads.warrior_ultimate_divine_HadesPoseidon]
+
+var qualitys = ["common",
+"rare",
+"epic",
+"legendary"
+]
 
 func _ready():
 	Global.Game = self
-	
-var started=false
-func start():
-	changeSkillGod()
-	ChangeSkillQuality()
-	changePlayerSkillFunction()
-
 
 func _process(_delta):
-	if (!started):
-		started=true
-		start()
-
+	
 	if (Input.is_action_just_pressed("zoomOut")):
 		Global.camera.zoom.x=0.5
 		Global.camera.zoom.y=0.5
@@ -35,20 +79,6 @@ func _process(_delta):
 	
 	changeSkills()
 	
-	
-var selected=0
-var s0=5
-var q0=2
-var s1=0
-var q1=0
-var s2=0
-var q2=0
-var s3=0
-var q3=0
-var s4=0
-var q4=0
-	
-var changePlayerSkill=false
 
 func changeSkills():
 	if (Input.is_action_just_pressed("ChangeSkillSelected")):
@@ -63,132 +93,65 @@ func changeSkills():
 	elif (Input.is_action_just_pressed("ChangeSkillQuality")):
 		ChangeSkillQuality()
 	
-	if (changePlayerSkill):
+	if (changeSkillHud):
 		changePlayerSkillFunction()
-
-func changePlayerSkillFunction():
-	changePlayerSkill=false
-	var skill=getSkill()
-	var quality=getQuality()
-
-			
-	if (skill!=null):
-		if (selected==0):
-			Global.player.attack1={"skill":skill, "quality": quality}
-			
-	
-func getSkill():
-	if selected==0:
-		Global.hud.get_node("Frontground/Skills/Attack1_Border/Divine").visible=false
-		if s0==0:
-			return PreLoads.warrior_attack1_noGod
-		elif s0==1:
-			return PreLoads.warrior_attack1_zeus
-		elif s0==2:
-			return PreLoads.warrior_attack1_hades
-		elif s0==3:
-			return PreLoads.warrior_attack1_poseidon
-		elif s0==4:
-			Global.hud.get_node("Frontground/Skills/Attack1_Border/Divine").visible=true
-			
-			return PreLoads.warrior_attack1_divine_ZeusPoseion
-		elif s0==5:
-			Global.hud.get_node("Frontground/Skills/Attack1_Border/Divine").visible=true
-			return PreLoads.warrior_attack1_divine_HadesPoseidon
-		elif s0==6:
-			Global.hud.get_node("Frontground/Skills/Attack1_Border/Divine").visible=true
-			return PreLoads.warrior_attack1_divine_ZeusHades
-	
-	return null
-	
-func getQuality():
-	var q
-	if (selected==0):
-		q=q0
-	elif (selected==1):
-		q=q1
-	elif (selected==2):
-		q=q2
-	elif (selected==3):
-		q=q3
-	elif (selected==4):
-		q=q4
 		
-	if (q==0):
-		return "common"
-	elif (q==1):
-		return "rare"
-	elif (q==2):
-		return "epic"
-	elif (q==3):
-		return "legendary"
-
 func changeSkillGod():
-		if (selected==0):
-			s0+=1
-			if (s0>6):
-				s0=0
-			Global.hud.get_node("Frontground/Skills/Attack1_Border/Attack1").frame=s0
-			
-		elif (selected==1):
-			s1+=1
-			if (s1>3):
-				s1=0
-			Global.hud.get_node("Frontground/Skills/Attack2_Border/Attack2").frame=s1
-			
-		elif (selected==2):
-			s2+=1
-			if (s2>2):
-				s2=0
-			Global.hud.get_node("Frontground/Skills/Turret/Turret").frame=s2
-			
-		elif (selected==3):
-			s3+=1
-			if (s3>3):
-				s3=0
-			Global.hud.get_node("Frontground/Skills/Dash/Dash").frame=s3
-			
-		elif (selected==4):
-			s4+=1
-			if (s4>2):
-				s4=0
-			Global.hud.get_node("Frontground/Skills/Ultimate/Ultimate").frame=s4
-			
-			
-		changePlayerSkill=true
+	skills[selected].skill+=1
+	if (skills[selected].skill)>6:
+		skills[selected].skill=0
+		
+	changeSkillHud=true
 
 func ChangeSkillQuality():
-		if (selected==0):
-			q0+=1
-			if (q0>3):
-				q0=0
-			changeColor("Frontground/Skills/Attack1_Border",q0)
-			
-		elif (selected==1):
-			q1+=1
-			if (q1>3):
-				q1=0
-			changeColor("Frontground/Skills/Attack2_Border",q1)
-			
-		elif (selected==2):
-			q2+=1
-			if (q2>3):
-				q2=0
-			changeColor("Frontground/Skills/Turret",q2)
-			
-		elif (selected==3):
-			q3+=1
-			if (q3>3):
-				q3=0
-			changeColor("Frontground/Skills/Dash",q3)
-			
-		elif (selected==4):
-			q4+=1
-			if (q4>3):
-				q4=0
-			changeColor("Frontground/Skills/Ultimate",q4)
-			
-		changePlayerSkill=true
+	skills[selected].quality+=1
+	if (skills[selected].quality)>3:
+		skills[selected].quality=0
+	changeSkillHud=true
+
+func changePlayerSkillFunction():
+	changeSkillHud=false
+	
+	Global.player.attack1={"skill":attack1[skills[0].skill], "quality": qualitys[skills[0].quality]}
+	Global.hud.get_node("Frontground/Skills/Attack1_Border/Attack1").frame=skills[0].skill
+	changeColor("Frontground/Skills/Attack1_Border",skills[0].quality)
+	if (skills[0].skill)>3:
+		Global.hud.get_node("Frontground/Skills/Attack1_Border/Divine").visible=true
+	else:
+		Global.hud.get_node("Frontground/Skills/Attack1_Border/Divine").visible=false
+
+	Global.player.attack2={"skill":attack2[skills[1].skill], "quality": qualitys[skills[1].quality]}
+	Global.hud.get_node("Frontground/Skills/Attack2_Border/Attack2").frame=skills[1].skill
+	changeColor("Frontground/Skills/Attack2_Border",skills[1].quality)
+	if (skills[1].skill)>3:
+		Global.hud.get_node("Frontground/Skills/Attack2_Border/Divine").visible=true
+	else:
+		Global.hud.get_node("Frontground/Skills/Attack2_Border/Divine").visible=false
+	
+	Global.player.turret={"skill":turret[skills[2].skill], "quality": qualitys[skills[2].quality]}
+	Global.hud.get_node("Frontground/Skills/Turret/Turret").frame=skills[2].skill
+	changeColor("Frontground/Skills/Turret",skills[2].quality)
+	if (skills[2].skill)>3:
+		Global.hud.get_node("Frontground/Skills/Turret/Divine").visible=true
+	else:
+		Global.hud.get_node("Frontground/Skills/Turret/Divine").visible=false
+	
+	Global.player.dash={"skill":dash[skills[3].skill], "quality": qualitys[skills[3].quality]}
+	Global.hud.get_node("Frontground/Skills/Dash/Dash").frame=skills[3].skill
+	changeColor("Frontground/Skills/Dash",skills[3].quality)
+	if (skills[3].skill)>3:
+		Global.hud.get_node("Frontground/Skills/Dash/Divine").visible=true
+	else:
+		Global.hud.get_node("Frontground/Skills/Dash/Divine").visible=false
+	
+	Global.player.ultimate={"skill":ultimate[skills[4].skill], "quality": qualitys[skills[4].quality]}
+	Global.hud.get_node("Frontground/Skills/Ultimate/Ultimate").frame=skills[4].skill
+	changeColor("Frontground/Skills/Ultimate",skills[4].quality)
+	if (skills[4].skill)>3:
+		Global.hud.get_node("Frontground/Skills/Ultimate/Divine").visible=true
+	else:
+		Global.hud.get_node("Frontground/Skills/Ultimate/Divine").visible=false
+
 	
 func changeColor(path,q):
 	if (q==0):

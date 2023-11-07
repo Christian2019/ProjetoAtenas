@@ -1,9 +1,5 @@
 extends Node2D
 
-
-#->Determinado pelo player
-#Pode ser N,S,W,E,NE,NW,SE,SW 
-var direction = "E"
 var relativePosition= Vector2(0,0)
 
 var startDistanceFromPlayer = 50
@@ -15,8 +11,7 @@ var damage = 10
 var speed = 10
 
 #Duracao em segundos
-var cd = 3
-var max_duration = 0.5
+var max_duration = 1
 #var nextHitDelay = 10
 var nextHitDelay = 1
 
@@ -36,33 +31,23 @@ var startRotationAngle
 
 var angle
 
-
 func _ready():
 	$Animation.visible=false
+	attackSpeedModifier()
 	
-
-var waitFrames=0
-var waitMaxFrames=1
-func waitFunc():
-	if (waitFrames>=waitMaxFrames):
-		if (waitFrames>waitMaxFrames):
-			return
-		startAnimation()
-		startPosition()
-	waitFrames+=1	
+func attackSpeedModifier():
+	max_duration = max_duration/Global.player.attack_Speed
+	speed=360.0/(max_duration*60)
 
 
 func _process(_delta):
-	waitFunc()
-	if (waitFrames>waitMaxFrames):
-		move()
+	animation()
+	move()
 	damageAction()
 
-func startPosition():
-	relativePosition.x=startDistanceFromPlayer
-	global_position= Global.player.global_position+relativePosition
-
-func startAnimation():
+func animation():
+	if ($Animation.visible):
+		return
 	$Animation.stop()
 	$Animation.visible=true
 	$Animation.frame=0
@@ -71,19 +56,16 @@ func startAnimation():
 	startRotationAngle=rad_to_deg($Animation.rotation)
 	$Animation.flip_v=true
 	angle= startRotationAngle
-
-
-
-func enableReverseOrder():
-	reverseOrder=true
-
-func removeNextHitDelay(arrayPosition):
-	if (itsValid(monstersHit[arrayPosition])):
-		monstersHit[arrayPosition].onHitDelay=false
 	
+	relativePosition.x=startDistanceFromPlayer
+	global_position= Global.player.global_position+relativePosition
+
+func destroy():
+	Global.player.permissions[1]=true
+	call_deferred("queue_free")
+
 func damageAction():
-	if (Global.MathController.attack1_poseidon.heavyDamageHits>Global.MathController.attack1_poseidon.heavyDamageMaxHits and !Global.MathController.attack1_poseidon.heavyDamageOn):
-		Global.MathController.attack1_poseidon.heavyDamageActivation()
+	Global.MathController.attack1_poseidon.heavyDamageVerification()
 	
 	if (monstersInArea.is_empty()):
 		return
@@ -95,9 +77,6 @@ func damageAction():
 					monstersHit[i].onHitDelay=true
 					Global.timerCreator("removeNextHitDelay",nextHitDelay,[i],self)
 
-
-	
-
 func move():
 	angle+=speed
 	relativePosition.y=startDistanceFromPlayer*cos(deg_to_rad(angle))
@@ -106,10 +85,9 @@ func move():
 	global_position= Global.player.global_position+relativePosition
 	
 	if (angle>=startRotationAngle+360):
-		Global.player.permissions[1]=true
-		call_deferred("queue_free")
+		destroy()
 		
-		
+	
 func _on_area_2d_area_entered(area):
 	if area.get_parent().get_parent().name == "Enemies":
 		call_deferred("addMonster",area.get_parent())
@@ -121,6 +99,10 @@ func _on_area_2d_area_exited(area):
 		call_deferred("removeMonster",area.get_parent())
 	if area.get_parent().name == "Player":
 		collidinWithPlayer=false
+
+func removeNextHitDelay(arrayPosition):
+	if (itsValid(monstersHit[arrayPosition])):
+		monstersHit[arrayPosition].onHitDelay=false
 
 func removeMonster(monster):
 	monstersInArea.erase(monster)
@@ -151,4 +133,3 @@ func getMonsterHitIndex(monster):
 		if itsValid(monstersHit[i]):
 			if (monstersHit[i].monster.name==monster.name):
 				return i
-	

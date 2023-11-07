@@ -123,7 +123,7 @@ var warrior_attack1_zeus_lightning=preload("res://Scenes/Game/Classes/Warrior/Wa
 var warrior_attack1_poseidon_heavyDamage=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Poseidon/heavyDamage.tscn")
 
 #Attack2
-var warrior_attack2_noGod=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2.tscn")
+var warrior_attack2_noGod=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2/Warrior_attack2_noGod.tscn")
 var warrior_attack2_zeus
 var warrior_attack2_poseidon
 var warrior_attack2_hades
@@ -142,6 +142,7 @@ var warrior_dash_divine_HadesPoseidon
 var dashShadow= preload("res://Scenes/Game/Classes/Warrior/WarriorDash/DashShadow.tscn")
 
 #Turret
+var warrior_turret_noGod
 var warrior_turret_zeus=preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/Warrior_Turret.tscn")
 var warrior_turret_hades
 var warrior_turret_poseidon
@@ -151,6 +152,7 @@ var warrior_turret_divine_HadesPoseidon
 var warrior_arrow = preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/WarriorArrow.tscn")
 
 #Ultimate
+var warrior_ultimate_noGod
 var warrior_ultimate_zeus=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimateZeus.tscn")
 var warrior_ultimate_hades= preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimateHades/WarriorUltimateHades.tscn")
 var warrior_ultimate_poseidon= preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon/WarriorUltimatePoseidon.tscn")

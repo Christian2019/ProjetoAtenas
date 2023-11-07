@@ -23,7 +23,6 @@ func heavyDamageActivation():
 	heavyDamageInstance(0)
 	var hd= PreLoads.warrior_attack1_poseidon_heavyDamage.instantiate()
 	Global.Game.get_node("Instances/Explosions").add_child(hd)
-	hd.global_position=global_position
 	
 	for i in range(1,heavyDamageInstances,1):
 		Global.timerCreator("heavyDamageInstance",(heavyDamageInterval*i),[i],self)
@@ -49,3 +48,6 @@ func effect(target,finalDamage):
 	return finalDamage
 	
 
+func heavyDamageVerification():
+	if (heavyDamageHits>heavyDamageMaxHits and !heavyDamageOn):
+		heavyDamageActivation()
