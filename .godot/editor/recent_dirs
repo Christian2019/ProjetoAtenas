@@ -1,23 +1,23 @@
-res://Assets/Images/Player/Attack1/Hades/Twister
-res://Scripts/Game/MathController/Skills/attack1/Hades
-res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Hades
-res://Assets/Images/Player
-res://Scripts/Game/MathController/Skills/attack1/Poseidon
-res://Scripts/Game/MathController/Skills/attack1/Zeus
-res://Scenes/Game
-res://Scripts/Zones/Temple
-res://Scripts/Game/Waves
-res://Scripts
-res://Assets/Images/Player/Attack1/Poseidon/heavyDamage
-res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Poseidon
-res://Assets/Images/Background/Elementos
-res://Assets/Images/Player/Attack1/Zeus/Lightning
-res://Assets/Images/HUD/Ultimates
-res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Zeus
-res://Scripts/Classes/Warrior/Warrior_attack1
-res://Scripts/Game
-res://Assets/Images/Player/Ultimates/Poseidon/wave
-res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon
-res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimateHades
-res://Assets/Images/Player/Ultimates/Hades/Cerberus/Moving
+res://Assets/Images/Player/DashAnimations/dash/Up_Right
+res://Assets/Images/Player/DashAnimations/dash/Up_Left
+res://Assets/Images/Player/DashAnimations/dash/Up
+res://Assets/Images/Player/DashAnimations/dash/Right
+res://Assets/Images/Player/DashAnimations/dash/Left
+res://Assets/Images/Player/DashAnimations/dash/Down_Right
+res://Assets/Images/Player/DashAnimations/dash/Down_Left
+res://Assets/Images/Player/DashAnimations/dash/Down
+res://Assets/Images/Player/Attacks Animations/attack2/Up_Right
+res://Assets/Images/Player/Attacks Animations/attack2/Up_Left
+res://Assets/Images/Player/Attacks Animations/attack2/Up
+res://Assets/Images/Player/Attacks Animations/attack2/Right
+res://Assets/Images/Player/Attacks Animations/attack2/Left
+res://Assets/Images/Player/Attacks Animations/attack2/Down_Right
+res://Assets/Images/Player/Attacks Animations/attack2/Down_Left
+res://Assets/Images/Player/Attacks Animations/attack2/Down
+res://Assets/Images/Player/Attacks Animations/attack1/Down
+res://Assets/Images/Player/Attacks Animations/attack1/Up_Right
+res://Assets/Images/Player/Attacks Animations/attack1/Up_Left
+res://Assets/Images/Player/Attacks Animations/attack1/Up
+res://Assets/Images/Player/Attacks Animations/attack1/Right
+res://Assets/Images/Player/Attacks Animations/attack1/Left
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

@@ -36,6 +36,9 @@ var extraPercentDamage=0
 
 var heavyDamageOn=false
 
+var divineReference
+
+
 func _ready():
 	attackSpeedModifier()
 	Global.timerCreator("enableReverseOrder",max_duration/2,[],self)
@@ -56,6 +59,9 @@ func qualityStatus():
 		extraDamagePerConsHit=6
 	elif ( quality=="legendary"):
 		extraDamagePerConsHit=8
+		Global.MathController.attack1_poseidon.heavyDamageInstances=10
+	elif ( quality=="divine"):
+		extraDamagePerConsHit=10
 		Global.MathController.attack1_poseidon.heavyDamageInstances=20
 
 
@@ -92,7 +98,9 @@ func enableReverseOrder():
 
 func destroy():
 	if (reverseOrder and collidinWithPlayer):
-		if (!heavyDamageOn):
+		if (quality=="divine" and !heavyDamageOn):
+			divineReference.skillsFinish+=1
+		elif (!heavyDamageOn):
 			Global.player.permissions[0]=true
 		call_deferred("queue_free")
 
@@ -110,7 +118,7 @@ func damageAction():
 					
 					Global.MathController.attack1_poseidon.addEntityWaterDamage(monstersHit[i].monster,extraDamagePerConsHit)
 					
-					if ( quality=="legendary"):
+					if ( quality=="legendary" or quality=="divine"):
 						if !Global.MathController.attack1_poseidon.heavyDamageOn:
 							Global.MathController.attack1_poseidon.heavyDamageHits+=1
 						if (Global.MathController.attack1_poseidon.heavyDamageHits==Global.MathController.attack1_poseidon.heavyDamageMaxHits):

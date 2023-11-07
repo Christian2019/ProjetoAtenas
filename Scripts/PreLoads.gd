@@ -114,7 +114,7 @@ var warrior_attack1_noGod=preload("res://Scenes/Game/Classes/Warrior/Warrior_Att
 var warrior_attack1_zeus=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Zeus/Warrior_attack1_Zeus.tscn")
 var warrior_attack1_poseidon =preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Poseidon/Warrior_attack1_Poseidon.tscn")
 var warrior_attack1_hades=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Hades/Warrior_attack1_Hades.tscn")
-var warrior_attack1_divine_ZeusPoseion
+var warrior_attack1_divine_ZeusPoseion=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_divine_ZeusPoseion.tscn")
 var warrior_attack1_divine_ZeusHades
 var warrior_attack1_divine_HadesPoseion
 

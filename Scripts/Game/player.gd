@@ -14,7 +14,7 @@ var percentCritDamage=0.1
 var armor=20
 var dodge=50
 var maxDodge=70
-var move_Speed = 5
+var move_Speed = 5.0
 var luck=0
 var collect_radios=200
 
@@ -51,8 +51,6 @@ var dracmaBag=0
 #Farming
 var carryingItem
 
-
-
 var contactQuadrants = []
 var closerQuadrant 
 
@@ -65,8 +63,9 @@ var playerRight=true
 var feedBackAtive=false
 var reverseAlphaChange=false
 
+var animAttacking=false
+
 func _ready():
-	$Animation.play("Right")
 	Global.player = self
 
 func _process(__delta):
@@ -92,21 +91,51 @@ func restartGame():
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/Fatality.tscn")
 	
 func animationController():
-	if (dashing):
+	if (dashing or animAttacking):
 		return
 	if ($CutAnimation.frame==6):
 		$CutAnimation.frame=0
 		$CutAnimation.stop()
-	if Input.is_action_pressed("Move_Down"):
-		$Animation.play("Down")
+	if Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Right"):
+		playAnimation ("Run")
+	elif Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Left"):
+		playAnimation ("Run")
+	elif Input.is_action_pressed("Move_Up") and Input.is_action_pressed("Move_Right"):
+		playAnimation ("Run")
+	elif Input.is_action_pressed("Move_Up") and Input.is_action_pressed("Move_Left"):
+		playAnimation ("Run")
+	elif Input.is_action_pressed("Move_Down"):
+		playAnimation ("Run")
 	elif Input.is_action_pressed("Move_Up"):
-		$Animation.play("Up")
+		playAnimation ("Run")
 	elif Input.is_action_pressed("Move_Right"):
-		$Animation.play("Right")
+		playAnimation ("Run")
 	elif Input.is_action_pressed("Move_Left"):
-		$Animation.play("Left")
+		playAnimation ("Run")
 	else:
-		$Animation.stop()
+		playAnimation ("Idle")
+		
+func playAnimation (animName):
+	if lastMovement=="S":
+		$Animation.play(animName+"_Down")
+	elif lastMovement=="SE":
+		$Animation.play(animName+"_Down_Right")
+	elif lastMovement=="SW":
+		$Animation.play(animName+"_Down_Left")
+	elif lastMovement=="N":
+		$Animation.play(animName+"_Up")
+	elif lastMovement=="NE":
+		$Animation.play(animName+"_Up_Right")
+	elif lastMovement=="NW":
+		$Animation.play(animName+"_Up_Left")
+	elif lastMovement=="E":
+		$Animation.play(animName+"_Right")
+	elif lastMovement=="W":
+		$Animation.play(animName+"_Left")
+	
+	if (animName=="Run"):
+		$Animation.speed_scale=move_Speed/5
+		
 
 func commandController():
 	if (dashing):
@@ -207,6 +236,11 @@ func attack1Controller():
 		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position
 		attackInstance.direction=lastMovement
+		
+		animAttacking=true
+		playAnimation ("Attack1")
+		$Animation.speed_scale=attack_Speed
+		
 		
 func creatAttackInstance(classChild):
 	##Criando uma instancia do tipo do ataque da classe
@@ -349,6 +383,21 @@ func _on_body_area_exited(area):
 
 
 func _on_timer_timeout():
-	return
-	#print("attackspeed: ",attack_Speed)
+	return 
+	print("STATUS:")
+	print("hpRegeneration: ",hpRegeneration)
 	print("lifesteal: ",lifeStealChance)
+	print("percentDamage: ",percentDamage)
+	print("baseDamage: ",baseDamage)
+	print("attackspeed: ",attack_Speed)
+	print("percentCritDamage: ",percentCritDamage)
+	print("armor: ",armor)
+	print("dodge: ",dodge)
+	print("move_Speed: ",move_Speed)
+	print("luck: ",luck)
+	print("collect_radios: ",collect_radios)
+
+
+func _on_animation_animation_looped():
+	if (animAttacking):
+		animAttacking=false

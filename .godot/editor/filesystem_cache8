@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699301286
-default_env.tres::Environment::8363765569308027888::1699301286::0::1::::<><>::
+::res://::1699322230
+default_env.tres::Environment::8363765569308027888::1699322230::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1687928995::0::1::::<><>::
 icon.png::CompressedTexture2D::8961917463339288538::1687313253::1687928995::1::::<><>::
 ::res://Assets/::1695242278
@@ -251,13 +251,19 @@ scene00022-removebg-preview.png::CompressedTexture2D::6708382012282944036::16992
 scene00025-removebg-preview.png::CompressedTexture2D::5396358946534033407::1699229336::1699229336::1::::<><>::
 scene00028-removebg-preview.png::CompressedTexture2D::7721141734343681755::1699229336::1699229336::1::::<><>::
 scene00031-removebg-preview.png::CompressedTexture2D::3365555615545604464::1699229336::1699229336::1::::<><>::
-::res://Assets/Images/HUD/::1699229336
+::res://Assets/Images/HUD/::1699306987
 background.png::CompressedTexture2D::6117396777253534569::1687928993::1687928993::1::::<><>::
 hearth2.png::CompressedTexture2D::5254022626860167378::1695195732::1695195735::1::::<><>::
 hearth.png::CompressedTexture2D::237785404925632166::1687928993::1687928993::1::::<><>::
-::res://Assets/Images/HUD/Ultimates/::1699229336
+::res://Assets/Images/HUD/SkillSelection/::1699306996
+::res://Assets/Images/HUD/SkillSelection/Divine/::1699307008
+scene00001.png::CompressedTexture2D::1703266390742718983::1699306960::1699307008::1::::<><>::
+scene00004.png::CompressedTexture2D::3176263977036203622::1699306962::1699307008::1::::<><>::
+scene00007.png::CompressedTexture2D::1250611620800075922::1699306958::1699307008::1::::<><>::
+::res://Assets/Images/HUD/Ultimates/::1699307527
 hadesUltHUD.png::CompressedTexture2D::61296974282311937::1699229336::1699229336::1::::<><>::
 poseidonUltHUD.png::CompressedTexture2D::6742558848422659273::1699229336::1699229336::1::::<><>::
+zeus&poseidonUltHUD.png::CompressedTexture2D::3737131553741037304::1699307525::1699307527::1::::<><>::
 zeusUlt.png::CompressedTexture2D::4404347848363740119::1699229336::1699229336::1::::<><>::
 ::res://Assets/Images/HUD/waves/::1699229336
 wave1.png::CompressedTexture2D::3676987553133867244::1699229336::1699229336::1::::<><>::
@@ -279,7 +285,7 @@ wave16.png::CompressedTexture2D::2618114244204352669::1699229336::1699229336::1:
 wave17.png::CompressedTexture2D::2982766622110444704::1699229336::1699229336::1::::<><>::
 wave18.png::CompressedTexture2D::1926191580552293169::1699229336::1699229336::1::::<><>::
 wave19.png::CompressedTexture2D::422496694000226276::1699229336::1699229336::1::::<><>::
-::res://Assets/Images/Player/::1699298111
+::res://Assets/Images/Player/::1699320296
 all_swords.png::CompressedTexture2D::490362841448361156::1699298104::1699298111::1::::<><>::
 arrows.png::CompressedTexture2D::8272655034819617995::1699229337::1699229337::1::::<><>::
 axe_spin_spritesheet.png::CompressedTexture2D::245657118505427810::1695114201::1695114230::1::::<><>::
@@ -292,7 +298,7 @@ turret_ups.png::CompressedTexture2D::2984313300009578466::1699229337::1699229337
 zeusUlt3.png::CompressedTexture2D::460986427871908098::1699229337::1699229337::1::::<><>::
 ::res://Assets/Images/Player/Attack1/::1699301787
 ::res://Assets/Images/Player/Attack1/Hades/::1699301795
-::res://Assets/Images/Player/Attack1/Hades/Twister/::1699301797
+::res://Assets/Images/Player/Attack1/Hades/Twister/::1699301811
 scene00001-removebg-preview.png::CompressedTexture2D::5867239338007741197::1699301711::1699301811::1::::<><>::
 scene00004-removebg-preview.png::CompressedTexture2D::607338174256403871::1699301724::1699301811::1::::<><>::
 scene00007-removebg-preview.png::CompressedTexture2D::4470433912637854150::1699301737::1699301811::1::::<><>::
@@ -313,6 +319,426 @@ scene00028.png::CompressedTexture2D::6892866583112555802::1699229336::1699229336
 scene00001.png::CompressedTexture2D::9074038046545085299::1699229336::1699229336::1::::<><>::
 scene00004.png::CompressedTexture2D::3050689966531625343::1699229336::1699229336::1::::<><>::
 scene00007.png::CompressedTexture2D::895928494160067919::1699229336::1699229336::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/::1699322298
+::res://Assets/Images/Player/Attacks Animations/attack1/::1699319128
+::res://Assets/Images/Player/Attacks Animations/attack1/Down/::1699319134
+attack1_0_001.png::CompressedTexture2D::4485839173052456799::1699318296::1699319134::1::::<><>::
+attack1_0_004.png::CompressedTexture2D::5950660821423702925::1699318298::1699319134::1::::<><>::
+attack1_0_007.png::CompressedTexture2D::2795207034506489995::1699318298::1699319134::1::::<><>::
+attack1_0_010.png::CompressedTexture2D::2141393456278952590::1699318298::1699319134::1::::<><>::
+attack1_0_013.png::CompressedTexture2D::3040098235572079603::1699318298::1699319134::1::::<><>::
+attack1_0_016.png::CompressedTexture2D::1106685606873203173::1699318300::1699319134::1::::<><>::
+attack1_0_019.png::CompressedTexture2D::1191531431977910803::1699318300::1699319134::1::::<><>::
+attack1_0_022.png::CompressedTexture2D::6598411588674506058::1699318300::1699319134::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack1/Down_Left/::1699319134
+attack1_315_001.png::CompressedTexture2D::2982591558007422691::1699318324::1699319134::1::::<><>::
+attack1_315_004.png::CompressedTexture2D::2012920392146076774::1699318326::1699319134::1::::<><>::
+attack1_315_007.png::CompressedTexture2D::3727820171127698633::1699318326::1699319134::1::::<><>::
+attack1_315_010.png::CompressedTexture2D::2831438351817354004::1699318326::1699319134::1::::<><>::
+attack1_315_013.png::CompressedTexture2D::6069608507932530737::1699318326::1699319134::1::::<><>::
+attack1_315_016.png::CompressedTexture2D::1622942052497553412::1699318328::1699319134::1::::<><>::
+attack1_315_019.png::CompressedTexture2D::7700315680723871785::1699318328::1699319134::1::::<><>::
+attack1_315_022.png::CompressedTexture2D::4678415074954166798::1699318328::1699319134::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack1/Down_Right/::1699319134
+attack1_45_001.png::CompressedTexture2D::6803315983500210885::1699318300::1699319134::1::::<><>::
+attack1_45_004.png::CompressedTexture2D::5967562908625663544::1699318302::1699319134::1::::<><>::
+attack1_45_007.png::CompressedTexture2D::7400800191841571692::1699318302::1699319134::1::::<><>::
+attack1_45_010.png::CompressedTexture2D::4824820484945188644::1699318302::1699319134::1::::<><>::
+attack1_45_013.png::CompressedTexture2D::7218715859704243592::1699318302::1699319134::1::::<><>::
+attack1_45_016.png::CompressedTexture2D::8928793014078110040::1699318304::1699319134::1::::<><>::
+attack1_45_019.png::CompressedTexture2D::7309581437950453441::1699318304::1699319134::1::::<><>::
+attack1_45_022.png::CompressedTexture2D::4395914083314448383::1699318304::1699319134::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack1/Left/::1699319134
+attack1_270_001.png::CompressedTexture2D::8584232954338224632::1699318320::1699319134::1::::<><>::
+attack1_270_004.png::CompressedTexture2D::2273948314316802869::1699318322::1699319134::1::::<><>::
+attack1_270_007.png::CompressedTexture2D::1420345400294083857::1699318322::1699319134::1::::<><>::
+attack1_270_010.png::CompressedTexture2D::1960620306605861461::1699318322::1699319134::1::::<><>::
+attack1_270_013.png::CompressedTexture2D::7642868745154103829::1699318322::1699319134::1::::<><>::
+attack1_270_016.png::CompressedTexture2D::2814088597330425161::1699318324::1699319134::1::::<><>::
+attack1_270_019.png::CompressedTexture2D::255508950158807976::1699318324::1699319134::1::::<><>::
+attack1_270_022.png::CompressedTexture2D::8951623674470229312::1699318324::1699319134::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack1/Right/::1699319135
+attack1_90_001.png::CompressedTexture2D::6621974982512113223::1699318304::1699319135::1::::<><>::
+attack1_90_004.png::CompressedTexture2D::2971491932233430558::1699318306::1699319135::1::::<><>::
+attack1_90_007.png::CompressedTexture2D::7639584257451472163::1699318306::1699319135::1::::<><>::
+attack1_90_010.png::CompressedTexture2D::3784805184937601184::1699318306::1699319135::1::::<><>::
+attack1_90_013.png::CompressedTexture2D::8349591023783350334::1699318306::1699319135::1::::<><>::
+attack1_90_016.png::CompressedTexture2D::4969199076102365519::1699318308::1699319135::1::::<><>::
+attack1_90_019.png::CompressedTexture2D::5856549315213057349::1699318308::1699319135::1::::<><>::
+attack1_90_022.png::CompressedTexture2D::376829433466800579::1699318308::1699319135::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack1/Up/::1699319135
+attack1_180_001.png::CompressedTexture2D::4982517141582474496::1699318312::1699319135::1::::<><>::
+attack1_180_004.png::CompressedTexture2D::1155741853071920804::1699318314::1699319135::1::::<><>::
+attack1_180_007.png::CompressedTexture2D::7892950441907514263::1699318314::1699319135::1::::<><>::
+attack1_180_010.png::CompressedTexture2D::7739703627261296351::1699318314::1699319135::1::::<><>::
+attack1_180_013.png::CompressedTexture2D::1253129543985418589::1699318314::1699319135::1::::<><>::
+attack1_180_016.png::CompressedTexture2D::1635624688050286851::1699318316::1699319135::1::::<><>::
+attack1_180_019.png::CompressedTexture2D::8805156052272084402::1699318316::1699319135::1::::<><>::
+attack1_180_022.png::CompressedTexture2D::2500370670932969216::1699318316::1699319135::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack1/Up_Left/::1699319135
+attack1_225_001.png::CompressedTexture2D::6027317323371183605::1699318316::1699319135::1::::<><>::
+attack1_225_004.png::CompressedTexture2D::1935907087730870919::1699318318::1699319135::1::::<><>::
+attack1_225_007.png::CompressedTexture2D::269353886902556074::1699318318::1699319135::1::::<><>::
+attack1_225_010.png::CompressedTexture2D::7256573913874714468::1699318318::1699319135::1::::<><>::
+attack1_225_013.png::CompressedTexture2D::8497893063085982069::1699318318::1699319135::1::::<><>::
+attack1_225_016.png::CompressedTexture2D::2200333102325057721::1699318320::1699319135::1::::<><>::
+attack1_225_019.png::CompressedTexture2D::6634521582380512355::1699318320::1699319135::1::::<><>::
+attack1_225_022.png::CompressedTexture2D::2332574034204872359::1699318320::1699319135::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack1/Up_Right/::1699319134
+attack1_135_001.png::CompressedTexture2D::3096615489656256688::1699318308::1699319134::1::::<><>::
+attack1_135_004.png::CompressedTexture2D::865954215816039781::1699318310::1699319134::1::::<><>::
+attack1_135_007.png::CompressedTexture2D::6913627909640184727::1699318310::1699319134::1::::<><>::
+attack1_135_010.png::CompressedTexture2D::443911879943375748::1699318310::1699319134::1::::<><>::
+attack1_135_013.png::CompressedTexture2D::4765020365042868435::1699318310::1699319134::1::::<><>::
+attack1_135_016.png::CompressedTexture2D::8246687751942345579::1699318312::1699319134::1::::<><>::
+attack1_135_019.png::CompressedTexture2D::2636473993577139306::1699318312::1699319134::1::::<><>::
+attack1_135_022.png::CompressedTexture2D::4280398783783150951::1699318312::1699319134::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack2/::1699319128
+::res://Assets/Images/Player/Attacks Animations/attack2/Down/::1699319133
+strongAttack_0_001.png::CompressedTexture2D::3814452879598961083::1699318328::1699319133::1::::<><>::
+strongAttack_0_004.png::CompressedTexture2D::5385855450477852797::1699318330::1699319133::1::::<><>::
+strongAttack_0_007.png::CompressedTexture2D::2974249359723225088::1699318330::1699319133::1::::<><>::
+strongAttack_0_010.png::CompressedTexture2D::8377667225875814894::1699318330::1699319133::1::::<><>::
+strongAttack_0_013.png::CompressedTexture2D::4332632028191247014::1699318332::1699319133::1::::<><>::
+strongAttack_0_016.png::CompressedTexture2D::1861604085298833074::1699318332::1699319133::1::::<><>::
+strongAttack_0_019.png::CompressedTexture2D::4966591868027843028::1699318332::1699319133::1::::<><>::
+strongAttack_0_022.png::CompressedTexture2D::1881031173768835804::1699318332::1699319133::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack2/Down_Left/::1699319133
+strongAttack_315_001.png::CompressedTexture2D::5160600903551499731::1699318358::1699319133::1::::<><>::
+strongAttack_315_004.png::CompressedTexture2D::9149186888686903154::1699318358::1699319133::1::::<><>::
+strongAttack_315_007.png::CompressedTexture2D::5692268368439310466::1699318358::1699319133::1::::<><>::
+strongAttack_315_010.png::CompressedTexture2D::7224251043681025604::1699318358::1699319133::1::::<><>::
+strongAttack_315_013.png::CompressedTexture2D::1963340759960679743::1699318360::1699319133::1::::<><>::
+strongAttack_315_016.png::CompressedTexture2D::2500363295402661479::1699318360::1699319133::1::::<><>::
+strongAttack_315_019.png::CompressedTexture2D::579091714356524269::1699318360::1699319133::1::::<><>::
+strongAttack_315_022.png::CompressedTexture2D::944871999490459001::1699318360::1699319133::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack2/Down_Right/::1699319133
+strongAttack_45_001.png::CompressedTexture2D::8475837854812672542::1699318334::1699319133::1::::<><>::
+strongAttack_45_004.png::CompressedTexture2D::8617377761037707154::1699318334::1699319133::1::::<><>::
+strongAttack_45_007.png::CompressedTexture2D::3076876808568488344::1699318334::1699319133::1::::<><>::
+strongAttack_45_010.png::CompressedTexture2D::9106835976205220863::1699318334::1699319133::1::::<><>::
+strongAttack_45_013.png::CompressedTexture2D::624956791910996194::1699318336::1699319133::1::::<><>::
+strongAttack_45_016.png::CompressedTexture2D::6143747295468592646::1699318336::1699319133::1::::<><>::
+strongAttack_45_019.png::CompressedTexture2D::4076551567970220512::1699318336::1699319133::1::::<><>::
+strongAttack_45_022.png::CompressedTexture2D::7191791844480118549::1699318336::1699319133::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack2/Left/::1699319133
+strongAttack_270_001.png::CompressedTexture2D::7683991397587434631::1699318354::1699319133::1::::<><>::
+strongAttack_270_004.png::CompressedTexture2D::7177612531654583280::1699318354::1699319133::1::::<><>::
+strongAttack_270_007.png::CompressedTexture2D::4143684521876519254::1699318354::1699319133::1::::<><>::
+strongAttack_270_010.png::CompressedTexture2D::3994500692668755063::1699318354::1699319133::1::::<><>::
+strongAttack_270_013.png::CompressedTexture2D::6507993871539165029::1699318356::1699319133::1::::<><>::
+strongAttack_270_016.png::CompressedTexture2D::1107944195560235462::1699318356::1699319133::1::::<><>::
+strongAttack_270_019.png::CompressedTexture2D::1027633136297481270::1699318356::1699319133::1::::<><>::
+strongAttack_270_022.png::CompressedTexture2D::8506915975658424796::1699318356::1699319133::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack2/Right/::1699319134
+strongAttack_90_001.png::CompressedTexture2D::6424679437164808065::1699318338::1699319134::1::::<><>::
+strongAttack_90_004.png::CompressedTexture2D::2231958337796598085::1699318338::1699319134::1::::<><>::
+strongAttack_90_007.png::CompressedTexture2D::6265682566572530685::1699318338::1699319134::1::::<><>::
+strongAttack_90_010.png::CompressedTexture2D::7438555818574944604::1699318338::1699319134::1::::<><>::
+strongAttack_90_013.png::CompressedTexture2D::5214215597780752336::1699318340::1699319134::1::::<><>::
+strongAttack_90_016.png::CompressedTexture2D::5405661969635105103::1699318340::1699319134::1::::<><>::
+strongAttack_90_019.png::CompressedTexture2D::3260840471168114902::1699318340::1699319134::1::::<><>::
+strongAttack_90_022.png::CompressedTexture2D::1565336661664838332::1699318340::1699319134::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack2/Up/::1699319134
+strongAttack_180_001.png::CompressedTexture2D::1678625987497468997::1699318346::1699319134::1::::<><>::
+strongAttack_180_004.png::CompressedTexture2D::234673638318390316::1699318346::1699319134::1::::<><>::
+strongAttack_180_007.png::CompressedTexture2D::5399890499483355274::1699318346::1699319134::1::::<><>::
+strongAttack_180_010.png::CompressedTexture2D::6037699894116985473::1699318346::1699319134::1::::<><>::
+strongAttack_180_013.png::CompressedTexture2D::6709688956013999823::1699318348::1699319133::1::::<><>::
+strongAttack_180_016.png::CompressedTexture2D::6373348416266350921::1699318348::1699319133::1::::<><>::
+strongAttack_180_019.png::CompressedTexture2D::6804010305662525249::1699318348::1699319133::1::::<><>::
+strongAttack_180_022.png::CompressedTexture2D::3945605574081409665::1699318348::1699319133::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack2/Up_Left/::1699319133
+strongAttack_225_001.png::CompressedTexture2D::5102210599228579471::1699318350::1699319133::1::::<><>::
+strongAttack_225_004.png::CompressedTexture2D::5468055764874005204::1699318350::1699319133::1::::<><>::
+strongAttack_225_007.png::CompressedTexture2D::8996138400567974780::1699318350::1699319133::1::::<><>::
+strongAttack_225_010.png::CompressedTexture2D::4111079718220820049::1699318350::1699319133::1::::<><>::
+strongAttack_225_013.png::CompressedTexture2D::4472683146832258309::1699318352::1699319133::1::::<><>::
+strongAttack_225_016.png::CompressedTexture2D::4718307951140151303::1699318352::1699319133::1::::<><>::
+strongAttack_225_019.png::CompressedTexture2D::3290393286792364693::1699318352::1699319133::1::::<><>::
+strongAttack_225_022.png::CompressedTexture2D::4977133540095029355::1699318352::1699319133::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/attack2/Up_Right/::1699319133
+strongAttack_135_001.png::CompressedTexture2D::3955412013371299226::1699318342::1699319133::1::::<><>::
+strongAttack_135_004.png::CompressedTexture2D::8187953427017889347::1699318342::1699319133::1::::<><>::
+strongAttack_135_007.png::CompressedTexture2D::3654254629975335476::1699318342::1699319133::1::::<><>::
+strongAttack_135_010.png::CompressedTexture2D::8072326057130256690::1699318342::1699319133::1::::<><>::
+strongAttack_135_013.png::CompressedTexture2D::8879536553894277357::1699318344::1699319133::1::::<><>::
+strongAttack_135_016.png::CompressedTexture2D::6526525777239711326::1699318344::1699319133::1::::<><>::
+strongAttack_135_019.png::CompressedTexture2D::4980600030133077391::1699318344::1699319133::1::::<><>::
+strongAttack_135_022.png::CompressedTexture2D::3636881719269927621::1699318344::1699319133::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/::1699322348
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Down/::1699322347
+attack1_0_001.png::CompressedTexture2D::2112392618752550297::1699319358::1699322360::1::::<><>::
+attack1_0_004.png::CompressedTexture2D::2456827298561810598::1699319152::1699322360::1::::<><>::
+attack1_0_007.png::CompressedTexture2D::2693678028455228950::1699319152::1699322360::1::::<><>::
+attack1_0_010.png::CompressedTexture2D::7889641725550115318::1699319152::1699322360::1::::<><>::
+attack1_0_013.png::CompressedTexture2D::6001477729988864118::1699319152::1699322360::1::::<><>::
+attack1_0_016.png::CompressedTexture2D::994670573693824184::1699319152::1699322360::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Down_Left/::1699322347
+attack1_315_001.png::CompressedTexture2D::2554507301505503936::1699319358::1699322360::1::::<><>::
+attack1_315_004.png::CompressedTexture2D::1161719273910434421::1699319164::1699322360::1::::<><>::
+attack1_315_007.png::CompressedTexture2D::4884441604703770653::1699319164::1699322360::1::::<><>::
+attack1_315_010.png::CompressedTexture2D::975449795915537682::1699319164::1699322360::1::::<><>::
+attack1_315_013.png::CompressedTexture2D::5040699668534091953::1699319164::1699322360::1::::<><>::
+attack1_315_016.png::CompressedTexture2D::8750718550209636995::1699319164::1699322360::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Down_Right/::1699322347
+attack1_45_001.png::CompressedTexture2D::8525019595684506792::1699319358::1699322360::1::::<><>::
+attack1_45_004.png::CompressedTexture2D::6137740387188193521::1699319152::1699322360::1::::<><>::
+attack1_45_007.png::CompressedTexture2D::6899635195647208089::1699319154::1699322360::1::::<><>::
+attack1_45_010.png::CompressedTexture2D::6629026202564391081::1699319154::1699322360::1::::<><>::
+attack1_45_013.png::CompressedTexture2D::6216775217904535792::1699319154::1699322360::1::::<><>::
+attack1_45_016.png::CompressedTexture2D::2150527641851762336::1699319154::1699322360::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Left/::1699322347
+attack1_270_001.png::CompressedTexture2D::4687156091670743958::1699319358::1699322360::1::::<><>::
+attack1_270_004.png::CompressedTexture2D::3856681313632844928::1699319162::1699322360::1::::<><>::
+attack1_270_007.png::CompressedTexture2D::8584722636507284007::1699319162::1699322360::1::::<><>::
+attack1_270_010.png::CompressedTexture2D::3641314518599682147::1699319162::1699322360::1::::<><>::
+attack1_270_013.png::CompressedTexture2D::2354559873827078199::1699319162::1699322360::1::::<><>::
+attack1_270_016.png::CompressedTexture2D::7607139049712915609::1699319162::1699322360::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Right/::1699322347
+attack1_90_001.png::CompressedTexture2D::2156351670690609457::1699319358::1699322360::1::::<><>::
+attack1_90_004.png::CompressedTexture2D::6123794554854958380::1699319154::1699322360::1::::<><>::
+attack1_90_007.png::CompressedTexture2D::602025618804939614::1699319154::1699322361::1::::<><>::
+attack1_90_010.png::CompressedTexture2D::1892901152023200091::1699319156::1699322361::1::::<><>::
+attack1_90_013.png::CompressedTexture2D::4039808220789984607::1699319156::1699322361::1::::<><>::
+attack1_90_016.png::CompressedTexture2D::4894118210537681985::1699319156::1699322361::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/::1699322347
+attack1_180_001.png::CompressedTexture2D::1959028251829680225::1699319358::1699322361::1::::<><>::
+attack1_180_004.png::CompressedTexture2D::1893763422942189005::1699319158::1699322361::1::::<><>::
+attack1_180_007.png::CompressedTexture2D::5531949691970190391::1699319158::1699322361::1::::<><>::
+attack1_180_010.png::CompressedTexture2D::7979182818656810312::1699319158::1699322361::1::::<><>::
+attack1_180_013.png::CompressedTexture2D::714383893384437063::1699319158::1699322361::1::::<><>::
+attack1_180_016.png::CompressedTexture2D::5997869060358513670::1699319158::1699322361::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up_Left/::1699322348
+attack1_225_001.png::CompressedTexture2D::9046521379853627031::1699319358::1699322360::1::::<><>::
+attack1_225_004.png::CompressedTexture2D::1538737020852684214::1699319160::1699322360::1::::<><>::
+attack1_225_007.png::CompressedTexture2D::4448806020002558947::1699319160::1699322361::1::::<><>::
+attack1_225_010.png::CompressedTexture2D::7727527920417482874::1699319160::1699322360::1::::<><>::
+attack1_225_013.png::CompressedTexture2D::3919959120190438066::1699319160::1699322360::1::::<><>::
+attack1_225_016.png::CompressedTexture2D::3497813073569229134::1699319160::1699322360::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up_Right/::1699322348
+attack1_135_001.png::CompressedTexture2D::6002067000255057395::1699319158::1699322360::1::::<><>::
+attack1_135_004.png::CompressedTexture2D::2241199038048248695::1699319156::1699322360::1::::<><>::
+attack1_135_007.png::CompressedTexture2D::9195052526874997842::1699319156::1699322360::1::::<><>::
+attack1_135_010.png::CompressedTexture2D::8436573990893914231::1699319156::1699322360::1::::<><>::
+attack1_135_013.png::CompressedTexture2D::682451648728533116::1699319158::1699322360::1::::<><>::
+attack1_135_016.png::CompressedTexture2D::4154938682288689499::1699319158::1699322360::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Down/::1699322347
+strongAttack_0_001.png::CompressedTexture2D::1508402501205743080::1699319358::1699322360::1::::<><>::
+strongAttack_0_004.png::CompressedTexture2D::7768308520117459452::1699319360::1699322360::1::::<><>::
+strongAttack_0_007.png::CompressedTexture2D::958714703415083762::1699319360::1699322360::1::::<><>::
+strongAttack_0_010.png::CompressedTexture2D::1499395321496542490::1699319360::1699322360::1::::<><>::
+strongAttack_0_013.png::CompressedTexture2D::6138258130612035960::1699319360::1699322359::1::::<><>::
+strongAttack_0_016.png::CompressedTexture2D::8115204929463606201::1699319360::1699322359::1::::<><>::
+strongAttack_0_019.png::CompressedTexture2D::7999217093043964937::1699319360::1699322359::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Down_Left/::1699322347
+strongAttack_315_001.png::CompressedTexture2D::7016094414904251812::1699319372::1699322359::1::::<><>::
+strongAttack_315_004.png::CompressedTexture2D::159724273483244767::1699319372::1699322359::1::::<><>::
+strongAttack_315_007.png::CompressedTexture2D::2185454220432849853::1699319372::1699322359::1::::<><>::
+strongAttack_315_010.png::CompressedTexture2D::1276161295657059349::1699319374::1699322359::1::::<><>::
+strongAttack_315_013.png::CompressedTexture2D::9071096581904841377::1699319374::1699322359::1::::<><>::
+strongAttack_315_016.png::CompressedTexture2D::3670659562120169824::1699319374::1699322359::1::::<><>::
+strongAttack_315_019.png::CompressedTexture2D::1515325580631130761::1699319374::1699322359::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Down_Right/::1699322347
+strongAttack_45_001.png::CompressedTexture2D::1289474224619653409::1699319362::1699322359::1::::<><>::
+strongAttack_45_004.png::CompressedTexture2D::4464016198703713964::1699319362::1699322359::1::::<><>::
+strongAttack_45_007.png::CompressedTexture2D::4411178237552064112::1699319362::1699322359::1::::<><>::
+strongAttack_45_010.png::CompressedTexture2D::6186540676575181685::1699319362::1699322359::1::::<><>::
+strongAttack_45_013.png::CompressedTexture2D::5123094503893106287::1699319362::1699322359::1::::<><>::
+strongAttack_45_016.png::CompressedTexture2D::3812745920633104810::1699319362::1699322359::1::::<><>::
+strongAttack_45_019.png::CompressedTexture2D::7408871013231851198::1699319362::1699322359::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Left/::1699322347
+strongAttack_270_001.png::CompressedTexture2D::3112968332329009901::1699319370::1699322359::1::::<><>::
+strongAttack_270_004.png::CompressedTexture2D::2579360065387486769::1699319370::1699322359::1::::<><>::
+strongAttack_270_007.png::CompressedTexture2D::3637343752707171327::1699319372::1699322359::1::::<><>::
+strongAttack_270_010.png::CompressedTexture2D::7074512996271354910::1699319372::1699322359::1::::<><>::
+strongAttack_270_013.png::CompressedTexture2D::8325447047252409765::1699319372::1699322359::1::::<><>::
+strongAttack_270_016.png::CompressedTexture2D::4243209822097087819::1699319372::1699322359::1::::<><>::
+strongAttack_270_019.png::CompressedTexture2D::308761655498991647::1699319372::1699322359::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Right/::1699322347
+strongAttack_90_001.png::CompressedTexture2D::5383989432991650864::1699319364::1699322359::1::::<><>::
+strongAttack_90_004.png::CompressedTexture2D::3736799999253725502::1699319364::1699322359::1::::<><>::
+strongAttack_90_007.png::CompressedTexture2D::6907220422352940349::1699319364::1699322360::1::::<><>::
+strongAttack_90_010.png::CompressedTexture2D::2818579018026446391::1699319364::1699322360::1::::<><>::
+strongAttack_90_013.png::CompressedTexture2D::7096387088858421212::1699319364::1699322360::1::::<><>::
+strongAttack_90_016.png::CompressedTexture2D::5514436885252015925::1699319364::1699322360::1::::<><>::
+strongAttack_90_019.png::CompressedTexture2D::8523731388879621095::1699319364::1699322360::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Up/::1699322347
+strongAttack_180_001.png::CompressedTexture2D::7963985380706085316::1699319366::1699322359::1::::<><>::
+strongAttack_180_004.png::CompressedTexture2D::6200069829108818451::1699319368::1699322359::1::::<><>::
+strongAttack_180_007.png::CompressedTexture2D::8332467734841342922::1699319368::1699322359::1::::<><>::
+strongAttack_180_010.png::CompressedTexture2D::7273784040779448134::1699319368::1699322359::1::::<><>::
+strongAttack_180_013.png::CompressedTexture2D::3612273812516350592::1699319368::1699322359::1::::<><>::
+strongAttack_180_016.png::CompressedTexture2D::5114794277817789271::1699319368::1699322359::1::::<><>::
+strongAttack_180_019.png::CompressedTexture2D::7496147700062405885::1699319368::1699322359::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Up_Left/::1699322347
+strongAttack_225_001.png::CompressedTexture2D::4476173515204028503::1699319368::1699322359::1::::<><>::
+strongAttack_225_004.png::CompressedTexture2D::8730530819494548407::1699319370::1699322359::1::::<><>::
+strongAttack_225_007.png::CompressedTexture2D::5811794353224912958::1699319370::1699322359::1::::<><>::
+strongAttack_225_010.png::CompressedTexture2D::79202058451754379::1699319370::1699322359::1::::<><>::
+strongAttack_225_013.png::CompressedTexture2D::4206607231905697315::1699319370::1699322359::1::::<><>::
+strongAttack_225_016.png::CompressedTexture2D::3393968274086394732::1699319370::1699322359::1::::<><>::
+strongAttack_225_019.png::CompressedTexture2D::2222006718560666553::1699319370::1699322359::1::::<><>::
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Up_Right/::1699322347
+strongAttack_135_001.png::CompressedTexture2D::4201079014236759154::1699319366::1699322359::1::::<><>::
+strongAttack_135_004.png::CompressedTexture2D::8831861202237756330::1699319366::1699322359::1::::<><>::
+strongAttack_135_007.png::CompressedTexture2D::8626969369833646812::1699319366::1699322359::1::::<><>::
+strongAttack_135_010.png::CompressedTexture2D::4894376182066682699::1699319366::1699322359::1::::<><>::
+strongAttack_135_013.png::CompressedTexture2D::200600739231430329::1699319366::1699322359::1::::<><>::
+strongAttack_135_016.png::CompressedTexture2D::1874324578180738636::1699319366::1699322359::1::::<><>::
+strongAttack_135_019.png::CompressedTexture2D::1521945743934241163::1699319366::1699322359::1::::<><>::
+::res://Assets/Images/Player/DashAnimations/::1699320298
+::res://Assets/Images/Player/DashAnimations/dash/::1699320298
+::res://Assets/Images/Player/DashAnimations/dash/Down/::1699320312
+dash_0_001.png::CompressedTexture2D::3637178185942062801::1699318622::1699320312::1::::<><>::
+::res://Assets/Images/Player/DashAnimations/dash/Down_Left/::1699320312
+dash_315_001.png::CompressedTexture2D::9155193557237723726::1699318650::1699320312::1::::<><>::
+::res://Assets/Images/Player/DashAnimations/dash/Down_Right/::1699320312
+dash_45_001.png::CompressedTexture2D::2640721095146270590::1699318626::1699320312::1::::<><>::
+::res://Assets/Images/Player/DashAnimations/dash/Left/::1699320312
+dash_270_001.png::CompressedTexture2D::4250744540932729394::1699318646::1699320312::1::::<><>::
+::res://Assets/Images/Player/DashAnimations/dash/Right/::1699320312
+dash_90_001.png::CompressedTexture2D::4450128996690082625::1699318630::1699320312::1::::<><>::
+::res://Assets/Images/Player/DashAnimations/dash/Up/::1699320312
+dash_180_001.png::CompressedTexture2D::2128154213969094793::1699318638::1699320312::1::::<><>::
+::res://Assets/Images/Player/DashAnimations/dash/Up_Left/::1699320312
+dash_225_001.png::CompressedTexture2D::4322249310463389600::1699318642::1699320312::1::::<><>::
+::res://Assets/Images/Player/DashAnimations/dash/Up_Right/::1699320312
+dash_135_001.png::CompressedTexture2D::4354785983090412684::1699318634::1699320312::1::::<><>::
+::res://Assets/Images/Player/Move Animations/::1699318831
+::res://Assets/Images/Player/Move Animations/normal/::1699318831
+::res://Assets/Images/Player/Move Animations/normal/idle/::1699315913
+::res://Assets/Images/Player/Move Animations/normal/idle/Down/::1699318828
+idle_0_001.png::CompressedTexture2D::8283094770327524770::1699315248::1699318828::1::::<><>::
+idle_0_004.png::CompressedTexture2D::7677705884503665394::1699315248::1699318828::1::::<><>::
+idle_0_007.png::CompressedTexture2D::8533520339507653678::1699315250::1699318828::1::::<><>::
+idle_0_010.png::CompressedTexture2D::6797678160606418750::1699315250::1699318828::1::::<><>::
+idle_0_013.png::CompressedTexture2D::233331975001498548::1699315250::1699318828::1::::<><>::
+idle_0_016.png::CompressedTexture2D::5832425005697351705::1699315250::1699318828::1::::<><>::
+idle_0_019.png::CompressedTexture2D::4108665512765709241::1699315252::1699318828::1::::<><>::
+idle_0_022.png::CompressedTexture2D::6586769224084322519::1699315252::1699318828::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/idle/Left/::1699318828
+idle_270_001.png::CompressedTexture2D::1730197505659344095::1699315272::1699318828::1::::<><>::
+idle_270_004.png::CompressedTexture2D::8827196411541417072::1699315272::1699318828::1::::<><>::
+idle_270_007.png::CompressedTexture2D::5185641001586284444::1699315274::1699318828::1::::<><>::
+idle_270_010.png::CompressedTexture2D::8504773022153425340::1699315274::1699318828::1::::<><>::
+idle_270_013.png::CompressedTexture2D::5005153609535537871::1699315274::1699318828::1::::<><>::
+idle_270_016.png::CompressedTexture2D::1890241007686936830::1699315274::1699318828::1::::<><>::
+idle_270_019.png::CompressedTexture2D::1616484045003283733::1699315276::1699318828::1::::<><>::
+idle_270_022.png::CompressedTexture2D::6860896599634955521::1699315276::1699318828::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/idle/Left_Down/::1699318828
+idle_315_001.png::CompressedTexture2D::1079782514798107977::1699315276::1699318828::1::::<><>::
+idle_315_004.png::CompressedTexture2D::6373007289971471824::1699315276::1699318828::1::::<><>::
+idle_315_007.png::CompressedTexture2D::5130551783075933130::1699315278::1699318828::1::::<><>::
+idle_315_010.png::CompressedTexture2D::7235344866276939286::1699315278::1699318828::1::::<><>::
+idle_315_013.png::CompressedTexture2D::2015121503705540196::1699315278::1699318828::1::::<><>::
+idle_315_016.png::CompressedTexture2D::6603054819772961254::1699315278::1699318828::1::::<><>::
+idle_315_019.png::CompressedTexture2D::1944401648797139164::1699315280::1699318828::1::::<><>::
+idle_315_022.png::CompressedTexture2D::6114764751396677790::1699315280::1699318828::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/idle/Left_Up/::1699318828
+idle_225_001.png::CompressedTexture2D::5853812409298763938::1699315268::1699318828::1::::<><>::
+idle_225_004.png::CompressedTexture2D::4804793658493344959::1699315268::1699318828::1::::<><>::
+idle_225_007.png::CompressedTexture2D::2687801369272423935::1699315270::1699318828::1::::<><>::
+idle_225_010.png::CompressedTexture2D::162754135168565057::1699315270::1699318828::1::::<><>::
+idle_225_013.png::CompressedTexture2D::2329908350954779766::1699315270::1699318828::1::::<><>::
+idle_225_016.png::CompressedTexture2D::2459614111690792459::1699315270::1699318828::1::::<><>::
+idle_225_019.png::CompressedTexture2D::968588879761280942::1699315272::1699318828::1::::<><>::
+idle_225_022.png::CompressedTexture2D::2856155781488677580::1699315272::1699318828::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/idle/Right/::1699318828
+idle_90_001.png::CompressedTexture2D::8204133450359121767::1699315256::1699318827::1::::<><>::
+idle_90_004.png::CompressedTexture2D::8044912731161365336::1699315256::1699318827::1::::<><>::
+idle_90_007.png::CompressedTexture2D::4323941388559852610::1699315258::1699318827::1::::<><>::
+idle_90_010.png::CompressedTexture2D::6085013167217906698::1699315258::1699318827::1::::<><>::
+idle_90_013.png::CompressedTexture2D::9025965157807508747::1699315258::1699318827::1::::<><>::
+idle_90_016.png::CompressedTexture2D::2937603504564188742::1699315258::1699318827::1::::<><>::
+idle_90_019.png::CompressedTexture2D::7304687899784207545::1699315260::1699318827::1::::<><>::
+idle_90_022.png::CompressedTexture2D::6051485171115328909::1699315260::1699318827::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/idle/Right_Down/::1699318828
+idle_45_001.png::CompressedTexture2D::4648460973700011421::1699315252::1699318828::1::::<><>::
+idle_45_004.png::CompressedTexture2D::1752354425767095051::1699315252::1699318828::1::::<><>::
+idle_45_007.png::CompressedTexture2D::948240377127394022::1699315254::1699318828::1::::<><>::
+idle_45_010.png::CompressedTexture2D::1615884149087702455::1699315254::1699318828::1::::<><>::
+idle_45_013.png::CompressedTexture2D::8753071567963567926::1699315254::1699318828::1::::<><>::
+idle_45_016.png::CompressedTexture2D::2865104727960790970::1699315254::1699318828::1::::<><>::
+idle_45_019.png::CompressedTexture2D::8088712910403942574::1699315256::1699318828::1::::<><>::
+idle_45_022.png::CompressedTexture2D::961187939816477869::1699315256::1699318828::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/idle/Right_Up/::1699318828
+idle_135_001.png::CompressedTexture2D::7846099243731227868::1699315260::1699318828::1::::<><>::
+idle_135_004.png::CompressedTexture2D::4192788482234977948::1699315260::1699318828::1::::<><>::
+idle_135_007.png::CompressedTexture2D::6531632472186295419::1699315262::1699318828::1::::<><>::
+idle_135_010.png::CompressedTexture2D::5069828956894895038::1699315262::1699318828::1::::<><>::
+idle_135_013.png::CompressedTexture2D::6395651074886420644::1699315262::1699318828::1::::<><>::
+idle_135_016.png::CompressedTexture2D::6426171971494332971::1699315262::1699318828::1::::<><>::
+idle_135_019.png::CompressedTexture2D::6045651344442260260::1699315264::1699318828::1::::<><>::
+idle_135_022.png::CompressedTexture2D::819474558415927141::1699315264::1699318828::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/idle/Up/::1699318828
+idle_180_001.png::CompressedTexture2D::1616208616330576296::1699315264::1699318828::1::::<><>::
+idle_180_004.png::CompressedTexture2D::2486693698374153894::1699315264::1699318828::1::::<><>::
+idle_180_007.png::CompressedTexture2D::5928030603516809822::1699315266::1699318828::1::::<><>::
+idle_180_010.png::CompressedTexture2D::3471198300855510876::1699315266::1699318828::1::::<><>::
+idle_180_013.png::CompressedTexture2D::7529598281687669232::1699315266::1699318828::1::::<><>::
+idle_180_016.png::CompressedTexture2D::1839868231362326588::1699315266::1699318828::1::::<><>::
+idle_180_019.png::CompressedTexture2D::1888535038025283194::1699315268::1699318828::1::::<><>::
+idle_180_022.png::CompressedTexture2D::8110917486180709401::1699315268::1699318828::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/run/::1699315913
+::res://Assets/Images/Player/Move Animations/normal/run/Down/::1699318834
+run_0_001.png::CompressedTexture2D::8888615465660134120::1699315310::1699318834::1::::<><>::
+run_0_005.png::CompressedTexture2D::3842571047067973865::1699315310::1699318833::1::::<><>::
+run_0_009.png::CompressedTexture2D::5384134441728200108::1699315310::1699318833::1::::<><>::
+run_0_013.png::CompressedTexture2D::1552159473518981136::1699315310::1699318833::1::::<><>::
+run_0_017.png::CompressedTexture2D::5245604787435593802::1699315312::1699318833::1::::<><>::
+run_0_021.png::CompressedTexture2D::3749898821887861224::1699315312::1699318833::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/run/Left/::1699318834
+run_270_001.png::CompressedTexture2D::1359177528563210234::1699315328::1699318833::1::::<><>::
+run_270_005.png::CompressedTexture2D::4890407373699507071::1699315328::1699318833::1::::<><>::
+run_270_009.png::CompressedTexture2D::4565964415316764344::1699315330::1699318834::1::::<><>::
+run_270_013.png::CompressedTexture2D::2399247855226887841::1699315330::1699318834::1::::<><>::
+run_270_017.png::CompressedTexture2D::8271360554877351992::1699315330::1699318834::1::::<><>::
+run_270_021.png::CompressedTexture2D::3664132871260391240::1699315330::1699318834::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/run/Left_Down/::1699318834
+run_315_001.png::CompressedTexture2D::4604130359937592975::1699315332::1699318834::1::::<><>::
+run_315_005.png::CompressedTexture2D::3956814670452217199::1699315332::1699318834::1::::<><>::
+run_315_009.png::CompressedTexture2D::1241814558301395797::1699315332::1699318834::1::::<><>::
+run_315_013.png::CompressedTexture2D::2849572155754431008::1699315332::1699318834::1::::<><>::
+run_315_017.png::CompressedTexture2D::1109507395627071272::1699315334::1699318834::1::::<><>::
+run_315_021.png::CompressedTexture2D::3817507854852729172::1699315334::1699318834::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/run/Left_Up/::1699318834
+run_225_001.png::CompressedTexture2D::5557342513947545100::1699315324::1699318834::1::::<><>::
+run_225_005.png::CompressedTexture2D::8512890134832216416::1699315326::1699318834::1::::<><>::
+run_225_009.png::CompressedTexture2D::2615513991538631560::1699315326::1699318834::1::::<><>::
+run_225_013.png::CompressedTexture2D::8192046669088913880::1699315326::1699318834::1::::<><>::
+run_225_017.png::CompressedTexture2D::4625438136207768012::1699315328::1699318834::1::::<><>::
+run_225_021.png::CompressedTexture2D::8948034660757863190::1699315328::1699318834::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/run/Right/::1699318832
+run_90_001.png::CompressedTexture2D::7198637263279418493::1699315316::1699318832::1::::<><>::
+run_90_005.png::CompressedTexture2D::2869074700703713060::1699315316::1699318832::1::::<><>::
+run_90_009.png::CompressedTexture2D::1317036861487157782::1699315316::1699318832::1::::<><>::
+run_90_013.png::CompressedTexture2D::512842050778557061::1699315318::1699318832::1::::<><>::
+run_90_017.png::CompressedTexture2D::3187860609096181382::1699315318::1699318832::1::::<><>::
+run_90_021.png::CompressedTexture2D::10814437629416901::1699315318::1699318832::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/run/Right_Down/::1699318833
+run_45_001.png::CompressedTexture2D::1408720194501301689::1699315312::1699318832::1::::<><>::
+run_45_005.png::CompressedTexture2D::6247582891500896091::1699315314::1699318832::1::::<><>::
+run_45_009.png::CompressedTexture2D::1463374100912694104::1699315314::1699318833::1::::<><>::
+run_45_013.png::CompressedTexture2D::4270879031778933697::1699315314::1699318832::1::::<><>::
+run_45_017.png::CompressedTexture2D::5886222489245890640::1699315314::1699318833::1::::<><>::
+run_45_021.png::CompressedTexture2D::4551886035167623205::1699315316::1699318833::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/run/Right_Up/::1699318833
+run_135_001.png::CompressedTexture2D::8637132835102296890::1699315318::1699318833::1::::<><>::
+run_135_005.png::CompressedTexture2D::1537828626882929014::1699315320::1699318833::1::::<><>::
+run_135_009.png::CompressedTexture2D::7013213156785889369::1699315320::1699318833::1::::<><>::
+run_135_013.png::CompressedTexture2D::4985246108689693186::1699315320::1699318833::1::::<><>::
+run_135_017.png::CompressedTexture2D::157641328645332844::1699315320::1699318833::1::::<><>::
+run_135_021.png::CompressedTexture2D::5160707780414103762::1699315322::1699318833::1::::<><>::
+::res://Assets/Images/Player/Move Animations/normal/run/Up/::1699318833
+run_180_001.png::CompressedTexture2D::6391261800136983753::1699315322::1699318833::1::::<><>::
+run_180_005.png::CompressedTexture2D::5884268877989544952::1699315322::1699318833::1::::<><>::
+run_180_009.png::CompressedTexture2D::3300140536995261154::1699315322::1699318833::1::::<><>::
+run_180_013.png::CompressedTexture2D::4469316581036625971::1699315324::1699318833::1::::<><>::
+run_180_017.png::CompressedTexture2D::8394780177508777493::1699315324::1699318833::1::::<><>::
+run_180_021.png::CompressedTexture2D::483172532644145184::1699315324::1699318833::1::::<><>::
 ::res://Assets/Images/Player/Ultimates/::1699229337
 ::res://Assets/Images/Player/Ultimates/Hades/::1699229337
 hades-removebg-preview.png::CompressedTexture2D::9047611279453085115::1699229337::1699229337::1::::<><>::
@@ -393,12 +819,12 @@ ScrollLegendary.png::CompressedTexture2D::527073736394547405::1695235393::169523
 ScrollLegendaryHover.png::CompressedTexture2D::5219323137979182472::1695235393::1695238209::1::::<><>::
 ScrollNormal.png::CompressedTexture2D::3177814012198248400::1695235393::1695238209::1::::<><>::
 ScrollNormalHover.png::CompressedTexture2D::5209050554446657768::1695235393::1695238210::1::::<><>::
-::res://Assets/Images/Tiles/::1699295295
+::res://Assets/Images/Tiles/::1699321363
 battlezone.png::CompressedTexture2D::5043581706966942051::1699229337::1699229337::1::::<><>::
 mockups.png::CompressedTexture2D::2031948383065049966::1699229337::1696896930::1::::<><>::
 overworld.png::CompressedTexture2D::1410467927142952218::1687928993::1687928993::1::::<><>::
 sprites.png::CompressedTexture2D::140293247665400606::1687928993::1687928993::1::::<><>::
-TileMap.tres::TileSet::4644514508786338141::1699295295::0::1::::<><>::uid://37j5mkm8pwh7::::res://Assets/Images/Tiles/mockups.png<>uid://udig283y8dcc::::res://Assets/Images/Tiles/overworld.png<>uid://cd4fb3iavwej8::::res://Assets/Images/Tiles/battlezone.png
+TileMap.tres::TileSet::4644514508786338141::1699321363::0::1::::<><>::uid://37j5mkm8pwh7::::res://Assets/Images/Tiles/mockups.png<>uid://udig283y8dcc::::res://Assets/Images/Tiles/overworld.png<>uid://cd4fb3iavwej8::::res://Assets/Images/Tiles/battlezone.png
 tiles.png::CompressedTexture2D::1283067250149843726::1687928993::1687928993::1::::<><>::
 ::res://Assets/Sounds/::1699229338
 AOMSoundTrack.mp3::AudioStreamMP3::884917971131673812::1687928993::1687928993::1::::<><>::
@@ -450,21 +876,21 @@ Done.txt::TextFile::-1::1687928993::0::1::::<><>::
 mapa do jogo.jpg::CompressedTexture2D::4113642683112997387::1687928993::1687928993::1::::<><>::
 ToDo.txt::TextFile::-1::1687928993::0::1::::<><>::
 ::res://Scenes/::1699230193
-::res://Scenes/Game/::1699301285
+::res://Scenes/Game/::1699322230
 Collectable.tscn::PackedScene::708502007503376537::1699229338::0::1::::<><>::res://Scripts/Instances/Collectable.gd<>uid://dbufixsjomww
 Dracma.tscn::PackedScene::8115027374443532805::1699229338::0::1::::<><>::res://Scripts/Game/Dracma.gd<>uid://cc8fk1tr2jb6k
-Game.tscn::PackedScene::4913071036717789116::1699301285::0::1::::<><>::uid://muwp777hkxqy::::res://Assets/Sounds/AOMSoundTrack.mp3<>res://Scripts/Game/Game.gd<>uid://bnbfdi1wf6kki::::res://Scenes/Game/Math_controller/Math_controller.tscn<>uid://d2y033wavrob3::::res://Scenes/Game/Wave_controller.tscn<>res://Scripts/Game/SoundController.gd<>uid://ba8lsakijrbpv::::res://Scenes/Game/tiles.tscn<>uid://bqji3jr451ges::::res://Scenes/Game/matriz.tscn<>uid://cg4ug0aknwkdt::::res://Assets/Sounds/Wave.mp3<>res://Scripts/Game/BackgroundMusic.gd<>uid://cq8fbkkwauxoo::::res://Scenes/Game/player.tscn<>uid://b44vxel7hbyp4::::res://Assets/Sounds/Player/Dash.mp3<>uid://b3exwrsopj804::::res://Assets/Sounds/Game/Resources/dracma.mp3<>uid://cx37jdnas0rb1::::res://Scenes/Game/Constructions/center.tscn<>uid://cla1mp3rm1x6x::::res://Assets/Sounds/Game/Enemies/EliteMusic.mp3<>uid://cawqbopdr275u::::res://Scenes/Game/Constructions/Temple/Temple.tscn<>uid://tgat8lil5tbh::::res://Assets/Images/Background/map.png<>res://Scripts/Instances/Turrets.gd<>res://Scripts/Zones/ModifyGround.gd<>uid://djfg2b82q3e1v::::res://Assets/Images/Background/Elementos/Lava.png<>uid://b7hblsmp8buki::::res://Assets/Images/Background/Elementos/Ice.png<>uid://vr7n6dsjomd5::::res://Assets/Images/Background/Elementos/Clouds.png
-HUD.tscn::PackedScene::4280259026493880449::1699301285::0::1::::<><>::uid://ctfkvpvb3tfp6::::res://Assets/Images/HUD/background.png<>res://Scripts/MainScenes/Game_ViewPort/HUD.gd<>uid://duy38o6o71nij::::res://Assets/Fonts/Kurland.otf<>uid://cg4c8qydgkpag::::res://Assets/Images/HUD/hearth2.png<>uid://ywre30ix5f7t::::res://Assets/Images/Resources/wood.png<>uid://dlwvyo6ejssc::::res://Assets/Images/Resources/gold.png<>uid://bav7b1tv76dwv::::res://Assets/Images/Resources/stone.png<>uid://bx5egd2vqgwfq::::res://Assets/Images/Resources/dracma.png<>uid://bbh8wdh8h0npk::::res://Assets/Images/Resources/dracmaBag.png<>uid://bsnfphv05rlds::::res://Assets/Images/HUD/waves/wave1.png<>uid://c8h4x6cdrpqpk::::res://Assets/Images/HUD/waves/wave2.png<>uid://bys0o6q3rv1kr::::res://Assets/Images/HUD/waves/wave3.png<>uid://bxth4dkos64s::::res://Assets/Images/HUD/waves/wave4.png<>uid://coxsmj54lptwp::::res://Assets/Images/HUD/waves/wave5.png<>uid://ckt6j1doftmd0::::res://Assets/Images/HUD/waves/wave6.png<>uid://enhn0dupvb3s::::res://Assets/Images/HUD/waves/wave7.png<>uid://c4bqokigkd1xr::::res://Assets/Images/HUD/waves/wave8.png<>uid://bfxfl80s5xqds::::res://Assets/Images/HUD/waves/wave9.png<>uid://ctq6xiqvtaxn3::::res://Assets/Images/HUD/waves/wave10.png<>uid://b8bt7vnrbwgnq::::res://Assets/Images/HUD/waves/wave11.png<>uid://dkdhjk3ijj8br::::res://Assets/Images/HUD/waves/wave12.png<>uid://d1h8iml8hxpuu::::res://Assets/Images/HUD/waves/wave13.png<>uid://2krbaswfgqvr::::res://Assets/Images/HUD/waves/wave14.png<>uid://ctg762m2e8oo2::::res://Assets/Images/HUD/waves/wave15.png<>uid://bdkh7uydrw7hp::::res://Assets/Images/HUD/waves/wave16.png<>uid://biq4y3oyype2c::::res://Assets/Images/HUD/waves/wave17.png<>uid://2pcdgtdowi0p::::res://Assets/Images/HUD/waves/wave18.png<>uid://gawpunthm68w::::res://Assets/Images/HUD/waves/wave19.png<>uid://b30q73hel4bo6::::res://Assets/Images/HUD/Ultimates/zeusUlt.png<>uid://4xs1mdhghkr::::res://Assets/Images/HUD/Ultimates/hadesUltHUD.png<>uid://c3ce7u01og0rt::::res://Assets/Images/HUD/Ultimates/poseidonUltHUD.png
+Game.tscn::PackedScene::4913071036717789116::1699322044::0::1::::<><>::uid://muwp777hkxqy::::res://Assets/Sounds/AOMSoundTrack.mp3<>res://Scripts/Game/Game.gd<>uid://bnbfdi1wf6kki::::res://Scenes/Game/Math_controller/Math_controller.tscn<>uid://d2y033wavrob3::::res://Scenes/Game/Wave_controller.tscn<>res://Scripts/Game/SoundController.gd<>uid://ba8lsakijrbpv::::res://Scenes/Game/tiles.tscn<>uid://bqji3jr451ges::::res://Scenes/Game/matriz.tscn<>uid://cg4ug0aknwkdt::::res://Assets/Sounds/Wave.mp3<>res://Scripts/Game/BackgroundMusic.gd<>uid://cq8fbkkwauxoo::::res://Scenes/Game/player.tscn<>uid://b44vxel7hbyp4::::res://Assets/Sounds/Player/Dash.mp3<>uid://b3exwrsopj804::::res://Assets/Sounds/Game/Resources/dracma.mp3<>uid://cx37jdnas0rb1::::res://Scenes/Game/Constructions/center.tscn<>uid://cla1mp3rm1x6x::::res://Assets/Sounds/Game/Enemies/EliteMusic.mp3<>uid://cawqbopdr275u::::res://Scenes/Game/Constructions/Temple/Temple.tscn<>uid://tgat8lil5tbh::::res://Assets/Images/Background/map.png<>res://Scripts/Instances/Turrets.gd<>res://Scripts/Zones/ModifyGround.gd<>uid://djfg2b82q3e1v::::res://Assets/Images/Background/Elementos/Lava.png<>uid://b7hblsmp8buki::::res://Assets/Images/Background/Elementos/Ice.png<>uid://vr7n6dsjomd5::::res://Assets/Images/Background/Elementos/Clouds.png
+HUD.tscn::PackedScene::4280259026493880449::1699322045::0::1::::<><>::uid://ctfkvpvb3tfp6::::res://Assets/Images/HUD/background.png<>res://Scripts/MainScenes/Game_ViewPort/HUD.gd<>uid://duy38o6o71nij::::res://Assets/Fonts/Kurland.otf<>uid://cg4c8qydgkpag::::res://Assets/Images/HUD/hearth2.png<>uid://ywre30ix5f7t::::res://Assets/Images/Resources/wood.png<>uid://dlwvyo6ejssc::::res://Assets/Images/Resources/gold.png<>uid://bav7b1tv76dwv::::res://Assets/Images/Resources/stone.png<>uid://bx5egd2vqgwfq::::res://Assets/Images/Resources/dracma.png<>uid://bbh8wdh8h0npk::::res://Assets/Images/Resources/dracmaBag.png<>uid://bsnfphv05rlds::::res://Assets/Images/HUD/waves/wave1.png<>uid://c8h4x6cdrpqpk::::res://Assets/Images/HUD/waves/wave2.png<>uid://bys0o6q3rv1kr::::res://Assets/Images/HUD/waves/wave3.png<>uid://bxth4dkos64s::::res://Assets/Images/HUD/waves/wave4.png<>uid://coxsmj54lptwp::::res://Assets/Images/HUD/waves/wave5.png<>uid://ckt6j1doftmd0::::res://Assets/Images/HUD/waves/wave6.png<>uid://enhn0dupvb3s::::res://Assets/Images/HUD/waves/wave7.png<>uid://c4bqokigkd1xr::::res://Assets/Images/HUD/waves/wave8.png<>uid://bfxfl80s5xqds::::res://Assets/Images/HUD/waves/wave9.png<>uid://ctq6xiqvtaxn3::::res://Assets/Images/HUD/waves/wave10.png<>uid://b8bt7vnrbwgnq::::res://Assets/Images/HUD/waves/wave11.png<>uid://dkdhjk3ijj8br::::res://Assets/Images/HUD/waves/wave12.png<>uid://d1h8iml8hxpuu::::res://Assets/Images/HUD/waves/wave13.png<>uid://2krbaswfgqvr::::res://Assets/Images/HUD/waves/wave14.png<>uid://ctg762m2e8oo2::::res://Assets/Images/HUD/waves/wave15.png<>uid://bdkh7uydrw7hp::::res://Assets/Images/HUD/waves/wave16.png<>uid://biq4y3oyype2c::::res://Assets/Images/HUD/waves/wave17.png<>uid://2pcdgtdowi0p::::res://Assets/Images/HUD/waves/wave18.png<>uid://gawpunthm68w::::res://Assets/Images/HUD/waves/wave19.png<>uid://b30q73hel4bo6::::res://Assets/Images/HUD/Ultimates/zeusUlt.png<>uid://4xs1mdhghkr::::res://Assets/Images/HUD/Ultimates/hadesUltHUD.png<>uid://c3ce7u01og0rt::::res://Assets/Images/HUD/Ultimates/poseidonUltHUD.png<>uid://yjcswgm42ljb::::res://Assets/Images/HUD/SkillSelection/Divine/scene00001.png<>uid://bliuur2u7r03c::::res://Assets/Images/HUD/SkillSelection/Divine/scene00004.png<>uid://r22njvg8r0py::::res://Assets/Images/HUD/SkillSelection/Divine/scene00007.png<>uid://btikammdiikmy::::res://Assets/Images/HUD/Ultimates/zeus&poseidonUltHUD.png
 Item.tscn::PackedScene::3799547057766881687::1699229338::0::1::::<><>::res://Scripts/Game/Item.gd<>uid://cs04tdakmp7xc
-matriz.tscn::PackedScene::3528557820190198722::1699229338::0::1::::<><>::res://Scripts/Game/matriz.gd
-player.tscn::PackedScene::5964293243918368166::1699301285::0::1::::<><>::res://Scripts/Game/player.gd<>uid://dgo7fp55j5bmt::::res://Assets/Images/Player/kratos_by_wrriter_d2wrdvq-fullview.png<>uid://be0jxocrlx0v4::::res://Assets/Images/Player/cutAnimation.png<>uid://dq86388qxvwk::::res://Assets/Images/Player/axe_spin_spritesheet.png
+matriz.tscn::PackedScene::3528557820190198722::1699322045::0::1::::<><>::res://Scripts/Game/matriz.gd
+player.tscn::PackedScene::5964293243918368166::1699322230::0::1::::<><>::res://Scripts/Game/player.gd<>uid://b458d64brhd6n::::res://Assets/Images/Player/Attacks Animations/attack1/Down/attack1_0_001.png<>uid://dqanmi7vydd0m::::res://Assets/Images/Player/Move Animations/normal/idle/Down/idle_0_001.png<>uid://cq1srqtc6bwuv::::res://Assets/Images/Player/Attacks Animations/attack1/Down/attack1_0_004.png<>uid://dhnexuqqkhbaw::::res://Assets/Images/Player/Move Animations/normal/idle/Down/idle_0_004.png<>uid://be0jxocrlx0v4::::res://Assets/Images/Player/cutAnimation.png<>uid://bf3awfdrpa4yx::::res://Assets/Images/Player/Attacks Animations/attack1/Down/attack1_0_007.png<>uid://dq86388qxvwk::::res://Assets/Images/Player/axe_spin_spritesheet.png<>uid://dttx3lhhujtyk::::res://Assets/Images/Player/Move Animations/normal/idle/Down/idle_0_007.png<>uid://c3331bw3qaxvy::::res://Assets/Images/Player/Move Animations/normal/idle/Down/idle_0_010.png<>uid://dla7cy24g5gq::::res://Assets/Images/Player/Move Animations/normal/idle/Down/idle_0_013.png<>uid://cpdjgm88qq1gf::::res://Assets/Images/Player/Move Animations/normal/idle/Down/idle_0_016.png<>uid://bysjedspnupfd::::res://Assets/Images/Player/Move Animations/normal/idle/Down/idle_0_019.png<>uid://c03xekta4vvch::::res://Assets/Images/Player/Move Animations/normal/idle/Down/idle_0_022.png<>uid://biq132mjucivj::::res://Assets/Images/Player/Attacks Animations/attack1/Down_Left/attack1_315_001.png<>uid://ywedn0vt7oxj::::res://Assets/Images/Player/Move Animations/normal/idle/Left/idle_270_001.png<>uid://dx07vula1tb1a::::res://Assets/Images/Player/Move Animations/normal/idle/Left/idle_270_004.png<>uid://3xcrfrmyd8ak::::res://Assets/Images/Player/Attacks Animations/attack1/Down_Left/attack1_315_004.png<>uid://cf470qu2we4no::::res://Assets/Images/Player/Move Animations/normal/idle/Left/idle_270_007.png<>uid://btd1whsgwavn2::::res://Assets/Images/Player/Attacks Animations/attack1/Down_Left/attack1_315_007.png<>uid://bgltm1vmobivc::::res://Assets/Images/Player/Attacks Animations/attack1/Down_Left/attack1_315_010.png<>uid://dtf1msxtvhfaa::::res://Assets/Images/Player/Move Animations/normal/idle/Left/idle_270_010.png<>uid://csqfthsksk218::::res://Assets/Images/Player/Attacks Animations/attack1/Down_Left/attack1_315_013.png<>uid://cdksfb48y5syh::::res://Assets/Images/Player/Move Animations/normal/idle/Left/idle_270_013.png<>uid://16v81f4t4bac::::res://Assets/Images/Player/Move Animations/normal/idle/Left/idle_270_016.png<>uid://xefva8eh22ei::::res://Assets/Images/Player/Attacks Animations/attack1/Down_Left/attack1_315_016.png<>uid://xbbix810dxpt::::res://Assets/Images/Player/Move Animations/normal/idle/Left/idle_270_019.png<>uid://c40p72c5lbbs8::::res://Assets/Images/Player/Move Animations/normal/idle/Left/idle_270_022.png<>uid://b7h0qc5i1tg7n::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Down/idle_45_001.png<>uid://c36tvdbe6q2i0::::res://Assets/Images/Player/Attacks Animations/attack1/Down_Right/attack1_45_001.png<>uid://do5e45ps5tqqp::::res://Assets/Images/Player/Move Animations/normal/idle/Right/idle_90_001.png<>uid://dmvasjejbm40c::::res://Assets/Images/Player/Move Animations/normal/idle/Right/idle_90_004.png<>uid://cray5h7ombet1::::res://Assets/Images/Player/Attacks Animations/attack1/Down_Right/attack1_45_004.png<>uid://y74ayx61a0v4::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Down/idle_45_004.png<>uid://nrlm63b7ckpq::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Down/idle_45_007.png<>uid://ddpadlfo3430c::::res://Assets/Images/Player/Attacks Animations/attack1/Down_Right/attack1_45_007.png<>uid://b2usxhqbcqmgg::::res://Assets/Images/Player/Move Animations/normal/idle/Right/idle_90_007.png<>uid://csxvjpf6u0v5s::::res://Assets/Images/Player/Move Animations/normal/idle/Right/idle_90_010.png<>uid://xa0m1qql78pf::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Down/idle_45_010.png<>uid://ca0gdajkiw0l1::::res://Assets/Images/Player/Attacks Animations/attack1/Down_Right/attack1_45_010.png<>uid://d1uilerwvjjj4::::res://Assets/Images/Player/Move Animations/normal/idle/Right/idle_90_013.png<>uid://da32gwbtp8rmu::::res://Assets/Images/Player/Attacks Animations/attack1/Down_Right/attack1_45_013.png<>uid://dwyb2shx7fj7k::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Down/idle_45_013.png<>uid://d0hf6fnk51rv1::::res://Assets/Images/Player/Attacks Animations/attack1/Down_Right/attack1_45_016.png<>uid://bh385vap5twl7::::res://Assets/Images/Player/Move Animations/normal/idle/Right/idle_90_016.png<>uid://bg244d36y7i3c::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Down/idle_45_016.png<>uid://dccpe3yc0fplp::::res://Assets/Images/Player/Move Animations/normal/idle/Right/idle_90_019.png<>uid://dnih6jmef24xe::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Down/idle_45_019.png<>uid://cshncuucn047b::::res://Assets/Images/Player/Move Animations/normal/idle/Right/idle_90_022.png<>uid://nxuviosos3w8::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Down/idle_45_022.png<>uid://dukjcel4xjb4c::::res://Assets/Images/Player/Attacks Animations/attack1/Left/attack1_270_001.png<>uid://7nrujtgf32p2::::res://Assets/Images/Player/Attacks Animations/attack1/Left/attack1_270_004.png<>uid://uia47x1n8q1f::::res://Assets/Images/Player/Attacks Animations/attack1/Left/attack1_270_007.png<>uid://260eojrel18t::::res://Assets/Images/Player/Attacks Animations/attack1/Left/attack1_270_010.png<>uid://dg5i6w6oyu5wr::::res://Assets/Images/Player/Attacks Animations/attack1/Left/attack1_270_013.png<>uid://bgdfvmbb5o36l::::res://Assets/Images/Player/Attacks Animations/attack1/Left/attack1_270_016.png<>uid://c1ly7wkxdhl0b::::res://Assets/Images/Player/Attacks Animations/attack1/Right/attack1_90_001.png<>uid://xa5yqch3ljw7::::res://Assets/Images/Player/Move Animations/normal/idle/Up/idle_180_001.png<>uid://bbotqncwvivs5::::res://Assets/Images/Player/Move Animations/normal/idle/Up/idle_180_004.png<>uid://bilobj55xrxpm::::res://Assets/Images/Player/Attacks Animations/attack1/Right/attack1_90_004.png<>uid://cqpt2eonbnx8i::::res://Assets/Images/Player/Move Animations/normal/idle/Up/idle_180_007.png<>uid://dg3w3pcjiqb84::::res://Assets/Images/Player/Attacks Animations/attack1/Right/attack1_90_007.png<>uid://bt6ngn3an5j3e::::res://Assets/Images/Player/Attacks Animations/attack1/Right/attack1_90_010.png<>uid://bppqem78f4joe::::res://Assets/Images/Player/Move Animations/normal/idle/Up/idle_180_010.png<>uid://dq7usrgbgtq8e::::res://Assets/Images/Player/Attacks Animations/attack1/Right/attack1_90_013.png<>uid://dfjnnbppu7fo7::::res://Assets/Images/Player/Move Animations/normal/idle/Up/idle_180_013.png<>uid://cc2d8oc7yuskt::::res://Assets/Images/Player/Attacks Animations/attack1/Right/attack1_90_016.png<>uid://1himjjjc22wm::::res://Assets/Images/Player/Move Animations/normal/idle/Up/idle_180_016.png<>uid://1525p7uacwpu::::res://Assets/Images/Player/Move Animations/normal/idle/Up/idle_180_019.png<>uid://dns8vjvokc186::::res://Assets/Images/Player/Move Animations/normal/idle/Up/idle_180_022.png<>uid://cpnvo2aj22rbu::::res://Assets/Images/Player/Move Animations/normal/idle/Left_Up/idle_225_001.png<>uid://cc8tlg0o8h665::::res://Assets/Images/Player/Attacks Animations/attack1/Up/attack1_180_001.png<>uid://qp35t1siuoam::::res://Assets/Images/Player/Attacks Animations/attack1/Up/attack1_180_004.png<>uid://capqiqq7mhwot::::res://Assets/Images/Player/Move Animations/normal/idle/Left_Up/idle_225_004.png<>uid://bej8xwoby2nvj::::res://Assets/Images/Player/Move Animations/normal/idle/Left_Up/idle_225_007.png<>uid://dkpn0gexojhk6::::res://Assets/Images/Player/Attacks Animations/attack1/Up/attack1_180_007.png<>uid://dijf1143fnrqd::::res://Assets/Images/Player/Attacks Animations/attack1/Up/attack1_180_010.png<>uid://ck3sitp8le2t::::res://Assets/Images/Player/Move Animations/normal/idle/Left_Up/idle_225_010.png<>uid://r4a4i0jx80qb::::res://Assets/Images/Player/Attacks Animations/attack1/Up/attack1_180_013.png<>uid://8gvirfmhl2ac::::res://Assets/Images/Player/Move Animations/normal/idle/Left_Up/idle_225_013.png<>uid://xkkq8ua3s33l::::res://Assets/Images/Player/Attacks Animations/attack1/Up/attack1_180_016.png<>uid://bbbpqq0annyfj::::res://Assets/Images/Player/Move Animations/normal/idle/Left_Up/idle_225_016.png<>uid://n2gruboe03m5::::res://Assets/Images/Player/Move Animations/normal/idle/Left_Up/idle_225_019.png<>uid://bgxsp6rh6qefc::::res://Assets/Images/Player/Move Animations/normal/idle/Left_Up/idle_225_022.png<>uid://dj1ydxdjlwq4c::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Up/idle_135_001.png<>uid://cr4xbhjxxsne0::::res://Assets/Images/Player/Attacks Animations/attack1/Up_Left/attack1_225_001.png<>uid://2t1dvtoeds8f::::res://Assets/Images/Player/Attacks Animations/attack1/Up_Left/attack1_225_004.png<>uid://b00au4p8jv3xg::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Up/idle_135_004.png<>uid://d3qhpma85dty::::res://Assets/Images/Player/Attacks Animations/attack1/Up_Left/attack1_225_007.png<>uid://c0b8bduxvut76::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Up/idle_135_007.png<>uid://ceh4lvuf566y1::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Up/idle_135_010.png<>uid://dbneyhi310lge::::res://Assets/Images/Player/Attacks Animations/attack1/Up_Left/attack1_225_010.png<>uid://dtcpb7d32qtq0::::res://Assets/Images/Player/Attacks Animations/attack1/Up_Left/attack1_225_013.png<>uid://cxedo6ic7iy7e::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Up/idle_135_013.png<>uid://6l4fuoi0moar::::res://Assets/Images/Player/Attacks Animations/attack1/Up_Left/attack1_225_016.png<>uid://cxs5d4g2rdy3l::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Up/idle_135_016.png<>uid://cses82qocmluq::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Up/idle_135_019.png<>uid://lw7vj7e6q6wn::::res://Assets/Images/Player/Move Animations/normal/idle/Right_Up/idle_135_022.png<>uid://dyvygy8gxrhgi::::res://Assets/Images/Player/Move Animations/normal/run/Down/run_0_001.png<>uid://bkea2mhw3ioo3::::res://Assets/Images/Player/Attacks Animations/attack1/Up_Right/attack1_135_001.png<>uid://mlqe0fv7k5q4::::res://Assets/Images/Player/Attacks Animations/attack1/Up_Right/attack1_135_004.png<>uid://bu0mt32i3xkpl::::res://Assets/Images/Player/Move Animations/normal/run/Down/run_0_005.png<>uid://ciyd54hh17tqa::::res://Assets/Images/Player/Move Animations/normal/run/Down/run_0_009.png<>uid://c5rapap1x8bil::::res://Assets/Images/Player/Attacks Animations/attack1/Up_Right/attack1_135_007.png<>uid://glbftmikcbvg::::res://Assets/Images/Player/Attacks Animations/attack1/Up_Right/attack1_135_010.png<>uid://wd43s00sem7a::::res://Assets/Images/Player/Move Animations/normal/run/Down/run_0_013.png<>uid://b85hgo0wkd7xn::::res://Assets/Images/Player/Attacks Animations/attack1/Up_Right/attack1_135_013.png<>uid://cg0alygr1jqac::::res://Assets/Images/Player/Move Animations/normal/run/Down/run_0_017.png<>uid://btoqjykkrjxsq::::res://Assets/Images/Player/Move Animations/normal/run/Down/run_0_021.png<>uid://dpq00iialwnkd::::res://Assets/Images/Player/Attacks Animations/attack1/Up_Right/attack1_135_016.png<>uid://b6ujmbvvdds6b::::res://Assets/Images/Player/Move Animations/normal/run/Left_Down/run_315_001.png<>uid://bwmyfon7k3itj::::res://Assets/Images/Player/Move Animations/normal/run/Left_Down/run_315_005.png<>uid://rxsrfay3rd1n::::res://Assets/Images/Player/Move Animations/normal/run/Left_Down/run_315_009.png<>uid://bul0qm06pbrr4::::res://Assets/Images/Player/Attacks Animations/attack2/Down/strongAttack_0_001.png<>uid://bgumbi4kdi1u7::::res://Assets/Images/Player/Move Animations/normal/run/Left_Down/run_315_013.png<>uid://ciy7it01s11xx::::res://Assets/Images/Player/Attacks Animations/attack2/Down/strongAttack_0_004.png<>uid://p2poo7uqb4bk::::res://Assets/Images/Player/Move Animations/normal/run/Left_Down/run_315_017.png<>uid://bim0pm8tuq6t5::::res://Assets/Images/Player/Attacks Animations/attack2/Down/strongAttack_0_007.png<>uid://drmg7qh41cd7s::::res://Assets/Images/Player/Attacks Animations/attack2/Down/strongAttack_0_010.png<>uid://bunh2c5scbume::::res://Assets/Images/Player/Move Animations/normal/run/Left_Down/run_315_021.png<>uid://ucnoewc6m5qr::::res://Assets/Images/Player/Move Animations/normal/run/Right_Down/run_45_001.png<>uid://b2y0204w2m0qs::::res://Assets/Images/Player/Attacks Animations/attack2/Down/strongAttack_0_013.png<>uid://cvam1oyqybcrj::::res://Assets/Images/Player/Move Animations/normal/run/Right_Down/run_45_005.png<>uid://1r1l2qk8iat3::::res://Assets/Images/Player/Attacks Animations/attack2/Down/strongAttack_0_016.png<>uid://u34s7vq7a1fg::::res://Assets/Images/Player/Move Animations/normal/run/Right_Down/run_45_009.png<>uid://cc04bpb81t27q::::res://Assets/Images/Player/Attacks Animations/attack2/Down/strongAttack_0_019.png<>uid://12gkq0uqxwee::::res://Assets/Images/Player/Attacks Animations/attack2/Down/strongAttack_0_022.png<>uid://b1330viitoskf::::res://Assets/Images/Player/Move Animations/normal/run/Right_Down/run_45_013.png<>uid://cfr3lwnwwoncl::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Left/strongAttack_315_001.png<>uid://cp4lhvohgat7e::::res://Assets/Images/Player/Move Animations/normal/run/Right_Down/run_45_017.png<>uid://b5375sboyxu58::::res://Assets/Images/Player/Move Animations/normal/run/Right_Down/run_45_021.png<>uid://d3l61hw5n4vt7::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Left/strongAttack_315_004.png<>uid://cndm3fusroy4i::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Left/strongAttack_315_007.png<>uid://tmnpql1wekco::::res://Assets/Images/Player/Move Animations/normal/run/Left/run_270_001.png<>uid://cbw7ka7u15g7x::::res://Assets/Images/Player/Move Animations/normal/run/Left/run_270_005.png<>uid://da6qmhirpkr2k::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Left/strongAttack_315_010.png<>uid://b6b11cpjhcwpc::::res://Assets/Images/Player/Move Animations/normal/run/Left/run_270_009.png<>uid://28b62nw0c66f::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Left/strongAttack_315_013.png<>uid://baghi5psn1sm8::::res://Assets/Images/Player/Move Animations/normal/run/Left/run_270_013.png<>uid://bbvgvaupwquct::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Left/strongAttack_315_016.png<>uid://iirs5wicc3nt::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Left/strongAttack_315_019.png<>uid://dp3ydnpuqb25i::::res://Assets/Images/Player/Move Animations/normal/run/Left/run_270_017.png<>uid://npx5y1lg6ssv::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Left/strongAttack_315_022.png<>uid://bsg6y6n6kr0im::::res://Assets/Images/Player/Move Animations/normal/run/Left/run_270_021.png<>uid://ds002tw1x74le::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Right/strongAttack_45_001.png<>uid://datcreu5323yf::::res://Assets/Images/Player/Move Animations/normal/run/Right/run_90_001.png<>uid://du1k7nlkgutcc::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Right/strongAttack_45_004.png<>uid://bg42ig051sva7::::res://Assets/Images/Player/Move Animations/normal/run/Right/run_90_005.png<>uid://bj3pygq1141om::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Right/strongAttack_45_007.png<>uid://s08n023crpso::::res://Assets/Images/Player/Move Animations/normal/run/Right/run_90_009.png<>uid://hkoo0ke8rxib::::res://Assets/Images/Player/Move Animations/normal/run/Right/run_90_013.png<>uid://d20oi1iskvl7l::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Right/strongAttack_45_010.png<>uid://i5y7g2cjwid3::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Right/strongAttack_45_013.png<>uid://blohul3v1ecty::::res://Assets/Images/Player/Move Animations/normal/run/Right/run_90_017.png<>uid://fid2yhitw1b::::res://Assets/Images/Player/Move Animations/normal/run/Right/run_90_021.png<>uid://ctscvdd8s7qre::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Right/strongAttack_45_016.png<>uid://cxb8fbf4tttrt::::res://Assets/Images/Player/Move Animations/normal/run/Up/run_180_001.png<>uid://bycyhdkbgybxo::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Right/strongAttack_45_019.png<>uid://cp3nbwk2xb52s::::res://Assets/Images/Player/Move Animations/normal/run/Up/run_180_005.png<>uid://dap004wfy1kwr::::res://Assets/Images/Player/Attacks Animations/attack2/Down_Right/strongAttack_45_022.png<>uid://dhqghlk2xp7yp::::res://Assets/Images/Player/Attacks Animations/attack2/Left/strongAttack_270_001.png<>uid://bnau3kmdlxhhq::::res://Assets/Images/Player/Move Animations/normal/run/Up/run_180_009.png<>uid://dai5h2tp4lp8k::::res://Assets/Images/Player/Attacks Animations/attack2/Left/strongAttack_270_004.png<>uid://b4w78xy01wygx::::res://Assets/Images/Player/Move Animations/normal/run/Up/run_180_013.png<>uid://druq2kklar0jx::::res://Assets/Images/Player/Move Animations/normal/run/Up/run_180_017.png<>uid://b0bh440pukwnu::::res://Assets/Images/Player/Attacks Animations/attack2/Left/strongAttack_270_007.png<>uid://bw573wjt4iaf4::::res://Assets/Images/Player/Attacks Animations/attack2/Left/strongAttack_270_010.png<>uid://g5b1s4hqupmm::::res://Assets/Images/Player/Move Animations/normal/run/Up/run_180_021.png<>uid://clgavb4wsh8my::::res://Assets/Images/Player/Move Animations/normal/run/Left_Up/run_225_001.png<>uid://cyyrycypglntt::::res://Assets/Images/Player/Attacks Animations/attack2/Left/strongAttack_270_013.png<>uid://p1xxc7r3msq5::::res://Assets/Images/Player/Attacks Animations/attack2/Left/strongAttack_270_016.png<>uid://dtjyb6vmkdfrs::::res://Assets/Images/Player/Move Animations/normal/run/Left_Up/run_225_005.png<>uid://ov175tf0nc0e::::res://Assets/Images/Player/Attacks Animations/attack2/Left/strongAttack_270_019.png<>uid://bdi8esdt773o3::::res://Assets/Images/Player/Move Animations/normal/run/Left_Up/run_225_009.png<>uid://doyj2unxlfsii::::res://Assets/Images/Player/Move Animations/normal/run/Left_Up/run_225_013.png<>uid://dtg2wsydwf485::::res://Assets/Images/Player/Attacks Animations/attack2/Left/strongAttack_270_022.png<>uid://cxsfscu4mfob6::::res://Assets/Images/Player/Attacks Animations/attack2/Right/strongAttack_90_001.png<>uid://b65uj4uw5mley::::res://Assets/Images/Player/Move Animations/normal/run/Left_Up/run_225_017.png<>uid://62ga7b6awikb::::res://Assets/Images/Player/Attacks Animations/attack2/Right/strongAttack_90_004.png<>uid://d0qq3aamc7743::::res://Assets/Images/Player/Move Animations/normal/run/Left_Up/run_225_021.png<>uid://dvb5k0f4rckek::::res://Assets/Images/Player/Move Animations/normal/run/Right_Up/run_135_001.png<>uid://cvje42f0mkkoj::::res://Assets/Images/Player/Attacks Animations/attack2/Right/strongAttack_90_007.png<>uid://dd8j6siihbf3y::::res://Assets/Images/Player/Attacks Animations/attack2/Right/strongAttack_90_010.png<>uid://v562vuq3lerm::::res://Assets/Images/Player/Move Animations/normal/run/Right_Up/run_135_005.png<>uid://cgj2msww67bim::::res://Assets/Images/Player/Attacks Animations/attack2/Right/strongAttack_90_013.png<>uid://c66iujbdy7hxp::::res://Assets/Images/Player/Move Animations/normal/run/Right_Up/run_135_009.png<>uid://cda5jl7274dqo::::res://Assets/Images/Player/Move Animations/normal/run/Right_Up/run_135_013.png<>uid://cjasp0cmhhvn0::::res://Assets/Images/Player/Attacks Animations/attack2/Right/strongAttack_90_016.png<>uid://bmpttip1ps2sg::::res://Assets/Images/Player/Attacks Animations/attack2/Right/strongAttack_90_019.png<>uid://cimlhcuvusfk::::res://Assets/Images/Player/Move Animations/normal/run/Right_Up/run_135_017.png<>uid://cfr5drinf7xta::::res://Assets/Images/Player/Move Animations/normal/run/Right_Up/run_135_021.png<>uid://wki4ph7dimoa::::res://Assets/Images/Player/Attacks Animations/attack2/Right/strongAttack_90_022.png<>uid://x6eyv3d5uy1r::::res://Assets/Images/Player/Attacks Animations/attack2/Up/strongAttack_180_001.png<>uid://dlxbm4i4ir53::::res://Assets/Images/Player/Attacks Animations/attack2/Up/strongAttack_180_004.png<>uid://ci60n4gaxkfqw::::res://Assets/Images/Player/Attacks Animations/attack2/Up/strongAttack_180_007.png<>uid://csaybgva8usy0::::res://Assets/Images/Player/Attacks Animations/attack2/Up/strongAttack_180_010.png<>uid://c2uhuj56wcedj::::res://Assets/Images/Player/Attacks Animations/attack2/Up/strongAttack_180_013.png<>uid://cw2kd8syfhbuv::::res://Assets/Images/Player/Attacks Animations/attack2/Up/strongAttack_180_016.png<>uid://c366b5lradvwj::::res://Assets/Images/Player/Attacks Animations/attack2/Up/strongAttack_180_019.png<>uid://bwhjsuy30cdgj::::res://Assets/Images/Player/Attacks Animations/attack2/Up/strongAttack_180_022.png<>uid://cexswstsqjimp::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Left/strongAttack_225_001.png<>uid://cj51cx72t1o3e::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Left/strongAttack_225_004.png<>uid://d1f2c5m78vjt1::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Left/strongAttack_225_007.png<>uid://byto48721a6n2::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Left/strongAttack_225_010.png<>uid://b4yuo5jvifjcv::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Left/strongAttack_225_013.png<>uid://b8ht3wbvg0jvr::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Left/strongAttack_225_016.png<>uid://bm45kc8shq2q0::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Left/strongAttack_225_019.png<>uid://cc57wrsthmdff::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Left/strongAttack_225_022.png<>uid://bwmbb8al10v5c::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Right/strongAttack_135_001.png<>uid://dowknqsv0thod::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Right/strongAttack_135_004.png<>uid://bscfbmc0tsavk::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Right/strongAttack_135_007.png<>uid://dnakbbt0sj507::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Right/strongAttack_135_010.png<>uid://dyrkw1g6d42aj::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Right/strongAttack_135_013.png<>uid://cy8q6qqbtdx2e::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Right/strongAttack_135_016.png<>uid://cc7v0wtrf3g8f::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Right/strongAttack_135_019.png<>uid://br2y57ux4bqy4::::res://Assets/Images/Player/Attacks Animations/attack2/Up_Right/strongAttack_135_022.png<>uid://br2418c2sb0g0::::res://Assets/Images/Player/DashAnimations/dash/Down/dash_0_001.png<>uid://d3o3x2sqlupb7::::res://Assets/Images/Player/DashAnimations/dash/Down_Left/dash_315_001.png<>uid://bdvgj47v2yjcg::::res://Assets/Images/Player/DashAnimations/dash/Down_Right/dash_45_001.png<>uid://b1tde2vnf1sde::::res://Assets/Images/Player/DashAnimations/dash/Left/dash_270_001.png<>uid://b4nw8en7qjm5n::::res://Assets/Images/Player/DashAnimations/dash/Right/dash_90_001.png<>uid://5k5nhwl1cf4l::::res://Assets/Images/Player/DashAnimations/dash/Up/dash_180_001.png<>uid://b2ty2x0gsp2a3::::res://Assets/Images/Player/DashAnimations/dash/Up_Left/dash_225_001.png<>uid://b3bqxomq68uu3::::res://Assets/Images/Player/DashAnimations/dash/Up_Right/dash_135_001.png
 quadrant.tscn::PackedScene::1391591709849316792::1699229338::0::1::::<><>::res://Scripts/Game/quadrant.gd<>uid://dlwvyo6ejssc
 SpawnDamage.tscn::PackedScene::5443384678974541085::1699232495::0::1::::<><>::res://Scripts/Game/SpawnDamage.gd<>uid://duy38o6o71nij
 tiles.tscn::PackedScene::2455245196612017327::1699229338::0::1::::<><>::uid://b7f3qfsvvnmrt
 Wave_controller.tscn::PackedScene::9105475327120359502::1699292936::0::1::::<><>::res://Scripts/Game/WaveController.gd<>res://Scripts/Game/Waves/Wave1.gd<>res://Scripts/Game/Waves/Wave2.gd<>res://Scripts/Game/Waves/Wave3.gd<>res://Scripts/Game/Waves/Wave4.gd<>res://Scripts/Game/Waves/Wave5.gd<>res://Scripts/Game/Waves/Wave6.gd<>res://Scripts/Game/Waves/Wave7.gd<>res://Scripts/Game/Waves/Wave8.gd<>res://Scripts/Game/Waves/Wave9.gd<>res://Scripts/Game/Waves/Wave10.gd<>res://Scripts/Game/Waves/Wave12.gd<>res://Scripts/Game/Waves/Wave11.gd<>res://Scripts/Game/Waves/Wave13.gd<>res://Scripts/Game/Waves/Wave14.gd<>res://Scripts/Game/Waves/Wave15.gd<>res://Scripts/Game/Waves/Wave16.gd<>res://Scripts/Game/Waves/Wave17.gd<>res://Scripts/Game/Waves/Wave18.gd<>res://Scripts/Game/Waves/Wave19.gd<>res://Scripts/Game/Waves/Wave20.gd
 ::res://Scenes/Game/Classes/::1699229338
 ::res://Scenes/Game/Classes/Warrior/::1699297382
-Warrior_Attack2.tscn::PackedScene::5580741863732919671::1699297382::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_Attack2.gd<>uid://be0jxocrlx0v4::::res://Assets/Images/Player/cutAnimation.png<>uid://g8sg7h87abc3::::res://Assets/Images/Player/all_swords.png
+Warrior_Attack2.tscn::PackedScene::5580741863732919671::1699297382::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_Attack2.gd<>uid://be0jxocrlx0v4
 ::res://Scenes/Game/Classes/Warrior/WarriorDash/::1699229338
 DashShadow.tscn::PackedScene::8837944665787781517::1699229338::0::1::::<><>::res://Scripts/Classes/Warrior/DashShadow.gd
 Warrior_Dash.tscn::PackedScene::2111221823693105197::1699229338::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_Dash.gd<>uid://b44vxel7hbyp4
@@ -477,19 +903,20 @@ WarriorUltimateZeus.tscn::PackedScene::509131753067611174::1699229338::0::1::::<
 cerberus.tscn::PackedScene::1879291186360903174::1699229338::0::1::::<><>::uid://ctfbwirbhiqcg
 skeleton.tscn::PackedScene::2926460557540816709::1699229338::0::1::::<><>::uid://l54islvp3hy3
 WarriorUltimateHades.tscn::PackedScene::3211425274911159122::1699229338::0::1::::<><>::res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimateHades/WarriorUltimateHades.gd<>uid://ucmrldp0cqk3
-::res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon/::1699301286
-WarriorUltimatePoseidon.tscn::PackedScene::2376535277667383900::1699301286::0::1::::<><>::res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon/WarriorUltimatePoseidon.gd<>uid://cjpd46uov0n5r::::res://Assets/Sounds/Player/Ultimates/Poseidon/StormySeaSoundEffect.mp3<>uid://bgv6hyuiwmur3::::res://Assets/Sounds/Player/Ultimates/Poseidon/poseidonVoice.mp3<>uid://bhkejanuwrdep::::res://Assets/Images/Player/Ultimates/Poseidon/poseidonUltNoBackground.png<>uid://b65ygmdu2ew38::::res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00001.png<>uid://dkb1x566rqw1j::::res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00004.png<>uid://cm2fbud0jxswq::::res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00007.png<>uid://c4re64gd8pmae::::res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00010.png<>uid://vet8ywocy7wl::::res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00013.png<>uid://c2a4i77sxffv4::::res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00016.png<>uid://dki2jgiknqr5m::::res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00019.png<>uid://2i8o7mq6ul7u::::res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00022.png<>uid://dlnk0cf6xu7kq::::res://Assets/Images/Player/Ultimates/Poseidon/kraken/krakenHead.png<>uid://dlicuauo3asxj::::res://Assets/Sounds/Player/Ultimates/Poseidon/krakenSound.mp3
+::res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon/::1699303951
+WarriorUltimatePoseidon.tscn::PackedScene::2376535277667383900::1699303951::0::1::::<><>::res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon/WarriorUltimatePoseidon.gd<>uid://cjpd46uov0n5r
 WarriorUltimatePoseidonTentacle.tscn::PackedScene::7704371617261426723::1699229338::0::1::::<><>::uid://dlea4tra8a7b
-::res://Scenes/Game/Classes/Warrior/Warrior_Attack1/::1699301286
-Warrior_attack1_noGod.tscn::PackedScene::6861973286846528414::1699301286::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_noGod.gd<>uid://be0jxocrlx0v4::::res://Assets/Images/Player/cutAnimation.png<>uid://g8sg7h87abc3::::res://Assets/Images/Player/all_swords.png
-::res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Hades/::1699301286
-Warrior_attack1_Hades.tscn::PackedScene::2503305836229877052::1699301286::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Hades/Warrior_attack1_Hades.gd<>uid://be0jxocrlx0v4::::res://Assets/Images/Player/cutAnimation.png<>uid://g8sg7h87abc3::::res://Assets/Images/Player/all_swords.png
-::res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Poseidon/::1699301286
+::res://Scenes/Game/Classes/Warrior/Warrior_Attack1/::1699322045
+Warrior_attack1_divine_ZeusPoseion.tscn::PackedScene::4851003058891460483::1699322045::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_divine_ZeusPoseion.gd
+Warrior_attack1_noGod.tscn::PackedScene::6861973286846528414::1699303951::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_noGod.gd<>uid://be0jxocrlx0v4
+::res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Hades/::1699303951
+Warrior_attack1_Hades.tscn::PackedScene::2503305836229877052::1699303951::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Hades/Warrior_attack1_Hades.gd<>uid://be0jxocrlx0v4
+::res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Poseidon/::1699322045
 heavyDamage.tscn::PackedScene::4835737718374841790::1699231919::0::1::::<><>::res://Scripts/explosion.gd<>uid://dhotvmxw8duxw
-Warrior_attack1_Poseidon.tscn::PackedScene::8033564019273767575::1699301286::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Poseidon/Warrior_attack1_Poseidon.gd<>uid://be0jxocrlx0v4::::res://Assets/Images/Player/cutAnimation.png<>uid://g8sg7h87abc3::::res://Assets/Images/Player/all_swords.png<>uid://kqwwbtrcav1m::::res://Assets/Sounds/Player/Attack1/Poseidon/heavyDamageReady.mp3
-::res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Zeus/::1699300613
-Lightining.tscn::PackedScene::8728460484359803841::1699297492::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Zeus/Lightining.gd<>uid://d2jsc0roj53pf::::res://Assets/Images/Player/Attack1/Zeus/Lightning/scene00001.png<>uid://bjp1ohisoh2q2::::res://Assets/Images/Player/Attack1/Zeus/Lightning/scene00004.png<>uid://m082t8l0bunn::::res://Assets/Images/Player/Attack1/Zeus/Lightning/scene00007.png
-Warrior_attack1_Zeus.tscn::PackedScene::2848330734795764209::1699300613::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Zeus/Warrior_attack1_Zeus.gd<>uid://be0jxocrlx0v4::::res://Assets/Images/Player/cutAnimation.png<>uid://g8sg7h87abc3::::res://Assets/Images/Player/all_swords.png
+Warrior_attack1_Poseidon.tscn::PackedScene::8033564019273767575::1699322045::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Poseidon/Warrior_attack1_Poseidon.gd<>uid://be0jxocrlx0v4::::res://Assets/Images/Player/cutAnimation.png<>uid://g8sg7h87abc3::::res://Assets/Images/Player/all_swords.png<>uid://kqwwbtrcav1m::::res://Assets/Sounds/Player/Attack1/Poseidon/heavyDamageReady.mp3
+::res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Zeus/::1699322045
+Lightining.tscn::PackedScene::8728460484359803841::1699297492::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Zeus/Lightining.gd<>uid://d2jsc0roj53pf
+Warrior_attack1_Zeus.tscn::PackedScene::2848330734795764209::1699322045::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Zeus/Warrior_attack1_Zeus.gd<>uid://be0jxocrlx0v4::::res://Assets/Images/Player/cutAnimation.png<>uid://g8sg7h87abc3::::res://Assets/Images/Player/all_swords.png
 ::res://Scenes/Game/Constructions/::1699230051
 center.tscn::PackedScene::6446946541765855784::1699229338::0::1::::<><>::res://Scripts/Zones/Center/center.gd<>uid://b4tu2enafngd1
 Pool.tscn::PackedScene::6563902229116834930::1699229338::0::1::::<><>::uid://c54g4r5h7thq8
@@ -549,19 +976,20 @@ Id018.tscn::PackedScene::4984990590460644455::1699229338::0::1::::<><>::uid://de
 ::res://Scenes/Game/Enemies/id020/::1699229338
 Id020.tscn::PackedScene::7660765656886475688::1699229338::0::1::::<><>::uid://drecbbk36q6mm
 Poison.tscn::PackedScene::8804950772704332267::1699229338::0::1::::<><>::res://Scripts/Instances/Poison.gd<>uid://dqkp5kvh3xg02
-::res://Scenes/Game/Math_controller/::1699301286
-Math_controller.tscn::PackedScene::3301249432446336140::1699301286::0::1::::<><>::res://Scripts/Game/MathController/MathController.gd<>res://Scripts/Game/MathController/Skills/attack1/Zeus/MC_attack1_zeus.gd<>res://Scripts/Game/MathController/Skills/attack1/Poseidon/MC_attack1_poseidon.gd<>res://Scripts/Game/MathController/Skills/attack1/Hades/MC_attack1_hades.gd
-::res://Scenes/Game/Math_controller/Effects/::1699297382
-Electrified.tscn::PackedScene::389500452469703700::1699297382::0::1::::<><>::uid://d2jsc0roj53pf::::res://Assets/Images/Player/Attack1/Zeus/Lightning/scene00001.png<>uid://bjp1ohisoh2q2::::res://Assets/Images/Player/Attack1/Zeus/Lightning/scene00004.png<>uid://m082t8l0bunn::::res://Assets/Images/Player/Attack1/Zeus/Lightning/scene00007.png
+::res://Scenes/Game/Math_controller/::1699322044
+Math_controller.tscn::PackedScene::3301249432446336140::1699322044::0::1::::<><>::res://Scripts/Game/MathController/MathController.gd<>res://Scripts/Game/MathController/Skills/attack1/Zeus/MC_attack1_zeus.gd<>res://Scripts/Game/MathController/Skills/attack1/Poseidon/MC_attack1_poseidon.gd<>res://Scripts/Game/MathController/Skills/attack1/Hades/MC_attack1_hades.gd
+::res://Scenes/Game/Math_controller/Effects/::1699322046
+Electrified.tscn::PackedScene::389500452469703700::1699322046::0::1::::<><>::uid://d2jsc0roj53pf::::res://Assets/Images/Player/Attack1/Zeus/Lightning/scene00001.png<>uid://bjp1ohisoh2q2::::res://Assets/Images/Player/Attack1/Zeus/Lightning/scene00004.png<>uid://m082t8l0bunn::::res://Assets/Images/Player/Attack1/Zeus/Lightning/scene00007.png
+Twister.tscn::PackedScene::186835686679495346::1699322046::0::1::::<><>::uid://cpuetsllbiglp::::res://Assets/Images/Player/Attack1/Hades/Twister/scene00001-removebg-preview.png<>uid://iwg1hji03r2v::::res://Assets/Images/Player/Attack1/Hades/Twister/scene00004-removebg-preview.png<>uid://b4xrnm1ka45iw::::res://Assets/Images/Player/Attack1/Hades/Twister/scene00007-removebg-preview.png
 ::res://Scenes/MainScenes/::1699237778
 Fatality.tscn::PackedScene::3830635802989632452::1699229338::0::1::::<><>::res://Scripts/MainScenes/Fatality.gd<>res://Assets/Videos/fatality.ogv<>uid://ptqt4rl1wcxb
 Game_ViewPort.tscn::PackedScene::7418050984438387124::1699237778::0::1::::<><>::uid://cb86td4m1hepw
 Loading.tscn::PackedScene::1350444753072594925::1699229338::0::1::::<><>::res://Scripts/MainScenes/Loading.gd<>uid://duy38o6o71nij
 Menu.tscn::PackedScene::962977223449213015::1699229338::0::1::::<><>::res://Scripts/MainScenes/Menu.gd<>uid://dxsn2vwpfc331
-::res://Scripts/::1699298433
+::res://Scripts/::1699306230
 explosion.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
 Global.gd::GDScript::-1::1699231894::0::1::::<>Node<>::
-PreLoads.gd::GDScript::-1::1699298433::0::1::::<>Node<>::
+PreLoads.gd::GDScript::-1::1699306230::0::1::::<>Node<>::
 ::res://Scripts/Classes/::1695242278
 ::res://Scripts/Classes/Warrior/::1699295202
 DashShadow.gd::GDScript::-1::1699229338::0::1::::<>Node2D<>::
@@ -578,15 +1006,16 @@ skeleton.gd::GDScript::-1::1699229338::0::1::::<>Node2D<>::
 WarriorUltimateHades.gd::GDScript::-1::1699229338::0::1::::<>Node2D<>::
 ::res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon/::1699229338
 WarriorUltimatePoseidon.gd::GDScript::-1::1699229338::0::1::::<>Node2D<>::
-::res://Scripts/Classes/Warrior/Warrior_attack1/::1699298258
+::res://Scripts/Classes/Warrior/Warrior_attack1/::1699316168
+Warrior_attack1_divine_ZeusPoseion.gd::GDScript::-1::1699316168::0::1::::<>Node2D<>::
 Warrior_attack1_noGod.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
 ::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Hades/::1699300976
 Warrior_attack1_Hades.gd::GDScript::-1::1699300976::0::1::::<>Node2D<>::
-::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Poseidon/::1699295375
-Warrior_attack1_Poseidon.gd::GDScript::-1::1699295375::0::1::::<>Node2D<>::
-::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Zeus/::1699297379
+::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Poseidon/::1699305855
+Warrior_attack1_Poseidon.gd::GDScript::-1::1699305855::0::1::::<>Node2D<>::
+::res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Zeus/::1699322230
 Lightining.gd::GDScript::-1::1699297379::0::1::::<>Node2D<>::
-Warrior_attack1_Zeus.gd::GDScript::-1::1699296155::0::1::::<>Node2D<>::
+Warrior_attack1_Zeus.gd::GDScript::-1::1699322230::0::1::::<>Node2D<>::
 ::res://Scripts/Enemies/::1699229339
 Id001.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
 Id002.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
@@ -610,13 +1039,13 @@ Id018.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
 Id019.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
 Id020.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
 X.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
-::res://Scripts/Game/::1699301128
+::res://Scripts/Game/::1699321966
 BackgroundMusic.gd::GDScript::-1::1699229339::0::1::::<>AudioStreamPlayer<>::
 Dracma.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
-Game.gd::GDScript::-1::1699298466::0::1::::<>Node2D<>::
+Game.gd::GDScript::-1::1699307227::0::1::::<>Node2D<>::
 Item.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
 matriz.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
-player.gd::GDScript::-1::1699301128::0::1::::<>Node2D<>::
+player.gd::GDScript::-1::1699321966::0::1::::<>Node2D<>::
 quadrant.gd::GDScript::-1::1699229339::0::1::::<>Area2D<>::
 SoundController.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
 SpawnDamage.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
@@ -625,10 +1054,10 @@ WaveController.gd::GDScript::-1::1699229758::0::1::::<>Node2D<>::
 MathController.gd::GDScript::-1::1699300485::0::1::::<>Node2D<>::
 ::res://Scripts/Game/MathController/Skills/::1699293696
 ::res://Scripts/Game/MathController/Skills/attack1/::1699293647
-::res://Scripts/Game/MathController/Skills/attack1/Hades/::1699301284
-MC_attack1_hades.gd::GDScript::-1::1699301284::0::1::::<>Node2D<>::
-::res://Scripts/Game/MathController/Skills/attack1/Poseidon/::1699295429
-MC_attack1_poseidon.gd::GDScript::-1::1699295429::0::1::::<>Node2D<>::
+::res://Scripts/Game/MathController/Skills/attack1/Hades/::1699303217
+MC_attack1_hades.gd::GDScript::-1::1699303217::0::1::::<>Node2D<>::
+::res://Scripts/Game/MathController/Skills/attack1/Poseidon/::1699314603
+MC_attack1_poseidon.gd::GDScript::-1::1699314603::0::1::::<>Node2D<>::
 ::res://Scripts/Game/MathController/Skills/attack1/Zeus/::1699296095
 MC_attack1_zeus.gd::GDScript::-1::1699296095::0::1::::<>Node2D<>::
 ::res://Scripts/Game/MathController/Skills/attack2/::1699293657

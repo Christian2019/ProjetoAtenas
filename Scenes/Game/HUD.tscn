@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://b18nigm5wn5ab"]
+[gd_scene load_steps=45 format=3 uid="uid://b18nigm5wn5ab"]
 
 [ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/HUD.gd" id="1_60mgy"]
@@ -31,6 +31,10 @@
 [ext_resource type="Texture2D" uid="uid://b30q73hel4bo6" path="res://Assets/Images/HUD/Ultimates/zeusUlt.png" id="29_35oqo"]
 [ext_resource type="Texture2D" uid="uid://4xs1mdhghkr" path="res://Assets/Images/HUD/Ultimates/hadesUltHUD.png" id="30_5voq0"]
 [ext_resource type="Texture2D" uid="uid://c3ce7u01og0rt" path="res://Assets/Images/HUD/Ultimates/poseidonUltHUD.png" id="31_bp4i7"]
+[ext_resource type="Texture2D" uid="uid://yjcswgm42ljb" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00001.png" id="32_h8ujo"]
+[ext_resource type="Texture2D" uid="uid://bliuur2u7r03c" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00004.png" id="33_afn4i"]
+[ext_resource type="Texture2D" uid="uid://r22njvg8r0py" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00007.png" id="34_53nyw"]
+[ext_resource type="Texture2D" uid="uid://btikammdiikmy" path="res://Assets/Images/HUD/Ultimates/zeus&poseidonUltHUD.png" id="35_pokj2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_22btt"]
 font = ExtResource("2_owy1r")
@@ -118,6 +122,23 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_mfcji"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_h8ujo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_afn4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_53nyw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_0f3i7"]
 animations = [{
 "frames": [{
@@ -132,6 +153,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
 }],
 "loop": true,
 "name": &"default",
@@ -529,10 +553,19 @@ offset_top = 214.0
 offset_right = 26.0
 offset_bottom = 247.0
 
+[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Attack1_Border"]
+visible = false
+position = Vector2(10.4419, 15.7732)
+scale = Vector2(0.0968992, 0.090032)
+sprite_frames = SubResource("SpriteFrames_mfcji")
+autoplay = "default"
+frame_progress = 0.939183
+
 [node name="Attack1" type="AnimatedSprite2D" parent="Frontground/Skills/Attack1_Border"]
 position = Vector2(9.56977, 16)
 scale = Vector2(0.0244695, 0.040404)
 sprite_frames = SubResource("SpriteFrames_0f3i7")
+frame = 1
 
 [node name="Attack2_Border" type="ColorRect" parent="Frontground/Skills"]
 offset_left = 8.0

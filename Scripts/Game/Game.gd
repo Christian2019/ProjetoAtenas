@@ -68,6 +68,7 @@ func changePlayerSkillFunction():
 	
 func getSkill():
 	if selected==0:
+		Global.hud.get_node("Frontground/Skills/Attack1_Border/Divine").visible=false
 		if s0==0:
 			return PreLoads.warrior_attack1_noGod
 		elif s0==1:
@@ -76,6 +77,10 @@ func getSkill():
 			return PreLoads.warrior_attack1_hades
 		elif s0==3:
 			return PreLoads.warrior_attack1_poseidon
+		elif s0==4:
+			Global.hud.get_node("Frontground/Skills/Attack1_Border/Divine").visible=true
+			
+			return PreLoads.warrior_attack1_divine_ZeusPoseion
 	
 	return null
 	
@@ -104,7 +109,7 @@ func getQuality():
 func changeSkillGod():
 		if (selected==0):
 			s0+=1
-			if (s0>3):
+			if (s0>4):
 				s0=0
 			Global.hud.get_node("Frontground/Skills/Attack1_Border/Attack1").frame=s0
 			

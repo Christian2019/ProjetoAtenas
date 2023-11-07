@@ -35,7 +35,10 @@ var max_duration = 0.5
 #LegendaryExtra
 var extraPercentDamage=0
 
+var divineReference
+
 func _ready():
+	
 	attackSpeedModifier()
 	Global.timerCreator("enableReverseOrder",max_duration/2,[],self)
 	$Animation.visible=false
@@ -59,6 +62,10 @@ func qualityStatus():
 		lightningDamage=20
 		extraPercentDamage=1.5
 		extraBounces=20
+	elif ( quality=="divine"):
+		lightningDamage=40
+		extraPercentDamage=2
+		extraBounces=40
 
 
 func _process(_delta):
@@ -94,7 +101,10 @@ func enableReverseOrder():
 
 func destroy():
 	if (reverseOrder and collidinWithPlayer):
-		Global.player.permissions[0]=true
+		if (quality=="divine"):
+			divineReference.skillsFinish+=1
+		else:
+			Global.player.permissions[0]=true
 		call_deferred("queue_free")
 
 func removeNextHitDelay(arrayPosition):
@@ -108,7 +118,7 @@ func damageAction():
 			var i = getMonsterHitIndex(monstersInArea[j])
 			if itsValid(monstersHit[i]):
 				if (!monstersHit[i].onHitDelay):
-					if (quality=="legendary"):
+					if (quality=="legendary" or quality=="divine"):
 						Global.MathController.attack1_zeus.addEntityElectrified(monstersHit[i].monster,extraPercentDamage)
 					Global.MathController.damageController(damage,monstersHit[i].monster)
 					if (!createdLightning):
@@ -125,6 +135,7 @@ func createLightning(enemy):
 	lightning.global_position=enemy.global_position
 
 func move():
+	
 	if reverseOrder:
 		var dx = (speed)*cos(get_angle_to(Global.player.global_position))
 		var dy = (speed)*sin(get_angle_to(Global.player.global_position))
@@ -149,7 +160,7 @@ func move():
 		#X-
 		if direction=="SW" or direction=="W" or direction=="NW":
 			relativePosition.x-=(speed)*speedModifier
-		
+	
 	global_position= Global.player.global_position+relativePosition
 		
 func _on_area_2d_area_entered(area):
