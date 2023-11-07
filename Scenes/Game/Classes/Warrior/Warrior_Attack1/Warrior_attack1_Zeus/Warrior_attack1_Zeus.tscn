@@ -1,8 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://bgt0udi4c71cf"]
+[gd_scene load_steps=20 format=3 uid="uid://bgt0udi4c71cf"]
 
 [ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Zeus/Warrior_attack1_Zeus.gd" id="1_hj2tx"]
 [ext_resource type="Texture2D" uid="uid://be0jxocrlx0v4" path="res://Assets/Images/Player/cutAnimation.png" id="2_fjw37"]
 [ext_resource type="Texture2D" uid="uid://g8sg7h87abc3" path="res://Assets/Images/Player/all_swords.png" id="3_55w4w"]
+[ext_resource type="Texture2D" uid="uid://2575554y0rm4" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/attack1_180_001.png" id="4_64w3s"]
+[ext_resource type="Texture2D" uid="uid://18mah77d1rlt" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/attack1_180_004.png" id="5_ol3bp"]
+[ext_resource type="Texture2D" uid="uid://ck2ynydlbye60" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/attack1_180_007.png" id="6_7apn7"]
+[ext_resource type="Texture2D" uid="uid://dlxf8fnh12roq" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/attack1_180_010.png" id="7_sd6v3"]
+[ext_resource type="Texture2D" uid="uid://kgb2e5nrqnv0" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/attack1_180_013.png" id="8_x6u8a"]
+[ext_resource type="Texture2D" uid="uid://crpoa6mdnyd5o" path="res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/attack1_180_016.png" id="9_xdcmo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_taocq"]
 atlas = ExtResource("2_fjw37")
@@ -72,6 +78,32 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_bsdgt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_64w3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ol3bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7apn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sd6v3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_x6u8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xdcmo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivf5m"]
 size = Vector2(50, 62)
 
@@ -79,11 +111,16 @@ size = Vector2(50, 62)
 script = ExtResource("1_hj2tx")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
-visible = false
 scale = Vector2(0.0604448, 0.0604448)
 sprite_frames = SubResource("SpriteFrames_8w6ou")
 animation = &"Swords"
 autoplay = "Swords"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-17, 26)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_bsdgt")
 
 [node name="Area2D" type="Area2D" parent="."]
 

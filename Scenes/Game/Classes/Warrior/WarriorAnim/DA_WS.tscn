@@ -1,0 +1,1394 @@
+[gd_scene load_steps=298 format=3 uid="uid://dmiljmpwkmf1r"]
+
+[ext_resource type="Texture2D" uid="uid://ctcpopnc0u5sc" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down/attack1_0_001.png" id="1_8ylr8"]
+[ext_resource type="Texture2D" uid="uid://df0pa3wogxd3x" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down/attack1_0_004.png" id="2_40wjv"]
+[ext_resource type="Texture2D" uid="uid://m2ti8ilxj1ri" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down/attack1_0_007.png" id="3_lsjmj"]
+[ext_resource type="Texture2D" uid="uid://geo6h7r0t103" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down/attack1_0_010.png" id="4_3y48u"]
+[ext_resource type="Texture2D" uid="uid://dywm8sn8of76j" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down/attack1_0_013.png" id="5_kpy7j"]
+[ext_resource type="Texture2D" uid="uid://b5nv7pdcnrl7" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down/attack1_0_016.png" id="6_jqhtw"]
+[ext_resource type="Texture2D" uid="uid://crjtkgoh2ldot" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down/attack1_0_019.png" id="7_dlrkk"]
+[ext_resource type="Texture2D" uid="uid://bckcbv5odrhkl" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down/attack1_0_022.png" id="8_f2odw"]
+[ext_resource type="Texture2D" uid="uid://bn6wby14gxdjl" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Left/attack1_315_001.png" id="9_o66hq"]
+[ext_resource type="Texture2D" uid="uid://le1tidytpc02" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Left/attack1_315_004.png" id="10_jl42n"]
+[ext_resource type="Texture2D" uid="uid://db8ckfsh6aqwm" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Left/attack1_315_007.png" id="11_7owkr"]
+[ext_resource type="Texture2D" uid="uid://davarvs3fxeh5" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Left/attack1_315_010.png" id="12_v6lrr"]
+[ext_resource type="Texture2D" uid="uid://dtqbwuby3vgen" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Left/attack1_315_013.png" id="13_2okws"]
+[ext_resource type="Texture2D" uid="uid://cs5qxyhixdk3i" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Left/attack1_315_016.png" id="14_j8x6m"]
+[ext_resource type="Texture2D" uid="uid://d2k8e1ibvos77" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Left/attack1_315_019.png" id="15_54skl"]
+[ext_resource type="Texture2D" uid="uid://dbj48nbmk1rku" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Left/attack1_315_022.png" id="16_62ix7"]
+[ext_resource type="Texture2D" uid="uid://bnxo2r27v7hbi" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Right/attack1_45_001.png" id="17_mfidp"]
+[ext_resource type="Texture2D" uid="uid://da277iohpf8cb" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Right/attack1_45_004.png" id="18_ynq0d"]
+[ext_resource type="Texture2D" uid="uid://fyqk8nn8kiks" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Right/attack1_45_007.png" id="19_uq008"]
+[ext_resource type="Texture2D" uid="uid://cbykdrqxnt01d" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Right/attack1_45_010.png" id="20_piuqe"]
+[ext_resource type="Texture2D" uid="uid://bmsbrk3kdd6vt" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Right/attack1_45_013.png" id="21_vdtpr"]
+[ext_resource type="Texture2D" uid="uid://cxa2rnxnvg2ss" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Right/attack1_45_016.png" id="22_xcfm7"]
+[ext_resource type="Texture2D" uid="uid://cuor6douuv3q3" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Right/attack1_45_019.png" id="23_kgjq8"]
+[ext_resource type="Texture2D" uid="uid://bvj5flvw0sp5j" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Down_Right/attack1_45_022.png" id="24_5e13f"]
+[ext_resource type="Texture2D" uid="uid://ctis5gdnckbd4" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Left/attack1_270_001.png" id="25_5emy2"]
+[ext_resource type="Texture2D" uid="uid://bkuq87kg0g1p1" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Left/attack1_270_004.png" id="26_kqyng"]
+[ext_resource type="Texture2D" uid="uid://bmnupbscfiyjf" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Left/attack1_270_007.png" id="27_427qa"]
+[ext_resource type="Texture2D" uid="uid://fxu42rmd1wdx" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Left/attack1_270_010.png" id="28_tgd86"]
+[ext_resource type="Texture2D" uid="uid://ds7p0tvino1tf" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Left/attack1_270_013.png" id="29_7mbn3"]
+[ext_resource type="Texture2D" uid="uid://dps5of1taxa14" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Left/attack1_270_016.png" id="30_b8jxp"]
+[ext_resource type="Texture2D" uid="uid://bkjrkkihip64u" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Left/attack1_270_019.png" id="31_ijypt"]
+[ext_resource type="Texture2D" uid="uid://8e8ys5oye32v" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Left/attack1_270_022.png" id="32_nwi2g"]
+[ext_resource type="Texture2D" uid="uid://drkfog8t60hrs" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Right/attack1_90_001.png" id="33_5n1ke"]
+[ext_resource type="Texture2D" uid="uid://b1pec4sall40c" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Right/attack1_90_004.png" id="34_1xbsr"]
+[ext_resource type="Texture2D" uid="uid://drvvidwws3f3v" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Right/attack1_90_007.png" id="35_vko0b"]
+[ext_resource type="Texture2D" uid="uid://76tnpcs76e47" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Right/attack1_90_010.png" id="36_32wal"]
+[ext_resource type="Texture2D" uid="uid://fhy6aijcpki6" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Right/attack1_90_013.png" id="37_y2c5o"]
+[ext_resource type="Texture2D" uid="uid://rlkfmooy6td2" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Right/attack1_90_016.png" id="38_24kkf"]
+[ext_resource type="Texture2D" uid="uid://cqsxd8uu3wikh" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Right/attack1_90_019.png" id="39_j2opj"]
+[ext_resource type="Texture2D" uid="uid://4j1tovorv3ro" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Right/attack1_90_022.png" id="40_mp143"]
+[ext_resource type="Texture2D" uid="uid://3h8ovilwjaoh" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up/attack1_180_001.png" id="41_k5uiv"]
+[ext_resource type="Texture2D" uid="uid://cf8ud7sxll5or" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up/attack1_180_004.png" id="42_djfw5"]
+[ext_resource type="Texture2D" uid="uid://c8d7eof41k7jk" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up/attack1_180_007.png" id="43_kja63"]
+[ext_resource type="Texture2D" uid="uid://dlqlg1x2u35s8" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up/attack1_180_010.png" id="44_ojx0t"]
+[ext_resource type="Texture2D" uid="uid://cy43e2cbuorai" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up/attack1_180_013.png" id="45_80hxr"]
+[ext_resource type="Texture2D" uid="uid://44i7ml2blgej" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up/attack1_180_016.png" id="46_drmeh"]
+[ext_resource type="Texture2D" uid="uid://jy1104ucvn22" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up/attack1_180_019.png" id="47_j06ub"]
+[ext_resource type="Texture2D" uid="uid://da74wcaxetnon" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up/attack1_180_022.png" id="48_fhujm"]
+[ext_resource type="Texture2D" uid="uid://26ttrborrs0" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Left/attack1_225_001.png" id="49_o7xm5"]
+[ext_resource type="Texture2D" uid="uid://b74hvt5pg8vtn" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Left/attack1_225_004.png" id="50_u7v2x"]
+[ext_resource type="Texture2D" uid="uid://cojxufmehyh0n" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Left/attack1_225_007.png" id="51_t8q2f"]
+[ext_resource type="Texture2D" uid="uid://bipeb28h8gw1w" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Left/attack1_225_010.png" id="52_ujki7"]
+[ext_resource type="Texture2D" uid="uid://bpkgags6kp0a" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Left/attack1_225_013.png" id="53_7uoop"]
+[ext_resource type="Texture2D" uid="uid://c4vm820sowr7" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Left/attack1_225_016.png" id="54_1xlww"]
+[ext_resource type="Texture2D" uid="uid://0t36ry5e0a0j" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Left/attack1_225_019.png" id="55_5cbft"]
+[ext_resource type="Texture2D" uid="uid://bfxavpsx66vl8" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Left/attack1_225_022.png" id="56_lgmgv"]
+[ext_resource type="Texture2D" uid="uid://cjlk6de1nyc0q" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Right/attack1_135_001.png" id="57_0gi1q"]
+[ext_resource type="Texture2D" uid="uid://biftqulh6rd7e" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Right/attack1_135_004.png" id="58_2fm76"]
+[ext_resource type="Texture2D" uid="uid://dpun11xcccyxp" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Right/attack1_135_007.png" id="59_rh2cl"]
+[ext_resource type="Texture2D" uid="uid://dp4aijs54a5tw" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Right/attack1_135_010.png" id="60_o007d"]
+[ext_resource type="Texture2D" uid="uid://bwkisxu4qolwu" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Right/attack1_135_013.png" id="61_hpoi1"]
+[ext_resource type="Texture2D" uid="uid://cf8l0tscb7sor" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Right/attack1_135_016.png" id="62_nw53a"]
+[ext_resource type="Texture2D" uid="uid://2ynxxg8t67mw" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Right/attack1_135_019.png" id="63_1kdq2"]
+[ext_resource type="Texture2D" uid="uid://dyqjyqdu4lx2h" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack1/Up_Right/attack1_135_022.png" id="64_8wbei"]
+[ext_resource type="Texture2D" uid="uid://m1wj0k42hsiw" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down/attack2_0_001.png" id="65_j78sn"]
+[ext_resource type="Texture2D" uid="uid://cni86iauk5xdi" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down/attack2_0_004.png" id="66_vi8h8"]
+[ext_resource type="Texture2D" uid="uid://dcvk5ya6q0d8j" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down/attack2_0_007.png" id="67_pmxko"]
+[ext_resource type="Texture2D" uid="uid://cew5t2sfr78vk" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down/attack2_0_010.png" id="68_tbkkl"]
+[ext_resource type="Texture2D" uid="uid://d4i8westhlel6" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down/attack2_0_013.png" id="69_otynj"]
+[ext_resource type="Texture2D" uid="uid://dqwov8ylk4pqb" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down/attack2_0_016.png" id="70_lv0ur"]
+[ext_resource type="Texture2D" uid="uid://0lv6atkhfcwu" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down/attack2_0_019.png" id="71_06wl8"]
+[ext_resource type="Texture2D" uid="uid://8p6vssgydng6" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down/attack2_0_022.png" id="72_d2hj2"]
+[ext_resource type="Texture2D" uid="uid://d25eyw7vpsgl7" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Left/attack2_315_001.png" id="73_y2d23"]
+[ext_resource type="Texture2D" uid="uid://cq4f3o1b2no0r" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Left/attack2_315_004.png" id="74_8ksip"]
+[ext_resource type="Texture2D" uid="uid://c0uhnfw56qqkt" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Left/attack2_315_007.png" id="75_ngbxy"]
+[ext_resource type="Texture2D" uid="uid://1eurboaksfrl" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Left/attack2_315_010.png" id="76_7n15i"]
+[ext_resource type="Texture2D" uid="uid://0neehnfw56om" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Left/attack2_315_013.png" id="77_khohr"]
+[ext_resource type="Texture2D" uid="uid://cur4cysnbw4qa" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Left/attack2_315_016.png" id="78_cxckb"]
+[ext_resource type="Texture2D" uid="uid://dsubqb8vm0kyy" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Left/attack2_315_019.png" id="79_l3jv0"]
+[ext_resource type="Texture2D" uid="uid://cv2iogq7wktlc" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Left/attack2_315_022.png" id="80_x3624"]
+[ext_resource type="Texture2D" uid="uid://dqtioy2k1bp5j" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Right/attack2_45_001.png" id="81_mq0eo"]
+[ext_resource type="Texture2D" uid="uid://cnkx51kfai4xc" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Right/attack2_45_004.png" id="82_g4mwj"]
+[ext_resource type="Texture2D" uid="uid://b2ophnqxuj4xy" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Right/attack2_45_007.png" id="83_hdq65"]
+[ext_resource type="Texture2D" uid="uid://ob8mdtjr7u4d" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Right/attack2_45_010.png" id="84_wotq5"]
+[ext_resource type="Texture2D" uid="uid://d23gmyfjdtxda" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Right/attack2_45_013.png" id="85_xm356"]
+[ext_resource type="Texture2D" uid="uid://qaeyk54sk1tv" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Right/attack2_45_016.png" id="86_3shsr"]
+[ext_resource type="Texture2D" uid="uid://i22n7px08tkk" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Right/attack2_45_019.png" id="87_bpygl"]
+[ext_resource type="Texture2D" uid="uid://ce36772o27y7q" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Down_Right/attack2_45_022.png" id="88_r4wwl"]
+[ext_resource type="Texture2D" uid="uid://bo2ydf7dy76er" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Left/attack2_270_001.png" id="89_b1sn3"]
+[ext_resource type="Texture2D" uid="uid://bt5qk815qa5qd" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Left/attack2_270_004.png" id="90_k7wql"]
+[ext_resource type="Texture2D" uid="uid://csxkldk0awtl3" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Left/attack2_270_007.png" id="91_vqf3i"]
+[ext_resource type="Texture2D" uid="uid://dnox1fb2wcw58" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Left/attack2_270_010.png" id="92_bhmkm"]
+[ext_resource type="Texture2D" uid="uid://bgwdoe2rgtsrw" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Left/attack2_270_013.png" id="93_oiaws"]
+[ext_resource type="Texture2D" uid="uid://b8188pevj0fe2" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Left/attack2_270_016.png" id="94_1kh1p"]
+[ext_resource type="Texture2D" uid="uid://bx0kcdm8q3dhu" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Left/attack2_270_019.png" id="95_tg55s"]
+[ext_resource type="Texture2D" uid="uid://btq4bnnmisfj0" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Left/attack2_270_022.png" id="96_n2f3s"]
+[ext_resource type="Texture2D" uid="uid://rug8v4ad5nke" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Right/attack2_90_001.png" id="97_3gjye"]
+[ext_resource type="Texture2D" uid="uid://b5urjuv5n2hii" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Right/attack2_90_004.png" id="98_1nkqg"]
+[ext_resource type="Texture2D" uid="uid://bprpeai4i6os" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Right/attack2_90_007.png" id="99_hgqm4"]
+[ext_resource type="Texture2D" uid="uid://dkoxkdv1l8clc" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Right/attack2_90_010.png" id="100_iv8bq"]
+[ext_resource type="Texture2D" uid="uid://cdph8de6fxif8" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Right/attack2_90_013.png" id="101_cl0mp"]
+[ext_resource type="Texture2D" uid="uid://d07bjl4hmm30p" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Right/attack2_90_016.png" id="102_ug8hl"]
+[ext_resource type="Texture2D" uid="uid://dmih0r3fsjcq8" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Right/attack2_90_019.png" id="103_gpgf6"]
+[ext_resource type="Texture2D" uid="uid://cer1nuj6ep0u5" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Right/attack2_90_022.png" id="104_lvopq"]
+[ext_resource type="Texture2D" uid="uid://efbbux730n2" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up/attack2_180_001.png" id="105_oomqx"]
+[ext_resource type="Texture2D" uid="uid://bfja2paotfdla" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up/attack2_180_004.png" id="106_g6tp7"]
+[ext_resource type="Texture2D" uid="uid://baxmvgne6c34l" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up/attack2_180_007.png" id="107_tabh2"]
+[ext_resource type="Texture2D" uid="uid://dlvecbrboer0k" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up/attack2_180_010.png" id="108_udn1p"]
+[ext_resource type="Texture2D" uid="uid://itumheiip0g7" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up/attack2_180_013.png" id="109_rfld7"]
+[ext_resource type="Texture2D" uid="uid://c1nlbluemdu6h" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up/attack2_180_016.png" id="110_ur1li"]
+[ext_resource type="Texture2D" uid="uid://5v67pmo3q3fr" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up/attack2_180_019.png" id="111_okopx"]
+[ext_resource type="Texture2D" uid="uid://1xi5dxb7758w" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up/attack2_180_022.png" id="112_2boti"]
+[ext_resource type="Texture2D" uid="uid://dnnxa2oco2i3p" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Left/attack2_225_001.png" id="113_ix53j"]
+[ext_resource type="Texture2D" uid="uid://b3rnxh4a2qt0i" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Left/attack2_225_004.png" id="114_its4t"]
+[ext_resource type="Texture2D" uid="uid://cocjjk5ossqyt" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Left/attack2_225_007.png" id="115_ioy4m"]
+[ext_resource type="Texture2D" uid="uid://6ulghvm05jdb" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Left/attack2_225_010.png" id="116_j6fkr"]
+[ext_resource type="Texture2D" uid="uid://djphwwhjlxofi" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Left/attack2_225_013.png" id="117_si4k7"]
+[ext_resource type="Texture2D" uid="uid://2egsm7w7s0sn" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Left/attack2_225_016.png" id="118_utt4o"]
+[ext_resource type="Texture2D" uid="uid://jo3foym5yh8g" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Left/attack2_225_019.png" id="119_ykr0g"]
+[ext_resource type="Texture2D" uid="uid://bprkpw2gpwvss" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Left/attack2_225_022.png" id="120_2pkfj"]
+[ext_resource type="Texture2D" uid="uid://dks1oikr0yye5" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Right/attack2_135_001.png" id="121_6cgm7"]
+[ext_resource type="Texture2D" uid="uid://cbjms00umvocx" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Right/attack2_135_004.png" id="122_kog8l"]
+[ext_resource type="Texture2D" uid="uid://dt1qxa570eyj2" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Right/attack2_135_007.png" id="123_vymph"]
+[ext_resource type="Texture2D" uid="uid://b8ej6gu6a7rv0" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Right/attack2_135_010.png" id="124_4ssux"]
+[ext_resource type="Texture2D" uid="uid://ceqbhnk5kqrtn" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Right/attack2_135_013.png" id="125_iyfpt"]
+[ext_resource type="Texture2D" uid="uid://c06efy2t5vki2" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Right/attack2_135_016.png" id="126_078jv"]
+[ext_resource type="Texture2D" uid="uid://1fuh1out34tn" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Right/attack2_135_019.png" id="127_b10k2"]
+[ext_resource type="Texture2D" uid="uid://cdjh2ar5pka8i" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/attack2/Up_Right/attack2_135_022.png" id="128_3alhi"]
+[ext_resource type="Texture2D" uid="uid://b1xvb4ccquow" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/dash/Down/dash_0_001.png" id="129_8mpx4"]
+[ext_resource type="Texture2D" uid="uid://dbt88kvugbkcg" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/dash/Down_Left/dash_315_001.png" id="130_hoffw"]
+[ext_resource type="Texture2D" uid="uid://njhj6uinklwb" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/dash/Down_Right/dash_45_001.png" id="131_pm32v"]
+[ext_resource type="Texture2D" uid="uid://dj0aaw2yyibds" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/dash/Left/dash_270_001.png" id="132_cwfof"]
+[ext_resource type="Texture2D" uid="uid://dx10dir8n38av" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/dash/Right/dash_90_001.png" id="133_wuaac"]
+[ext_resource type="Texture2D" uid="uid://t621wrig5scw" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/dash/Up/dash_180_001.png" id="134_d3ss7"]
+[ext_resource type="Texture2D" uid="uid://cdbok533m4edj" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/dash/Up_Left/dash_225_001.png" id="135_hdsht"]
+[ext_resource type="Texture2D" uid="uid://x6pvj5f2ly2j" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/dash/Up_Right/dash_135_001.png" id="136_p5f82"]
+[ext_resource type="Texture2D" uid="uid://bhmjpuydqwg5y" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down/idle_0_001.png" id="137_n5dqr"]
+[ext_resource type="Texture2D" uid="uid://dj1ntjpspb4xh" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down/idle_0_003.png" id="138_2px76"]
+[ext_resource type="Texture2D" uid="uid://cwgvfwnt2ad7r" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down/idle_0_005.png" id="139_1x5rm"]
+[ext_resource type="Texture2D" uid="uid://c0pcxx7jjkvt" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down/idle_0_007.png" id="140_n0q2w"]
+[ext_resource type="Texture2D" uid="uid://bl3xkxxslwcec" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down/idle_0_009.png" id="141_enrun"]
+[ext_resource type="Texture2D" uid="uid://bkog0a4e1i3cc" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down/idle_0_011.png" id="142_iuorj"]
+[ext_resource type="Texture2D" uid="uid://hh8qpd6vq3ep" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down/idle_0_013.png" id="143_ki5vu"]
+[ext_resource type="Texture2D" uid="uid://biw47ok2sajgy" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down/idle_0_015.png" id="144_oc56g"]
+[ext_resource type="Texture2D" uid="uid://0ofpgxke3f7u" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down/idle_0_017.png" id="145_8gggj"]
+[ext_resource type="Texture2D" uid="uid://3d16m8m40q0s" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down/idle_0_019.png" id="146_hmvg4"]
+[ext_resource type="Texture2D" uid="uid://djq30sd623pb1" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down/idle_0_021.png" id="147_76qg0"]
+[ext_resource type="Texture2D" uid="uid://bkjpk2qxvuyrm" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down/idle_0_023.png" id="148_7ptok"]
+[ext_resource type="Texture2D" uid="uid://lwx4bh7iakui" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Left/idle_315_001.png" id="149_2rxhl"]
+[ext_resource type="Texture2D" uid="uid://dc6xx4klskdkq" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Left/idle_315_003.png" id="150_w8bfj"]
+[ext_resource type="Texture2D" uid="uid://dtal0fhssg71i" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Left/idle_315_005.png" id="151_17n2i"]
+[ext_resource type="Texture2D" uid="uid://3dbfl55gl55y" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Left/idle_315_007.png" id="152_76lni"]
+[ext_resource type="Texture2D" uid="uid://54pf1v7abte" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Left/idle_315_009.png" id="153_gen25"]
+[ext_resource type="Texture2D" uid="uid://bykdfje7mpy8o" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Left/idle_315_011.png" id="154_qsfp8"]
+[ext_resource type="Texture2D" uid="uid://dc70vp1vuw8fr" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Left/idle_315_013.png" id="155_3e6qk"]
+[ext_resource type="Texture2D" uid="uid://08dp478v5m73" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Left/idle_315_015.png" id="156_jlbb6"]
+[ext_resource type="Texture2D" uid="uid://c2pa58238g0d0" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Left/idle_315_017.png" id="157_7jdd5"]
+[ext_resource type="Texture2D" uid="uid://ep41x8h6vsri" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Left/idle_315_019.png" id="158_scw82"]
+[ext_resource type="Texture2D" uid="uid://bnuqncrxty8al" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Left/idle_315_021.png" id="159_6nsfv"]
+[ext_resource type="Texture2D" uid="uid://c1eaulbrve4by" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Left/idle_315_023.png" id="160_in2lj"]
+[ext_resource type="Texture2D" uid="uid://r2mio0q8begd" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Right/idle_45_001.png" id="161_nhs6g"]
+[ext_resource type="Texture2D" uid="uid://ddd35vmmu01n5" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Right/idle_45_003.png" id="162_wv4y7"]
+[ext_resource type="Texture2D" uid="uid://rc8rwlpnwpxm" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Right/idle_45_005.png" id="163_0sqow"]
+[ext_resource type="Texture2D" uid="uid://ywgm455u355a" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Right/idle_45_007.png" id="164_udr74"]
+[ext_resource type="Texture2D" uid="uid://25cg5mrg5qle" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Right/idle_45_009.png" id="165_7cx7x"]
+[ext_resource type="Texture2D" uid="uid://c6csgk8e00ckm" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Right/idle_45_011.png" id="166_a2uph"]
+[ext_resource type="Texture2D" uid="uid://c02x56cne6uw" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Right/idle_45_013.png" id="167_l53xb"]
+[ext_resource type="Texture2D" uid="uid://dsqwlw0peolau" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Right/idle_45_015.png" id="168_kviwr"]
+[ext_resource type="Texture2D" uid="uid://81y5thom8vev" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Right/idle_45_017.png" id="169_7r755"]
+[ext_resource type="Texture2D" uid="uid://oulpjwnd70jh" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Right/idle_45_019.png" id="170_2sed7"]
+[ext_resource type="Texture2D" uid="uid://k1cp4xomgtkv" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Right/idle_45_021.png" id="171_6lghr"]
+[ext_resource type="Texture2D" uid="uid://bjneo2lt7evix" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Down_Right/idle_45_023.png" id="172_tqlex"]
+[ext_resource type="Texture2D" uid="uid://160jkm7uyiy1" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Left/idle_270_001.png" id="173_v21e6"]
+[ext_resource type="Texture2D" uid="uid://b4fab3cqg5fc5" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Left/idle_270_003.png" id="174_ff635"]
+[ext_resource type="Texture2D" uid="uid://ckvuhvq36klwv" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Left/idle_270_005.png" id="175_0eove"]
+[ext_resource type="Texture2D" uid="uid://dyepuq8o4k1gm" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Left/idle_270_007.png" id="176_mmo6h"]
+[ext_resource type="Texture2D" uid="uid://clunkoao51tkn" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Left/idle_270_009.png" id="177_mjyae"]
+[ext_resource type="Texture2D" uid="uid://b62gdbbfpgffv" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Left/idle_270_011.png" id="178_2dtnl"]
+[ext_resource type="Texture2D" uid="uid://do5sdpbcse8ko" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Left/idle_270_013.png" id="179_vmiwy"]
+[ext_resource type="Texture2D" uid="uid://b2ud6sl2vjqtr" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Left/idle_270_015.png" id="180_fftsf"]
+[ext_resource type="Texture2D" uid="uid://cq3srb7ytglqy" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Left/idle_270_017.png" id="181_kf61k"]
+[ext_resource type="Texture2D" uid="uid://c50hsa84f6455" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Left/idle_270_019.png" id="182_8ncu5"]
+[ext_resource type="Texture2D" uid="uid://ychk5iyi1lpq" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Left/idle_270_021.png" id="183_tw0tl"]
+[ext_resource type="Texture2D" uid="uid://x4s3pc1kgox8" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Left/idle_270_023.png" id="184_62wd5"]
+[ext_resource type="Texture2D" uid="uid://bsdkxcysm8wdg" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Right/idle_90_001.png" id="185_eim8m"]
+[ext_resource type="Texture2D" uid="uid://5513gb6aickx" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Right/idle_90_003.png" id="186_qbt21"]
+[ext_resource type="Texture2D" uid="uid://5agkvclbvvpd" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Right/idle_90_005.png" id="187_0quwh"]
+[ext_resource type="Texture2D" uid="uid://cytgism31wksp" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Right/idle_90_007.png" id="188_x1xfo"]
+[ext_resource type="Texture2D" uid="uid://btsrodw15xtrw" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Right/idle_90_009.png" id="189_vgsck"]
+[ext_resource type="Texture2D" uid="uid://ba4lgooqqkda4" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Right/idle_90_011.png" id="190_pvw6a"]
+[ext_resource type="Texture2D" uid="uid://uivqgri77ee2" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Right/idle_90_013.png" id="191_8li6e"]
+[ext_resource type="Texture2D" uid="uid://ck3q4e451qkcc" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Right/idle_90_015.png" id="192_rexq5"]
+[ext_resource type="Texture2D" uid="uid://bbhxmpux4cdlv" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Right/idle_90_017.png" id="193_qp0w1"]
+[ext_resource type="Texture2D" uid="uid://ckvac50nje3tb" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Right/idle_90_019.png" id="194_s010s"]
+[ext_resource type="Texture2D" uid="uid://do42dibbfer0s" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Right/idle_90_021.png" id="195_5muo1"]
+[ext_resource type="Texture2D" uid="uid://7xc7edkup7mh" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Right/idle_90_023.png" id="196_mxo7d"]
+[ext_resource type="Texture2D" uid="uid://xibildvi8ids" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up/idle_180_001.png" id="197_imdgi"]
+[ext_resource type="Texture2D" uid="uid://c0m7wqb4yp17h" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up/idle_180_003.png" id="198_0bbgc"]
+[ext_resource type="Texture2D" uid="uid://bbiquexk2upyo" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up/idle_180_005.png" id="199_abeb0"]
+[ext_resource type="Texture2D" uid="uid://bfwa6x48w3e3h" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up/idle_180_007.png" id="200_t3ccc"]
+[ext_resource type="Texture2D" uid="uid://chna6n0xyny7p" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up/idle_180_009.png" id="201_6s60a"]
+[ext_resource type="Texture2D" uid="uid://dff6cie5wxjas" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up/idle_180_011.png" id="202_o44ke"]
+[ext_resource type="Texture2D" uid="uid://dov18d4aioxo6" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up/idle_180_013.png" id="203_mcw7o"]
+[ext_resource type="Texture2D" uid="uid://bt1oyylso64sc" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up/idle_180_015.png" id="204_cswq5"]
+[ext_resource type="Texture2D" uid="uid://cp6hhcdwxj3c8" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up/idle_180_017.png" id="205_mxouc"]
+[ext_resource type="Texture2D" uid="uid://dstcfixvwa6uq" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up/idle_180_019.png" id="206_b03gq"]
+[ext_resource type="Texture2D" uid="uid://dyatd4ndjup3x" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up/idle_180_021.png" id="207_8qsnq"]
+[ext_resource type="Texture2D" uid="uid://brnp28v0sal86" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up/idle_180_023.png" id="208_eqgjd"]
+[ext_resource type="Texture2D" uid="uid://bg1s457kslt0m" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Left/idle_225_001.png" id="209_mqw5b"]
+[ext_resource type="Texture2D" uid="uid://dbm6c3qq7y6i6" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Left/idle_225_003.png" id="210_6s1s7"]
+[ext_resource type="Texture2D" uid="uid://bcdkledniqlaa" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Left/idle_225_005.png" id="211_74y53"]
+[ext_resource type="Texture2D" uid="uid://dyamgs78vpy4u" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Left/idle_225_007.png" id="212_r83hk"]
+[ext_resource type="Texture2D" uid="uid://bepjx6trb5i2k" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Left/idle_225_009.png" id="213_11aid"]
+[ext_resource type="Texture2D" uid="uid://dqhes22bbpxvy" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Left/idle_225_011.png" id="214_slamd"]
+[ext_resource type="Texture2D" uid="uid://sbpf4bm3vkhf" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Left/idle_225_013.png" id="215_cgbbc"]
+[ext_resource type="Texture2D" uid="uid://bxlfmk2fhr36s" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Left/idle_225_015.png" id="216_bi8iw"]
+[ext_resource type="Texture2D" uid="uid://ckc3x4toekrxw" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Left/idle_225_017.png" id="217_pcp6s"]
+[ext_resource type="Texture2D" uid="uid://cbyndjh7gn0rw" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Left/idle_225_019.png" id="218_7ltdn"]
+[ext_resource type="Texture2D" uid="uid://dkuffjdhs6d4d" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Left/idle_225_021.png" id="219_x1n6w"]
+[ext_resource type="Texture2D" uid="uid://do0h0xylpq1qg" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Left/idle_225_023.png" id="220_jmbvi"]
+[ext_resource type="Texture2D" uid="uid://b1olspwvugxx4" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Right/idle_135_001.png" id="221_m855g"]
+[ext_resource type="Texture2D" uid="uid://jjh6j18ylx44" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Right/idle_135_003.png" id="222_4bfsq"]
+[ext_resource type="Texture2D" uid="uid://dewmm1r215q8o" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Right/idle_135_005.png" id="223_xe4xy"]
+[ext_resource type="Texture2D" uid="uid://7xdqgeyhex76" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Right/idle_135_007.png" id="224_tfggm"]
+[ext_resource type="Texture2D" uid="uid://brty1j1x3jjiq" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Right/idle_135_009.png" id="225_xjwiu"]
+[ext_resource type="Texture2D" uid="uid://3msmrexmp7yl" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Right/idle_135_011.png" id="226_mk1eu"]
+[ext_resource type="Texture2D" uid="uid://bu8ytwsgci3om" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Right/idle_135_013.png" id="227_b4uf0"]
+[ext_resource type="Texture2D" uid="uid://jy2hf7xfygku" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Right/idle_135_015.png" id="228_f2qv7"]
+[ext_resource type="Texture2D" uid="uid://dawatykax8qrg" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Right/idle_135_017.png" id="229_jacqk"]
+[ext_resource type="Texture2D" uid="uid://c3aphc685ck4y" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Right/idle_135_019.png" id="230_drbhc"]
+[ext_resource type="Texture2D" uid="uid://bcrf8kytc4fnc" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Right/idle_135_021.png" id="231_ltddu"]
+[ext_resource type="Texture2D" uid="uid://j5s8akgb4y5h" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/idle/Up_Right/idle_135_023.png" id="232_xvg4e"]
+[ext_resource type="Texture2D" uid="uid://ddnm5n1rdog6l" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down/run_0_001.png" id="233_naen0"]
+[ext_resource type="Texture2D" uid="uid://c1aunt8yngapk" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down/run_0_004.png" id="234_25d70"]
+[ext_resource type="Texture2D" uid="uid://gwfqnhddc6tk" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down/run_0_007.png" id="235_6huwp"]
+[ext_resource type="Texture2D" uid="uid://c3ej1m5t2r2cu" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down/run_0_010.png" id="236_ywrt2"]
+[ext_resource type="Texture2D" uid="uid://dtrfghh3ccuah" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down/run_0_013.png" id="237_oifj7"]
+[ext_resource type="Texture2D" uid="uid://y4hl08675uai" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down/run_0_016.png" id="238_m0oo8"]
+[ext_resource type="Texture2D" uid="uid://b1n3wkrqjf4rw" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down/run_0_019.png" id="239_iaquw"]
+[ext_resource type="Texture2D" uid="uid://bjribu20jfw06" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down/run_0_022.png" id="240_thotm"]
+[ext_resource type="Texture2D" uid="uid://xv82feue6y6o" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Left/run_315_001.png" id="241_bhs0n"]
+[ext_resource type="Texture2D" uid="uid://r7ekacafw5e0" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Left/run_315_004.png" id="242_umtg8"]
+[ext_resource type="Texture2D" uid="uid://jxlkklnoro80" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Left/run_315_007.png" id="243_51sjs"]
+[ext_resource type="Texture2D" uid="uid://hpnvumpfjg57" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Left/run_315_010.png" id="244_kbdyy"]
+[ext_resource type="Texture2D" uid="uid://cq1rvuyth51ab" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Left/run_315_013.png" id="245_dkwco"]
+[ext_resource type="Texture2D" uid="uid://dj17ckvfy3n5l" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Left/run_315_016.png" id="246_qfbxi"]
+[ext_resource type="Texture2D" uid="uid://btn3j4uaxgjjv" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Left/run_315_019.png" id="247_24u1o"]
+[ext_resource type="Texture2D" uid="uid://1abl6r7o65j3" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Left/run_315_022.png" id="248_84g5w"]
+[ext_resource type="Texture2D" uid="uid://c4ltvivo7s80o" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Right/run_45_001.png" id="249_dnipa"]
+[ext_resource type="Texture2D" uid="uid://b5k2lvggbtmqg" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Right/run_45_004.png" id="250_qbym2"]
+[ext_resource type="Texture2D" uid="uid://bynff0avdhyfg" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Right/run_45_007.png" id="251_s5sa6"]
+[ext_resource type="Texture2D" uid="uid://lsvwsyvxgnew" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Right/run_45_010.png" id="252_laerb"]
+[ext_resource type="Texture2D" uid="uid://m0carqb5bb4f" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Right/run_45_013.png" id="253_84830"]
+[ext_resource type="Texture2D" uid="uid://d3y52xnnknpg" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Right/run_45_016.png" id="254_x3bkb"]
+[ext_resource type="Texture2D" uid="uid://tqb4vdplbs76" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Right/run_45_019.png" id="255_fcj35"]
+[ext_resource type="Texture2D" uid="uid://bn6fw5xwe0634" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Down_Right/run_45_022.png" id="256_ofa7b"]
+[ext_resource type="Texture2D" uid="uid://yhjk2rve4h2p" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Left/run_270_001.png" id="257_arg7x"]
+[ext_resource type="Texture2D" uid="uid://b7qhgy8v1qwqx" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Left/run_270_004.png" id="258_ch851"]
+[ext_resource type="Texture2D" uid="uid://b5puj14rkkde3" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Left/run_270_007.png" id="259_7gnjk"]
+[ext_resource type="Texture2D" uid="uid://bkhdabloadcih" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Left/run_270_010.png" id="260_lp34u"]
+[ext_resource type="Texture2D" uid="uid://bjmopedpuji7k" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Left/run_270_013.png" id="261_btea1"]
+[ext_resource type="Texture2D" uid="uid://botednx3doa5o" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Left/run_270_016.png" id="262_vlcmt"]
+[ext_resource type="Texture2D" uid="uid://p0m2gj7k0p41" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Left/run_270_019.png" id="263_6qx44"]
+[ext_resource type="Texture2D" uid="uid://6wivnw0crwv3" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Left/run_270_022.png" id="264_sa50u"]
+[ext_resource type="Texture2D" uid="uid://o605e0hp21u6" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Right/run_90_001.png" id="265_fiaes"]
+[ext_resource type="Texture2D" uid="uid://ck8l6sm71wdhg" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Right/run_90_004.png" id="266_kqpyn"]
+[ext_resource type="Texture2D" uid="uid://bgamlkonkkot2" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Right/run_90_007.png" id="267_4r3a5"]
+[ext_resource type="Texture2D" uid="uid://umye8h7nqlla" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Right/run_90_010.png" id="268_sfdqc"]
+[ext_resource type="Texture2D" uid="uid://bir0aj6o82kv4" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Right/run_90_013.png" id="269_rga6w"]
+[ext_resource type="Texture2D" uid="uid://bxkewxl5gms0n" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Right/run_90_016.png" id="270_pr4ax"]
+[ext_resource type="Texture2D" uid="uid://s2y17qhq12yj" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Right/run_90_019.png" id="271_yu25t"]
+[ext_resource type="Texture2D" uid="uid://cimy6t0g36ymm" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Right/run_90_022.png" id="272_bh26i"]
+[ext_resource type="Texture2D" uid="uid://7y5n8u380aps" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up/run_180_001.png" id="273_bux7q"]
+[ext_resource type="Texture2D" uid="uid://td2l1wnddnfr" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up/run_180_004.png" id="274_s2qvk"]
+[ext_resource type="Texture2D" uid="uid://di5tm016qogm4" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up/run_180_007.png" id="275_vcfb5"]
+[ext_resource type="Texture2D" uid="uid://bvdwqsw7ucw5x" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up/run_180_010.png" id="276_hwky4"]
+[ext_resource type="Texture2D" uid="uid://b7qjtxdo8tgak" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up/run_180_013.png" id="277_auaj0"]
+[ext_resource type="Texture2D" uid="uid://ccjm07rl4qrp1" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up/run_180_016.png" id="278_cyhhj"]
+[ext_resource type="Texture2D" uid="uid://nxp162h17a4r" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up/run_180_019.png" id="279_ledfy"]
+[ext_resource type="Texture2D" uid="uid://cgkpqdvjd0v3n" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up/run_180_022.png" id="280_gtywj"]
+[ext_resource type="Texture2D" uid="uid://bvrivre8xx4tx" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Left/run_225_001.png" id="281_1bnkh"]
+[ext_resource type="Texture2D" uid="uid://70sjns2up8b1" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Left/run_225_004.png" id="282_ir0iv"]
+[ext_resource type="Texture2D" uid="uid://ci6ni5fue4yfh" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Left/run_225_007.png" id="283_d68l5"]
+[ext_resource type="Texture2D" uid="uid://2pjg1dorte7j" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Left/run_225_010.png" id="284_bon4o"]
+[ext_resource type="Texture2D" uid="uid://cl5f6dvi31l5l" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Left/run_225_013.png" id="285_alpjx"]
+[ext_resource type="Texture2D" uid="uid://ba3j8kp48j63u" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Left/run_225_016.png" id="286_qiann"]
+[ext_resource type="Texture2D" uid="uid://l6awfpx4blfm" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Left/run_225_019.png" id="287_ny2n3"]
+[ext_resource type="Texture2D" uid="uid://fyy07ymo2t2p" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Left/run_225_022.png" id="288_v7ubp"]
+[ext_resource type="Texture2D" uid="uid://bqircylqado7l" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Right/run_135_001.png" id="289_udre0"]
+[ext_resource type="Texture2D" uid="uid://b1npxgbw0lyi" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Right/run_135_004.png" id="290_vx6x0"]
+[ext_resource type="Texture2D" uid="uid://bi4qj0gxg34pk" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Right/run_135_007.png" id="291_d5l5m"]
+[ext_resource type="Texture2D" uid="uid://dslosg7b16tis" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Right/run_135_010.png" id="292_gxspv"]
+[ext_resource type="Texture2D" uid="uid://srucmtu3gm8p" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Right/run_135_013.png" id="293_8q28k"]
+[ext_resource type="Texture2D" uid="uid://c4ksf8bl5m4nx" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Right/run_135_016.png" id="294_laumk"]
+[ext_resource type="Texture2D" uid="uid://dedhadun8srfm" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Right/run_135_019.png" id="295_mpq62"]
+[ext_resource type="Texture2D" uid="uid://b4dju8icxyklp" path="res://Assets/Images/Player/Move Animations/diamond_armor_wood_sword/run/Up_Right/run_135_022.png" id="296_t7qbe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ddi15"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8ylr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_40wjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lsjmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3y48u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kpy7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jqhtw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dlrkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_f2odw")
+}],
+"loop": true,
+"name": &"Attack1_Down",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_o66hq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jl42n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7owkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_v6lrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2okws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_j8x6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_54skl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_62ix7")
+}],
+"loop": true,
+"name": &"Attack1_Down_Left",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_mfidp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ynq0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_uq008")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_piuqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_vdtpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xcfm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_kgjq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_5e13f")
+}],
+"loop": true,
+"name": &"Attack1_Down_Right",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_5emy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_kqyng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_427qa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_tgd86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_7mbn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_b8jxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ijypt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_nwi2g")
+}],
+"loop": true,
+"name": &"Attack1_Left",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_5n1ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_1xbsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_vko0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_32wal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_y2c5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_24kkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_j2opj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_mp143")
+}],
+"loop": true,
+"name": &"Attack1_Right",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_k5uiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_djfw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_kja63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ojx0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_80hxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_drmeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_j06ub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_fhujm")
+}],
+"loop": true,
+"name": &"Attack1_Up",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_o7xm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_u7v2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_t8q2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_ujki7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_7uoop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_1xlww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_5cbft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_lgmgv")
+}],
+"loop": true,
+"name": &"Attack1_Up_Left",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_0gi1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_2fm76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_rh2cl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_o007d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_hpoi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_nw53a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_1kdq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_8wbei")
+}],
+"loop": true,
+"name": &"Attack1_Up_Right",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65_j78sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_vi8h8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_pmxko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_tbkkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_otynj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_lv0ur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_06wl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_d2hj2")
+}],
+"loop": true,
+"name": &"Attack2_Down",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("73_y2d23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_8ksip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_ngbxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_7n15i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_khohr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_cxckb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_l3jv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_x3624")
+}],
+"loop": true,
+"name": &"Attack2_Down_Left",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("81_mq0eo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_g4mwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_hdq65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_wotq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_xm356")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_3shsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_bpygl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_r4wwl")
+}],
+"loop": true,
+"name": &"Attack2_Down_Right",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("89_b1sn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_k7wql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_vqf3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_bhmkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_oiaws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_1kh1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_tg55s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_n2f3s")
+}],
+"loop": true,
+"name": &"Attack2_Left",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("97_3gjye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_1nkqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_hgqm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_iv8bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_cl0mp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_ug8hl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_gpgf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_lvopq")
+}],
+"loop": true,
+"name": &"Attack2_Right",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("105_oomqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_g6tp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_tabh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_udn1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_rfld7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_ur1li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_okopx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_2boti")
+}],
+"loop": true,
+"name": &"Attack2_Up",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("113_ix53j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_its4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_ioy4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_j6fkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_si4k7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_utt4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_ykr0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_2pkfj")
+}],
+"loop": true,
+"name": &"Attack2_Up_Left",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("121_6cgm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_kog8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_vymph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_4ssux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_iyfpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_078jv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_b10k2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_3alhi")
+}],
+"loop": true,
+"name": &"Attack2_Up_Right",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("129_8mpx4")
+}],
+"loop": true,
+"name": &"Dash_Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("130_hoffw")
+}],
+"loop": true,
+"name": &"Dash_Down_Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("131_pm32v")
+}],
+"loop": true,
+"name": &"Dash_Down_Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("132_cwfof")
+}],
+"loop": true,
+"name": &"Dash_Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("133_wuaac")
+}],
+"loop": true,
+"name": &"Dash_Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("134_d3ss7")
+}],
+"loop": true,
+"name": &"Dash_Up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("135_hdsht")
+}],
+"loop": true,
+"name": &"Dash_Up_Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("136_p5f82")
+}],
+"loop": true,
+"name": &"Dash_Up_Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("137_n5dqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_2px76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_1x5rm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_n0q2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_enrun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_iuorj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_ki5vu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_oc56g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_8gggj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_hmvg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_76qg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_7ptok")
+}],
+"loop": true,
+"name": &"Idle_Down",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("149_2rxhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_w8bfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_17n2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_76lni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_gen25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_qsfp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_3e6qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_jlbb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_7jdd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_scw82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_6nsfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_in2lj")
+}],
+"loop": true,
+"name": &"Idle_Down_Left",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("161_nhs6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_wv4y7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_0sqow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_udr74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_7cx7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_a2uph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_l53xb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_kviwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_7r755")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_2sed7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_6lghr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_tqlex")
+}],
+"loop": true,
+"name": &"Idle_Down_Right",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("173_v21e6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_ff635")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_0eove")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_mmo6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_mjyae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_2dtnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_vmiwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_fftsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_kf61k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_8ncu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_tw0tl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_62wd5")
+}],
+"loop": true,
+"name": &"Idle_Left",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("185_eim8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_qbt21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_0quwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_x1xfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_vgsck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_pvw6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_8li6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_rexq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_qp0w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_s010s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_5muo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_mxo7d")
+}],
+"loop": true,
+"name": &"Idle_Right",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("197_imdgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_0bbgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_abeb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_t3ccc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_6s60a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_o44ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_mcw7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_cswq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_mxouc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("206_b03gq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_8qsnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_eqgjd")
+}],
+"loop": true,
+"name": &"Idle_Up",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("209_mqw5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_6s1s7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_74y53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_r83hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_11aid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_slamd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_cgbbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_bi8iw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_pcp6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_7ltdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_x1n6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_jmbvi")
+}],
+"loop": true,
+"name": &"Idle_Up_Left",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("221_m855g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_4bfsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_xe4xy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_tfggm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_xjwiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("226_mk1eu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_b4uf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_f2qv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_jacqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_drbhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_ltddu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_xvg4e")
+}],
+"loop": true,
+"name": &"Idle_Up_Right",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("233_naen0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_25d70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_6huwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_ywrt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_oifj7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_m0oo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_iaquw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_thotm")
+}],
+"loop": true,
+"name": &"Run_Down",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("241_bhs0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_umtg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_51sjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_kbdyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("245_dkwco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("246_qfbxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("247_24u1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("248_84g5w")
+}],
+"loop": true,
+"name": &"Run_Down_Left",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("249_dnipa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("250_qbym2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("251_s5sa6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("252_laerb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("253_84830")
+}, {
+"duration": 1.0,
+"texture": ExtResource("254_x3bkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("255_fcj35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("256_ofa7b")
+}],
+"loop": true,
+"name": &"Run_Down_Right",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("257_arg7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("258_ch851")
+}, {
+"duration": 1.0,
+"texture": ExtResource("259_7gnjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("260_lp34u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("261_btea1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("262_vlcmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("263_6qx44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("264_sa50u")
+}],
+"loop": true,
+"name": &"Run_Left",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("265_fiaes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("266_kqpyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("267_4r3a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("268_sfdqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("269_rga6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("270_pr4ax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("271_yu25t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("272_bh26i")
+}],
+"loop": true,
+"name": &"Run_Right",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("273_bux7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("274_s2qvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("275_vcfb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("276_hwky4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("277_auaj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("278_cyhhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("279_ledfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("280_gtywj")
+}],
+"loop": true,
+"name": &"Run_Up",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("281_1bnkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("282_ir0iv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("283_d68l5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("284_bon4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("285_alpjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("286_qiann")
+}, {
+"duration": 1.0,
+"texture": ExtResource("287_ny2n3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("288_v7ubp")
+}],
+"loop": true,
+"name": &"Run_Up_Left",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("289_udre0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("290_vx6x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("291_d5l5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("292_gxspv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("293_8q28k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("294_laumk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("295_mpq62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("296_t7qbe")
+}],
+"loop": true,
+"name": &"Run_Up_Right",
+"speed": 12.0
+}]
+
+[node name="Animation" type="AnimatedSprite2D"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"

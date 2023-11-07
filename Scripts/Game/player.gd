@@ -2,6 +2,8 @@ extends Node2D
 
 var dead = false
 
+var fx_Attack2
+
 ##Stats
 var maxHp=99999
 var hp = maxHp
@@ -67,8 +69,10 @@ var animAttacking=false
 
 func _ready():
 	Global.player = self
+	fx_Attack2 = $VFX_attack2
+	fx_Attack2.set_visible(false)
 
-func _process(__delta):
+func _process(_delta):
 	if (dead):
 		return
 	
@@ -77,13 +81,15 @@ func _process(__delta):
 		dead=true
 		restartGame()
 		return
-
+	
 	animationController()
-	commandController()	
+	commandController()
 	getCloserQuadrant()
 	
 	mining()
 	feedback()
+	
+	
 	
 	#contruction()
 
@@ -91,47 +97,56 @@ func restartGame():
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/Fatality.tscn")
 	
 func animationController():
-	if (dashing or animAttacking):
+	if (dashing):
 		return
+	
+	if (animAttacking):
+		if $Animation.frame>3 and !permissions[0]:
+			animAttacking = true
+		
+		return
+	
+	
 	if ($CutAnimation.frame==6):
 		$CutAnimation.frame=0
 		$CutAnimation.stop()
+	
 	if Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Right"):
-		playAnimation ("Run")
+		playAnimation ("Run", $Animation)
 	elif Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Left"):
-		playAnimation ("Run")
+		playAnimation ("Run", $Animation)
 	elif Input.is_action_pressed("Move_Up") and Input.is_action_pressed("Move_Right"):
-		playAnimation ("Run")
+		playAnimation ("Run", $Animation)
 	elif Input.is_action_pressed("Move_Up") and Input.is_action_pressed("Move_Left"):
-		playAnimation ("Run")
+		playAnimation ("Run", $Animation)
 	elif Input.is_action_pressed("Move_Down"):
-		playAnimation ("Run")
+		playAnimation ("Run", $Animation)
 	elif Input.is_action_pressed("Move_Up"):
-		playAnimation ("Run")
+		playAnimation ("Run", $Animation)
 	elif Input.is_action_pressed("Move_Right"):
-		playAnimation ("Run")
+		playAnimation ("Run", $Animation)
 	elif Input.is_action_pressed("Move_Left"):
-		playAnimation ("Run")
+		playAnimation ("Run", $Animation)
 	else:
-		playAnimation ("Idle")
+		playAnimation ("Idle", $Animation)
 		
-func playAnimation (animName):
+func playAnimation (animName, animNode):
 	if lastMovement=="S":
-		$Animation.play(animName+"_Down")
+		animNode.play(animName+"_Down")
 	elif lastMovement=="SE":
-		$Animation.play(animName+"_Down_Right")
+		animNode.play(animName+"_Down_Right")
 	elif lastMovement=="SW":
-		$Animation.play(animName+"_Down_Left")
+		animNode.play(animName+"_Down_Left")
 	elif lastMovement=="N":
-		$Animation.play(animName+"_Up")
+		animNode.play(animName+"_Up")
 	elif lastMovement=="NE":
-		$Animation.play(animName+"_Up_Right")
+		animNode.play(animName+"_Up_Right")
 	elif lastMovement=="NW":
-		$Animation.play(animName+"_Up_Left")
+		animNode.play(animName+"_Up_Left")
 	elif lastMovement=="E":
-		$Animation.play(animName+"_Right")
+		animNode.play(animName+"_Right")
 	elif lastMovement=="W":
-		$Animation.play(animName+"_Left")
+		animNode.play(animName+"_Left")
 	
 	if (animName=="Run"):
 		$Animation.speed_scale=move_Speed/5
@@ -156,7 +171,7 @@ func moveController():
 	var speedModifier=1
 	if Input.is_action_pressed("Move_Down") or Input.is_action_pressed("Move_Up"):
 		if Input.is_action_pressed("Move_Right") or Input.is_action_pressed("Move_Left"):
-			speedModifier=1/(2**0.5)			
+			speedModifier=1/(2**0.5)
 	
 	if Input.is_action_pressed("Move_Down"):
 		#position.y+=move_Speed*speedModifier
@@ -205,7 +220,24 @@ func tryToMove(speedX,speedY):
 		return false
 		
 func lastMoveController():
-
+	if Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Right"):
+		lastMovement="SE"
+	elif Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Left"):
+		lastMovement="SW"
+	elif Input.is_action_pressed("Move_Up") and Input.is_action_pressed("Move_Right"):
+		lastMovement="NE"
+	elif Input.is_action_pressed("Move_Up") and Input.is_action_pressed("Move_Left"):
+		lastMovement="NW"
+	elif Input.is_action_pressed("Move_Down"):
+		lastMovement="S"
+	elif Input.is_action_pressed("Move_Up"):
+		lastMovement="N"
+	elif Input.is_action_pressed("Move_Right"):
+		lastMovement="E"
+	elif Input.is_action_pressed("Move_Left"):
+		lastMovement="W"
+	
+	"""
 	if Input.is_action_pressed("Move_Down"):
 		lastMovement="S"
 		if Input.is_action_pressed("Move_Right"):
@@ -222,6 +254,8 @@ func lastMoveController():
 		lastMovement="E"
 	elif Input.is_action_pressed("Move_Left"):
 		lastMovement="W"
+		"""
+	
 
    
 func enableAttackUse(classChild):
@@ -237,11 +271,11 @@ func attack1Controller():
 		attackInstance.global_position=global_position
 		attackInstance.direction=lastMovement
 		
+		playAnimation ("Attack1" , $Animation)
 		animAttacking=true
-		playAnimation ("Attack1")
 		$Animation.speed_scale=attack_Speed
-		
-		
+	
+
 func creatAttackInstance(classChild):
 	##Criando uma instancia do tipo do ataque da classe
 	var attackInstance
@@ -275,6 +309,14 @@ func attack2Controller():
 		attackInstance.global_position=global_position
 		attackInstance.direction=lastMovement
 		
+		playAnimation ("Attack2", $Animation)
+		animAttacking=true
+		$Animation.speed_scale=attack_Speed
+		
+		fx_Attack2.set_visible(true)
+		playAnimation("Normal", fx_Attack2)
+		
+		
 func turretController():
 	var classChild=2	
 	if (Input.is_action_just_pressed("Turret")):
@@ -286,10 +328,11 @@ func turretController():
 func dashController():
 	var classChild=3	
 	if (Input.is_action_just_pressed("Dash") and permissions[classChild]):
-		print("Dash")
+		#print("Dash")
 		var attackInstance = creatAttackInstance(classChild)
 		attackInstance.direction= lastMovement
 		add_child(attackInstance)
+		playAnimation("Dash", $Animation)
 		enableDisableAnimation()
 		
 func enableDisableAnimation():
@@ -401,3 +444,10 @@ func _on_timer_timeout():
 func _on_animation_animation_looped():
 	if (animAttacking):
 		animAttacking=false
+
+
+
+func _on_vfx_attack_2_animation_looped():
+	if (animAttacking):
+		animAttacking=false
+		fx_Attack2.set_visible(false)
