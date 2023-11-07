@@ -1,8 +1,33 @@
-[gd_scene load_steps=4 format=3 uid="uid://tifvlyj5mymv"]
+[gd_scene load_steps=10 format=3 uid="uid://tifvlyj5mymv"]
 
 [ext_resource type="Script" path="res://Scripts/MainScenes/Loading.gd" id="1_7bt5c"]
-[ext_resource type="FontFile" uid="uid://duy38o6o71nij" path="res://Assets/Fonts/Kurland.otf" id="2_lrpxh"]
+[ext_resource type="Texture2D" uid="uid://ck3g1itamcpq4" path="res://Assets/Images/HUD/Menu/Loading/Loading.png" id="2_2ynmj"]
 [ext_resource type="AudioStream" uid="uid://b82dirn1fyr7h" path="res://Assets/Sounds/Loading.wav" id="3_0s8mq"]
+[ext_resource type="Texture2D" uid="uid://0xplsm2efhqu" path="res://Assets/Images/HUD/Menu/Loading/LoadingTextFrame1.png" id="3_c1gvq"]
+[ext_resource type="Texture2D" uid="uid://dv44af57nvbk3" path="res://Assets/Images/HUD/Menu/Loading/LoadingTextFrame2.png" id="4_jbf0k"]
+[ext_resource type="Texture2D" uid="uid://c1ay2fwsey64i" path="res://Assets/Images/HUD/Menu/Loading/LoadingTextFrame3.png" id="5_ohafq"]
+[ext_resource type="Texture2D" uid="uid://cag5e2ahd8xse" path="res://Assets/Images/HUD/Menu/Loading/LoadingTextFrame4.png" id="6_u33cv"]
+[ext_resource type="Texture2D" uid="uid://c0a2sh2hav88b" path="res://Assets/Images/HUD/Menu/TelaInicial/Logo.png" id="8_c2pum"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_devv5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_c1gvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jbf0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ohafq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u33cv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Loading" type="Node2D"]
 script = ExtResource("1_7bt5c")
@@ -12,16 +37,23 @@ offset_right = 1027.0
 offset_bottom = 603.0
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
-offset_left = 377.0
-offset_top = 232.0
-offset_right = 676.0
-offset_bottom = 320.0
-theme_override_fonts/font = ExtResource("2_lrpxh")
-theme_override_font_sizes/font_size = 80
-text = "Loading..."
+[node name="Loading2" type="Sprite2D" parent="."]
+position = Vector2(513.5, 303)
+scale = Vector2(0.536749, 0.518205)
+texture = ExtResource("2_2ynmj")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Musica" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_0s8mq")
 volume_db = -10.16
 autoplay = true
+
+[node name="Loading" type="AnimatedSprite2D" parent="."]
+position = Vector2(961, 581)
+scale = Vector2(0.38755, 0.357143)
+sprite_frames = SubResource("SpriteFrames_devv5")
+frame_progress = 0.0996903
+speed_scale = 0.5
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(737, 275)
+texture = ExtResource("8_c2pum")

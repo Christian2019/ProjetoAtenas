@@ -8,6 +8,7 @@ func _process(delta):
 		if Input.is_action_just_pressed("Select"):
 			get_tree().paused = true
 			Global.TempleScreen.visible=true
+			Global.TempleScreen.get_node("BG/SHOP").scrollsSelect()
 			
 	
 

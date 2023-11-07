@@ -3,8 +3,13 @@ extends Node2D
 
 func _ready():
 	Global.Game = self
-
-
+	$SoundController/AOEMusic.volume_db = OptionsController.MasterVolume + OptionsController.MusicVolume
+	$SoundController/EliteMusic.volume_db = OptionsController.MasterVolume + OptionsController.MusicVolume
+	$SoundController/Dash.volume_db = OptionsController.MasterVolume
+	$SoundController/Dracma/Sound.volume_db = OptionsController.MasterVolume
+	$SoundController/Dracma/Sound2.volume_db = OptionsController.MasterVolume
+	$SoundController/Dracma/Sound3.volume_db = OptionsController.MasterVolume
+	$SoundController/Dracma/Sound4.volume_db = OptionsController.MasterVolume
 func _process(_delta):
 
 	if (Input.is_action_just_pressed("zoomOut")):

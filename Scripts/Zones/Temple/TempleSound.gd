@@ -8,6 +8,9 @@ var musicSelected=0
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	$AudioStreamPlayer.volume_db = OptionsController.MasterVolume + OptionsController.MusicVolume
+	$AudioStreamPlayer2.volume_db = OptionsController.MasterVolume + OptionsController.MusicVolume
+	$AudioStreamPlayer3.volume_db = OptionsController.MasterVolume + OptionsController.MusicVolume
 	for i in range(0,get_child_count(),1):
 		soundsPosition.append(0.0)
 

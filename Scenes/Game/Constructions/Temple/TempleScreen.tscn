@@ -1,16 +1,21 @@
-[gd_scene load_steps=12 format=3 uid="uid://bqduy4u8regjo"]
+[gd_scene load_steps=17 format=3 uid="uid://bqduy4u8regjo"]
 
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/MainPage.gd" id="1_n2wv5"]
 [ext_resource type="Texture2D" uid="uid://dlwvyo6ejssc" path="res://Assets/Images/Resources/gold.png" id="2_2mha2"]
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/ShopScript.gd" id="2_m5fe6"]
+[ext_resource type="Texture2D" uid="uid://d3o00kxuo4h22" path="res://Assets/Images/HUD/Menu/Loja/ScrollsBG.png" id="3_0xrjq"]
 [ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="3_yti6q"]
 [ext_resource type="Texture2D" uid="uid://ywre30ix5f7t" path="res://Assets/Images/Resources/wood.png" id="4_rq8w3"]
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/PersonagemLoja.gd" id="5_1cq4t"]
+[ext_resource type="Texture2D" uid="uid://cv1m856of8ntd" path="res://Assets/Images/HUD/Menu/Loja/GoldPlace.png" id="5_uoj13"]
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/Mineração.gd" id="6_b0i47"]
+[ext_resource type="Texture2D" uid="uid://costnafwkrulb" path="res://Assets/Images/HUD/Menu/Loja/SilverPlace.png" id="6_m6do7"]
 [ext_resource type="PackedScene" uid="uid://12buwcnhifsh" path="res://Scenes/Game/Constructions/Temple/OpcaoUpgrade.tscn" id="7_ydes4"]
 [ext_resource type="Texture2D" uid="uid://d0xhqa10j30ok" path="res://icon.png" id="8_l0soo"]
 [ext_resource type="Texture2D" uid="uid://cg4c8qydgkpag" path="res://Assets/Images/HUD/hearth2.png" id="10_g6gdm"]
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/Defender Point.gd" id="10_imkf7"]
+[ext_resource type="Texture2D" uid="uid://c8uedu3u1iprj" path="res://Assets/Images/HUD/Menu/Loja/BarraMenu.png" id="12_wrag8"]
+[ext_resource type="FontFile" uid="uid://by6650mb11t63" path="res://Assets/Images/HUD/Menu/Loja/Zeus-Land.otf" id="13_joos0"]
 
 [node name="TempleScreen" type="Node2D"]
 script = ExtResource("1_n2wv5")
@@ -21,64 +26,6 @@ offset_top = -2.0
 offset_right = 1029.0
 offset_bottom = 604.0
 color = Color(0.337255, 0.337255, 0.337255, 1)
-
-[node name="MenuPrincipal" type="ColorRect" parent="BG"]
-layout_mode = 0
-offset_left = -2.0
-offset_top = -3.0
-offset_right = 1034.0
-offset_bottom = 40.0
-color = Color(0.592157, 0.592157, 0.592157, 1)
-
-[node name="Labels" type="Node2D" parent="BG/MenuPrincipal"]
-
-[node name="Ouro" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 790.0
-offset_top = 10.0
-offset_right = 830.0
-offset_bottom = 33.0
-
-[node name="Wood" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 867.0
-offset_top = 10.0
-offset_right = 907.0
-offset_bottom = 33.0
-
-[node name="Stone" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 955.0
-offset_top = 10.0
-offset_right = 995.0
-offset_bottom = 33.0
-
-[node name="Abas" type="Node2D" parent="BG/MenuPrincipal"]
-
-[node name="Shop" type="Button" parent="BG/MenuPrincipal/Abas"]
-offset_left = 21.0
-offset_top = 7.0
-offset_right = 103.0
-offset_bottom = 38.0
-text = "Shop"
-
-[node name="Mineração" type="Button" parent="BG/MenuPrincipal/Abas"]
-offset_left = 108.0
-offset_top = 7.0
-offset_right = 198.0
-offset_bottom = 38.0
-text = "Mineração"
-
-[node name="Personagem" type="Button" parent="BG/MenuPrincipal/Abas"]
-offset_left = 202.0
-offset_top = 7.0
-offset_right = 307.0
-offset_bottom = 38.0
-text = "Personagem"
-
-[node name="Defender Point" type="Button" parent="BG/MenuPrincipal/Abas"]
-offset_left = 311.0
-offset_top = 7.0
-offset_right = 436.0
-offset_bottom = 38.0
-text = "Defender Point"
 
 [node name="SHOP" type="Node2D" parent="BG"]
 position = Vector2(1, 0)
@@ -91,53 +38,62 @@ offset_right = 466.0
 offset_bottom = 606.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
 
+[node name="ScrollsBg" type="Sprite2D" parent="BG/SHOP"]
+position = Vector2(235.5, 321)
+scale = Vector2(0.748777, 0.501786)
+texture = ExtResource("3_0xrjq")
+
 [node name="ITEMS" type="ColorRect" parent="BG/SHOP"]
-offset_left = 878.0
+offset_left = 887.0
 offset_top = 203.0
 offset_right = 1033.0
 offset_bottom = 605.0
-color = Color(0.486275, 0.462745, 0.466667, 1)
+color = Color(0.640625, 0.640625, 0.640625, 1)
 
 [node name="Title" type="Label" parent="BG/SHOP/ITEMS"]
 layout_mode = 0
-offset_left = 49.0
-offset_right = 93.0
-offset_bottom = 26.0
+offset_left = 62.0
+offset_top = 3.0
+offset_right = 106.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("13_joos0")
 text = "Items"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="BG/SHOP/ITEMS"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 36.0
-offset_right = 144.0
-offset_bottom = 393.0
+offset_left = 18.0
+offset_top = 35.0
+offset_right = 149.0
+offset_bottom = 392.0
 
 [node name="Itens" type="GridContainer" parent="BG/SHOP/ITEMS/ScrollContainer"]
 layout_mode = 2
 columns = 2
 
 [node name="STATUS" type="ColorRect" parent="BG/SHOP"]
-offset_left = 878.0
+offset_left = 882.0
 offset_top = 41.0
-offset_right = 1033.0
+offset_right = 1034.0
 offset_bottom = 203.0
 color = Color(0.486275, 0.462745, 0.466667, 1)
 
 [node name="Title" type="Label" parent="BG/SHOP/STATUS"]
 layout_mode = 0
-offset_left = 73.0
-offset_top = -1.0
-offset_right = 113.0
-offset_bottom = 25.0
-text = "Stats"
+offset_left = 65.0
+offset_top = 5.0
+offset_right = 105.0
+offset_bottom = 31.0
+rotation = 0.00316421
+theme_override_fonts/font = ExtResource("13_joos0")
+text = "stats"
 
 [node name="Label" type="Label" parent="BG/SHOP/STATUS"]
 layout_mode = 0
-offset_left = 5.0
+offset_left = 13.0
 offset_top = 34.0
-offset_right = 170.0
+offset_right = 156.0
 offset_bottom = 154.0
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 10
 text = "Max HP:                            0
 Damage:                           0
 Speed:                               0
@@ -148,18 +104,18 @@ Range:                              0"
 [node name="MINHAS_COISAS___TROCA" type="Node2D" parent="BG/SHOP"]
 
 [node name="MINHASCOISAS" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
-offset_left = 468.0
+offset_left = 465.0
 offset_top = 43.0
-offset_right = 877.0
+offset_right = 892.0
 offset_bottom = 606.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
 
 [node name="Attack_1" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
 layout_mode = 2
-offset_left = 4.0
-offset_top = 14.0
-offset_right = 67.0
-offset_bottom = 40.0
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 70.0
+offset_bottom = 29.0
 text = "Attack 1"
 
 [node name="Attack1" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
@@ -174,36 +130,56 @@ columns = 3
 [node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Ativo"]
+position = Vector2(44.5, 29.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("5_uoj13")
+
 [node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Ativo"]
 layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
-color = Color(0.709804, 0.709804, 0.709804, 1)
+offset_left = -13.0
+offset_top = -5.0
+offset_right = 102.0
+offset_bottom = 64.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
 
 [node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo1"]
+position = Vector2(50.5, 29.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
 [node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo1"]
-layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 108.0
+offset_bottom = 64.0
 color = Color(0.415686, 0.415686, 0.415686, 1)
 
 [node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo2"]
+position = Vector2(56.5, 29.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
 [node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo2"]
 layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
+offset_left = -1.0
+offset_top = -5.0
+offset_right = 114.0
+offset_bottom = 64.0
 color = Color(0.415686, 0.415686, 0.415686, 1)
 
 [node name="Attack_2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
 layout_mode = 2
-offset_left = 3.0
-offset_top = 99.0
-offset_right = 66.0
-offset_bottom = 125.0
+offset_left = 7.0
+offset_top = 118.0
+offset_right = 70.0
+offset_bottom = 144.0
 text = "Attack 2"
 
 [node name="Attack2" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
@@ -218,36 +194,55 @@ columns = 3
 [node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Ativo"]
+position = Vector2(44.5, 57.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("5_uoj13")
+
 [node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Ativo"]
-layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
-color = Color(0.709804, 0.709804, 0.709804, 1)
+offset_left = -13.0
+offset_top = 23.0
+offset_right = 102.0
+offset_bottom = 92.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
 
 [node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo1"]
+position = Vector2(50.5, 57.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
 [node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo1"]
 layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
+offset_left = -7.0
+offset_top = 23.0
+offset_right = 108.0
+offset_bottom = 92.0
 color = Color(0.415686, 0.415686, 0.415686, 1)
 
 [node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo2"]
+position = Vector2(56.5, 57.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
 [node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo2"]
-layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
+offset_left = -1.0
+offset_top = 23.0
+offset_right = 114.0
+offset_bottom = 92.0
 color = Color(0.415686, 0.415686, 0.415686, 1)
 
 [node name="Torreta2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 182.0
-offset_right = 66.0
-offset_bottom = 208.0
+offset_left = 6.0
+offset_top = 226.0
+offset_right = 69.0
+offset_bottom = 252.0
 text = "Torreta"
 
 [node name="Torreta" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
@@ -262,36 +257,55 @@ columns = 3
 [node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Ativo"]
+position = Vector2(44.5, 77.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("5_uoj13")
+
 [node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Ativo"]
-layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
-color = Color(0.709804, 0.709804, 0.709804, 1)
+offset_left = -13.0
+offset_top = 44.0
+offset_right = 102.0
+offset_bottom = 111.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
 
 [node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo1"]
+position = Vector2(50.5, 77.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
 [node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo1"]
 layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
+offset_left = -7.0
+offset_top = 43.0
+offset_right = 108.0
+offset_bottom = 112.0
 color = Color(0.415686, 0.415686, 0.415686, 1)
 
 [node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo2"]
+position = Vector2(56.5, 77.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
 [node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo2"]
-layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
+offset_left = -1.0
+offset_top = 43.0
+offset_right = 114.0
+offset_bottom = 112.0
 color = Color(0.415686, 0.415686, 0.415686, 1)
 
 [node name="Dash2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 282.0
-offset_right = 45.0
-offset_bottom = 308.0
+offset_left = 9.0
+offset_top = 326.0
+offset_right = 48.0
+offset_bottom = 352.0
 text = "Dash"
 
 [node name="Dash" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
@@ -306,36 +320,55 @@ columns = 3
 [node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Ativo"]
+position = Vector2(44.5, -16.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("5_uoj13")
+
 [node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Ativo"]
-layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
-color = Color(0.709804, 0.709804, 0.709804, 1)
+offset_left = -13.0
+offset_top = -50.0
+offset_right = 102.0
+offset_bottom = 17.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
 
 [node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Passivo1"]
+position = Vector2(51.5, -16.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
 [node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Passivo1"]
 layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
+offset_left = -6.0
+offset_top = -51.0
+offset_right = 109.0
+offset_bottom = 18.0
 color = Color(0.415686, 0.415686, 0.415686, 1)
 
 [node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Passivo2"]
+position = Vector2(57.5, -16.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
 [node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Passivo2"]
 layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
+offset_top = -51.0
+offset_right = 115.0
+offset_bottom = 17.0
 color = Color(0.415686, 0.415686, 0.415686, 1)
 
 [node name="Ultimate2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
 layout_mode = 0
 offset_left = 4.0
-offset_top = 381.0
+offset_top = 425.0
 offset_right = 72.0
-offset_bottom = 407.0
+offset_bottom = 451.0
 text = "Ultimate"
 
 [node name="Ultimate" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
@@ -350,28 +383,48 @@ columns = 3
 [node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Ativo"]
+position = Vector2(45.5, 178.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("5_uoj13")
+
 [node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Ativo"]
-layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
-color = Color(0.709804, 0.709804, 0.709804, 1)
+offset_left = -12.0
+offset_top = 145.0
+offset_right = 103.0
+offset_bottom = 212.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
 
 [node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Passivo1"]
+position = Vector2(52.5, 178.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
 [node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Passivo1"]
 layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
+offset_left = -5.0
+offset_top = 145.0
+offset_right = 110.0
+offset_bottom = 212.0
 color = Color(0.415686, 0.415686, 0.415686, 1)
 
 [node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate"]
 layout_mode = 2
 
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Passivo2"]
+position = Vector2(58.5, 178.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
 [node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Passivo2"]
 layout_mode = 0
-offset_right = 100.0
-offset_bottom = 60.0
+offset_left = 1.0
+offset_top = 145.0
+offset_right = 116.0
+offset_bottom = 212.0
 color = Color(0.415686, 0.415686, 0.415686, 1)
 
 [node name="TROCA" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
@@ -480,14 +533,24 @@ offset_left = 471.0
 offset_top = 572.0
 offset_right = 627.0
 offset_bottom = 603.0
+theme_override_colors/font_color = Color(0.410156, 0.410156, 0.410156, 1)
+theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("13_joos0")
+theme_override_font_sizes/font_size = 20
 text = "Meus Pergaminhos"
+flat = true
 
 [node name="Troca" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
-offset_left = 629.0
+offset_left = 639.0
 offset_top = 572.0
-offset_right = 719.0
+offset_right = 693.0
 offset_bottom = 603.0
+theme_override_colors/font_color = Color(0.410156, 0.410156, 0.410156, 1)
+theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("13_joos0")
+theme_override_font_sizes/font_size = 20
 text = "Troca"
+flat = true
 
 [node name="Botoes" type="Node2D" parent="BG/SHOP"]
 
@@ -1000,10 +1063,93 @@ valor = 5
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
 
-[connection signal="pressed" from="BG/MenuPrincipal/Abas/Shop" to="." method="_on_shop_pressed"]
-[connection signal="pressed" from="BG/MenuPrincipal/Abas/Mineração" to="." method="_on_mineração_pressed"]
-[connection signal="pressed" from="BG/MenuPrincipal/Abas/Personagem" to="." method="_on_personagem_pressed"]
-[connection signal="pressed" from="BG/MenuPrincipal/Abas/Defender Point" to="." method="_on_defender_point_pressed"]
+[node name="MenuPrincipal" type="Sprite2D" parent="BG"]
+position = Vector2(519.5, 24.5)
+scale = Vector2(0.531574, 0.633803)
+texture = ExtResource("12_wrag8")
+
+[node name="Labels" type="Node2D" parent="BG/MenuPrincipal"]
+position = Vector2(-984.849, -43.3889)
+scale = Vector2(1.88488, 1.57778)
+
+[node name="Ouro" type="Label" parent="BG/MenuPrincipal/Labels"]
+offset_left = 824.932
+offset_top = 10.0
+offset_right = 864.932
+offset_bottom = 33.0
+
+[node name="Wood" type="Label" parent="BG/MenuPrincipal/Labels"]
+offset_left = 901.932
+offset_top = 10.0
+offset_right = 941.932
+offset_bottom = 33.0
+
+[node name="Stone" type="Label" parent="BG/MenuPrincipal/Labels"]
+offset_left = 989.932
+offset_top = 10.0
+offset_right = 1029.93
+offset_bottom = 33.0
+
+[node name="Abas" type="Node2D" parent="BG/MenuPrincipal"]
+position = Vector2(-984.849, -43.3889)
+scale = Vector2(1.88488, 1.57778)
+
+[node name="Shop" type="Button" parent="BG/MenuPrincipal/Abas"]
+offset_left = 302.43
+offset_top = 9.0
+offset_right = 384.43
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
+theme_override_colors/font_pressed_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
+theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("13_joos0")
+theme_override_font_sizes/font_size = 25
+text = "shop"
+flat = true
+
+[node name="Mineração" type="Button" parent="BG/MenuPrincipal/Abas"]
+offset_left = 389.43
+offset_top = 9.0
+offset_right = 502.43
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
+theme_override_colors/font_pressed_color = Color(0.227451, 0.227451, 0.227451, 1)
+theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
+theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("13_joos0")
+theme_override_font_sizes/font_size = 25
+text = "Mineração"
+flat = true
+
+[node name="Personagem" type="Button" parent="BG/MenuPrincipal/Abas"]
+offset_left = 507.03
+offset_top = 9.0
+offset_right = 640.03
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
+theme_override_colors/font_pressed_color = Color(0.227451, 0.227451, 0.227451, 1)
+theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
+theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("13_joos0")
+theme_override_font_sizes/font_size = 25
+text = "Personagem"
+flat = true
+
+[node name="Defender Point" type="Button" parent="BG/MenuPrincipal/Abas"]
+offset_left = 645.76
+offset_top = 9.0
+offset_right = 803.76
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
+theme_override_colors/font_pressed_color = Color(0.227451, 0.227451, 0.227451, 1)
+theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
+theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("13_joos0")
+theme_override_font_sizes/font_size = 25
+text = "Defender Point"
+flat = true
+
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade/Trade20Stone" to="BG/SHOP" method="_on_trade_20_stone_pressed"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade/Trade100Wood" to="BG/SHOP" method="_on_trade_100_wood_pressed"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Stone Trade/Trade1Gold" to="BG/SHOP" method="_on_trade_1_gold_pressed"]
@@ -1020,3 +1166,7 @@ textura_disable = ExtResource("10_g6gdm")
 [connection signal="pressed" from="BG/SHOP/Warning/Background/NOPE" to="BG/SHOP" method="_on_nope_pressed"]
 [connection signal="pressed" from="BG/Personagem/Warning2/Background/YES" to="BG/Personagem" method="_on_yes_pressed"]
 [connection signal="pressed" from="BG/Personagem/Warning2/Background/NOPE" to="BG/Personagem" method="_on_nope_pressed"]
+[connection signal="pressed" from="BG/MenuPrincipal/Abas/Shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="BG/MenuPrincipal/Abas/Mineração" to="." method="_on_mineração_pressed"]
+[connection signal="pressed" from="BG/MenuPrincipal/Abas/Personagem" to="." method="_on_personagem_pressed"]
+[connection signal="pressed" from="BG/MenuPrincipal/Abas/Defender Point" to="." method="_on_defender_point_pressed"]

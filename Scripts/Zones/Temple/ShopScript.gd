@@ -34,8 +34,6 @@ func _ready():
 	torreta_itens = get_node("MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta").get_children()
 	dash_itens = get_node("MINHAS_COISAS___TROCA/MINHASCOISAS/Dash").get_children()
 	ultimate_itens = get_node("MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate").get_children()
-	
-	scrollsSelect()
  
 #Adiciono aqui um valor aleatorio (Originalmente, adicionar a um objeto) 
 func scrollsSelect():
@@ -115,40 +113,106 @@ func addItemToAttack1(position):
 	attack1_itens[position].add_child(TextureRect.new())
 	var last_child = attack1_itens[position].get_child(attack1_itens[position].get_child_count()-1)
 	last_child.set_name("Item1")
-	last_child.scale.x=0.15
-	last_child.scale.y=0.15
+	match(position):
+		0:
+			last_child.position.x = -10
+			last_child.position.y=-12
+			pass
+		1:
+			last_child.position.x = -5
+			last_child.position.y=-12
+			pass
+		2:
+			last_child.position.x = 0
+			last_child.position.y=-12
+			pass
+	last_child.scale.x=0.14
+	last_child.scale.y=0.14
 	last_child.texture=lastTextureClicked
 
 func addItemAttack2(position): 
 	attack2_itens[position].add_child(TextureRect.new())
 	var last_child = attack2_itens[position].get_child(attack2_itens[position].get_child_count()-1)
-	last_child.set_name("Item1")
-	last_child.scale.x=0.15
-	last_child.scale.y=0.15
+	last_child.set_name("Item1") 
+	
+	match(position):
+		0:
+			last_child.position.x = -10
+			last_child.position.y = 15
+			pass
+		1:
+			last_child.position.x = -5
+			last_child.position.y = 15
+			pass
+		2:
+			last_child.position.x = 0
+			last_child.position.y = 15
+			pass
+	last_child.scale.x=0.14
+	last_child.scale.y=0.14
 	last_child.texture=lastTextureClicked
 
 func addItemToTorreta(position): 
 	torreta_itens[position].add_child(TextureRect.new())
 	var last_child = torreta_itens[position].get_child(torreta_itens[position].get_child_count()-1)
 	last_child.set_name("Item1")
-	last_child.scale.x=0.15
-	last_child.scale.y=0.15
+	match(position):
+		0:
+			last_child.position.x = -10
+			last_child.position.y = 35
+			pass
+		1:
+			last_child.position.x = -5
+			last_child.position.y = 35
+			pass
+		2:
+			last_child.position.x = 0
+			last_child.position.y = 35
+			pass
+	last_child.scale.x=0.14
+	last_child.scale.y=0.14
 	last_child.texture=lastTextureClicked 
 
 func addItemToDash(position): 
 	dash_itens[position].add_child(TextureRect.new())
 	var last_child = dash_itens[position].get_child(dash_itens[position].get_child_count()-1)
 	last_child.set_name("Item1")
-	last_child.scale.x=0.15
-	last_child.scale.y=0.15
+	match(position):
+		0:
+			last_child.position.x = -10
+			last_child.position.y=-58
+			pass
+		1:
+			last_child.position.x = -5
+			last_child.position.y=-58
+			pass
+		2:
+			last_child.position.x = 0
+			last_child.position.y=-58
+			pass
+	last_child.scale.x=0.14
+	last_child.scale.y=0.14
 	last_child.texture=lastTextureClicked 
 	
 func addItemToUltimate(position): 
 	ultimate_itens[position].add_child(TextureRect.new())
 	var last_child = ultimate_itens[position].get_child(ultimate_itens[position].get_child_count()-1)
 	last_child.set_name("Item1")
-	last_child.scale.x=0.15
-	last_child.scale.y=0.15
+	match(position):
+		0:
+			last_child.position.x = -10
+			last_child.position.y=137
+			pass
+		1:
+			last_child.position.x = -5
+			last_child.position.y=137
+			pass
+		2:
+			last_child.position.x = 0
+			last_child.position.y=137
+			pass
+	last_child.scale.x=0.14
+	last_child.scale.y=0.14
 	last_child.texture=lastTextureClicked 
 	
 	
@@ -157,7 +221,7 @@ func _on_yes_pressed():
 	#Desbloqueio/Adiociono Item X na lista 
 	if(lastItemClicked==1): 
 		var whereItenGoes = random_value.randi_range(0,4)
-		#var whereItenGoes = 2  
+		#var whereItenGoes = 0
 		if(whereItenGoes==0): 
 			if(attack1_itens[0].has_node("Ativo_Spot")!=false):
 				attack1_itens[0].get_node("Ativo_Spot").queue_free()

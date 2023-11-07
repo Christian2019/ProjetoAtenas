@@ -1,6 +1,14 @@
-AudioStreamPlayer
-Node2D
 AnimatedSprite2D
+AnimationPlayer
+TextureButton
+OptionButton
+CheckBox
+HSlider
+Button
+Node2D
+Node
+Node3D
+AudioStreamPlayer
 ColorRect
 Label
 Sprite2D
@@ -8,7 +16,6 @@ CollisionShape2D
 Area2D
 Timer
 VideoStreamPlayer
-Node
 AudioStreamPlayer2D
 LineEdit
 Line2D

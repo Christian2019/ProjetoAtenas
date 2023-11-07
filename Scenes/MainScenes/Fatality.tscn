@@ -1,18 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://butuan5er7o5a"]
+[gd_scene load_steps=11 format=3 uid="uid://butuan5er7o5a"]
 
 [ext_resource type="Script" path="res://Scripts/MainScenes/Fatality.gd" id="1_ptcrv"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/fatality.ogv" id="1_yhu8r"]
 [ext_resource type="AudioStream" uid="uid://ptqt4rl1wcxb" path="res://Assets/Sounds/fatality.mp3" id="3_yvl5s"]
+[ext_resource type="Texture2D" uid="uid://dba3t6yacyxtw" path="res://Assets/Images/HUD/Menu/GameOverScreen/Game over.png" id="4_ydliw"]
+[ext_resource type="Texture2D" uid="uid://dm1qu1iwn7j1r" path="res://Assets/Images/HUD/Menu/GameOverScreen/Retry.png" id="5_t8nmy"]
+[ext_resource type="Texture2D" uid="uid://dyqp7u0ukj2f3" path="res://Assets/Images/HUD/Menu/GameOverScreen/retry hover.png" id="6_oyb56"]
+[ext_resource type="Texture2D" uid="uid://b4io80y2lgqm3" path="res://Assets/Images/HUD/Menu/GameOverScreen/quit.png" id="7_gj62j"]
+[ext_resource type="Texture2D" uid="uid://drv7h5lpn336l" path="res://Assets/Images/HUD/Menu/GameOverScreen/quithover.png" id="8_wonrh"]
+
+[sub_resource type="Animation" id="Animation_q5o10"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lb2i3"]
+_data = {
+"FadeIn": SubResource("Animation_q5o10")
+}
 
 [node name="Fatality" type="Node2D"]
 script = ExtResource("1_ptcrv")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1025.0
-offset_bottom = 604.0
-color = Color(0, 0, 0, 1)
-
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+visible = false
 offset_right = 1027.0
 offset_bottom = 602.0
 stream = ExtResource("1_yhu8r")
@@ -20,6 +41,47 @@ volume_db = 9.7
 autoplay = true
 expand = true
 
+[node name="GameOver" type="Sprite2D" parent="."]
+position = Vector2(511, 301.5)
+scale = Vector2(0.534162, 0.515665)
+texture = ExtResource("4_ydliw")
+
+[node name="RETRY" type="TextureButton" parent="."]
+offset_left = 489.0
+offset_top = 358.0
+offset_right = 572.0
+offset_bottom = 396.0
+texture_normal = ExtResource("5_t8nmy")
+texture_pressed = ExtResource("5_t8nmy")
+texture_hover = ExtResource("6_oyb56")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="QUIT" type="TextureButton" parent="."]
+offset_left = 498.0
+offset_top = 413.0
+offset_right = 565.0
+offset_bottom = 441.0
+texture_normal = ExtResource("7_gj62j")
+texture_pressed = ExtResource("7_gj62j")
+texture_hover = ExtResource("8_wonrh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1025.0
+offset_bottom = 604.0
+color = Color(0, 0, 0, 0)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_yvl5s")
 autoplay = true
+
+[node name="FadeIn" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lb2i3")
+}
+
+[connection signal="pressed" from="RETRY" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="QUIT" to="." method="_on_quit_pressed"]
+[connection signal="animation_finished" from="FadeIn" to="." method="_on_fade_in_animation_finished"]
