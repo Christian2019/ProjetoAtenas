@@ -34,6 +34,8 @@ var attackSpeedBonusPercent
 #LegendaryExtra
 var frenzyPercent=0
 
+var divineReference
+
 func _ready():
 	attackSpeedModifier()
 	Global.timerCreator("enableReverseOrder",max_duration/2,[],self)
@@ -54,7 +56,9 @@ func qualityStatus():
 	elif ( quality=="legendary"):
 		attackSpeedBonusPercent=0.04
 		frenzyPercent=0.1
-
+	elif ( quality=="divine"):
+		attackSpeedBonusPercent=0.06
+		frenzyPercent=0.2
 
 func _process(_delta):
 	animation()
@@ -89,7 +93,11 @@ func enableReverseOrder():
 
 func destroy():
 	if (reverseOrder and collidinWithPlayer):
-		Global.player.permissions[0]=true
+		if (quality=="divine"):
+			if is_instance_valid(divineReference):
+				divineReference.skillsFinish+=1
+		else:
+			Global.player.permissions[0]=true
 		call_deferred("queue_free")
 
 func removeNextHitDelay(arrayPosition):

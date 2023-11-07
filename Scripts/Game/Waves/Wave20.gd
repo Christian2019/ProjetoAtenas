@@ -1,6 +1,6 @@
 extends Node2D
 
-var battle_max_duration_frames = 100*60
+var battle_max_duration_frames = 10000*60
 
 var miningFrame=0
 
@@ -13,7 +13,7 @@ func _process(delta):
 	get_parent().waveTimer(self)
 	
 func waveBehavior():
-	spawn(1*60,1,PreLoads.id018,true)
+	spawn(1*60,3,PreLoads.targetDummy,true)
 
 			
 

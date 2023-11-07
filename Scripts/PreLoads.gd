@@ -105,6 +105,7 @@ var energyBall= preload("res://Scenes/Game/Enemies/id015/EnergyBall.tscn")
 var id018= preload("res://Scenes/Game/Enemies/id018/Id018.tscn")
 var fireEnergy= preload("res://Scenes/Game/Enemies/id018/FireEnergy.tscn")
 
+var targetDummy=preload("res://Scenes/Game/Enemies/targetDummy.tscn")
 
 ##Classes
 ##Warrior
@@ -115,8 +116,8 @@ var warrior_attack1_zeus=preload("res://Scenes/Game/Classes/Warrior/Warrior_Atta
 var warrior_attack1_poseidon =preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Poseidon/Warrior_attack1_Poseidon.tscn")
 var warrior_attack1_hades=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Hades/Warrior_attack1_Hades.tscn")
 var warrior_attack1_divine_ZeusPoseion=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_divine_ZeusPoseion.tscn")
-var warrior_attack1_divine_ZeusHades
-var warrior_attack1_divine_HadesPoseion
+var warrior_attack1_divine_ZeusHades=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_divine_ZeusHades.tscn")
+var warrior_attack1_divine_HadesPoseidon=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_divine_HadesPoseion.tscn")
 
 var warrior_attack1_zeus_lightning=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Zeus/Lightining.tscn")
 var warrior_attack1_poseidon_heavyDamage=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Poseidon/heavyDamage.tscn")

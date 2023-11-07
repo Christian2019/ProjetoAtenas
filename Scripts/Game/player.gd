@@ -22,7 +22,7 @@ var collect_radios=200
 var lastMovement = "E"
 
 ##Skills Ativos
-var attack1={"skill":PreLoads.warrior_attack1_divine_ZeusPoseion, "quality": "divine"}
+var attack1={"skill":PreLoads.warrior_attack1_hades, "quality": "legendary"}
 var attack2={"skill":PreLoads.warrior_attack2_noGod, "quality": "common"}
 var turret={"skill":PreLoads.warrior_turret_zeus, "quality": "common"}
 var dash={"skill":PreLoads.warrior_dash_noGod, "quality": "common"}
@@ -236,9 +236,7 @@ func attack1Controller():
 		attackInstance.direction=lastMovement
 		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position
-
-		
-		
+	
 		animAttacking=true
 		playAnimation ("Attack1")
 		$Animation.speed_scale=attack_Speed
@@ -385,7 +383,7 @@ func _on_body_area_exited(area):
 
 
 func _on_timer_timeout():
-	return 
+
 	print("STATUS:")
 	print("hpRegeneration: ",hpRegeneration)
 	print("lifesteal: ",lifeStealChance)

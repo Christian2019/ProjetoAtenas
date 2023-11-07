@@ -37,7 +37,7 @@ func _process(_delta):
 	
 	
 var selected=0
-var s0=3
+var s0=5
 var q0=2
 var s1=0
 var q1=0
@@ -92,6 +92,12 @@ func getSkill():
 			Global.hud.get_node("Frontground/Skills/Attack1_Border/Divine").visible=true
 			
 			return PreLoads.warrior_attack1_divine_ZeusPoseion
+		elif s0==5:
+			Global.hud.get_node("Frontground/Skills/Attack1_Border/Divine").visible=true
+			return PreLoads.warrior_attack1_divine_HadesPoseidon
+		elif s0==6:
+			Global.hud.get_node("Frontground/Skills/Attack1_Border/Divine").visible=true
+			return PreLoads.warrior_attack1_divine_ZeusHades
 	
 	return null
 	
@@ -120,7 +126,7 @@ func getQuality():
 func changeSkillGod():
 		if (selected==0):
 			s0+=1
-			if (s0>4):
+			if (s0>6):
 				s0=0
 			Global.hud.get_node("Frontground/Skills/Attack1_Border/Attack1").frame=s0
 			

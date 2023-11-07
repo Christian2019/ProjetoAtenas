@@ -1,3 +1,8 @@
+res://Assets/Images/HUD/Ultimates
+res://Scripts/Classes/Warrior/Warrior_attack1
+res://Assets/Images/HUD/waves
+res://Scripts/Enemies
+res://Assets/Images/Enemies
 res://Assets/Images/Player/DashAnimations/dash/Up_Right
 res://Assets/Images/Player/DashAnimations/dash/Up_Left
 res://Assets/Images/Player/DashAnimations/dash/Up
@@ -15,9 +20,4 @@ res://Assets/Images/Player/Attacks Animations/attack2/Down_Right
 res://Assets/Images/Player/Attacks Animations/attack2/Down_Left
 res://Assets/Images/Player/Attacks Animations/attack2/Down
 res://Assets/Images/Player/Attacks Animations/attack1/Down
-res://Assets/Images/Player/Attacks Animations/attack1/Up_Right
-res://Assets/Images/Player/Attacks Animations/attack1/Up_Left
-res://Assets/Images/Player/Attacks Animations/attack1/Up
-res://Assets/Images/Player/Attacks Animations/attack1/Right
-res://Assets/Images/Player/Attacks Animations/attack1/Left
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

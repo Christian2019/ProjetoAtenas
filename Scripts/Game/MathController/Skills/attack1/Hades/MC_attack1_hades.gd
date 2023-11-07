@@ -11,23 +11,16 @@ func _ready():
 	twister.modulate.a=0.5
 	twister_effect=twister
 
-		
-
-
 func addEntityASB(element,asb,frenzy,maxDuration):
+	var lifestealAdded=frenzy*Global.player.attack_Speed
+	var obj= {"element":element,"objectReference":weakref(element),"frame":0,
+	"maxFrame":maxDuration,"attackSpeedBonus":asb, "frenzy":frenzy, "lifeStealAdded":lifestealAdded}
 	
-	if (attackSpeedBonusArray.is_empty() or !Global.MathController.checkIfExist(element.name,attackSpeedBonusArray)):
-		var lifestealAdded=frenzy*Global.player.attack_Speed
-		var obj= {"element":element,"objectReference":weakref(element),"frame":0,
-		"maxFrame":maxDuration,"attackSpeedBonus":asb, "frenzy":frenzy, "lifeStealAdded":lifestealAdded}
-		attackSpeedBonusArray.append(obj)
+	attackSpeedBonusArray.append(obj)
 		
-		Global.player.attack_Speed+=asb
-		Global.player.lifeStealChance+=lifestealAdded
+	Global.player.attack_Speed+=asb
+	Global.player.lifeStealChance+=lifestealAdded
 
-	else:
-		var i=Global.MathController.getElementIndex(element,attackSpeedBonusArray)
-		attackSpeedBonusArray[i].frame=0
 		
 func ASBFunc():
 	for i in range(0,attackSpeedBonusArray.size(),1):

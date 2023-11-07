@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://b18nigm5wn5ab"]
+[gd_scene load_steps=48 format=3 uid="uid://b18nigm5wn5ab"]
 
 [ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/HUD.gd" id="1_60mgy"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://biq4y3oyype2c" path="res://Assets/Images/HUD/waves/wave17.png" id="26_v5m2a"]
 [ext_resource type="Texture2D" uid="uid://2pcdgtdowi0p" path="res://Assets/Images/HUD/waves/wave18.png" id="27_50f01"]
 [ext_resource type="Texture2D" uid="uid://gawpunthm68w" path="res://Assets/Images/HUD/waves/wave19.png" id="28_b4n51"]
+[ext_resource type="Texture2D" uid="uid://bn3u1mqgoo5yn" path="res://Assets/Images/HUD/waves/wave20.png" id="29_3gdep"]
 [ext_resource type="Texture2D" uid="uid://b30q73hel4bo6" path="res://Assets/Images/HUD/Ultimates/zeusUlt.png" id="29_35oqo"]
 [ext_resource type="Texture2D" uid="uid://4xs1mdhghkr" path="res://Assets/Images/HUD/Ultimates/hadesUltHUD.png" id="30_5voq0"]
 [ext_resource type="Texture2D" uid="uid://c3ce7u01og0rt" path="res://Assets/Images/HUD/Ultimates/poseidonUltHUD.png" id="31_bp4i7"]
@@ -35,6 +36,8 @@
 [ext_resource type="Texture2D" uid="uid://bliuur2u7r03c" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00004.png" id="33_afn4i"]
 [ext_resource type="Texture2D" uid="uid://r22njvg8r0py" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00007.png" id="34_53nyw"]
 [ext_resource type="Texture2D" uid="uid://btikammdiikmy" path="res://Assets/Images/HUD/Ultimates/zeus&poseidonUltHUD.png" id="35_pokj2"]
+[ext_resource type="Texture2D" uid="uid://ddnc0v2drshda" path="res://Assets/Images/HUD/Ultimates/hades&poseidonUltHUD.png" id="37_egsng"]
+[ext_resource type="Texture2D" uid="uid://dc80dk8ypu453" path="res://Assets/Images/HUD/Ultimates/zeus&hadesUltHUD.png" id="38_dqj6i"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_22btt"]
 font = ExtResource("2_owy1r")
@@ -99,6 +102,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("28_b4n51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_3gdep")
 }],
 "loop": true,
 "name": &"default",
@@ -156,6 +162,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
 }],
 "loop": true,
 "name": &"default",

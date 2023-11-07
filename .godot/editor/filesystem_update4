@@ -16,3 +16,17 @@ res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Zeus/Warrior_attac
 res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Poseidon/Warrior_attack1_Poseidon.gd
 res://Scripts/Game/MathController/Skills/attack1/Poseidon/MC_attack1_poseidon.gd
 res://Scripts/Game/Game.gd
+res://Scenes/Game/Enemies/targetDummy.tscn
+res://Scripts/Enemies/targetDummy.gd
+res://Scripts/PreLoads.gd
+res://Scripts/Game/WaveController.gd
+res://Scenes/Game/Wave_controller.tscn
+res://Scripts/Game/Waves/Wave20.gd
+res://Scenes/Game/Enemies/Id001.tscn
+res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_divine_HadesPoseion.tscn
+res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_divine_HadesPoseion.gd
+res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Hades/Warrior_attack1_Hades.tscn
+res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Hades/Warrior_attack1_Hades.gd
+res://Scripts/Game/MathController/Skills/attack1/Hades/MC_attack1_hades.gd
+res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_divine_ZeusHades.tscn
+res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_divine_ZeusHades.gd
