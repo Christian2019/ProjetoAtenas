@@ -1,14 +1,3 @@
 res://default_env.tres
-res://Scenes/Game/Classes/Warrior/WarriorAnim/animation2.tscn
+res://Scenes/Game/player.tscn
 res://Assets/Images/Tiles/TileMap.tres
-res://Scenes/Game/Classes/Warrior/WarriorAnim/animationempty.tscn
-res://Scenes/Game/Classes/Warrior/WarriorAnim/NA_GS.tscn
-res://Scenes/Game/Classes/Warrior/WarriorAnim/NA_DS.tscn
-res://Scenes/Game/Classes/Warrior/WarriorAnim/GA_WS.tscn
-res://Scenes/Game/Classes/Warrior/WarriorAnim/GA_NS.tscn
-res://Scenes/Game/Classes/Warrior/WarriorAnim/GA_GS.tscn
-res://Scenes/Game/Classes/Warrior/WarriorAnim/GA_DS.tscn
-res://Scenes/Game/Classes/Warrior/WarriorAnim/DA_WS.tscn
-res://Scenes/Game/Classes/Warrior/WarriorAnim/DA_NS.tscn
-res://Scenes/Game/Classes/Warrior/WarriorAnim/DA_GS.tscn
-res://Scenes/Game/Classes/Warrior/WarriorAnim/DA_DS.tscn
