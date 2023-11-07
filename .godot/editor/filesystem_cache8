@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699322230
+::res://::1699328957
 default_env.tres::Environment::8363765569308027888::1699322230::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1687928995::0::1::::<><>::
 icon.png::CompressedTexture2D::8961917463339288538::1687313253::1687928995::1::::<><>::
@@ -468,56 +468,56 @@ strongAttack_135_019.png::CompressedTexture2D::4980600030133077391::1699318344::
 strongAttack_135_022.png::CompressedTexture2D::3636881719269927621::1699318344::1699319133::1::::<><>::
 ::res://Assets/Images/Player/Attacks Animations/Effects/::1699322347
 ::res://Assets/Images/Player/Attacks Animations/Effects/attack1/::1699322348
-::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Down/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Down/::1699322360
 attack1_0_001.png::CompressedTexture2D::2112392618752550297::1699319358::1699322360::1::::<><>::
 attack1_0_004.png::CompressedTexture2D::2456827298561810598::1699319152::1699322360::1::::<><>::
 attack1_0_007.png::CompressedTexture2D::2693678028455228950::1699319152::1699322360::1::::<><>::
 attack1_0_010.png::CompressedTexture2D::7889641725550115318::1699319152::1699322360::1::::<><>::
 attack1_0_013.png::CompressedTexture2D::6001477729988864118::1699319152::1699322360::1::::<><>::
 attack1_0_016.png::CompressedTexture2D::994670573693824184::1699319152::1699322360::1::::<><>::
-::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Down_Left/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Down_Left/::1699322360
 attack1_315_001.png::CompressedTexture2D::2554507301505503936::1699319358::1699322360::1::::<><>::
 attack1_315_004.png::CompressedTexture2D::1161719273910434421::1699319164::1699322360::1::::<><>::
 attack1_315_007.png::CompressedTexture2D::4884441604703770653::1699319164::1699322360::1::::<><>::
 attack1_315_010.png::CompressedTexture2D::975449795915537682::1699319164::1699322360::1::::<><>::
 attack1_315_013.png::CompressedTexture2D::5040699668534091953::1699319164::1699322360::1::::<><>::
 attack1_315_016.png::CompressedTexture2D::8750718550209636995::1699319164::1699322360::1::::<><>::
-::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Down_Right/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Down_Right/::1699322360
 attack1_45_001.png::CompressedTexture2D::8525019595684506792::1699319358::1699322360::1::::<><>::
 attack1_45_004.png::CompressedTexture2D::6137740387188193521::1699319152::1699322360::1::::<><>::
 attack1_45_007.png::CompressedTexture2D::6899635195647208089::1699319154::1699322360::1::::<><>::
 attack1_45_010.png::CompressedTexture2D::6629026202564391081::1699319154::1699322360::1::::<><>::
 attack1_45_013.png::CompressedTexture2D::6216775217904535792::1699319154::1699322360::1::::<><>::
 attack1_45_016.png::CompressedTexture2D::2150527641851762336::1699319154::1699322360::1::::<><>::
-::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Left/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Left/::1699322360
 attack1_270_001.png::CompressedTexture2D::4687156091670743958::1699319358::1699322360::1::::<><>::
 attack1_270_004.png::CompressedTexture2D::3856681313632844928::1699319162::1699322360::1::::<><>::
 attack1_270_007.png::CompressedTexture2D::8584722636507284007::1699319162::1699322360::1::::<><>::
 attack1_270_010.png::CompressedTexture2D::3641314518599682147::1699319162::1699322360::1::::<><>::
 attack1_270_013.png::CompressedTexture2D::2354559873827078199::1699319162::1699322360::1::::<><>::
 attack1_270_016.png::CompressedTexture2D::7607139049712915609::1699319162::1699322360::1::::<><>::
-::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Right/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Right/::1699322361
 attack1_90_001.png::CompressedTexture2D::2156351670690609457::1699319358::1699322360::1::::<><>::
 attack1_90_004.png::CompressedTexture2D::6123794554854958380::1699319154::1699322360::1::::<><>::
 attack1_90_007.png::CompressedTexture2D::602025618804939614::1699319154::1699322361::1::::<><>::
 attack1_90_010.png::CompressedTexture2D::1892901152023200091::1699319156::1699322361::1::::<><>::
 attack1_90_013.png::CompressedTexture2D::4039808220789984607::1699319156::1699322361::1::::<><>::
 attack1_90_016.png::CompressedTexture2D::4894118210537681985::1699319156::1699322361::1::::<><>::
-::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up/::1699322361
 attack1_180_001.png::CompressedTexture2D::1959028251829680225::1699319358::1699322361::1::::<><>::
 attack1_180_004.png::CompressedTexture2D::1893763422942189005::1699319158::1699322361::1::::<><>::
 attack1_180_007.png::CompressedTexture2D::5531949691970190391::1699319158::1699322361::1::::<><>::
 attack1_180_010.png::CompressedTexture2D::7979182818656810312::1699319158::1699322361::1::::<><>::
 attack1_180_013.png::CompressedTexture2D::714383893384437063::1699319158::1699322361::1::::<><>::
 attack1_180_016.png::CompressedTexture2D::5997869060358513670::1699319158::1699322361::1::::<><>::
-::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up_Left/::1699322348
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up_Left/::1699322361
 attack1_225_001.png::CompressedTexture2D::9046521379853627031::1699319358::1699322360::1::::<><>::
 attack1_225_004.png::CompressedTexture2D::1538737020852684214::1699319160::1699322360::1::::<><>::
 attack1_225_007.png::CompressedTexture2D::4448806020002558947::1699319160::1699322361::1::::<><>::
 attack1_225_010.png::CompressedTexture2D::7727527920417482874::1699319160::1699322360::1::::<><>::
 attack1_225_013.png::CompressedTexture2D::3919959120190438066::1699319160::1699322360::1::::<><>::
 attack1_225_016.png::CompressedTexture2D::3497813073569229134::1699319160::1699322360::1::::<><>::
-::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up_Right/::1699322348
+::res://Assets/Images/Player/Attacks Animations/Effects/attack1/Up_Right/::1699322360
 attack1_135_001.png::CompressedTexture2D::6002067000255057395::1699319158::1699322360::1::::<><>::
 attack1_135_004.png::CompressedTexture2D::2241199038048248695::1699319156::1699322360::1::::<><>::
 attack1_135_007.png::CompressedTexture2D::9195052526874997842::1699319156::1699322360::1::::<><>::
@@ -525,7 +525,7 @@ attack1_135_010.png::CompressedTexture2D::8436573990893914231::1699319156::16993
 attack1_135_013.png::CompressedTexture2D::682451648728533116::1699319158::1699322360::1::::<><>::
 attack1_135_016.png::CompressedTexture2D::4154938682288689499::1699319158::1699322360::1::::<><>::
 ::res://Assets/Images/Player/Attacks Animations/Effects/attack2/::1699322347
-::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Down/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Down/::1699322360
 strongAttack_0_001.png::CompressedTexture2D::1508402501205743080::1699319358::1699322360::1::::<><>::
 strongAttack_0_004.png::CompressedTexture2D::7768308520117459452::1699319360::1699322360::1::::<><>::
 strongAttack_0_007.png::CompressedTexture2D::958714703415083762::1699319360::1699322360::1::::<><>::
@@ -533,7 +533,7 @@ strongAttack_0_010.png::CompressedTexture2D::1499395321496542490::1699319360::16
 strongAttack_0_013.png::CompressedTexture2D::6138258130612035960::1699319360::1699322359::1::::<><>::
 strongAttack_0_016.png::CompressedTexture2D::8115204929463606201::1699319360::1699322359::1::::<><>::
 strongAttack_0_019.png::CompressedTexture2D::7999217093043964937::1699319360::1699322359::1::::<><>::
-::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Down_Left/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Down_Left/::1699322359
 strongAttack_315_001.png::CompressedTexture2D::7016094414904251812::1699319372::1699322359::1::::<><>::
 strongAttack_315_004.png::CompressedTexture2D::159724273483244767::1699319372::1699322359::1::::<><>::
 strongAttack_315_007.png::CompressedTexture2D::2185454220432849853::1699319372::1699322359::1::::<><>::
@@ -541,7 +541,7 @@ strongAttack_315_010.png::CompressedTexture2D::1276161295657059349::1699319374::
 strongAttack_315_013.png::CompressedTexture2D::9071096581904841377::1699319374::1699322359::1::::<><>::
 strongAttack_315_016.png::CompressedTexture2D::3670659562120169824::1699319374::1699322359::1::::<><>::
 strongAttack_315_019.png::CompressedTexture2D::1515325580631130761::1699319374::1699322359::1::::<><>::
-::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Down_Right/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Down_Right/::1699322359
 strongAttack_45_001.png::CompressedTexture2D::1289474224619653409::1699319362::1699322359::1::::<><>::
 strongAttack_45_004.png::CompressedTexture2D::4464016198703713964::1699319362::1699322359::1::::<><>::
 strongAttack_45_007.png::CompressedTexture2D::4411178237552064112::1699319362::1699322359::1::::<><>::
@@ -549,7 +549,7 @@ strongAttack_45_010.png::CompressedTexture2D::6186540676575181685::1699319362::1
 strongAttack_45_013.png::CompressedTexture2D::5123094503893106287::1699319362::1699322359::1::::<><>::
 strongAttack_45_016.png::CompressedTexture2D::3812745920633104810::1699319362::1699322359::1::::<><>::
 strongAttack_45_019.png::CompressedTexture2D::7408871013231851198::1699319362::1699322359::1::::<><>::
-::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Left/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Left/::1699322359
 strongAttack_270_001.png::CompressedTexture2D::3112968332329009901::1699319370::1699322359::1::::<><>::
 strongAttack_270_004.png::CompressedTexture2D::2579360065387486769::1699319370::1699322359::1::::<><>::
 strongAttack_270_007.png::CompressedTexture2D::3637343752707171327::1699319372::1699322359::1::::<><>::
@@ -557,7 +557,7 @@ strongAttack_270_010.png::CompressedTexture2D::7074512996271354910::1699319372::
 strongAttack_270_013.png::CompressedTexture2D::8325447047252409765::1699319372::1699322359::1::::<><>::
 strongAttack_270_016.png::CompressedTexture2D::4243209822097087819::1699319372::1699322359::1::::<><>::
 strongAttack_270_019.png::CompressedTexture2D::308761655498991647::1699319372::1699322359::1::::<><>::
-::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Right/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Right/::1699322360
 strongAttack_90_001.png::CompressedTexture2D::5383989432991650864::1699319364::1699322359::1::::<><>::
 strongAttack_90_004.png::CompressedTexture2D::3736799999253725502::1699319364::1699322359::1::::<><>::
 strongAttack_90_007.png::CompressedTexture2D::6907220422352940349::1699319364::1699322360::1::::<><>::
@@ -565,7 +565,7 @@ strongAttack_90_010.png::CompressedTexture2D::2818579018026446391::1699319364::1
 strongAttack_90_013.png::CompressedTexture2D::7096387088858421212::1699319364::1699322360::1::::<><>::
 strongAttack_90_016.png::CompressedTexture2D::5514436885252015925::1699319364::1699322360::1::::<><>::
 strongAttack_90_019.png::CompressedTexture2D::8523731388879621095::1699319364::1699322360::1::::<><>::
-::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Up/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Up/::1699322359
 strongAttack_180_001.png::CompressedTexture2D::7963985380706085316::1699319366::1699322359::1::::<><>::
 strongAttack_180_004.png::CompressedTexture2D::6200069829108818451::1699319368::1699322359::1::::<><>::
 strongAttack_180_007.png::CompressedTexture2D::8332467734841342922::1699319368::1699322359::1::::<><>::
@@ -573,7 +573,7 @@ strongAttack_180_010.png::CompressedTexture2D::7273784040779448134::1699319368::
 strongAttack_180_013.png::CompressedTexture2D::3612273812516350592::1699319368::1699322359::1::::<><>::
 strongAttack_180_016.png::CompressedTexture2D::5114794277817789271::1699319368::1699322359::1::::<><>::
 strongAttack_180_019.png::CompressedTexture2D::7496147700062405885::1699319368::1699322359::1::::<><>::
-::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Up_Left/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Up_Left/::1699322359
 strongAttack_225_001.png::CompressedTexture2D::4476173515204028503::1699319368::1699322359::1::::<><>::
 strongAttack_225_004.png::CompressedTexture2D::8730530819494548407::1699319370::1699322359::1::::<><>::
 strongAttack_225_007.png::CompressedTexture2D::5811794353224912958::1699319370::1699322359::1::::<><>::
@@ -581,7 +581,7 @@ strongAttack_225_010.png::CompressedTexture2D::79202058451754379::1699319370::16
 strongAttack_225_013.png::CompressedTexture2D::4206607231905697315::1699319370::1699322359::1::::<><>::
 strongAttack_225_016.png::CompressedTexture2D::3393968274086394732::1699319370::1699322359::1::::<><>::
 strongAttack_225_019.png::CompressedTexture2D::2222006718560666553::1699319370::1699322359::1::::<><>::
-::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Up_Right/::1699322347
+::res://Assets/Images/Player/Attacks Animations/Effects/attack2/Up_Right/::1699322359
 strongAttack_135_001.png::CompressedTexture2D::4201079014236759154::1699319366::1699322359::1::::<><>::
 strongAttack_135_004.png::CompressedTexture2D::8831861202237756330::1699319366::1699322359::1::::<><>::
 strongAttack_135_007.png::CompressedTexture2D::8626969369833646812::1699319366::1699322359::1::::<><>::

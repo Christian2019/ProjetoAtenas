@@ -3,9 +3,18 @@ extends Node2D
 
 func _ready():
 	Global.Game = self
+	
+var started=false
+func start():
+	changeSkillGod()
+	ChangeSkillQuality()
+	changePlayerSkillFunction()
 
 
 func _process(_delta):
+	if (!started):
+		started=true
+		start()
 
 	if (Input.is_action_just_pressed("zoomOut")):
 		Global.camera.zoom.x=0.5
@@ -25,9 +34,11 @@ func _process(_delta):
 			Global.WaveController.wave-=1
 	
 	changeSkills()
+	
+	
 var selected=0
-var s0=0
-var q0=0
+var s0=3
+var q0=2
 var s1=0
 var q1=0
 var s2=0

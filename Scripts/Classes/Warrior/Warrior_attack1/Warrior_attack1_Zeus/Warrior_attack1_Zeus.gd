@@ -44,6 +44,8 @@ func _ready():
 	$Animation.visible=false
 	qualityStatus()
 
+
+
 func attackSpeedModifier():
 	max_duration=max_duration/Global.player.attack_Speed
 	speed=speed*Global.player.attack_Speed
@@ -69,6 +71,7 @@ func qualityStatus():
 
 
 func _process(_delta):
+	
 	animation()
 	move()
 	damageAction()
@@ -102,7 +105,8 @@ func enableReverseOrder():
 func destroy():
 	if (reverseOrder and collidinWithPlayer):
 		if (quality=="divine"):
-			divineReference.skillsFinish+=1
+			if is_instance_valid(divineReference):
+				divineReference.skillsFinish+=1
 		else:
 			Global.player.permissions[0]=true
 		call_deferred("queue_free")
@@ -160,7 +164,7 @@ func move():
 		#X-
 		if direction=="SW" or direction=="W" or direction=="NW":
 			relativePosition.x-=(speed)*speedModifier
-	
+
 	global_position= Global.player.global_position+relativePosition
 		
 func _on_area_2d_area_entered(area):

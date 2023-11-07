@@ -22,7 +22,7 @@ var collect_radios=200
 var lastMovement = "E"
 
 ##Skills Ativos
-var attack1={"skill":PreLoads.warrior_attack1_zeus, "quality": "legendary"}
+var attack1={"skill":PreLoads.warrior_attack1_divine_ZeusPoseion, "quality": "divine"}
 var attack2={"skill":PreLoads.warrior_attack2_noGod, "quality": "common"}
 var turret={"skill":PreLoads.warrior_turret_zeus, "quality": "common"}
 var dash={"skill":PreLoads.warrior_dash_noGod, "quality": "common"}
@@ -233,9 +233,11 @@ func attack1Controller():
 	var classChild=0	
 	if (Input.is_action_pressed("Attack1") and permissions[classChild]):
 		var attackInstance = creatAttackInstance(classChild)
+		attackInstance.direction=lastMovement
 		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position
-		attackInstance.direction=lastMovement
+
+		
 		
 		animAttacking=true
 		playAnimation ("Attack1")

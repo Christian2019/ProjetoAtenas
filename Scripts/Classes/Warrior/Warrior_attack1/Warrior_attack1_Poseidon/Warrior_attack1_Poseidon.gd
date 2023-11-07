@@ -34,9 +34,9 @@ var max_duration = 0.5
 #LegendaryExtra
 var extraPercentDamage=0
 
-var heavyDamageOn=false
-
 var divineReference
+
+var canFinish=true
 
 
 func _ready():
@@ -98,9 +98,10 @@ func enableReverseOrder():
 
 func destroy():
 	if (reverseOrder and collidinWithPlayer):
-		if (quality=="divine" and !heavyDamageOn):
-			divineReference.skillsFinish+=1
-		elif (!heavyDamageOn):
+		if (quality=="divine"):
+			if is_instance_valid(divineReference):
+				divineReference.skillsFinish+=1
+		elif (canFinish):
 			Global.player.permissions[0]=true
 		call_deferred("queue_free")
 
