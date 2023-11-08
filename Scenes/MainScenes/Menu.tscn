@@ -1,9 +1,8 @@
-[gd_scene load_steps=31 format=3 uid="uid://nyqdg4s0r6jr"]
+[gd_scene load_steps=30 format=3 uid="uid://nyqdg4s0r6jr"]
 
 [ext_resource type="Script" path="res://Scripts/MainScenes/Menu.gd" id="1_lkpov"]
 [ext_resource type="AudioStream" uid="uid://dxsn2vwpfc331" path="res://Assets/Sounds/HadoukenTheme.mp3" id="1_xijvx"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/SaveTube.io-Age of Mythology_ Extended Edition Trailer.ogv" id="2_v8bgb"]
-[ext_resource type="Texture2D" uid="uid://ck3g1itamcpq4" path="res://Assets/Images/HUD/Menu/Loading/Loading.png" id="2_ymt18"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/SaveTube.io-Brotato - Full Release Trailer.ogv" id="3_pktnb"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/SaveTube.io-Dome Keeper - Official Gameplay Trailer _ gamescom 2022.ogv" id="4_xnof7"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/SaveTube.io-Hades - Official Animated Trailer.ogv" id="5_ta0yl"]
@@ -176,11 +175,6 @@ texture = ExtResource("13_c32hl")
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_lkpov")
-
-[node name="Loading" type="Sprite2D" parent="."]
-position = Vector2(516, 298.5)
-scale = Vector2(0.538302, 0.520745)
-texture = ExtResource("2_ymt18")
 
 [node name="MenuInicial" type="Node2D" parent="."]
 

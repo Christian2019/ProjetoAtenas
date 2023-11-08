@@ -12,12 +12,4 @@ func _ready():
 	MasterVolume = -12
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if(Fullscreen==false):
-		get_window().mode=Window.MODE_WINDOWED
-		get_window().size=Resolution
-	else:
-		get_window().mode= Window.MODE_FULLSCREEN
-	pass
+ 

@@ -1,3 +1,4 @@
+Node2D
 AnimatedSprite2D
 AnimationPlayer
 TextureButton
@@ -5,7 +6,6 @@ OptionButton
 CheckBox
 HSlider
 Button
-Node2D
 Node
 Node3D
 AudioStreamPlayer

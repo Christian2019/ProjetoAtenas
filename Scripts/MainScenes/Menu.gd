@@ -19,11 +19,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta): 
 	$MenuInicial/Musica.volume_db = OptionsController.MasterVolume + OptionsController.MusicVolume
-	if($MenuInicial.visible==true):
-		for i in range(0,get_node("MenuInicial/Videos").get_child_count(),1):
-			var video = get_node("MenuInicial/Videos").get_child(i)
-			if (!video.is_playing()):
-				video.play() 
+	#if($MenuInicial.visible==true):
+		#for i in range(0,get_node("MenuInicial/Videos").get_child_count(),1):
+			#var video = get_node("MenuInicial/Videos").get_child(i)
+			#if (!video.is_playing()):
+				#video.play() 
 		#if (!reverse):
 		#	$Label.modulate.a -= 0.01
 		#	if ($Label.modulate.a<=0.0):
@@ -32,7 +32,7 @@ func _process(delta):
 		#	$Label.modulate.a += 0.01
 		#	if ($Label.modulate.a>=1):
 		#		reverse=false
-	elif($OptionsMenu.visible==true):  
+	if($OptionsMenu.visible==true):  
 		OptionsController.MasterVolume = $OptionsMenu/MasterAudio.value
 		OptionsController.MusicVolume = $OptionsMenu/MusicAudio.value
 		if($OptionsMenu/FullScreen.button_pressed==false):

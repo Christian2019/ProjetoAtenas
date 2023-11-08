@@ -152,6 +152,7 @@ scale = Vector2(0.61, 0.575)
 texture = ExtResource("6_m6do7")
 
 [node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo1"]
+layout_mode = 0
 offset_left = -7.0
 offset_top = -5.0
 offset_right = 108.0
@@ -200,6 +201,7 @@ scale = Vector2(0.61, 0.575)
 texture = ExtResource("5_uoj13")
 
 [node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Ativo"]
+layout_mode = 0
 offset_left = -13.0
 offset_top = 23.0
 offset_right = 102.0
@@ -231,6 +233,7 @@ scale = Vector2(0.61, 0.575)
 texture = ExtResource("6_m6do7")
 
 [node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo2"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = 23.0
 offset_right = 114.0
@@ -263,6 +266,7 @@ scale = Vector2(0.61, 0.575)
 texture = ExtResource("5_uoj13")
 
 [node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Ativo"]
+layout_mode = 0
 offset_left = -13.0
 offset_top = 44.0
 offset_right = 102.0
@@ -294,6 +298,7 @@ scale = Vector2(0.61, 0.575)
 texture = ExtResource("6_m6do7")
 
 [node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo2"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = 43.0
 offset_right = 114.0
@@ -326,6 +331,7 @@ scale = Vector2(0.61, 0.575)
 texture = ExtResource("5_uoj13")
 
 [node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Ativo"]
+layout_mode = 0
 offset_left = -13.0
 offset_top = -50.0
 offset_right = 102.0
@@ -389,6 +395,7 @@ scale = Vector2(0.61, 0.575)
 texture = ExtResource("5_uoj13")
 
 [node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Ativo"]
+layout_mode = 0
 offset_left = -12.0
 offset_top = 145.0
 offset_right = 103.0
