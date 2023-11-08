@@ -354,3 +354,6 @@ popup/item_4/id = 4
 [connection signal="mouse_exited" from="MenuInicial/ExitGame" to="." method="_on_exit_game_mouse_exited"]
 [connection signal="pressed" from="MenuInicial/ExitGame" to="." method="_on_exit_game_pressed"]
 [connection signal="pressed" from="OptionsMenu/Back" to="." method="_on_back_pressed"]
+[connection signal="changed" from="OptionsMenu/MusicAudio" to="." method="_on_music_audio_changed"]
+[connection signal="toggled" from="OptionsMenu/FullScreen" to="." method="_on_full_screen_toggled"]
+[connection signal="item_selected" from="OptionsMenu/Resolutions" to="." method="_on_resolutions_item_selected"]

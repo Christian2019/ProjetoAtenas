@@ -279,8 +279,8 @@ func _on_yes_pressed():
 		listaItens.add_child(TextureRect.new(),true)
 		var last_child = listaItens.get_child(listaItens.get_child_count()-1)
 		last_child.set_name("Item2");
-		last_child.scale.x=0.25
-		last_child.scale.y=0.25
+		last_child.scale.x=0.15
+		last_child.scale.y=0.15
 		last_child.texture=lastTextureClicked 
 		itens_personagem.append(lastItemClicked)
 

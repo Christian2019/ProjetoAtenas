@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699409754
-default_env.tres::Environment::8363765569308027888::1699409279::0::1::::<><>::
+::res://::1699412829
+default_env.tres::Environment::8363765569308027888::1699412232::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1693530105::0::1::::<><>::
 icon.png::CompressedTexture2D::8961917463339288538::1693530105::1693530105::1::::<><>::
 ::res://Assets/::1695242542
@@ -255,7 +255,7 @@ scene00031-removebg-preview.png::CompressedTexture2D::3365555615545604464::16992
 background.png::CompressedTexture2D::6117396777253534569::1693530104::1693530104::1::::<><>::
 hearth2.png::CompressedTexture2D::5254022626860167378::1695242542::1695242542::1::::<><>::
 hearth.png::CompressedTexture2D::237785404925632166::1693530104::1693530104::1::::<><>::
-::res://Assets/Images/HUD/Menu/::1699408946
+::res://Assets/Images/HUD/Menu/::1699412829
 ::res://Assets/Images/HUD/Menu/GameOverScreen/::1699408946
 BarraDeVidaPlayer.png::CompressedTexture2D::8880427280885726515::1699408917::1699408930::1::::<><>::
 Game over.png::CompressedTexture2D::7231186565901793240::1699292795::1699292799::1::::<><>::
@@ -275,19 +275,26 @@ OrangeScroll.png::CompressedTexture2D::7395087613773805913::1699408942::16994089
 PurpleScroll.png::CompressedTexture2D::6906482396851413537::1699408942::1699408946::1::::<><>::
 TimerSuperiorBarra.png::CompressedTexture2D::6881249778262437857::1699408942::1699408946::1::::<><>::
 Timer_Superior_BG.png::CompressedTexture2D::7440118079547776321::1699408942::1699408946::1::::<><>::
-::res://Assets/Images/HUD/Menu/Loading/::1699307986
-Loading.png::CompressedTexture2D::5532943563032543369::1699307982::1699307986::1::::<><>::
+::res://Assets/Images/HUD/Menu/Loading/::1699409774
 LoadingTextFrame1.png::CompressedTexture2D::1803133143108897816::1699306205::1699306206::1::::<><>::
 LoadingTextFrame2.png::CompressedTexture2D::8694855825568960236::1699306205::1699306206::1::::<><>::
 LoadingTextFrame3.png::CompressedTexture2D::6599257023663482398::1699306205::1699306206::1::::<><>::
 LoadingTextFrame4.png::CompressedTexture2D::4787057705323009372::1699306205::1699306206::1::::<><>::
-::res://Assets/Images/HUD/Menu/Loja/::1699318825
+::res://Assets/Images/HUD/Menu/Loja/::1699412829
 BackgroundUpgrade.png::CompressedTexture2D::6206222122893384869::1699308767::1699308768::1::::<><>::
 BarraMenu.png::CompressedTexture2D::7130610082540558951::1699308767::1699308768::1::::<><>::
 GoldPlace.png::CompressedTexture2D::6301270064736027029::1699310357::1699310358::1::::<><>::
 MineiacaoLevel1.png::CompressedTexture2D::3977066997078778640::1699308767::1699308768::1::::<><>::
 ScrollsBG.png::CompressedTexture2D::9155014092860399829::1699309639::1699309639::1::::<><>::
 SilverPlace.png::CompressedTexture2D::5793820824812714351::1699318825::1699318825::1::::<><>::
+UpgradeBasico.png::CompressedTexture2D::8491107415375975158::1699412654::1699412655::1::::<><>::
+UpgradeBasicoDisabled.png::CompressedTexture2D::8843449758425545742::1699412821::1699412830::1::::<><>::
+UpgradeBom.png::CompressedTexture2D::118355905995244762::1699412654::1699412655::1::::<><>::
+UpgradeBomDisabled.png::CompressedTexture2D::7805099476025371588::1699412821::1699412830::1::::<><>::
+UpgradeFinal.png::CompressedTexture2D::1768814118856971923::1699412654::1699412655::1::::<><>::
+UpgradeFinalBasico.png::CompressedTexture2D::9217735682742255056::1699412821::1699412830::1::::<><>::
+UpgradeOtimo.png::CompressedTexture2D::987493818761763631::1699412654::1699412655::1::::<><>::
+UpgradeOtimoDisabled.png::CompressedTexture2D::291895976784849696::1699412821::1699412830::1::::<><>::
 Zeus-Land.otf::FontFile::4136885773677270294::1699308989::1699308989::1::::<><>::
 ::res://Assets/Images/HUD/Menu/TelaInicial/::1699292798
 BgSlider.png::CompressedTexture2D::1744523934541160639::1699236629::1699236630::1::::<><>::
@@ -515,11 +522,11 @@ ToDo.txt::TextFile::-1::1693530104::0::1::::<><>::
 ::res://run/Right_Up/::1699202763
 ::res://run/Up/::1699202763
 ::res://Scenes/::1699235913
-::res://Scenes/Game/::1699409279
+::res://Scenes/Game/::1699412232
 Collectable.tscn::PackedScene::708502007503376537::1699235916::0::1::::<><>::res://Scripts/Instances/Collectable.gd<>uid://dbufixsjomww
 Dracma.tscn::PackedScene::8115027374443532805::1699235916::0::1::::<><>::res://Scripts/Game/Dracma.gd<>uid://cc8fk1tr2jb6k
 Game.tscn::PackedScene::4913071036717789116::1699310131::0::1::::<><>::uid://muwp777hkxqy
-HUD.tscn::PackedScene::4280259026493880449::1699409279::0::1::::<><>::uid://ctfkvpvb3tfp6::::res://Assets/Images/HUD/background.png<>res://Scripts/MainScenes/Game_ViewPort/HUD.gd<>uid://duy38o6o71nij::::res://Assets/Fonts/Kurland.otf<>uid://cg4c8qydgkpag::::res://Assets/Images/HUD/hearth2.png<>uid://ywre30ix5f7t::::res://Assets/Images/Resources/wood.png<>uid://dlwvyo6ejssc::::res://Assets/Images/Resources/gold.png<>uid://bav7b1tv76dwv::::res://Assets/Images/Resources/stone.png<>uid://bx5egd2vqgwfq::::res://Assets/Images/Resources/dracma.png<>uid://bbh8wdh8h0npk::::res://Assets/Images/Resources/dracmaBag.png<>uid://bsnfphv05rlds::::res://Assets/Images/HUD/waves/wave1.png<>uid://c8h4x6cdrpqpk::::res://Assets/Images/HUD/waves/wave2.png<>uid://bys0o6q3rv1kr::::res://Assets/Images/HUD/waves/wave3.png<>uid://bxth4dkos64s::::res://Assets/Images/HUD/waves/wave4.png<>uid://coxsmj54lptwp::::res://Assets/Images/HUD/waves/wave5.png<>uid://ckt6j1doftmd0::::res://Assets/Images/HUD/waves/wave6.png<>uid://enhn0dupvb3s::::res://Assets/Images/HUD/waves/wave7.png<>uid://c4bqokigkd1xr::::res://Assets/Images/HUD/waves/wave8.png<>uid://bfxfl80s5xqds::::res://Assets/Images/HUD/waves/wave9.png<>uid://ctq6xiqvtaxn3::::res://Assets/Images/HUD/waves/wave10.png<>uid://b8bt7vnrbwgnq::::res://Assets/Images/HUD/waves/wave11.png<>uid://dkdhjk3ijj8br::::res://Assets/Images/HUD/waves/wave12.png<>uid://d1h8iml8hxpuu::::res://Assets/Images/HUD/waves/wave13.png<>uid://2krbaswfgqvr::::res://Assets/Images/HUD/waves/wave14.png<>uid://ctg762m2e8oo2::::res://Assets/Images/HUD/waves/wave15.png<>uid://bdkh7uydrw7hp::::res://Assets/Images/HUD/waves/wave16.png<>uid://biq4y3oyype2c::::res://Assets/Images/HUD/waves/wave17.png<>uid://2pcdgtdowi0p::::res://Assets/Images/HUD/waves/wave18.png<>uid://gawpunthm68w::::res://Assets/Images/HUD/waves/wave19.png<>uid://b30q73hel4bo6::::res://Assets/Images/HUD/Ultimates/zeusUlt.png<>uid://4xs1mdhghkr::::res://Assets/Images/HUD/Ultimates/hadesUltHUD.png<>uid://c3ce7u01og0rt::::res://Assets/Images/HUD/Ultimates/poseidonUltHUD.png
+HUD.tscn::PackedScene::4280259026493880449::1699412232::0::1::::<><>::uid://ctfkvpvb3tfp6::::res://Assets/Images/HUD/background.png<>res://Scripts/MainScenes/Game_ViewPort/HUD.gd<>uid://duy38o6o71nij::::res://Assets/Fonts/Kurland.otf<>uid://cg4c8qydgkpag::::res://Assets/Images/HUD/hearth2.png<>uid://ywre30ix5f7t::::res://Assets/Images/Resources/wood.png<>uid://dlwvyo6ejssc::::res://Assets/Images/Resources/gold.png<>uid://bav7b1tv76dwv::::res://Assets/Images/Resources/stone.png<>uid://bx5egd2vqgwfq::::res://Assets/Images/Resources/dracma.png<>uid://bbh8wdh8h0npk::::res://Assets/Images/Resources/dracmaBag.png<>uid://bsnfphv05rlds::::res://Assets/Images/HUD/waves/wave1.png<>uid://c8h4x6cdrpqpk::::res://Assets/Images/HUD/waves/wave2.png<>uid://bys0o6q3rv1kr::::res://Assets/Images/HUD/waves/wave3.png<>uid://bxth4dkos64s::::res://Assets/Images/HUD/waves/wave4.png<>uid://coxsmj54lptwp::::res://Assets/Images/HUD/waves/wave5.png<>uid://ckt6j1doftmd0::::res://Assets/Images/HUD/waves/wave6.png<>uid://enhn0dupvb3s::::res://Assets/Images/HUD/waves/wave7.png<>uid://c4bqokigkd1xr::::res://Assets/Images/HUD/waves/wave8.png<>uid://bfxfl80s5xqds::::res://Assets/Images/HUD/waves/wave9.png<>uid://ctq6xiqvtaxn3::::res://Assets/Images/HUD/waves/wave10.png<>uid://b8bt7vnrbwgnq::::res://Assets/Images/HUD/waves/wave11.png<>uid://dkdhjk3ijj8br::::res://Assets/Images/HUD/waves/wave12.png<>uid://d1h8iml8hxpuu::::res://Assets/Images/HUD/waves/wave13.png<>uid://2krbaswfgqvr::::res://Assets/Images/HUD/waves/wave14.png<>uid://ctg762m2e8oo2::::res://Assets/Images/HUD/waves/wave15.png<>uid://bdkh7uydrw7hp::::res://Assets/Images/HUD/waves/wave16.png<>uid://biq4y3oyype2c::::res://Assets/Images/HUD/waves/wave17.png<>uid://2pcdgtdowi0p::::res://Assets/Images/HUD/waves/wave18.png<>uid://gawpunthm68w::::res://Assets/Images/HUD/waves/wave19.png<>uid://b30q73hel4bo6::::res://Assets/Images/HUD/Ultimates/zeusUlt.png<>uid://4xs1mdhghkr::::res://Assets/Images/HUD/Ultimates/hadesUltHUD.png<>uid://c3ce7u01og0rt::::res://Assets/Images/HUD/Ultimates/poseidonUltHUD.png
 Item.tscn::PackedScene::3799547057766881687::1699235916::0::1::::<><>::res://Scripts/Game/Item.gd<>uid://cs04tdakmp7xc
 matriz.tscn::PackedScene::3528557820190198722::1699235916::0::1::::<><>::res://Scripts/Game/matriz.gd
 player.tscn::PackedScene::5964293243918368166::1699308389::0::1::::<><>::res://Scripts/Game/player.gd<>uid://dgo7fp55j5bmt
@@ -560,11 +567,11 @@ Portal.tscn::PackedScene::8588389822392948446::1699235916::0::1::::<><>::uid://c
 ::res://Scenes/Game/Constructions/Defenses/::1699235916
 Projectile.tscn::PackedScene::2410808219093842520::1699235916::0::1::::<><>::uid://bav7b1tv76dwv
 Tower.tscn::PackedScene::8535991795261709648::1699235916::0::1::::<><>::res://Scripts/Zones/Center/Tower.gd<>uid://didbvwb3a40wu
-::res://Scenes/Game/Constructions/Temple/::1699409278
+::res://Scenes/Game/Constructions/Temple/::1699412232
 Item.tscn::PackedScene::3789408077711027493::1699235916::0::1::::<><>::res://Scripts/Zones/Temple/ItemSelectable.gd<>uid://d0xhqa10j30ok
 OpcaoUpgrade.tscn::PackedScene::1880745726022968015::1699235916::0::1::::<><>::res://Scripts/Zones/Temple/OpcaoUpgrade.gd
 Temple.tscn::PackedScene::4819231694312776984::1699237747::0::1::::<><>::res://Scripts/Zones/Temple/Temple.gd<>uid://ds3xll5d3cnrc
-TempleScreen.tscn::PackedScene::3516894069668338984::1699409278::0::1::::<><>::res://Scripts/Zones/Temple/MainPage.gd<>uid://dlwvyo6ejssc::::res://Assets/Images/Resources/gold.png<>res://Scripts/Zones/Temple/ShopScript.gd<>uid://d3o00kxuo4h22::::res://Assets/Images/HUD/Menu/Loja/ScrollsBG.png<>uid://bav7b1tv76dwv::::res://Assets/Images/Resources/stone.png<>uid://ywre30ix5f7t::::res://Assets/Images/Resources/wood.png<>res://Scripts/Zones/Temple/PersonagemLoja.gd<>uid://cv1m856of8ntd::::res://Assets/Images/HUD/Menu/Loja/GoldPlace.png<>res://Scripts/Zones/Temple/Mineração.gd<>uid://costnafwkrulb::::res://Assets/Images/HUD/Menu/Loja/SilverPlace.png<>uid://12buwcnhifsh::::res://Scenes/Game/Constructions/Temple/OpcaoUpgrade.tscn<>uid://d0xhqa10j30ok::::res://icon.png<>uid://cg4c8qydgkpag::::res://Assets/Images/HUD/hearth2.png<>res://Scripts/Zones/Temple/Defender Point.gd<>uid://c8uedu3u1iprj::::res://Assets/Images/HUD/Menu/Loja/BarraMenu.png<>uid://by6650mb11t63::::res://Assets/Images/HUD/Menu/Loja/Zeus-Land.otf
+TempleScreen.tscn::PackedScene::3516894069668338984::1699412232::0::1::::<><>::res://Scripts/Zones/Temple/MainPage.gd<>uid://dlwvyo6ejssc::::res://Assets/Images/Resources/gold.png<>res://Scripts/Zones/Temple/ShopScript.gd<>uid://d3o00kxuo4h22::::res://Assets/Images/HUD/Menu/Loja/ScrollsBG.png<>uid://bav7b1tv76dwv::::res://Assets/Images/Resources/stone.png<>uid://ywre30ix5f7t::::res://Assets/Images/Resources/wood.png<>res://Scripts/Zones/Temple/PersonagemLoja.gd<>uid://cv1m856of8ntd::::res://Assets/Images/HUD/Menu/Loja/GoldPlace.png<>res://Scripts/Zones/Temple/Mineração.gd<>uid://costnafwkrulb::::res://Assets/Images/HUD/Menu/Loja/SilverPlace.png<>uid://12buwcnhifsh::::res://Scenes/Game/Constructions/Temple/OpcaoUpgrade.tscn<>uid://d0xhqa10j30ok::::res://icon.png<>uid://cg4c8qydgkpag::::res://Assets/Images/HUD/hearth2.png<>res://Scripts/Zones/Temple/Defender Point.gd<>uid://c8uedu3u1iprj::::res://Assets/Images/HUD/Menu/Loja/BarraMenu.png<>uid://by6650mb11t63::::res://Assets/Images/HUD/Menu/Loja/Zeus-Land.otf
 ::res://Scenes/Game/Constructions/Upgrades/::1693530105
 Upgrade_DivinePower.tscn::PackedScene::5934221330587974523::1693530105::0::1::::<><>::uid://b3kqyirv866yr
 Upgrade_Fighters.tscn::PackedScene::2735891316309052305::1693530105::0::1::::<><>::uid://okfxk5dm5ug1
@@ -614,15 +621,15 @@ Id018.tscn::PackedScene::4984990590460644455::1699235916::0::1::::<><>::uid://de
 ::res://Scenes/Game/Enemies/id020/::1699235916
 Id020.tscn::PackedScene::7660765656886475688::1699235916::0::1::::<><>::uid://drecbbk36q6mm
 Poison.tscn::PackedScene::8804950772704332267::1699235916::0::1::::<><>::res://Scripts/Instances/Poison.gd<>uid://dqkp5kvh3xg02
-::res://Scenes/MainScenes/::1699409278
+::res://Scenes/MainScenes/::1699412232
 Fatality.tscn::PackedScene::3830635802989632452::1699309880::0::1::::<><>::res://Scripts/MainScenes/Fatality.gd<>res://Assets/Videos/fatality.ogv<>uid://ptqt4rl1wcxb
 Game_ViewPort.tscn::PackedScene::7418050984438387124::1699310131::0::1::::<><>::uid://cb86td4m1hepw
 Loading.tscn::PackedScene::1350444753072594925::1699308389::0::1::::<><>::res://Scripts/MainScenes/Loading.gd<>uid://ck3g1itamcpq4
-Menu.tscn::PackedScene::962977223449213015::1699409278::0::1::::<><>::res://Scripts/MainScenes/Menu.gd<>uid://dxsn2vwpfc331::::res://Assets/Sounds/HadoukenTheme.mp3<>res://Assets/Videos/SaveTube.io-Age of Mythology_ Extended Edition Trailer.ogv<>uid://ck3g1itamcpq4::::res://Assets/Images/HUD/Menu/Loading/Loading.png<>res://Assets/Videos/SaveTube.io-Brotato - Full Release Trailer.ogv<>res://Assets/Videos/SaveTube.io-Dome Keeper - Official Gameplay Trailer _ gamescom 2022.ogv<>res://Assets/Videos/SaveTube.io-Hades - Official Animated Trailer.ogv<>uid://sjurjligld2w::::res://Assets/Images/HUD/Menu/TelaInicial/Start.png<>uid://bols0eex6rqm1::::res://Assets/Images/HUD/Menu/TelaInicial/Options.png<>uid://b2mt6e56ww2ib::::res://Assets/Images/HUD/Menu/TelaInicial/Exit Game.png<>uid://c0a2sh2hav88b::::res://Assets/Images/HUD/Menu/TelaInicial/Logo.png<>uid://bp2fev63ddu0m::::res://Assets/Images/HUD/Menu/TelaInicial/OptionsMenu.png<>uid://y4cb32e15uex::::res://Assets/Images/HUD/Menu/TelaInicial/BgSlider.png<>uid://c850gnqtwl08x::::res://Assets/Images/HUD/Menu/TelaInicial/Grabber.png<>uid://c6s416pvvh4yw::::res://Assets/Images/HUD/Menu/TelaInicial/slider.png
-::res://Scripts/::1699240572
+Menu.tscn::PackedScene::962977223449213015::1699412232::0::1::::<><>::res://Scripts/MainScenes/Menu.gd<>uid://dxsn2vwpfc331::::res://Assets/Sounds/HadoukenTheme.mp3<>res://Assets/Videos/SaveTube.io-Age of Mythology_ Extended Edition Trailer.ogv<>res://Assets/Videos/SaveTube.io-Brotato - Full Release Trailer.ogv<>res://Assets/Videos/SaveTube.io-Dome Keeper - Official Gameplay Trailer _ gamescom 2022.ogv<>res://Assets/Videos/SaveTube.io-Hades - Official Animated Trailer.ogv<>uid://sjurjligld2w::::res://Assets/Images/HUD/Menu/TelaInicial/Start.png<>uid://bols0eex6rqm1::::res://Assets/Images/HUD/Menu/TelaInicial/Options.png<>uid://b2mt6e56ww2ib::::res://Assets/Images/HUD/Menu/TelaInicial/Exit Game.png<>uid://c0a2sh2hav88b::::res://Assets/Images/HUD/Menu/TelaInicial/Logo.png<>uid://bp2fev63ddu0m::::res://Assets/Images/HUD/Menu/TelaInicial/OptionsMenu.png<>uid://y4cb32e15uex::::res://Assets/Images/HUD/Menu/TelaInicial/BgSlider.png<>uid://c850gnqtwl08x::::res://Assets/Images/HUD/Menu/TelaInicial/Grabber.png<>uid://c6s416pvvh4yw::::res://Assets/Images/HUD/Menu/TelaInicial/slider.png
+::res://Scripts/::1699411703
 explosion.gd::GDScript::-1::1699235916::0::1::::<>Node2D<>::
 Global.gd::GDScript::-1::1699235916::0::1::::<>Node<>::
-OptionsController.gd::GDScript::-1::1699240571::0::1::::<>Node<>::
+OptionsController.gd::GDScript::-1::1699411703::0::1::::<>Node<>::
 PreLoads.gd::GDScript::-1::1699235916::0::1::::<>Node<>::
 ::res://Scripts/Classes/::1695242543
 ::res://Scripts/Classes/Warrior/::1699235916
@@ -712,11 +719,11 @@ Poison.gd::GDScript::-1::1699235916::0::1::::<>Node2D<>::
 Ryuseiken.gd::GDScript::-1::1699235916::0::1::::<>Node2D<>::
 TowerProjectile.gd::GDScript::-1::1699235916::0::1::::<>Node2D<>::
 Turrets.gd::GDScript::-1::1699235916::0::1::::<>Node2D<>::
-::res://Scripts/MainScenes/::1699404321
+::res://Scripts/MainScenes/::1699412231
 Fatality.gd::GDScript::-1::1699304489::0::1::::<>Node2D<>::
 FPS.gd::GDScript::-1::1699235916::0::1::::<>Label<>::
 Loading.gd::GDScript::-1::1699306775::0::1::::<>Node2D<>::
-Menu.gd::GDScript::-1::1699404321::0::1::::<>Node2D<>::
+Menu.gd::GDScript::-1::1699412231::0::1::::<>Node2D<>::
 ::res://Scripts/MainScenes/Game_ViewPort/::1699235916
 Camera2D.gd::GDScript::-1::1699235916::0::1::::<>Camera2D<>::
 HUD.gd::GDScript::-1::1699235916::0::1::::<>Node2D<>::

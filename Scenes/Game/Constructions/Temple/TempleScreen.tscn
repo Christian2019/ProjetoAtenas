@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bqduy4u8regjo"]
+[gd_scene load_steps=23 format=3 uid="uid://bqduy4u8regjo"]
 
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/MainPage.gd" id="1_n2wv5"]
 [ext_resource type="Texture2D" uid="uid://dlwvyo6ejssc" path="res://Assets/Images/Resources/gold.png" id="2_2mha2"]
@@ -11,11 +11,17 @@
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/Mineração.gd" id="6_b0i47"]
 [ext_resource type="Texture2D" uid="uid://costnafwkrulb" path="res://Assets/Images/HUD/Menu/Loja/SilverPlace.png" id="6_m6do7"]
 [ext_resource type="PackedScene" uid="uid://12buwcnhifsh" path="res://Scenes/Game/Constructions/Temple/OpcaoUpgrade.tscn" id="7_ydes4"]
-[ext_resource type="Texture2D" uid="uid://d0xhqa10j30ok" path="res://icon.png" id="8_l0soo"]
-[ext_resource type="Texture2D" uid="uid://cg4c8qydgkpag" path="res://Assets/Images/HUD/hearth2.png" id="10_g6gdm"]
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/Defender Point.gd" id="10_imkf7"]
+[ext_resource type="Texture2D" uid="uid://ds8fkfe2b44uc" path="res://Assets/Images/HUD/Menu/Loja/UpgradeBasico.png" id="12_tm2sq"]
 [ext_resource type="Texture2D" uid="uid://c8uedu3u1iprj" path="res://Assets/Images/HUD/Menu/Loja/BarraMenu.png" id="12_wrag8"]
 [ext_resource type="FontFile" uid="uid://by6650mb11t63" path="res://Assets/Images/HUD/Menu/Loja/Zeus-Land.otf" id="13_joos0"]
+[ext_resource type="Texture2D" uid="uid://dx83lcis0ssks" path="res://Assets/Images/HUD/Menu/Loja/UpgradeBasicoDisabled.png" id="13_o7cni"]
+[ext_resource type="Texture2D" uid="uid://bxlkl8jhrqjq" path="res://Assets/Images/HUD/Menu/Loja/UpgradeBom.png" id="14_x4dx6"]
+[ext_resource type="Texture2D" uid="uid://djg333laep3ki" path="res://Assets/Images/HUD/Menu/Loja/UpgradeBomDisabled.png" id="15_lo5ge"]
+[ext_resource type="Texture2D" uid="uid://ocl45bc560sp" path="res://Assets/Images/HUD/Menu/Loja/UpgradeOtimo.png" id="16_4tynt"]
+[ext_resource type="Texture2D" uid="uid://efnqpuym4ky7" path="res://Assets/Images/HUD/Menu/Loja/UpgradeOtimoDisabled.png" id="17_lssqg"]
+[ext_resource type="Texture2D" uid="uid://0g3d0j10xbcd" path="res://Assets/Images/HUD/Menu/Loja/UpgradeFinal.png" id="18_7qydp"]
+[ext_resource type="Texture2D" uid="uid://d4le03ry5qqhc" path="res://Assets/Images/HUD/Menu/Loja/UpgradeFinalBasico.png" id="19_d7qw2"]
 
 [node name="TempleScreen" type="Node2D"]
 script = ExtResource("1_n2wv5")
@@ -701,10 +707,10 @@ color = Color(0.486275, 0.462745, 0.466667, 1)
 
 [node name="Title" type="Label" parent="BG/Mineração/STATUS"]
 layout_mode = 0
-offset_left = 97.0
-offset_top = -1.0
-offset_right = 137.0
-offset_bottom = 25.0
+offset_left = 94.0
+offset_top = 6.0
+offset_right = 143.0
+offset_bottom = 32.0
 text = "Status
 "
 
@@ -717,8 +723,8 @@ scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Power"
 valor = 2
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("12_tm2sq")
+textura_disable = ExtResource("13_o7cni")
 
 [node name="Level2" parent="BG/Mineração/POWER" instance=ExtResource("7_ydes4")]
 position = Vector2(219, 131)
@@ -726,24 +732,24 @@ scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Power"
 valor = 2
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("14_x4dx6")
+textura_disable = ExtResource("15_lo5ge")
 
 [node name="Level3" parent="BG/Mineração/POWER" instance=ExtResource("7_ydes4")]
 position = Vector2(381, 131)
 scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Power"
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("16_4tynt")
+textura_disable = ExtResource("17_lssqg")
 
 [node name="Level4" parent="BG/Mineração/POWER" instance=ExtResource("7_ydes4")]
 position = Vector2(541, 131)
 scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Power"
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("18_7qydp")
+textura_disable = ExtResource("19_d7qw2")
 
 [node name="LUCK" type="Node2D" parent="BG/Mineração"]
 position = Vector2(-2, -124)
@@ -754,8 +760,8 @@ scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Luck"
 valor = 2
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("12_tm2sq")
+textura_disable = ExtResource("13_o7cni")
 
 [node name="Level2" parent="BG/Mineração/LUCK" instance=ExtResource("7_ydes4")]
 position = Vector2(248, 383)
@@ -763,24 +769,24 @@ scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Luck"
 valor = 2
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("14_x4dx6")
+textura_disable = ExtResource("15_lo5ge")
 
 [node name="Level3" parent="BG/Mineração/LUCK" instance=ExtResource("7_ydes4")]
 position = Vector2(410, 383)
 scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Luck"
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("16_4tynt")
+textura_disable = ExtResource("17_lssqg")
 
 [node name="Level4" parent="BG/Mineração/LUCK" instance=ExtResource("7_ydes4")]
 position = Vector2(570, 383)
 scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Luck"
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("18_7qydp")
+textura_disable = ExtResource("19_d7qw2")
 
 [node name="IDK" type="Node2D" parent="BG/Mineração"]
 position = Vector2(3, 40)
@@ -791,8 +797,8 @@ scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "IDK"
 valor = 2
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("12_tm2sq")
+textura_disable = ExtResource("13_o7cni")
 
 [node name="Level2" parent="BG/Mineração/IDK" instance=ExtResource("7_ydes4")]
 position = Vector2(248, 383)
@@ -800,24 +806,24 @@ scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "IDK"
 valor = 2
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("14_x4dx6")
+textura_disable = ExtResource("15_lo5ge")
 
 [node name="Level3" parent="BG/Mineração/IDK" instance=ExtResource("7_ydes4")]
 position = Vector2(410, 383)
 scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "IDK"
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("16_4tynt")
+textura_disable = ExtResource("17_lssqg")
 
 [node name="Level4" parent="BG/Mineração/IDK" instance=ExtResource("7_ydes4")]
 position = Vector2(570, 383)
 scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "IDK"
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("18_7qydp")
+textura_disable = ExtResource("19_d7qw2")
 
 [node name="Personagem" type="Node2D" parent="BG"]
 visible = false
@@ -859,32 +865,32 @@ position = Vector2(64, 110)
 scale = Vector2(2, 2)
 whatUpgrades = "Attack"
 valor = 5
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("12_tm2sq")
+textura_disable = ExtResource("13_o7cni")
 
 [node name="Level2" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
 position = Vector2(231, 110)
 scale = Vector2(2, 2)
 whatUpgrades = "Attack"
 valor = 10
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("14_x4dx6")
+textura_disable = ExtResource("15_lo5ge")
 
 [node name="Level3" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
 position = Vector2(393, 110)
 scale = Vector2(2, 2)
 whatUpgrades = "Attack"
 valor = 15
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("16_4tynt")
+textura_disable = ExtResource("17_lssqg")
 
 [node name="Level4" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
 position = Vector2(553, 110)
 scale = Vector2(2, 2)
 whatUpgrades = "Attack"
 valor = 20
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("18_7qydp")
+textura_disable = ExtResource("19_d7qw2")
 
 [node name="Level Defesa" type="Node2D" parent="BG/Personagem"]
 
@@ -893,32 +899,32 @@ position = Vector2(98, 367)
 scale = Vector2(2, 2)
 whatUpgrades = "Defense"
 valor = 5
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("12_tm2sq")
+textura_disable = ExtResource("13_o7cni")
 
 [node name="Level2" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
 position = Vector2(265, 367)
 scale = Vector2(2, 2)
 whatUpgrades = "Defense"
 valor = 10
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("14_x4dx6")
+textura_disable = ExtResource("15_lo5ge")
 
 [node name="Level3" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
 position = Vector2(427, 367)
 scale = Vector2(2, 2)
 whatUpgrades = "Defense"
 valor = 15
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("16_4tynt")
+textura_disable = ExtResource("17_lssqg")
 
 [node name="Level4" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
 position = Vector2(587, 367)
 scale = Vector2(2, 2)
 whatUpgrades = "Defense"
 valor = 20
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("18_7qydp")
+textura_disable = ExtResource("19_d7qw2")
 
 [node name="Warning2" type="Button" parent="BG/Personagem"]
 visible = false
@@ -1004,8 +1010,8 @@ scale = Vector2(2, 2)
 areaUpgrades = 1
 whatUpgrades = "Heal Delay"
 valor = 2
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("12_tm2sq")
+textura_disable = ExtResource("13_o7cni")
 
 [node name="Level2" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
 position = Vector2(231, 110)
@@ -1013,24 +1019,24 @@ scale = Vector2(2, 2)
 areaUpgrades = 1
 whatUpgrades = "Heal Delay"
 valor = 2
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("14_x4dx6")
+textura_disable = ExtResource("15_lo5ge")
 
 [node name="Level3" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
 position = Vector2(393, 110)
 scale = Vector2(2, 2)
 areaUpgrades = 1
 whatUpgrades = "Heal Delay"
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("16_4tynt")
+textura_disable = ExtResource("17_lssqg")
 
 [node name="Level4" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
 position = Vector2(553, 110)
 scale = Vector2(2, 2)
 areaUpgrades = 1
 whatUpgrades = "Heal Delay"
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("18_7qydp")
+textura_disable = ExtResource("19_d7qw2")
 
 [node name="Health Delay" type="Node2D" parent="BG/Defender Point"]
 
@@ -1040,8 +1046,8 @@ scale = Vector2(2, 2)
 areaUpgrades = 1
 whatUpgrades = "Max HP"
 valor = 2
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("12_tm2sq")
+textura_disable = ExtResource("13_o7cni")
 
 [node name="Level2" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
 position = Vector2(265, 367)
@@ -1049,8 +1055,8 @@ scale = Vector2(2, 2)
 areaUpgrades = 1
 whatUpgrades = "Max HP"
 valor = 2
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("14_x4dx6")
+textura_disable = ExtResource("15_lo5ge")
 
 [node name="Level3" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
 position = Vector2(427, 367)
@@ -1058,8 +1064,8 @@ scale = Vector2(2, 2)
 areaUpgrades = 1
 whatUpgrades = "Max HP"
 valor = 4
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("16_4tynt")
+textura_disable = ExtResource("17_lssqg")
 
 [node name="Level4" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
 position = Vector2(587, 367)
@@ -1067,8 +1073,8 @@ scale = Vector2(2, 2)
 areaUpgrades = 1
 whatUpgrades = "Max HP"
 valor = 5
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+textura = ExtResource("18_7qydp")
+textura_disable = ExtResource("19_d7qw2")
 
 [node name="MenuPrincipal" type="Sprite2D" parent="BG"]
 position = Vector2(519.5, 24.5)
@@ -1080,22 +1086,22 @@ position = Vector2(-984.849, -43.3889)
 scale = Vector2(1.88488, 1.57778)
 
 [node name="Ouro" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 824.932
-offset_top = 10.0
-offset_right = 864.932
-offset_bottom = 33.0
+offset_left = 16.9869
+offset_top = 13.0
+offset_right = 56.9869
+offset_bottom = 36.0
 
 [node name="Wood" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 901.932
-offset_top = 10.0
-offset_right = 941.932
-offset_bottom = 33.0
+offset_left = 93.9869
+offset_top = 13.0
+offset_right = 133.987
+offset_bottom = 36.0
 
 [node name="Stone" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 989.932
-offset_top = 10.0
-offset_right = 1029.93
-offset_bottom = 33.0
+offset_left = 181.987
+offset_top = 13.0
+offset_right = 221.985
+offset_bottom = 36.0
 
 [node name="Abas" type="Node2D" parent="BG/MenuPrincipal"]
 position = Vector2(-984.849, -43.3889)
