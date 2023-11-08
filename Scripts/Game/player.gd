@@ -274,6 +274,10 @@ func attack2Controller():
 		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position
 		
+		animAttacking=true
+		playAnimation ("Attack2")
+		$Animation.speed_scale=attack_Speed
+		
 		
 func turretController():
 	var classChild=2	
@@ -290,7 +294,8 @@ func dashController():
 		var attackInstance = creatAttackInstance(classChild)
 		attackInstance.direction= lastMovement
 		add_child(attackInstance)
-		enableDisableAnimation()
+		playAnimation("Dash")
+		
 		
 func enableDisableAnimation():
 	if($Animation.is_playing()):
@@ -399,5 +404,5 @@ func _on_timer_timeout():
 
 
 func _on_animation_animation_looped():
-	if (animAttacking):
+	if (animAttacking and !Input.is_action_pressed("Attack1")):
 		animAttacking=false

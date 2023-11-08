@@ -1,4 +1,4 @@
-[gd_scene load_steps=242 format=3 uid="uid://cq8fbkkwauxoo"]
+[gd_scene load_steps=245 format=3 uid="uid://cq8fbkkwauxoo"]
 
 [ext_resource type="Script" path="res://Scripts/Game/player.gd" id="1_s0uo2"]
 [ext_resource type="Texture2D" uid="uid://b458d64brhd6n" path="res://Assets/Images/Player/Attacks Animations/attack1/Down/attack1_0_001.png" id="2_i3e1j"]
@@ -10,7 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://dq86388qxvwk" path="res://Assets/Images/Player/axe_spin_spritesheet.png" id="4_n0xky"]
 [ext_resource type="Texture2D" uid="uid://dttx3lhhujtyk" path="res://Assets/Images/Player/Move Animations/normal/idle/Down/idle_0_007.png" id="4_s3jhk"]
 [ext_resource type="Texture2D" uid="uid://c3331bw3qaxvy" path="res://Assets/Images/Player/Move Animations/normal/idle/Down/idle_0_010.png" id="5_cd8p5"]
+[ext_resource type="Texture2D" uid="uid://5rko4ueqg1hi" path="res://Assets/Images/Player/Attacks Animations/attack1/Down/attack1_0_010.png" id="5_cdccd"]
 [ext_resource type="Texture2D" uid="uid://dla7cy24g5gq" path="res://Assets/Images/Player/Move Animations/normal/idle/Down/idle_0_013.png" id="6_dj62s"]
+[ext_resource type="Texture2D" uid="uid://bjkv8dxj4xc88" path="res://Assets/Images/Player/Attacks Animations/attack1/Down/attack1_0_013.png" id="6_p4gs5"]
+[ext_resource type="Texture2D" uid="uid://p1c7kq4368h2" path="res://Assets/Images/Player/Attacks Animations/attack1/Down/attack1_0_016.png" id="7_5vadi"]
 [ext_resource type="Texture2D" uid="uid://cpdjgm88qq1gf" path="res://Assets/Images/Player/Move Animations/normal/idle/Down/idle_0_016.png" id="7_t15ys"]
 [ext_resource type="Texture2D" uid="uid://bysjedspnupfd" path="res://Assets/Images/Player/Move Animations/normal/idle/Down/idle_0_019.png" id="8_x34gk"]
 [ext_resource type="Texture2D" uid="uid://c03xekta4vvch" path="res://Assets/Images/Player/Move Animations/normal/idle/Down/idle_0_022.png" id="9_chniq"]
@@ -236,6 +239,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_n0vk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cdccd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p4gs5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5vadi")
 }],
 "loop": true,
 "name": &"Attack1_Down",
@@ -429,7 +441,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack2_Down",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -458,7 +470,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack2_Down_Left",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -487,7 +499,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack2_Down_Right",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -516,7 +528,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack2_Left",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -545,7 +557,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack2_Right",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -574,7 +586,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack2_Up",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -603,7 +615,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack2_Up_Left",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -632,7 +644,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack2_Up_Right",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,

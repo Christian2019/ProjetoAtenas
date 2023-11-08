@@ -69,7 +69,6 @@ func _process(_delta):
 func animation():
 	if ($Animation.visible):
 		return
-	$Animation.stop()
 	$Animation.visible=true
 	$Animation.frame=0
 	if direction=="NE":
