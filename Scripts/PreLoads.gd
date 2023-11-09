@@ -125,7 +125,7 @@ var warrior_attack1_poseidon_heavyDamage=preload("res://Scenes/Game/Classes/Warr
 #Attack2
 var warrior_attack2_noGod=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2/Warrior_attack2_noGod.tscn")
 var warrior_attack2_zeus=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2/Warrior_attack2_Zeus/Warrior_attack2_Zeus.tscn")
-var warrior_attack2_poseidon
+var warrior_attack2_poseidon=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2/Warrior_attack2_Poseidon/Warrior_attack2_Poseidon.tscn")
 var warrior_attack2_hades
 var warrior_attack2_divine_ZeusPoseidon
 var warrior_attack2_divine_ZeusHades

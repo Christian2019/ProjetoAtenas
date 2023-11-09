@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://m4d3h3t4vkgd"]
+
+[ext_resource type="Texture2D" uid="uid://dlqhxsqkwov8y" path="res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon/scene00046.png" id="2_sk8lv"]
+[ext_resource type="Texture2D" uid="uid://dc2xdcu1t7be5" path="res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon/scene00049.png" id="3_h0tdq"]
+[ext_resource type="Texture2D" uid="uid://b23fte7rbukrm" path="res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon/scene00052.png" id="4_mswm6"]
+[ext_resource type="Texture2D" uid="uid://dl376361wu8l6" path="res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon/scene00055.png" id="5_42emp"]
+[ext_resource type="Texture2D" uid="uid://qt4muydn4cfd" path="res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon/scene00058.png" id="6_73vit"]
+[ext_resource type="Texture2D" uid="uid://cx0yv3moxfafr" path="res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon/scene00061.png" id="7_rwny0"]
+[ext_resource type="Texture2D" uid="uid://85g51jhax7ra" path="res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon/scene00064.png" id="8_37gq1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_60aqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sk8lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_h0tdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mswm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_42emp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_73vit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rwny0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_37gq1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 14.0
+}]
+
+[node name="Explosion" type="Node2D"]
+scale = Vector2(0.2, 0.2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1065, 155)
+scale = Vector2(3, 2.33)
+sprite_frames = SubResource("SpriteFrames_60aqq")
+autoplay = "default"
+frame_progress = 0.23656

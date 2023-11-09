@@ -3,9 +3,12 @@ extends Node2D
 var dead = false
 
 ##Stats
-var maxHp=99999
+var baseMaxHp=99999
+var maxHpPercentBonus=0
+var maxHp=baseMaxHp
 var hp = maxHp
 var hpRegeneration=0
+
 var lifeStealChance=0.1
 var percentDamage=1.0
 var baseDamage=1.0
@@ -77,7 +80,8 @@ func _process(__delta):
 		dead=true
 		restartGame()
 		return
-
+	
+	hpController()
 	animationController()
 	commandController()	
 	getCloserQuadrant()
@@ -86,6 +90,9 @@ func _process(__delta):
 	feedback()
 	
 	#contruction()
+
+func hpController():
+	maxHp=baseMaxHp*(1+maxHpPercentBonus)	
 
 func restartGame():
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/Fatality.tscn")
