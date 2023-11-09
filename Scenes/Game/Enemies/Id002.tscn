@@ -1,0 +1,94 @@
+[gd_scene load_steps=16 format=3 uid="uid://c87ohykj2km0w"]
+
+[ext_resource type="Script" path="res://Scripts/Enemies/Id002.gd" id="1_vjvok"]
+[ext_resource type="Texture2D" uid="uid://b438i34mtljlq" path="res://Assets/Images/Enemies/lootGoblin/scene00001-removebg-preview.png" id="2_j2x6n"]
+[ext_resource type="Texture2D" uid="uid://be73topmjvrh5" path="res://Assets/Images/Enemies/lootGoblin/scene00004-removebg-preview.png" id="3_gwf54"]
+[ext_resource type="Texture2D" uid="uid://b22fgxilfk7ui" path="res://Assets/Images/Enemies/lootGoblin/scene00007-removebg-preview.png" id="4_cf21f"]
+[ext_resource type="Texture2D" uid="uid://c8qqh18bfhrre" path="res://Assets/Images/Enemies/lootGoblin/scene00010-removebg-preview.png" id="5_87que"]
+[ext_resource type="Texture2D" uid="uid://bu236ja2jtxww" path="res://Assets/Images/Enemies/lootGoblin/scene00013-removebg-preview.png" id="6_qjbn1"]
+[ext_resource type="Texture2D" uid="uid://cqu14v4aatk5y" path="res://Assets/Images/Enemies/lootGoblin/scene00016-removebg-preview.png" id="7_6uqmu"]
+[ext_resource type="Texture2D" uid="uid://b1nv52lmplx60" path="res://Assets/Images/Enemies/lootGoblin/scene00019-removebg-preview.png" id="8_ampwf"]
+[ext_resource type="Texture2D" uid="uid://c2tuco2s81leq" path="res://Assets/Images/Enemies/lootGoblin/scene00022-removebg-preview.png" id="9_gb2k3"]
+[ext_resource type="Texture2D" uid="uid://ci5bijn3jycdb" path="res://Assets/Images/Enemies/lootGoblin/scene00025-removebg-preview.png" id="10_kbwwf"]
+[ext_resource type="Texture2D" uid="uid://diagcugtmothr" path="res://Assets/Images/Enemies/lootGoblin/scene00028-removebg-preview.png" id="11_k6x67"]
+[ext_resource type="Texture2D" uid="uid://bn7khd6kwk6yu" path="res://Assets/Images/Enemies/lootGoblin/scene00031-removebg-preview.png" id="12_gxigv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j2x6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gwf54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cf21f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_87que")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qjbn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6uqmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ampwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gb2k3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kbwwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_k6x67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gxigv")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
+size = Vector2(57, 73)
+
+[sub_resource type="Theme" id="Theme_teygp"]
+
+[node name="Id002" type="Node2D"]
+script = ExtResource("1_vjvok")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.191476, 0.191476)
+sprite_frames = SubResource("SpriteFrames_grjig")
+animation = &"Walking"
+frame = 2
+frame_progress = 0.724325
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.5, 1.5)
+shape = SubResource("RectangleShape2D_pmar3")
+
+[node name="HPBar" type="Node2D" parent="."]
+
+[node name="Red" type="ColorRect" parent="HPBar"]
+modulate = Color(1, 0.231373, 0.231373, 1)
+offset_left = -38.0
+offset_top = -47.0
+offset_right = 37.0
+offset_bottom = -34.0
+theme = SubResource("Theme_teygp")
+
+[node name="Green" type="ColorRect" parent="HPBar"]
+modulate = Color(0.486275, 1, 0.231373, 1)
+offset_left = -38.0
+offset_top = -47.0
+offset_right = 37.0
+offset_bottom = -34.0
+theme = SubResource("Theme_teygp")

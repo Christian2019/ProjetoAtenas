@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://xtyky0e04pef"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/WarriorArrow.gd" id="1_3p04k"]
+[ext_resource type="Texture2D" uid="uid://dp4loji1m11id" path="res://Assets/Images/Player/arrows.png" id="1_oedo5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flm4l"]
+atlas = ExtResource("1_oedo5")
+region = Rect2(0, 54, 238, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnvgq"]
+atlas = ExtResource("1_oedo5")
+region = Rect2(0, 108, 238, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2r4x"]
+atlas = ExtResource("1_oedo5")
+region = Rect2(0, 0, 238, 54)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_60aqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_flm4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnvgq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2r4x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ramb3"]
+size = Vector2(239, 30)
+
+[node name="WarriorArrow" type="Node2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_3p04k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_60aqq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, -1)
+shape = SubResource("RectangleShape2D_ramb3")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://11lwe4tsc4jq"]
+
+[ext_resource type="Texture2D" uid="uid://ctfbwirbhiqcg" path="res://Assets/Images/Player/Ultimates/Hades/Cerberus/Moving/scene00025.png" id="1_15bvb"]
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimateHades/cerberus.gd" id="1_appgw"]
+[ext_resource type="Texture2D" uid="uid://cgh3rrcv30qc0" path="res://Assets/Images/Player/Ultimates/Hades/Cerberus/Moving/scene00028.png" id="2_1ty68"]
+[ext_resource type="Texture2D" uid="uid://5xyoj3n1785r" path="res://Assets/Images/Player/Ultimates/Hades/Cerberus/Moving/scene00031.png" id="3_068tq"]
+[ext_resource type="Texture2D" uid="uid://bhuj15oqfqx15" path="res://Assets/Images/Player/Ultimates/Hades/Cerberus/Moving/scene00034.png" id="4_r7tvj"]
+[ext_resource type="AudioStream" uid="uid://6vxqkqxmxy7l" path="res://Assets/Sounds/Player/Ultimates/Hades/roar.mp3" id="5_tywpv"]
+[ext_resource type="Texture2D" uid="uid://c1je4d3keaeex" path="res://Assets/Images/Player/Ultimates/Hades/Cerberus/Eyes.png" id="6_22p43"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_15bvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1ty68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_068tq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r7tvj")
+}],
+"loop": true,
+"name": &"Moving",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
+size = Vector2(315, 207)
+
+[node name="cerberus" type="Node2D"]
+script = ExtResource("1_appgw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+scale = Vector2(0.657792, 0.657792)
+sprite_frames = SubResource("SpriteFrames_grjig")
+animation = &"Moving"
+autoplay = "Moving"
+frame_progress = 0.125818
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, 0.5)
+shape = SubResource("RectangleShape2D_pmar3")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_tywpv")
+volume_db = 9.905
+autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(36.0218, 25.4375)
+scale = Vector2(0.14006, 0.14006)
+texture = ExtResource("6_22p43")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

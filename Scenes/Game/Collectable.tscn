@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://kdg6o1rvx61b"]
 
-[ext_resource type="Script" path="res://Scripts/Collectable.gd" id="1_x44qc"]
+[ext_resource type="Script" path="res://Scripts/Instances/Collectable.gd" id="1_x44qc"]
 [ext_resource type="Texture2D" uid="uid://dbufixsjomww" path="res://Assets/Images/Resources/collectable/gold.png" id="1_xew8d"]
 [ext_resource type="Texture2D" uid="uid://dndlk5n0181fe" path="res://Assets/Images/Resources/collectable/stone.png" id="2_xmdqk"]
 [ext_resource type="Texture2D" uid="uid://ckthj0i3eeeaj" path="res://Assets/Images/Resources/collectable/wood.png" id="3_t4vjk"]
@@ -39,7 +39,7 @@ script = ExtResource("1_x44qc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6j8pb")
-animation = &"wood"
+animation = &"gold"
 
 [node name="Area2D" type="Area2D" parent="."]
 

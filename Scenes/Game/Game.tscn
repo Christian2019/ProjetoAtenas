@@ -1,24 +1,49 @@
-[gd_scene load_steps=19 format=3 uid="uid://cb86td4m1hepw"]
+[gd_scene load_steps=28 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="1_28pgp"]
-[ext_resource type="Script" path="res://Scripts/Game.gd" id="1_ff1wb"]
-[ext_resource type="Script" path="res://Scripts/BackgroundMusic.gd" id="2_1c6e5"]
-[ext_resource type="Script" path="res://Scripts/WaveController.gd" id="2_fwy3j"]
-[ext_resource type="Script" path="res://Scripts/SoundController.gd" id="3_fm8f8"]
+[ext_resource type="Script" path="res://Scripts/Game/Game.gd" id="1_mli3i"]
+[ext_resource type="PackedScene" uid="uid://bnbfdi1wf6kki" path="res://Scenes/Game/Math_controller/Math_controller.tscn" id="2_7njp2"]
+[ext_resource type="PackedScene" uid="uid://d2y033wavrob3" path="res://Scenes/Game/Wave_controller.tscn" id="2_ixmr8"]
+[ext_resource type="Script" path="res://Scripts/Game/SoundController.gd" id="3_g1b5a"]
 [ext_resource type="PackedScene" uid="uid://ba8lsakijrbpv" path="res://Scenes/Game/tiles.tscn" id="3_lg0li"]
 [ext_resource type="PackedScene" uid="uid://bqji3jr451ges" path="res://Scenes/Game/matriz.tscn" id="4_di3q4"]
 [ext_resource type="AudioStream" uid="uid://cg4ug0aknwkdt" path="res://Assets/Sounds/Wave.mp3" id="4_uxdaf"]
+[ext_resource type="Script" path="res://Scripts/Game/BackgroundMusic.gd" id="5_cydk0"]
 [ext_resource type="PackedScene" uid="uid://cq8fbkkwauxoo" path="res://Scenes/Game/player.tscn" id="5_x6q60"]
+[ext_resource type="AudioStream" uid="uid://b44vxel7hbyp4" path="res://Assets/Sounds/Player/Dash.mp3" id="7_wo1sy"]
+[ext_resource type="AudioStream" uid="uid://b3exwrsopj804" path="res://Assets/Sounds/Game/Resources/dracma.mp3" id="8_a6cos"]
 [ext_resource type="PackedScene" uid="uid://cx37jdnas0rb1" path="res://Scenes/Game/Constructions/center.tscn" id="9_06qfi"]
-[ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple.tscn" id="10_v6y37"]
-[ext_resource type="PackedScene" uid="uid://dtu5sjvquowls" path="res://Scenes/Game/Constructions/Defenses/Tower.tscn" id="11_arq70"]
-[ext_resource type="Script" path="res://Scripts/Towers.gd" id="14_1dkqe"]
+[ext_resource type="AudioStream" uid="uid://cla1mp3rm1x6x" path="res://Assets/Sounds/Game/Enemies/EliteMusic.mp3" id="9_km2ap"]
+[ext_resource type="PackedScene" uid="uid://cawqbopdr275u" path="res://Scenes/Game/Constructions/Temple/Temple.tscn" id="10_v6y37"]
+[ext_resource type="Texture2D" uid="uid://tgat8lil5tbh" path="res://Assets/Images/Background/map.png" id="11_8uskw"]
+[ext_resource type="Script" path="res://Scripts/Instances/Turrets.gd" id="13_2l3jl"]
+[ext_resource type="Script" path="res://Scripts/Zones/ModifyGround.gd" id="13_cmk2b"]
+[ext_resource type="Texture2D" uid="uid://djfg2b82q3e1v" path="res://Assets/Images/Background/Elementos/Lava.png" id="13_khncd"]
+[ext_resource type="Texture2D" uid="uid://b7hblsmp8buki" path="res://Assets/Images/Background/Elementos/Ice.png" id="14_1sbx1"]
+[ext_resource type="Texture2D" uid="uid://vr7n6dsjomd5" path="res://Assets/Images/Background/Elementos/Clouds.png" id="15_jndto"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ma21g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_khncd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1sbx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jndto")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.5
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcbql"]
 size = Vector2(2565, 196)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ndam"]
-size = Vector2(2437, 4732)
+size = Vector2(2441, 4727)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ac2oe"]
 size = Vector2(3152, 2751)
@@ -30,79 +55,122 @@ size = Vector2(8122, 1516.25)
 size = Vector2(5764.5, 1939.25)
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_ff1wb")
+script = ExtResource("1_mli3i")
 metadata/_edit_horizontal_guides_ = [2752.0]
 metadata/_edit_vertical_guides_ = [2560.0]
 
-[node name="WaveController" type="Node2D" parent="."]
-script = ExtResource("2_fwy3j")
+[node name="WaveController" parent="." instance=ExtResource("2_ixmr8")]
 
 [node name="SoundController" type="Node2D" parent="."]
-script = ExtResource("3_fm8f8")
+script = ExtResource("3_g1b5a")
 
 [node name="AOEMusic" type="AudioStreamPlayer" parent="SoundController"]
 stream = ExtResource("1_28pgp")
-script = ExtResource("2_1c6e5")
+script = ExtResource("5_cydk0")
 
 [node name="WaveMusic" type="AudioStreamPlayer" parent="SoundController"]
 stream = ExtResource("4_uxdaf")
 
-[node name="Tiles" parent="." instance=ExtResource("3_lg0li")]
+[node name="Dash" type="AudioStreamPlayer" parent="SoundController"]
+stream = ExtResource("7_wo1sy")
+volume_db = -20.0
+
+[node name="Dracma" type="Node2D" parent="SoundController"]
+
+[node name="Sound" type="AudioStreamPlayer" parent="SoundController/Dracma"]
+stream = ExtResource("8_a6cos")
+
+[node name="Sound2" type="AudioStreamPlayer" parent="SoundController/Dracma"]
+stream = ExtResource("8_a6cos")
+
+[node name="Sound3" type="AudioStreamPlayer" parent="SoundController/Dracma"]
+stream = ExtResource("8_a6cos")
+
+[node name="Sound4" type="AudioStreamPlayer" parent="SoundController/Dracma"]
+stream = ExtResource("8_a6cos")
+
+[node name="EliteMusic" type="AudioStreamPlayer" parent="SoundController"]
+stream = ExtResource("9_km2ap")
+
+[node name="Zones" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Zones"]
+position = Vector2(1280.5, 1377)
+scale = Vector2(2.92686, 3.55355)
+texture = ExtResource("11_8uskw")
+
+[node name="Mining Zones" parent="Zones" instance=ExtResource("3_lg0li")]
 position = Vector2(4, 192)
 scale = Vector2(4, 4)
 
-[node name="matriz" parent="." instance=ExtResource("4_di3q4")]
+[node name="ModifyGround" type="AnimatedSprite2D" parent="Zones"]
+visible = false
+position = Vector2(1281, 635.5)
+scale = Vector2(2.562, 3.29124)
+sprite_frames = SubResource("SpriteFrames_ma21g")
+script = ExtResource("13_cmk2b")
 
-[node name="Collectable_instances" type="Node2D" parent="."]
+[node name="BockedAreas" type="Area2D" parent="Zones"]
 
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="Center" parent="." instance=ExtResource("9_06qfi")]
-
-[node name="Player" parent="." instance=ExtResource("5_x6q60")]
-position = Vector2(1139, 997)
-scale = Vector2(1.289, 1.289)
-
-[node name="Towers" type="Node2D" parent="."]
-script = ExtResource("14_1dkqe")
-
-[node name="Tower" parent="Towers" instance=ExtResource("11_arq70")]
-position = Vector2(1214, 515)
-
-[node name="Tower2" parent="Towers" instance=ExtResource("11_arq70")]
-position = Vector2(1366, 516)
-
-[node name="Tower3" parent="Towers" instance=ExtResource("11_arq70")]
-position = Vector2(1216, 665)
-
-[node name="Tower4" parent="Towers" instance=ExtResource("11_arq70")]
-position = Vector2(1365, 666)
-
-[node name="ConstructionArea" type="Area2D" parent="."]
-
-[node name="Projectiles" type="Node2D" parent="."]
-
-[node name="Temple" parent="." instance=ExtResource("10_v6y37")]
-position = Vector2(1317, 1637)
-
-[node name="BockedAreas" type="Area2D" parent="."]
-
-[node name="CenterOfTheMap" type="CollisionShape2D" parent="BockedAreas"]
+[node name="CenterOfTheMap" type="CollisionShape2D" parent="Zones/BockedAreas"]
 position = Vector2(1277.5, 1377)
 shape = SubResource("RectangleShape2D_mcbql")
 
-[node name="LeftEdge" type="CollisionShape2D" parent="BockedAreas"]
-position = Vector2(-1222.5, 2361)
+[node name="LeftEdge" type="CollisionShape2D" parent="Zones/BockedAreas"]
+position = Vector2(-1220.5, 2363.5)
 shape = SubResource("RectangleShape2D_0ndam")
 
-[node name="RightEdge" type="CollisionShape2D" parent="BockedAreas"]
+[node name="RightEdge" type="CollisionShape2D" parent="Zones/BockedAreas"]
 position = Vector2(4137, 1371)
 shape = SubResource("RectangleShape2D_ac2oe")
 
-[node name="UpEdge" type="CollisionShape2D" parent="BockedAreas"]
+[node name="UpEdge" type="CollisionShape2D" parent="Zones/BockedAreas"]
 position = Vector2(1644, -757.875)
 shape = SubResource("RectangleShape2D_1cg8r")
 
-[node name="DownEdge" type="CollisionShape2D" parent="BockedAreas"]
+[node name="DownEdge" type="CollisionShape2D" parent="Zones/BockedAreas"]
 position = Vector2(2827.75, 3726.38)
 shape = SubResource("RectangleShape2D_7pbkn")
+
+[node name="Center" parent="Zones" instance=ExtResource("9_06qfi")]
+
+[node name="Temple" parent="Zones" instance=ExtResource("10_v6y37")]
+position = Vector2(1312, 1718)
+
+[node name="Matriz" parent="." instance=ExtResource("4_di3q4")]
+
+[node name="Player" parent="." instance=ExtResource("5_x6q60")]
+position = Vector2(1285, 667)
+scale = Vector2(1.289, 1.289)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Allies" type="Node2D" parent="."]
+
+[node name="Instances" type="Node2D" parent="."]
+
+[node name="Turrets" type="Node2D" parent="Instances"]
+script = ExtResource("13_2l3jl")
+
+[node name="Projectiles" type="Node2D" parent="Instances"]
+
+[node name="Collectable_instances" type="Node2D" parent="Instances"]
+
+[node name="X" type="Node2D" parent="Instances"]
+z_index = 1
+
+[node name="Dracmas" type="Node2D" parent="Instances"]
+
+[node name="Itens" type="Node2D" parent="Instances"]
+
+[node name="Ultimates" type="Node2D" parent="Instances"]
+
+[node name="Explosions" type="Node2D" parent="Instances"]
+
+[node name="MathController" parent="." instance=ExtResource("2_7njp2")]
+
+[node name="Night" type="ColorRect" parent="."]
+visible = false
+offset_right = 2570.0
+offset_bottom = 2758.0
+color = Color(0, 0, 0, 0.647059)

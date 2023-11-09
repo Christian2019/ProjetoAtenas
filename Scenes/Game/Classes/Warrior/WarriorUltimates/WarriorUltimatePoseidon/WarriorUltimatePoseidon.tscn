@@ -1,0 +1,94 @@
+[gd_scene load_steps=17 format=3 uid="uid://84hgoi4vtk6o"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon/WarriorUltimatePoseidon.gd" id="1_20pbk"]
+[ext_resource type="AudioStream" uid="uid://cjpd46uov0n5r" path="res://Assets/Sounds/Player/Ultimates/Poseidon/StormySeaSoundEffect.mp3" id="1_qwsk5"]
+[ext_resource type="AudioStream" uid="uid://bgv6hyuiwmur3" path="res://Assets/Sounds/Player/Ultimates/Poseidon/poseidonVoice.mp3" id="2_mj1mw"]
+[ext_resource type="Texture2D" uid="uid://bhkejanuwrdep" path="res://Assets/Images/Player/Ultimates/Poseidon/poseidonUltNoBackground.png" id="3_tiqx5"]
+[ext_resource type="Texture2D" uid="uid://b65ygmdu2ew38" path="res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00001.png" id="5_chvp7"]
+[ext_resource type="Texture2D" uid="uid://dkb1x566rqw1j" path="res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00004.png" id="6_1vn4c"]
+[ext_resource type="Texture2D" uid="uid://cm2fbud0jxswq" path="res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00007.png" id="7_tk1dq"]
+[ext_resource type="Texture2D" uid="uid://c4re64gd8pmae" path="res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00010.png" id="8_3uepq"]
+[ext_resource type="Texture2D" uid="uid://vet8ywocy7wl" path="res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00013.png" id="9_6lqli"]
+[ext_resource type="Texture2D" uid="uid://c2a4i77sxffv4" path="res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00016.png" id="10_g335x"]
+[ext_resource type="Texture2D" uid="uid://dki2jgiknqr5m" path="res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00019.png" id="11_dgc6h"]
+[ext_resource type="Texture2D" uid="uid://2i8o7mq6ul7u" path="res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00022.png" id="12_hmnh4"]
+[ext_resource type="Texture2D" uid="uid://dlnk0cf6xu7kq" path="res://Assets/Images/Player/Ultimates/Poseidon/kraken/krakenHead.png" id="13_4xka6"]
+[ext_resource type="AudioStream" uid="uid://dlicuauo3asxj" path="res://Assets/Sounds/Player/Ultimates/Poseidon/krakenSound.mp3" id="14_v3fha"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7yl5c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_chvp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1vn4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tk1dq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3uepq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6lqli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_g335x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dgc6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hmnh4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qckv"]
+size = Vector2(429.25, 242.625)
+
+[node name="WarriorUltimatePoseidon" type="Node2D"]
+script = ExtResource("1_20pbk")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_qwsk5")
+volume_db = -15.0
+autoplay = true
+
+[node name="Voice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_mj1mw")
+volume_db = -10.0
+autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-2, -117)
+scale = Vector2(0.305556, 0.305556)
+texture = ExtResource("3_tiqx5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.708963, 0.859972)
+sprite_frames = SubResource("SpriteFrames_7yl5c")
+autoplay = "default"
+frame_progress = 0.995664
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+position = Vector2(2.625, 0.4375)
+shape = SubResource("RectangleShape2D_4qckv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(12, 39)
+scale = Vector2(0.256897, 0.256897)
+texture = ExtResource("13_4xka6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_v3fha")
+volume_db = -5.0
+
+[connection signal="area_entered" from="AnimatedSprite2D/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="AnimatedSprite2D/Area2D" to="." method="_on_area_2d_area_exited"]

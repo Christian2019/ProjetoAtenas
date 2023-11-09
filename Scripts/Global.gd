@@ -2,7 +2,17 @@ extends Node
 
 var player
 var Game
-var Temple
+var TempleScreen
+var hud
+var camera
+var WaveController
+var MathController
+
+var startNode
+
+func _process(delta):
+	if Input.is_action_just_pressed("Restart"):
+		get_tree().change_scene_to_file("res://Scenes/MainScenes/Game_ViewPort.tscn")
 
 #Exemplo Global.timerCreator("destroy",max_duration,[i],self)
 func timerCreator(functionName,time,parameters,node):

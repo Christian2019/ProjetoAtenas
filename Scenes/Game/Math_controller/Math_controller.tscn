@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnbfdi1wf6kki"]
+
+[ext_resource type="Script" path="res://Scripts/Game/MathController/MathController.gd" id="1_u0nxw"]
+[ext_resource type="Script" path="res://Scripts/Game/MathController/Skills/attack1/Zeus/MC_attack1_zeus.gd" id="2_v55ly"]
+[ext_resource type="Script" path="res://Scripts/Game/MathController/Skills/attack1/Poseidon/MC_attack1_poseidon.gd" id="3_t5ppd"]
+[ext_resource type="Script" path="res://Scripts/Game/MathController/Skills/attack1/Hades/MC_attack1_hades.gd" id="4_qp6wu"]
+[ext_resource type="Script" path="res://Scripts/Game/MathController/Skills/attack2/Zeus/MC_attack2_zeus.gd" id="5_jae66"]
+
+[node name="MathController" type="Node2D"]
+z_index = 1
+script = ExtResource("1_u0nxw")
+
+[node name="Attack1" type="Node2D" parent="."]
+
+[node name="Zeus" type="Node2D" parent="Attack1"]
+script = ExtResource("2_v55ly")
+
+[node name="Poseidon" type="Node2D" parent="Attack1"]
+script = ExtResource("3_t5ppd")
+
+[node name="Hades" type="Node2D" parent="Attack1"]
+script = ExtResource("4_qp6wu")
+
+[node name="Attack2" type="Node2D" parent="."]
+
+[node name="Zeus" type="Node2D" parent="Attack2"]
+script = ExtResource("5_jae66")
+
+[node name="Poseidon" type="Node2D" parent="Attack2"]
+
+[node name="Hades" type="Node2D" parent="Attack2"]

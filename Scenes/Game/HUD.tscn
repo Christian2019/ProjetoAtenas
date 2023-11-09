@@ -1,18 +1,364 @@
-[gd_scene load_steps=9 format=3 uid="uid://b18nigm5wn5ab"]
+[gd_scene load_steps=52 format=3 uid="uid://b18nigm5wn5ab"]
 
 [ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
-[ext_resource type="Script" path="res://Scripts/HUD.gd" id="1_60mgy"]
+[ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/HUD.gd" id="1_60mgy"]
 [ext_resource type="FontFile" uid="uid://duy38o6o71nij" path="res://Assets/Fonts/Kurland.otf" id="2_owy1r"]
 [ext_resource type="Texture2D" uid="uid://cg4c8qydgkpag" path="res://Assets/Images/HUD/hearth2.png" id="3_07ur1"]
 [ext_resource type="Texture2D" uid="uid://ywre30ix5f7t" path="res://Assets/Images/Resources/wood.png" id="4_ujb4v"]
 [ext_resource type="Texture2D" uid="uid://dlwvyo6ejssc" path="res://Assets/Images/Resources/gold.png" id="5_dhfbp"]
 [ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="6_41dw3"]
+[ext_resource type="Texture2D" uid="uid://bx5egd2vqgwfq" path="res://Assets/Images/Resources/dracma.png" id="8_dexhj"]
+[ext_resource type="Texture2D" uid="uid://bbh8wdh8h0npk" path="res://Assets/Images/Resources/dracmaBag.png" id="9_y7mq3"]
+[ext_resource type="Texture2D" uid="uid://bsnfphv05rlds" path="res://Assets/Images/HUD/waves/wave1.png" id="10_ghb0x"]
+[ext_resource type="Texture2D" uid="uid://c8h4x6cdrpqpk" path="res://Assets/Images/HUD/waves/wave2.png" id="11_kusy4"]
+[ext_resource type="Texture2D" uid="uid://bys0o6q3rv1kr" path="res://Assets/Images/HUD/waves/wave3.png" id="12_1ax7q"]
+[ext_resource type="Texture2D" uid="uid://bxth4dkos64s" path="res://Assets/Images/HUD/waves/wave4.png" id="13_581s8"]
+[ext_resource type="Texture2D" uid="uid://coxsmj54lptwp" path="res://Assets/Images/HUD/waves/wave5.png" id="14_6fkh8"]
+[ext_resource type="Texture2D" uid="uid://ckt6j1doftmd0" path="res://Assets/Images/HUD/waves/wave6.png" id="15_edd8s"]
+[ext_resource type="Texture2D" uid="uid://enhn0dupvb3s" path="res://Assets/Images/HUD/waves/wave7.png" id="16_at322"]
+[ext_resource type="Texture2D" uid="uid://c4bqokigkd1xr" path="res://Assets/Images/HUD/waves/wave8.png" id="17_3cmjo"]
+[ext_resource type="Texture2D" uid="uid://bfxfl80s5xqds" path="res://Assets/Images/HUD/waves/wave9.png" id="18_g0fqi"]
+[ext_resource type="Texture2D" uid="uid://ctq6xiqvtaxn3" path="res://Assets/Images/HUD/waves/wave10.png" id="19_cu78b"]
+[ext_resource type="Texture2D" uid="uid://b8bt7vnrbwgnq" path="res://Assets/Images/HUD/waves/wave11.png" id="20_7d1ov"]
+[ext_resource type="Texture2D" uid="uid://dkdhjk3ijj8br" path="res://Assets/Images/HUD/waves/wave12.png" id="21_gi4ho"]
+[ext_resource type="Texture2D" uid="uid://d1h8iml8hxpuu" path="res://Assets/Images/HUD/waves/wave13.png" id="22_dqewb"]
+[ext_resource type="Texture2D" uid="uid://2krbaswfgqvr" path="res://Assets/Images/HUD/waves/wave14.png" id="23_rgjax"]
+[ext_resource type="Texture2D" uid="uid://ctg762m2e8oo2" path="res://Assets/Images/HUD/waves/wave15.png" id="24_hi4v3"]
+[ext_resource type="Texture2D" uid="uid://bdkh7uydrw7hp" path="res://Assets/Images/HUD/waves/wave16.png" id="25_p37ns"]
+[ext_resource type="Texture2D" uid="uid://biq4y3oyype2c" path="res://Assets/Images/HUD/waves/wave17.png" id="26_v5m2a"]
+[ext_resource type="Texture2D" uid="uid://2pcdgtdowi0p" path="res://Assets/Images/HUD/waves/wave18.png" id="27_50f01"]
+[ext_resource type="Texture2D" uid="uid://gawpunthm68w" path="res://Assets/Images/HUD/waves/wave19.png" id="28_b4n51"]
+[ext_resource type="Texture2D" uid="uid://bn3u1mqgoo5yn" path="res://Assets/Images/HUD/waves/wave20.png" id="29_3gdep"]
+[ext_resource type="Texture2D" uid="uid://b30q73hel4bo6" path="res://Assets/Images/HUD/Ultimates/zeusUlt.png" id="29_35oqo"]
+[ext_resource type="Texture2D" uid="uid://4xs1mdhghkr" path="res://Assets/Images/HUD/Ultimates/hadesUltHUD.png" id="30_5voq0"]
+[ext_resource type="Texture2D" uid="uid://c3ce7u01og0rt" path="res://Assets/Images/HUD/Ultimates/poseidonUltHUD.png" id="31_bp4i7"]
+[ext_resource type="Texture2D" uid="uid://yjcswgm42ljb" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00001.png" id="32_h8ujo"]
+[ext_resource type="Texture2D" uid="uid://bliuur2u7r03c" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00004.png" id="33_afn4i"]
+[ext_resource type="Texture2D" uid="uid://r22njvg8r0py" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00007.png" id="34_53nyw"]
+[ext_resource type="Texture2D" uid="uid://btikammdiikmy" path="res://Assets/Images/HUD/Ultimates/zeus&poseidonUltHUD.png" id="35_pokj2"]
+[ext_resource type="Texture2D" uid="uid://ddnc0v2drshda" path="res://Assets/Images/HUD/Ultimates/hades&poseidonUltHUD.png" id="37_egsng"]
+[ext_resource type="Texture2D" uid="uid://dc80dk8ypu453" path="res://Assets/Images/HUD/Ultimates/zeus&hadesUltHUD.png" id="38_dqj6i"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_22btt"]
 font = ExtResource("2_owy1r")
+font_size = 13
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g7qxd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ghb0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kusy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1ax7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_581s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6fkh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_edd8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_at322")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3cmjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_g0fqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cu78b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7d1ov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gi4ho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_dqewb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_rgjax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_hi4v3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_p37ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_v5m2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_50f01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_b4n51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_3gdep")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yngw4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mfcji"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_h8ujo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_afn4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_53nyw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0f3i7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ne6kt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_h8ujo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_afn4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_53nyw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3g5ue"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nege3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_h8ujo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_afn4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_53nyw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4n63o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1laxi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_h8ujo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_afn4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_53nyw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ecpgq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_288fq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_h8ujo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_afn4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_53nyw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k2oq7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="HUD" type="Node2D"]
-scale = Vector2(0.937977, 0.52452)
 script = ExtResource("1_60mgy")
 
 [node name="Background" type="Node2D" parent="."]
@@ -85,10 +431,10 @@ scale = Vector2(0.565866, 0.551601)
 texture = ExtResource("3_07ur1")
 
 [node name="Label" type="Label" parent="Frontground/HP"]
-offset_left = 45.3306
-offset_top = 68.6342
-offset_right = 232.331
-offset_bottom = 112.634
+offset_left = 62.0
+offset_top = 69.0
+offset_right = 249.0
+offset_bottom = 113.0
 text = "HP 100/100"
 label_settings = SubResource("LabelSettings_22btt")
 
@@ -108,10 +454,10 @@ scale = Vector2(0.565866, 0.551601)
 texture = ExtResource("3_07ur1")
 
 [node name="Label" type="Label" parent="Frontground/CenterPointHp"]
-offset_left = 45.3306
-offset_top = 68.6342
-offset_right = 232.331
-offset_bottom = 112.634
+offset_left = 56.5697
+offset_top = 69.0082
+offset_right = 243.57
+offset_bottom = 113.008
 theme_override_font_sizes/font_size = 1
 text = "CHP 1000/1000"
 label_settings = SubResource("LabelSettings_22btt")
@@ -120,10 +466,10 @@ label_settings = SubResource("LabelSettings_22btt")
 position = Vector2(219.622, -61.0082)
 
 [node name="Label" type="Label" parent="Frontground/Wood"]
-offset_left = 23.4547
-offset_top = 68.6342
-offset_right = 210.455
-offset_bottom = 112.634
+offset_left = 32.378
+offset_top = 69.0082
+offset_right = 219.378
+offset_bottom = 113.008
 text = "Wood 100"
 label_settings = SubResource("LabelSettings_22btt")
 
@@ -136,10 +482,10 @@ texture = ExtResource("4_ujb4v")
 position = Vector2(329.622, -61.0082)
 
 [node name="Label" type="Label" parent="Frontground/Gold"]
-offset_left = 24.4547
-offset_top = 68.6342
-offset_right = 211.455
-offset_bottom = 112.634
+offset_left = 38.378
+offset_top = 69.0082
+offset_right = 225.378
+offset_bottom = 113.008
 text = "Gold 100"
 label_settings = SubResource("LabelSettings_22btt")
 
@@ -152,10 +498,10 @@ texture = ExtResource("5_dhfbp")
 position = Vector2(439.622, -61.0082)
 
 [node name="Label" type="Label" parent="Frontground/Stone"]
-offset_left = 24.4547
-offset_top = 68.6342
-offset_right = 211.455
-offset_bottom = 112.634
+offset_left = 29.378
+offset_top = 69.0082
+offset_right = 216.378
+offset_bottom = 113.008
 text = "Stone 100"
 label_settings = SubResource("LabelSettings_22btt")
 
@@ -164,62 +510,248 @@ position = Vector2(56, 126)
 scale = Vector2(3.3, 3.3)
 texture = ExtResource("6_41dw3")
 
-[node name="Powers" type="Node2D" parent="Frontground"]
-position = Vector2(427, -63)
+[node name="Dracma" type="Node2D" parent="Frontground"]
+position = Vector2(548, -61)
 
-[node name="Label" type="Label" parent="Frontground/Powers"]
-offset_left = 151.0
-offset_top = 72.0
-offset_right = 338.0
-offset_bottom = 116.0
-text = "Powers"
+[node name="Label" type="Label" parent="Frontground/Dracma"]
+offset_left = 2.99999
+offset_top = 69.0
+offset_right = 190.0
+offset_bottom = 113.0
+text = "Dracma
+"
 label_settings = SubResource("LabelSettings_22btt")
 
-[node name="Spaces" type="Node2D" parent="Frontground/Powers"]
-position = Vector2(0, -2)
-scale = Vector2(1.038, 1.038)
+[node name="Label2" type="Label" parent="Frontground/Dracma"]
+offset_left = 25.0
+offset_top = 88.0
+offset_right = 212.0
+offset_bottom = 132.0
+text = "100"
+label_settings = SubResource("LabelSettings_22btt")
 
-[node name="ColorRect" type="ColorRect" parent="Frontground/Powers/Spaces"]
-offset_left = 126.83
-offset_top = 104.865
-offset_right = 148.83
-offset_bottom = 126.865
-color = Color(1, 0, 0, 1)
+[node name="Sprite2D" type="Sprite2D" parent="Frontground/Dracma"]
+position = Vector2(90, 88)
+scale = Vector2(0.0532558, 0.0532558)
+texture = ExtResource("8_dexhj")
 
-[node name="ColorRect2" type="ColorRect" parent="Frontground/Powers/Spaces"]
-offset_left = 157.996
-offset_top = 104.046
-offset_right = 179.996
-offset_bottom = 126.046
-color = Color(1, 0, 0, 1)
+[node name="DracmaBag" type="Node2D" parent="Frontground"]
+position = Vector2(658, -61)
 
-[node name="ColorRect3" type="ColorRect" parent="Frontground/Powers/Spaces"]
-offset_left = 192.564
-offset_top = 104.865
-offset_right = 214.564
-offset_bottom = 126.865
-color = Color(1, 0, 0, 1)
+[node name="Label" type="Label" parent="Frontground/DracmaBag"]
+offset_left = -107.0
+offset_top = 113.0
+offset_right = 80.0003
+offset_bottom = 157.0
+text = "Dracma Bag"
+label_settings = SubResource("LabelSettings_22btt")
+
+[node name="Label2" type="Label" parent="Frontground/DracmaBag"]
+offset_left = -85.0
+offset_top = 137.0
+offset_right = 102.0
+offset_bottom = 181.0
+text = "100"
+label_settings = SubResource("LabelSettings_22btt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Frontground/DracmaBag"]
+position = Vector2(-22, 137)
+scale = Vector2(0.108384, 0.108384)
+texture = ExtResource("9_y7mq3")
+
+[node name="Wave" type="Node2D" parent="Frontground"]
+position = Vector2(655, -61)
+
+[node name="Label" type="Label" parent="Frontground/Wave"]
+offset_left = 29.378
+offset_top = 69.0082
+offset_right = 216.378
+offset_bottom = 113.008
+text = "Wave
+"
+label_settings = SubResource("LabelSettings_22btt")
+
+[node name="Label2" type="Label" parent="Frontground/Wave"]
+offset_left = 69.0
+offset_top = 69.0
+offset_right = 256.0
+offset_bottom = 113.0
+text = "20
+"
+label_settings = SubResource("LabelSettings_22btt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Frontground/Wave"]
+position = Vector2(61, 119)
+sprite_frames = SubResource("SpriteFrames_g7qxd")
+frame = 4
+
+[node name="Ultimate" type="Node2D" parent="Frontground"]
+position = Vector2(627, -61)
+
+[node name="Label" type="Label" parent="Frontground/Ultimate"]
+offset_left = 177.0
+offset_top = 64.0
+offset_right = 364.0
+offset_bottom = 108.0
+theme_override_font_sizes/font_size = 1
+text = "Ultimate"
+label_settings = SubResource("LabelSettings_22btt")
+
+[node name="Label2" type="Label" parent="Frontground/Ultimate"]
+offset_left = 205.0
+offset_top = 108.0
+offset_right = 392.0
+offset_bottom = 152.0
+theme_override_font_sizes/font_size = 1
+text = "0/0"
+label_settings = SubResource("LabelSettings_22btt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Frontground/Ultimate"]
+position = Vector2(171.5, 122)
+scale = Vector2(0.0622902, 0.106592)
+sprite_frames = SubResource("SpriteFrames_yngw4")
+frame = 2
+
+[node name="ColorRect" type="ColorRect" parent="Frontground/Ultimate"]
+offset_left = 153.0
+offset_top = 84.0
+offset_right = 190.0
+offset_bottom = 160.0
+color = Color(1, 1, 1, 0.678431)
+
+[node name="ColorRect2" type="ColorRect" parent="Frontground/Ultimate"]
+offset_left = 153.0
+offset_top = 84.0
+offset_right = 190.0
+offset_bottom = 160.0
+color = Color(1, 0, 0, 0.423529)
 
 [node name="TimeLine" type="Node2D" parent="Frontground"]
 
 [node name="Label" type="Label" parent="Frontground/TimeLine"]
-offset_left = 822.0
-offset_top = 9.0
-offset_right = 1009.0
-offset_bottom = 53.0
-text = "Time to Next Wave"
+offset_left = 893.0
+offset_top = 8.0
+offset_right = 983.0
+offset_bottom = 52.0
+text = "Time to Next
+ Wave"
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="Label2" type="Label" parent="Frontground/TimeLine"]
-offset_left = 877.0
-offset_top = 73.0
-offset_right = 917.0
-offset_bottom = 99.0
+offset_left = 916.0
+offset_top = 76.0
+offset_right = 956.0
+offset_bottom = 102.0
 text = "30s"
 
 [node name="ColorRect" type="ColorRect" parent="Frontground/TimeLine"]
-offset_left = 805.0
-offset_top = 43.0
-offset_right = 1005.0
-offset_bottom = 65.0
+offset_left = 893.0
+offset_top = 46.0
+offset_right = 974.0
+offset_bottom = 68.0
 color = Color(1, 0, 0, 1)
+
+[node name="Skills" type="Node2D" parent="Frontground"]
+scale = Vector2(1.72, 1.72)
+
+[node name="Selected" type="ColorRect" parent="Frontground/Skills"]
+offset_left = 7.55814
+offset_top = 183.721
+offset_right = 25.5581
+offset_bottom = 211.721
+color = Color(0.00184107, 0.00184107, 0.00184107, 1)
+
+[node name="Label" type="Label" parent="Frontground/Skills/Selected"]
+layout_mode = 0
+offset_left = 3.48837
+offset_top = 1.74417
+offset_right = 43.4884
+offset_bottom = 27.7442
+text = "0"
+
+[node name="Attack1_Border" type="ColorRect" parent="Frontground/Skills"]
+offset_left = 7.0
+offset_top = 214.0
+offset_right = 26.0
+offset_bottom = 247.0
+
+[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Attack1_Border"]
+position = Vector2(10.4419, 15.7732)
+scale = Vector2(0.0968992, 0.090032)
+sprite_frames = SubResource("SpriteFrames_mfcji")
+autoplay = "default"
+frame_progress = 0.939183
+
+[node name="Attack1" type="AnimatedSprite2D" parent="Frontground/Skills/Attack1_Border"]
+position = Vector2(9.56977, 16)
+scale = Vector2(0.0244695, 0.040404)
+sprite_frames = SubResource("SpriteFrames_0f3i7")
+frame = 1
+
+[node name="Attack2_Border" type="ColorRect" parent="Frontground/Skills"]
+offset_left = 8.0
+offset_top = 251.0
+offset_right = 27.0
+offset_bottom = 284.0
+
+[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Attack2_Border"]
+position = Vector2(10.0233, 15.8604)
+scale = Vector2(0.0968992, 0.090032)
+sprite_frames = SubResource("SpriteFrames_ne6kt")
+autoplay = "default"
+
+[node name="Attack2" type="AnimatedSprite2D" parent="Frontground/Skills/Attack2_Border"]
+position = Vector2(9.15116, 16.4462)
+scale = Vector2(0.0225119, 0.0391523)
+sprite_frames = SubResource("SpriteFrames_3g5ue")
+
+[node name="Turret" type="ColorRect" parent="Frontground/Skills"]
+offset_left = 7.55814
+offset_top = 287.209
+offset_right = 26.5581
+offset_bottom = 320.209
+
+[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Turret"]
+position = Vector2(9.30232, 15.698)
+scale = Vector2(0.0968992, 0.090032)
+sprite_frames = SubResource("SpriteFrames_nege3")
+autoplay = "default"
+
+[node name="Turret" type="AnimatedSprite2D" parent="Frontground/Skills/Turret"]
+position = Vector2(9.30233, 16)
+scale = Vector2(0.0254483, 0.040404)
+sprite_frames = SubResource("SpriteFrames_4n63o")
+
+[node name="Dash" type="ColorRect" parent="Frontground/Skills"]
+offset_left = 7.55814
+offset_top = 323.209
+offset_right = 26.5581
+offset_bottom = 356.209
+
+[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Dash"]
+position = Vector2(9.30232, 15.7446)
+scale = Vector2(0.0968992, 0.090032)
+sprite_frames = SubResource("SpriteFrames_1laxi")
+autoplay = "default"
+
+[node name="Dash" type="AnimatedSprite2D" parent="Frontground/Skills/Dash"]
+position = Vector2(9.59302, 16)
+scale = Vector2(0.0244695, 0.040404)
+sprite_frames = SubResource("SpriteFrames_ecpgq")
+
+[node name="Ultimate" type="ColorRect" parent="Frontground/Skills"]
+offset_left = 8.13954
+offset_top = 359.302
+offset_right = 27.1395
+offset_bottom = 392.302
+
+[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Ultimate"]
+position = Vector2(9.88371, 15.698)
+scale = Vector2(0.0968992, 0.090032)
+sprite_frames = SubResource("SpriteFrames_288fq")
+autoplay = "default"
+
+[node name="Ultimate" type="AnimatedSprite2D" parent="Frontground/Skills/Ultimate"]
+position = Vector2(9.01163, 16.3648)
+scale = Vector2(0.0225119, 0.0393806)
+sprite_frames = SubResource("SpriteFrames_k2oq7")

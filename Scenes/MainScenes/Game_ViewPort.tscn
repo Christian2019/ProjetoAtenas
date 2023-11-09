@@ -1,11 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddxmhluvr7sb1"]
+[gd_scene load_steps=12 format=3 uid="uid://ddxmhluvr7sb1"]
 
 [ext_resource type="PackedScene" uid="uid://cb86td4m1hepw" path="res://Scenes/Game/Game.tscn" id="1_no1qw"]
-[ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="2_ah0pv"]
+[ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/Camera2D.gd" id="2_ah0pv"]
 [ext_resource type="PackedScene" uid="uid://b18nigm5wn5ab" path="res://Scenes/Game/HUD.tscn" id="3_agpu4"]
 [ext_resource type="FontFile" uid="uid://duy38o6o71nij" path="res://Assets/Fonts/Kurland.otf" id="4_xvseb"]
-[ext_resource type="Script" path="res://Scripts/FPS.gd" id="5_c2jos"]
-[ext_resource type="PackedScene" uid="uid://bqduy4u8regjo" path="res://Scenes/Temple/TempleScreen.tscn" id="6_rsejt"]
+[ext_resource type="Script" path="res://Scripts/MainScenes/FPS.gd" id="5_c2jos"]
+[ext_resource type="PackedScene" uid="uid://bqduy4u8regjo" path="res://Scenes/Game/Constructions/Temple/TempleScreen.tscn" id="6_rsejt"]
+[ext_resource type="Script" path="res://Scripts/Zones/Temple/TempleSound.gd" id="7_qdux6"]
+[ext_resource type="AudioStream" uid="uid://ds3mklsrsnkgd" path="res://Assets/Sounds/temple.mp3" id="8_2m48l"]
+[ext_resource type="AudioStream" uid="uid://gtus0eflv3pn" path="res://Assets/Sounds/temple2.mp3" id="9_b71q1"]
+[ext_resource type="AudioStream" uid="uid://46o6fk67h64y" path="res://Assets/Sounds/temple3.mp3" id="10_dt5os"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4aqw1"]
 font = ExtResource("4_xvseb")
@@ -30,6 +34,7 @@ render_target_update_mode = 4
 [node name="Game" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_no1qw")]
 
 [node name="Camera2D" type="Camera2D" parent="SubViewportContainer/SubViewport"]
+zoom = Vector2(0.75, 0.75)
 script = ExtResource("2_ah0pv")
 
 [node name="HUD" parent="." instance=ExtResource("3_agpu4")]
@@ -37,13 +42,31 @@ position = Vector2(-3, -1.19209e-07)
 scale = Vector2(0.937318, 0.597639)
 
 [node name="FPS" type="Label" parent="HUD"]
-offset_left = 677.465
-offset_top = 36.8115
-offset_right = 776.465
-offset_bottom = 77.8115
+offset_left = 1003.93
+offset_top = 41.8313
+offset_right = 1102.93
+offset_bottom = 82.8313
 text = "FPS:60"
 label_settings = SubResource("LabelSettings_4aqw1")
 script = ExtResource("5_c2jos")
 
-[node name="Temple" parent="." instance=ExtResource("6_rsejt")]
+[node name="TempleNode" type="Node2D" parent="."]
+position = Vector2(0, -1)
+
+[node name="TempleScreen" parent="TempleNode" instance=ExtResource("6_rsejt")]
 visible = false
+
+[node name="TempleSound" type="Node2D" parent="TempleNode"]
+script = ExtResource("7_qdux6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TempleNode/TempleSound"]
+stream = ExtResource("8_2m48l")
+volume_db = -10.0
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="TempleNode/TempleSound"]
+stream = ExtResource("9_b71q1")
+volume_db = -10.0
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="TempleNode/TempleSound"]
+stream = ExtResource("10_dt5os")
+volume_db = -10.0

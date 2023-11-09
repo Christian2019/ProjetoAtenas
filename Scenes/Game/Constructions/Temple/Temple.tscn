@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cawqbopdr275u"]
+
+[ext_resource type="Script" path="res://Scripts/Zones/Temple/Temple.gd" id="1_5h5k6"]
+[ext_resource type="Texture2D" uid="uid://brnbevp3jfyen" path="res://Assets/Images/Constructions/templo.png" id="2_sxdmh"]
+[ext_resource type="Texture2D" uid="uid://l5e0fk2enmt5" path="res://Assets/Images/Constructions/temploteto.png" id="3_f44ih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umayb"]
+size = Vector2(120, 189)
+
+[node name="Temple" type="Node2D"]
+script = ExtResource("1_5h5k6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.00001, -100)
+texture = ExtResource("2_sxdmh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-4.00001, -100)
+texture = ExtResource("3_f44ih")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_umayb")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

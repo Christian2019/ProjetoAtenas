@@ -1,0 +1,88 @@
+[gd_scene load_steps=22 format=3 uid="uid://d2y033wavrob3"]
+
+[ext_resource type="Script" path="res://Scripts/Game/WaveController.gd" id="1_hdkja"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave1.gd" id="2_ao4dt"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave2.gd" id="3_tqif5"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave3.gd" id="4_bivfr"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave4.gd" id="5_ck3nm"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave5.gd" id="6_as2g2"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave6.gd" id="7_qyb54"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave7.gd" id="8_dr4a3"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave8.gd" id="9_erct5"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave9.gd" id="10_qqysh"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave10.gd" id="11_7omff"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave12.gd" id="12_6o6oj"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave11.gd" id="12_imv2p"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave13.gd" id="14_yaiso"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave14.gd" id="15_ah2mq"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave15.gd" id="16_ehrya"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave16.gd" id="17_njdrv"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave17.gd" id="18_soagt"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave18.gd" id="19_b56x4"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave19.gd" id="20_4hf1b"]
+[ext_resource type="Script" path="res://Scripts/Game/Waves/Wave20.gd" id="21_nbp65"]
+
+[node name="WaveController" type="Node2D"]
+script = ExtResource("1_hdkja")
+
+[node name="Wave1" type="Node2D" parent="."]
+script = ExtResource("2_ao4dt")
+
+[node name="Wave2" type="Node2D" parent="."]
+script = ExtResource("3_tqif5")
+
+[node name="Wave3" type="Node2D" parent="."]
+script = ExtResource("4_bivfr")
+
+[node name="Wave4" type="Node2D" parent="."]
+script = ExtResource("5_ck3nm")
+
+[node name="Wave5" type="Node2D" parent="."]
+script = ExtResource("6_as2g2")
+
+[node name="Wave6" type="Node2D" parent="."]
+script = ExtResource("7_qyb54")
+
+[node name="Wave7" type="Node2D" parent="."]
+script = ExtResource("8_dr4a3")
+
+[node name="Wave8" type="Node2D" parent="."]
+script = ExtResource("9_erct5")
+
+[node name="Wave9" type="Node2D" parent="."]
+script = ExtResource("10_qqysh")
+
+[node name="Wave10" type="Node2D" parent="."]
+script = ExtResource("11_7omff")
+
+[node name="Wave11" type="Node2D" parent="."]
+script = ExtResource("12_imv2p")
+
+[node name="Wave12" type="Node2D" parent="."]
+script = ExtResource("12_6o6oj")
+
+[node name="Wave13" type="Node2D" parent="."]
+script = ExtResource("14_yaiso")
+
+[node name="Wave14" type="Node2D" parent="."]
+script = ExtResource("15_ah2mq")
+
+[node name="Wave15" type="Node2D" parent="."]
+script = ExtResource("16_ehrya")
+
+[node name="Wave16" type="Node2D" parent="."]
+script = ExtResource("17_njdrv")
+
+[node name="Wave17" type="Node2D" parent="."]
+script = ExtResource("18_soagt")
+
+[node name="Wave18" type="Node2D" parent="."]
+script = ExtResource("19_b56x4")
+
+[node name="Wave19" type="Node2D" parent="."]
+script = ExtResource("20_4hf1b")
+
+[node name="Wave20" type="Node2D" parent="."]
+script = ExtResource("21_nbp65")
+
+[node name="WaveEndless" type="Node2D" parent="."]

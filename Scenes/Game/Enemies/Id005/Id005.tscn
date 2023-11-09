@@ -1,0 +1,106 @@
+[gd_scene load_steps=12 format=3 uid="uid://hcjdtekf3epw"]
+
+[ext_resource type="Script" path="res://Scripts/Enemies/Id005.gd" id="1_1rilg"]
+[ext_resource type="Texture2D" uid="uid://ctsk71xkun64p" path="res://Assets/Images/Enemies/id005/cupid.png" id="1_o3346"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ho5yu"]
+atlas = ExtResource("1_o3346")
+region = Rect2(0, 324, 153, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7old7"]
+atlas = ExtResource("1_o3346")
+region = Rect2(153, 324, 153, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6oytk"]
+atlas = ExtResource("1_o3346")
+region = Rect2(306, 324, 153, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8n1s3"]
+atlas = ExtResource("1_o3346")
+region = Rect2(0, 0, 153, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6jy5"]
+atlas = ExtResource("1_o3346")
+region = Rect2(153, 0, 153, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnl5w"]
+atlas = ExtResource("1_o3346")
+region = Rect2(306, 0, 153, 162)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ho5yu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7old7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6oytk")
+}],
+"loop": true,
+"name": &"Attacking",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8n1s3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6jy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnl5w")
+}],
+"loop": true,
+"name": &"Flying",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
+size = Vector2(38, 44)
+
+[sub_resource type="Theme" id="Theme_teygp"]
+
+[node name="Id005" type="Node2D"]
+script = ExtResource("1_1rilg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -2)
+scale = Vector2(0.369192, 0.365027)
+sprite_frames = SubResource("SpriteFrames_grjig")
+animation = &"Flying"
+autoplay = "Flying"
+frame = 2
+frame_progress = 0.41365
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4, -1)
+shape = SubResource("RectangleShape2D_pmar3")
+
+[node name="HPBar" type="Node2D" parent="."]
+position = Vector2(4, -5)
+scale = Vector2(0.518061, 0.518061)
+
+[node name="Red" type="ColorRect" parent="HPBar"]
+modulate = Color(1, 0.231373, 0.231373, 1)
+offset_left = -38.0
+offset_top = -47.0
+offset_right = 37.0
+offset_bottom = -34.0
+theme = SubResource("Theme_teygp")
+
+[node name="Green" type="ColorRect" parent="HPBar"]
+modulate = Color(0.486275, 1, 0.231373, 1)
+offset_left = -38.0
+offset_top = -47.0
+offset_right = 37.0
+offset_bottom = -34.0
+theme = SubResource("Theme_teygp")
+
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

@@ -1,0 +1,164 @@
+[gd_scene load_steps=30 format=3 uid="uid://dhe6xq6wuhls7"]
+
+[ext_resource type="Texture2D" uid="uid://drecbbk36q6mm" path="res://Assets/Images/Enemies/id020/Attacking/scene00055-removebg-preview.png" id="1_57fdn"]
+[ext_resource type="Script" path="res://Scripts/Enemies/Id020.gd" id="1_nolq8"]
+[ext_resource type="Texture2D" uid="uid://dxgj72q3btk6g" path="res://Assets/Images/Enemies/id020/Attacking/scene00058-removebg-preview.png" id="2_vv06n"]
+[ext_resource type="Texture2D" uid="uid://cvanvbn8j6kkg" path="res://Assets/Images/Enemies/id020/Attacking/scene00061-removebg-preview.png" id="3_u2mch"]
+[ext_resource type="Texture2D" uid="uid://6mqgncqwlcld" path="res://Assets/Images/Enemies/id020/Attacking/scene00064-removebg-preview.png" id="4_nwkdp"]
+[ext_resource type="Texture2D" uid="uid://5fq730ewdy0s" path="res://Assets/Images/Enemies/id020/Attacking/scene00067-removebg-preview.png" id="5_dc3m4"]
+[ext_resource type="Texture2D" uid="uid://bnv0igc7t3512" path="res://Assets/Images/Enemies/id020/Attacking/scene00070-removebg-preview.png" id="6_1iu5i"]
+[ext_resource type="Texture2D" uid="uid://g62pmfywwhnx" path="res://Assets/Images/Enemies/id020/Moving/scene00037-removebg-preview.png" id="6_2thjs"]
+[ext_resource type="Texture2D" uid="uid://c7af1fr4kxq5t" path="res://Assets/Images/Enemies/id020/Attacking/scene00073-removebg-preview.png" id="7_53m7k"]
+[ext_resource type="Texture2D" uid="uid://73ohmivur2t2" path="res://Assets/Images/Enemies/id020/Moving/scene00040-removebg-preview.png" id="7_bng07"]
+[ext_resource type="Texture2D" uid="uid://bxiqjt27kbjcv" path="res://Assets/Images/Enemies/id020/Moving/scene00043-removebg-preview.png" id="8_ba8kq"]
+[ext_resource type="Texture2D" uid="uid://fqr2f42ulxd2" path="res://Assets/Images/Enemies/id020/Moving/scene00046-removebg-preview.png" id="9_t2xo8"]
+[ext_resource type="Texture2D" uid="uid://byco0oin2i02a" path="res://Assets/Images/Enemies/id020/Moving/scene00049-removebg-preview.png" id="10_jwrl7"]
+[ext_resource type="Texture2D" uid="uid://d2e2qkclnisq6" path="res://Assets/Images/Enemies/id020/Moving/scene00052-removebg-preview.png" id="11_7hw57"]
+[ext_resource type="Texture2D" uid="uid://b22m3rbp5hvi6" path="res://Assets/Images/Enemies/id020/Spiting/scene00001-removebg-preview.png" id="14_tkaos"]
+[ext_resource type="Texture2D" uid="uid://byibttivjfgc1" path="res://Assets/Images/Enemies/id020/Spiting/scene00004-removebg-preview.png" id="15_u7oij"]
+[ext_resource type="Texture2D" uid="uid://b7mcrpq4ulluy" path="res://Assets/Images/Enemies/id020/Spiting/scene00007-removebg-preview.png" id="16_d3mjq"]
+[ext_resource type="Texture2D" uid="uid://be4v068432ykx" path="res://Assets/Images/Enemies/id020/Spiting/scene00010-removebg-preview.png" id="17_lunvi"]
+[ext_resource type="Texture2D" uid="uid://bk8dxurmn7m7u" path="res://Assets/Images/Enemies/id020/Spiting/scene00013-removebg-preview.png" id="18_nnceu"]
+[ext_resource type="Texture2D" uid="uid://sbvpmr5milts" path="res://Assets/Images/Enemies/id020/Spiting/scene00016-removebg-preview.png" id="19_umr30"]
+[ext_resource type="Texture2D" uid="uid://coutl24n63ssw" path="res://Assets/Images/Enemies/id020/Spiting/scene00019-removebg-preview.png" id="20_554r3"]
+[ext_resource type="Texture2D" uid="uid://bd3pct0nme2l8" path="res://Assets/Images/Enemies/id020/Spiting/scene00022-removebg-preview.png" id="21_8211k"]
+[ext_resource type="Texture2D" uid="uid://clxvn3s53ijr8" path="res://Assets/Images/Enemies/id020/Spiting/scene00025-removebg-preview.png" id="22_nvy64"]
+[ext_resource type="Texture2D" uid="uid://d2ibvee37k6f3" path="res://Assets/Images/Enemies/id020/Spiting/scene00028-removebg-preview.png" id="23_kh6hs"]
+[ext_resource type="Texture2D" uid="uid://bna2jw7l640i4" path="res://Assets/Images/Enemies/id020/Spiting/scene00031-removebg-preview.png" id="24_t7rvp"]
+[ext_resource type="Texture2D" uid="uid://b5qq7m140jv51" path="res://Assets/Images/Enemies/id020/Spiting/scene00034-removebg-preview.png" id="25_0snts"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_57fdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vv06n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u2mch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nwkdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dc3m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1iu5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_53m7k")
+}],
+"loop": true,
+"name": &"Attacking",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_2thjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bng07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ba8kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_t2xo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jwrl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7hw57")
+}],
+"loop": true,
+"name": &"Moving",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_tkaos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_u7oij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_d3mjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_lunvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nnceu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_umr30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_554r3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_8211k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_nvy64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_kh6hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_t7rvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_0snts")
+}],
+"loop": true,
+"name": &"Spiting",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
+size = Vector2(81, 80)
+
+[sub_resource type="Theme" id="Theme_teygp"]
+
+[node name="Id020" type="Node2D"]
+script = ExtResource("1_nolq8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_grjig")
+animation = &"Spiting"
+autoplay = "Moving"
+frame_progress = 0.325866
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.5, -5)
+shape = SubResource("RectangleShape2D_pmar3")
+
+[node name="HPBar" type="Node2D" parent="."]
+position = Vector2(-4, -11)
+
+[node name="Red" type="ColorRect" parent="HPBar"]
+modulate = Color(1, 0.231373, 0.231373, 1)
+offset_left = -38.0
+offset_top = -47.0
+offset_right = 43.0
+offset_bottom = -34.0
+theme = SubResource("Theme_teygp")
+
+[node name="Green" type="ColorRect" parent="HPBar"]
+modulate = Color(0.486275, 1, 0.231373, 1)
+offset_left = -38.0
+offset_top = -47.0
+offset_right = 43.0
+offset_bottom = -34.0
+theme = SubResource("Theme_teygp")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

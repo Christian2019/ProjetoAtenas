@@ -1,20 +1,20 @@
 [gd_scene load_steps=5 format=3 uid="uid://dtu5sjvquowls"]
 
-[ext_resource type="Script" path="res://Scripts/Tower.gd" id="1_2xse4"]
-[ext_resource type="Texture2D" uid="uid://didbvwb3a40wu" path="res://Assets/Images/Constructions/Defenses/tower.png" id="1_p5m73"]
+[ext_resource type="Script" path="res://Scripts/Zones/Center/Tower.gd" id="1_2xse4"]
+[ext_resource type="Texture2D" uid="uid://bbetir8lvp4ns" path="res://Assets/Images/Constructions/Defenses/SpriteSheetConstrucoes.png" id="2_uvsiy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ah2ey"]
-atlas = ExtResource("1_p5m73")
-region = Rect2(312, 648, 156, 216)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wj1v"]
+atlas = ExtResource("2_uvsiy")
+region = Rect2(750, 0, 250, 250)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nvw4f"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ah2ey")
+"texture": SubResource("AtlasTexture_2wj1v")
 }],
 "loop": true,
-"name": &"Idle",
+"name": &"Level4",
 "speed": 5.0
 }]
 
@@ -22,6 +22,7 @@ animations = [{
 script = ExtResource("1_2xse4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.307692, 0.307692)
+z_index = 2
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_nvw4f")
-animation = &"Idle"
+animation = &"Level4"

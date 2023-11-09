@@ -1,0 +1,98 @@
+[gd_scene load_steps=15 format=3 uid="uid://dbhcsq6u6lqxk"]
+
+[ext_resource type="Texture2D" uid="uid://dxhtiw303io21" path="res://Assets/Images/Enemies/id014/Attacking/scene00070.png" id="1_85l5l"]
+[ext_resource type="Script" path="res://Scripts/Enemies/Id014.gd" id="1_wjtvk"]
+[ext_resource type="Texture2D" uid="uid://cuqlapdamhje3" path="res://Assets/Images/Enemies/id014/Attacking/scene00073.png" id="2_u0a48"]
+[ext_resource type="Texture2D" uid="uid://b2on10jjmdbah" path="res://Assets/Images/Enemies/id014/Attacking/scene00076.png" id="3_hg16w"]
+[ext_resource type="Texture2D" uid="uid://b3jt8s33fwalx" path="res://Assets/Images/Enemies/id014/Attacking/scene00079.png" id="4_rmv17"]
+[ext_resource type="Texture2D" uid="uid://dgx7hbvgqvih8" path="res://Assets/Images/Enemies/id014/Attacking/scene00082.png" id="5_1jk1j"]
+[ext_resource type="Texture2D" uid="uid://xw3saw8ssdfp" path="res://Assets/Images/Enemies/id014/Walking/scene00013.png" id="7_mevc7"]
+[ext_resource type="Texture2D" uid="uid://bwjqrixduf06g" path="res://Assets/Images/Enemies/id014/Walking/scene00016.png" id="8_e38a7"]
+[ext_resource type="Texture2D" uid="uid://d3cklot0p4rwi" path="res://Assets/Images/Enemies/id014/Walking/scene00019.png" id="9_7mci5"]
+[ext_resource type="Texture2D" uid="uid://d5lojtarlwnc" path="res://Assets/Images/Enemies/id014/Walking/scene00022.png" id="10_d14po"]
+[ext_resource type="Texture2D" uid="uid://b2e2eav3ud83r" path="res://Assets/Images/Enemies/id014/Walking/scene00025.png" id="11_8aba7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_85l5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_u0a48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hg16w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rmv17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1jk1j")
+}],
+"loop": true,
+"name": &"Attacking",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_mevc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_e38a7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7mci5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_d14po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8aba7")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
+size = Vector2(76, 70)
+
+[sub_resource type="Theme" id="Theme_teygp"]
+
+[node name="Id014" type="Node2D"]
+script = ExtResource("1_wjtvk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, 3)
+scale = Vector2(0.357192, 0.357192)
+sprite_frames = SubResource("SpriteFrames_grjig")
+animation = &"Attacking"
+autoplay = "Attacking"
+frame_progress = 0.507465
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_pmar3")
+
+[node name="HPBar" type="Node2D" parent="."]
+
+[node name="Red" type="ColorRect" parent="HPBar"]
+modulate = Color(1, 0.231373, 0.231373, 1)
+offset_left = -38.0
+offset_top = -47.0
+offset_right = 37.0
+offset_bottom = -34.0
+theme = SubResource("Theme_teygp")
+
+[node name="Green" type="ColorRect" parent="HPBar"]
+modulate = Color(0.486275, 1, 0.231373, 1)
+offset_left = -38.0
+offset_top = -47.0
+offset_right = 37.0
+offset_bottom = -34.0
+theme = SubResource("Theme_teygp")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

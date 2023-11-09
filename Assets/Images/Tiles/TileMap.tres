@@ -1,7 +1,8 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://b7f3qfsvvnmrt"]
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://b7f3qfsvvnmrt"]
 
 [ext_resource type="Texture2D" uid="uid://37j5mkm8pwh7" path="res://Assets/Images/Tiles/mockups.png" id="1_jkt03"]
 [ext_resource type="Texture2D" uid="uid://udig283y8dcc" path="res://Assets/Images/Tiles/overworld.png" id="2_sbxe8"]
+[ext_resource type="Texture2D" uid="uid://cd4fb3iavwej8" path="res://Assets/Images/Tiles/battlezone.png" id="3_dljgx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jcueg"]
 texture = ExtResource("1_jkt03")
@@ -3575,6 +3576,14 @@ texture = ExtResource("2_sbxe8")
 30:13/0 = 0
 30:14/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_itua3"]
+texture = ExtResource("3_dljgx")
+0:0/0 = 0
+1:1/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+
 [resource]
 sources/1 = SubResource("TileSetAtlasSource_mrdud")
 sources/0 = SubResource("TileSetAtlasSource_jcueg")
+sources/4 = SubResource("TileSetAtlasSource_itua3")

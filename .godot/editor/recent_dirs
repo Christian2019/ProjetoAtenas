@@ -1,15 +1,15 @@
-res://Scripts
-res://Scenes/Game/Constructions
-res://Assets/Videos
-res://Assets/Images/Player
-res://Scripts/Classes/Warrior
-res://Scripts/Classes
-res://Assets/Images/Constructions
-D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas
-res://Assets/Images/Constructions/Defenses
-res://Assets/Images/Enemies
 res://Assets/Images/Resources/collectable
-res://Assets/Images/Resources
-res://Assets/Images/Tiles
-res://Scenes
-res://Assets/Images
+res://Assets/Images/Constructions/Defenses
+res://Assets/Images/Constructions/AnimacaoPiscina
+res://Scripts/Game/MathController/Skills/attack2/Zeus
+res://Assets/Images/Player/Attack2/Zeus/Disorientation
+res://Scripts/Classes/Warrior/Warrior_attack2/Warrior_attack2_Zeus
+res://Scripts/Classes/Warrior/Warrior_attack2
+res://Assets/Images/HUD/SkillSelection/Divine
+res://Assets/Images/HUD/Ultimates
+res://Assets/Images/Player
+res://Scripts/Classes/Warrior/Warrior_attack1
+res://Assets/Images/HUD/waves
+res://Scripts/Enemies
+res://Assets/Images/Enemies
+D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas
