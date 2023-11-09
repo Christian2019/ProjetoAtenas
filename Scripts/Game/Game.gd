@@ -2,7 +2,7 @@ extends Node2D
 	
 var selected=0
 var changeSkillHud=true
-var skills=[{"skill":3,"quality":2},
+var skills=[{"skill":0,"quality":0},
 {"skill":0,"quality":0},
 {"skill":0,"quality":0},
 {"skill":0,"quality":0},
@@ -111,6 +111,7 @@ func ChangeSkillQuality():
 
 func changePlayerSkillFunction():
 	changeSkillHud=false
+
 	
 	Global.player.attack1={"skill":attack1[skills[0].skill], "quality": qualitys[skills[0].quality]}
 	Global.hud.get_node("Frontground/Skills/Attack1_Border/Attack1").frame=skills[0].skill

@@ -135,7 +135,7 @@ shape = SubResource("RectangleShape2D_7pbkn")
 [node name="Center" parent="Zones" instance=ExtResource("9_06qfi")]
 
 [node name="Temple" parent="Zones" instance=ExtResource("10_v6y37")]
-position = Vector2(1317, 1637)
+position = Vector2(1312, 1718)
 
 [node name="Matriz" parent="." instance=ExtResource("4_di3q4")]
 

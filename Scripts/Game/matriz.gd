@@ -20,20 +20,25 @@ func _process(_delta):
 				var quadrant_instance = PreLoads.quadrant.instantiate()
 				quadrant_instance.name = str("linha", linha , "_coluna", coluna)
 				quadrant_instance.position= Vector2(64*coluna,64*linha)
-				if (linha>(max_linhas/2)+1 and canUse(linha,coluna)):
+				if (canUse(linha,coluna)):
 					var index = rng.randi_range(0, resources.size()-1)
 					if (resources[index]!="empty"):
 						quadrant_instance.get_node("Resource").visible=true
 						quadrant_instance.get_node("Resource").animation=resources[index]
 					resources.remove_at(index)
+									
 				add_child(quadrant_instance)
 
 func canUse(linha,coluna):
 	#Evitar o templo
+	var linhaMin = 0
+	var linhaMax=29
+	var colunaMin=16
+	var colunaMax=24
 	
-	if (linha<(max_linhas/2)+(max_linhas/8)):
-		if (coluna>max_colunas/2-8 and coluna<max_colunas/2+8 ):
-			return false
+	if linha<linhaMax and coluna>colunaMin and coluna<colunaMax:
+		return false
+
 	return true
 	
 

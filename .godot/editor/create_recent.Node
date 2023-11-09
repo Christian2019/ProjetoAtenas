@@ -1,7 +1,7 @@
-Timer
-AnimatedSprite2D
-ColorRect
 Sprite2D
+AnimatedSprite2D
+Timer
+ColorRect
 Label
 Node2D
 AudioStreamPlayer

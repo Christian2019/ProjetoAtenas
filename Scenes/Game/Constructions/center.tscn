@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cx37jdnas0rb1"]
+[gd_scene load_steps=9 format=3 uid="uid://cx37jdnas0rb1"]
 
 [ext_resource type="Script" path="res://Scripts/Zones/Center/center.gd" id="1_fab01"]
-[ext_resource type="Texture2D" uid="uid://b4tu2enafngd1" path="res://Assets/Images/Constructions/DefenderPointImage.png" id="1_mxnoc"]
 [ext_resource type="PackedScene" uid="uid://dumjr4t8822i1" path="res://Scenes/Game/Constructions/Portal.tscn" id="2_dx06x"]
+[ext_resource type="Texture2D" uid="uid://cs3igsuhbtryg" path="res://Assets/Images/Constructions/centroSemArco.png" id="2_vtmnd"]
+[ext_resource type="Texture2D" uid="uid://c57220vbb85ts" path="res://Assets/Images/Constructions/arcos.png" id="3_08ald"]
 [ext_resource type="PackedScene" uid="uid://c0rurmnfon8nm" path="res://Scenes/Game/Constructions/Pool.tscn" id="3_ul00y"]
 [ext_resource type="Script" path="res://Scripts/Zones/Center/Towers.gd" id="5_r7e7g"]
 [ext_resource type="PackedScene" uid="uid://dtu5sjvquowls" path="res://Scenes/Game/Constructions/Defenses/Tower.tscn" id="6_idgco"]
@@ -14,9 +15,15 @@ size = Vector2(253, 261)
 script = ExtResource("1_fab01")
 
 [node name="DefenderPoint" type="Sprite2D" parent="."]
-position = Vector2(1298, 607)
-scale = Vector2(0.781056, 0.781056)
-texture = ExtResource("1_mxnoc")
+position = Vector2(1300, 633)
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("2_vtmnd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1300, 633)
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("3_08ald")
 
 [node name="Portals" type="Node2D" parent="."]
 position = Vector2(29, -396)
@@ -25,10 +32,11 @@ position = Vector2(29, -396)
 position = Vector2(1330, 992)
 
 [node name="Portal2" parent="Portals" instance=ExtResource("2_dx06x")]
-position = Vector2(1156, 1901)
+position = Vector2(929, 1940)
 
 [node name="Pool" parent="." instance=ExtResource("3_ul00y")]
-position = Vector2(1252, 604)
+position = Vector2(1242, 604)
+scale = Vector2(1.5, 1.5)
 
 [node name="CenterArea" type="Area2D" parent="."]
 
@@ -37,16 +45,18 @@ position = Vector2(1298.5, 610.5)
 shape = SubResource("RectangleShape2D_t4cda")
 
 [node name="Towers" type="Node2D" parent="."]
+position = Vector2(-576, -274)
+scale = Vector2(1.46771, 1.46771)
 script = ExtResource("5_r7e7g")
 
 [node name="Tower" parent="Towers" instance=ExtResource("6_idgco")]
-position = Vector2(1214, 515)
+position = Vector2(1143.28, 483.067)
 
 [node name="Tower2" parent="Towers" instance=ExtResource("6_idgco")]
-position = Vector2(1366, 516)
+position = Vector2(1416.5, 485.792)
 
 [node name="Tower3" parent="Towers" instance=ExtResource("6_idgco")]
-position = Vector2(1216, 665)
+position = Vector2(1146.69, 675.204)
 
 [node name="Tower4" parent="Towers" instance=ExtResource("6_idgco")]
-position = Vector2(1365, 666)
+position = Vector2(1419.22, 675.204)

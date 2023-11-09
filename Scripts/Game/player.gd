@@ -112,10 +112,13 @@ func animationController():
 		playAnimation ("Run")
 	elif Input.is_action_pressed("Move_Left"):
 		playAnimation ("Run")
-	else:
+	elif (!Input.is_action_pressed("Attack1")):
 		playAnimation ("Idle")
 		
 func playAnimation (animName):
+	if (animName=="Run" and Input.is_action_pressed("Attack1")):
+		animName="Attack1Run"
+		
 	if lastMovement=="S":
 		$Animation.play(animName+"_Down")
 	elif lastMovement=="SE":
@@ -236,8 +239,7 @@ func attack1Controller():
 		attackInstance.direction=lastMovement
 		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position
-	
-		animAttacking=true
+
 		playAnimation ("Attack1")
 		$Animation.speed_scale=attack_Speed
 		
@@ -250,15 +252,23 @@ func creatAttackInstance(classChild):
 		attackInstance= attack1.skill.instantiate()
 		attackInstance.quality= attack1.quality
 	elif(classChild==1):
+		if (attack2.skill==null):
+			return null
 		attackInstance= attack2.skill.instantiate()
 		attackInstance.quality= attack2.quality
 	elif(classChild==2):
+		if (turret.skill==null):
+			return null
 		attackInstance= turret.skill.instantiate()
 		attackInstance.quality= turret.quality
 	elif(classChild==3):
+		if (dash.skill==null):
+			return null
 		attackInstance= dash.skill.instantiate()
 		attackInstance.quality= dash.quality
 	elif(classChild==4):
+		if (ultimate.skill==null):
+			return null
 		attackInstance= ultimate.skill.instantiate()
 		attackInstance.quality= ultimate.quality
 
@@ -271,6 +281,8 @@ func attack2Controller():
 	var classChild=1	
 	if (Input.is_action_pressed("Attack2") and permissions[classChild] and permissions[0]):
 		var attackInstance = creatAttackInstance(classChild)
+		if (attackInstance==null):
+			return
 		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position
 		
@@ -284,6 +296,8 @@ func turretController():
 	if (Input.is_action_just_pressed("Turret")):
 		print("Turret")
 		var attackInstance = creatAttackInstance(classChild)
+		if (attackInstance==null):
+			return
 		Global.Game.get_node("Instances/Turrets").add_child(attackInstance)
 		attackInstance.global_position=global_position
 
@@ -292,6 +306,8 @@ func dashController():
 	if (Input.is_action_just_pressed("Dash") and permissions[classChild]):
 		print("Dash")
 		var attackInstance = creatAttackInstance(classChild)
+		if (attackInstance==null):
+			return
 		attackInstance.direction= lastMovement
 		add_child(attackInstance)
 		playAnimation("Dash")
@@ -309,6 +325,8 @@ func ultimateController():
 		print("Ultimate")
 		ultimateWaveActivations+=1
 		var attackInstance = creatAttackInstance(classChild)
+		if (attackInstance==null):
+			return
 		Global.Game.get_node("Instances/Ultimates").add_child(attackInstance)
 		attackInstance.global_position=global_position
 	
@@ -404,5 +422,5 @@ func _on_timer_timeout():
 
 
 func _on_animation_animation_looped():
-	if (animAttacking and !Input.is_action_pressed("Attack1")):
+	if (animAttacking):
 		animAttacking=false

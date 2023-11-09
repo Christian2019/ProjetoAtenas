@@ -1,7 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0rurmnfon8nm"]
+[gd_scene load_steps=8 format=3 uid="uid://c0rurmnfon8nm"]
 
-[ext_resource type="Texture2D" uid="uid://c54g4r5h7thq8" path="res://Assets/Images/Constructions/pool.png" id="1_ke3tf"]
 [ext_resource type="Script" path="res://Scripts/Zones/Center/Pool.gd" id="1_puot0"]
+[ext_resource type="Texture2D" uid="uid://cy5oax8echrbm" path="res://Assets/Images/Constructions/AnimacaoPiscina/0001.png" id="2_w78cm"]
+[ext_resource type="Texture2D" uid="uid://chf3umacstfus" path="res://Assets/Images/Constructions/AnimacaoPiscina/0004.png" id="3_imqq1"]
+[ext_resource type="Texture2D" uid="uid://dplv0ndumd70u" path="res://Assets/Images/Constructions/AnimacaoPiscina/0010.png" id="4_a3u1i"]
+[ext_resource type="Texture2D" uid="uid://bmn7km0snk8re" path="res://Assets/Images/Constructions/AnimacaoPiscina/0011.png" id="5_r7n0k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_le652"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_w78cm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_imqq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a3u1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r7n0k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27t6k"]
 size = Vector2(49, 52)
@@ -9,14 +32,16 @@ size = Vector2(49, 52)
 [node name="Pool" type="Node2D"]
 script = ExtResource("1_puot0")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_ke3tf")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, 2)
+scale = Vector2(0.668, 0.61456)
+sprite_frames = SubResource("SpriteFrames_le652")
+autoplay = "default"
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.5, 0)
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_27t6k")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
