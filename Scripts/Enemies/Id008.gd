@@ -14,6 +14,8 @@ var spawnDelay=5
 var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
+var attackSpeedModifierVar=[]
+
 
 func _ready():
 	maxHpBarWidth=$HPBar/Red.size.x

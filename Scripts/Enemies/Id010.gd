@@ -9,12 +9,12 @@ var damages = {
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
-var nextHitDelay = 1
+var nextHitDelay = 1.0
 
 var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
-var speed = 1
+var speed = 1.0
 var isMoving=true
 
 var playerInside=false
@@ -24,7 +24,7 @@ var target
 
 var dracmas=1
 
-
+var attackSpeedModifierVar=[nextHitDelay]
 
 func _ready():
 	$AnimatedSprite2D.play("Walking")
@@ -41,6 +41,8 @@ func _process(_delta):
 		hp=0
 		die()
 		return
+		
+	$AnimatedSprite2D.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
 		
 	getCloserTarget()
 	
@@ -74,13 +76,13 @@ func attack():
 		
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
-		Global.timerCreator("enableHit",nextHitDelay,[0],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[0],self)
 		Global.MathController.damageController(damages.damage,Global.player)
 		Global.player.activateFeedback()
 			
 	if (centerPointInside and !nextHitDelayCenterPoint):
 		nextHitDelayCenterPoint=true
-		Global.timerCreator("enableHit",nextHitDelay,[1],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[1],self)
 		
 		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()

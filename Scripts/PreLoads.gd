@@ -110,8 +110,6 @@ var targetDummy=preload("res://Scenes/Game/Enemies/targetDummy.tscn")
 ##Classes
 ##Warrior
 
-
-
 #Attack1
 var warrior_attack1_noGod=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_noGod.tscn")
 var warrior_attack1_zeus=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Zeus/Warrior_attack1_Zeus.tscn")
@@ -126,7 +124,7 @@ var warrior_attack1_poseidon_heavyDamage=preload("res://Scenes/Game/Classes/Warr
 
 #Attack2
 var warrior_attack2_noGod=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2/Warrior_attack2_noGod.tscn")
-var warrior_attack2_zeus
+var warrior_attack2_zeus=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2/Warrior_attack2_Zeus/Warrior_attack2_Zeus.tscn")
 var warrior_attack2_poseidon
 var warrior_attack2_hades
 var warrior_attack2_divine_ZeusPoseidon
@@ -134,6 +132,7 @@ var warrior_attack2_divine_ZeusHades
 var warrior_attack2_divine_HadesPoseidon
 
 var warrior_attack2_animations_effect=preload("res://Scenes/Game/Classes/Warrior/Effects/vfx_attack_2.tscn")
+var lightingBolt=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2/Warrior_attack2_Zeus/LightiningBolt.tscn")
 
 #Dash
 var warrior_dash_noGod=preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash.tscn")
@@ -170,3 +169,4 @@ var poseidon_tentacle=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimate
 #Effects
 var eletrified =preload("res://Scenes/Game/Math_controller/Effects/Electrified.tscn")
 var twister = preload("res://Scenes/Game/Math_controller/Effects/Twister.tscn")
+var disorientation= preload("res://Scenes/Game/Math_controller/Effects/Disorientation.tscn")

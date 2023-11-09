@@ -10,12 +10,12 @@ var damages = {
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
-var nextHitDelay = 1
+var nextHitDelay = 1.0
 
 var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
-var speed = 2
+var speed = 2.0
 
 var isMoving=true
 
@@ -29,7 +29,7 @@ var dracmas=1
 var stage=0
 
 var onCD=false
-var totalCd=5
+var totalCd=5.0
 var headCd=0.5
 
 var moveTarget
@@ -37,6 +37,8 @@ var moveTarget
 var heads=4
 
 var checkedHeads=false
+
+var attackSpeedModifierVar=[nextHitDelay,totalCd,headCd]
 
 func _ready():
 	maxHpBarWidth=$HPBar/Red.size.x
@@ -59,6 +61,11 @@ func _process(_delta):
 		hp=0
 		die()
 		return
+		
+	$Head1.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
+	$Head2.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
+	$Head3.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
+	$Head4.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
 
 	getTarget()
 	hpBarController()
@@ -96,16 +103,16 @@ func attackController():
 	if (onCD):
 		return
 	onCD=true
-	Global.timerCreator("enableAttack",totalCd,[],self)
+	Global.timerCreator("enableAttack",attackSpeedModifierVar[1],[],self)
 	
 	if (heads==4):
 		createFireBall($Head1.global_position)
-		Global.timerCreator("createFireBall",headCd,[$Head2.global_position],self)
-		Global.timerCreator("createFireBall",headCd*2,[$Head3.global_position],self)
-		Global.timerCreator("createFireBall",headCd*3,[$Head4.global_position],self)
+		Global.timerCreator("createFireBall",attackSpeedModifierVar[2],[$Head2.global_position],self)
+		Global.timerCreator("createFireBall",attackSpeedModifierVar[2]*2,[$Head3.global_position],self)
+		Global.timerCreator("createFireBall",attackSpeedModifierVar[2]*3,[$Head4.global_position],self)
 	elif(heads==2):
 		createFireBall($Head1.global_position)
-		Global.timerCreator("createFireBall",headCd,[$Head2.global_position],self)
+		Global.timerCreator("createFireBall",attackSpeedModifierVar[2],[$Head2.global_position],self)
 	else:
 		createFireBall($Head1.global_position)
 		
@@ -125,13 +132,13 @@ func contactDamage():
 	##Colisao por contado
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
-		Global.timerCreator("enableHit",nextHitDelay,[0],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[0],self)
 		Global.MathController.damageController(damages.damage,Global.player)
 		Global.player.activateFeedback()
 			
 	if (centerPointInside and !nextHitDelayCenterPoint):
 		nextHitDelayCenterPoint=true
-		Global.timerCreator("enableHit",nextHitDelay,[1],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[1],self)
 		
 		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()

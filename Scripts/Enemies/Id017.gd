@@ -9,12 +9,12 @@ var damages = {
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
-var nextHitDelay = 1
+var nextHitDelay = 1.0
 
 var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
-var speed = 4
+var speed = 4.0
 
 var isMoving=true
 
@@ -35,8 +35,7 @@ var hpBuff=2.5
 var speedBuff=1.5
 var damageBuff=1.25
 
-	
-
+var attackSpeedModifierVar=[nextHitDelay]
 
 func _ready():
 	maxHpBarWidth=$HPBar/Red.size.x
@@ -56,6 +55,8 @@ func _process(_delta):
 		hp=0
 		die()
 		return
+		
+	$AnimatedSprite2D.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
 
 	hpBarController()
 	
@@ -93,14 +94,14 @@ func contactDamage():
 	##Colisao por contado
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
-		Global.timerCreator("enableHit",nextHitDelay,[0],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[0],self)
 		Global.MathController.damageController(damages.damage,Global.player)
 		Global.player.activateFeedback()
 
 			
 	if (centerPointInside and !nextHitDelayCenterPoint):
 		nextHitDelayCenterPoint=true
-		Global.timerCreator("enableHit",nextHitDelay,[1],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[1],self)
 		
 		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
@@ -154,9 +155,9 @@ func move():
 			
 		
 	if (distanceXtoTarget>0):
-		$AnimatedSprite.flip_h=true
+		$AnimatedSprite2D.flip_h=true
 	else:
-		$AnimatedSprite.flip_h=false
+		$AnimatedSprite2D.flip_h=false
 
 func getRandomMoveTarget():
 	var x = RandomNumberGenerator.new().randi_range(0, 2561)

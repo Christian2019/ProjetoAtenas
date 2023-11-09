@@ -10,12 +10,12 @@ var damages = {
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
-var nextHitDelay = 1
+var nextHitDelay = 1.0
 
 var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
-var speed = 3
+var speed = 3.0
 
 var isMoving=true
 
@@ -31,11 +31,11 @@ var targetMinDistance=100
 
 var escapePoint
 
-var cd = 1
+var cd = 1.0
 
 var onCD=false
 
-
+var attackSpeedModifierVar=[nextHitDelay,cd]
 
 func _ready():
 	maxHpBarWidth=$HPBar/Red.size.x
@@ -55,6 +55,8 @@ func _process(_delta):
 		hp=0
 		die()
 		return
+		
+	$AnimatedSprite2D.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
 	
 	getTarget()
 	hpBarController()
@@ -88,14 +90,14 @@ func contactDamage():
 	##Colisao por contado
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
-		Global.timerCreator("enableHit",nextHitDelay,[0],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[0],self)
 		Global.MathController.damageController(damages.damage,Global.player)
 		Global.player.activateFeedback()
 
 			
 	if (centerPointInside and !nextHitDelayCenterPoint):
 		nextHitDelayCenterPoint=true
-		Global.timerCreator("enableHit",nextHitDelay,[1],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[1],self)
 		
 		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
@@ -117,7 +119,7 @@ func createArrowAttack():
 		
 		
 	onCD=true
-	Global.timerCreator("enableAttack",cd,[],self)
+	Global.timerCreator("enableAttack",attackSpeedModifierVar[1],[],self)
 	var angle = rad_to_deg(global_position.angle_to_point(target.global_position))
 	var valueDistance=-70
 	var openAngle=70

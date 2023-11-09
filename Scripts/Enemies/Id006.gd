@@ -10,12 +10,12 @@ var damages = {
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
-var nextHitDelay = 1
+var nextHitDelay = 1.0
 
 var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
-var speed = 3
+var speed = 3.0
 var isMoving=true
 
 var playerInside=false
@@ -36,7 +36,7 @@ var chargeMaxFrame=2.5*60
 #var minRadiusFromPlayer=chargeSpeed*chargeMaxFrame
 var minRadiusFromPlayer=500
 
-
+var attackSpeedModifierVar=[nextHitDelay,chargeCD]
 
 func _ready():
 	$AnimatedSprite2D.play("Walking")
@@ -53,6 +53,8 @@ func _process(_delta):
 		hp=0
 		die()
 		return
+		
+	$AnimatedSprite2D.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
 		
 	getCloserTarget()
 	checkPlayerDistance()
@@ -100,7 +102,7 @@ func chargeFunction():
 			$AnimatedSprite2D.speed_scale=1
 			charging=false
 			canCharge=false
-			Global.timerCreator("enableCharge",chargeCD,[],self)
+			Global.timerCreator("enableCharge",attackSpeedModifierVar[1],[],self)
 	else:
 		var targetPointX= Global.player.position.x
 		var distanceXtotTarget = position.x-targetPointX
@@ -190,16 +192,16 @@ func getCloserTarget():
 func attack():
 	if ($AnimatedSprite2D.animation!= "Attacking"):
 		$AnimatedSprite2D.animation= "Attacking"
-		
+				
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
-		Global.timerCreator("enableHit",nextHitDelay,[0],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[0],self)
 		Global.MathController.damageController(damages.damage,Global.player)
 		Global.player.activateFeedback()
 			
 	if (centerPointInside and !nextHitDelayCenterPoint):
 		nextHitDelayCenterPoint=true
-		Global.timerCreator("enableHit",nextHitDelay,[1],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[1],self)
 		
 		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()

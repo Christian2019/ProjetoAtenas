@@ -8,6 +8,9 @@ var hp = maxHp
 var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
+var speed=0.0
+var attackSpeedModifierVar=[]
+
 func _ready():
 	maxHpBarWidth=$HPBar/Red.size.x
 

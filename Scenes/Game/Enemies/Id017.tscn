@@ -35,7 +35,7 @@ size = Vector2(120, 59)
 [node name="Id017" type="Node2D"]
 script = ExtResource("1_kah2c")
 
-[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.162459, 0.160625)
 sprite_frames = SubResource("SpriteFrames_grjig")
 animation = &"Moving"

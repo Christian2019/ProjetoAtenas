@@ -10,12 +10,12 @@ var damages = {
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
-var nextHitDelay = 1
+var nextHitDelay = 1.0
 
 var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
-var speed = 5
+var speed = 5.0
 
 var isMoving=true
 
@@ -27,7 +27,7 @@ var dracmas=10
 var stage=0
 
 
-var cd=2
+var cd=2.0
 
 var onCD=false
 
@@ -53,6 +53,8 @@ var t1NumberOfTarget=20
 #Type2 - Ataque prisao do player 
 var t2DegGap=10
 var t2StartDistanceFromPlayer=500
+
+var attackSpeedModifierVar=[nextHitDelay,cd]
 
 func _ready():
 	maxHpBarWidth=$HPBar/Red.size.x
@@ -84,6 +86,8 @@ func _process(_delta):
 		hp=0
 		die()
 		return
+		
+	$AnimatedSprite2D.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
 
 	stageController()
 
@@ -186,10 +190,10 @@ func attackController():
 		return
 	onCD=true
 	if(stage==1):
-		Global.timerCreator("enableAttack",cd,[],self)
+		Global.timerCreator("enableAttack",attackSpeedModifierVar[1],[],self)
 		stage1Func()
 	elif(stage==2):
-		Global.timerCreator("enableAttack",cd,[],self)
+		Global.timerCreator("enableAttack",attackSpeedModifierVar[1],[],self)
 		var rng =RandomNumberGenerator.new().randi_range(0, 1)
 		if (rng==0):
 			stage1Func()
@@ -254,14 +258,14 @@ func contactDamage():
 	##Colisao por contado
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
-		Global.timerCreator("enableHit",nextHitDelay,[0],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[0],self)
 		Global.MathController.damageController(damages.damage,Global.player)
 		Global.player.activateFeedback()
 
 			
 	if (centerPointInside and !nextHitDelayCenterPoint):
 		nextHitDelayCenterPoint=true
-		Global.timerCreator("enableHit",nextHitDelay,[1],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[1],self)
 		
 		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
@@ -285,3 +289,4 @@ func _on_area_2d_area_exited(area):
 		playerInside=false
 	if (area.get_parent().name=="Center"):
 		centerPointInside=false
+

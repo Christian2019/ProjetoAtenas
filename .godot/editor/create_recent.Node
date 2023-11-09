@@ -1,9 +1,9 @@
+Timer
 AnimatedSprite2D
 ColorRect
 Sprite2D
 Label
 Node2D
-Timer
 AudioStreamPlayer
 CollisionShape2D
 Area2D

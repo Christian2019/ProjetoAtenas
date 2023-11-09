@@ -11,7 +11,7 @@ var damages = {
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
-var nextHitDelay = 1
+var nextHitDelay = 1.0
 
 var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
@@ -35,7 +35,7 @@ var rotationAngle=0
 
 var radSpeed
 
-
+var attackSpeedModifierVar=[nextHitDelay]
 
 
 func _ready():
@@ -49,6 +49,8 @@ func _process(_delta):
 		hp=0
 		die()
 		return
+		
+	$AnimatedSprite2D.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
 
 	move()
 	attack()

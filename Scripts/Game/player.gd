@@ -231,7 +231,7 @@ func attack1Controller():
 	if (Global.MathController.attack1_poseidon.heavyDamageOn):
 		return
 	var classChild=0	
-	if (Input.is_action_pressed("Attack1") and permissions[classChild]):
+	if (Input.is_action_pressed("Attack1") and permissions[classChild] and permissions[1]):
 		var attackInstance = creatAttackInstance(classChild)
 		attackInstance.direction=lastMovement
 		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
@@ -269,7 +269,7 @@ func creatAttackInstance(classChild):
 
 func attack2Controller():
 	var classChild=1	
-	if (Input.is_action_pressed("Attack2") and permissions[classChild]):
+	if (Input.is_action_pressed("Attack2") and permissions[classChild] and permissions[0]):
 		var attackInstance = creatAttackInstance(classChild)
 		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position

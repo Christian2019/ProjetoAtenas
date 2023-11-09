@@ -10,12 +10,12 @@ var damages = {
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
-var nextHitDelay = 1
+var nextHitDelay = 1.0
 
 var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
-var speed = 5
+var speed = 5.0
 
 var isMoving=true
 
@@ -31,7 +31,7 @@ var stage=0
 var targetAttackMinDistance=500
 
 var cd0 = 1.25
-var cd1 = 1
+var cd1 = 1.0
 var cd2 = 0.75
 
 var onCD=false
@@ -42,6 +42,8 @@ var moveBackWardsY=false
 var wave
 
 var moveTargetStage2
+
+var attackSpeedModifierVar=[nextHitDelay,cd0,cd1,cd2]
 
 func _ready():
 	maxHpBarWidth=$HPBar/Red.size.x
@@ -61,6 +63,8 @@ func _process(_delta):
 		hp=0
 		die()
 		return
+		
+	$AnimatedSprite2D.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
 	
 	stageController()
 		
@@ -102,7 +106,7 @@ func attack():
 	##Colisao por contado
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
-		Global.timerCreator("enableHit",nextHitDelay,[0],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[0],self)
 		Global.MathController.damageController(damages.damage,Global.player)
 		Global.player.activateFeedback()
 		if (Global.player.hp<0):
@@ -110,7 +114,7 @@ func attack():
 			
 	if (centerPointInside and !nextHitDelayCenterPoint):
 		nextHitDelayCenterPoint=true
-		Global.timerCreator("enableHit",nextHitDelay,[1],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[1],self)
 		
 		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
@@ -128,7 +132,7 @@ func createArrowAttack():
 	if (stage==0):
 		if (global_position.distance_to(target.global_position)<targetAttackMinDistance):
 			onCD=true
-			Global.timerCreator("enableAttack",cd0,[],self)
+			Global.timerCreator("enableAttack",attackSpeedModifierVar[1],[],self)
 			var angle = rad_to_deg(global_position.angle_to_point(target.global_position))
 			spawnArrow(Vector2(20,10),angle)
 			spawnArrow(Vector2(-20,-40),angle)
@@ -138,7 +142,7 @@ func createArrowAttack():
 	elif (stage==1):
 		if (global_position.distance_to(target.global_position)<targetAttackMinDistance):
 			onCD=true
-			Global.timerCreator("enableAttack",cd1,[],self)
+			Global.timerCreator("enableAttack",attackSpeedModifierVar[2],[],self)
 			var rng = RandomNumberGenerator.new()
 			for i in range(0,8,1):
 				var angle = RandomNumberGenerator.new().randi_range(0, 360)
@@ -149,7 +153,7 @@ func createArrowAttack():
 	
 	else:
 		onCD=true
-		Global.timerCreator("enableAttack",cd2,[],self)
+		Global.timerCreator("enableAttack",attackSpeedModifierVar[3],[],self)
 		var rng = RandomNumberGenerator.new()
 		for i in range(0,8,1):
 			var angle = RandomNumberGenerator.new().randi_range(0, 360)

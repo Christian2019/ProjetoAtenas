@@ -10,12 +10,12 @@ var damages = {
 
 var nextHitDelayPlayer=false
 var nextHitDelayCenterPoint=false
-var nextHitDelay = 1
+var nextHitDelay = 1.0
 
 var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
-var speed=4
+var speed=4.0
 var canMove=true
 
 var playerInside=false
@@ -33,6 +33,8 @@ var usingPoison=false
 var numberOfProjetiles=10
 var poisonSpeed=3
 
+var attackSpeedModifierVar=[nextHitDelay,cd]
+
 func _ready():
 	$AnimatedSprite2D.play("Moving")
 	maxHpBarWidth=$HPBar/Red.size.x
@@ -42,6 +44,8 @@ func _process(_delta):
 		hp=0
 		die()
 		return
+	
+	$AnimatedSprite2D.speed_scale=nextHitDelay/attackSpeedModifierVar[0]	
 	
 	hpBarController()	
 	getTarget()
@@ -107,7 +111,7 @@ func attack():
 	if (!onCd and global_position.distance_to(target.global_position)<minDistance):
 		spit()
 		onCd=true
-		Global.timerCreator("disableCD",cd,[],self)
+		Global.timerCreator("disableCD",attackSpeedModifierVar[1],[],self)
 		canMove=false
 		usingPoison=true
 		$AnimatedSprite2D.animation="Spiting"
@@ -151,7 +155,7 @@ func disableCD():
 func contactDamage():
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
-		Global.timerCreator("enableHit",nextHitDelay,[0],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[0],self)
 		Global.player.hp-=damages.damage
 		Global.player.activateFeedback()
 		if (Global.player.hp<0):
@@ -159,7 +163,7 @@ func contactDamage():
 			
 	if (centerPointInside and !nextHitDelayCenterPoint):
 		nextHitDelayCenterPoint=true
-		Global.timerCreator("enableHit",nextHitDelay,[1],self)
+		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[1],self)
 		
 		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
