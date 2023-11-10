@@ -133,6 +133,7 @@ var warrior_attack2_divine_HadesPoseidon
 
 var warrior_attack2_animations_effect=preload("res://Scenes/Game/Classes/Warrior/Effects/vfx_attack_2.tscn")
 var lightingBolt=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2/Warrior_attack2_Zeus/LightiningBolt.tscn")
+var warrior_attack2_poseidon_explosion= preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2/Warrior_attack2_Poseidon/Explosion.tscn")
 
 #Dash
 var warrior_dash_noGod=preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash.tscn")

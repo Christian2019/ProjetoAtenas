@@ -1,3 +1,5 @@
+CollisionShape2D
+Area2D
 Timer
 Node2D
 Sprite2D
@@ -5,8 +7,6 @@ AnimatedSprite2D
 ColorRect
 Label
 AudioStreamPlayer
-CollisionShape2D
-Area2D
 VideoStreamPlayer
 Node
 AudioStreamPlayer2D

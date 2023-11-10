@@ -1488,7 +1488,7 @@ script = ExtResource("1_s0uo2")
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ddi15")
-animation = &"Attack1_Up"
+animation = &"Attack1_Up_Right"
 
 [node name="CutAnimation" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 5.68434e-14)

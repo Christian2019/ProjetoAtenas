@@ -128,11 +128,20 @@ func damageAction():
 			if itsValid(monstersHit[i]):
 				if (!monstersHit[i].onHitDelay):
 					if (quality=="legendary" or quality=="divine"):
-						print("explosion")
+						createExplosion(monstersHit[i].monster)
 					Global.MathController.damageController(damage,monstersHit[i].monster)
 					monstersHit[i].onHitDelay=true
 					Global.timerCreator("removeNextHitDelay",nextHitDelay,[i],self)
 
+
+
+
+
+func createExplosion(t):
+	var e=PreLoads.warrior_attack2_poseidon_explosion.instantiate()
+	e.damage=damage
+	Global.Game.get_node("Instances/Projectiles").add_child(e)
+	e.global_position=global_position
 
 func move():
 	angle+=speed

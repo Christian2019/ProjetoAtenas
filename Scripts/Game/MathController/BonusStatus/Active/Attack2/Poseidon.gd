@@ -13,9 +13,7 @@ func _process(delta):
 	if ((Global.player.attack2.skill==PreLoads.warrior_attack2_poseidon or
 	Global.Game.skills[1].skill==4 or
 	Global.Game.skills[1].skill==6) and !maxHpPercentBonus):
-		
-		print("ativou")
-		
+	
 		maxHpPercentBonus=true
 		
 		var quality
@@ -52,7 +50,6 @@ func _process(delta):
 	Global.Game.skills[1].skill!=4 and
 	Global.Game.skills[1].skill!=6) and maxHpPercentBonus):
 		
-		print("desativou")
 		maxHpPercentBonus=false
 		var quality=lastQuality
 		
