@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://isi7f6biqpwu"]
+
+[ext_resource type="Texture2D" uid="uid://blynp6tx3xwfa" path="res://Assets/Images/Player/Attack2/Hades/SoulSteal/soulStealMark.png" id="1_yl30y"]
+
+[node name="SoulStealMark" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_yl30y")

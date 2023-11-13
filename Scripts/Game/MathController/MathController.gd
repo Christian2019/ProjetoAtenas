@@ -22,6 +22,8 @@ func clearArrays():
 	attack1_zeus.electrified.clear()
 	attack1_poseidon.waterDamage.clear()
 	attack1_poseidon.heavyDamageHits=0
+	attack2_hades.array.clear()
+	attack2_hades.positions.clear()
 
 func damageController(damage,target):
 	var finalDamage=damage

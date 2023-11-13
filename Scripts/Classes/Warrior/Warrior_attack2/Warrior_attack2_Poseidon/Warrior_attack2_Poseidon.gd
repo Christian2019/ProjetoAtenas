@@ -23,8 +23,6 @@ var monstersInArea = []
 
 var collidinWithPlayer=false
 
-var reverseOrder=false
-
 var quality="common"
 
 var startRotationAngle

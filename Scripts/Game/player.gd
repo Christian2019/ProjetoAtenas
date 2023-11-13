@@ -3,11 +3,11 @@ extends Node2D
 var dead = false
 
 ##Stats
-var baseMaxHp=99999
+var baseMaxHp=9999.0
 var maxHpPercentBonus=0
 var maxHp=baseMaxHp
 var hp = maxHp
-var hpRegeneration=0
+var hpRegeneration=1
 
 var lifeStealChance=0.1
 var percentDamage=1.0
@@ -70,6 +70,16 @@ var animAttacking=false
 
 func _ready():
 	Global.player = self
+	hpRegenerationFunction()
+	
+func hpRegenerationFunction():
+	Global.timerCreator("hpRegenerationFunction",1,[],self)
+	
+	if (hpRegeneration>0):
+		hp+=hpRegeneration
+		if (hp>maxHp):
+			hp=maxHp
+	
 
 func _process(__delta):
 	if (dead):

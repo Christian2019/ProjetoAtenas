@@ -1,5 +1,9 @@
-res://Scripts/Classes/Warrior/Warrior_attack2/Warrior_attack2_Poseidon
+res://Scripts/Classes/Warrior/Warrior_attack2/Warrior_attack2_Hades
+res://Assets/Images/Player/Attack2/Hades/SoulSteal/SoulAnimation
+res://Scenes/Game
+res://Scripts/Game/MathController/Skills/attack2/Hades
 res://Scripts/Game/MathController/BonusStatus/Active/Attack2
+res://Scripts/Classes/Warrior/Warrior_attack2/Warrior_attack2_Poseidon
 res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon
 res://Assets/Images/Resources/collectable
 res://Assets/Images/Constructions/Defenses

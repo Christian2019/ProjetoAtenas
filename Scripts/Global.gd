@@ -7,6 +7,7 @@ var hud
 var camera
 var WaveController
 var MathController
+var SoundController
 
 var startNode
 
