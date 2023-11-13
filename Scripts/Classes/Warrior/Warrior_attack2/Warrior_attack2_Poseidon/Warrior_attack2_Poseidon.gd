@@ -32,6 +32,7 @@ var angle
 var animation
 
 ##God Status
+var divineReference
 
 
 func _ready():
@@ -112,7 +113,12 @@ func animation():
 """
 
 func destroy():
-	Global.player.permissions[1]=true
+	if (quality=="divine"):
+		if is_instance_valid(divineReference):
+			divineReference.skillsFinish+=1
+	else:
+		Global.player.permissions[1]=true
+			
 	animation.call_deferred("queue_free")
 	call_deferred("queue_free")
 

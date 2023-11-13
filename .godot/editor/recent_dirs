@@ -1,3 +1,4 @@
+res://Scripts/Classes/Warrior/Warrior_attack2
 res://Scripts/Classes/Warrior/Warrior_attack2/Warrior_attack2_Hades
 res://Assets/Images/Player/Attack2/Hades/SoulSteal/SoulAnimation
 res://Scenes/Game
@@ -11,7 +12,6 @@ res://Assets/Images/Constructions/AnimacaoPiscina
 res://Scripts/Game/MathController/Skills/attack2/Zeus
 res://Assets/Images/Player/Attack2/Zeus/Disorientation
 res://Scripts/Classes/Warrior/Warrior_attack2/Warrior_attack2_Zeus
-res://Scripts/Classes/Warrior/Warrior_attack2
 res://Assets/Images/HUD/SkillSelection/Divine
 res://Assets/Images/HUD/Ultimates
 res://Assets/Images/Player

@@ -5,23 +5,16 @@ var lastQuality
 
 
 func _process(delta):
-	"""
+
 	if ((Global.player.attack2.skill==PreLoads.warrior_attack2_poseidon or
 	Global.player.attack2.skill==PreLoads.warrior_attack2_divine_ZeusPoseidon or
 	Global.player.attack2.skill==PreLoads.warrior_attack2_divine_HadesPoseidon) and !maxHpPercentBonus):
-	"""
-	if ((Global.player.attack2.skill==PreLoads.warrior_attack2_poseidon or
-	Global.Game.skills[1].skill==4 or
-	Global.Game.skills[1].skill==6) and !maxHpPercentBonus):
 	
 		maxHpPercentBonus=true
 		
 		var quality
 		
-				#if (Global.player.attack2.skill==PreLoads.warrior_attack2_divine_ZeusPoseidon or
-	#Global.player.attack2.skill==PreLoads.warrior_attack2_divine_HadesPoseidon):
-		
-		if (Global.Game.skills[1].skill==4 or Global.Game.skills[1].skill==6):
+		if (Global.player.attack2.skill==PreLoads.warrior_attack2_divine_ZeusPoseidon or Global.player.attack2.skill==PreLoads.warrior_attack2_divine_HadesPoseidon):
 			quality="divine"
 		else:
 			quality=Global.player.attack2.quality
@@ -42,14 +35,10 @@ func _process(delta):
 			
 
 	
-	#if ((Global.player.attack2.skill!=PreLoads.warrior_attack2_poseidon and
-	#Global.player.attack2.skill!=PreLoads.warrior_attack2_divine_ZeusPoseidon and
-	#Global.player.attack2.skill!=PreLoads.warrior_attack2_divine_HadesPoseidon) and maxHpPercentBonus):
-	
 	if ((Global.player.attack2.skill!=PreLoads.warrior_attack2_poseidon and
-	Global.Game.skills[1].skill!=4 and
-	Global.Game.skills[1].skill!=6) and maxHpPercentBonus):
-		
+	Global.player.attack2.skill!=PreLoads.warrior_attack2_divine_ZeusPoseidon and
+	Global.player.attack2.skill!=PreLoads.warrior_attack2_divine_HadesPoseidon) and maxHpPercentBonus):
+
 		maxHpPercentBonus=false
 		var quality=lastQuality
 		

@@ -269,8 +269,6 @@ func creatAttackInstance(classChild):
 		attackInstance= attack1.skill.instantiate()
 		attackInstance.quality= attack1.quality
 	elif(classChild==1):
-		if (attack2.skill==null):
-			return null
 		attackInstance= attack2.skill.instantiate()
 		attackInstance.quality= attack2.quality
 	elif(classChild==2):
@@ -298,8 +296,6 @@ func attack2Controller():
 	var classChild=1	
 	if (Input.is_action_pressed("Attack2") and permissions[classChild] and permissions[0]):
 		var attackInstance = creatAttackInstance(classChild)
-		if (attackInstance==null):
-			return
 		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position
 		
