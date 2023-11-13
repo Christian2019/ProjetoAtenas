@@ -17,7 +17,9 @@ var percentCritDamage=0.1
 var armor=20
 var dodge=50
 var maxDodge=70
-var move_Speed = 5.0
+var baseMoveSpeed=5.0
+var move_Speed = baseMoveSpeed
+var moveSpeedPercentBonus=0
 var luck=0
 var collect_radios=200
 
@@ -91,7 +93,7 @@ func _process(__delta):
 		restartGame()
 		return
 	
-	hpController()
+	multiplierController()
 	animationController()
 	commandController()	
 	getCloserQuadrant()
@@ -101,8 +103,9 @@ func _process(__delta):
 	
 	#contruction()
 
-func hpController():
-	maxHp=baseMaxHp*(1+maxHpPercentBonus)	
+func multiplierController():
+	maxHp=baseMaxHp*(1+maxHpPercentBonus)
+	move_Speed=baseMoveSpeed*(1+moveSpeedPercentBonus)	
 
 func restartGame():
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/Fatality.tscn")
@@ -316,7 +319,7 @@ func turretController():
 
 func dashController():
 	var classChild=3	
-	if (Input.is_action_just_pressed("Dash") and permissions[classChild]):
+	if (Input.is_action_pressed("Dash") and permissions[classChild]):
 		print("Dash")
 		var attackInstance = creatAttackInstance(classChild)
 		if (attackInstance==null):

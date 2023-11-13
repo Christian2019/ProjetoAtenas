@@ -8,6 +8,8 @@ var attack2_zeus
 var attack2_poseidon
 var attack2_hades
 
+var dash_zeus
+
 func _ready():
 	Global.MathController=self
 	attack1_zeus= get_node("Attack1/Zeus")
@@ -17,6 +19,8 @@ func _ready():
 	attack2_zeus= get_node("Attack2/Zeus")
 	attack2_poseidon=get_node("Attack2/Poseidon")
 	attack2_hades=get_node("Attack2/Hades")
+	
+	dash_zeus=get_node("Dash/Zeus")
 
 func clearArrays():
 	attack1_zeus.electrified.clear()

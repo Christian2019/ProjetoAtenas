@@ -138,8 +138,8 @@ var warrior_attack2_hades_soulStealMark=preload("res://Scenes/Game/Classes/Warri
 var warrior_attack2_hades_soul=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack2/Warrior_attack2_Hades/Soul.tscn")
 
 #Dash
-var warrior_dash_noGod=preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash.tscn")
-var warrior_dash_zeus
+var warrior_dash_noGod=preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash_noGod.tscn")
+var warrior_dash_zeus=preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash_Zeus.tscn")
 var warrior_dash_poseidon
 var warrior_dash_hades
 var warrior_dash_divine_ZeusPoseidon

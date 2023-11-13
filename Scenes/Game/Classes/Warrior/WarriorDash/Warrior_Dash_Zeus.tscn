@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu7uuy2pkthoh"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_Dash_noGod.gd" id="1_f7qgo"]
+
+[node name="Warrior_Dash_Zeus" type="Node2D"]
+script = ExtResource("1_f7qgo")
+
+[node name="Animation" type="ColorRect" parent="."]
+offset_left = -20.0
+offset_top = -19.0
+offset_right = 20.0
+offset_bottom = 21.0
+color = Color(1, 1, 0, 0.156863)
