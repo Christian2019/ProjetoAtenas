@@ -17,12 +17,27 @@ var direction="E"
 #GodBonus
 
 
+
 func _ready():
 	Global.player.dashing=true
 	Global.timerCreator("stopDashing",duration,[],self)
 	stepFrame=int((duration*60)/(quantityOfShadows+1))
 	Global.Game.get_node("SoundController/Dash").play()
 	speed=Global.player.move_Speed*2
+	qualityStatus()
+
+func qualityStatus():
+	if ( quality=="common"):
+		cd=0.6
+	elif ( quality=="rare"):
+		cd=0.5
+	elif ( quality=="epic"):
+		cd=0.4
+	elif ( quality=="legendary"):
+		cd=0.3
+	elif ( quality=="divine"):
+		cd=0.2
+	
 
 func stopDashing():
 	Global.player.dashing=false

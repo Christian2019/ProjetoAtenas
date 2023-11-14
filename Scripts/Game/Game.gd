@@ -5,7 +5,7 @@ var changeSkillHud=true
 var skills=[{"skill":0,"quality":3},
 {"skill":0,"quality":3},
 {"skill":0,"quality":3},
-{"skill":2,"quality":3},
+{"skill":3,"quality":2},
 {"skill":0,"quality":3}
 ]
 
