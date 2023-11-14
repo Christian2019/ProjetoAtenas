@@ -14,9 +14,11 @@ var percentDamage=1.0
 var baseDamage=1.0
 var attack_Speed = 1.0
 var percentCritDamage=0.1
-var armor=20
-var dodge=50
+
+var armor=0
+var dodge=0
 var maxDodge=70
+
 var baseMoveSpeed=5.0
 var move_Speed = baseMoveSpeed
 var moveSpeedPercentBonus=0
@@ -431,6 +433,7 @@ func _on_timer_timeout():
 	print("percentCritDamage: ",percentCritDamage)
 	print("armor: ",armor)
 	print("dodge: ",dodge)
+	print("maxDodge: ",maxDodge)
 	print("move_Speed: ",move_Speed)
 	print("luck: ",luck)
 	print("collect_radios: ",collect_radios)
