@@ -9,6 +9,7 @@ var attack2_poseidon
 var attack2_hades
 
 var dash_zeus
+var dash_poseidon
 
 func _ready():
 	Global.MathController=self
@@ -21,6 +22,7 @@ func _ready():
 	attack2_hades=get_node("Attack2/Hades")
 	
 	dash_zeus=get_node("Dash/Zeus")
+	dash_poseidon=get_node("Dash/Poseidon")
 
 func clearArrays():
 	attack1_zeus.electrified.clear()
@@ -34,7 +36,8 @@ func damageController(damage,target):
 	var crit=false
 	var miss=false
 	if (target.name=="Player"):
-		
+		enemyAttacksEffects()
+				
 		#Armor
 		var armor=Global.player.armor
 		var armorTankMultiplier
@@ -89,7 +92,9 @@ func damageController(damage,target):
 
 	target.hp-=finalDamage
 
-
+func enemyAttacksEffects():
+	dash_poseidon.effect()
+	
 	
 func effects(target,finalDamage):
 	

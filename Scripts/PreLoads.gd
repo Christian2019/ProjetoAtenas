@@ -140,7 +140,7 @@ var warrior_attack2_hades_soul=preload("res://Scenes/Game/Classes/Warrior/Warrio
 #Dash
 var warrior_dash_noGod=preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash_noGod.tscn")
 var warrior_dash_zeus=preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash_Zeus.tscn")
-var warrior_dash_poseidon
+var warrior_dash_poseidon= preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash_Poseidon.tscn")
 var warrior_dash_hades
 var warrior_dash_divine_ZeusPoseidon
 var warrior_dash_divine_ZeusHades
