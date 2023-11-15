@@ -68,7 +68,6 @@ func getWave():
 	actualWave=waveController.get_child(waveController.wave-1)
 
 func ultimate():
-	get_node("Frontground/Ultimate/Label2").text=str(Global.player.ultimateWaveActivations,"/",Global.player.ultimateMaxActivations)
 	if (Global.player.permissions[4]):
 		if ($Frontground/Ultimate/ColorRect.visible or $Frontground/Ultimate/ColorRect2.visible):
 			$Frontground/Ultimate/ColorRect.visible=false

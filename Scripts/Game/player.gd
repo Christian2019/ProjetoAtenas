@@ -34,8 +34,7 @@ var attack2={"skill":PreLoads.warrior_attack2_noGod, "quality": "common"}
 var turret={"skill":PreLoads.warrior_turret_zeus, "quality": "common"}
 var dash={"skill":PreLoads.warrior_dash_noGod, "quality": "common"}
 var ultimate={"skill":PreLoads.warrior_ultimate_poseidon, "quality": "legendary"}
-var ultimateMaxActivations=5
-var ultimateWaveActivations=0
+
 #Passivos
 
 
@@ -339,9 +338,8 @@ func enableDisableAnimation():
 		
 func ultimateController():
 	var classChild=4	
-	if (Input.is_action_just_pressed("Ultimate") and permissions[classChild] and ultimateWaveActivations<ultimateMaxActivations):
+	if (Input.is_action_just_pressed("Ultimate") and permissions[classChild]):
 		print("Ultimate")
-		ultimateWaveActivations+=1
 		var attackInstance = creatAttackInstance(classChild)
 		if (attackInstance==null):
 			return

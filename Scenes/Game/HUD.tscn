@@ -597,15 +597,6 @@ theme_override_font_sizes/font_size = 1
 text = "Ultimate"
 label_settings = SubResource("LabelSettings_22btt")
 
-[node name="Label2" type="Label" parent="Frontground/Ultimate"]
-offset_left = 205.0
-offset_top = 108.0
-offset_right = 392.0
-offset_bottom = 152.0
-theme_override_font_sizes/font_size = 1
-text = "0/0"
-label_settings = SubResource("LabelSettings_22btt")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Frontground/Ultimate"]
 position = Vector2(171.5, 122)
 scale = Vector2(0.0622902, 0.106592)

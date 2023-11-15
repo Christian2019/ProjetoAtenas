@@ -3,13 +3,14 @@ extends Node2D
 var quality="common"
 
 #Dano por frame (respeitando nextHitDelay)
-var damage = 5
+var damage
 var enableDamage=false
 #Duracao em segundos
-var cd = 5
+var cd = 30
+var cdRed=0
 
 #var nextHitDelay = 10
-var nextHitDelay = 0.01
+var nextHitDelay = 0.2
 
 var frame=0
 var max_duration = 14
@@ -23,10 +24,23 @@ func _ready():
 	$Sprite2D.modulate.a=0
 	Global.timerCreator("destroy", max_duration,[],self)
 	Global.Game.get_node("Night").visible=true
+	qualityStatus()
+
+func qualityStatus():
+	if ( quality=="common"):
+		damage=200
+	elif ( quality=="rare"):
+		damage=300
+	elif ( quality=="epic"):
+		damage=400
+	elif ( quality=="legendary"):
+		damage=600
+	elif ( quality=="divine"):
+		damage=900
 
 func destroy():
-	Global.hud.max_ultimate_frame=(cd)*60
-	Global.timerCreator("enableAttackUse",cd,[4],Global.player)
+	Global.hud.max_ultimate_frame=(cd-cdRed)*60
+	Global.timerCreator("enableAttackUse",cd-cdRed,[4],Global.player)
 	Global.Game.get_node("Night").visible=false
 	queue_free()
 
@@ -34,9 +48,20 @@ func _process(delta):
 
 	if (Global.player.playerOnCenterPoint or Global.Game.get_node("WaveController").mining):
 		destroy()
+	extraBonus()
+	global_position=Global.player.global_position
 	$Sprite2D.modulate.a=float(frame)/float(max_duration*60)
 	damageAction()
 	frame+=1
+
+func extraBonus():
+	if quality=="legendary":
+		cdRed=float(Global.MathController.attack1_zeus.electrified.size())*1
+	if quality=="divine":
+		cdRed=float(Global.MathController.attack1_zeus.electrified.size())*2	
+
+	if (cdRed>=cd):
+			cdRed=cd-0.1
 
 func damageAction():
 	if (monstersInArea.is_empty()):
@@ -45,9 +70,15 @@ func damageAction():
 			var i = getMonsterHitIndex(monstersInArea[j])
 			if itsValid(monstersHit[i]):
 				if (!monstersHit[i].onHitDelay):
-					monstersHit[i].monster.hp-=damage
+					createExplosion(monstersHit[i].monster)
 					monstersHit[i].onHitDelay=true
 					Global.timerCreator("removeNextHitDelay",nextHitDelay,[i],self)
+
+func createExplosion(t):
+	var e=PreLoads.warrior_attack2_poseidon_explosion.instantiate()
+	e.damage=damage
+	Global.Game.get_node("Instances/Projectiles").add_child(e)
+	e.global_position=t.global_position
 
 func _on_area_2d_area_entered(area):
 	if area.get_parent().get_parent().name == "Enemies":
