@@ -1,11 +1,11 @@
 extends Node2D
 	
-var selected=0
+var selected=3
 var changeSkillHud=true
 var skills=[{"skill":0,"quality":3},
 {"skill":0,"quality":3},
 {"skill":0,"quality":3},
-{"skill":3,"quality":2},
+{"skill":0,"quality":0},
 {"skill":0,"quality":3}
 ]
 

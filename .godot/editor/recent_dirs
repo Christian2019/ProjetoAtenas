@@ -1,5 +1,5 @@
-res://Scripts/Game/MathController/BonusStatus/Active/Dash
 res://Scripts/Classes/Warrior/Warrior_dash
+res://Scripts/Game/MathController/BonusStatus/Active/Dash
 res://Scripts/Game/MathController/Skills/dash/Poseidon
 res://Scripts/Game/MathController/Skills/dash/Zeus
 res://Scripts/Classes/Warrior/Warrior_attack2

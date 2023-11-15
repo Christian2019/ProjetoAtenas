@@ -14,8 +14,6 @@ func addMoveSpeed(d):
 	var quality
 	var bonus
 	
-	#VERIFICAO DIVINE 30
-	
 	quality=dashQuality
 	if ( quality=="common"):
 		bonus=0.05
@@ -25,6 +23,8 @@ func addMoveSpeed(d):
 		bonus=0.15
 	elif ( quality=="legendary"):
 		bonus=0.20
+	elif ( quality=="divine"):
+		bonus=0.30
 	
 	Global.player.moveSpeedPercentBonus+=bonus
 	
@@ -33,7 +33,7 @@ func removeMoveSpeedBonus():
 	moveSpeedBonus=false
 	var quality=dashQuality
 	var bonus
-	#VERIFICAO DIVINE 30
+
 	if ( quality=="common"):
 		bonus=0.05
 	elif ( quality=="rare"):
@@ -42,6 +42,8 @@ func removeMoveSpeedBonus():
 		bonus=0.15
 	elif ( quality=="legendary"):
 		bonus=0.20
+	elif ( quality=="divine"):
+		bonus=0.30
 		
 	bonus*=(-1)
 	

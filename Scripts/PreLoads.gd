@@ -142,9 +142,9 @@ var warrior_dash_noGod=preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Wa
 var warrior_dash_zeus=preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash_Zeus.tscn")
 var warrior_dash_poseidon= preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash_Poseidon.tscn")
 var warrior_dash_hades=preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash_Hades.tscn")
-var warrior_dash_divine_ZeusPoseidon
-var warrior_dash_divine_ZeusHades
-var warrior_dash_divine_HadesPoseidon
+var warrior_dash_divine_ZeusPoseidon=preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash_ZeusPoseidon.tscn")
+var warrior_dash_divine_ZeusHades=preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash_ZeusHades.tscn")
+var warrior_dash_divine_HadesPoseidon=preload("res://Scenes/Game/Classes/Warrior/WarriorDash/Warrior_Dash_HadesPoseidon.tscn")
 
 var dashShadow= preload("res://Scenes/Game/Classes/Warrior/WarriorDash/DashShadow.tscn")
 

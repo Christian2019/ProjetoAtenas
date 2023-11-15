@@ -5,6 +5,8 @@ var lastSkill
 var lastQuality
 var lastHPRecovering
 var hp50Percert=false
+var quality
+
 
 #Bonus
 var bonus=false
@@ -15,10 +17,9 @@ func _process(delta):
 	
 	recalculate()
 
-	if ((Global.player.dash.skill==PreLoads.warrior_dash_hades) and !bonus):
+	if !bonus and verifyActivation():
 	
 		bonus=true
-		var quality = Global.player.dash.quality
 	
 		if ( quality=="common"):
 			bonusHPRecovering=5
@@ -70,3 +71,16 @@ func checkHp():
 func removeBonus():
 	bonus=false
 	Global.player.hpRegeneration-=bonusHPRecovering
+	
+func verifyActivation():
+	if (Global.player.dash.skill==PreLoads.warrior_dash_hades):
+		quality = Global.player.dash.quality
+		return true
+	if (Global.player.dash.skill==PreLoads.warrior_dash_divine_HadesPoseidon):
+		quality="divine"
+		return true
+	if (Global.player.dash.skill==PreLoads.warrior_dash_divine_ZeusHades):
+		quality="divine"
+		return true
+		
+	return false

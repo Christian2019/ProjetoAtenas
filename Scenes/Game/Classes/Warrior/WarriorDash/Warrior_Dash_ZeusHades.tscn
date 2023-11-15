@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxdfdgb271vmj"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_dash/Warrior_Dash_ZeusHades.gd" id="1_fi56t"]
+
+[node name="Warrior_Dash_ZeusHades" type="Node2D"]
+script = ExtResource("1_fi56t")
+
+[node name="Animation" type="ColorRect" parent="."]
+offset_left = -20.0
+offset_top = -19.0
+offset_bottom = 21.0
+color = Color(0.458824, 0, 0.768627, 0.156863)
+
+[node name="Animation2" type="ColorRect" parent="."]
+offset_top = -19.0
+offset_right = 20.0
+offset_bottom = 21.0
+color = Color(1, 1, 0, 0.156863)

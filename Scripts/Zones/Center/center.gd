@@ -1,6 +1,6 @@
 extends Node2D
 
-var maxHp=9999
+var maxHp=999999
 var hp = maxHp
 
 ##Feedback por levar dano ou curar

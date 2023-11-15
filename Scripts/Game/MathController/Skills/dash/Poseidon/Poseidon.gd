@@ -9,15 +9,22 @@ func _ready():
 	rng=RandomNumberGenerator.new()
 
 func _process(delta):
-	if (Global.player.dash.skill==PreLoads.warrior_dash_poseidon and !activate):
+	if (!activate and verifyActivation()):
 		activate=true
-	elif(Global.player.dash.skill!=PreLoads.warrior_dash_poseidon and activate):
+	if(activate and !verifyActivation()):
 		activate=false
 
 func effect():
 	if (activate):
 		var r = rng.randi_range(0, 100)
-		var quality=Global.player.dash.quality
+		var quality
+		
+		if (Global.player.dash.skill==PreLoads.warrior_dash_divine_HadesPoseidon or
+		Global.player.dash.skill==PreLoads.warrior_dash_divine_ZeusPoseidon):
+			quality="divine"
+		else:
+			quality=Global.player.dash.quality
+			
 		var breakPoint
 		
 		if ( quality=="common"):
@@ -38,3 +45,14 @@ func effect():
 
 func removeBD():
 	Global.player.baseDamage-=1
+
+func verifyActivation():
+	if (Global.player.dash.skill==PreLoads.warrior_dash_poseidon):
+		return true
+	if (Global.player.dash.skill==PreLoads.warrior_dash_divine_HadesPoseidon):
+		return true
+	if (Global.player.dash.skill==PreLoads.warrior_dash_divine_ZeusPoseidon):
+		return true
+		
+	return false
+	
