@@ -14,6 +14,8 @@ var max_duration = 15
 var cerberusDamage
 var Allycerberus
 
+var divineReference
+
 func _ready():
 	Global.Game.get_node("Night").visible=true
 	$Sprite2D.modulate.a=0
@@ -53,9 +55,13 @@ func creatCerberus():
 	Allycerberus=cerberus
 
 func destroy():
-	Global.hud.max_ultimate_frame=(cd)*60
-	Global.timerCreator("enableAttackUse",cd,[4],Global.player)
-	Global.Game.get_node("Night").visible=false
+	if (quality=="divine"):
+		if is_instance_valid(divineReference):
+			divineReference.skillsFinish+=1
+	else:
+		Global.hud.max_ultimate_frame=(cd)*60
+		Global.timerCreator("enableAttackUse",cd,[4],Global.player)
+		Global.Game.get_node("Night").visible=false
 	queue_free()
 
 func _process(delta):

@@ -163,9 +163,9 @@ var warrior_ultimate_noGod
 var warrior_ultimate_zeus=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimateZeus.tscn")
 var warrior_ultimate_hades= preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimateHades/WarriorUltimateHades.tscn")
 var warrior_ultimate_poseidon= preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon/WarriorUltimatePoseidon.tscn")
-var warrior_ultimate_divine_ZeusPoseidon
-var warrior_ultimate_divine_ZeusHades
-var warrior_ultimate_divine_HadesPoseidon
+var warrior_ultimate_divine_ZeusPoseidon=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimate_divine_ZeusPoseidon.tscn")
+var warrior_ultimate_divine_ZeusHades=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimate_divine_ZeusHades.tscn")
+var warrior_ultimate_divine_HadesPoseidon=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimate_divine_HadesPoseidon.tscn")
 var hades_skeleton=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimateHades/skeleton.tscn")
 var hades_cerberus=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimateHades/cerberus.tscn")
 var poseidon_tentacle=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimatePoseidon/WarriorUltimatePoseidonTentacle.tscn")

@@ -20,6 +20,8 @@ var monstersHit = []
 #Monstros em contato com o ataque
 var monstersInArea = []
 
+var divineReference
+
 func _ready():
 	$Sprite2D.modulate.a=0
 	Global.timerCreator("destroy", max_duration,[],self)
@@ -39,9 +41,22 @@ func qualityStatus():
 		damage=900
 
 func destroy():
-	Global.hud.max_ultimate_frame=(cd-cdRed)*60
-	Global.timerCreator("enableAttackUse",cd-cdRed,[4],Global.player)
-	Global.Game.get_node("Night").visible=false
+	if (quality=="divine"):
+		if is_instance_valid(divineReference):
+			divineReference.skillsFinish+=1
+		if (cdRed>=divineReference.cd):
+			divineReference.cd=0.01
+		else:
+			divineReference.cd-=cdRed
+	else:
+		if (cdRed>=cd):
+			cd=0.01
+		else:
+			cd-=cdRed
+		Global.hud.max_ultimate_frame=(cd)*60
+		Global.timerCreator("enableAttackUse",cd,[4],Global.player)
+		Global.Game.get_node("Night").visible=false
+	
 	queue_free()
 
 func _process(delta):
@@ -60,8 +75,6 @@ func extraBonus():
 	if quality=="divine":
 		cdRed=float(Global.MathController.attack1_zeus.electrified.size())*2	
 
-	if (cdRed>=cd):
-			cdRed=cd-0.1
 
 func damageAction():
 	if (monstersInArea.is_empty()):

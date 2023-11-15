@@ -23,6 +23,8 @@ var damage = 10
 var tentaclesQuantity
 var krakenAlly
 
+var divineReference
+
 func _ready():
 	$Sprite2D.modulate.a=0
 	$Sprite2D2.visible=false
@@ -126,10 +128,15 @@ func damageAction():
 					Global.timerCreator("removeNextHitDelay",nextHitDelay,[i],self)
 
 func destroy():
-	Global.hud.max_ultimate_frame=(cd)*60
-	Global.timerCreator("enableAttackUse",cd,[4],Global.player)
-	Global.Game.get_node("Night").visible=false
-	if (quality=="legendary"):
+	if (quality=="divine"):
+		if is_instance_valid(divineReference):
+			divineReference.skillsFinish+=1
+	else:
+		Global.hud.max_ultimate_frame=(cd)*60
+		Global.timerCreator("enableAttackUse",cd,[4],Global.player)
+		Global.Game.get_node("Night").visible=false
+
+	if (quality=="legendary" or quality=="divine"):
 		krakenAlly.queue_free()
 	queue_free()
 
