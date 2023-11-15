@@ -21,8 +21,6 @@ var nextHitDelay = 1
 
 var cerberus=null
 
-
-
 func _ready():
 	$AnimatedSprite2D.play("Walking")
 	Global.timerCreator("die",duration,[],self)
@@ -46,7 +44,7 @@ func attack():
 			var i = getMonsterHitIndex(monstersInArea[j])
 			if itsValid(monstersHit[i]):
 				if (!monstersHit[i].onHitDelay):
-					monstersHit[i].monster.hp-=damage
+					Global.MathController.damageController(damage,monstersHit[i].monster)
 					Global.player.hp+=heal
 					if (cerberus!=null):
 						cerberus.totalHeal+=heal

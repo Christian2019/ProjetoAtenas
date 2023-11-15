@@ -1,9 +1,9 @@
 extends Node2D
 
-var quality="legendary"
+var quality
 
 #Duracao em segundos
-var cd = 5
+var cd = 20
 
 var frame=0
 var max_duration = 15
@@ -12,8 +12,7 @@ var nextHitDelay = 1
 
 var maxWaveScale
 
-var maxKnockback=10000
-var knockBackSpeed=50
+var knockBackSpeed=100
 #Monstros que foram atingidos pelo ataque
 var monstersHit = []
 
@@ -34,12 +33,22 @@ func _ready():
 	maxWaveScale=Vector2(6,6)
 
 func qualityStatus():
-	#Cooldown: 60/20/5/5/5s Max activations per wave 1/2/2/3/4
 	if ( quality=="common"):
-		cd=5
+		damage=1000
+	elif ( quality=="rare"):
+		damage=1500
+	elif ( quality=="epic"):
+		damage=2000
 	elif ( quality=="legendary"):
-		cd=5
+		damage=3000
 		tentaclesQuantity=5
+		$Sprite2D2.visible=true
+		$Sprite2D2.modulate.a=0
+		$AudioStreamPlayer.play()
+		createTentacles()
+	elif ( quality=="divine"):
+		damage=4500
+		tentaclesQuantity=10
 		$Sprite2D2.visible=true
 		$Sprite2D2.modulate.a=0
 		$AudioStreamPlayer.play()
@@ -111,7 +120,6 @@ func damageAction():
 			var i = getMonsterHitIndex(monstersInArea[j])
 			if itsValid(monstersHit[i]):
 				if (!monstersHit[i].onHitDelay):
-					
 					Global.MathController.damageController(damage,monstersHit[i].monster)
 					knockBack()
 					monstersHit[i].onHitDelay=true
@@ -129,10 +137,7 @@ func knockBack():
 	for i in range(0,monstersInArea.size(),1):
 		var monster = monstersInArea[i]
 		var monsterHitObject=monstersHit[getMonsterHitIndex(monster)]
-		if (monsterHitObject.knockback>=maxKnockback):
-			continue
 		var angle= global_position.angle_to_point(monster.global_position)
-		monstersHit[getMonsterHitIndex(monster)].knockback+=knockBackSpeed
 		tryToMove(knockBackSpeed*cos(angle),knockBackSpeed*sin(angle),monster)
 
 		
@@ -176,7 +181,7 @@ func addMonster(monster):
 	monstersInArea.append(monster)
 	
 	if (monstersHit.is_empty() or !checkIfExist(monster.name)):
-		monstersHit.append({"monster":monster,"onHitDelay":false,"knockback":0,"objectReference":weakref(monster)})
+		monstersHit.append({"monster":monster,"onHitDelay":false,"objectReference":weakref(monster)})
 		
 
 

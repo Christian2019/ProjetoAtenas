@@ -50,7 +50,7 @@ func attack():
 			var i = getMonsterHitIndex(monstersInArea[j])
 			if itsValid(monstersHit[i]):
 				if (!monstersHit[i].onHitDelay):
-					monstersHit[i].monster.hp-=damage+totalHeal
+					Global.MathController.damageController((damage+totalHeal),monstersHit[i].monster)
 					monstersHit[i].onHitDelay=true
 					Global.timerCreator("removeNextHitDelay",nextHitDelay,[i],self)
 

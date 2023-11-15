@@ -1,20 +1,18 @@
 extends Node2D
 
-var quality="common"
+var quality
 
-var skeletonDamage = 50
+var currentHPPercentDamage
 var skeletonQuantity=15
 
 #Duracao em segundos
-var cd = 5
+var cd = 20
 
 var frame=0
 var max_duration = 15
 
-var enableCerberus=true
-var cerberisDamage = 5
+var cerberusDamage
 var Allycerberus
-
 
 func _ready():
 	Global.Game.get_node("Night").visible=true
@@ -22,19 +20,31 @@ func _ready():
 	Global.timerCreator("destroy", max_duration,[],self)
 	$Music.play(10)
 	qualityStatus()
-	if (enableCerberus):
+	
+func qualityStatus():
+	if ( quality=="common"):
+		currentHPPercentDamage=0.1
+		skeletonQuantity=15
+	elif ( quality=="rare"):
+		currentHPPercentDamage=0.15
+		skeletonQuantity=30
+	elif ( quality=="epic"):
+		currentHPPercentDamage=0.2
+		skeletonQuantity=45
+	elif ( quality=="legendary"):
+		cerberusDamage=1500
+		currentHPPercentDamage=0.3
+		skeletonQuantity=60
+		creatCerberus()
+	elif ( quality=="divine"):
+		cerberusDamage=3000
+		currentHPPercentDamage=0.5
+		skeletonQuantity=90
 		creatCerberus()
 
-func qualityStatus():
-	#Cooldown: 60/20/5/5/5s Max activations per wave 1/2/2/3/4
-	if ( quality=="common"):
-		skeletonDamage=500
-		skeletonQuantity=15
-		cd=5
-	
 func creatCerberus():
 	var cerberus=PreLoads.hades_cerberus.instantiate()
-	cerberus.damage=skeletonDamage
+	cerberus.damage=cerberusDamage
 	cerberus.ultimate=self
 	if (Global.WaveController.mining):
 		return
@@ -64,7 +74,7 @@ func skeletonCreation():
 		
 func spawn():
 	var skeleton=PreLoads.hades_skeleton.instantiate()
-	skeleton.damage=skeletonDamage
+	skeleton.damage=Global.player.hp*currentHPPercentDamage
 	skeleton.cerberus=Allycerberus
 	if (Global.WaveController.mining):
 		return

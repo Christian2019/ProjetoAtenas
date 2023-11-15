@@ -13,7 +13,7 @@ var cdRed=0
 var nextHitDelay = 0.2
 
 var frame=0
-var max_duration = 14
+var max_duration = 15
 #Monstros que foram atingidos pelo ataque
 var monstersHit = []
 
