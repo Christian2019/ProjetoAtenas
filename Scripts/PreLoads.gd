@@ -150,12 +150,13 @@ var dashShadow= preload("res://Scenes/Game/Classes/Warrior/WarriorDash/DashShado
 
 #Turret
 var warrior_turret_noGod=preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/Warrior_Turret.tscn")
-var warrior_turret_zeus
+var warrior_turret_zeus=preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/Warrior_Turrret_Zeus/Warrior_Turrret_Zeus.tscn")
 var warrior_turret_hades
 var warrior_turret_poseidon
 var warrior_turret_divine_ZeusPoseidon
 var warrior_turret_divine_ZeusHades
 var warrior_turret_divine_HadesPoseidon
+
 var warrior_arrow = preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/WarriorArrow.tscn")
 
 #Ultimate

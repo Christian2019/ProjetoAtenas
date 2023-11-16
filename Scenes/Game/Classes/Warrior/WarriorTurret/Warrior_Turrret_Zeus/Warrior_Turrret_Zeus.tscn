@@ -1,0 +1,81 @@
+[gd_scene load_steps=19 format=3 uid="uid://dgjd7hngwwmkx"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_Turret/Zeus/Warrior_Turrret_Zeus.gd" id="1_oxoj4"]
+[ext_resource type="Texture2D" uid="uid://beydjn5snvojg" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_0.0_001.png" id="2_j1nyh"]
+[ext_resource type="Texture2D" uid="uid://bqwld8yy1x0qu" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_22.5_001.png" id="3_1pu2a"]
+[ext_resource type="Texture2D" uid="uid://yvxtskbok031" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_45.0_001.png" id="4_y36ty"]
+[ext_resource type="Texture2D" uid="uid://domc4s55jmts8" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_67.5_001.png" id="5_nsw33"]
+[ext_resource type="Texture2D" uid="uid://dn7t285edqvs" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_90.0_001.png" id="6_3fi4c"]
+[ext_resource type="Texture2D" uid="uid://bu6455ddwhrcl" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_112.5_001.png" id="7_axcsg"]
+[ext_resource type="Texture2D" uid="uid://27anhjq2tgtx" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_135.0_001.png" id="8_ym3ch"]
+[ext_resource type="Texture2D" uid="uid://bsk5scd4h77ju" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_157.5_001.png" id="9_86cf8"]
+[ext_resource type="Texture2D" uid="uid://bc2hxc6as45p8" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_180.0_001.png" id="10_fi0p8"]
+[ext_resource type="Texture2D" uid="uid://b01tf35hnu58v" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_202.5_001.png" id="11_22kda"]
+[ext_resource type="Texture2D" uid="uid://uaevbcdp0loa" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_225.0_001.png" id="12_for3d"]
+[ext_resource type="Texture2D" uid="uid://08omqurpsbpk" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_247.5_001.png" id="13_oqs36"]
+[ext_resource type="Texture2D" uid="uid://dc66v5tsn3ur8" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_270.0_001.png" id="14_wx270"]
+[ext_resource type="Texture2D" uid="uid://dfh0r7r8w2ids" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_292.5_001.png" id="15_ssuky"]
+[ext_resource type="Texture2D" uid="uid://rruaoq7u3wcw" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_315.0_001.png" id="16_f1mej"]
+[ext_resource type="Texture2D" uid="uid://doe3x88pxa5j8" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_337.5_001.png" id="17_tr0to"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vgnd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j1nyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_tr0to")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_f1mej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ssuky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wx270")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_oqs36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_for3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_22kda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fi0p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_86cf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ym3ch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_axcsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3fi4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nsw33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y36ty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1pu2a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Warrior_Turrret_Zeus" type="Node2D"]
+script = ExtResource("1_oxoj4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4vgnd")
