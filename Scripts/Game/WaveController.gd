@@ -2,7 +2,7 @@ extends Node2D
 
 var mining_max_duration_frames = 1*60
 
-var wave = 20
+var wave = 17
 var maxWave=20
 
 var timer = 0
@@ -37,7 +37,6 @@ func battleEnd():
 	for i in range(0,Global.player.permissions.size(),1):
 		Global.player.permissions[i]=true
 
-	Global.player.ultimateWaveActivations=0
 	clearWave()
 
 func clearWave():
