@@ -1,6 +1,6 @@
 extends Node2D
 
-var maxTurrets=5
+var maxTurrets
 
 func _process(delta):
 	checkQuality()

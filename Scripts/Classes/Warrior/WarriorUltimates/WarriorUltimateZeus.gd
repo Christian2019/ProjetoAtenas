@@ -9,7 +9,6 @@ var enableDamage=false
 var cd = 30
 var cdRed=0
 
-#var nextHitDelay = 10
 var nextHitDelay = 0.2
 
 var frame=0
@@ -27,6 +26,10 @@ func _ready():
 	Global.timerCreator("destroy", max_duration,[],self)
 	Global.Game.get_node("Night").visible=true
 	qualityStatus()
+	attackSpeedModifier()
+
+func attackSpeedModifier():
+	nextHitDelay=nextHitDelay/Global.player.attack_Speed
 
 func qualityStatus():
 	if ( quality=="common"):

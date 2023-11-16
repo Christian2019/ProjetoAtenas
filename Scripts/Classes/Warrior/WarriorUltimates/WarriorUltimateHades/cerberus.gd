@@ -23,7 +23,11 @@ var eyes_frame=0
 var eyes_max_frame=5*60
 
 func _ready():
-	$Sprite2D.modulate.a=0	
+	$Sprite2D.modulate.a=0
+	attackSpeedModifier()
+
+func attackSpeedModifier():
+	nextHitDelay=nextHitDelay/Global.player.attack_Speed	
 
 func _process(_delta):
 	if (eyes_frame<eyes_max_frame):

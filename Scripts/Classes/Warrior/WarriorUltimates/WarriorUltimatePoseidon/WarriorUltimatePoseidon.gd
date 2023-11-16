@@ -33,6 +33,10 @@ func _ready():
 	Global.timerCreator("destroy", max_duration,[],self)
 	qualityStatus()
 	maxWaveScale=Vector2(6,6)
+	attackSpeedModifier()
+
+func attackSpeedModifier():
+	nextHitDelay=nextHitDelay/Global.player.attack_Speed
 
 func qualityStatus():
 	if ( quality=="common"):

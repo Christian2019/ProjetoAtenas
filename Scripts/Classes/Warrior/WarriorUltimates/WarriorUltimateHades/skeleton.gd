@@ -24,7 +24,10 @@ var cerberus=null
 func _ready():
 	$AnimatedSprite2D.play("Walking")
 	Global.timerCreator("die",duration,[],self)
-	
+	attackSpeedModifier()
+
+func attackSpeedModifier():
+	nextHitDelay=nextHitDelay/Global.player.attack_Speed
 
 func _process(_delta):
 

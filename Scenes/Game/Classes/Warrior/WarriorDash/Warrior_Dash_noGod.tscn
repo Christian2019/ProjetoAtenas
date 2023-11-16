@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://5cxrrk5epg58"]
 
-[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_Dash_noGod.gd" id="1_ujc4c"]
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_dash/Warrior_Dash_noGod.gd" id="1_ujc4c"]
 
 [node name="Warrior_Dash_noGod" type="Node2D"]
 script = ExtResource("1_ujc4c")

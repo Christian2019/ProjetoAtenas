@@ -1,13 +1,11 @@
 extends Node2D
 
-#Dano por frame (respeitando nextHitDelay)
-var damage = 40
 
 #Em graus
 var rotationSpeed = 4
 
 #Duracao em segundos
-var cd = 0.2
+var cd = 0.5
 var canShoot=true
 
 var max_duration = 30
@@ -18,9 +16,34 @@ var closerEnemy
 
 var angle=0.0
 
+#GodBonus
+var damage = 40
+var extraBounces=0
+
+
 func _ready():
 	Global.timerCreator("destroy",max_duration,[],self)
+	attackSpeedModifier()
+	attackSpeedModifier()
+	qualityStatus()
 
+func attackSpeedModifier():
+	cd=cd/Global.player.attack_Speed
+
+func qualityStatus():
+	if ( quality=="common"):
+		damage=20
+	elif ( quality=="rare"):
+		damage=30
+	elif ( quality=="epic"):
+		damage=45
+	elif ( quality=="legendary"):
+		damage=60
+		extraBounces=4
+	elif ( quality=="divine"):
+		damage=90
+		extraBounces=8
+		
 func destroy():
 	call_deferred("queue_free")
 
@@ -32,7 +55,7 @@ func _process(_delta):
 		return
 	getCloserEnemy(enemies)
 	move()
-	#shoot()
+	shoot()
 
 func getCloserEnemy(enemies):
 	closerEnemy=enemies[0]
@@ -40,17 +63,14 @@ func getCloserEnemy(enemies):
 		var enemy = enemies[i]
 		if (global_position.distance_to(enemy.global_position)<global_position.distance_to(closerEnemy.global_position)):
 			closerEnemy=enemy
-			
 
 func move():
 	#Pega o angulo entre a turret e inimigo e normaliza entre 0 e 360
-	#global_position.angle_to()
 	var angleToEnemy = rad_to_deg(global_position.angle_to_point(closerEnemy.global_position))
 	
 	if (angleToEnemy<0):
 		angleToEnemy=angleToEnemy+360
 
-	#print ("angleToEnemy: ",angleToEnemy)
 	#Normaliza o angulo da animacao entre 0 e 360
 	if (angle<0):
 		angle+=360
@@ -102,16 +122,12 @@ func shoot():
 		return
 	canShoot=false
 	Global.timerCreator("enbaleShoot",cd,[],self)
-	var arrow = PreLoads.warrior_arrow.instantiate()
-	arrow.angle=$Animations/Up.rotation_degrees
+	var arrow = PreLoads.warrior_turret_zeus_arrow.instantiate()
+	arrow.angle=angle
 	arrow.damage=damage
-	$Projectiles.add_child(arrow)
+	arrow.maxBounce=extraBounces
+	Global.Game.get_node("Instances/Projectiles").add_child(arrow)
+	arrow.global_position=global_position
 
 func enbaleShoot():
 	canShoot=true
-	
-
-
-
-
-	
