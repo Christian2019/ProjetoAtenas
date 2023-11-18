@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://cjco5i6hdk3o0"]
+[gd_scene load_steps=75 format=3 uid="uid://cjco5i6hdk3o0"]
 
 [ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_Turret/Warrior_Turrret_divine_HadesPoseidon.gd" id="1_w8byt"]
 [ext_resource type="Texture2D" uid="uid://beydjn5snvojg" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_0.0_001.png" id="2_36dyc"]
@@ -65,6 +65,11 @@
 [ext_resource type="Texture2D" uid="uid://macawuancmeh" path="res://Assets/Images/Player/Turrets/turretDivine/idle_270.0_0010.png" id="63_vdky0"]
 [ext_resource type="Texture2D" uid="uid://dhivpvuvoales" path="res://Assets/Images/Player/Turrets/turretDivine/idle_270.0_0011.png" id="64_i8qdq"]
 [ext_resource type="Texture2D" uid="uid://d2almahiqcomo" path="res://Assets/Images/Player/Turrets/turretDivine/idle_270.0_0012.png" id="65_yedpc"]
+[ext_resource type="Texture2D" uid="uid://dh7bbw7vsrngg" path="res://Assets/Images/Player/Attack1/Effects/hades/attack1_0_004.png" id="66_nflis"]
+[ext_resource type="Texture2D" uid="uid://dqgfqd0dts401" path="res://Assets/Images/Player/Attack1/Effects/hades/attack1_0_007.png" id="67_4lld2"]
+[ext_resource type="Texture2D" uid="uid://1cj02kqtox51" path="res://Assets/Images/Player/Attack1/Effects/hades/attack1_0_010.png" id="68_07pxu"]
+[ext_resource type="Texture2D" uid="uid://qcbsoouxtw2a" path="res://Assets/Images/Player/Attack1/Effects/hades/attack1_0_013.png" id="69_kfyad"]
+[ext_resource type="Texture2D" uid="uid://byavoxwsqdt3i" path="res://Assets/Images/Player/Attack1/Effects/hades/attack1_0_016.png" id="70_ky85y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4vgnd"]
 animations = [{
@@ -349,13 +354,56 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4diil"]
+size = Vector2(121, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4qxr8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("66_nflis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_4lld2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_07pxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_kfyad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_ky85y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 60.0
+}]
+
 [node name="Warrior_Turrret_divine_HadesPoseidon" type="Node2D"]
 script = ExtResource("1_w8byt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4vgnd")
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_4r0r2")
-animation = &"337.5"
+animation = &"0"
 autoplay = "0"
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(4, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(50.5, 0)
+shape = SubResource("RectangleShape2D_4diil")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+position = Vector2(47.088, 7.38434e-07)
+rotation = 1.5708
+scale = Vector2(1, 1.1516)
+sprite_frames = SubResource("SpriteFrames_4qxr8")
+autoplay = "default"
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

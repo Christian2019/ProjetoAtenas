@@ -72,7 +72,7 @@ func createTentacles():
 		kraken.add_child(tentacle)
 		tentacle.global_position=spawnPosition
 		turret.global_position=tentacle.get_node("TurretPosition").global_position
-		turret.get_node("Animations").visible=false
+		turret.get_node("AnimatedSprite2D").visible=false
 	krakenAlly=kraken
 	
 
@@ -136,7 +136,7 @@ func destroy():
 		if is_instance_valid(divineReference):
 			divineReference.skillsFinish+=1
 	else:
-		Global.hud.max_ultimate_frame=(cd)*60
+		Global.hud.max_ultimate_frame=(cd)*600
 		Global.timerCreator("enableAttackUse",cd,[4],Global.player)
 		Global.Game.get_node("Night").visible=false
 

@@ -158,7 +158,7 @@ var warrior_turret_divine_ZeusHades
 var warrior_turret_divine_HadesPoseidon=preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/Warrior_Turrret_divine_HadesPoseidon.tscn")
 
 var warrior_turret_zeus_arrow = preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/Warrior_Turrret_Zeus/Warrior_Turret_Zeus_Arrow.tscn")
-var warrior_turret_poseidon_arrow = preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/Warrior_Turrret_Poseidon/Warrior_Turret_Poeseidon_Arrow.tscn")
+var warrior_turret_poseidon_arrow = preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/Warrior_Turrret_Poseidon/Warrior_Turret_Poseidon_Arrow.tscn")
 var warrior_turret_hades_explosion= preload("res://Scenes/Game/Classes/Warrior/WarriorTurret/Warrior_Turrret_Hades/ExplosionHades.tscn")
 
 #Ultimate

@@ -74,7 +74,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Warrior_Turrret_Poseidon" type="Node2D"]
+[node name="Warrior_Turret_Poseidon" type="Node2D"]
 script = ExtResource("1_amtao")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

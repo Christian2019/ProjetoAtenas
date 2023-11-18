@@ -5,7 +5,7 @@ var maxTurrets
 func _process(delta):
 	checkQuality()
 	if (get_child_count()>maxTurrets):
-		get_child(0).call_deferred("queue_free")
+		get_child(0).call_deferred("destroy")
 
 func checkQuality():
 	var quality
