@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c2a4i77sxffv4" path="res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00016.png" id="10_g335x"]
 [ext_resource type="Texture2D" uid="uid://dki2jgiknqr5m" path="res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00019.png" id="11_dgc6h"]
 [ext_resource type="Texture2D" uid="uid://2i8o7mq6ul7u" path="res://Assets/Images/Player/Ultimates/Poseidon/wave/scene00022.png" id="12_hmnh4"]
-[ext_resource type="Texture2D" uid="uid://dlnk0cf6xu7kq" path="res://Assets/Images/Player/Ultimates/Poseidon/kraken/krakenHead.png" id="13_4xka6"]
+[ext_resource type="Texture2D" uid="uid://dksowriylo6cr" path="res://Assets/Images/Player/Ultimates/Poseidon/SpritesKraken/Cabeça/CabeçaKraken2.png" id="13_wsbv3"]
 [ext_resource type="AudioStream" uid="uid://dlicuauo3asxj" path="res://Assets/Sounds/Player/Ultimates/Poseidon/krakenSound.mp3" id="14_v3fha"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7yl5c"]
@@ -82,9 +82,9 @@ position = Vector2(2.625, 0.4375)
 shape = SubResource("RectangleShape2D_4qckv")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(12, 39)
-scale = Vector2(0.256897, 0.256897)
-texture = ExtResource("13_4xka6")
+position = Vector2(2, 38)
+scale = Vector2(0.452, 0.452)
+texture = ExtResource("13_wsbv3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_v3fha")

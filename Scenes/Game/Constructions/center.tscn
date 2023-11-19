@@ -29,7 +29,7 @@ texture = ExtResource("3_08ald")
 position = Vector2(29, -396)
 
 [node name="Portal" parent="Portals" instance=ExtResource("2_dx06x")]
-position = Vector2(1330, 992)
+position = Vector2(1355, 963)
 
 [node name="Portal2" parent="Portals" instance=ExtResource("2_dx06x")]
 position = Vector2(929, 1940)

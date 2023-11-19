@@ -33,7 +33,7 @@ func canUse(linha,coluna):
 	#Evitar o templo
 	var linhaMin = 0
 	var linhaMax=29
-	var colunaMin=16
+	var colunaMin=12
 	var colunaMax=24
 	
 	if linha<linhaMax and coluna>colunaMin and coluna<colunaMax:
