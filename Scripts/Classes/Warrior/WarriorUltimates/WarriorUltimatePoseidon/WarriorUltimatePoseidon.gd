@@ -61,6 +61,8 @@ func qualityStatus():
 		createTentacles()
 		
 func createTentacles():
+	if (Global.player.turret.skill==null):
+		return
 	var kraken = Node2D.new()
 	Global.Game.get_node("Allies").add_child(kraken)
 	for i in range(0,tentaclesQuantity,1):

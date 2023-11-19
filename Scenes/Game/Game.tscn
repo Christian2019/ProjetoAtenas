@@ -106,7 +106,7 @@ position = Vector2(1312, 1718)
 
 [node name="Player" parent="." instance=ExtResource("5_x6q60")]
 z_index = 1
-position = Vector2(844, 1564)
+position = Vector2(1389, 671)
 scale = Vector2(1.289, 1.289)
 
 [node name="Enemies" type="Node2D" parent="."]

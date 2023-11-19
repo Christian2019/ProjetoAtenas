@@ -74,6 +74,7 @@ var animAttacking=false
 func _ready():
 	Global.player = self
 	hpRegenerationFunction()
+	playAnimation ("Idle")
 	
 func hpRegenerationFunction():
 	Global.timerCreator("hpRegenerationFunction",1,[],self)
@@ -323,8 +324,6 @@ func dashController():
 	if (Input.is_action_pressed("Dash") and permissions[classChild]):
 		print("Dash")
 		var attackInstance = creatAttackInstance(classChild)
-		if (attackInstance==null):
-			return
 		attackInstance.direction= lastMovement
 		add_child(attackInstance)
 		playAnimation("Dash")

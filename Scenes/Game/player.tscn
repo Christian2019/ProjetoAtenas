@@ -1489,7 +1489,6 @@ script = ExtResource("1_s0uo2")
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ddi15")
 animation = &"Idle_Down"
-autoplay = "Idle_Down"
 
 [node name="CutAnimation" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 5.68434e-14)

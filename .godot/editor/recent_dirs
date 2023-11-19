@@ -1,6 +1,7 @@
+res://Assets/Images/HUD/SkillSelection
+res://Scripts/Classes/Warrior/Warrior_Turret
 res://Assets/Images/Player/Ultimates/Poseidon/SpritesKraken/moving/Down
 res://Assets/Images/Constructions/Teleporter_Sprites/Teleporter_Sprites
-res://Scripts/Classes/Warrior/Warrior_Turret
 res://Assets/Images/Player/Turrets/turretDivine
 res://Scripts/Classes/Warrior/Warrior_Turret/Hades
 res://Assets/Images/Player/Turrets/turretHades/purpleExplosion
@@ -19,5 +20,4 @@ res://Scripts/Game/MathController/Skills/dash/Poseidon
 res://Scripts/Game/MathController/Skills/dash/Zeus
 res://Scripts/Classes/Warrior/Warrior_attack2
 res://Scripts/Classes/Warrior/Warrior_attack2/Warrior_attack2_Hades
-res://Assets/Images/Player/Attack2/Hades/SoulSteal/SoulAnimation
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

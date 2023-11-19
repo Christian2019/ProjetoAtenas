@@ -20,8 +20,7 @@ var damage
 var acumulatedDamage=0
 var area=1
 
-var pierce=0
-var waterDamage=0
+var extraBounces=0
 
 var nextHitDelay = 1
 
@@ -44,10 +43,10 @@ func attackSpeedModifier():
 	cd=cd/Global.player.attack_Speed
 
 func qualityStatus():
-		damage=40
+		damage=90
 		area=2
-		pierce=4
-		waterDamage=2
+		extraBounces=8
+
 		
 func destroy():
 	createExplosion()
@@ -158,11 +157,10 @@ func shoot():
 		return
 	canShoot=false
 	Global.timerCreator("enbaleShoot",cd,[],self)
-	var arrow = PreLoads.warrior_turret_poseidon_arrow.instantiate()
+	var arrow = PreLoads.warrior_turret_zeus_arrow.instantiate()
 	arrow.angle=angle
 	arrow.damage=damage
-	arrow.pierce=pierce
-	arrow.waterDamage=waterDamage
+	arrow.maxBounce=extraBounces
 	Global.Game.get_node("Instances/Projectiles").add_child(arrow)
 	arrow.global_position=global_position
 

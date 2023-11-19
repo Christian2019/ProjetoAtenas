@@ -2,6 +2,5 @@
 
 [ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_dash/DashShadow.gd" id="1_7cp02"]
 
-
 [node name="DashShadow" type="Node2D"]
 script = ExtResource("1_7cp02")

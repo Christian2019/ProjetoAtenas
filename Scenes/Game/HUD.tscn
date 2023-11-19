@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://b18nigm5wn5ab"]
+[gd_scene load_steps=55 format=3 uid="uid://b18nigm5wn5ab"]
 
 [ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/HUD.gd" id="1_60mgy"]
@@ -36,8 +36,11 @@
 [ext_resource type="Texture2D" uid="uid://bliuur2u7r03c" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00004.png" id="33_afn4i"]
 [ext_resource type="Texture2D" uid="uid://r22njvg8r0py" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00007.png" id="34_53nyw"]
 [ext_resource type="Texture2D" uid="uid://btikammdiikmy" path="res://Assets/Images/HUD/Ultimates/zeus&poseidonUltHUD.png" id="35_pokj2"]
+[ext_resource type="Texture2D" uid="uid://b04yem0fkick8" path="res://Assets/Images/HUD/SkillSelection/attack1hudNoGod.png" id="36_78yll"]
 [ext_resource type="Texture2D" uid="uid://ddnc0v2drshda" path="res://Assets/Images/HUD/Ultimates/hades&poseidonUltHUD.png" id="37_egsng"]
 [ext_resource type="Texture2D" uid="uid://dc80dk8ypu453" path="res://Assets/Images/HUD/Ultimates/zeus&hadesUltHUD.png" id="38_dqj6i"]
+[ext_resource type="Texture2D" uid="uid://d30hsgavaxyb5" path="res://Assets/Images/HUD/SkillSelection/dashNoGodHud.png" id="39_753by"]
+[ext_resource type="Texture2D" uid="uid://bxyb1duvesmhk" path="res://Assets/Images/HUD/SkillSelection/attack2hudNoGod.png" id="39_yx88j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_22btt"]
 font = ExtResource("2_owy1r")
@@ -149,7 +152,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("36_78yll")
 }, {
 "duration": 1.0,
 "texture": ExtResource("29_35oqo")
@@ -195,7 +198,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("39_yx88j")
 }, {
 "duration": 1.0,
 "texture": ExtResource("29_35oqo")
@@ -287,7 +290,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("39_753by")
 }, {
 "duration": 1.0,
 "texture": ExtResource("29_35oqo")

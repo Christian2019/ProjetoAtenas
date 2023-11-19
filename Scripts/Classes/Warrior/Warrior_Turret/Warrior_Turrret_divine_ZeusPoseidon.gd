@@ -1,5 +1,6 @@
 extends Node2D
 
+
 #Em graus
 var rotationSpeed = 4
 
@@ -7,7 +8,7 @@ var rotationSpeed = 4
 var cd = 0.5
 var canShoot=true
 
-var max_duration = 20
+var max_duration = 30
 
 var quality
 
@@ -15,23 +16,14 @@ var closerEnemy
 
 var angle=0.0
 
-#GodBonus
-var damage
-var acumulatedDamage=0
-var area=1
+var lastFrame=0
 
+#GodBonus
+var damage = 40
+var extraBounces=0
 var pierce=0
 var waterDamage=0
 
-var nextHitDelay = 1
-
-#Monstros que foram atingidos pelo ataque
-var monstersHit = []
-
-#Monstros em contato com o ataque
-var monstersInArea = []
-
-var lastFrame=0
 
 func _ready():
 	Global.timerCreator("destroy",max_duration,[],self)
@@ -44,21 +36,13 @@ func attackSpeedModifier():
 	cd=cd/Global.player.attack_Speed
 
 func qualityStatus():
-		damage=40
-		area=2
+		damage=90
+		extraBounces=8
 		pierce=4
 		waterDamage=2
 		
 func destroy():
-	createExplosion()
 	call_deferred("queue_free")
-
-func createExplosion():
-	var e=PreLoads.warrior_turret_hades_explosion.instantiate()
-	e.damage=acumulatedDamage
-	e.area=area
-	Global.Game.get_node("Instances/Projectiles").add_child(e)
-	e.global_position=global_position
 
 func _process(_delta):
 	if (Global.player.playerOnCenterPoint):
@@ -68,7 +52,6 @@ func _process(_delta):
 		return
 	getCloserEnemy(enemies)
 	move()
-	damageAction()
 	shoot()
 
 func getCloserEnemy(enemies):
@@ -130,34 +113,24 @@ func animation():
 			frame=i
 	
 	$AnimatedSprite2D.frame=frame
-	$Area2D.rotation_degrees=float(frame)*22.5
 	if (lastFrame!=frame):
 		lastFrame=frame
 		$AnimatedSprite2D/AnimatedSprite2D2.play(str(float(frame)*22.5))
-	
-
-
-func removeNextHitDelay(arrayPosition):
-	if (itsValid(monstersHit[arrayPosition])):
-		monstersHit[arrayPosition].onHitDelay=false
-	
-func damageAction():
-	if (monstersInArea.is_empty()):
-		return
-	for j in range(0,monstersInArea.size(),1):
-			var i = getMonsterHitIndex(monstersInArea[j])
-			if itsValid(monstersHit[i]):
-				if (!monstersHit[i].onHitDelay):
-					Global.MathController.damageController(damage,monstersHit[i].monster)
-					acumulatedDamage+=damage
-					monstersHit[i].onHitDelay=true
-					Global.timerCreator("removeNextHitDelay",nextHitDelay,[i],self)
 
 func shoot():
 	if !canShoot:
 		return
 	canShoot=false
 	Global.timerCreator("enbaleShoot",cd,[],self)
+	var arrow = PreLoads.warrior_turret_zeus_arrow.instantiate()
+	arrow.angle=angle
+	arrow.damage=damage
+	arrow.maxBounce=extraBounces
+	Global.Game.get_node("Instances/Projectiles").add_child(arrow)
+	arrow.global_position=global_position
+	Global.timerCreator("poseidon",0.1,[],self)
+	
+func poseidon():
 	var arrow = PreLoads.warrior_turret_poseidon_arrow.instantiate()
 	arrow.angle=angle
 	arrow.damage=damage
@@ -165,44 +138,6 @@ func shoot():
 	arrow.waterDamage=waterDamage
 	Global.Game.get_node("Instances/Projectiles").add_child(arrow)
 	arrow.global_position=global_position
-
+	
 func enbaleShoot():
 	canShoot=true
-		
-func _on_area_2d_area_entered(area):
-	if area.get_parent().get_parent().name == "Enemies":
-		call_deferred("addMonster",area.get_parent())
-
-		
-func _on_area_2d_area_exited(area):
-	if area.get_parent().get_parent().name == "Enemies":
-		call_deferred("removeMonster",area.get_parent())
-	
-func removeMonster(monster):
-	monstersInArea.erase(monster)
-			
-func addMonster(monster):
-	monstersInArea.append(monster)
-	
-	if (monstersHit.is_empty() or !checkIfExist(monster.name)):
-		monstersHit.append({"monster":monster,"onHitDelay":false,"objectReference":weakref(monster)})
-
-
-func checkIfExist(name):
-	for i in range(0,monstersHit.size(),1):
-		if itsValid(monstersHit[i]):
-			var monsterName= monstersHit[i].monster.name
-			if (monsterName==name):
-				return true
-	return false
-
-func itsValid(element):
-	if (element.objectReference.get_ref()):
-		return true
-	return false
-
-func getMonsterHitIndex(monster):
-	for i in range(0,monstersHit.size(),1):
-		if itsValid(monstersHit[i]):
-			if (monstersHit[i].monster.name==monster.name):
-				return i

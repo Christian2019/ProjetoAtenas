@@ -1,0 +1,361 @@
+[gd_scene load_steps=68 format=3 uid="uid://djk3gj67k6cty"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_Turret/Warrior_Turrret_divine_ZeusPoseidon.gd" id="1_5xi7f"]
+[ext_resource type="Texture2D" uid="uid://beydjn5snvojg" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_0.0_001.png" id="2_dhv8k"]
+[ext_resource type="Texture2D" uid="uid://doe3x88pxa5j8" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_337.5_001.png" id="3_elvdi"]
+[ext_resource type="Texture2D" uid="uid://rruaoq7u3wcw" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_315.0_001.png" id="4_h1f3c"]
+[ext_resource type="Texture2D" uid="uid://dfh0r7r8w2ids" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_292.5_001.png" id="5_7fbjv"]
+[ext_resource type="Texture2D" uid="uid://dc66v5tsn3ur8" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_270.0_001.png" id="6_1t8mi"]
+[ext_resource type="Texture2D" uid="uid://08omqurpsbpk" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_247.5_001.png" id="7_t2igm"]
+[ext_resource type="Texture2D" uid="uid://uaevbcdp0loa" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_225.0_001.png" id="8_a6owj"]
+[ext_resource type="Texture2D" uid="uid://b01tf35hnu58v" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_202.5_001.png" id="9_iykiy"]
+[ext_resource type="Texture2D" uid="uid://bc2hxc6as45p8" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_180.0_001.png" id="10_v57aa"]
+[ext_resource type="Texture2D" uid="uid://bsk5scd4h77ju" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_157.5_001.png" id="11_8fynh"]
+[ext_resource type="Texture2D" uid="uid://27anhjq2tgtx" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_135.0_001.png" id="12_pau8m"]
+[ext_resource type="Texture2D" uid="uid://bu6455ddwhrcl" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_112.5_001.png" id="13_qwr7t"]
+[ext_resource type="Texture2D" uid="uid://dn7t285edqvs" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_90.0_001.png" id="14_csa4y"]
+[ext_resource type="Texture2D" uid="uid://domc4s55jmts8" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_67.5_001.png" id="15_jjder"]
+[ext_resource type="Texture2D" uid="uid://yvxtskbok031" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_45.0_001.png" id="16_wf74w"]
+[ext_resource type="Texture2D" uid="uid://bqwld8yy1x0qu" path="res://Assets/Images/Player/Turrets/turret_sprites/zeus/idle_22.5_001.png" id="17_fnvm3"]
+[ext_resource type="Texture2D" uid="uid://3njkuiwhtivn" path="res://Assets/Images/Player/Turrets/turretDivine/idle_0.0_0010.png" id="18_ntxla"]
+[ext_resource type="Texture2D" uid="uid://c1tmaco1y4t76" path="res://Assets/Images/Player/Turrets/turretDivine/idle_0.0_0011.png" id="19_4lqck"]
+[ext_resource type="Texture2D" uid="uid://53uqlwtltq5l" path="res://Assets/Images/Player/Turrets/turretDivine/idle_0.0_0012.png" id="20_rsid8"]
+[ext_resource type="Texture2D" uid="uid://34grcv3d8ngk" path="res://Assets/Images/Player/Turrets/turretDivine/idle_247.5_0010.png" id="21_2onjn"]
+[ext_resource type="Texture2D" uid="uid://dfordipiaa8kh" path="res://Assets/Images/Player/Turrets/turretDivine/idle_247.5_0011.png" id="22_4g1e2"]
+[ext_resource type="Texture2D" uid="uid://dicd2nlc2k4sc" path="res://Assets/Images/Player/Turrets/turretDivine/idle_247.5_0012.png" id="23_fjh4t"]
+[ext_resource type="Texture2D" uid="uid://bnl8l6jtt8u5j" path="res://Assets/Images/Player/Turrets/turretDivine/idle_225.0_0010.png" id="24_d3frm"]
+[ext_resource type="Texture2D" uid="uid://dnk15alndpe46" path="res://Assets/Images/Player/Turrets/turretDivine/idle_225.0_0011.png" id="25_e7ws3"]
+[ext_resource type="Texture2D" uid="uid://bobgf504rd4ao" path="res://Assets/Images/Player/Turrets/turretDivine/idle_225.0_0012.png" id="26_7cop6"]
+[ext_resource type="Texture2D" uid="uid://b1jqq1jajgx1n" path="res://Assets/Images/Player/Turrets/turretDivine/idle_202.5_0010.png" id="27_2snxs"]
+[ext_resource type="Texture2D" uid="uid://j3tuostadjso" path="res://Assets/Images/Player/Turrets/turretDivine/idle_202.5_0011.png" id="28_nyg88"]
+[ext_resource type="Texture2D" uid="uid://cuosshgk25nmh" path="res://Assets/Images/Player/Turrets/turretDivine/idle_202.5_0012.png" id="29_p8lrh"]
+[ext_resource type="Texture2D" uid="uid://c7tnepkeyph5m" path="res://Assets/Images/Player/Turrets/turretDivine/idle_180.0_0010.png" id="30_euyr5"]
+[ext_resource type="Texture2D" uid="uid://0pc1kbyu2tts" path="res://Assets/Images/Player/Turrets/turretDivine/idle_180.0_0011.png" id="31_bgi8h"]
+[ext_resource type="Texture2D" uid="uid://cl772us1pfnu8" path="res://Assets/Images/Player/Turrets/turretDivine/idle_180.0_0012.png" id="32_dve4w"]
+[ext_resource type="Texture2D" uid="uid://g3ntmhucivj3" path="res://Assets/Images/Player/Turrets/turretDivine/idle_157.5_0010.png" id="33_s8wxn"]
+[ext_resource type="Texture2D" uid="uid://bx4c1dfuw67r4" path="res://Assets/Images/Player/Turrets/turretDivine/idle_157.5_0011.png" id="34_bmpou"]
+[ext_resource type="Texture2D" uid="uid://d2aybi07wjd7a" path="res://Assets/Images/Player/Turrets/turretDivine/idle_157.5_0012.png" id="35_kkpqn"]
+[ext_resource type="Texture2D" uid="uid://b0bn57eg7qg2e" path="res://Assets/Images/Player/Turrets/turretDivine/idle_337.5_0010.png" id="36_444c1"]
+[ext_resource type="Texture2D" uid="uid://dbdlefsgje5ta" path="res://Assets/Images/Player/Turrets/turretDivine/idle_337.5_0011.png" id="37_xnij4"]
+[ext_resource type="Texture2D" uid="uid://8e08crwnjx7a" path="res://Assets/Images/Player/Turrets/turretDivine/idle_337.5_0012.png" id="38_8mjev"]
+[ext_resource type="Texture2D" uid="uid://ldl7npa14o6l" path="res://Assets/Images/Player/Turrets/turretDivine/idle_135.0_0010.png" id="39_t8pio"]
+[ext_resource type="Texture2D" uid="uid://cm5mbrtaorolr" path="res://Assets/Images/Player/Turrets/turretDivine/idle_135.0_0011.png" id="40_u427n"]
+[ext_resource type="Texture2D" uid="uid://dn5a0q46lv1n0" path="res://Assets/Images/Player/Turrets/turretDivine/idle_135.0_0012.png" id="41_ixkyl"]
+[ext_resource type="Texture2D" uid="uid://c4v35hkq8603q" path="res://Assets/Images/Player/Turrets/turretDivine/idle_112.5_0010.png" id="42_wkgx5"]
+[ext_resource type="Texture2D" uid="uid://b1mpcteb4crsn" path="res://Assets/Images/Player/Turrets/turretDivine/idle_112.5_0011.png" id="43_vmw2y"]
+[ext_resource type="Texture2D" uid="uid://dponvyxj4seqr" path="res://Assets/Images/Player/Turrets/turretDivine/idle_112.5_0012.png" id="44_dltlp"]
+[ext_resource type="Texture2D" uid="uid://d25gq85cxcwdx" path="res://Assets/Images/Player/Turrets/turretDivine/idle_90.0_0010.png" id="45_gsyb6"]
+[ext_resource type="Texture2D" uid="uid://ukthhg7cea0j" path="res://Assets/Images/Player/Turrets/turretDivine/idle_90.0_0011.png" id="46_lhi7a"]
+[ext_resource type="Texture2D" uid="uid://hgvgw8awlbmn" path="res://Assets/Images/Player/Turrets/turretDivine/idle_90.0_0012.png" id="47_dpc58"]
+[ext_resource type="Texture2D" uid="uid://boifgpomrqgqt" path="res://Assets/Images/Player/Turrets/turretDivine/idle_67.5_0010.png" id="48_num7m"]
+[ext_resource type="Texture2D" uid="uid://b3faw7bdow8ry" path="res://Assets/Images/Player/Turrets/turretDivine/idle_67.5_0011.png" id="49_f1jnv"]
+[ext_resource type="Texture2D" uid="uid://6llyqkb0yv6p" path="res://Assets/Images/Player/Turrets/turretDivine/idle_67.5_0012.png" id="50_pvy5r"]
+[ext_resource type="Texture2D" uid="uid://c6goj76b0xho7" path="res://Assets/Images/Player/Turrets/turretDivine/idle_45.0_0010.png" id="51_sx1x8"]
+[ext_resource type="Texture2D" uid="uid://b1wfa8df1fq4e" path="res://Assets/Images/Player/Turrets/turretDivine/idle_45.0_0011.png" id="52_ieevb"]
+[ext_resource type="Texture2D" uid="uid://b0jiulf3ciu4s" path="res://Assets/Images/Player/Turrets/turretDivine/idle_45.0_0012.png" id="53_jflmt"]
+[ext_resource type="Texture2D" uid="uid://r6cv0gqt3o73" path="res://Assets/Images/Player/Turrets/turretDivine/idle_22.5_0010.png" id="54_lqblp"]
+[ext_resource type="Texture2D" uid="uid://bwxqap24gmwgo" path="res://Assets/Images/Player/Turrets/turretDivine/idle_22.5_0011.png" id="55_5jhlm"]
+[ext_resource type="Texture2D" uid="uid://dixaqm7x1c47n" path="res://Assets/Images/Player/Turrets/turretDivine/idle_22.5_0012.png" id="56_4q3lq"]
+[ext_resource type="Texture2D" uid="uid://5psos20nr2mt" path="res://Assets/Images/Player/Turrets/turretDivine/idle_315.0_0010.png" id="57_wk6ko"]
+[ext_resource type="Texture2D" uid="uid://grefq07tv1kc" path="res://Assets/Images/Player/Turrets/turretDivine/idle_315.0_0011.png" id="58_g78n2"]
+[ext_resource type="Texture2D" uid="uid://4qqy2ke60va3" path="res://Assets/Images/Player/Turrets/turretDivine/idle_315.0_0012.png" id="59_yl31t"]
+[ext_resource type="Texture2D" uid="uid://bve6iidd0ecgq" path="res://Assets/Images/Player/Turrets/turretDivine/idle_292.5_0010.png" id="60_47xdy"]
+[ext_resource type="Texture2D" uid="uid://4mqksnb8aung" path="res://Assets/Images/Player/Turrets/turretDivine/idle_292.5_0011.png" id="61_ysa25"]
+[ext_resource type="Texture2D" uid="uid://ds0g1d24dryop" path="res://Assets/Images/Player/Turrets/turretDivine/idle_292.5_0012.png" id="62_qahmf"]
+[ext_resource type="Texture2D" uid="uid://macawuancmeh" path="res://Assets/Images/Player/Turrets/turretDivine/idle_270.0_0010.png" id="63_pngm7"]
+[ext_resource type="Texture2D" uid="uid://dhivpvuvoales" path="res://Assets/Images/Player/Turrets/turretDivine/idle_270.0_0011.png" id="64_4uj86"]
+[ext_resource type="Texture2D" uid="uid://d2almahiqcomo" path="res://Assets/Images/Player/Turrets/turretDivine/idle_270.0_0012.png" id="65_dqhvd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vgnd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dhv8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_elvdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h1f3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7fbjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1t8mi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_t2igm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_a6owj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_iykiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_v57aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8fynh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pau8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qwr7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_csa4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jjder")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_wf74w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fnvm3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4r0r2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_ntxla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4lqck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_rsid8")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_2onjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_4g1e2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_fjh4t")
+}],
+"loop": true,
+"name": &"112.5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_d3frm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_e7ws3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_7cop6")
+}],
+"loop": true,
+"name": &"135",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_2snxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_nyg88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_p8lrh")
+}],
+"loop": true,
+"name": &"157.5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_euyr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bgi8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_dve4w")
+}],
+"loop": true,
+"name": &"180",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_s8wxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_bmpou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_kkpqn")
+}],
+"loop": true,
+"name": &"202.5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_444c1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_xnij4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_8mjev")
+}],
+"loop": true,
+"name": &"22.5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_t8pio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_u427n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ixkyl")
+}],
+"loop": true,
+"name": &"225",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_wkgx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_vmw2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_dltlp")
+}],
+"loop": true,
+"name": &"247.5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_gsyb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_lhi7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_dpc58")
+}],
+"loop": true,
+"name": &"270",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_num7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_f1jnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_pvy5r")
+}],
+"loop": true,
+"name": &"292.5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_sx1x8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_ieevb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_jflmt")
+}],
+"loop": true,
+"name": &"315",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_lqblp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_5jhlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_4q3lq")
+}],
+"loop": true,
+"name": &"337.5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_wk6ko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_g78n2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_yl31t")
+}],
+"loop": true,
+"name": &"45",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("60_47xdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_ysa25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_qahmf")
+}],
+"loop": true,
+"name": &"67.5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("63_pngm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_4uj86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_dqhvd")
+}],
+"loop": true,
+"name": &"90",
+"speed": 5.0
+}]
+
+[node name="Warrior_Turrret_divine_ZeusPoseidon" type="Node2D"]
+script = ExtResource("1_5xi7f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4vgnd")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_4r0r2")
+animation = &"0"
+autoplay = "0"
