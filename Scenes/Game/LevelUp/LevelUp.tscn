@@ -1,0 +1,187 @@
+[gd_scene load_steps=5 format=3 uid="uid://8hqg5ekw33pb"]
+
+[ext_resource type="Script" path="res://Scripts/Game/LevelUp.gd" id="1_362bt"]
+[ext_resource type="PackedScene" uid="uid://c1duvvphxq7y2" path="res://Scenes/Game/LevelUp/Upgrade.tscn" id="2_hhs6i"]
+[ext_resource type="FontFile" uid="uid://duy38o6o71nij" path="res://Assets/Fonts/Kurland.otf" id="3_vwp45"]
+[ext_resource type="Texture2D" uid="uid://bsl7vojut3ply" path="res://Assets/Images/Resources/64x64.png" id="4_nknrn"]
+
+[node name="LevelUp" type="Node2D"]
+script = ExtResource("1_362bt")
+
+[node name="BackGround" type="ColorRect" parent="."]
+offset_left = -144.0
+offset_top = -149.0
+offset_right = 1323.0
+offset_bottom = 737.0
+color = Color(0, 0, 0, 0.647059)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 429.0
+offset_top = 58.0
+offset_right = 593.0
+offset_bottom = 121.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vwp45")
+theme_override_font_sizes/font_size = 43
+text = "Level up!"
+
+[node name="Upgrades" type="Node2D" parent="."]
+position = Vector2(-61, -27)
+
+[node name="Upgrade1" parent="Upgrades" instance=ExtResource("2_hhs6i")]
+position = Vector2(139, 199)
+scale = Vector2(1.701, 2.059)
+
+[node name="Upgrade2" parent="Upgrades" instance=ExtResource("2_hhs6i")]
+position = Vector2(353, 199)
+scale = Vector2(1.701, 2.059)
+
+[node name="Upgrade3" parent="Upgrades" instance=ExtResource("2_hhs6i")]
+position = Vector2(567, 199)
+scale = Vector2(1.701, 2.059)
+
+[node name="Upgrade4" parent="Upgrades" instance=ExtResource("2_hhs6i")]
+position = Vector2(781, 199)
+scale = Vector2(1.701, 2.059)
+
+[node name="Chooses" type="Node2D" parent="."]
+
+[node name="Choose" type="Node2D" parent="Chooses"]
+
+[node name="Selected" type="ColorRect" parent="Chooses/Choose"]
+offset_left = 119.0
+offset_top = 311.0
+offset_right = 243.0
+offset_bottom = 342.0
+color = Color(1, 1, 1, 0.776471)
+
+[node name="Selected2" type="ColorRect" parent="Chooses/Choose"]
+visible = false
+offset_left = 119.0
+offset_top = 311.0
+offset_right = 243.0
+offset_bottom = 342.0
+color = Color(0.392157, 0.392157, 0.392157, 0.776471)
+
+[node name="Label" type="Label" parent="Chooses/Choose"]
+offset_left = 148.0
+offset_top = 316.0
+offset_right = 210.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vwp45")
+theme_override_font_sizes/font_size = 18
+text = "Choose"
+
+[node name="Choose2" type="Node2D" parent="Chooses"]
+position = Vector2(213, 0)
+
+[node name="Selected" type="ColorRect" parent="Chooses/Choose2"]
+offset_left = 119.0
+offset_top = 311.0
+offset_right = 243.0
+offset_bottom = 342.0
+color = Color(1, 1, 1, 0.776471)
+
+[node name="Selected2" type="ColorRect" parent="Chooses/Choose2"]
+offset_left = 119.0
+offset_top = 311.0
+offset_right = 243.0
+offset_bottom = 342.0
+color = Color(0.392157, 0.392157, 0.392157, 0.776471)
+
+[node name="Label" type="Label" parent="Chooses/Choose2"]
+offset_left = 148.0
+offset_top = 316.0
+offset_right = 210.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vwp45")
+theme_override_font_sizes/font_size = 18
+text = "Choose"
+
+[node name="Choose3" type="Node2D" parent="Chooses"]
+position = Vector2(426, 0)
+
+[node name="Selected" type="ColorRect" parent="Chooses/Choose3"]
+offset_left = 119.0
+offset_top = 311.0
+offset_right = 243.0
+offset_bottom = 342.0
+color = Color(1, 1, 1, 0.776471)
+
+[node name="Selected2" type="ColorRect" parent="Chooses/Choose3"]
+offset_left = 119.0
+offset_top = 311.0
+offset_right = 243.0
+offset_bottom = 342.0
+color = Color(0.392157, 0.392157, 0.392157, 0.776471)
+
+[node name="Label" type="Label" parent="Chooses/Choose3"]
+offset_left = 148.0
+offset_top = 316.0
+offset_right = 210.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vwp45")
+theme_override_font_sizes/font_size = 18
+text = "Choose"
+
+[node name="Choose4" type="Node2D" parent="Chooses"]
+position = Vector2(639, 0)
+
+[node name="Selected" type="ColorRect" parent="Chooses/Choose4"]
+offset_left = 119.0
+offset_top = 311.0
+offset_right = 243.0
+offset_bottom = 342.0
+color = Color(1, 1, 1, 0.776471)
+
+[node name="Selected2" type="ColorRect" parent="Chooses/Choose4"]
+offset_left = 119.0
+offset_top = 311.0
+offset_right = 243.0
+offset_bottom = 342.0
+color = Color(0.392157, 0.392157, 0.392157, 0.776471)
+
+[node name="Label" type="Label" parent="Chooses/Choose4"]
+offset_left = 148.0
+offset_top = 316.0
+offset_right = 210.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vwp45")
+theme_override_font_sizes/font_size = 18
+text = "Choose"
+
+[node name="Reroll" type="Node2D" parent="Chooses"]
+position = Vector2(315, 75)
+
+[node name="Selected" type="ColorRect" parent="Chooses/Reroll"]
+offset_left = 119.0
+offset_top = 311.0
+offset_right = 243.0
+offset_bottom = 342.0
+color = Color(1, 1, 1, 0.776471)
+
+[node name="Selected2" type="ColorRect" parent="Chooses/Reroll"]
+offset_left = 119.0
+offset_top = 311.0
+offset_right = 243.0
+offset_bottom = 342.0
+color = Color(0.392157, 0.392157, 0.392157, 0.776471)
+
+[node name="Label" type="Label" parent="Chooses/Reroll"]
+offset_left = 148.0
+offset_top = 316.0
+offset_right = 210.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vwp45")
+theme_override_font_sizes/font_size = 18
+text = "Reroll 5"
+
+[node name="Sprite2D" type="Sprite2D" parent="Chooses/Reroll"]
+position = Vector2(229, 326)
+scale = Vector2(0.28125, 0.28125)
+texture = ExtResource("4_nknrn")

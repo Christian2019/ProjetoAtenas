@@ -1,3 +1,6 @@
+res://Scripts/Game
+res://Assets/Fonts
+res://Assets/Images/LevelUp
 res://Assets/Images/HUD/SkillSelection
 res://Scripts/Classes/Warrior/Warrior_Turret
 res://Assets/Images/Player/Ultimates/Poseidon/SpritesKraken/moving/Down
@@ -17,7 +20,4 @@ res://Scripts/Classes/Warrior/WarriorUltimates
 res://Scripts/Classes/Warrior/Warrior_dash
 res://Scripts/Game/MathController/BonusStatus/Active/Dash
 res://Scripts/Game/MathController/Skills/dash/Poseidon
-res://Scripts/Game/MathController/Skills/dash/Zeus
-res://Scripts/Classes/Warrior/Warrior_attack2
-res://Scripts/Classes/Warrior/Warrior_attack2/Warrior_attack2_Hades
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

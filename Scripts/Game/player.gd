@@ -7,21 +7,26 @@ var baseMaxHp=10000.0
 var maxHpPercentBonus=0
 var maxHp=baseMaxHp
 var hp = maxHp
+
 var hpRegeneration=1
 
 var lifeStealChance=0.1
+
 var percentDamage=1.0
 var baseDamage=1.0
-var attack_Speed = 1.0
 var percentCritDamage=0.1
 
+var attack_Speed = 1.0
+
 var armor=0
+
 var dodge=0
 var maxDodge=70
 
 var baseMoveSpeed=5.0
 var move_Speed = baseMoveSpeed
 var moveSpeedPercentBonus=0
+
 var luck=0
 var collect_radios=200
 
