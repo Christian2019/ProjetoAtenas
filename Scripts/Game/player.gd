@@ -424,23 +424,6 @@ func _on_body_area_exited(area):
 	if area.get_parent().name == "Center":
 		playerOnCenterPoint=false
 
-
-func _on_timer_timeout():
-	print("STATUS:")
-	print("hpRegeneration: ",hpRegeneration)
-	print("lifesteal: ",lifeStealChance)
-	print("percentDamage: ",percentDamage)
-	print("baseDamage: ",baseDamage)
-	print("attackspeed: ",attack_Speed)
-	print("percentCritDamage: ",percentCritDamage)
-	print("armor: ",armor)
-	print("dodge: ",dodge)
-	print("maxDodge: ",maxDodge)
-	print("move_Speed: ",move_Speed)
-	print("luck: ",luck)
-	print("collect_radios: ",collect_radios)
-
-
 func _on_animation_animation_looped():
 	if (animAttacking):
 		animAttacking=false

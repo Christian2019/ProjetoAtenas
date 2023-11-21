@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://tifvlyj5mymv"]
 
 [ext_resource type="Script" path="res://Scripts/MainScenes/Loading.gd" id="1_7bt5c"]
-[ext_resource type="FontFile" uid="uid://duy38o6o71nij" path="res://Assets/Fonts/Kurland.otf" id="2_lrpxh"]
+[ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="2_lrpxh"]
 [ext_resource type="AudioStream" uid="uid://b82dirn1fyr7h" path="res://Assets/Sounds/Loading.wav" id="3_0s8mq"]
+
 
 [node name="Loading" type="Node2D"]
 script = ExtResource("1_7bt5c")

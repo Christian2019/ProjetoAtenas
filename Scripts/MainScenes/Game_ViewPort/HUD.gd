@@ -59,8 +59,8 @@ func _process(_delta):
 	
 func levelUp():
 	$Frontground/LevelUp/Label.text="Level: "+str(Global.LevelUp.level)
-	$Frontground/LevelUp/Label2.text=str(Global.LevelUp.levelExperience)+"/"+str(Global.LevelUp.nextLevelExp)
-	$Frontground/LevelUp/ColorRect.size.x=int(maxBarSizeX_levelUp*(float(Global.LevelUp.nextLevelExp)-float(Global.LevelUp.levelExperience))/float(Global.LevelUp.nextLevelExp))
+	$Frontground/LevelUp/Label2.text=str(Global.LevelUp.levelExperience)+"/"+str(int(Global.LevelUp.nextLevelExp))
+	$Frontground/LevelUp/ColorRect.size.x=int(maxBarSizeX_levelUp*(float(Global.LevelUp.levelExperience)/float(Global.LevelUp.nextLevelExp)))
 	
 
 func dracma():
@@ -132,7 +132,7 @@ func centerPointhpBarController():
 func updateResources():
 	$Frontground/Wood/Label.text =  str("Wood ",Global.player.wood)
 	$Frontground/Gold/Label.text =  str("Gold ",Global.player.gold)
-	$Frontground/Stone/Label.text =  str("Stone ",Global.player.stone)
+	$Frontground/Stone/Label.text =  str("stone ",Global.player.stone)
 	
 
 func timerControllerBar():

@@ -29,8 +29,10 @@ func _on_area_2d_area_entered(area):
 			if (area.get_parent().dracmaBag>0):
 				area.get_parent().dracmaBag-=1
 				area.get_parent().dracma+=2
+				Global.LevelUp.levelExperience+=2
 			else:
 				area.get_parent().dracma+=1
+				Global.LevelUp.levelExperience+=1
 		else:
 			area.get_parent().dracmaBag+=1
 		playSound()

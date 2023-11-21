@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjs20royeqn2t"]
 
 [ext_resource type="Script" path="res://Scripts/Game/SpawnDamage.gd" id="1_jni1a"]
-[ext_resource type="FontFile" uid="uid://duy38o6o71nij" path="res://Assets/Fonts/Kurland.otf" id="2_551cb"]
+[ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="2_551cb"]
 
 [node name="SpawnDamage" type="Node2D"]
 script = ExtResource("1_jni1a")

@@ -1,8 +1,8 @@
 extends Node2D
 
 var level=0
-var levelExperience=50
-var nextLevelExp=100
+var levelExperience=0
+var nextLevelExp=20.0
 var upgrades=0
 var selected=4
 var rerollPrice=1
@@ -12,13 +12,18 @@ var hp=3.0
 var hpRegeneration=2.0
 var lifeStealChance=0.01
 var percentDamage=0.05
-var damage=2.0
+var damage=1.0
 var attack_Speed = 0.05
 var percentCritDamage=0.03
 var armor=1.0
 var dodge=0.03
 var moveSpeed=0.03
 var luck=0.05
+
+#Base Quality Chance Table
+var tier2={"minLevel":1,"plusChancePerLevel":0.06,"maxChance":0.6}
+var tier3={"minLevel":3,"plusChancePerLevel":0.02,"maxChance":0.25}
+var tier4={"minLevel":7,"plusChancePerLevel":0.0023,"maxChance":0.08}
 
 var slot1={"type":0,"value":0,"quality":0}
 var slot2={"type":0,"value":0,"quality":0}
@@ -55,14 +60,56 @@ func getRandomOptions():
 	
 func rand(slot, rng,t):
 	slot.type=t
-	slot.quality=rng.randi_range(0, 3)
 	
+	var totalPossibilites=10000
+
+
+	var t4=testChances(tier4,totalPossibilites,rng)
+	print("t4: ",t4.chance)
+	if (t4.bol):
+		slot.quality=3
+		return
+	totalPossibilites-=t4.chance
+	
+	var t3=testChances(tier3,totalPossibilites,rng)
+	print("t3: ",t3.chance)
+	if (t3.bol):
+		slot.quality=2
+		return
+	totalPossibilites-=t3.chance
+	
+	var t2=testChances(tier2,totalPossibilites,rng)
+	print("t2: ",t2.chance)
+	if (t2.bol):
+		slot.quality=1
+		return
+	totalPossibilites-=t2.chance
+	
+	slot.quality=0
+
+func testChances(tier,totalPossibilites,rng):
+	var chance
+	if (tier.minLevel<=level):
+		chance=(level*tier.plusChancePerLevel)*(1+Global.player.luck)
+		if (chance>tier.maxChance):
+			chance=tier.maxChance
+		chance= int(chance*totalPossibilites)
+		var r=rng.randi_range(0, totalPossibilites)
+		print("Random: ",r)
+		if (r<chance):
+			return {"bol":true,"chance":chance}
+		else:
+			return {"bol":false,"chance":chance}
+	else:
+		return {"bol":false,"chance":0}
+		
 func _process(delta):
 	levelUp()
 	if (Global.WaveController.mining and upgrades>0 and !visible):
 		Global.Stats.visible=true
 		get_tree().paused = true
 		visible=true
+		update()
 	if (visible):
 		lvlupController()
 		
@@ -73,6 +120,7 @@ func update():
 	updateUpgrade(2,slot3)
 	updateUpgrade(3,slot4)
 	$Chooses/Reroll/Label.text="Reroll "+str(rerollPrice)
+	$Label2.text="upgrades: "+str(upgrades)
 	updateSelected()
 	
 func updateSelected():
@@ -104,31 +152,31 @@ func updateUpgrade(child,slot):
 	upgrade.get_node("AnimatedSprite2D").frame=slot.type
 	
 	if (slot.type==0):
-		chanUpL3(upgrade,slot,armor,"Armor")
+		chanUpL3(upgrade,slot,armor,"Armor",1)
 	elif (slot.type==1):
-		chanUpL3(upgrade,slot,attack_Speed*100,"Attack Speed")
+		chanUpL3(upgrade,slot,attack_Speed,"Attack Speed %",100)
 	elif (slot.type==2):
-		chanUpL3(upgrade,slot,damage,"Damage")
+		chanUpL3(upgrade,slot,damage,"Damage",1)
 	elif (slot.type==3):
-		chanUpL3(upgrade,slot,dodge*100,"Dodge")
+		chanUpL3(upgrade,slot,dodge,"Dodge %",100)
 	elif (slot.type==4):
-		chanUpL3(upgrade,slot,hp,"Max Hp")
+		chanUpL3(upgrade,slot,hp,"Max Hp",1)
 	elif (slot.type==5):
-		chanUpL3(upgrade,slot,hpRegeneration,"Hp Regen")
+		chanUpL3(upgrade,slot,hpRegeneration,"Hp Regen",1)
 	elif (slot.type==6):
-		chanUpL3(upgrade,slot,lifeStealChance*100,"Life Steal %")
+		chanUpL3(upgrade,slot,lifeStealChance,"Life Steal %",100)
 	elif (slot.type==7):
-		chanUpL3(upgrade,slot,luck*100,"Luck")
+		chanUpL3(upgrade,slot,luck,"Luck  %",100)
 	elif (slot.type==8):
-		chanUpL3(upgrade,slot,moveSpeed*100,"Move Speed %")
+		chanUpL3(upgrade,slot,moveSpeed,"Move Speed %",100)
 	elif (slot.type==9):
-		chanUpL3(upgrade,slot,percentCritDamage*100,"Crit")
+		chanUpL3(upgrade,slot,percentCritDamage,"Crit  %",100)
 	elif (slot.type==10):
-		chanUpL3(upgrade,slot,percentDamage*100,"Damage %")
+		chanUpL3(upgrade,slot,percentDamage,"Damage %",100)
 
-func chanUpL3(upgrade,slot,status,text):
+func chanUpL3(upgrade,slot,status,text,multiplierLabel):
 	slot.value=status*(slot.quality+1)
-	upgrade.get_node("Label3").text="+ "+str(int(slot.value))+" "+text
+	upgrade.get_node("Label3").text="+ "+str(int(slot.value*multiplierLabel))+" "+text
 	
 func lvlupController():
 	if (Input.is_action_just_pressed("Move_Right")):
@@ -156,11 +204,60 @@ func lvlupController():
 			Global.player.dracma-=rerollPrice
 			rerollPrice+=1
 			getRandomOptions()
-				
+		else:
+			applyStatus()
+			getRandomOptions()
+			decresseUpgrades()
+			update()
+
+func decresseUpgrades():
+	upgrades-=1
+	if (upgrades==0):
+		Global.Stats.visible=false
+		get_tree().paused = false
+		visible=false
+		
+
+func applyStatus():	
+	var slot
 	
+	if (selected==0):
+		slot=slot1
+	elif (selected==1):
+		slot=slot2
+	elif (selected==2):
+		slot=slot3			
+	elif (selected==3):
+		slot=slot4
+	
+	if (slot.type==0):
+		Global.player.armor+=slot.value
+	elif (slot.type==1):
+		Global.player.attack_Speed+=slot.value
+	elif (slot.type==2):
+		Global.player.baseDamage+=slot.value
+	elif (slot.type==3):
+		Global.player.dodge+=slot.value
+	elif (slot.type==4):
+		Global.player.baseMaxHp+=slot.value
+		Global.player.multiplierController()
+	elif (slot.type==5):
+		Global.player.hpRegeneration+=slot.value
+	elif (slot.type==6):
+		Global.player.lifeStealChance+=slot.value
+	elif (slot.type==7):
+		Global.player.luck+=slot.value
+	elif (slot.type==8):
+		Global.player.moveSpeedPercentBonus+=slot.value
+		Global.player.multiplierController()
+	elif (slot.type==9):
+		Global.player.percentCritDamage+=slot.value
+	elif (slot.type==10):
+		Global.player.percentDamage+=slot.value
+			
 func levelUp():
 	if (levelExperience>nextLevelExp):
 		level+=1
 		levelExperience=0
-		nextLevelExp*=2
+		nextLevelExp*=1.5
 		upgrades+=1
