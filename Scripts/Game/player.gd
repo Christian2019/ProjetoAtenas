@@ -86,7 +86,7 @@ func _process(__delta):
 	mining()
 	feedback()
 	
-	#contruction()
+	#contruction() 
 
 func restartGame():
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/Fatality.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ddxmhluvr7sb1"]
+[gd_scene load_steps=13 format=3 uid="uid://ddxmhluvr7sb1"]
 
 [ext_resource type="PackedScene" uid="uid://cb86td4m1hepw" path="res://Scenes/Game/Game.tscn" id="1_no1qw"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/Camera2D.gd" id="2_ah0pv"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://ds3mklsrsnkgd" path="res://Assets/Sounds/temple.mp3" id="8_2m48l"]
 [ext_resource type="AudioStream" uid="uid://gtus0eflv3pn" path="res://Assets/Sounds/temple2.mp3" id="9_b71q1"]
 [ext_resource type="AudioStream" uid="uid://46o6fk67h64y" path="res://Assets/Sounds/temple3.mp3" id="10_dt5os"]
+[ext_resource type="PackedScene" uid="uid://crh5gyee5b16b" path="res://Scenes/MainScenes/PauseMenu.tscn" id="11_tj7rw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4aqw1"]
 font = ExtResource("4_xvseb")
@@ -20,14 +21,14 @@ font_color = Color(1, 0, 0, 1)
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 offset_left = 1.0
-offset_top = 58.0
+offset_top = 1.0
 offset_right = 1022.0
 offset_bottom = 601.0
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(1021, 543)
+size = Vector2i(1021, 600)
 size_2d_override_stretch = true
 render_target_update_mode = 4
 
@@ -42,13 +43,19 @@ position = Vector2(-3, -1.19209e-07)
 scale = Vector2(0.937318, 0.597639)
 
 [node name="FPS" type="Label" parent="HUD"]
-offset_left = 1003.93
-offset_top = 41.8313
-offset_right = 1102.93
-offset_bottom = 82.8313
+offset_left = 20.2705
+offset_top = 20.079
+offset_right = 119.271
+offset_bottom = 61.079
 text = "FPS:60"
 label_settings = SubResource("LabelSettings_4aqw1")
 script = ExtResource("5_c2jos")
+
+[node name="PauseMenu" type="Node2D" parent="."]
+
+[node name="PauseMenu2" parent="PauseMenu" instance=ExtResource("11_tj7rw")]
+visible = false
+position = Vector2(-1, -1)
 
 [node name="TempleNode" type="Node2D" parent="."]
 position = Vector2(0, -1)

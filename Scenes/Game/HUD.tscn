@@ -1,12 +1,11 @@
-[gd_scene load_steps=40 format=3 uid="uid://b18nigm5wn5ab"]
+[gd_scene load_steps=39 format=3 uid="uid://b18nigm5wn5ab"]
 
-[ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/HUD.gd" id="1_60mgy"]
 [ext_resource type="FontFile" uid="uid://duy38o6o71nij" path="res://Assets/Fonts/Kurland.otf" id="2_owy1r"]
-[ext_resource type="Texture2D" uid="uid://cg4c8qydgkpag" path="res://Assets/Images/HUD/hearth2.png" id="3_07ur1"]
-[ext_resource type="Texture2D" uid="uid://ywre30ix5f7t" path="res://Assets/Images/Resources/wood.png" id="4_ujb4v"]
-[ext_resource type="Texture2D" uid="uid://dlwvyo6ejssc" path="res://Assets/Images/Resources/gold.png" id="5_dhfbp"]
-[ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="6_41dw3"]
+[ext_resource type="Texture2D" uid="uid://bm8unyi05yma" path="res://Assets/Images/HUD/Menu/Jogo/Caixa do Inimigo.png" id="2_q37lr"]
+[ext_resource type="Texture2D" uid="uid://d1mux0x2os7tr" path="res://Assets/Images/HUD/Menu/Jogo/Wood.png" id="4_sm1nf"]
+[ext_resource type="Texture2D" uid="uid://cj4pmmknxn84v" path="res://Assets/Images/HUD/Menu/Jogo/Gold.png" id="5_2dwuw"]
+[ext_resource type="Texture2D" uid="uid://wwebls0blha8" path="res://Assets/Images/HUD/Menu/Jogo/Rock.png" id="6_jxp1p"]
 [ext_resource type="Texture2D" uid="uid://bx5egd2vqgwfq" path="res://Assets/Images/Resources/dracma.png" id="8_dexhj"]
 [ext_resource type="Texture2D" uid="uid://bbh8wdh8h0npk" path="res://Assets/Images/Resources/dracmaBag.png" id="9_y7mq3"]
 [ext_resource type="Texture2D" uid="uid://bsnfphv05rlds" path="res://Assets/Images/HUD/waves/wave1.png" id="10_ghb0x"]
@@ -217,55 +216,10 @@ script = ExtResource("1_60mgy")
 
 [node name="Background" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="Background"]
-position = Vector2(55.1263, 47.4255)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Background"]
-position = Vector2(165, 48)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Background"]
-position = Vector2(275, 48)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D4" type="Sprite2D" parent="Background"]
-position = Vector2(384, 49)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D5" type="Sprite2D" parent="Background"]
-position = Vector2(493, 49)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D6" type="Sprite2D" parent="Background"]
-position = Vector2(602.874, 49.5745)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
 [node name="Sprite2D7" type="Sprite2D" parent="Background"]
-position = Vector2(712.747, 50.149)
+position = Vector2(1038.87, 50.5745)
 scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D8" type="Sprite2D" parent="Background"]
-position = Vector2(822.747, 50.149)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D9" type="Sprite2D" parent="Background"]
-position = Vector2(931.747, 51.149)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D10" type="Sprite2D" parent="Background"]
-position = Vector2(1040.75, 51.149)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
+texture = ExtResource("2_q37lr")
 
 [node name="Frontground" type="Node2D" parent="."]
 
@@ -273,143 +227,116 @@ texture = ExtResource("1_2qrhs")
 position = Vector2(-40, -61)
 
 [node name="ColorRect" type="ColorRect" parent="Frontground/HP"]
-offset_left = 70.0
-offset_top = 99.0
-offset_right = 124.0
-offset_bottom = 149.0
+offset_left = 52.0
+offset_top = 779.0
+offset_right = 78.0
+offset_bottom = 1066.0
 color = Color(0.882353, 0, 0.00392157, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="Frontground/HP"]
-position = Vector2(94.6389, 109.139)
-scale = Vector2(0.565866, 0.551601)
-texture = ExtResource("3_07ur1")
-
 [node name="Label" type="Label" parent="Frontground/HP"]
-offset_left = 62.0
-offset_top = 69.0
-offset_right = 249.0
-offset_bottom = 113.0
-text = "HP 100/100"
+offset_left = 91.0
+offset_top = 909.0
+offset_right = 134.0
+offset_bottom = 926.0
+text = "100/100"
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="CenterPointHp" type="Node2D" parent="Frontground"]
 position = Vector2(71.4303, -61.0082)
 
 [node name="ColorRect" type="ColorRect" parent="Frontground/CenterPointHp"]
-offset_left = 70.0
-offset_top = 99.0
-offset_right = 124.0
-offset_bottom = 149.0
-color = Color(0.882353, 0, 0.00392157, 1)
-
-[node name="Sprite2D" type="Sprite2D" parent="Frontground/CenterPointHp"]
-position = Vector2(94.6389, 109.139)
-scale = Vector2(0.565866, 0.551601)
-texture = ExtResource("3_07ur1")
+offset_left = 992.0
+offset_top = 779.0
+offset_right = 1018.0
+offset_bottom = 1066.0
+color = Color(0, 0.509804, 0.694118, 1)
 
 [node name="Label" type="Label" parent="Frontground/CenterPointHp"]
-offset_left = 56.5697
-offset_top = 69.0082
-offset_right = 243.57
-offset_bottom = 113.008
+offset_left = 927.57
+offset_top = 906.008
+offset_right = 982.57
+offset_bottom = 923.008
 theme_override_font_sizes/font_size = 1
-text = "CHP 1000/1000"
+text = "1000/1000"
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="Wood" type="Node2D" parent="Frontground"]
 position = Vector2(219.622, -61.0082)
 
 [node name="Label" type="Label" parent="Frontground/Wood"]
-offset_left = 32.378
-offset_top = 69.0082
-offset_right = 219.378
-offset_bottom = 113.008
-text = "Wood 100"
+offset_left = -73.622
+offset_top = 152.008
+offset_right = -46.622
+offset_bottom = 169.008
+text = "x100"
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Frontground/Wood"]
-position = Vector2(59, 123)
-scale = Vector2(3.3, 3.3)
-texture = ExtResource("4_ujb4v")
+position = Vector2(-52.6221, 99.0082)
+scale = Vector2(0.0258334, 0.0454167)
+texture = ExtResource("4_sm1nf")
 
 [node name="Gold" type="Node2D" parent="Frontground"]
 position = Vector2(329.622, -61.0082)
 
 [node name="Label" type="Label" parent="Frontground/Gold"]
-offset_left = 38.378
-offset_top = 69.0082
-offset_right = 225.378
-offset_bottom = 113.008
-text = "Gold 100"
+offset_left = -305.622
+offset_top = 152.008
+offset_right = -278.622
+offset_bottom = 169.008
+text = "x100"
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Frontground/Gold"]
-position = Vector2(56, 126)
-scale = Vector2(3.3, 3.3)
-texture = ExtResource("5_dhfbp")
+position = Vector2(-295.622, 101.008)
+scale = Vector2(0.0220833, 0.0333333)
+texture = ExtResource("5_2dwuw")
 
 [node name="Stone" type="Node2D" parent="Frontground"]
-position = Vector2(439.622, -61.0082)
+position = Vector2(508.622, -61.0082)
 
 [node name="Label" type="Label" parent="Frontground/Stone"]
-offset_left = 29.378
-offset_top = 69.0082
-offset_right = 216.378
-offset_bottom = 113.008
-text = "Stone 100"
+offset_left = -425.622
+offset_top = 153.008
+offset_right = -398.622
+offset_bottom = 170.008
+text = "x100"
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Frontground/Stone"]
-position = Vector2(56, 126)
-scale = Vector2(3.3, 3.3)
-texture = ExtResource("6_41dw3")
+position = Vector2(-404.621, 93.0082)
+scale = Vector2(0.0229167, 0.0373334)
+texture = ExtResource("6_jxp1p")
 
 [node name="Dracma" type="Node2D" parent="Frontground"]
-position = Vector2(548, -61)
-
-[node name="Label" type="Label" parent="Frontground/Dracma"]
-offset_left = 2.99999
-offset_top = 69.0
-offset_right = 190.0
-offset_bottom = 113.0
-text = "Dracma
-"
-label_settings = SubResource("LabelSettings_22btt")
+position = Vector2(617, -61)
 
 [node name="Label2" type="Label" parent="Frontground/Dracma"]
-offset_left = 25.0
-offset_top = 88.0
-offset_right = 212.0
-offset_bottom = 132.0
-text = "100"
+offset_left = -401.0
+offset_top = 151.0
+offset_right = -374.0
+offset_bottom = 168.0
+text = "x100"
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Frontground/Dracma"]
-position = Vector2(90, 88)
+position = Vector2(-387, 99)
 scale = Vector2(0.0532558, 0.0532558)
 texture = ExtResource("8_dexhj")
 
 [node name="DracmaBag" type="Node2D" parent="Frontground"]
 position = Vector2(658, -61)
 
-[node name="Label" type="Label" parent="Frontground/DracmaBag"]
-offset_left = -107.0
-offset_top = 113.0
-offset_right = 80.0003
-offset_bottom = 157.0
-text = "Dracma Bag"
-label_settings = SubResource("LabelSettings_22btt")
-
 [node name="Label2" type="Label" parent="Frontground/DracmaBag"]
-offset_left = -85.0
-offset_top = 137.0
-offset_right = 102.0
-offset_bottom = 181.0
-text = "100"
+offset_left = -380.0
+offset_top = 151.0
+offset_right = -353.0
+offset_bottom = 168.0
+text = "x100"
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Frontground/DracmaBag"]
-position = Vector2(-22, 137)
+position = Vector2(-369, 97)
 scale = Vector2(0.108384, 0.108384)
 texture = ExtResource("9_y7mq3")
 
@@ -417,25 +344,25 @@ texture = ExtResource("9_y7mq3")
 position = Vector2(655, -61)
 
 [node name="Label" type="Label" parent="Frontground/Wave"]
-offset_left = 29.378
-offset_top = 69.0082
-offset_right = 216.378
-offset_bottom = 113.008
+offset_left = 355.505
+offset_top = 69.4337
+offset_right = 542.505
+offset_bottom = 113.434
 text = "Wave
 "
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="Label2" type="Label" parent="Frontground/Wave"]
-offset_left = 69.0
-offset_top = 69.0
-offset_right = 256.0
-offset_bottom = 113.0
+offset_left = 395.127
+offset_top = 69.4255
+offset_right = 408.127
+offset_bottom = 86.4255
 text = "20
 "
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Frontground/Wave"]
-position = Vector2(61, 119)
+position = Vector2(383.127, 116.426)
 sprite_frames = SubResource("SpriteFrames_g7qxd")
 frame = 4
 
@@ -443,76 +370,75 @@ frame = 4
 position = Vector2(627, -61)
 
 [node name="Label" type="Label" parent="Frontground/Ultimate"]
-offset_left = 177.0
-offset_top = 64.0
-offset_right = 364.0
-offset_bottom = 108.0
+offset_left = 21.9999
+offset_top = 966.0
+offset_right = 69.9999
+offset_bottom = 983.0
 theme_override_font_sizes/font_size = 1
 text = "Ultimate"
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="Label2" type="Label" parent="Frontground/Ultimate"]
-offset_left = 205.0
-offset_top = 108.0
-offset_right = 392.0
-offset_bottom = 152.0
+offset_left = 66.9999
+offset_top = 1017.0
+offset_right = 83.9999
+offset_bottom = 1034.0
 theme_override_font_sizes/font_size = 1
 text = "0/0"
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Frontground/Ultimate"]
-position = Vector2(171.5, 122)
+position = Vector2(46, 1021)
 scale = Vector2(0.0622902, 0.106592)
 sprite_frames = SubResource("SpriteFrames_yngw4")
 frame = 2
 
 [node name="ColorRect" type="ColorRect" parent="Frontground/Ultimate"]
-offset_left = 153.0
-offset_top = 84.0
-offset_right = 190.0
-offset_bottom = 160.0
+offset_left = 26.9999
+offset_top = 983.0
+offset_right = 63.9999
+offset_bottom = 1059.0
 color = Color(1, 1, 1, 0.678431)
 
 [node name="ColorRect2" type="ColorRect" parent="Frontground/Ultimate"]
-offset_left = 153.0
-offset_top = 84.0
-offset_right = 190.0
-offset_bottom = 160.0
+offset_left = 26.9999
+offset_top = 983.0
+offset_right = 63.9999
+offset_bottom = 1059.0
 color = Color(1, 0, 0, 0.423529)
 
 [node name="TimeLine" type="Node2D" parent="Frontground"]
 
 [node name="Label" type="Label" parent="Frontground/TimeLine"]
-offset_left = 893.0
+offset_left = 527.0
 offset_top = 8.0
-offset_right = 983.0
-offset_bottom = 52.0
-text = "Time to Next
- Wave"
+offset_right = 634.0
+offset_bottom = 25.0
+text = "Time to Next Wave"
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="Label2" type="Label" parent="Frontground/TimeLine"]
-offset_left = 916.0
-offset_top = 76.0
-offset_right = 956.0
-offset_bottom = 102.0
+offset_left = 566.0
+offset_top = 48.0
+offset_right = 606.0
+offset_bottom = 74.0
 text = "30s"
 
 [node name="ColorRect" type="ColorRect" parent="Frontground/TimeLine"]
-offset_left = 893.0
-offset_top = 46.0
-offset_right = 974.0
-offset_bottom = 68.0
+offset_left = 537.0
+offset_top = 26.0
+offset_right = 618.0
+offset_bottom = 48.0
 color = Color(1, 0, 0, 1)
 
 [node name="Skills" type="Node2D" parent="Frontground"]
 scale = Vector2(1.72, 1.72)
 
 [node name="Selected" type="ColorRect" parent="Frontground/Skills"]
-offset_left = 7.55814
-offset_top = 183.721
-offset_right = 25.5581
-offset_bottom = 211.721
+offset_left = 296.512
+offset_top = 511.046
+offset_right = 314.512
+offset_bottom = 539.047
 color = Color(0.00184107, 0.00184107, 0.00184107, 1)
 
 [node name="Label" type="Label" parent="Frontground/Skills/Selected"]
@@ -524,10 +450,10 @@ offset_bottom = 27.7442
 text = "0"
 
 [node name="Attack1_Border" type="ColorRect" parent="Frontground/Skills"]
-offset_left = 7.0
-offset_top = 214.0
-offset_right = 26.0
-offset_bottom = 247.0
+offset_left = 247.093
+offset_top = 547.093
+offset_right = 266.093
+offset_bottom = 580.093
 
 [node name="Attack1" type="AnimatedSprite2D" parent="Frontground/Skills/Attack1_Border"]
 position = Vector2(9.56977, 16)
@@ -535,10 +461,10 @@ scale = Vector2(0.0244695, 0.040404)
 sprite_frames = SubResource("SpriteFrames_0f3i7")
 
 [node name="Attack2_Border" type="ColorRect" parent="Frontground/Skills"]
-offset_left = 8.0
-offset_top = 251.0
-offset_right = 27.0
-offset_bottom = 284.0
+offset_left = 274.419
+offset_top = 547.674
+offset_right = 293.419
+offset_bottom = 580.674
 
 [node name="Attack2" type="AnimatedSprite2D" parent="Frontground/Skills/Attack2_Border"]
 position = Vector2(9.15116, 16.4462)
@@ -546,10 +472,10 @@ scale = Vector2(0.0225119, 0.0391523)
 sprite_frames = SubResource("SpriteFrames_3g5ue")
 
 [node name="Turret" type="ColorRect" parent="Frontground/Skills"]
-offset_left = 7.55814
-offset_top = 287.209
-offset_right = 26.5581
-offset_bottom = 320.209
+offset_left = 301.163
+offset_top = 547.093
+offset_right = 320.163
+offset_bottom = 580.093
 
 [node name="Turret" type="AnimatedSprite2D" parent="Frontground/Skills/Turret"]
 position = Vector2(9.30233, 16)
@@ -557,10 +483,10 @@ scale = Vector2(0.0254483, 0.040404)
 sprite_frames = SubResource("SpriteFrames_4n63o")
 
 [node name="Dash" type="ColorRect" parent="Frontground/Skills"]
-offset_left = 7.55814
-offset_top = 323.209
-offset_right = 26.5581
-offset_bottom = 356.209
+offset_left = 325.581
+offset_top = 547.093
+offset_right = 344.581
+offset_bottom = 580.093
 
 [node name="Dash" type="AnimatedSprite2D" parent="Frontground/Skills/Dash"]
 position = Vector2(9.59302, 16)
@@ -568,10 +494,10 @@ scale = Vector2(0.0244695, 0.040404)
 sprite_frames = SubResource("SpriteFrames_ecpgq")
 
 [node name="Ultimate" type="ColorRect" parent="Frontground/Skills"]
-offset_left = 8.13954
-offset_top = 359.302
-offset_right = 27.1395
-offset_bottom = 392.302
+offset_left = 350.581
+offset_top = 547.093
+offset_right = 369.581
+offset_bottom = 580.093
 
 [node name="Ultimate" type="AnimatedSprite2D" parent="Frontground/Skills/Ultimate"]
 position = Vector2(9.01163, 16.3648)

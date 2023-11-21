@@ -4,6 +4,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$FadeIn.play("FadeIn")   
+	
 	pass # Replace with function body.
 
 
@@ -26,4 +27,5 @@ func _on_quit_pressed():
 
 func _on_fade_in_animation_finished(anim_name):
 	$ColorRect.queue_free()
+	$RETRY.grab_focus()
 	pass # Replace with function body.

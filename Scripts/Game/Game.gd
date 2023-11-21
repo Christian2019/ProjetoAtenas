@@ -29,6 +29,9 @@ func _process(_delta):
 		if (Global.WaveController.wave>1):
 			Global.WaveController.wave-=1
 	
+	if(Input.is_action_just_pressed("Pause")):
+		Global.PauseMenu.visible=true
+		get_tree().paused=true
 	changeSkills()
 var selected=0
 var s0=0

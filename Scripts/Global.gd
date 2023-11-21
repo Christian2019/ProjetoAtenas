@@ -3,6 +3,7 @@ extends Node
 var player
 var Game
 var TempleScreen
+var PauseMenu
 var hud
 var camera
 var WaveController

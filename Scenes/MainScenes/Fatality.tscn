@@ -51,9 +51,11 @@ offset_left = 489.0
 offset_top = 358.0
 offset_right = 572.0
 offset_bottom = 396.0
+focus_neighbor_bottom = NodePath("../QUIT")
 texture_normal = ExtResource("5_t8nmy")
 texture_pressed = ExtResource("5_t8nmy")
 texture_hover = ExtResource("6_oyb56")
+texture_focused = ExtResource("6_oyb56")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -62,9 +64,11 @@ offset_left = 498.0
 offset_top = 413.0
 offset_right = 565.0
 offset_bottom = 441.0
+focus_neighbor_top = NodePath("../RETRY")
 texture_normal = ExtResource("7_gj62j")
 texture_pressed = ExtResource("7_gj62j")
 texture_hover = ExtResource("8_wonrh")
+texture_focused = ExtResource("8_wonrh")
 ignore_texture_size = true
 stretch_mode = 0
 
