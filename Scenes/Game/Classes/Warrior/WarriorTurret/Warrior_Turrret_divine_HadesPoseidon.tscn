@@ -388,7 +388,7 @@ sprite_frames = SubResource("SpriteFrames_4vgnd")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_4r0r2")
-animation = &"0"
+animation = &"202.5"
 autoplay = "0"
 
 [node name="Area2D" type="Area2D" parent="."]

@@ -56,7 +56,7 @@ var permissions = [
 var wood =0
 var stone =0
 var gold =0
-var dracma=0
+var dracma=1000000
 var dracmaBag=0
 
 #Farming

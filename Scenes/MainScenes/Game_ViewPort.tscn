@@ -44,10 +44,10 @@ position = Vector2(-3, -1.19209e-07)
 scale = Vector2(0.937318, 0.597639)
 
 [node name="FPS" type="Label" parent="HUD"]
-offset_left = 1003.93
-offset_top = 41.8313
-offset_right = 1102.93
-offset_bottom = 82.8313
+offset_left = 1002.86
+offset_top = 8.36625
+offset_right = 1101.86
+offset_bottom = 49.3662
 text = "FPS:60"
 label_settings = SubResource("LabelSettings_4aqw1")
 script = ExtResource("5_c2jos")
@@ -74,9 +74,11 @@ stream = ExtResource("10_dt5os")
 volume_db = -10.0
 
 [node name="LevelUp" parent="." instance=ExtResource("11_ik15d")]
+visible = false
 position = Vector2(30, 46)
 scale = Vector2(0.870214, 0.870214)
 
 [node name="Stats" parent="." instance=ExtResource("12_jcppn")]
+visible = false
 position = Vector2(856, 99)
 scale = Vector2(0.57, 1.09)

@@ -1,5 +1,9 @@
 extends Node2D
 
+func _ready():
+	Global.Stats=self
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
 func _process(delta):
 	$AllStats/maxHp/Value.text=str(Global.player.maxHp)
 	$AllStats/maxHpPercentBonus/Value.text=str(Global.player.maxHpPercentBonus)
@@ -14,3 +18,4 @@ func _process(delta):
 	$AllStats/maxDodge/Value.text=str(Global.player.maxDodge)
 	$AllStats/moveSpeed/Value.text=str(Global.player.moveSpeedPercentBonus)
 	$AllStats/luck/Value.text=str(Global.player.luck)
+	$AllStats/dracma/Value.text=str(Global.player.dracma)

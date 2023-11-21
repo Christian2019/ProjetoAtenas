@@ -79,6 +79,8 @@ func _process(_delta):
 	
 	changeSkills()
 	
+	if Input.is_action_just_pressed("ShowStatus"):
+		Global.Stats.visible=!Global.Stats.visible
 
 func changeSkills():
 	if (Input.is_action_just_pressed("ChangeSkillSelected")):

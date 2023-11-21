@@ -25,6 +25,8 @@ var ultimatecdBoxStartSizeY
 var waveController
 var actualWave
 
+#LevelUp
+var maxBarSizeX_levelUp
 
 func _ready():
 	Global.hud=self
@@ -40,6 +42,8 @@ func _ready():
 		
 	ultimatecdBoxYStartPosition= $Frontground/Ultimate/ColorRect.position.y
 	ultimatecdBoxStartSizeY=$Frontground/Ultimate/ColorRect.size.y
+	
+	maxBarSizeX_levelUp=$Frontground/LevelUp/ColorRect.size.x
 
 func _process(_delta):
 	getWave()
@@ -51,6 +55,13 @@ func _process(_delta):
 	dracma()
 	dracmaBag()
 	wave()
+	levelUp()
+	
+func levelUp():
+	$Frontground/LevelUp/Label.text="Level: "+str(Global.LevelUp.level)
+	$Frontground/LevelUp/Label2.text=str(Global.LevelUp.levelExperience)+"/"+str(Global.LevelUp.nextLevelExp)
+	$Frontground/LevelUp/ColorRect.size.x=int(maxBarSizeX_levelUp*(float(Global.LevelUp.nextLevelExp)-float(Global.LevelUp.levelExperience))/float(Global.LevelUp.nextLevelExp))
+	
 
 func dracma():
 	$Frontground/Dracma/Label2.text= str(Global.player.dracma)

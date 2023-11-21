@@ -8,6 +8,8 @@ var camera
 var WaveController
 var MathController
 var SoundController
+var Stats
+var LevelUp
 
 var startNode
 
