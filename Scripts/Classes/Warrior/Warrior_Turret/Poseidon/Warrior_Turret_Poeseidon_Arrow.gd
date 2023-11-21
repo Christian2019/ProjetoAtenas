@@ -16,6 +16,10 @@ func _process(delta):
 
 
 func _on_area_2d_area_entered(area):
+	if area.name=="BockedAreas":
+		queue_free()
+		return
+		
 	if area.get_parent().get_parent().name == "Enemies":
 		var enemy = area.get_parent()
 		

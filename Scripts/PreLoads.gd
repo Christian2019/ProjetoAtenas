@@ -1,4 +1,5 @@
 extends Node
+
 #Colectables
 var collectable = preload("res://Scenes/Game/Collectable.tscn")
 var dracma = preload("res://Scenes/Game/Dracma.tscn")

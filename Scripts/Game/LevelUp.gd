@@ -3,7 +3,7 @@ extends Node2D
 var level=0
 var levelExperience=50
 var nextLevelExp=100
-var upgrades=1
+var upgrades=0
 var selected=4
 var rerollPrice=1
 

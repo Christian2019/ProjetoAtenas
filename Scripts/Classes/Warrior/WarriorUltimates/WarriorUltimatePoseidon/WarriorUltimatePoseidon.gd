@@ -48,21 +48,18 @@ func qualityStatus():
 	elif ( quality=="legendary"):
 		damage=3000
 		tentaclesQuantity=5
-		$Sprite2D2.visible=true
-		$Sprite2D2.modulate.a=0
-		$AudioStreamPlayer.play()
 		createTentacles()
 	elif ( quality=="divine"):
 		damage=4500
 		tentaclesQuantity=10
-		$Sprite2D2.visible=true
-		$Sprite2D2.modulate.a=0
-		$AudioStreamPlayer.play()
 		createTentacles()
 		
 func createTentacles():
 	if (Global.player.turret.skill==null):
 		return
+	$Sprite2D2.visible=true
+	$Sprite2D2.modulate.a=0
+	$AudioStreamPlayer.play()
 	var kraken = Node2D.new()
 	Global.Game.get_node("Allies").add_child(kraken)
 	for i in range(0,tentaclesQuantity,1):
@@ -143,7 +140,8 @@ func destroy():
 		Global.Game.get_node("Night").visible=false
 
 	if (quality=="legendary" or quality=="divine"):
-		krakenAlly.queue_free()
+		if (krakenAlly!=null):
+			krakenAlly.queue_free()
 	queue_free()
 
 func knockBack():
