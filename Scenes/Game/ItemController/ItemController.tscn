@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://58abiep406e0"]
+
+[ext_resource type="Script" path="res://Scripts/Game/ItemController/ItemController.gd" id="1_38px7"]
+
+[node name="ItemController" type="Node2D"]
+script = ExtResource("1_38px7")
+
+[node name="Tier1" type="Node2D" parent="."]
+
+[node name="Tier2" type="Node2D" parent="."]
+
+[node name="Tier3" type="Node2D" parent="."]
+
+[node name="Tier4" type="Node2D" parent="."]

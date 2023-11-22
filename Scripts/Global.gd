@@ -10,6 +10,8 @@ var MathController
 var SoundController
 var Stats
 var LevelUp
+var ItemController
+var ItemHud
 
 var startNode
 
