@@ -65,21 +65,21 @@ func rand(slot, rng,t):
 
 
 	var t4=testChances(tier4,totalPossibilites,rng)
-	print("t4: ",t4.chance)
+	#print("t4: ",t4.chance)
 	if (t4.bol):
 		slot.quality=3
 		return
 	totalPossibilites-=t4.chance
 	
 	var t3=testChances(tier3,totalPossibilites,rng)
-	print("t3: ",t3.chance)
+	#print("t3: ",t3.chance)
 	if (t3.bol):
 		slot.quality=2
 		return
 	totalPossibilites-=t3.chance
 	
 	var t2=testChances(tier2,totalPossibilites,rng)
-	print("t2: ",t2.chance)
+	#print("t2: ",t2.chance)
 	if (t2.bol):
 		slot.quality=1
 		return
@@ -95,7 +95,7 @@ func testChances(tier,totalPossibilites,rng):
 			chance=tier.maxChance
 		chance= int(chance*totalPossibilites)
 		var r=rng.randi_range(0, totalPossibilites)
-		print("Random: ",r)
+		#print("Random: ",r)
 		if (r<chance):
 			return {"bol":true,"chance":chance}
 		else:

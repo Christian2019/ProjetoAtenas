@@ -85,5 +85,6 @@ position = Vector2(856, 99)
 scale = Vector2(0.57, 1.09)
 
 [node name="ItemHUD" parent="." instance=ExtResource("13_34svi")]
+visible = false
 position = Vector2(164, 117)
 scale = Vector2(0.795, 0.795)

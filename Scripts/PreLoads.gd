@@ -1,11 +1,11 @@
 extends Node
 
 #Colectables
-var collectable = preload("res://Scenes/Game/Collectable.tscn")
-var dracma = preload("res://Scenes/Game/Dracma.tscn")
-var item = preload("res://Scenes/Game/Item.tscn")
+var collectable = preload("res://Scenes/Game/Collectables/Collectable.tscn")
+var dracma = preload("res://Scenes/Game/Collectables/Dracma.tscn")
+var item = preload("res://Scenes/Game/ItemController/ItemGrab.tscn")
 
-var quadrant = preload("res://Scenes/Game/quadrant.tscn")
+var quadrant = preload("res://Scenes/Game/Mining/quadrant.tscn")
 
 #Center
 var tower = preload("res://Scenes/Game/Constructions/Defenses/Tower.tscn")
@@ -31,7 +31,7 @@ var x = preload("res://Scenes/Game/Enemies/X.tscn")
 
 #LabelDamage
 
-var labelDamage= preload("res://Scenes/Game/SpawnDamage.tscn")
+var labelDamage= preload("res://Scenes/Game/Math_controller/SpawnDamage.tscn")
 
 ##Normal
 

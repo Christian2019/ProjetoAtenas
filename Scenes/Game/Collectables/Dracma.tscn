@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://dnu8kyochjxbp"]
 
-[ext_resource type="Script" path="res://Scripts/Game/Dracma.gd" id="1_03fap"]
-[ext_resource type="Texture2D" uid="uid://cc8fk1tr2jb6k" path="res://Assets/Images/Resources/moeda.png" id="2_c0ifp"]
+[ext_resource type="Script" path="res://Scripts/Game/Dracma.gd" id="1_df8ci"]
+[ext_resource type="Texture2D" uid="uid://cc8fk1tr2jb6k" path="res://Assets/Images/Resources/moeda.png" id="2_d1r81"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0euwa"]
 
 [node name="Dracma" type="Node2D"]
-script = ExtResource("1_03fap")
+script = ExtResource("1_df8ci")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.566406, 0.542557)
-texture = ExtResource("2_c0ifp")
+texture = ExtResource("2_d1r81")
 
 [node name="Area2D" type="Area2D" parent="."]
 
