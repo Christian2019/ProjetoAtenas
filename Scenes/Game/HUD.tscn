@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ywre30ix5f7t" path="res://Assets/Images/Resources/wood.png" id="4_ujb4v"]
 [ext_resource type="Texture2D" uid="uid://dlwvyo6ejssc" path="res://Assets/Images/Resources/gold.png" id="5_dhfbp"]
 [ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="6_41dw3"]
-[ext_resource type="Texture2D" uid="uid://bx5egd2vqgwfq" path="res://Assets/Images/Resources/dracma.png" id="8_dexhj"]
+[ext_resource type="Texture2D" uid="uid://05u58rbkivwr" path="res://Assets/Images/Resources/64x64.png" id="8_a460o"]
 [ext_resource type="Texture2D" uid="uid://bbh8wdh8h0npk" path="res://Assets/Images/Resources/dracmaBag.png" id="9_y7mq3"]
 [ext_resource type="Texture2D" uid="uid://bsnfphv05rlds" path="res://Assets/Images/HUD/waves/wave1.png" id="10_ghb0x"]
 [ext_resource type="Texture2D" uid="uid://c8h4x6cdrpqpk" path="res://Assets/Images/HUD/waves/wave2.png" id="11_kusy4"]
@@ -534,9 +534,9 @@ text = "100"
 label_settings = SubResource("LabelSettings_22btt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Frontground/Dracma"]
-position = Vector2(90, 88)
-scale = Vector2(0.0532558, 0.0532558)
-texture = ExtResource("8_dexhj")
+position = Vector2(86, 87)
+scale = Vector2(0.474252, 0.474252)
+texture = ExtResource("8_a460o")
 
 [node name="DracmaBag" type="Node2D" parent="Frontground"]
 position = Vector2(658, -61)

@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.timerCreator("startGame",3,[],self)
+	Global.timerCreator("startGame",0.1,[],self)
 
 
 func startGame():

@@ -11,14 +11,15 @@ config_version=5
 [application]
 
 config/name="Projeto Atenas"
-run/main_scene="res://Scenes/MainScenes/Game_ViewPort.tscn"
+run/main_scene="res://Scenes/MainScenes/Menu.tscn"
 config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
 [autoload]
 
-Global="*res://Scripts/Global.gd"
-PreLoads="*res://Scripts/PreLoads.gd"
+Global="*res://Scripts/AutoLoads/Global.gd"
+PreLoads="*res://Scripts/AutoLoads/PreLoads.gd"
+OptionsController="*res://Scripts/AutoLoads/OptionsController.gd"
 
 [display]
 

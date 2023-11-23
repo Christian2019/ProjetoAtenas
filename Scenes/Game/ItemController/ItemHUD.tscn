@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bpfityhkpmxkm"]
 
-[ext_resource type="Script" path="res://Scripts/ItemHUD.gd" id="1_5x15q"]
+[ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/ItemHUD.gd" id="1_5x15q"]
 [ext_resource type="PackedScene" uid="uid://c20aa546elo80" path="res://Scenes/Game/ItemController/Itens/tier1/id001.tscn" id="1_8sdg1"]
 
 [node name="ItemHUD" type="Node2D"]
