@@ -1,3 +1,4 @@
+res://Assets/Images/Player/Animations/normal_armor_normal_sword
 res://Scripts
 res://Assets/Images
 res://Scripts/Game/ItemController/Itens/tier1
@@ -19,5 +20,4 @@ res://Assets/Images/Player/Turrets/turret_sprites/poseidon
 res://Assets/Images/Player/Attack1/Zeus/Lightning
 res://Assets/Images/Player/Turrets/turret_sprites/zeus
 res://Scripts/Classes/Warrior/Warrior_Turret/Zeus
-res://Scenes/Game/Classes/Warrior/WarriorUltimates
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas
