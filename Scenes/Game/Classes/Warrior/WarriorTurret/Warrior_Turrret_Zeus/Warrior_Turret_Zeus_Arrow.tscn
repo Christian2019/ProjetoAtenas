@@ -19,7 +19,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 20.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ramb3"]
@@ -34,7 +34,7 @@ position = Vector2(5.00001, 0)
 scale = Vector2(0.585938, 0.391439)
 sprite_frames = SubResource("SpriteFrames_60aqq")
 autoplay = "default"
-frame_progress = 0.395022
+frame_progress = 0.694122
 
 [node name="Area2D" type="Area2D" parent="."]
 
