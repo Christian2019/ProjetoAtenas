@@ -1,14 +1,7 @@
-[gd_scene load_steps=55 format=3 uid="uid://b18nigm5wn5ab"]
+[gd_scene load_steps=44 format=3 uid="uid://b18nigm5wn5ab"]
 
-[ext_resource type="Texture2D" uid="uid://ctfkvpvb3tfp6" path="res://Assets/Images/HUD/background.png" id="1_2qrhs"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/HUD.gd" id="1_60mgy"]
 [ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="2_owy1r"]
-[ext_resource type="Texture2D" uid="uid://cg4c8qydgkpag" path="res://Assets/Images/HUD/hearth2.png" id="3_07ur1"]
-[ext_resource type="Texture2D" uid="uid://ywre30ix5f7t" path="res://Assets/Images/Resources/wood.png" id="4_ujb4v"]
-[ext_resource type="Texture2D" uid="uid://dlwvyo6ejssc" path="res://Assets/Images/Resources/gold.png" id="5_dhfbp"]
-[ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="6_41dw3"]
-[ext_resource type="Texture2D" uid="uid://05u58rbkivwr" path="res://Assets/Images/Resources/64x64.png" id="8_a460o"]
-[ext_resource type="Texture2D" uid="uid://bbh8wdh8h0npk" path="res://Assets/Images/Resources/dracmaBag.png" id="9_y7mq3"]
 [ext_resource type="Texture2D" uid="uid://bsnfphv05rlds" path="res://Assets/Images/HUD/waves/wave1.png" id="10_ghb0x"]
 [ext_resource type="Texture2D" uid="uid://c8h4x6cdrpqpk" path="res://Assets/Images/HUD/waves/wave2.png" id="11_kusy4"]
 [ext_resource type="Texture2D" uid="uid://bys0o6q3rv1kr" path="res://Assets/Images/HUD/waves/wave3.png" id="12_1ax7q"]
@@ -41,10 +34,173 @@
 [ext_resource type="Texture2D" uid="uid://dc80dk8ypu453" path="res://Assets/Images/HUD/Ultimates/zeus&hadesUltHUD.png" id="38_dqj6i"]
 [ext_resource type="Texture2D" uid="uid://d30hsgavaxyb5" path="res://Assets/Images/HUD/SkillSelection/dashNoGodHud.png" id="39_753by"]
 [ext_resource type="Texture2D" uid="uid://bxyb1duvesmhk" path="res://Assets/Images/HUD/SkillSelection/attack2hudNoGod.png" id="39_yx88j"]
+[ext_resource type="Texture2D" uid="uid://k6210wyey2t4" path="res://Assets/Images/HUD/HUD GAME3.png" id="41_jfwtf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_22btt"]
 font = ExtResource("2_owy1r")
 font_size = 13
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mfcji"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_h8ujo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_afn4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_53nyw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0f3i7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_78yll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3g5ue"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_yx88j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4n63o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ecpgq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_753by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k2oq7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_35oqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bp4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5voq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pokj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqj6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_egsng")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g7qxd"]
 animations = [{
@@ -114,675 +270,352 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_yngw4"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("29_35oqo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_5voq0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_bp4i7")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_mfcji"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("32_h8ujo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_afn4i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_53nyw")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_0f3i7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("36_78yll")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_35oqo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_bp4i7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_5voq0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_pokj2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_dqj6i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_egsng")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ne6kt"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("32_h8ujo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_afn4i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_53nyw")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_3g5ue"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("39_yx88j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_35oqo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_bp4i7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_5voq0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_pokj2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_dqj6i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_egsng")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_nege3"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("32_h8ujo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_afn4i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_53nyw")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_4n63o"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_35oqo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_bp4i7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_5voq0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_pokj2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_dqj6i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_egsng")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_1laxi"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("32_h8ujo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_afn4i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_53nyw")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ecpgq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("39_753by")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_35oqo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_bp4i7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_5voq0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_pokj2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_dqj6i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_egsng")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_288fq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("32_h8ujo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_afn4i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_53nyw")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_k2oq7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_35oqo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_bp4i7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_5voq0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_pokj2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_dqj6i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_egsng")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="HUD" type="Node2D"]
 script = ExtResource("1_60mgy")
 
-[node name="Background" type="Node2D" parent="."]
+[node name="TimeLine" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="Background"]
-position = Vector2(55.1263, 47.4255)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Background"]
-position = Vector2(165, 48)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Background"]
-position = Vector2(275, 48)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D4" type="Sprite2D" parent="Background"]
-position = Vector2(384, 49)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D5" type="Sprite2D" parent="Background"]
-position = Vector2(493, 49)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D6" type="Sprite2D" parent="Background"]
-position = Vector2(602.874, 49.5745)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D7" type="Sprite2D" parent="Background"]
-position = Vector2(712.747, 50.149)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D8" type="Sprite2D" parent="Background"]
-position = Vector2(822.747, 50.149)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D9" type="Sprite2D" parent="Background"]
-position = Vector2(931.747, 51.149)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Sprite2D10" type="Sprite2D" parent="Background"]
-position = Vector2(1040.75, 51.149)
-scale = Vector2(0.562808, 0.557017)
-texture = ExtResource("1_2qrhs")
-
-[node name="Frontground" type="Node2D" parent="."]
-
-[node name="HP" type="Node2D" parent="Frontground"]
-position = Vector2(-40, -61)
-
-[node name="ColorRect" type="ColorRect" parent="Frontground/HP"]
-offset_left = 70.0
-offset_top = 99.0
-offset_right = 124.0
-offset_bottom = 149.0
-color = Color(0.882353, 0, 0.00392157, 1)
-
-[node name="Sprite2D" type="Sprite2D" parent="Frontground/HP"]
-position = Vector2(94.6389, 109.139)
-scale = Vector2(0.565866, 0.551601)
-texture = ExtResource("3_07ur1")
-
-[node name="Label" type="Label" parent="Frontground/HP"]
-offset_left = 62.0
-offset_top = 69.0
-offset_right = 249.0
-offset_bottom = 113.0
-text = "HP 100/100"
+[node name="Label" type="Label" parent="TimeLine"]
+offset_left = 516.0
+offset_top = 3.0
+offset_right = 623.0
+offset_bottom = 20.0
+text = "Time to Next Wave"
 label_settings = SubResource("LabelSettings_22btt")
-
-[node name="CenterPointHp" type="Node2D" parent="Frontground"]
-position = Vector2(71.4303, -61.0082)
-
-[node name="ColorRect" type="ColorRect" parent="Frontground/CenterPointHp"]
-offset_left = 70.0
-offset_top = 99.0
-offset_right = 124.0
-offset_bottom = 149.0
-color = Color(0.882353, 0, 0.00392157, 1)
-
-[node name="Sprite2D" type="Sprite2D" parent="Frontground/CenterPointHp"]
-position = Vector2(94.6389, 109.139)
-scale = Vector2(0.565866, 0.551601)
-texture = ExtResource("3_07ur1")
-
-[node name="Label" type="Label" parent="Frontground/CenterPointHp"]
-offset_left = 56.5697
-offset_top = 69.0082
-offset_right = 243.57
-offset_bottom = 113.008
-theme_override_font_sizes/font_size = 1
-text = "CHP 1000/1000"
-label_settings = SubResource("LabelSettings_22btt")
-
-[node name="Wood" type="Node2D" parent="Frontground"]
-position = Vector2(219.622, -61.0082)
-
-[node name="Label" type="Label" parent="Frontground/Wood"]
-offset_left = 32.378
-offset_top = 69.0082
-offset_right = 219.378
-offset_bottom = 113.008
-text = "Wood 100"
-label_settings = SubResource("LabelSettings_22btt")
-
-[node name="Sprite2D" type="Sprite2D" parent="Frontground/Wood"]
-position = Vector2(59, 123)
-scale = Vector2(3.3, 3.3)
-texture = ExtResource("4_ujb4v")
-
-[node name="Gold" type="Node2D" parent="Frontground"]
-position = Vector2(329.622, -61.0082)
-
-[node name="Label" type="Label" parent="Frontground/Gold"]
-offset_left = 38.378
-offset_top = 69.0082
-offset_right = 225.378
-offset_bottom = 113.008
-text = "Gold 100"
-label_settings = SubResource("LabelSettings_22btt")
-
-[node name="Sprite2D" type="Sprite2D" parent="Frontground/Gold"]
-position = Vector2(56, 126)
-scale = Vector2(3.3, 3.3)
-texture = ExtResource("5_dhfbp")
-
-[node name="Stone" type="Node2D" parent="Frontground"]
-position = Vector2(439.622, -61.0082)
-
-[node name="Label" type="Label" parent="Frontground/Stone"]
-offset_left = 29.378
-offset_top = 69.0082
-offset_right = 216.378
-offset_bottom = 113.008
-text = "stone 100"
-label_settings = SubResource("LabelSettings_22btt")
-
-[node name="Sprite2D" type="Sprite2D" parent="Frontground/Stone"]
-position = Vector2(56, 126)
-scale = Vector2(3.3, 3.3)
-texture = ExtResource("6_41dw3")
-
-[node name="Dracma" type="Node2D" parent="Frontground"]
-position = Vector2(548, -61)
-
-[node name="Label" type="Label" parent="Frontground/Dracma"]
-offset_left = 2.99999
-offset_top = 69.0
-offset_right = 190.0
-offset_bottom = 113.0
-text = "Dracma
-"
-label_settings = SubResource("LabelSettings_22btt")
-
-[node name="Label2" type="Label" parent="Frontground/Dracma"]
-offset_left = 25.0
-offset_top = 88.0
-offset_right = 212.0
-offset_bottom = 132.0
-text = "100"
-label_settings = SubResource("LabelSettings_22btt")
-
-[node name="Sprite2D" type="Sprite2D" parent="Frontground/Dracma"]
-position = Vector2(86, 87)
-scale = Vector2(0.474252, 0.474252)
-texture = ExtResource("8_a460o")
-
-[node name="DracmaBag" type="Node2D" parent="Frontground"]
-position = Vector2(658, -61)
-
-[node name="Label" type="Label" parent="Frontground/DracmaBag"]
-offset_left = -107.0
-offset_top = 113.0
-offset_right = 80.0003
-offset_bottom = 157.0
-text = "Dracma Bag"
-label_settings = SubResource("LabelSettings_22btt")
-
-[node name="Label2" type="Label" parent="Frontground/DracmaBag"]
-offset_left = -85.0
-offset_top = 137.0
-offset_right = 102.0
-offset_bottom = 181.0
-text = "100"
-label_settings = SubResource("LabelSettings_22btt")
-
-[node name="Sprite2D" type="Sprite2D" parent="Frontground/DracmaBag"]
-position = Vector2(-22, 137)
-scale = Vector2(0.108384, 0.108384)
-texture = ExtResource("9_y7mq3")
-
-[node name="Wave" type="Node2D" parent="Frontground"]
-position = Vector2(655, -61)
-
-[node name="Label" type="Label" parent="Frontground/Wave"]
-offset_left = 29.378
-offset_top = 69.0082
-offset_right = 216.378
-offset_bottom = 113.008
-text = "Wave
-"
-label_settings = SubResource("LabelSettings_22btt")
-
-[node name="Label2" type="Label" parent="Frontground/Wave"]
-offset_left = 69.0
-offset_top = 69.0
-offset_right = 256.0
-offset_bottom = 113.0
-text = "20
-"
-label_settings = SubResource("LabelSettings_22btt")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Frontground/Wave"]
-position = Vector2(61, 119)
-sprite_frames = SubResource("SpriteFrames_g7qxd")
-frame = 4
-
-[node name="Ultimate" type="Node2D" parent="Frontground"]
-position = Vector2(627, -61)
-
-[node name="Label" type="Label" parent="Frontground/Ultimate"]
-offset_left = 177.0
-offset_top = 64.0
-offset_right = 364.0
-offset_bottom = 108.0
-theme_override_font_sizes/font_size = 1
-text = "Ultimate"
-label_settings = SubResource("LabelSettings_22btt")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Frontground/Ultimate"]
-position = Vector2(171.5, 122)
-scale = Vector2(0.0622902, 0.106592)
-sprite_frames = SubResource("SpriteFrames_yngw4")
-frame = 2
-
-[node name="ColorRect" type="ColorRect" parent="Frontground/Ultimate"]
-offset_left = 153.0
-offset_top = 84.0
-offset_right = 190.0
-offset_bottom = 160.0
-color = Color(1, 1, 1, 0.678431)
-
-[node name="ColorRect2" type="ColorRect" parent="Frontground/Ultimate"]
-offset_left = 153.0
-offset_top = 84.0
-offset_right = 190.0
-offset_bottom = 160.0
-color = Color(1, 0, 0, 0.423529)
-
-[node name="TimeLine" type="Node2D" parent="Frontground"]
-
-[node name="Label" type="Label" parent="Frontground/TimeLine"]
-offset_left = 893.0
-offset_top = 8.0
-offset_right = 983.0
-offset_bottom = 52.0
-text = "Time to Next
- Wave"
-label_settings = SubResource("LabelSettings_22btt")
-
-[node name="Label2" type="Label" parent="Frontground/TimeLine"]
-offset_left = 916.0
-offset_top = 76.0
-offset_right = 956.0
-offset_bottom = 102.0
-text = "30s"
-
-[node name="ColorRect" type="ColorRect" parent="Frontground/TimeLine"]
-offset_left = 893.0
-offset_top = 46.0
-offset_right = 974.0
-offset_bottom = 68.0
-color = Color(1, 0, 0, 1)
-
-[node name="LevelUp" type="Node2D" parent="Frontground"]
-position = Vector2(113, 3)
-
-[node name="Label" type="Label" parent="Frontground/LevelUp"]
-offset_left = 910.0
-offset_top = 82.0
-offset_right = 951.0
-offset_bottom = 105.0
-theme_override_fonts/font = ExtResource("2_owy1r")
-theme_override_font_sizes/font_size = 11
-text = "Level: 99"
-
-[node name="ColorRect2" type="ColorRect" parent="Frontground/LevelUp"]
-offset_left = 883.0
-offset_top = 53.0
-offset_right = 978.0
-offset_bottom = 78.0
-color = Color(0.698039, 0.584314, 0.819608, 1)
-
-[node name="ColorRect" type="ColorRect" parent="Frontground/LevelUp"]
-offset_left = 883.0
-offset_top = 53.0
-offset_right = 978.0
-offset_bottom = 78.0
-color = Color(0.917647, 0.886275, 0.564706, 1)
-
-[node name="Label2" type="Label" parent="Frontground/LevelUp"]
-offset_left = 882.0
-offset_top = 52.0
-offset_right = 979.0
-offset_bottom = 81.0
-theme_override_fonts/font = ExtResource("2_owy1r")
-theme_override_font_sizes/font_size = 11
-text = "0/100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Skills" type="Node2D" parent="Frontground"]
+[node name="Label2" type="Label" parent="TimeLine"]
+offset_left = 548.0
+offset_top = 103.0
+offset_right = 588.0
+offset_bottom = 129.0
+theme_override_fonts/font = ExtResource("2_owy1r")
+theme_override_font_sizes/font_size = 13
+text = "30s"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="TimeLine"]
+offset_left = 541.0
+offset_top = 22.0
+offset_right = 593.0
+offset_bottom = 101.0
+color = Color(0.835294, 0.764706, 0.231373, 1)
+
+[node name="Skills" type="Node2D" parent="."]
 scale = Vector2(1.72, 1.72)
 
-[node name="Selected" type="ColorRect" parent="Frontground/Skills"]
-offset_left = 7.55814
-offset_top = 183.721
-offset_right = 25.5581
-offset_bottom = 211.721
+[node name="Selected" type="ColorRect" parent="Skills"]
+offset_left = 211.046
+offset_top = 555.233
+offset_right = 227.046
+offset_bottom = 575.233
 color = Color(0.00184107, 0.00184107, 0.00184107, 1)
 
-[node name="Label" type="Label" parent="Frontground/Skills/Selected"]
+[node name="Label" type="Label" parent="Skills/Selected"]
 layout_mode = 0
 offset_left = 3.48837
 offset_top = 1.74417
 offset_right = 43.4884
 offset_bottom = 27.7442
+theme_override_fonts/font = ExtResource("2_owy1r")
+theme_override_font_sizes/font_size = 18
 text = "0"
 
-[node name="Attack1_Border" type="ColorRect" parent="Frontground/Skills"]
-offset_left = 7.0
-offset_top = 214.0
-offset_right = 26.0
-offset_bottom = 247.0
+[node name="Attack1" type="Node2D" parent="Skills"]
+position = Vector2(256.395, 564.535)
 
-[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Attack1_Border"]
-position = Vector2(10.4419, 15.7732)
-scale = Vector2(0.0968992, 0.090032)
+[node name="Border" type="ColorRect" parent="Skills/Attack1"]
+offset_left = -14.0
+offset_top = -17.5
+offset_right = 14.0
+offset_bottom = 17.5
+
+[node name="Divine" type="AnimatedSprite2D" parent="Skills/Attack1"]
+position = Vector2(0.581299, -0.58131)
+scale = Vector2(0.128875, 0.0894454)
 sprite_frames = SubResource("SpriteFrames_mfcji")
 autoplay = "default"
-frame_progress = 0.939183
+frame_progress = 0.51503
 
-[node name="Attack1" type="AnimatedSprite2D" parent="Frontground/Skills/Attack1_Border"]
-position = Vector2(9.56977, 16)
+[node name="Attack1" type="AnimatedSprite2D" parent="Skills/Attack1"]
 scale = Vector2(0.0244695, 0.040404)
 sprite_frames = SubResource("SpriteFrames_0f3i7")
 frame = 1
 
-[node name="Attack2_Border" type="ColorRect" parent="Frontground/Skills"]
-offset_left = 8.0
-offset_top = 251.0
-offset_right = 27.0
-offset_bottom = 284.0
+[node name="Attack2" type="Node2D" parent="Skills"]
+position = Vector2(286.628, 564.535)
 
-[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Attack2_Border"]
-position = Vector2(10.0233, 15.8604)
-scale = Vector2(0.0968992, 0.090032)
-sprite_frames = SubResource("SpriteFrames_ne6kt")
+[node name="Border" type="ColorRect" parent="Skills/Attack2"]
+offset_left = -14.0
+offset_top = -17.5
+offset_right = 14.0
+offset_bottom = 17.5
+
+[node name="Divine" type="AnimatedSprite2D" parent="Skills/Attack2"]
+position = Vector2(0.709213, -0.581371)
+scale = Vector2(0.124407, 0.0894455)
+sprite_frames = SubResource("SpriteFrames_mfcji")
 autoplay = "default"
+frame_progress = 0.260363
 
-[node name="Attack2" type="AnimatedSprite2D" parent="Frontground/Skills/Attack2_Border"]
-position = Vector2(9.15116, 16.4462)
+[node name="Attack2" type="AnimatedSprite2D" parent="Skills/Attack2"]
 scale = Vector2(0.0225119, 0.0391523)
 sprite_frames = SubResource("SpriteFrames_3g5ue")
+frame = 1
 
-[node name="Turret" type="ColorRect" parent="Frontground/Skills"]
-offset_left = 7.55814
-offset_top = 287.209
-offset_right = 26.5581
-offset_bottom = 320.209
+[node name="Turret" type="Node2D" parent="Skills"]
+position = Vector2(317.442, 564.535)
 
-[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Turret"]
-position = Vector2(9.30232, 15.698)
-scale = Vector2(0.0968992, 0.090032)
-sprite_frames = SubResource("SpriteFrames_nege3")
+[node name="Border" type="ColorRect" parent="Skills/Turret"]
+offset_left = -14.0
+offset_top = -17.5
+offset_right = 14.0
+offset_bottom = 17.5
+
+[node name="Divine" type="AnimatedSprite2D" parent="Skills/Turret"]
+position = Vector2(1.12781, -0.581464)
+scale = Vector2(0.123654, 0.0894454)
+sprite_frames = SubResource("SpriteFrames_mfcji")
 autoplay = "default"
+frame_progress = 0.75954
 
-[node name="Turret" type="AnimatedSprite2D" parent="Frontground/Skills/Turret"]
-position = Vector2(9.30233, 16)
+[node name="Turret" type="AnimatedSprite2D" parent="Skills/Turret"]
 scale = Vector2(0.0254483, 0.040404)
 sprite_frames = SubResource("SpriteFrames_4n63o")
+frame = 1
 
-[node name="Dash" type="ColorRect" parent="Frontground/Skills"]
-offset_left = 7.55814
-offset_top = 323.209
-offset_right = 26.5581
-offset_bottom = 356.209
+[node name="Dash" type="Node2D" parent="Skills"]
+position = Vector2(347.674, 564.535)
 
-[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Dash"]
-position = Vector2(9.30232, 15.7446)
-scale = Vector2(0.0968992, 0.090032)
-sprite_frames = SubResource("SpriteFrames_1laxi")
+[node name="Border" type="ColorRect" parent="Skills/Dash"]
+offset_left = -14.0
+offset_top = -17.5
+offset_right = 14.0
+offset_bottom = 17.5
+
+[node name="Divine" type="AnimatedSprite2D" parent="Skills/Dash"]
+position = Vector2(0.83709, -0.436069)
+scale = Vector2(0.125, 0.0901443)
+sprite_frames = SubResource("SpriteFrames_mfcji")
 autoplay = "default"
+frame_progress = 0.866052
 
-[node name="Dash" type="AnimatedSprite2D" parent="Frontground/Skills/Dash"]
-position = Vector2(9.59302, 16)
+[node name="Dash" type="AnimatedSprite2D" parent="Skills/Dash"]
 scale = Vector2(0.0244695, 0.040404)
 sprite_frames = SubResource("SpriteFrames_ecpgq")
+frame = 1
 
-[node name="Ultimate" type="ColorRect" parent="Frontground/Skills"]
-offset_left = 8.13954
-offset_top = 359.302
-offset_right = 27.1395
-offset_bottom = 392.302
+[node name="Ultimate" type="Node2D" parent="Skills"]
+position = Vector2(379.651, 564.535)
 
-[node name="Divine" type="AnimatedSprite2D" parent="Frontground/Skills/Ultimate"]
-position = Vector2(9.88371, 15.698)
-scale = Vector2(0.0968992, 0.090032)
-sprite_frames = SubResource("SpriteFrames_288fq")
+[node name="Border" type="ColorRect" parent="Skills/Ultimate"]
+offset_left = -14.0
+offset_top = -17.5
+offset_right = 14.0
+offset_bottom = 17.5
+
+[node name="Divine" type="AnimatedSprite2D" parent="Skills/Ultimate"]
+position = Vector2(1.12786, -0.436036)
+scale = Vector2(0.126346, 0.0901441)
+sprite_frames = SubResource("SpriteFrames_mfcji")
 autoplay = "default"
+frame_progress = 0.845002
 
-[node name="Ultimate" type="AnimatedSprite2D" parent="Frontground/Skills/Ultimate"]
-position = Vector2(9.01163, 16.3648)
+[node name="Ultimate" type="AnimatedSprite2D" parent="Skills/Ultimate"]
 scale = Vector2(0.0225119, 0.0393806)
 sprite_frames = SubResource("SpriteFrames_k2oq7")
+frame = 1
+
+[node name="cd" type="Node2D" parent="Skills/Ultimate"]
+position = Vector2(-14, -17.5)
+
+[node name="ColorRect" type="ColorRect" parent="Skills/Ultimate/cd"]
+offset_right = 28.0
+offset_bottom = 35.0
+color = Color(1, 1, 1, 0.678431)
+
+[node name="ColorRect2" type="ColorRect" parent="Skills/Ultimate/cd"]
+offset_right = 28.0
+offset_bottom = 35.0
+color = Color(1, 0, 0, 0.423529)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(549.5, 505.5)
+scale = Vector2(0.559816, 0.838737)
+texture = ExtResource("41_jfwtf")
+
+[node name="HP" type="Node2D" parent="."]
+position = Vector2(-40, -61)
+
+[node name="ColorRect" type="ColorRect" parent="HP"]
+offset_left = 70.0
+offset_top = 763.0
+offset_right = 100.0
+offset_bottom = 1033.0
+color = Color(0.996078, 0, 0.00392157, 1)
+
+[node name="CurrentHp" type="Label" parent="HP"]
+offset_left = -8.0
+offset_top = 1031.0
+offset_right = 179.0
+offset_bottom = 1075.0
+text = "2222222"
+label_settings = SubResource("LabelSettings_22btt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxHp" type="Label" parent="HP"]
+offset_left = -8.0
+offset_top = 721.0
+offset_right = 179.0
+offset_bottom = 765.0
+text = "2222222"
+label_settings = SubResource("LabelSettings_22btt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterPointHp" type="Node2D" parent="."]
+position = Vector2(71.4303, -61.0082)
+
+[node name="ColorRect" type="ColorRect" parent="CenterPointHp"]
+offset_left = 965.0
+offset_top = 763.0
+offset_right = 995.0
+offset_bottom = 1033.0
+color = Color(0, 0.490196, 0.560784, 1)
+
+[node name="CurrentHp" type="Label" parent="CenterPointHp"]
+offset_left = 886.57
+offset_top = 1031.0
+offset_right = 1073.57
+offset_bottom = 1075.0
+text = "2222222"
+label_settings = SubResource("LabelSettings_22btt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxHp" type="Label" parent="CenterPointHp"]
+offset_left = 886.57
+offset_top = 721.0
+offset_right = 1073.57
+offset_bottom = 765.0
+text = "2222222"
+label_settings = SubResource("LabelSettings_22btt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Wood" type="Node2D" parent="."]
+position = Vector2(219.622, -61.0082)
+
+[node name="Label" type="Label" parent="Wood"]
+offset_left = -187.622
+offset_top = 115.008
+offset_right = -0.622009
+offset_bottom = 159.008
+text = "22222"
+label_settings = SubResource("LabelSettings_22btt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gold" type="Node2D" parent="."]
+position = Vector2(329.622, -61.0082)
+
+[node name="Label" type="Label" parent="Gold"]
+offset_left = -387.622
+offset_top = 115.008
+offset_right = -200.622
+offset_bottom = 159.008
+text = "22222"
+label_settings = SubResource("LabelSettings_22btt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stone" type="Node2D" parent="."]
+position = Vector2(439.622, -61.0082)
+
+[node name="Label" type="Label" parent="Stone"]
+offset_left = -453.622
+offset_top = 115.008
+offset_right = -266.622
+offset_bottom = 159.008
+text = "22222"
+label_settings = SubResource("LabelSettings_22btt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dracma" type="Node2D" parent="."]
+position = Vector2(595, -61)
+
+[node name="Label2" type="Label" parent="Dracma"]
+offset_left = -472.0
+offset_top = 115.008
+offset_right = -285.0
+offset_bottom = 159.008
+text = "22222"
+label_settings = SubResource("LabelSettings_22btt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DracmaBag" type="Node2D" parent="."]
+position = Vector2(614, -61)
+
+[node name="Label2" type="Label" parent="DracmaBag"]
+offset_left = -537.0
+offset_top = 115.008
+offset_right = -350.0
+offset_bottom = 159.008
+text = "22222"
+label_settings = SubResource("LabelSettings_22btt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Wave" type="Node2D" parent="."]
+position = Vector2(655, -61)
+
+[node name="Label" type="Label" parent="Wave"]
+offset_left = 363.0
+offset_top = 65.0
+offset_right = 428.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("2_owy1r")
+theme_override_font_sizes/font_size = 15
+text = "a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wave"]
+position = Vector2(397, 133)
+sprite_frames = SubResource("SpriteFrames_g7qxd")
+frame = 10
+
+[node name="LevelUp" type="Node2D" parent="."]
+position = Vector2(-136, 103)
+
+[node name="Label" type="Label" parent="LevelUp"]
+offset_left = 573.0
+offset_top = 787.0
+offset_right = 614.0
+offset_bottom = 810.0
+theme_override_fonts/font = ExtResource("2_owy1r")
+theme_override_font_sizes/font_size = 11
+text = "Level: 99"
+
+[node name="ColorRect" type="ColorRect" parent="LevelUp"]
+offset_left = 569.0
+offset_top = 805.0
+offset_right = 797.0
+offset_bottom = 826.0
+color = Color(0.517647, 0.470588, 0.00784314, 1)
+
+[node name="Label2" type="Label" parent="LevelUp"]
+offset_left = 700.0
+offset_top = 803.0
+offset_right = 797.0
+offset_bottom = 832.0
+theme_override_fonts/font = ExtResource("2_owy1r")
+theme_override_font_sizes/font_size = 11
+text = "0/100"
+horizontal_alignment = 2
+vertical_alignment = 1

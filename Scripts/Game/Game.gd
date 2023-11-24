@@ -87,7 +87,7 @@ func changeSkills():
 		selected+=1
 		if (selected>4):
 			selected=0
-		Global.hud.get_node("Frontground/Skills/Selected/Label").text=str(selected)
+		Global.hud.get_node("Skills/Selected/Label").text=str(selected)
 		
 	elif (Input.is_action_just_pressed("ChangeSkillGod")):
 		changeSkillGod()
@@ -114,46 +114,45 @@ func ChangeSkillQuality():
 func changePlayerSkillFunction():
 	changeSkillHud=false
 
-	
 	Global.player.attack1={"skill":attack1[skills[0].skill], "quality": qualitys[skills[0].quality]}
-	Global.hud.get_node("Frontground/Skills/Attack1_Border/Attack1").frame=skills[0].skill
-	changeColor("Frontground/Skills/Attack1_Border",skills[0].quality)
+	Global.hud.get_node("Skills/Attack1/Attack1").frame=skills[0].skill
+	changeColor("Skills/Attack1/Border",skills[0].quality)
 	if (skills[0].skill)>3:
-		Global.hud.get_node("Frontground/Skills/Attack1_Border/Divine").visible=true
+		Global.hud.get_node("Skills/Attack1/Divine").visible=true
 	else:
-		Global.hud.get_node("Frontground/Skills/Attack1_Border/Divine").visible=false
+		Global.hud.get_node("Skills/Attack1/Divine").visible=false
 
 	Global.player.attack2={"skill":attack2[skills[1].skill], "quality": qualitys[skills[1].quality]}
-	Global.hud.get_node("Frontground/Skills/Attack2_Border/Attack2").frame=skills[1].skill
-	changeColor("Frontground/Skills/Attack2_Border",skills[1].quality)
+	Global.hud.get_node("Skills/Attack2/Attack2").frame=skills[1].skill
+	changeColor("Skills/Attack2/Border",skills[1].quality)
 	if (skills[1].skill)>3:
-		Global.hud.get_node("Frontground/Skills/Attack2_Border/Divine").visible=true
+		Global.hud.get_node("Skills/Attack2/Divine").visible=true
 	else:
-		Global.hud.get_node("Frontground/Skills/Attack2_Border/Divine").visible=false
+		Global.hud.get_node("Skills/Attack2/Divine").visible=false
 	
 	Global.player.turret={"skill":turret[skills[2].skill], "quality": qualitys[skills[2].quality]}
-	Global.hud.get_node("Frontground/Skills/Turret/Turret").frame=skills[2].skill
-	changeColor("Frontground/Skills/Turret",skills[2].quality)
+	Global.hud.get_node("Skills/Turret/Turret").frame=skills[2].skill
+	changeColor("Skills/Turret/Border",skills[2].quality)
 	if (skills[2].skill)>3:
-		Global.hud.get_node("Frontground/Skills/Turret/Divine").visible=true
+		Global.hud.get_node("Skills/Turret/Divine").visible=true
 	else:
-		Global.hud.get_node("Frontground/Skills/Turret/Divine").visible=false
+		Global.hud.get_node("Skills/Turret/Divine").visible=false
 	
 	Global.player.dash={"skill":dash[skills[3].skill], "quality": qualitys[skills[3].quality]}
-	Global.hud.get_node("Frontground/Skills/Dash/Dash").frame=skills[3].skill
-	changeColor("Frontground/Skills/Dash",skills[3].quality)
+	Global.hud.get_node("Skills/Dash/Dash").frame=skills[3].skill
+	changeColor("Skills/Dash/Border",skills[3].quality)
 	if (skills[3].skill)>3:
-		Global.hud.get_node("Frontground/Skills/Dash/Divine").visible=true
+		Global.hud.get_node("Skills/Dash/Divine").visible=true
 	else:
-		Global.hud.get_node("Frontground/Skills/Dash/Divine").visible=false
+		Global.hud.get_node("Skills/Dash/Divine").visible=false
 	
 	Global.player.ultimate={"skill":ultimate[skills[4].skill], "quality": qualitys[skills[4].quality]}
-	Global.hud.get_node("Frontground/Skills/Ultimate/Ultimate").frame=skills[4].skill
-	changeColor("Frontground/Skills/Ultimate",skills[4].quality)
+	Global.hud.get_node("Skills/Ultimate/Ultimate").frame=skills[4].skill
+	changeColor("Skills/Ultimate/Border",skills[4].quality)
 	if (skills[4].skill)>3:
-		Global.hud.get_node("Frontground/Skills/Ultimate/Divine").visible=true
+		Global.hud.get_node("Skills/Ultimate/Divine").visible=true
 	else:
-		Global.hud.get_node("Frontground/Skills/Ultimate/Divine").visible=false
+		Global.hud.get_node("Skills/Ultimate/Divine").visible=false
 
 	
 func changeColor(path,q):

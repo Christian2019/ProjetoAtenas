@@ -1,13 +1,13 @@
+Node2D
+Label
+Sprite2D
 VideoStreamPlayer
 Timer
 SubViewport
 SubViewportContainer
 BoxContainer
-Node2D
 ColorRect
-Label
 AnimatedSprite2D
-Sprite2D
 CollisionShape2D
 Area2D
 AudioStreamPlayer

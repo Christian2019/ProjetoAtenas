@@ -1,12 +1,8 @@
 res://default_env.tres
 res://Scenes/Game/HUD.tscn
+res://Scripts/MainScenes/Game_ViewPort/HUD.gd
 res://Scenes/Game/ItemController/ItemController.tscn
-res://Scenes/MainScenes/Menu.tscn
-res://Scripts/MainScenes/Menu.gd
-res://Assets/Videos/SaveTube.io-Age of Mythology_ Extended Edition Trailer.ogv
-res://Assets/Videos/SaveTube.io-Brotato - Full Release Trailer.ogv
-res://Assets/Videos/SaveTube.io-Dome Keeper - Official Gameplay Trailer _ gamescom 2022.ogv
-res://Assets/Videos/SaveTube.io-Hades - Official Animated Trailer.ogv
-res://Scenes/MainScenes/Loading.tscn
-res://Scripts/MainScenes/Loading.gd
-res://Scripts/MainScenes/Menu/Menu.gd
+res://Scenes/MainScenes/Game_ViewPort.tscn
+res://Scenes/Game/Game.tscn
+res://Scripts/Game/Game.gd
+res://Scenes/Game/Constructions/center.tscn
