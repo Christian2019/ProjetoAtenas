@@ -1,8 +1,7 @@
 res://default_env.tres
-res://Scenes/Game/HUD.tscn
-res://Scripts/MainScenes/Game_ViewPort/HUD.gd
 res://Scenes/Game/ItemController/ItemController.tscn
 res://Scenes/MainScenes/Game_ViewPort.tscn
-res://Scenes/Game/Game.tscn
-res://Scripts/Game/Game.gd
+res://Scenes/Game/HUD.tscn
 res://Scenes/Game/Constructions/center.tscn
+res://Scripts/MainScenes/Loading.gd
+res://Scenes/MainScenes/Loading.tscn
