@@ -1,11 +1,15 @@
-[gd_scene load_steps=17 format=3 uid="uid://crh5gyee5b16b"]
+[gd_scene load_steps=21 format=3 uid="uid://crh5gyee5b16b"]
 
 [ext_resource type="Script" path="res://Scripts/PauseMenu.gd" id="1_bsqim"]
-[ext_resource type="Texture2D" uid="uid://df6eaeoci57q2" path="res://Assets/Images/HUD/Menu/PauseMenu/PauseMenu.png" id="1_qasa2"]
+[ext_resource type="Texture2D" uid="uid://bo4nsq0o845mo" path="res://Assets/Images/HUD/Menu/PauseMenu/Pause.png" id="2_jddml"]
 [ext_resource type="Texture2D" uid="uid://bgr2f52noip7b" path="res://Assets/Images/HUD/Menu/TelaInicial/OptionsBG.png" id="3_7d2j2"]
+[ext_resource type="Texture2D" uid="uid://dg02pnkhld74" path="res://Assets/Images/HUD/Menu/PauseMenu/ScrollsButton.png" id="4_gust3"]
 [ext_resource type="Texture2D" uid="uid://c850gnqtwl08x" path="res://Assets/Images/HUD/Menu/TelaInicial/Grabber.png" id="4_sutky"]
+[ext_resource type="Texture2D" uid="uid://dinul4r3l1gwy" path="res://Assets/Images/HUD/Menu/PauseMenu/ScrollsHover[.png" id="5_lxaaf"]
 [ext_resource type="Texture2D" uid="uid://y4cb32e15uex" path="res://Assets/Images/HUD/Menu/TelaInicial/BgSlider.png" id="5_sd2jm"]
 [ext_resource type="Texture2D" uid="uid://c6s416pvvh4yw" path="res://Assets/Images/HUD/Menu/TelaInicial/slider.png" id="6_52jp0"]
+[ext_resource type="Texture2D" uid="uid://xnvwm7ab6jap" path="res://Assets/Images/HUD/Menu/PauseMenu/ITENS.png" id="6_q7b71"]
+[ext_resource type="Texture2D" uid="uid://buikl6e85n8f3" path="res://Assets/Images/HUD/Menu/PauseMenu/ITENSHover.png" id="7_502vf"]
 [ext_resource type="FontFile" uid="uid://by6650mb11t63" path="res://Assets/Images/HUD/Menu/Zeus-Land.otf" id="7_yuhk3"]
 [ext_resource type="Texture2D" uid="uid://4jsvonk3necd" path="res://Assets/Images/HUD/Menu/TelaInicial/Checked.png" id="8_7q7cy"]
 [ext_resource type="Texture2D" uid="uid://miwca4hddcda" path="res://Assets/Images/HUD/Menu/TelaInicial/Selected.png" id="9_r76yi"]
@@ -51,37 +55,82 @@ offset_right = 1024.0
 offset_bottom = 603.0
 color = Color(0, 0, 0, 0.490196)
 
+[node name="Pause2" type="Sprite2D" parent="."]
+position = Vector2(512, 300)
+scale = Vector2(0.530021, 0.5)
+texture = ExtResource("2_jddml")
+
 [node name="Pause" type="Node2D" parent="."]
 
-[node name="PausedBG" type="Sprite2D" parent="Pause"]
-position = Vector2(530, 297)
-scale = Vector2(0.451764, 0.481085)
-texture = ExtResource("1_qasa2")
-
 [node name="Continue" type="Button" parent="Pause"]
-offset_left = 430.0
-offset_top = 254.0
-offset_right = 650.0
-offset_bottom = 288.0
+offset_left = 471.0
+offset_top = 173.0
+offset_right = 691.0
+offset_bottom = 229.0
 focus_neighbor_bottom = NodePath("../Options")
+theme_override_colors/font_color = Color(0.388235, 0.388235, 0.388235, 1)
+theme_override_colors/font_pressed_color = Color(0.341176, 0.341176, 0.341176, 1)
+theme_override_colors/font_hover_color = Color(0.341176, 0.341176, 0.341176, 1)
+theme_override_colors/font_focus_color = Color(0.341176, 0.341176, 0.341176, 1)
+theme_override_fonts/font = ExtResource("7_yuhk3")
+theme_override_font_sizes/font_size = 45
 text = "CONTINUE"
+flat = true
 
 [node name="Options" type="Button" parent="Pause"]
-offset_left = 430.0
-offset_top = 304.0
-offset_right = 650.0
-offset_bottom = 338.0
+offset_left = 471.0
+offset_top = 251.0
+offset_right = 691.0
+offset_bottom = 307.0
 focus_neighbor_top = NodePath("../Continue")
 focus_neighbor_bottom = NodePath("../Exit")
-text = "OPTIONS"
+theme_override_colors/font_color = Color(0.380392, 0.380392, 0.380392, 1)
+theme_override_colors/font_pressed_color = Color(0.341176, 0.341176, 0.341176, 1)
+theme_override_colors/font_hover_color = Color(0.341176, 0.341176, 0.341176, 1)
+theme_override_colors/font_focus_color = Color(0.341176, 0.341176, 0.341176, 1)
+theme_override_fonts/font = ExtResource("7_yuhk3")
+theme_override_font_sizes/font_size = 45
+text = "OPTIONs"
+flat = true
 
 [node name="Exit" type="Button" parent="Pause"]
-offset_left = 430.0
-offset_top = 352.0
-offset_right = 650.0
-offset_bottom = 386.0
+offset_left = 471.0
+offset_top = 336.0
+offset_right = 691.0
+offset_bottom = 392.0
 focus_neighbor_top = NodePath("../Options")
+theme_override_colors/font_color = Color(0.380392, 0.380392, 0.380392, 1)
+theme_override_colors/font_pressed_color = Color(0.341176, 0.341176, 0.341176, 1)
+theme_override_colors/font_hover_color = Color(0.341176, 0.341176, 0.341176, 1)
+theme_override_colors/font_focus_color = Color(0.341176, 0.341176, 0.341176, 1)
+theme_override_fonts/font = ExtResource("7_yuhk3")
+theme_override_font_sizes/font_size = 45
 text = "EXIT"
+flat = true
+
+[node name="ScrollsButton" type="TextureButton" parent="Pause"]
+offset_left = 38.0
+offset_top = 565.0
+offset_right = 142.0
+offset_bottom = 590.0
+texture_normal = ExtResource("4_gust3")
+texture_pressed = ExtResource("5_lxaaf")
+texture_hover = ExtResource("5_lxaaf")
+texture_focused = ExtResource("5_lxaaf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ItensButton" type="TextureButton" parent="Pause"]
+offset_left = 224.0
+offset_top = 564.0
+offset_right = 294.0
+offset_bottom = 589.0
+texture_normal = ExtResource("6_q7b71")
+texture_pressed = ExtResource("7_502vf")
+texture_hover = ExtResource("7_502vf")
+texture_focused = ExtResource("7_502vf")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="OptionsMenu" type="Node2D" parent="."]
 visible = false

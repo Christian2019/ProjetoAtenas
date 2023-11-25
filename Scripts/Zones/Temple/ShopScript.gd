@@ -291,38 +291,38 @@ func _on_nope_pressed():
 func _on_trade_20_stone_pressed():
 	if(Global.player.gold>0):
 		Global.player.gold-=1
-		Global.player.stone+=20
+		Global.player.stone+=25
 	pass # Replace with function body.
 
 func _on_trade_100_wood_pressed():
 	if(Global.player.gold>0):
 		Global.player.gold-=1
-		Global.player.wood+=100
+		Global.player.wood+=50
 	pass # Replace with function body.
 
 
 func _on_trade_1_gold_pressed():
-	if(Global.player.stone>=20):
-		Global.player.stone-=20
+	if(Global.player.stone>=25):
+		Global.player.stone-=25
 		Global.player.gold+=1
 	pass # Replace with function body.
 
 
 func _on_trade_50_wood_pressed():
-	if(Global.player.stone>0):
-		Global.player.stone-=1
-		Global.player.wood+=50
+	if(Global.player.stone>=5):
+		Global.player.stone-=5
+		Global.player.wood+=12
 	pass # Replace with function body.
 
 
 func _on_trade_wood_pressed():
-	if(Global.player.wood>=100):
-		Global.player.wood-=100
+	if(Global.player.wood>=50):
+		Global.player.wood-=50
 		Global.player.gold+=1
 	pass # Replace with function body.
  
 func _on_trade_wood_stone_pressed():
-	if(Global.player.wood>=50):
-		Global.player.wood-=50
+	if(Global.player.wood>=25):
+		Global.player.wood-=25
 		Global.player.stone+=1
 	pass 

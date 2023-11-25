@@ -1,15 +1,25 @@
-[gd_scene load_steps=7 format=3 uid="uid://kdg6o1rvx61b"]
+[gd_scene load_steps=8 format=3 uid="uid://kdg6o1rvx61b"]
 
 [ext_resource type="Script" path="res://Scripts/Instances/Collectable.gd" id="1_x44qc"]
-[ext_resource type="Texture2D" uid="uid://dbufixsjomww" path="res://Assets/Images/Resources/collectable/gold.png" id="1_xew8d"]
-[ext_resource type="Texture2D" uid="uid://dndlk5n0181fe" path="res://Assets/Images/Resources/collectable/stone.png" id="2_xmdqk"]
-[ext_resource type="Texture2D" uid="uid://ckthj0i3eeeaj" path="res://Assets/Images/Resources/collectable/wood.png" id="3_t4vjk"]
+[ext_resource type="Texture2D" uid="uid://chw8qsv3yt6rr" path="res://Assets/Images/Tiles/Ores.png" id="2_sx1af"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cr6y2"]
+atlas = ExtResource("2_sx1af")
+region = Rect2(124, 0, 62, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlfoh"]
+atlas = ExtResource("2_sx1af")
+region = Rect2(62, 0, 62, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oliut"]
+atlas = ExtResource("2_sx1af")
+region = Rect2(0, 0, 62, 56)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6j8pb"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_xew8d")
+"texture": SubResource("AtlasTexture_cr6y2")
 }],
 "loop": true,
 "name": &"gold",
@@ -17,7 +27,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_xmdqk")
+"texture": SubResource("AtlasTexture_xlfoh")
 }],
 "loop": true,
 "name": &"stone",
@@ -25,7 +35,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_t4vjk")
+"texture": SubResource("AtlasTexture_oliut")
 }],
 "loop": true,
 "name": &"wood",
@@ -38,8 +48,9 @@ animations = [{
 script = ExtResource("1_x44qc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.322581, 0.357143)
 sprite_frames = SubResource("SpriteFrames_6j8pb")
-animation = &"wood"
+animation = &"gold"
 
 [node name="Area2D" type="Area2D" parent="."]
 

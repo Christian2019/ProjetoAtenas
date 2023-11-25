@@ -1,34 +1,41 @@
-[gd_scene load_steps=5 format=3 uid="uid://do67rtn7yh00s"]
+[gd_scene load_steps=6 format=3 uid="uid://do67rtn7yh00s"]
 
-[ext_resource type="Texture2D" uid="uid://cffnqgwqs5cpf" path="res://Assets/Images/Enemies/id005/cupidProjectile.png" id="1_dnj62"]
 [ext_resource type="Script" path="res://Scripts/Instances/ArrowCircle.gd" id="1_rcaxg"]
+[ext_resource type="Texture2D" uid="uid://ib7dt0otxfnb" path="res://Scenes/Game/Enemies/Id005/FlechaEfeito.png" id="2_h15j2"]
+[ext_resource type="Texture2D" uid="uid://cwovlbxntu63g" path="res://Scenes/Game/Enemies/Id005/Flecha.png" id="3_alxuc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rokpi"]
+radius = 118.197
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_60aqq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_dnj62")
+"texture": ExtResource("3_alxuc")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_rokpi"]
-radius = 118.197
-
 [node name="ArrowCircle" type="Node2D"]
 scale = Vector2(0.2, 0.2)
 script = ExtResource("1_rcaxg")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(1.2365, 1.2365)
-sprite_frames = SubResource("SpriteFrames_60aqq")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 scale = Vector2(0.692893, 0.692893)
 shape = SubResource("CircleShape2D_rokpi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(5, 0)
+scale = Vector2(1.2365, 1.2365)
+sprite_frames = SubResource("SpriteFrames_60aqq")
+
+[node name="FlechaEfeito2" type="Sprite2D" parent="."]
+position = Vector2(0.249998, 2.5)
+scale = Vector2(1.40234, 1.44531)
+texture = ExtResource("2_h15j2")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

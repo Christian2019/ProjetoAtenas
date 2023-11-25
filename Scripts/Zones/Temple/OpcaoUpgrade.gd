@@ -16,37 +16,36 @@ func _on_texture_button_pressed():
 	
 #UPGRADE PLAYER
 	if(areaUpgrades==0):
-		if(whatUpgrades=="Attack"):
-			get_parent().get_parent().current_level_attack+=1 
-			print("ATTACK UPDATED");
+		if(whatUpgrades=="ataque"):
+			get_parent().get_parent().current_level_attack+=1  
 			Global.player.attack_Speed+=valor 
-		elif(whatUpgrades=="Defense"):
+		elif(whatUpgrades=="defesa"):
 			print("Defense UPDATED");
 			get_parent().get_parent().current_level_defense+=1 
 			Global.player.hp+=valor
 			Global.player.maxHp+=valor
 #UPGRADE DEFENDER POINT
 	if(areaUpgrades==1):
-		if(whatUpgrades=="Heal Delay"): 
-			get_parent().get_parent().current_level_MaxHP+=1 
-			print("Heal Delay UPDATED");
+		if(whatUpgrades=="sentinelas"): 
+			get_parent().get_parent().current_level_sentinelas+=1 
+			print("SENTRYS UPDATED");
 			pass
-		elif(whatUpgrades=="Max HP"): 
-			get_parent().get_parent().current_level_HealthDelay+=1 
-			print("Max HP UPDATED");
+		elif(whatUpgrades=="centro"): 
+			get_parent().get_parent().current_level_centro+=1 
+			print("CENTER UPDATED");
+			pass
+		elif(whatUpgrades=="piscina"): 
+			get_parent().get_parent().current_level_piscina+=1 
+			print("POOL UPDATED");
 			pass
 #UPGRADE MINERACAO
 	if(areaUpgrades==2):
-		if(whatUpgrades=="Power"): 
+		if(whatUpgrades=="forca"): 
 			get_parent().get_parent().current_level_Power+=1 
 			print("POWER UPDATED");
 			pass
-		elif(whatUpgrades=="Luck"): 
-			get_parent().get_parent().current_level_Luck+=1 
-			print("LUCK UPDATED");
-			pass
-		elif(whatUpgrades=="IDK"):
-			get_parent().get_parent().current_level_IDK+=1 
-			print("IDK UPDATED");
-			pass
+		elif(whatUpgrades=="bag"): 
+			get_parent().get_parent().current_level_Bag+=1 
+			print("BAG UPDATED");
+			pass 
 	pass # Replace with function body.

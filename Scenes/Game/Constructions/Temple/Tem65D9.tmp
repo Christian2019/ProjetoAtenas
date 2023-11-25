@@ -1,0 +1,1155 @@
+[gd_scene load_steps=70 format=3 uid="uid://bqduy4u8regjo"]
+
+[ext_resource type="Script" path="res://Scripts/Zones/Temple/MainPage.gd" id="1_n2wv5"]
+[ext_resource type="Texture2D" uid="uid://dlwvyo6ejssc" path="res://Assets/Images/Resources/gold.png" id="2_2mha2"]
+[ext_resource type="Script" path="res://Scripts/Zones/Temple/ShopScript.gd" id="2_m5fe6"]
+[ext_resource type="Texture2D" uid="uid://d3o00kxuo4h22" path="res://Assets/Images/HUD/Menu/Loja/ScrollsBG.png" id="3_0xrjq"]
+[ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="3_yti6q"]
+[ext_resource type="FontFile" uid="uid://by6650mb11t63" path="res://Assets/Images/HUD/Menu/Zeus-Land.otf" id="4_l0n46"]
+[ext_resource type="Texture2D" uid="uid://ywre30ix5f7t" path="res://Assets/Images/Resources/wood.png" id="4_rq8w3"]
+[ext_resource type="Script" path="res://Scripts/Zones/Temple/PersonagemLoja.gd" id="5_1cq4t"]
+[ext_resource type="Texture2D" uid="uid://cv1m856of8ntd" path="res://Assets/Images/HUD/Menu/Loja/GoldPlace.png" id="5_uoj13"]
+[ext_resource type="Script" path="res://Scripts/Zones/Temple/Mineração.gd" id="6_b0i47"]
+[ext_resource type="Texture2D" uid="uid://costnafwkrulb" path="res://Assets/Images/HUD/Menu/Loja/SilverPlace.png" id="6_m6do7"]
+[ext_resource type="PackedScene" uid="uid://12buwcnhifsh" path="res://Scenes/Game/Constructions/Temple/OpcaoUpgrade.tscn" id="7_ydes4"]
+[ext_resource type="Script" path="res://Scripts/Zones/Temple/Defender Point.gd" id="10_imkf7"]
+[ext_resource type="Texture2D" uid="uid://cuolto2djdbn6" path="res://Assets/Images/HUD/Menu/Loja/BackgroundUpgrade.png" id="11_lp50v"]
+[ext_resource type="Texture2D" uid="uid://c8uedu3u1iprj" path="res://Assets/Images/HUD/Menu/Loja/BarraMenu.png" id="12_wrag8"]
+[ext_resource type="Texture2D" uid="uid://chwrvs0tbfe6w" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Mineiracao/Level1.png" id="13_u8pyb"]
+[ext_resource type="Texture2D" uid="uid://cm4gdwyh5moli" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Mineiracao/Group 27.png" id="14_y7d4u"]
+[ext_resource type="Texture2D" uid="uid://rhlewolh2333" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Mineiracao/Group 35.png" id="15_sn0qt"]
+[ext_resource type="Texture2D" uid="uid://cuys4l4kq0nh2" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Mineiracao/Group 24.png" id="16_63fxb"]
+[ext_resource type="Texture2D" uid="uid://dmhmaanyeb3pi" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Mineiracao/Group 34.png" id="17_i6y15"]
+[ext_resource type="Texture2D" uid="uid://bmobxe3d0m8l4" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Mineiracao/Group 25.png" id="18_vdkuh"]
+[ext_resource type="Texture2D" uid="uid://cfn773mmr0u75" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Mineiracao/Group 26.png" id="19_fni2o"]
+[ext_resource type="Texture2D" uid="uid://bre03wixp2mxa" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Bag/Level1.png" id="20_i736o"]
+[ext_resource type="Texture2D" uid="uid://0krhv237uw5f" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Bag/Group 27.png" id="21_j5gij"]
+[ext_resource type="Texture2D" uid="uid://0fd1564ivhwq" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Bag/Group 33.png" id="22_d4qg2"]
+[ext_resource type="Texture2D" uid="uid://dj6nmf1m3f3i" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Bag/Group 24.png" id="23_hgliy"]
+[ext_resource type="Texture2D" uid="uid://qud37guvu8i8" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Bag/Group 34.png" id="24_c8jab"]
+[ext_resource type="Texture2D" uid="uid://cl4n385fydxku" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Bag/Group 25.png" id="25_gnafc"]
+[ext_resource type="Texture2D" uid="uid://cgibsoarljan3" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Bag/Group 35.png" id="26_1mvhd"]
+[ext_resource type="Texture2D" uid="uid://12y1urshsqad" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Bag/Group 26.png" id="27_52r08"]
+[ext_resource type="Texture2D" uid="uid://c1lvo03360ies" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Sword/BronzeSword.png" id="29_kj5ic"]
+[ext_resource type="Texture2D" uid="uid://0rqev1k3nc4" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Sword/BronzeDesativado.png" id="30_601cn"]
+[ext_resource type="Texture2D" uid="uid://cprs05ls2ccdg" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Sword/SilverSword.png" id="31_dstbv"]
+[ext_resource type="Texture2D" uid="uid://cliqkucmf383y" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Sword/SilverDesativado.png" id="32_4s5u5"]
+[ext_resource type="Texture2D" uid="uid://b3kaswp8s6ai3" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Sword/GoldSword.png" id="33_vhahw"]
+[ext_resource type="Texture2D" uid="uid://6utf8shl363i" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Sword/GoldDesativado.png" id="34_1yfjh"]
+[ext_resource type="Texture2D" uid="uid://c7b0ng1vnyyms" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Sword/FinalSword.png" id="35_3kwhs"]
+[ext_resource type="Texture2D" uid="uid://pmexyd5fdvt8" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Sword/FinalDesativado.png" id="36_lygfb"]
+[ext_resource type="Texture2D" uid="uid://djdvyofi1vk3r" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Abilities/SilverAbilities.png" id="37_iie34"]
+[ext_resource type="Texture2D" uid="uid://ckimwulh442qa" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Abilities/SilverDesativado.png" id="38_xhpp4"]
+[ext_resource type="Texture2D" uid="uid://bp065xj2l43eq" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Abilities/GoldAbilites.png" id="39_lh6bu"]
+[ext_resource type="Texture2D" uid="uid://dx7gjumu0kq6s" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Abilities/GoldDesativado.png" id="40_0bbi6"]
+[ext_resource type="Texture2D" uid="uid://dutmvvjo82fet" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Abilities/FinalAbilities.png" id="41_corjx"]
+[ext_resource type="Texture2D" uid="uid://mhnkfhok2b44" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Abilities/FinalDesativado.png" id="42_07mek"]
+[ext_resource type="Texture2D" uid="uid://cv8ldy7ml3jt4" path="res://Assets/Images/HUD/Menu/Loja/BackgroundUpgrade2.png" id="44_a3duy"]
+[ext_resource type="Texture2D" uid="uid://cp6e0ckcup300" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Torre/Group 50.png" id="45_6voh0"]
+[ext_resource type="Texture2D" uid="uid://bb6k5j16yp2at" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Torre/Group 27.png" id="46_lm8c7"]
+[ext_resource type="Texture2D" uid="uid://b2tr7gteesv1y" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Torre/Group 48.png" id="47_onmd5"]
+[ext_resource type="Texture2D" uid="uid://rycyswfok5vg" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Torre/Group 24.png" id="48_itqjg"]
+[ext_resource type="Texture2D" uid="uid://ci7fqe6tbvj30" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Torre/Group 49.png" id="49_6581t"]
+[ext_resource type="Texture2D" uid="uid://bu46lhs01bcme" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Torre/Group 25.png" id="50_vebq6"]
+[ext_resource type="Texture2D" uid="uid://maoc8uvim6yi" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Torre/Group 47.png" id="51_3sf1u"]
+[ext_resource type="Texture2D" uid="uid://doynnh7fpbof" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Torre/Group 26.png" id="52_vbyfq"]
+[ext_resource type="Texture2D" uid="uid://chvrs06naamlr" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Centro/UpgradeBasico.png" id="53_fyrnl"]
+[ext_resource type="Texture2D" uid="uid://c48cryi3covp5" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Centro/Group 27.png" id="54_guh1t"]
+[ext_resource type="Texture2D" uid="uid://ckcat5e32anfx" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Centro/UpgradeBom.png" id="55_en6mg"]
+[ext_resource type="Texture2D" uid="uid://b0dh8i3p18ctv" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Centro/Group 24.png" id="56_gjcv0"]
+[ext_resource type="Texture2D" uid="uid://cvqn2lhkpcd2v" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Centro/UpgradeOtimo.png" id="57_xjsgn"]
+[ext_resource type="Texture2D" uid="uid://ft6mtrl5n7e5" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Centro/Group 25.png" id="58_g5o4q"]
+[ext_resource type="Texture2D" uid="uid://brt23tn7qgapj" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Centro/UpgradeFinal.png" id="59_t6ey8"]
+[ext_resource type="Texture2D" uid="uid://b0kmclpemayqm" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Centro/Group 26.png" id="60_chr5c"]
+[ext_resource type="Texture2D" uid="uid://qh1a7w1p65yt" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Piscina/UpgradeBasico.png" id="61_7vlwj"]
+[ext_resource type="Texture2D" uid="uid://b13358bq50xga" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Piscina/DesativoBasico.png" id="62_eg5oi"]
+[ext_resource type="Texture2D" uid="uid://dsfqs7g0ddtr3" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Piscina/UpgradeBom.png" id="63_2xuco"]
+[ext_resource type="Texture2D" uid="uid://c3iemunvmtdv5" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Piscina/DesativoPrata.png" id="64_37pwe"]
+[ext_resource type="Texture2D" uid="uid://cjvp10vgpaomu" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Piscina/UpgradeOtimo.png" id="65_ejy87"]
+[ext_resource type="Texture2D" uid="uid://clax5xfamjwnk" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Piscina/DesativoOuro.png" id="66_4x5tq"]
+[ext_resource type="Texture2D" uid="uid://bjvno8ccudkkp" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Piscina/UpgradeFinal.png" id="67_enbe8"]
+[ext_resource type="Texture2D" uid="uid://d4i2faw2nmtrw" path="res://Assets/Images/HUD/Menu/Loja/ItensUpgrade/Piscina/DesativoFinal.png" id="68_htph6"]
+
+[node name="TempleScreen" type="Node2D"]
+script = ExtResource("1_n2wv5")
+
+[node name="BG" type="ColorRect" parent="."]
+offset_left = -7.0
+offset_top = -2.0
+offset_right = 1029.0
+offset_bottom = 604.0
+color = Color(0.337255, 0.337255, 0.337255, 1)
+
+[node name="SHOP" type="Node2D" parent="BG"]
+position = Vector2(1, 0)
+script = ExtResource("2_m5fe6")
+
+[node name="LOJA" type="ColorRect" parent="BG/SHOP"]
+offset_left = 5.0
+offset_top = 43.0
+offset_right = 466.0
+offset_bottom = 606.0
+color = Color(0.592157, 0.592157, 0.592157, 1)
+
+[node name="ScrollsBg" type="Sprite2D" parent="BG/SHOP"]
+position = Vector2(235.5, 321)
+scale = Vector2(0.748777, 0.501786)
+texture = ExtResource("3_0xrjq")
+
+[node name="ITEMS" type="ColorRect" parent="BG/SHOP"]
+offset_left = 887.0
+offset_top = 203.0
+offset_right = 1033.0
+offset_bottom = 605.0
+color = Color(0.640625, 0.640625, 0.640625, 1)
+
+[node name="Title" type="Label" parent="BG/SHOP/ITEMS"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 3.0
+offset_right = 106.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("4_l0n46")
+text = "Items"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BG/SHOP/ITEMS"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 35.0
+offset_right = 149.0
+offset_bottom = 392.0
+
+[node name="Itens" type="GridContainer" parent="BG/SHOP/ITEMS/ScrollContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="STATUS" type="ColorRect" parent="BG/SHOP"]
+offset_left = 882.0
+offset_top = 41.0
+offset_right = 1034.0
+offset_bottom = 203.0
+color = Color(0.486275, 0.462745, 0.466667, 1)
+
+[node name="Title" type="Label" parent="BG/SHOP/STATUS"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 5.0
+offset_right = 105.0
+offset_bottom = 31.0
+rotation = 0.00316421
+theme_override_fonts/font = ExtResource("4_l0n46")
+text = "stats"
+
+[node name="Label" type="Label" parent="BG/SHOP/STATUS"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 34.0
+offset_right = 156.0
+offset_bottom = 154.0
+theme_override_font_sizes/font_size = 10
+text = "Max HP:                            0
+Damage:                           0
+Speed:                               0
+Life Steal:                         0
+Engineering:                    0
+Range:                              0"
+
+[node name="MINHAS_COISAS___TROCA" type="Node2D" parent="BG/SHOP"]
+
+[node name="MINHASCOISAS" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
+offset_left = 465.0
+offset_top = 43.0
+offset_right = 892.0
+offset_bottom = 606.0
+color = Color(0.592157, 0.592157, 0.592157, 1)
+
+[node name="Attack_1" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
+layout_mode = 2
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 70.0
+offset_bottom = 29.0
+text = "Attack 1"
+
+[node name="Attack1" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
+layout_mode = 2
+offset_left = 61.0
+offset_top = 38.0
+offset_right = 361.0
+offset_bottom = 38.0
+theme_override_constants/h_separation = 120
+columns = 3
+
+[node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Ativo"]
+position = Vector2(44.5, 29.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("5_uoj13")
+
+[node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Ativo"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = -5.0
+offset_right = 102.0
+offset_bottom = 64.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
+
+[node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo1"]
+position = Vector2(50.5, 29.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
+[node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo1"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 108.0
+offset_bottom = 64.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo2"]
+position = Vector2(56.5, 29.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
+[node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo2"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -5.0
+offset_right = 114.0
+offset_bottom = 64.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="Attack_2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
+layout_mode = 2
+offset_left = 7.0
+offset_top = 118.0
+offset_right = 70.0
+offset_bottom = 144.0
+text = "Attack 2"
+
+[node name="Attack2" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
+layout_mode = 2
+offset_left = 61.0
+offset_top = 124.0
+offset_right = 301.0
+offset_bottom = 150.0
+theme_override_constants/h_separation = 120
+columns = 3
+
+[node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Ativo"]
+position = Vector2(44.5, 57.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("5_uoj13")
+
+[node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Ativo"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 23.0
+offset_right = 102.0
+offset_bottom = 92.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
+
+[node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo1"]
+position = Vector2(50.5, 57.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
+[node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo1"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 23.0
+offset_right = 108.0
+offset_bottom = 92.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo2"]
+position = Vector2(56.5, 57.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
+[node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo2"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 23.0
+offset_right = 114.0
+offset_bottom = 92.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="Torreta2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 226.0
+offset_right = 69.0
+offset_bottom = 252.0
+text = "Torreta"
+
+[node name="Torreta" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
+layout_mode = 2
+offset_left = 62.0
+offset_top = 211.0
+offset_right = 302.0
+offset_bottom = 211.0
+theme_override_constants/h_separation = 120
+columns = 3
+
+[node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Ativo"]
+position = Vector2(44.5, 77.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("5_uoj13")
+
+[node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Ativo"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 44.0
+offset_right = 102.0
+offset_bottom = 111.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
+
+[node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo1"]
+position = Vector2(50.5, 77.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
+[node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo1"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 43.0
+offset_right = 108.0
+offset_bottom = 112.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo2"]
+position = Vector2(56.5, 77.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
+[node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo2"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 43.0
+offset_right = 114.0
+offset_bottom = 112.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="Dash2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 326.0
+offset_right = 48.0
+offset_bottom = 352.0
+text = "Dash"
+
+[node name="Dash" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
+layout_mode = 2
+offset_left = 62.0
+offset_top = 405.0
+offset_right = 302.0
+offset_bottom = 405.0
+theme_override_constants/h_separation = 120
+columns = 3
+
+[node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Ativo"]
+position = Vector2(44.5, -16.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("5_uoj13")
+
+[node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Ativo"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = -50.0
+offset_right = 102.0
+offset_bottom = 17.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
+
+[node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Passivo1"]
+position = Vector2(51.5, -16.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
+[node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Passivo1"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = -51.0
+offset_right = 109.0
+offset_bottom = 18.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Passivo2"]
+position = Vector2(57.5, -16.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
+[node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Passivo2"]
+layout_mode = 0
+offset_top = -51.0
+offset_right = 115.0
+offset_bottom = 17.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="Ultimate2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 425.0
+offset_right = 72.0
+offset_bottom = 451.0
+text = "Ultimate"
+
+[node name="Ultimate" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
+layout_mode = 2
+offset_left = 61.0
+offset_top = 307.0
+offset_right = 301.0
+offset_bottom = 307.0
+theme_override_constants/h_separation = 120
+columns = 3
+
+[node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Ativo"]
+position = Vector2(45.5, 178.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("5_uoj13")
+
+[node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Ativo"]
+layout_mode = 0
+offset_left = -12.0
+offset_top = 145.0
+offset_right = 103.0
+offset_bottom = 212.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
+
+[node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Passivo1"]
+position = Vector2(52.5, 178.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
+[node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Passivo1"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 145.0
+offset_right = 110.0
+offset_bottom = 212.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate"]
+layout_mode = 2
+
+[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Passivo2"]
+position = Vector2(58.5, 178.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("6_m6do7")
+
+[node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Passivo2"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 145.0
+offset_right = 116.0
+offset_bottom = 212.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="TROCA" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
+visible = false
+offset_left = 469.0
+offset_top = 42.0
+offset_right = 875.0
+offset_bottom = 602.0
+color = Color(0.517647, 0.517647, 0.517647, 1)
+
+[node name="Gold trade" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 92.0
+offset_right = 390.0
+offset_bottom = 177.0
+color = Color(0.589844, 0.589844, 0.589844, 1)
+
+[node name="Trade20Stone" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 16.0
+offset_right = 267.0
+offset_bottom = 71.0
+text = "1 GOLD
+20 STONE"
+
+[node name="Trade100Wood" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade"]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 16.0
+offset_right = 366.0
+offset_bottom = 71.0
+text = "1 GOLD
+100 WOOD"
+
+[node name="Wood" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade"]
+position = Vector2(54, 44)
+scale = Vector2(3.78125, 3.84375)
+texture = ExtResource("2_2mha2")
+
+[node name="Stone Trade" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 213.0
+offset_right = 389.0
+offset_bottom = 298.0
+color = Color(0.589844, 0.589844, 0.589844, 1)
+
+[node name="Trade1Gold" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Stone Trade"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 16.0
+offset_right = 267.0
+offset_bottom = 71.0
+text = "20 STONE
+1 GOLD"
+
+[node name="Trade50Wood" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Stone Trade"]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 16.0
+offset_right = 366.0
+offset_bottom = 71.0
+text = "1 STONE
+50 WOOD"
+
+[node name="Wood" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Stone Trade"]
+position = Vector2(52.75, 42.75)
+scale = Vector2(3.53125, 3.59375)
+texture = ExtResource("3_yti6q")
+
+[node name="Wood Trade" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 341.0
+offset_right = 390.0
+offset_bottom = 423.0
+color = Color(0.589844, 0.589844, 0.589844, 1)
+
+[node name="Wood" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Wood Trade"]
+position = Vector2(54, 42)
+scale = Vector2(3.78125, 3.78125)
+texture = ExtResource("4_rq8w3")
+
+[node name="TradeWood" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Wood Trade"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 14.0
+offset_right = 268.0
+offset_bottom = 69.0
+text = "100 WOOD
+1 GOLD"
+
+[node name="TradeWoodStone" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Wood Trade"]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 14.0
+offset_right = 366.0
+offset_bottom = 69.0
+text = "50 WOOD
+1 STONE"
+
+[node name="MinhasCoisas" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
+offset_left = 471.0
+offset_top = 572.0
+offset_right = 627.0
+offset_bottom = 603.0
+theme_override_colors/font_color = Color(0.410156, 0.410156, 0.410156, 1)
+theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 20
+text = "Meus Pergaminhos"
+flat = true
+
+[node name="Troca" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
+offset_left = 639.0
+offset_top = 572.0
+offset_right = 693.0
+offset_bottom = 603.0
+theme_override_colors/font_color = Color(0.410156, 0.410156, 0.410156, 1)
+theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 20
+text = "Troca"
+flat = true
+
+[node name="Botoes" type="Node2D" parent="BG/SHOP"]
+
+[node name="SCROLL1" type="TextureButton" parent="BG/SHOP/Botoes"]
+offset_left = 130.0
+offset_top = 55.0
+offset_right = 340.0
+offset_bottom = 180.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="BG/SHOP/Botoes/SCROLL1"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 50.0
+offset_right = 125.0
+offset_bottom = 73.0
+
+[node name="SCROLL2" type="TextureButton" parent="BG/SHOP/Botoes"]
+offset_left = 130.0
+offset_top = 188.0
+offset_right = 340.0
+offset_bottom = 313.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="BG/SHOP/Botoes/SCROLL2"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 90.0
+offset_bottom = 73.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SCROLL3" type="TextureButton" parent="BG/SHOP/Botoes"]
+offset_left = 130.0
+offset_top = 320.0
+offset_right = 340.0
+offset_bottom = 445.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="BG/SHOP/Botoes/SCROLL3"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 90.0
+offset_bottom = 73.0
+
+[node name="SCROLL4" type="TextureButton" parent="BG/SHOP/Botoes"]
+offset_left = 130.0
+offset_top = 460.0
+offset_right = 340.0
+offset_bottom = 585.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="BG/SHOP/Botoes/SCROLL4"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 90.0
+offset_bottom = 73.0
+
+[node name="Warning" type="Button" parent="BG/SHOP"]
+visible = false
+offset_left = -43.0
+offset_top = -17.0
+offset_right = 1063.0
+offset_bottom = 674.0
+disabled = true
+
+[node name="Background" type="ColorRect" parent="BG/SHOP/Warning"]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 127.0
+offset_right = 861.0
+offset_bottom = 394.0
+color = Color(0, 0, 0, 0.403922)
+
+[node name="YES" type="Button" parent="BG/SHOP/Warning/Background"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 212.0
+offset_right = 270.0
+offset_bottom = 255.0
+text = "SIM"
+
+[node name="NOPE" type="Button" parent="BG/SHOP/Warning/Background"]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 212.0
+offset_right = 580.0
+offset_bottom = 255.0
+text = "NÃO"
+
+[node name="Label" type="Label" parent="BG/SHOP/Warning/Background"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 116.0
+offset_right = 473.0
+offset_bottom = 154.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Tem certeza que quer comprar este item?"
+
+[node name="Mineração" type="Node2D" parent="BG"]
+visible = false
+script = ExtResource("6_b0i47")
+
+[node name="BackgroundUpgrade" type="Sprite2D" parent="BG/Mineração"]
+position = Vector2(520, 323.5)
+scale = Vector2(0.530021, 0.504915)
+texture = ExtResource("11_lp50v")
+
+[node name="POWER" type="Node2D" parent="BG/Mineração"]
+position = Vector2(98, 25)
+
+[node name="Level1" parent="BG/Mineração/POWER" instance=ExtResource("7_ydes4")]
+position = Vector2(52, 131)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Power"
+valor = 2
+textura = ExtResource("13_u8pyb")
+textura_disable = ExtResource("14_y7d4u")
+
+[node name="Level2" parent="BG/Mineração/POWER" instance=ExtResource("7_ydes4")]
+position = Vector2(219, 131)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Power"
+valor = 2
+textura = ExtResource("15_sn0qt")
+textura_disable = ExtResource("16_63fxb")
+
+[node name="Level3" parent="BG/Mineração/POWER" instance=ExtResource("7_ydes4")]
+position = Vector2(381, 131)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Power"
+textura = ExtResource("17_i6y15")
+textura_disable = ExtResource("18_vdkuh")
+
+[node name="Level4" parent="BG/Mineração/POWER" instance=ExtResource("7_ydes4")]
+position = Vector2(541, 131)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Power"
+textura = ExtResource("15_sn0qt")
+textura_disable = ExtResource("19_fni2o")
+
+[node name="BAGSize" type="Node2D" parent="BG/Mineração"]
+position = Vector2(75, 7)
+
+[node name="Level1" parent="BG/Mineração/BAGSize" instance=ExtResource("7_ydes4")]
+position = Vector2(81, 383)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Luck"
+valor = 2
+textura = ExtResource("20_i736o")
+textura_disable = ExtResource("21_j5gij")
+
+[node name="Level2" parent="BG/Mineração/BAGSize" instance=ExtResource("7_ydes4")]
+position = Vector2(248, 383)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Luck"
+valor = 2
+textura = ExtResource("22_d4qg2")
+textura_disable = ExtResource("23_hgliy")
+
+[node name="Level3" parent="BG/Mineração/BAGSize" instance=ExtResource("7_ydes4")]
+position = Vector2(410, 383)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Luck"
+textura = ExtResource("24_c8jab")
+textura_disable = ExtResource("25_gnafc")
+
+[node name="Level4" parent="BG/Mineração/BAGSize" instance=ExtResource("7_ydes4")]
+position = Vector2(570, 383)
+scale = Vector2(2, 2)
+areaUpgrades = 2
+whatUpgrades = "Luck"
+textura = ExtResource("26_1mvhd")
+textura_disable = ExtResource("27_52r08")
+
+[node name="Personagem" type="Node2D" parent="BG"]
+script = ExtResource("5_1cq4t")
+
+[node name="BackgroundUpgrade" type="Sprite2D" parent="BG/Personagem"]
+position = Vector2(520, 323.5)
+scale = Vector2(0.530021, 0.504915)
+texture = ExtResource("11_lp50v")
+
+[node name="Level Attack" type="Node2D" parent="BG/Personagem"]
+position = Vector2(98, 25)
+
+[node name="Level1" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
+position = Vector2(64, 110)
+scale = Vector2(2, 2)
+whatUpgrades = "Attack"
+valor = 5
+textura = ExtResource("29_kj5ic")
+textura_disable = ExtResource("30_601cn")
+
+[node name="Level2" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
+position = Vector2(231, 110)
+scale = Vector2(2, 2)
+whatUpgrades = "Attack"
+valor = 10
+textura = ExtResource("31_dstbv")
+textura_disable = ExtResource("32_4s5u5")
+
+[node name="Level3" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
+position = Vector2(393, 110)
+scale = Vector2(2, 2)
+whatUpgrades = "Attack"
+valor = 15
+textura = ExtResource("33_vhahw")
+textura_disable = ExtResource("34_1yfjh")
+
+[node name="Level4" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
+position = Vector2(553, 110)
+scale = Vector2(2, 2)
+whatUpgrades = "Attack"
+valor = 20
+textura = ExtResource("35_3kwhs")
+textura_disable = ExtResource("36_lygfb")
+
+[node name="Level Defesa" type="Node2D" parent="BG/Personagem"]
+position = Vector2(75, 7)
+
+[node name="Level1" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
+position = Vector2(98, 367)
+scale = Vector2(2, 2)
+whatUpgrades = "Defense"
+valor = 5
+textura = ExtResource("37_iie34")
+textura_disable = ExtResource("38_xhpp4")
+
+[node name="Level2" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
+position = Vector2(265, 367)
+scale = Vector2(2, 2)
+whatUpgrades = "Defense"
+valor = 10
+textura = ExtResource("37_iie34")
+textura_disable = ExtResource("38_xhpp4")
+
+[node name="Level3" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
+position = Vector2(427, 367)
+scale = Vector2(2, 2)
+whatUpgrades = "Defense"
+valor = 15
+textura = ExtResource("39_lh6bu")
+textura_disable = ExtResource("40_0bbi6")
+
+[node name="Level4" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
+position = Vector2(587, 367)
+scale = Vector2(2, 2)
+whatUpgrades = "Defense"
+valor = 20
+textura = ExtResource("41_corjx")
+textura_disable = ExtResource("42_07mek")
+
+[node name="Warning2" type="Button" parent="BG/Personagem"]
+visible = false
+offset_left = -42.0
+offset_top = -17.0
+offset_right = 1064.0
+offset_bottom = 674.0
+disabled = true
+
+[node name="Background" type="ColorRect" parent="BG/Personagem/Warning2"]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 127.0
+offset_right = 861.0
+offset_bottom = 394.0
+color = Color(0, 0, 0, 0.403922)
+
+[node name="YES" type="Button" parent="BG/Personagem/Warning2/Background"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 212.0
+offset_right = 270.0
+offset_bottom = 255.0
+text = "SIM"
+
+[node name="NOPE" type="Button" parent="BG/Personagem/Warning2/Background"]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 212.0
+offset_right = 580.0
+offset_bottom = 255.0
+text = "NÃO"
+
+[node name="Label" type="Label" parent="BG/Personagem/Warning2/Background"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 116.0
+offset_right = 473.0
+offset_bottom = 154.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Tem certeza que quer evoluir esta habilidade?"
+
+[node name="Defender Point" type="Node2D" parent="BG"]
+visible = false
+script = ExtResource("10_imkf7")
+
+[node name="BackgroundUpgrade" type="Sprite2D" parent="BG/Defender Point"]
+position = Vector2(520, 323.5)
+scale = Vector2(0.530021, 0.504915)
+texture = ExtResource("44_a3duy")
+
+[node name="sentinelas" type="Node2D" parent="BG/Defender Point"]
+position = Vector2(163, -9)
+
+[node name="Level1" parent="BG/Defender Point/sentinelas" instance=ExtResource("7_ydes4")]
+position = Vector2(64, 110)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "Heal Delay"
+valor = 2
+textura = ExtResource("45_6voh0")
+textura_disable = ExtResource("46_lm8c7")
+
+[node name="Level2" parent="BG/Defender Point/sentinelas" instance=ExtResource("7_ydes4")]
+position = Vector2(231, 110)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "Heal Delay"
+valor = 2
+textura = ExtResource("47_onmd5")
+textura_disable = ExtResource("48_itqjg")
+
+[node name="Level3" parent="BG/Defender Point/sentinelas" instance=ExtResource("7_ydes4")]
+position = Vector2(393, 110)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "Heal Delay"
+textura = ExtResource("49_6581t")
+textura_disable = ExtResource("50_vebq6")
+
+[node name="Level4" parent="BG/Defender Point/sentinelas" instance=ExtResource("7_ydes4")]
+position = Vector2(553, 110)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "Heal Delay"
+textura = ExtResource("51_3sf1u")
+textura_disable = ExtResource("52_vbyfq")
+
+[node name="centro" type="Node2D" parent="BG/Defender Point"]
+position = Vector2(135, -103)
+
+[node name="Level1" parent="BG/Defender Point/centro" instance=ExtResource("7_ydes4")]
+position = Vector2(98, 367)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "Max HP"
+valor = 2
+textura = ExtResource("53_fyrnl")
+textura_disable = ExtResource("54_guh1t")
+
+[node name="Level2" parent="BG/Defender Point/centro" instance=ExtResource("7_ydes4")]
+position = Vector2(265, 367)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "Max HP"
+valor = 2
+textura = ExtResource("55_en6mg")
+textura_disable = ExtResource("56_gjcv0")
+
+[node name="Level3" parent="BG/Defender Point/centro" instance=ExtResource("7_ydes4")]
+position = Vector2(427, 367)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "Max HP"
+valor = 4
+textura = ExtResource("57_xjsgn")
+textura_disable = ExtResource("58_g5o4q")
+
+[node name="Level4" parent="BG/Defender Point/centro" instance=ExtResource("7_ydes4")]
+position = Vector2(587, 367)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "Max HP"
+valor = 5
+textura = ExtResource("59_t6ey8")
+textura_disable = ExtResource("60_chr5c")
+
+[node name="Piscina" type="Node2D" parent="BG/Defender Point"]
+position = Vector2(132, 60)
+
+[node name="Level1" parent="BG/Defender Point/Piscina" instance=ExtResource("7_ydes4")]
+position = Vector2(98, 367)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "Max HP"
+valor = 2
+textura = ExtResource("61_7vlwj")
+textura_disable = ExtResource("62_eg5oi")
+
+[node name="Level2" parent="BG/Defender Point/Piscina" instance=ExtResource("7_ydes4")]
+position = Vector2(265, 367)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "Max HP"
+valor = 2
+textura = ExtResource("63_2xuco")
+textura_disable = ExtResource("64_37pwe")
+
+[node name="Level3" parent="BG/Defender Point/Piscina" instance=ExtResource("7_ydes4")]
+position = Vector2(427, 367)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "Max HP"
+valor = 4
+textura = ExtResource("65_ejy87")
+textura_disable = ExtResource("66_4x5tq")
+
+[node name="Level4" parent="BG/Defender Point/Piscina" instance=ExtResource("7_ydes4")]
+position = Vector2(587, 367)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "Max HP"
+valor = 5
+textura = ExtResource("67_enbe8")
+textura_disable = ExtResource("68_htph6")
+
+[node name="MenuPrincipal" type="Sprite2D" parent="BG"]
+position = Vector2(519.5, 24.5)
+scale = Vector2(0.531574, 0.633803)
+texture = ExtResource("12_wrag8")
+
+[node name="Labels" type="Node2D" parent="BG/MenuPrincipal"]
+position = Vector2(-984.849, -43.3889)
+scale = Vector2(1.88488, 1.57778)
+
+[node name="Ouro" type="Label" parent="BG/MenuPrincipal/Labels"]
+offset_left = 16.9869
+offset_top = 13.0
+offset_right = 56.9869
+offset_bottom = 36.0
+
+[node name="Wood" type="Label" parent="BG/MenuPrincipal/Labels"]
+offset_left = 93.9869
+offset_top = 13.0
+offset_right = 133.987
+offset_bottom = 36.0
+
+[node name="Stone" type="Label" parent="BG/MenuPrincipal/Labels"]
+offset_left = 181.987
+offset_top = 13.0
+offset_right = 221.985
+offset_bottom = 36.0
+
+[node name="Abas" type="Node2D" parent="BG/MenuPrincipal"]
+position = Vector2(-984.849, -43.3889)
+scale = Vector2(1.88488, 1.57778)
+
+[node name="Shop" type="Button" parent="BG/MenuPrincipal/Abas"]
+offset_left = 302.43
+offset_top = 9.0
+offset_right = 384.43
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
+theme_override_colors/font_pressed_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
+theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "shop"
+flat = true
+
+[node name="Mineração" type="Button" parent="BG/MenuPrincipal/Abas"]
+offset_left = 389.43
+offset_top = 9.0
+offset_right = 502.43
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
+theme_override_colors/font_pressed_color = Color(0.227451, 0.227451, 0.227451, 1)
+theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
+theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "Mineração"
+flat = true
+
+[node name="Personagem" type="Button" parent="BG/MenuPrincipal/Abas"]
+offset_left = 507.03
+offset_top = 9.0
+offset_right = 640.03
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
+theme_override_colors/font_pressed_color = Color(0.227451, 0.227451, 0.227451, 1)
+theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
+theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "Personagem"
+flat = true
+
+[node name="Defender Point" type="Button" parent="BG/MenuPrincipal/Abas"]
+offset_left = 645.76
+offset_top = 9.0
+offset_right = 803.76
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
+theme_override_colors/font_pressed_color = Color(0.227451, 0.227451, 0.227451, 1)
+theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
+theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "Defender Point"
+flat = true
+
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade/Trade20Stone" to="BG/SHOP" method="_on_trade_20_stone_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Gold trade/Trade100Wood" to="BG/SHOP" method="_on_trade_100_wood_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Stone Trade/Trade1Gold" to="BG/SHOP" method="_on_trade_1_gold_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Stone Trade/Trade50Wood" to="BG/SHOP" method="_on_trade_50_wood_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Wood Trade/TradeWood" to="BG/SHOP" method="_on_trade_wood_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Wood Trade/TradeWoodStone" to="BG/SHOP" method="_on_trade_wood_stone_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/MinhasCoisas" to="BG/SHOP" method="_on_minhas_coisas_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/Troca" to="BG/SHOP" method="_on_troca_pressed"]
+[connection signal="pressed" from="BG/SHOP/Botoes/SCROLL1" to="BG/SHOP" method="_on_scroll_1_pressed"]
+[connection signal="pressed" from="BG/SHOP/Botoes/SCROLL2" to="BG/SHOP" method="_on_scroll_2_pressed"]
+[connection signal="pressed" from="BG/SHOP/Botoes/SCROLL3" to="BG/SHOP" method="_on_scroll_3_pressed"]
+[connection signal="pressed" from="BG/SHOP/Botoes/SCROLL4" to="BG/SHOP" method="_on_scroll_4_pressed"]
+[connection signal="pressed" from="BG/SHOP/Warning/Background/YES" to="BG/SHOP" method="_on_yes_pressed"]
+[connection signal="pressed" from="BG/SHOP/Warning/Background/NOPE" to="BG/SHOP" method="_on_nope_pressed"]
+[connection signal="pressed" from="BG/Personagem/Warning2/Background/YES" to="BG/Personagem" method="_on_yes_pressed"]
+[connection signal="pressed" from="BG/Personagem/Warning2/Background/NOPE" to="BG/Personagem" method="_on_nope_pressed"]
+[connection signal="pressed" from="BG/MenuPrincipal/Abas/Shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="BG/MenuPrincipal/Abas/Mineração" to="." method="_on_mineração_pressed"]
+[connection signal="pressed" from="BG/MenuPrincipal/Abas/Personagem" to="." method="_on_personagem_pressed"]
+[connection signal="pressed" from="BG/MenuPrincipal/Abas/Defender Point" to="." method="_on_defender_point_pressed"]
