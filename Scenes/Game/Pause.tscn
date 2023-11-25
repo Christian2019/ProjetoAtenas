@@ -1,13 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://crh5gyee5b16b"]
+[gd_scene load_steps=19 format=3 uid="uid://crh5gyee5b16b"]
 
+[ext_resource type="Script" path="res://Scripts/Game/Pause.gd" id="1_8p0jy"]
 [ext_resource type="Texture2D" uid="uid://dsrqih1k0sd7s" path="res://Assets/Images/Pause/PauseMenu.png" id="1_qasa2"]
 [ext_resource type="Texture2D" uid="uid://b00lvg3j6tocl" path="res://Assets/Images/Pause/OptionsBG.png" id="3_7d2j2"]
-[ext_resource type="Texture2D" uid="uid://cb6lxvnjxsdtf" path="res://Assets/Images/Pause/Grabber.png" id="4_sutky"]
-[ext_resource type="Texture2D" uid="uid://dpc3xa76lu7cp" path="res://Assets/Images/Pause/BgSlider.png" id="5_sd2jm"]
+[ext_resource type="Texture2D" uid="uid://debbanjs23csa" path="res://Assets/Images/Menu/Grabber.png" id="4_sutky"]
+[ext_resource type="Texture2D" uid="uid://dpr3ku2wrs4kf" path="res://Assets/Images/Menu/BgSlider.png" id="5_sd2jm"]
 [ext_resource type="Texture2D" uid="uid://dhcnqg0o2cxh6" path="res://Assets/Images/Pause/slider.png" id="6_52jp0"]
 [ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="7_yuhk3"]
-[ext_resource type="Texture2D" uid="uid://drd6vttc03fwn" path="res://Assets/Images/Pause/Checked.png" id="8_7q7cy"]
-[ext_resource type="Texture2D" uid="uid://cu57kikdlaho7" path="res://Assets/Images/Pause/Selected.png" id="9_r76yi"]
+[ext_resource type="Texture2D" uid="uid://i7ul76rytymp" path="res://Assets/Images/Menu/Checked.png" id="8_7q7cy"]
+[ext_resource type="PackedScene" uid="uid://bpfityhkpmxkm" path="res://Scenes/Game/ItemController/ItemHUD.tscn" id="9_fwftd"]
+[ext_resource type="Texture2D" uid="uid://dwnwq3t658syo" path="res://Assets/Images/Menu/Selected.png" id="9_r76yi"]
+[ext_resource type="PackedScene" uid="uid://dvgvp2thpqg12" path="res://Scenes/Game/LevelUp/Stats.tscn" id="11_0wmvh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2cib4"]
 content_margin_left = 10.0
@@ -42,7 +45,8 @@ texture = ExtResource("5_sd2jm")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hlnrg"]
 texture = ExtResource("5_sd2jm")
 
-[node name="PauseMenu" type="Node2D"]
+[node name="Pause" type="Node2D"]
+script = ExtResource("1_8p0jy")
 
 [node name="BG" type="ColorRect" parent="."]
 offset_right = 1024.0
@@ -50,6 +54,7 @@ offset_bottom = 603.0
 color = Color(0, 0, 0, 0.490196)
 
 [node name="Pause" type="Node2D" parent="."]
+position = Vector2(103, -9)
 
 [node name="PausedBG" type="Sprite2D" parent="Pause"]
 position = Vector2(530, 297)
@@ -176,6 +181,23 @@ offset_bottom = 33.0
 theme_override_fonts/font = ExtResource("7_yuhk3")
 theme_override_font_sizes/font_size = 25
 text = "Window size"
+
+[node name="ItensHud" type="Node2D" parent="."]
+
+[node name="Selected" type="ColorRect" parent="ItensHud"]
+visible = false
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 472.0
+offset_bottom = 540.0
+
+[node name="ItemHUD" parent="ItensHud" instance=ExtResource("9_fwftd")]
+position = Vector2(26, 28)
+scale = Vector2(0.665, 0.515)
+
+[node name="Stats" parent="." instance=ExtResource("11_0wmvh")]
+position = Vector2(799, 17)
+scale = Vector2(0.76, 1.315)
 
 [connection signal="pressed" from="Pause/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Pause/Options" to="." method="_on_options_pressed"]

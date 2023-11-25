@@ -45,7 +45,7 @@ script = ExtResource("1_rujxd")
 scale = Vector2(0.259, 0.259)
 sprite_frames = SubResource("SpriteFrames_wauou")
 autoplay = "default"
-frame_progress = 0.29227
+frame_progress = 0.552939
 
 [node name="Area2D" type="Area2D" parent="."]
 

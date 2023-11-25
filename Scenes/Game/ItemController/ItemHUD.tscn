@@ -7,18 +7,18 @@
 script = ExtResource("1_5x15q")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-offset_right = 867.0
-offset_bottom = 473.0
+offset_right = 655.0
+offset_bottom = 984.0
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(867, 473)
+size = Vector2i(655, 984)
 render_target_update_mode = 4
 
 [node name="ColorRect" type="ColorRect" parent="SubViewportContainer/SubViewport"]
-offset_right = 866.0
-offset_bottom = 472.0
+offset_right = 655.0
+offset_bottom = 984.0
 color = Color(0, 0, 0, 0.545098)
 
 [node name="Itens" type="Node2D" parent="SubViewportContainer/SubViewport"]

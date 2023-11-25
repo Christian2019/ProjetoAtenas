@@ -106,7 +106,6 @@ func testChances(tier,totalPossibilites,rng):
 func _process(delta):
 	levelUp()
 	if (Global.WaveController.mining and upgrades>0 and !visible):
-		Global.Stats.visible=true
 		get_tree().paused = true
 		visible=true
 		update()
@@ -213,7 +212,6 @@ func lvlupController():
 func decresseUpgrades():
 	upgrades-=1
 	if (upgrades==0):
-		Global.Stats.visible=false
 		get_tree().paused = false
 		visible=false
 		

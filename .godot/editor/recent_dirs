@@ -1,3 +1,8 @@
+res://Assets/Images/Constructions/Portal
+res://Scripts/Game
+res://Assets/Images/Itens/background
+res://Assets/Images/Itens/Items/Ares'_Shield
+res://Scripts/MainScenes
 res://Assets/Images/Loading
 res://Scripts
 res://Assets/Images/Resources
@@ -10,13 +15,9 @@ res://Assets/Images
 res://Scripts/Game/ItemController/Itens/tier1
 res://Scripts/Game/ItemController
 res://Assets/Fonts
-res://Scripts/Game
 res://Assets/Images/LevelUp
 res://Assets/Images/HUD/SkillSelection
 res://Scripts/Classes/Warrior/Warrior_Turret
 res://Assets/Images/Constructions/Teleporter_Sprites/Teleporter_Sprites
 res://Scripts/Classes/Warrior/Warrior_Turret/Hades
-res://Assets/Images/Player/Turrets/turretHades/purpleExplosion
-res://Scripts/Classes/Warrior/Warrior_Turret/Poseidon
-res://Assets/Images/Player/Attack1/Zeus/Lightning
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

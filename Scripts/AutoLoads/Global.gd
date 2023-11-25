@@ -12,6 +12,7 @@ var Stats
 var LevelUp
 var ItemController
 var ItemHud
+var Pause
 
 var startNode
 
