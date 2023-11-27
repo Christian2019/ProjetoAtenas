@@ -39,6 +39,7 @@ func _on_texture_button_pressed():
 	if(areaUpgrades==2):
 		if(whatUpgrades=="Power"): 
 			get_parent().get_parent().current_level_Power+=1 
+			Global.player.damage_mining = valor
 			print("POWER UPDATED");
 			pass
 		elif(whatUpgrades=="Luck"): 

@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/OpcaoUpgrade.gd" id="1_bau28"]
 
-
 [node name="OpcaoUpgrade" type="Node2D"]
 script = ExtResource("1_bau28")
 

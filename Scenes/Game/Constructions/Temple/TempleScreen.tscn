@@ -655,7 +655,7 @@ position = Vector2(219, 131)
 scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Power"
-valor = 2
+valor = 3
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
 
@@ -664,6 +664,7 @@ position = Vector2(381, 131)
 scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Power"
+valor = 4
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
 
@@ -672,6 +673,7 @@ position = Vector2(541, 131)
 scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Power"
+valor = 5
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
 

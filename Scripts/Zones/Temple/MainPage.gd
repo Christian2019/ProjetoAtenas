@@ -5,9 +5,8 @@ var pages;
 var buttons; 
  
 func _ready():
-	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+	process_mode = Node.PROCESS_MODE_WHEN_PAUSED 
 	Global.TempleScreen = self 
-
 	pages = [get_node("BG/SHOP"),get_node("BG/Mineração"),get_node("BG/Personagem"),get_node("BG/Defender Point")]
 	buttons = $BG/MenuPrincipal/Abas.get_children() 
 	get_node("BG/MenuPrincipal/Abas/Shop").disabled=true;  

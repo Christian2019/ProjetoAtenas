@@ -1,2 +1,13 @@
 res://default_env.tres
-res://Scenes/Game/Constructions/Portal.tscn
+res://Scenes/MainScenes/Game_ViewPort.tscn
+res://Scripts/Game/quadrant.gd
+res://Scenes/Game/Mining/quadrant.tscn
+res://Scenes/Game/player.tscn
+res://Scripts/Game/player.gd
+res://Scripts/Instances/Collectable.gd
+res://Scripts/Zones/Temple/Temple.gd
+res://Scenes/Game/Constructions/Temple/OpcaoUpgrade.tscn
+res://Scripts/Zones/Temple/OpcaoUpgrade.gd
+res://Scenes/Game/Constructions/Temple/TempleScreen.tscn
+res://Scripts/Zones/Temple/MainPage.gd
+res://Scripts/Game/matriz.gd

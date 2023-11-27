@@ -6,8 +6,13 @@ var tower
 
 var allowToConstruct=false
 
+#Numero de hits que deve ser dado antes de quebrar
+var life_till_break = 5
+ 
+	
 func _process(_delta):
 	permissions()
+	$BarraDeVida.scale = Vector2(life_till_break*2,2)  
 	
 
 func permissions():
