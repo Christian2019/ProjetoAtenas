@@ -62,18 +62,9 @@ var dracmaBag=0
 
 #Farming
 var carryingItem 
-
-#Level 1
-var damage_mining = 1.0
-
-#Level 2
-#var damage_mining = 1.25
-
-#Level 3
-#var damage_mining = 2.5
-
-#Level 4
-#var damage_mining = 5
+var itemsCarriage = []
+var MaxCarriage = 5
+var damage_mining = 5.0 
 
 var contactQuadrants = []
 var closerQuadrant 
@@ -119,7 +110,7 @@ func _process(__delta):
 	getCloserQuadrant()
 	
 	mining()
-	feedback()
+	feedback() 
 	
 	#contruction()
 
