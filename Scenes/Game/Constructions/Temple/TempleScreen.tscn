@@ -646,7 +646,7 @@ position = Vector2(52, 131)
 scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Power"
-valor = 2
+valor = 1.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
 
@@ -655,7 +655,7 @@ position = Vector2(219, 131)
 scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Power"
-valor = 3
+valor = 1.25
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
 
@@ -664,7 +664,7 @@ position = Vector2(381, 131)
 scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Power"
-valor = 4
+valor = 2.5
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
 
@@ -673,83 +673,52 @@ position = Vector2(541, 131)
 scale = Vector2(2, 2)
 areaUpgrades = 2
 whatUpgrades = "Power"
-valor = 5
+valor = 5.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
 
-[node name="LUCK" type="Node2D" parent="BG/Mineração"]
+[node name="BAG" type="Node2D" parent="BG/Mineração"]
 position = Vector2(-2, -124)
 
-[node name="Level1" parent="BG/Mineração/LUCK" instance=ExtResource("7_ydes4")]
+[node name="Level1" parent="BG/Mineração/BAG" instance=ExtResource("7_ydes4")]
 position = Vector2(81, 383)
 scale = Vector2(2, 2)
 areaUpgrades = 2
-whatUpgrades = "Luck"
-valor = 2
+whatUpgrades = "Bag"
+valor = 2.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+qtdDracma = 200
 
-[node name="Level2" parent="BG/Mineração/LUCK" instance=ExtResource("7_ydes4")]
+[node name="Level2" parent="BG/Mineração/BAG" instance=ExtResource("7_ydes4")]
 position = Vector2(248, 383)
 scale = Vector2(2, 2)
 areaUpgrades = 2
-whatUpgrades = "Luck"
-valor = 2
+whatUpgrades = "Bag"
+valor = 3.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+qtdDracma = 400
 
-[node name="Level3" parent="BG/Mineração/LUCK" instance=ExtResource("7_ydes4")]
+[node name="Level3" parent="BG/Mineração/BAG" instance=ExtResource("7_ydes4")]
 position = Vector2(410, 383)
 scale = Vector2(2, 2)
 areaUpgrades = 2
-whatUpgrades = "Luck"
+whatUpgrades = "Bag"
+valor = 4.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+qtdDracma = 600
 
-[node name="Level4" parent="BG/Mineração/LUCK" instance=ExtResource("7_ydes4")]
+[node name="Level4" parent="BG/Mineração/BAG" instance=ExtResource("7_ydes4")]
 position = Vector2(570, 383)
 scale = Vector2(2, 2)
 areaUpgrades = 2
-whatUpgrades = "Luck"
+whatUpgrades = "Bag"
+valor = 5.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
-
-[node name="IDK" type="Node2D" parent="BG/Mineração"]
-position = Vector2(3, 40)
-
-[node name="Level1" parent="BG/Mineração/IDK" instance=ExtResource("7_ydes4")]
-position = Vector2(81, 383)
-scale = Vector2(2, 2)
-areaUpgrades = 2
-whatUpgrades = "IDK"
-valor = 2
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
-
-[node name="Level2" parent="BG/Mineração/IDK" instance=ExtResource("7_ydes4")]
-position = Vector2(248, 383)
-scale = Vector2(2, 2)
-areaUpgrades = 2
-whatUpgrades = "IDK"
-valor = 2
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
-
-[node name="Level3" parent="BG/Mineração/IDK" instance=ExtResource("7_ydes4")]
-position = Vector2(410, 383)
-scale = Vector2(2, 2)
-areaUpgrades = 2
-whatUpgrades = "IDK"
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
-
-[node name="Level4" parent="BG/Mineração/IDK" instance=ExtResource("7_ydes4")]
-position = Vector2(570, 383)
-scale = Vector2(2, 2)
-areaUpgrades = 2
-whatUpgrades = "IDK"
-textura = ExtResource("8_l0soo")
-textura_disable = ExtResource("10_g6gdm")
+qtdDracma = 700
 
 [node name="Personagem" type="Node2D" parent="BG"]
 visible = false
@@ -790,33 +759,41 @@ position = Vector2(27, 8)
 position = Vector2(64, 110)
 scale = Vector2(2, 2)
 whatUpgrades = "Attack"
-valor = 5
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "wood"
+qtdOres = 10
 
 [node name="Level2" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
 position = Vector2(231, 110)
 scale = Vector2(2, 2)
 whatUpgrades = "Attack"
-valor = 10
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "stone"
+qtdOres = 10
 
 [node name="Level3" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
 position = Vector2(393, 110)
 scale = Vector2(2, 2)
 whatUpgrades = "Attack"
-valor = 15
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "gold"
+qtdOres = 10
 
 [node name="Level4" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
 position = Vector2(553, 110)
 scale = Vector2(2, 2)
 whatUpgrades = "Attack"
-valor = 20
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "gold"
+qtdOres = 20
 
 [node name="Level Defesa" type="Node2D" parent="BG/Personagem"]
 
@@ -824,33 +801,41 @@ textura_disable = ExtResource("10_g6gdm")
 position = Vector2(98, 367)
 scale = Vector2(2, 2)
 whatUpgrades = "Defense"
-valor = 5
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "wood"
+qtdOres = 10
 
 [node name="Level2" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
 position = Vector2(265, 367)
 scale = Vector2(2, 2)
 whatUpgrades = "Defense"
-valor = 10
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "stone"
+qtdOres = 10
 
 [node name="Level3" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
 position = Vector2(427, 367)
 scale = Vector2(2, 2)
 whatUpgrades = "Defense"
-valor = 15
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "gold"
+qtdOres = 10
 
 [node name="Level4" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
 position = Vector2(587, 367)
 scale = Vector2(2, 2)
 whatUpgrades = "Defense"
-valor = 20
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "gold"
+qtdOres = 20
 
 [node name="Warning2" type="Button" parent="BG/Personagem"]
 visible = false
@@ -917,90 +902,176 @@ text = "Status
 offset_left = 23.0
 offset_top = 60.0
 offset_right = 788.0
-offset_bottom = 318.0
+offset_bottom = 206.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
 
 [node name="Movimento" type="ColorRect" parent="BG/Defender Point/Movimento"]
 layout_mode = 0
-offset_top = 262.0
-offset_right = 765.0
-offset_bottom = 520.0
+offset_left = 1.0
+offset_top = 154.0
+offset_right = 766.0
+offset_bottom = 303.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
 
-[node name="MaxHP" type="Node2D" parent="BG/Defender Point"]
-position = Vector2(27, 8)
+[node name="Movimento" type="ColorRect" parent="BG/Defender Point/Movimento/Movimento"]
+layout_mode = 0
+offset_top = 159.0
+offset_right = 765.0
+offset_bottom = 308.0
+color = Color(0.592157, 0.592157, 0.592157, 1)
 
-[node name="Level1" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
+[node name="Piscina" type="Node2D" parent="BG/Defender Point"]
+position = Vector2(27, -30)
+
+[node name="Level1" parent="BG/Defender Point/Piscina" instance=ExtResource("7_ydes4")]
 position = Vector2(64, 110)
 scale = Vector2(2, 2)
 areaUpgrades = 1
 whatUpgrades = "Heal Delay"
-valor = 2
+valor = 1.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "wood"
+qtdOres = 10
 
-[node name="Level2" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
+[node name="Level2" parent="BG/Defender Point/Piscina" instance=ExtResource("7_ydes4")]
 position = Vector2(231, 110)
 scale = Vector2(2, 2)
 areaUpgrades = 1
 whatUpgrades = "Heal Delay"
-valor = 2
+valor = 2.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "stone"
+qtdOres = 10
 
-[node name="Level3" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
+[node name="Level3" parent="BG/Defender Point/Piscina" instance=ExtResource("7_ydes4")]
 position = Vector2(393, 110)
 scale = Vector2(2, 2)
 areaUpgrades = 1
 whatUpgrades = "Heal Delay"
+valor = 3.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "gold"
+qtdOres = 10
 
-[node name="Level4" parent="BG/Defender Point/MaxHP" instance=ExtResource("7_ydes4")]
+[node name="Level4" parent="BG/Defender Point/Piscina" instance=ExtResource("7_ydes4")]
 position = Vector2(553, 110)
 scale = Vector2(2, 2)
 areaUpgrades = 1
 whatUpgrades = "Heal Delay"
+valor = 4.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "gold"
+qtdOres = 20
 
-[node name="Health Delay" type="Node2D" parent="BG/Defender Point"]
+[node name="Sentinela" type="Node2D" parent="BG/Defender Point"]
+position = Vector2(-9, -136)
 
-[node name="Level1" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
+[node name="Level1" parent="BG/Defender Point/Sentinela" instance=ExtResource("7_ydes4")]
 position = Vector2(98, 367)
 scale = Vector2(2, 2)
 areaUpgrades = 1
-whatUpgrades = "Max HP"
-valor = 2
+whatUpgrades = "sentinela"
+valor = 1.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "wood"
+qtdOres = 10
 
-[node name="Level2" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
+[node name="Level2" parent="BG/Defender Point/Sentinela" instance=ExtResource("7_ydes4")]
 position = Vector2(265, 367)
 scale = Vector2(2, 2)
 areaUpgrades = 1
-whatUpgrades = "Max HP"
-valor = 2
+whatUpgrades = "sentinela"
+valor = 2.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "stone"
+qtdOres = 10
 
-[node name="Level3" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
+[node name="Level3" parent="BG/Defender Point/Sentinela" instance=ExtResource("7_ydes4")]
 position = Vector2(427, 367)
 scale = Vector2(2, 2)
 areaUpgrades = 1
-whatUpgrades = "Max HP"
-valor = 4
+whatUpgrades = "sentinela"
+valor = 3.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "gold"
+qtdOres = 10
 
-[node name="Level4" parent="BG/Defender Point/Health Delay" instance=ExtResource("7_ydes4")]
+[node name="Level4" parent="BG/Defender Point/Sentinela" instance=ExtResource("7_ydes4")]
 position = Vector2(587, 367)
 scale = Vector2(2, 2)
 areaUpgrades = 1
-whatUpgrades = "Max HP"
-valor = 5
+whatUpgrades = "sentinela"
+valor = 4.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "gold"
+qtdOres = 20
+
+[node name="Centro" type="Node2D" parent="BG/Defender Point"]
+position = Vector2(-6, 29)
+
+[node name="Level1" parent="BG/Defender Point/Centro" instance=ExtResource("7_ydes4")]
+position = Vector2(98, 367)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "centro"
+valor = 1.0
+textura = ExtResource("8_l0soo")
+textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "wood"
+qtdOres = 10
+
+[node name="Level2" parent="BG/Defender Point/Centro" instance=ExtResource("7_ydes4")]
+position = Vector2(265, 367)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "centro"
+valor = 2.0
+textura = ExtResource("8_l0soo")
+textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "stone"
+qtdOres = 10
+
+[node name="Level3" parent="BG/Defender Point/Centro" instance=ExtResource("7_ydes4")]
+position = Vector2(427, 367)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "centro"
+valor = 3.0
+textura = ExtResource("8_l0soo")
+textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "gold"
+qtdOres = 10
+
+[node name="Level4" parent="BG/Defender Point/Centro" instance=ExtResource("7_ydes4")]
+position = Vector2(587, 367)
+scale = Vector2(2, 2)
+areaUpgrades = 1
+whatUpgrades = "centro"
+valor = 4.0
+textura = ExtResource("8_l0soo")
+textura_disable = ExtResource("10_g6gdm")
+usaOres = true
+qualOre = "gold"
+qtdOres = 20
 
 [connection signal="pressed" from="BG/MenuPrincipal/Abas/Shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="BG/MenuPrincipal/Abas/Mineração" to="." method="_on_mineração_pressed"]

@@ -5,9 +5,10 @@ var areaPlayerEnter=false
 
 func _process(delta):
 	if areaPlayerEnter:
-		if Input.is_action_just_pressed("Select"):
-			get_tree().paused = true
+		if Input.is_action_just_pressed("Select"): 
 			Global.TempleScreen.visible=true
+			get_tree().paused = true
+			print(get_tree())
 			
 	
 

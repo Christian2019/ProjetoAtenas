@@ -49,6 +49,7 @@ size = Vector2(8122, 1516.25)
 size = Vector2(5764.5, 1939.25)
 
 [node name="Game" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_mli3i")
 metadata/_edit_horizontal_guides_ = [2752.0]
 metadata/_edit_vertical_guides_ = [2560.0]
