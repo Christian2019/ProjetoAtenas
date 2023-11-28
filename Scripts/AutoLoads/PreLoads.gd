@@ -1,5 +1,14 @@
 extends Node
 
+##Itens
+#Tier1
+var itens_tier1=[
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id001.tscn")
+]
+#Tier2
+#Tier3
+#Tier4
+
 #Colectables
 var collectable = preload("res://Scenes/Game/Collectables/Collectable.tscn")
 var dracma = preload("res://Scenes/Game/Collectables/Dracma.tscn")

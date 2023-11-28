@@ -13,9 +13,15 @@ func _process(delta):
 	get_parent().waveTimer(self)
 	
 func waveBehavior():
-	spawn(1*60,1,PreLoads.targetDummy,false)
-	#spawn(1*60,150,PreLoads.id001,false)
-
+	#spawn(1*60,1,PreLoads.targetDummy,false)
+	spawn(1*60,1,PreLoads.id001,false)
+	spawn(1*60,1,PreLoads.id003,false)
+	spawn(1*60,1,PreLoads.id010,false)
+	spawn(1*60,1,PreLoads.id011,false)
+	spawn(1*60,1,PreLoads.id004,false)
+	spawn(1*60,1,PreLoads.id006,false)
+	spawn(1*60,1,PreLoads.id009,false)
+	spawn(1*60,1,PreLoads.id019,false)
 			
 
 func spawn(frame,quantity,enemy,goblin):

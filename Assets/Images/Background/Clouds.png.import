@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://is8hrnsafsgr"
-path="res://.godot/imported/00103.png-38742bcb0f0d06e54e5db4393066622d.ctex"
+uid="uid://ckjp0jtbuqlrf"
+path="res://.godot/imported/Clouds.png-2c79bec0738201d91bbe4652100258e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Constructions/Teleporter_Sprites/Teleporter_Sprites/00103.png"
-dest_files=["res://.godot/imported/00103.png-38742bcb0f0d06e54e5db4393066622d.ctex"]
+source_file="res://Assets/Images/Background/Clouds.png"
+dest_files=["res://.godot/imported/Clouds.png-2c79bec0738201d91bbe4652100258e7.ctex"]
 
 [params]
 

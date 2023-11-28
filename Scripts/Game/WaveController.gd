@@ -46,6 +46,7 @@ func clearWave():
 	clearChildren("Instances/X")
 	clearChildren("Allies")
 	clearChildren("Instances/Explosions")
+	clearChildren("Instances/Itens")
 	
 	Global.MathController.clearArrays()
 	

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb2jk2e8epco6"
-path="res://.godot/imported/0006.png-c7ff4bffcef0a58ac6f104fc7fc9014f.ctex"
+uid="uid://cde3dncd2wayg"
+path="res://.godot/imported/minotaur1.png-122f5c84ec1b5003a6d13d9aa5f94551.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Constructions/Teleporter_Sprites/Teleporter_Sprites/0006.png"
-dest_files=["res://.godot/imported/0006.png-c7ff4bffcef0a58ac6f104fc7fc9014f.ctex"]
+source_file="res://Assets/Images/Enemies/id004/minotaur1.png"
+dest_files=["res://.godot/imported/minotaur1.png-122f5c84ec1b5003a6d13d9aa5f94551.ctex"]
 
 [params]
 

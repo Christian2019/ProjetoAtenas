@@ -6,6 +6,7 @@ func _ready():
 
 func _process(delta):
 	if Global.player!=null:
+		Global.player.multiplierController()
 		$AllStats/maxHp/Value.text=str(Global.player.maxHp)
 		$AllStats/maxHpPercentBonus/Value.text=str(Global.player.maxHpPercentBonus)
 		$AllStats/hpRegeneration/Value.text=str(Global.player.hpRegeneration)

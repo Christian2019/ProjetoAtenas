@@ -2,7 +2,7 @@ extends Node2D
 
 var level=0
 var levelExperience=0
-var nextLevelExp=20.0
+var nextLevelExp=5.0
 var upgrades=0
 var selected=4
 var rerollPrice=1
@@ -254,7 +254,7 @@ func applyStatus():
 		Global.player.percentDamage+=slot.value
 			
 func levelUp():
-	if (levelExperience>nextLevelExp):
+	if (levelExperience>=nextLevelExp):
 		level+=1
 		levelExperience=0
 		nextLevelExp*=1.5

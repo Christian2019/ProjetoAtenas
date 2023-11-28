@@ -1,34 +1,53 @@
-[gd_scene load_steps=11 format=3 uid="uid://dumjr4t8822i1"]
+[gd_scene load_steps=12 format=3 uid="uid://dumjr4t8822i1"]
 
 [ext_resource type="Script" path="res://Scripts/Zones/Center/Portal.gd" id="1_rujxd"]
-[ext_resource type="Texture2D" uid="uid://cavlutosnlewl" path="res://Assets/Images/Constructions/Teleporter_Sprites/Teleporter_Sprites/0000.png" id="2_18fvh"]
+[ext_resource type="Texture2D" uid="uid://de28jmw6j0isv" path="res://Assets/Images/Constructions/TeleporterSpritesheet.png" id="2_2eapg"]
 [ext_resource type="AudioStream" uid="uid://dpgg7xpjip22f" path="res://Assets/Sounds/teleport.mp3" id="3_epklh"]
-[ext_resource type="Texture2D" uid="uid://dentvjkdqy5lh" path="res://Assets/Images/Constructions/Teleporter_Sprites/Teleporter_Sprites/0003.png" id="3_q7nf4"]
-[ext_resource type="Texture2D" uid="uid://cb2jk2e8epco6" path="res://Assets/Images/Constructions/Teleporter_Sprites/Teleporter_Sprites/0006.png" id="4_fk5sk"]
-[ext_resource type="Texture2D" uid="uid://cpmojsavvixx2" path="res://Assets/Images/Constructions/Teleporter_Sprites/Teleporter_Sprites/0010.png" id="5_teaps"]
-[ext_resource type="Texture2D" uid="uid://is8hrnsafsgr" path="res://Assets/Images/Constructions/Teleporter_Sprites/Teleporter_Sprites/00103.png" id="6_1fbc4"]
-[ext_resource type="Texture2D" uid="uid://bcfs1kou1vn3i" path="res://Assets/Images/Constructions/Teleporter_Sprites/Teleporter_Sprites/0104.png" id="7_wdgsd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udrfp"]
+atlas = ExtResource("2_2eapg")
+region = Rect2(0, 0, 472, 462)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssswo"]
+atlas = ExtResource("2_2eapg")
+region = Rect2(472, 0, 472, 462)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i58mr"]
+atlas = ExtResource("2_2eapg")
+region = Rect2(944, 0, 472, 462)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g62hg"]
+atlas = ExtResource("2_2eapg")
+region = Rect2(0, 462, 472, 462)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsril"]
+atlas = ExtResource("2_2eapg")
+region = Rect2(472, 462, 472, 462)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xdhd"]
+atlas = ExtResource("2_2eapg")
+region = Rect2(944, 462, 472, 462)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wauou"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_18fvh")
+"texture": SubResource("AtlasTexture_udrfp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_q7nf4")
+"texture": SubResource("AtlasTexture_ssswo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_fk5sk")
+"texture": SubResource("AtlasTexture_i58mr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_teaps")
+"texture": SubResource("AtlasTexture_g62hg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_1fbc4")
+"texture": SubResource("AtlasTexture_bsril")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_wdgsd")
+"texture": SubResource("AtlasTexture_0xdhd")
 }],
 "loop": true,
 "name": &"default",
@@ -45,7 +64,7 @@ script = ExtResource("1_rujxd")
 scale = Vector2(0.259, 0.259)
 sprite_frames = SubResource("SpriteFrames_wauou")
 autoplay = "default"
-frame_progress = 0.552939
+frame_progress = 0.188201
 
 [node name="Area2D" type="Area2D" parent="."]
 

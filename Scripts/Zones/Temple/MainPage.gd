@@ -16,7 +16,7 @@ func _process(delta):
 	get_node("BG/MenuPrincipal/Labels/Ouro").text=str("Gold: ",Global.player.gold)
 	get_node("BG/MenuPrincipal/Labels/Wood").text=str("Wood: ",Global.player.wood)
 	get_node("BG/MenuPrincipal/Labels/Stone").text= str("Stone: ",Global.player.stone) 
-	if Input.is_action_just_pressed("Exit"):
+	if Input.is_action_just_pressed("Exit") and visible:
 			get_tree().paused = false
 			visible=false
   

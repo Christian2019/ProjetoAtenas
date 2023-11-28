@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dentvjkdqy5lh"
-path="res://.godot/imported/0003.png-c37f02195f1d50cc7cbe5c038bcef959.ctex"
+uid="uid://lx5jm3tl7ax"
+path="res://.godot/imported/cyclop4.png-27dd709f43cab07098768c2c678303c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Constructions/Teleporter_Sprites/Teleporter_Sprites/0003.png"
-dest_files=["res://.godot/imported/0003.png-c37f02195f1d50cc7cbe5c038bcef959.ctex"]
+source_file="res://Assets/Images/Enemies/id011/cyclop4.png"
+dest_files=["res://.godot/imported/cyclop4.png-27dd709f43cab07098768c2c678303c5.ctex"]
 
 [params]
 

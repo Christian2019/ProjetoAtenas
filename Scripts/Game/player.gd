@@ -427,3 +427,7 @@ func _on_body_area_exited(area):
 func _on_animation_animation_looped():
 	if (animAttacking):
 		animAttacking=false
+
+
+func _on_timer_timeout():
+	return
