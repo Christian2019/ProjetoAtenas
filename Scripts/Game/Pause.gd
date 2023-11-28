@@ -7,7 +7,7 @@ func _ready():
 func _process(delta):
 	if visible and !get_tree().paused:
 		get_tree().paused = true
-	elif !visible and get_tree().paused:
+	elif !visible and !Global.TempleScreen.visible and get_tree().paused:
 		get_tree().paused = false
 	elif visible:
 		if Input.is_action_just_pressed("Pause"):

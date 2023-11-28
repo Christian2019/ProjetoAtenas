@@ -81,6 +81,7 @@ offset_bottom = 38.0
 text = "Defender Point"
 
 [node name="SHOP" type="Node2D" parent="BG"]
+visible = false
 position = Vector2(1, 0)
 script = ExtResource("2_m5fe6")
 
@@ -598,28 +599,20 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Tem certeza que quer comprar este item?"
 
 [node name="Mineração" type="Node2D" parent="BG"]
-visible = false
 script = ExtResource("6_b0i47")
 
 [node name="Movimento" type="ColorRect" parent="BG/Mineração"]
 offset_left = 23.0
 offset_top = 79.0
 offset_right = 788.0
-offset_bottom = 235.0
+offset_bottom = 302.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
 
 [node name="Movimento2" type="ColorRect" parent="BG/Mineração"]
-offset_left = 23.0
-offset_top = 240.0
-offset_right = 788.0
-offset_bottom = 396.0
-color = Color(0.592157, 0.592157, 0.592157, 1)
-
-[node name="Movimento3" type="ColorRect" parent="BG/Mineração"]
-offset_left = 23.0
-offset_top = 401.0
-offset_right = 788.0
-offset_bottom = 557.0
+offset_left = 18.0
+offset_top = 338.0
+offset_right = 783.0
+offset_bottom = 587.0
 color = Color(0.592157, 0.592157, 0.592157, 1)
 
 [node name="STATUS" type="ColorRect" parent="BG/Mineração"]
@@ -649,6 +642,7 @@ whatUpgrades = "Power"
 valor = 1.0
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+qtdDracma = 650
 
 [node name="Level2" parent="BG/Mineração/POWER" instance=ExtResource("7_ydes4")]
 position = Vector2(219, 131)
@@ -658,6 +652,7 @@ whatUpgrades = "Power"
 valor = 1.25
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+qtdOres = 750
 
 [node name="Level3" parent="BG/Mineração/POWER" instance=ExtResource("7_ydes4")]
 position = Vector2(381, 131)
@@ -667,6 +662,7 @@ whatUpgrades = "Power"
 valor = 2.5
 textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
+qtdOres = 1000
 
 [node name="Level4" parent="BG/Mineração/POWER" instance=ExtResource("7_ydes4")]
 position = Vector2(541, 131)
@@ -678,7 +674,7 @@ textura = ExtResource("8_l0soo")
 textura_disable = ExtResource("10_g6gdm")
 
 [node name="BAG" type="Node2D" parent="BG/Mineração"]
-position = Vector2(-2, -124)
+position = Vector2(5, 4)
 
 [node name="Level1" parent="BG/Mineração/BAG" instance=ExtResource("7_ydes4")]
 position = Vector2(81, 383)

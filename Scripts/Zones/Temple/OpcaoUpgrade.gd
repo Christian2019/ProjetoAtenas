@@ -34,93 +34,97 @@ func _on_texture_button_pressed():
 func upgradeCentro():
 	if(whatUpgrades=="centro"): 
 		if(usaOres and qualOre=="wood"):
-			if(Global.player.wood==qtdOres and get_parent().get_parent().current_level_centro == 0):
+			if(Global.player.wood>=qtdOres and get_parent().get_parent().current_level_centro == 0):
 				get_parent().get_parent().current_level_centro += 1
 				Global.player.wood -= qtdOres
 				
 		if(usaOres and qualOre=="stone"):
-			if(Global.player.wood==qtdOres and get_parent().get_parent().current_level_centro == 2):
+			if(Global.player.wood>=qtdOres and get_parent().get_parent().current_level_centro == 1):
 				get_parent().get_parent().current_level_centro += 1
 				Global.player.stone -= qtdOres
 		elif(usaOres and qualOre=="gold"):
 			match(get_parent().get_parent().current_level_centro):
+				2:
+					if(Global.player.gold >= qtdOres and Global.player.dracma>=qtdDracma):
+						get_parent().get_parent().current_level_centro+=1 
+						Global.player.gold-=qtdOres
+						pass
 				3:
-					if(Global.player.gold == qtdOres and Global.player.dracma==qtdDracma):
+					if(Global.player.gold>=qtdOres and Global.player.dracma>=qtdDracma ):
 						get_parent().get_parent().current_level_centro+=1 
 						Global.player.gold-=qtdOres
 						pass
-				4:
-					if(Global.player.gold==qtdOres and Global.player.dracma==qtdDracma ):
+				4: 
+					if(Global.player.gold>=qtdOres): 
 						get_parent().get_parent().current_level_centro+=1 
 						Global.player.gold-=qtdOres
-						pass
+						pass  
 						
 		pass
 	elif(whatUpgrades=="sentinela"): 
 		if(usaOres and qualOre=="wood"):
-			if(Global.player.wood==qtdOres and get_parent().get_parent().current_level_sentinelas == 1):
+			if(Global.player.wood>=qtdOres and get_parent().get_parent().current_level_sentinelas == 0):
 				get_parent().get_parent().current_level_sentinelas += 1
 				Global.player.wood -= qtdOres
 				
 		if(usaOres and qualOre=="stone"):
-			if(Global.player.wood==qtdOres and get_parent().get_parent().current_level_sentinelas == 1):
+			if(Global.player.wood>=qtdOres and get_parent().get_parent().current_level_sentinelas == 1):
 				get_parent().get_parent().current_level_sentinelas += 1
 				Global.player.stone -= qtdOres
 		elif(usaOres and qualOre=="gold"):
 			match(get_parent().get_parent().current_level_sentinelas):
 				2:
-					if(Global.player.gold == qtdOres and Global.player.dracma==qtdDracma ):
+					if(Global.player.gold >= qtdOres and Global.player.dracma>=qtdDracma ):
 						get_parent().get_parent().current_level_sentinelas+=1 
 						Global.player.gold-=qtdOres
 						pass
 				3:
-					if(Global.player.gold==qtdOres and Global.player.dracma==qtdDracma ):
+					if(Global.player.gold>=qtdOres and Global.player.dracma>=qtdDracma ):
 						get_parent().get_parent().current_level_sentinelas+=1 
 						Global.player.gold-=qtdOres
 						pass
 				4: 
-					if(Global.player.gold==qtdOres):
+					if(Global.player.gold>=qtdOres):
 						get_parent().get_parent().current_level_sentinelas+=1 
 						Global.player.gold-=qtdOres
 						pass  
 	elif(whatUpgrades=="piscina"): 
 		if(usaOres and qualOre=="wood"):
-			if(Global.player.wood==qtdOres and get_parent().get_parent().current_level_piscina == 1):
+			if(Global.player.wood>=qtdOres and get_parent().get_parent().current_level_piscina == 1):
 				get_parent().get_parent().current_level_piscina += 1
 				Global.player.wood -= qtdOres
 				
 		if(usaOres and qualOre=="stone"):
-			if(Global.player.wood==qtdOres and get_parent().get_parent().current_level_piscina == 1):
+			if(Global.player.wood>=qtdOres and get_parent().get_parent().current_level_piscina == 1):
 				get_parent().get_parent().current_level_piscina += 1
 				Global.player.stone -= qtdOres
 		elif(usaOres and qualOre=="gold"):
 			match(get_parent().get_parent().current_level_piscina):
 				2:
-					if(Global.player.gold == qtdOres and Global.player.dracma==qtdDracma ):
+					if(Global.player.gold >= qtdOres and Global.player.dracma>=qtdDracma ):
 						get_parent().get_parent().current_level_piscina+=1 
 						Global.player.gold-=qtdOres
 						pass
 				3:
-					if(Global.player.gold==qtdOres and Global.player.dracma==qtdDracma ):
+					if(Global.player.gold>=qtdOres and Global.player.dracma>=qtdDracma ):
 						get_parent().get_parent().current_level_piscina+=1 
 						Global.player.gold-=qtdOres
 						pass
 				4: 
-					if(Global.player.gold==qtdOres):
+					if(Global.player.gold>=qtdOres):
 						get_parent().get_parent().current_level_piscina+=1 
 						Global.player.gold-=qtdOres
 						pass 
 
-func upgradeMineracao():
+func upgradeMineracao(): 
 	if(whatUpgrades=="Power"):  
-		if(qtdDracma == Global.player.dracma):
-			print("POWER")
+		print()
+		if(qtdDracma <= Global.player.dracma): 
 			get_parent().get_parent().current_level_Power+=1 
 			Global.player.damage_mining = valor 
 			Global.player.dracma -= qtdDracma
 	elif(whatUpgrades=="Bag"):  
-		if(qtdDracma == Global.player.dracma):
-			print("Bag")
+		if(qtdDracma <= Global.player.dracma):
 			get_parent().get_parent().current_level_Bag+=1 
 			Global.player.MaxCarriage = valor   
 			Global.player.dracma -= qtdDracma
@@ -131,31 +135,31 @@ func upgradePersonagem():
 	#Verificar a ore que eu vou usar, e, se for a que eu quero, vejo a quantidade e adiciono o nivel
 	if(whatUpgrades=="Attack"):  
 		if(usaOres and qualOre=="wood"):
-			if(Global.player.wood == qtdOres and current_level_attack==0):
+			if(Global.player.wood >= qtdOres and current_level_attack==0):
 				get_parent().get_parent().current_level_attack+=1 
 				Global.player.baseDamage=valor
 				Global.player.wood-=qtdOres
 		elif(usaOres and qualOre=="stone"):
-			if(Global.player.stone == qtdOres and Global.player.dracma==qtdDracma and current_level_attack==1):
+			if(Global.player.stone >= qtdOres and Global.player.dracma>=qtdDracma and current_level_attack==1):
 				get_parent().get_parent().current_level_attack+=1 
 				Global.player.baseDamage=valor 
 				Global.player.stone-=qtdOres
 		elif(usaOres and qualOre=="gold"):
 			match(current_level_attack):
 				2:
-					if(Global.player.gold == qtdOres and Global.player.dracma==qtdDracma ):
+					if(Global.player.gold >= qtdOres and Global.player.dracma>=qtdDracma ):
 						get_parent().get_parent().current_level_attack+=1
 						Global.player.baseDamage=valor
 						Global.player.gold-=qtdOres
 						pass
 				3:
-					if(Global.player.gold==qtdOres and Global.player.dracma==qtdDracma ):
+					if(Global.player.gold>=qtdOres and Global.player.dracma>=qtdDracma ):
 						get_parent().get_parent().current_level_attack+=1
 						Global.player.baseDamage=valor
 						Global.player.gold-=qtdOres
 						pass
 				4: 
-					if(Global.player.gold==qtdOres):
+					if(Global.player.gold>=qtdOres):
 						get_parent().get_parent().current_level_attack+=1
 						Global.player.baseDamage=valor
 						Global.player.gold-=qtdOres
@@ -163,31 +167,31 @@ func upgradePersonagem():
 	if(whatUpgrades=="Defense"):  
 		var current_level_defense = get_parent().get_parent().current_level_defense
 		if(usaOres and qualOre=="wood"):
-			if(Global.player.wood == qtdOres and current_level_defense==0):
+			if(Global.player.wood >= qtdOres and current_level_defense==0):
 				get_parent().get_parent().current_level_defense+=1 
 				Global.player.armor=valor 
 				Global.player.wood-=qtdOres
 		elif(usaOres and qualOre=="stone"):
-			if(Global.player.stone == qtdOres and current_level_defense==1):
+			if(Global.player.stone >= qtdOres and current_level_defense==1):
 				get_parent().get_parent().current_level_defense+=1 
 				Global.player.armor=valor 
 				Global.player.stone-=qtdOres
 		elif(usaOres and qualOre=="gold"):
 			match(current_level_defense):
 				2:
-					if(Global.player.gold == qtdOres):
+					if(Global.player.gold >= qtdOres):
 						get_parent().get_parent().current_level_defense+=1
 						Global.player.armor=valor
 						Global.player.gold-=qtdOres
 						pass
 				3:
-					if(Global.player.gold==qtdOres):
+					if(Global.player.gold>=qtdOres):
 						get_parent().get_parent().current_level_defense+=1
 						Global.player.armor=valor
 						Global.player.gold-=qtdOres
 						pass
 				4: 
-					if(Global.player.gold==qtdOres):
+					if(Global.player.gold>=qtdOres):
 						get_parent().get_parent().current_level_defense+=1
 						Global.player.armor=valor
 						Global.player.gold-=qtdOres
