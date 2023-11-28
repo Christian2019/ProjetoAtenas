@@ -1,4 +1,11 @@
-res://Assets/Images/Constructions/Portal
+res://Assets/Images/Enemies/id019
+res://Assets/Images/Enemies/id009
+res://Assets/Images/Enemies/id006
+res://Assets/Images/Enemies/id004
+res://Assets/Images/Enemies/id011
+res://Assets/Images/Enemies/id010
+res://Assets/Images/Enemies/id003
+res://Assets/Images/Enemies/id001
 res://Scripts/Game
 res://Assets/Images/Itens/background
 res://Assets/Images/Itens/Items/Ares'_Shield
@@ -13,11 +20,4 @@ res://Assets/Images/Player/Attack2/Effects
 res://Assets/Images/Player/Animations/normal_armor_normal_sword
 res://Assets/Images
 res://Scripts/Game/ItemController/Itens/tier1
-res://Scripts/Game/ItemController
-res://Assets/Fonts
-res://Assets/Images/LevelUp
-res://Assets/Images/HUD/SkillSelection
-res://Scripts/Classes/Warrior/Warrior_Turret
-res://Assets/Images/Constructions/Teleporter_Sprites/Teleporter_Sprites
-res://Scripts/Classes/Warrior/Warrior_Turret/Hades
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

@@ -1,2 +1,12 @@
 res://default_env.tres
-res://Scenes/Game/Constructions/Portal.tscn
+res://Scenes/Game/HUD.tscn
+res://Scenes/MainScenes/Game_ViewPort.tscn
+res://Scenes/Game/player.tscn
+res://Scenes/Game/Enemies/Id001.tscn
+res://Scenes/Game/Enemies/Id003.tscn
+res://Scenes/Game/Enemies/Id010.tscn
+res://Scenes/Game/Enemies/Id011.tscn
+res://Scenes/Game/Enemies/Id004.tscn
+res://Scenes/Game/Enemies/Id006.tscn
+res://Scenes/Game/Enemies/Id009.tscn
+res://Scenes/Game/Enemies/Id019.tscn
