@@ -27,7 +27,7 @@ var baseMoveSpeed=5.0
 var move_Speed = baseMoveSpeed
 var moveSpeedPercentBonus=0
 
-var luck=0
+var luck=0.0
 var collect_radios=200
 
 #Controle do ultimo movimento, pode ser N,S,W,E,NE,NW,SE,SW. Usado para controle da direacao do ataque

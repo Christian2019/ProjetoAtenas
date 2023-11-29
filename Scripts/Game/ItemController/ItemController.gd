@@ -89,5 +89,33 @@ func updateItemBagScreen():
 		$ItemBagScreen/Recycle/UnSelected.visible=false
 		$ItemBagScreen/Take/UnSelected.visible=true
 
+func getRandomValue(quality):
+	var valueTotal=3
+	var wood
+	var stone
+	var gold
+	
+	if (quality==0):
+		valueTotal*=1
+	elif (quality==1):
+		valueTotal*=2
+	elif (quality==2):
+		valueTotal*=3
+	elif (quality==3):
+		valueTotal*=4
+	
+	var rng = RandomNumberGenerator.new()
+	
+	for i in range(0,valueTotal,1):
+		var x = rng.randi_range(0, 2)
+		if x==0:
+			wood+=1
+		elif x==1:
+			stone+=1
+		elif x==2:
+			gold+=1
+	
+	return {"wood":wood,"stone":stone,"gold":gold}
+
 func _on_timer_timeout():
 	print(itemBag.size())
