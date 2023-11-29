@@ -13,6 +13,9 @@ var LevelUp
 var ItemController
 var ItemHud
 var Pause
+var Center
+var Pool
+var Turret
 
 var startNode
 
