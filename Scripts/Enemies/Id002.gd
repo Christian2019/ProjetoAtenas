@@ -104,18 +104,7 @@ func hpBarController():
 	$HPBar/Green.size.x=hpBarWidth
 
 func die():
-	var rng = RandomNumberGenerator.new()
-	#var tier= rng.randi_range(0, 3)
-	var tier =0
-	var itens
-	if (tier==0):
-		itens=PreLoads.itens_tier1
-		
-	var item = itens[rng.randi_range(0, itens.size()-1)].instantiate()
-	item.global_position=global_position
-	item.get_node("Item").visible=false
-	Global.Game.get_node("Instances/Itens").add_child(item)
-
+	Global.ItemController.dropIten(0.2,0.1,0,self)
 	#Animacao de morte
 	call_deferred("queue_free")
 

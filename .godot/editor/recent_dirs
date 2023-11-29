@@ -1,3 +1,7 @@
+res://Scripts/Game/ItemController/Itens/tier4
+res://Scripts/Game/ItemController/Itens/tier3
+res://Scripts/Game/ItemController/Itens/tier2
+res://Scenes/Game/ItemController
 res://Scripts/Game/ItemController/Itens/tier1
 res://Assets/Images/Itens/Items/Zeus'_Thunder
 res://Assets/Images/Itens/Items/Warrior's_Sword
@@ -16,8 +20,4 @@ res://Scripts/MainScenes
 res://Assets/Images/Loading
 res://Scripts
 res://Assets/Images/Resources
-res://Assets/Images/Player/Ultimates/Poseidon/SpritesKraken
-res://Assets/Images/Player/Turrets/turretsSpritesheet
-res://Assets/Images/Player/Attack1/Effects
-res://Assets/Images/Player/Attack2/Effects
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

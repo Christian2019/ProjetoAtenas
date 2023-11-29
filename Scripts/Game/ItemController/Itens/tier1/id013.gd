@@ -8,21 +8,13 @@ var gold =0
 var quality=0
 var id="013"
 var itenGrabFrame=12
-var item_name="AtenasSpearGold"
-var descriptionPositive="+ 6% Crit"
-var descriptionNegative="- 3% Damage"
+var item_name="atenas spear gold"
+var descriptionPositive="+ 6% crit"
+var descriptionNegative="- 3% damage"
 
 func addFunction():
 	Global.player.percentCritDamage+=0.06
 	Global.player.percentDamage-=0.03
 
-func ready():
-	$item_name.text=item_name
-	$descriptionPositive.text=descriptionPositive
-	$descriptionNegative.text=descriptionNegative
-	$Quality.frame=quality
-	$ItemGrab.get_node("Itens").frame=itenGrabFrame
-	var resources=Global.ItemController.getRandomValue(quality)
-	wood=resources.wood
-	stone=resources.stone
-	gold=resources.gold
+func _ready():
+	Global.ItemController.itenReadyFunction(self)

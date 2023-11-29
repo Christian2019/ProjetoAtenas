@@ -20,7 +20,7 @@ var attack_Speed = 1.0
 
 var armor=0
 
-var dodge=0
+var dodge=0.0
 var maxDodge=70
 
 var baseMoveSpeed=5.0

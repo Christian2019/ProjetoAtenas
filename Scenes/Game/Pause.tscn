@@ -185,7 +185,6 @@ text = "Window size"
 [node name="ItensHud" type="Node2D" parent="."]
 
 [node name="Selected" type="ColorRect" parent="ItensHud"]
-visible = false
 offset_left = 18.0
 offset_top = 18.0
 offset_right = 472.0
@@ -193,7 +192,7 @@ offset_bottom = 540.0
 
 [node name="ItemHUD" parent="ItensHud" instance=ExtResource("9_fwftd")]
 position = Vector2(26, 28)
-scale = Vector2(0.665, 0.515)
+scale = Vector2(0.55, 0.51)
 
 [node name="Stats" parent="." instance=ExtResource("11_0wmvh")]
 position = Vector2(799, 17)

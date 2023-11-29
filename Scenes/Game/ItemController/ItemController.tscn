@@ -16,7 +16,7 @@ script = ExtResource("1_38px7")
 position = Vector2(594, 47)
 
 [node name="Item" type="Node2D" parent="ItemBagScreen"]
-position = Vector2(281, 163)
+position = Vector2(253, 157)
 
 [node name="Label" type="Label" parent="ItemBagScreen"]
 offset_left = 285.0
@@ -152,8 +152,3 @@ theme_override_fonts/font = ExtResource("4_dufhy")
 theme_override_font_sizes/font_size = 14
 text = "22222"
 vertical_alignment = 1
-
-[node name="Timer" type="Timer" parent="."]
-autostart = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

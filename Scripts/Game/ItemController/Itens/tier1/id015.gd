@@ -8,21 +8,13 @@ var gold =0
 var quality=0
 var id="015"
 var itenGrabFrame=14
-var item_name="AtenasSpearWood"
-var descriptionPositive="+ 3 Hp Regen"
-var descriptionNegative="- 2% Luck"
+var item_name="atenas spear wood"
+var descriptionPositive="+ 3 hp regen"
+var descriptionNegative="- 2% luck"
 
 func addFunction():
 	Global.player.hpRegeneration+=3
 	Global.player.luck-=0.02
 
-func ready():
-	$item_name.text=item_name
-	$descriptionPositive.text=descriptionPositive
-	$descriptionNegative.text=descriptionNegative
-	$Quality.frame=quality
-	$ItemGrab.get_node("Itens").frame=itenGrabFrame
-	var resources=Global.ItemController.getRandomValue(quality)
-	wood=resources.wood
-	stone=resources.stone
-	gold=resources.gold
+func _ready():
+	Global.ItemController.itenReadyFunction(self)
