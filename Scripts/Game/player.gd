@@ -54,17 +54,17 @@ var permissions = [
 	]
 
 #Resources
-var wood =0
-var stone =0
-var gold =0
+var wood =1000000
+var stone =1000000
+var gold =1000000
 var dracma=1000000
 var dracmaBag=0
 
 #Farming
 var carryingItem 
 var itemsCarriage = []
-var MaxCarriage = 5
-var damage_mining = 5.0 
+var MaxCarriage = 1
+var damage_mining = 0.5 
 
 var contactQuadrants = []
 var closerQuadrant 
@@ -378,8 +378,7 @@ func mining():
 		
 		if closerQuadrant!=null:
 			if closerQuadrant.get_node("Resource").visible:
-				closerQuadrant.life_till_break -= damage_mining 
-				print(closerQuadrant.life_till_break) 
+				closerQuadrant.life_till_break -= damage_mining  
 				can_break=false 
 				Global.timerCreator("activateBreak",0.5,[],self)
 				if(closerQuadrant.life_till_break <= 0):

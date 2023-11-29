@@ -17,6 +17,13 @@ extends Node2D
 func _ready(): 
 	$Imagem.texture_normal = textura
 	$Imagem.texture_disabled = textura_disable
+	if(usaOres):
+		if(qtdDracma > 0):
+			$BG_HOVER/Quantidade.text = str(qtdDracma)+" dracma \n&\n"+str(qtdOres)+" "+qualOre
+		else:
+			$BG_HOVER/Quantidade.text = str(qtdOres)+" "+qualOre
+	else:
+		$BG_HOVER/Quantidade.text = str(qtdDracma)+" dracma"
 	pass # Replace with function body.
  
 func _on_texture_button_pressed():
@@ -139,11 +146,17 @@ func upgradePersonagem():
 				get_parent().get_parent().current_level_attack+=1 
 				Global.player.baseDamage=valor
 				Global.player.wood-=qtdOres
+				Global.player.percentDamage = valor
+				Global.player.baseDamage = valor
+				Global.player.percentCritDamage = valor*0.1
 		elif(usaOres and qualOre=="stone"):
 			if(Global.player.stone >= qtdOres and Global.player.dracma>=qtdDracma and current_level_attack==1):
 				get_parent().get_parent().current_level_attack+=1 
 				Global.player.baseDamage=valor 
 				Global.player.stone-=qtdOres
+				Global.player.percentDamage = valor
+				Global.player.baseDamage = valor
+				Global.player.percentCritDamage = valor*0.1
 		elif(usaOres and qualOre=="gold"):
 			match(current_level_attack):
 				2:
@@ -151,18 +164,27 @@ func upgradePersonagem():
 						get_parent().get_parent().current_level_attack+=1
 						Global.player.baseDamage=valor
 						Global.player.gold-=qtdOres
+						Global.player.percentDamage = valor
+						Global.player.baseDamage = valor
+						Global.player.percentCritDamage = valor*0.1
 						pass
 				3:
 					if(Global.player.gold>=qtdOres and Global.player.dracma>=qtdDracma ):
 						get_parent().get_parent().current_level_attack+=1
 						Global.player.baseDamage=valor
 						Global.player.gold-=qtdOres
+						Global.player.percentDamage = valor
+						Global.player.baseDamage = valor
+						Global.player.percentCritDamage = valor*0
 						pass
 				4: 
 					if(Global.player.gold>=qtdOres):
 						get_parent().get_parent().current_level_attack+=1
 						Global.player.baseDamage=valor
 						Global.player.gold-=qtdOres
+						Global.player.percentDamage = valor
+						Global.player.baseDamage = valor
+						Global.player.percentCritDamage = valor*0
 						pass
 	if(whatUpgrades=="Defense"):  
 		var current_level_defense = get_parent().get_parent().current_level_defense
@@ -171,11 +193,17 @@ func upgradePersonagem():
 				get_parent().get_parent().current_level_defense+=1 
 				Global.player.armor=valor 
 				Global.player.wood-=qtdOres
+				Global.player.dodge = valor
+				Global.player.armor = valor
+				Global.player.maxDodge += (valor * 10)
 		elif(usaOres and qualOre=="stone"):
 			if(Global.player.stone >= qtdOres and current_level_defense==1):
 				get_parent().get_parent().current_level_defense+=1 
 				Global.player.armor=valor 
 				Global.player.stone-=qtdOres
+				Global.player.dodge = valor
+				Global.player.armor = valor
+				Global.player.maxDodge += (valor * 10)
 		elif(usaOres and qualOre=="gold"):
 			match(current_level_defense):
 				2:
@@ -183,16 +211,35 @@ func upgradePersonagem():
 						get_parent().get_parent().current_level_defense+=1
 						Global.player.armor=valor
 						Global.player.gold-=qtdOres
+						Global.player.dodge = valor
+						Global.player.armor = valor
+						Global.player.maxDodge += (valor * 10)
 						pass
 				3:
 					if(Global.player.gold>=qtdOres):
 						get_parent().get_parent().current_level_defense+=1
 						Global.player.armor=valor
 						Global.player.gold-=qtdOres
+						Global.player.dodge = valor
+						Global.player.armor = valor
+						Global.player.maxDodge += (valor * 10)
 						pass
 				4: 
 					if(Global.player.gold>=qtdOres):
 						get_parent().get_parent().current_level_defense+=1
 						Global.player.armor=valor
 						Global.player.gold-=qtdOres
+						Global.player.dodge = valor
+						Global.player.armor = valor
+						Global.player.maxDodge += (valor * 10)
 						pass
+
+
+func _on_imagem_mouse_entered():
+	$BG_HOVER.visible=true
+	pass # Replace with function body.
+
+
+func _on_imagem_mouse_exited():
+	$BG_HOVER.visible = false
+	pass # Replace with function body.

@@ -1,4 +1,5 @@
-res://Assets/Images/Constructions/Portal
+res://Assets/Fonts
+res://Assets/Images/HUD/Loja
 res://Scripts/Game
 res://Assets/Images/Itens/background
 res://Assets/Images/Itens/Items/Ares'_Shield
@@ -14,7 +15,6 @@ res://Assets/Images/Player/Animations/normal_armor_normal_sword
 res://Assets/Images
 res://Scripts/Game/ItemController/Itens/tier1
 res://Scripts/Game/ItemController
-res://Assets/Fonts
 res://Assets/Images/LevelUp
 res://Assets/Images/HUD/SkillSelection
 res://Scripts/Classes/Warrior/Warrior_Turret

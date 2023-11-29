@@ -1,6 +1,6 @@
-Label
 ColorRect
 Node2D
+Label
 Sprite2D
 AnimatedSprite2D
 VideoStreamPlayer
