@@ -78,6 +78,5 @@ position = Vector2(-56, 49)
 scale = Vector2(0.870214, 0.870214)
 
 [node name="Pause" parent="." instance=ExtResource("13_ce228")]
-visible = false
 
 [node name="ItemController" parent="." instance=ExtResource("13_mu1bd")]

@@ -8,18 +8,14 @@ var xSpace=263
 var ySpace=200
 
 func _ready():
-	Global.ItemHud=self
+	if (get_parent().name=="ItensHud"):
+		Global.ItemHud=self
+	else:
+		Global.ItemHudTempleShop=self
+		
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	var columPosition=0
-	line=0
 
-	for i in range(0,$SubViewportContainer/SubViewport/Itens.get_child_count(),1):
-		var c= $SubViewportContainer/SubViewport/Itens.get_child(i)
-		c.position=Vector2(columPosition*xSpace,line*ySpace)
-		columPosition+=1
-		if (columPosition==maxColumn):
-			columPosition=0
-			line+=1
 
 	
 func _process(delta):
@@ -37,6 +33,9 @@ func _process(delta):
 		
 
 func update(item):
+	if (get_parent().name=="ItensHud"):
+		Global.ItemHudTempleShop.update(item.duplicate())
+		
 	$SubViewportContainer/SubViewport/Itens.add_child(item)
 	var columPosition=0
 	line=0

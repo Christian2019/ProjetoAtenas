@@ -25,8 +25,6 @@ func _ready():
 	$MINHAS_COISAS___TROCA/MinhasCoisas.disabled=true
 	for scoll in scrolls:
 		scoll.disabled=false
-		
-	listaItens=get_node("ITEMS/ScrollContainer/Itens")
 	
 	#Area de itens
 	attack1_itens = get_node("MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1").get_children()
@@ -66,14 +64,21 @@ func scrollsSelect():
 func _on_minhas_coisas_pressed():
 	$MINHAS_COISAS___TROCA/MINHASCOISAS.visible=true
 	$MINHAS_COISAS___TROCA/TROCA.visible=false
+	$MINHAS_COISAS___TROCA/ItemHUD.visible=false
+	
 	$MINHAS_COISAS___TROCA/MinhasCoisas.disabled=true
 	$MINHAS_COISAS___TROCA/Troca.disabled=false 
+	$MINHAS_COISAS___TROCA/Itens.disabled=false
+	
 
 func _on_troca_pressed(): 
 	$MINHAS_COISAS___TROCA/MINHASCOISAS.visible=false
 	$MINHAS_COISAS___TROCA/TROCA.visible=true
+	$MINHAS_COISAS___TROCA/ItemHUD.visible=false
+	
 	$MINHAS_COISAS___TROCA/MinhasCoisas.disabled=false
 	$MINHAS_COISAS___TROCA/Troca.disabled=true 
+	$MINHAS_COISAS___TROCA/Itens.disabled=false
 
 func _on_scroll_1_pressed():
 	if(scrolls[0].texture_normal==PreLoads.item_temple):
@@ -211,14 +216,6 @@ func _on_yes_pressed():
 				ultimate_itens[2].get_node("Passivo2_Spot").queue_free()
 				addItemToUltimate(2)
 			pass 
-	elif(lastItemClicked==2):
-		listaItens.add_child(TextureRect.new(),true)
-		var last_child = listaItens.get_child(listaItens.get_child_count()-1)
-		last_child.set_name("Item2");
-		last_child.scale.x=0.25
-		last_child.scale.y=0.25
-		last_child.texture=lastTextureClicked 
-		itens_personagem.append(lastItemClicked)
 
 	
 func _on_nope_pressed():
@@ -262,3 +259,13 @@ func _on_trade_wood_stone_pressed():
 		Global.player.wood-=50
 		Global.player.stone+=1
 	pass 
+
+
+func _on_itens_pressed():
+	$MINHAS_COISAS___TROCA/MINHASCOISAS.visible=false
+	$MINHAS_COISAS___TROCA/TROCA.visible=false
+	$MINHAS_COISAS___TROCA/ItemHUD.visible=true
+	
+	$MINHAS_COISAS___TROCA/MinhasCoisas.disabled=false
+	$MINHAS_COISAS___TROCA/Troca.disabled=false 
+	$MINHAS_COISAS___TROCA/Itens.disabled=true

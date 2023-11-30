@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701315104
-default_env.tres::Environment::8363765569308027888::1701314478::0::1::::<><>::
+::res://::1701316516
+default_env.tres::Environment::8363765569308027888::1701315844::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1687928995::0::1::::<><>::
 icon.png::CompressedTexture2D::8961917463339288538::1687313253::1687928995::1::::<><>::
 ::res://Assets/::1700543940
@@ -77,7 +77,7 @@ scene00067.png::CompressedTexture2D::7611625190961385419::1699229330::1699229330
 scene00070.png::CompressedTexture2D::2239101110092108358::1699229330::1699229330::1::::<><>::
 scene00073.png::CompressedTexture2D::6895018447805603100::1699229330::1699229330::1::::<><>::
 scene00076.png::CompressedTexture2D::7820796328272244795::1699229330::1699229330::1::::<><>::
-::res://Assets/Images/Enemies/id005/::1701315339
+::res://Assets/Images/Enemies/id005/::1701315343
 cupid.png::CompressedTexture2D::6144253913033748749::1699229330::1699229330::1::::<><>::
 cupidProjectile.png::CompressedTexture2D::5134925717833106075::1701315339::1701315343::1::::<><>::
 Eros.png::CompressedTexture2D::2720217041342411833::1701307754::1701315072::1::::<><>::
@@ -263,11 +263,86 @@ scene00022-removebg-preview.png::CompressedTexture2D::6708382012282944036::16992
 scene00025-removebg-preview.png::CompressedTexture2D::5396358946534033407::1699229336::1699229336::1::::<><>::
 scene00028-removebg-preview.png::CompressedTexture2D::7721141734343681755::1699229336::1699229336::1::::<><>::
 scene00031-removebg-preview.png::CompressedTexture2D::3365555615545604464::1699229336::1699229336::1::::<><>::
-::res://Assets/Images/HUD/::1700856836
+::res://Assets/Images/HUD/::1701316408
 background.png::CompressedTexture2D::6117396777253534569::1687928993::1687928993::1::::<><>::
 hearth2.png::CompressedTexture2D::5254022626860167378::1695195732::1695195735::1::::<><>::
 hearth.png::CompressedTexture2D::237785404925632166::1687928993::1687928993::1::::<><>::
 HUD GAME3.png::CompressedTexture2D::767571284368620175::1700856834::1700856836::1::::<><>::
+::res://Assets/Images/HUD/Loja/::1701316497
+BackgroundUpgrade2.png::CompressedTexture2D::6315606104526181719::1701132249::1701316495::1::::<><>::
+BackgroundUpgrade.png::CompressedTexture2D::6206222122893384869::1701132249::1701316495::1::::<><>::
+BarraMenu.png::CompressedTexture2D::7130610082540558951::1701132249::1701316495::1::::<><>::
+Gold.png::CompressedTexture2D::1598733988000493228::1701132248::1701316497::1::::<><>::
+GoldPlace.png::CompressedTexture2D::6301270064736027029::1701132249::1701316495::1::::<><>::
+Rock.png::CompressedTexture2D::7402602077052490078::1701132248::1701316497::1::::<><>::
+ScrollsBG.png::CompressedTexture2D::9155014092860399829::1701132249::1701316495::1::::<><>::
+SilverPlace.png::CompressedTexture2D::5793820824812714351::1701132249::1701316495::1::::<><>::
+Slots.png::CompressedTexture2D::6150398826103216350::1701132249::1701316495::1::::<><>::
+Wood.png::CompressedTexture2D::1917234985430845637::1701132248::1701316497::1::::<><>::
+::res://Assets/Images/HUD/Loja/ItensUpgrade/::1701316408
+::res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/::1701316496
+BronzeAbilities.png::CompressedTexture2D::790363695233351504::1701132249::1701316495::1::::<><>::
+BronzeDesativado.png::CompressedTexture2D::2028547627760416867::1701132249::1701316495::1::::<><>::
+FinalAbilities.png::CompressedTexture2D::8603029324327141911::1701132249::1701316496::1::::<><>::
+FinalDesativado.png::CompressedTexture2D::857524220860724339::1701132249::1701316495::1::::<><>::
+GoldAbilites.png::CompressedTexture2D::3492799805890910016::1701132249::1701316496::1::::<><>::
+GoldDesativado.png::CompressedTexture2D::8840046986932889040::1701132249::1701316496::1::::<><>::
+SilverAbilities.png::CompressedTexture2D::7798473436435577337::1701132249::1701316496::1::::<><>::
+SilverDesativado.png::CompressedTexture2D::5492013784995934180::1701132249::1701316496::1::::<><>::
+::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/::1701316496
+Group 24.png::CompressedTexture2D::231052011999847284::1701132249::1701316496::1::::<><>::
+Group 25.png::CompressedTexture2D::5605626705281674236::1701132249::1701316496::1::::<><>::
+Group 26.png::CompressedTexture2D::1882152849972974275::1701132249::1701316496::1::::<><>::
+Group 27.png::CompressedTexture2D::1776410703941610937::1701132249::1701316496::1::::<><>::
+Group 33.png::CompressedTexture2D::1765273186259528608::1701132249::1701316496::1::::<><>::
+Group 34.png::CompressedTexture2D::1164542897450977317::1701132249::1701316496::1::::<><>::
+Group 35.png::CompressedTexture2D::5210583048644287342::1701132249::1701316496::1::::<><>::
+Level1.png::CompressedTexture2D::3589457632542663526::1701132249::1701316496::1::::<><>::
+::res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/::1701316496
+Group 24.png::CompressedTexture2D::4147819322213217707::1701132249::1701316496::1::::<><>::
+Group 25.png::CompressedTexture2D::392072076565672462::1701132249::1701316496::1::::<><>::
+Group 26.png::CompressedTexture2D::4162518328812239628::1701132249::1701316496::1::::<><>::
+Group 27.png::CompressedTexture2D::6876595365449308416::1701132249::1701316496::1::::<><>::
+UpgradeBasico.png::CompressedTexture2D::5308580900418367383::1701132249::1701316496::1::::<><>::
+UpgradeBom.png::CompressedTexture2D::5478894072546848677::1701132249::1701316496::1::::<><>::
+UpgradeFinal.png::CompressedTexture2D::3620544583402480375::1701132249::1701316496::1::::<><>::
+UpgradeOtimo.png::CompressedTexture2D::6280675254236199607::1701132249::1701316496::1::::<><>::
+::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/::1701316496
+Group 24.png::CompressedTexture2D::6227308623170235909::1701132249::1701316496::1::::<><>::
+Group 25.png::CompressedTexture2D::3257690139677054695::1701132249::1701316496::1::::<><>::
+Group 26.png::CompressedTexture2D::5152624075313031302::1701132249::1701316496::1::::<><>::
+Group 27.png::CompressedTexture2D::5675345298196273110::1701132249::1701316496::1::::<><>::
+Group 33.png::CompressedTexture2D::8465897422250467935::1701132249::1701316496::1::::<><>::
+Group 34.png::CompressedTexture2D::8016707444105632894::1701132249::1701316496::1::::<><>::
+Group 35.png::CompressedTexture2D::1208337193872223212::1701132249::1701316496::1::::<><>::
+Level1.png::CompressedTexture2D::5310650258896001180::1701132249::1701316496::1::::<><>::
+::res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/::1701316496
+DesativoBasico.png::CompressedTexture2D::4270888580593650064::1701132249::1701316496::1::::<><>::
+DesativoFinal.png::CompressedTexture2D::9212901861619259700::1701132249::1701316495::1::::<><>::
+DesativoOuro.png::CompressedTexture2D::5546369927832824932::1701132249::1701316495::1::::<><>::
+DesativoPrata.png::CompressedTexture2D::6754909380301902892::1701132249::1701316495::1::::<><>::
+UpgradeBasico.png::CompressedTexture2D::1139052500234386403::1701132249::1701316495::1::::<><>::
+UpgradeBom.png::CompressedTexture2D::8433988432664802706::1701132249::1701316495::1::::<><>::
+UpgradeFinal.png::CompressedTexture2D::3062288267769171363::1701132249::1701316495::1::::<><>::
+UpgradeOtimo.png::CompressedTexture2D::5448851424314093652::1701132249::1701316495::1::::<><>::
+::res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/::1701316495
+BronzeDesativado.png::CompressedTexture2D::52670449161095957::1701132249::1701316495::1::::<><>::
+BronzeSword.png::CompressedTexture2D::6621760872885353458::1701132249::1701316495::1::::<><>::
+FinalDesativado.png::CompressedTexture2D::1077890395414785507::1701132249::1701316495::1::::<><>::
+FinalSword.png::CompressedTexture2D::7022490237974726842::1701132249::1701316495::1::::<><>::
+GoldDesativado.png::CompressedTexture2D::2218306021103205932::1701132249::1701316495::1::::<><>::
+GoldSword.png::CompressedTexture2D::4372385407599304868::1701132249::1701316495::1::::<><>::
+SilverDesativado.png::CompressedTexture2D::5562424053370007044::1701132249::1701316495::1::::<><>::
+SilverSword.png::CompressedTexture2D::5861907588040475444::1701132249::1701316495::1::::<><>::
+::res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/::1701316496
+Group 24.png::CompressedTexture2D::1242920680635549592::1701132249::1701316495::1::::<><>::
+Group 25.png::CompressedTexture2D::3851966778470799340::1701132249::1701316495::1::::<><>::
+Group 26.png::CompressedTexture2D::240948937696482029::1701132249::1701316495::1::::<><>::
+Group 27.png::CompressedTexture2D::2521266495768055127::1701132249::1701316495::1::::<><>::
+Group 47.png::CompressedTexture2D::843121498274914868::1701132249::1701316495::1::::<><>::
+Group 48.png::CompressedTexture2D::4321832318208302192::1701132249::1701316495::1::::<><>::
+Group 49.png::CompressedTexture2D::5400744621134468301::1701132249::1701316495::1::::<><>::
+Group 50.png::CompressedTexture2D::5889957365764194003::1701132249::1701316495::1::::<><>::
 ::res://Assets/Images/HUD/SkillSelection/::1700428268
 attack1hudNoGod.png::CompressedTexture2D::4202473749654828605::1700428266::1700428268::1::::<><>::
 attack2hudNoGod.png::CompressedTexture2D::4050416490525923864::1700428240::1700428268::1::::<><>::
@@ -628,14 +703,14 @@ Done.txt::TextFile::-1::1687928993::0::1::::<><>::
 mapa do jogo.jpg::CompressedTexture2D::4113642683112997387::1687928993::1687928993::1::::<><>::
 ToDo.txt::TextFile::-1::1687928993::0::1::::<><>::
 ::res://Scenes/::1699503022
-::res://Scenes/Game/::1701314478
-Game.tscn::PackedScene::4913071036717789116::1701314477::0::1::::<><>::res://Scripts/Game/Game.gd<>uid://bnbfdi1wf6kki::::res://Scenes/Game/Math_controller/Math_controller.tscn<>uid://bi0hqmgalqjs3::::res://Scenes/Game/PlayerMining.tscn<>uid://d2y033wavrob3::::res://Scenes/Game/Wave_controller.tscn<>uid://cybhysdkyjmx5::::res://Scenes/Game/SoundController.tscn<>uid://bqji3jr451ges::::res://Scenes/Game/Mining/matriz.tscn<>uid://cq8fbkkwauxoo::::res://Scenes/Game/player.tscn<>uid://cx37jdnas0rb1::::res://Scenes/Game/Constructions/center.tscn<>uid://cawqbopdr275u::::res://Scenes/Game/Constructions/Temple/Temple.tscn<>uid://tgat8lil5tbh::::res://Assets/Images/Background/map.png<>res://Scripts/Instances/Turrets.gd<>res://Scripts/Zones/ModifyGround.gd<>uid://djfg2b82q3e1v::::res://Assets/Images/Background/Elementos/Lava.png<>uid://b7hblsmp8buki::::res://Assets/Images/Background/Elementos/Ice.png<>uid://vr7n6dsjomd5::::res://Assets/Images/Background/Elementos/Clouds.png
+::res://Scenes/Game/::1701315842
+Game.tscn::PackedScene::4913071036717789116::1701315842::0::1::::<><>::res://Scripts/Game/Game.gd<>uid://bnbfdi1wf6kki::::res://Scenes/Game/Math_controller/Math_controller.tscn<>uid://bi0hqmgalqjs3::::res://Scenes/Game/PlayerMining.tscn<>uid://d2y033wavrob3::::res://Scenes/Game/Wave_controller.tscn<>uid://cybhysdkyjmx5::::res://Scenes/Game/SoundController.tscn<>uid://bqji3jr451ges::::res://Scenes/Game/Mining/matriz.tscn<>uid://cq8fbkkwauxoo::::res://Scenes/Game/player.tscn<>uid://cx37jdnas0rb1::::res://Scenes/Game/Constructions/center.tscn<>uid://cawqbopdr275u::::res://Scenes/Game/Constructions/Temple/Temple.tscn<>uid://tgat8lil5tbh::::res://Assets/Images/Background/map.png<>res://Scripts/Instances/Turrets.gd<>res://Scripts/Zones/ModifyGround.gd<>uid://djfg2b82q3e1v::::res://Assets/Images/Background/Elementos/Lava.png<>uid://b7hblsmp8buki::::res://Assets/Images/Background/Elementos/Ice.png<>uid://vr7n6dsjomd5::::res://Assets/Images/Background/Elementos/Clouds.png
 HUD.tscn::PackedScene::4280259026493880449::1701211644::0::1::::<><>::res://Scripts/MainScenes/Game_ViewPort/HUD.gd<>uid://df4il2aive3ok
 Pause.tscn::PackedScene::5982335845019117679::1701306824::0::1::::<><>::res://Scripts/Game/Pause.gd<>uid://dsrqih1k0sd7s
 player.tscn::PackedScene::5964293243918368166::1701312515::0::1::::<><>::res://Scripts/Game/player.gd<>uid://cgi55afgdxyx8
 PlayerMining.tscn::PackedScene::2999995107865065940::1701312515::0::1::::<><>::res://Scripts/Game/PlayerMining.gd
 SoundController.tscn::PackedScene::6459906820997632420::1699900037::0::1::::<><>::res://Scripts/Game/SoundController.gd<>uid://muwp777hkxqy
-Wave_controller.tscn::PackedScene::9105475327120359502::1701314478::0::1::::<><>::res://Scripts/Game/WaveController.gd<>res://Scripts/Game/Waves/Wave1.gd<>res://Scripts/Game/Waves/Wave2.gd<>res://Scripts/Game/Waves/Wave3.gd<>res://Scripts/Game/Waves/Wave4.gd<>res://Scripts/Game/Waves/Wave5.gd<>res://Scripts/Game/Waves/Wave6.gd<>res://Scripts/Game/Waves/Wave7.gd<>res://Scripts/Game/Waves/Wave8.gd<>res://Scripts/Game/Waves/Wave9.gd<>res://Scripts/Game/Waves/Wave10.gd<>res://Scripts/Game/Waves/Wave12.gd<>res://Scripts/Game/Waves/Wave11.gd<>res://Scripts/Game/Waves/Wave13.gd<>res://Scripts/Game/Waves/Wave14.gd<>res://Scripts/Game/Waves/Wave15.gd<>res://Scripts/Game/Waves/Wave16.gd<>res://Scripts/Game/Waves/Wave17.gd<>res://Scripts/Game/Waves/Wave18.gd<>res://Scripts/Game/Waves/Wave19.gd<>res://Scripts/Game/Waves/Wave20.gd
+Wave_controller.tscn::PackedScene::9105475327120359502::1701315842::0::1::::<><>::res://Scripts/Game/WaveController.gd<>res://Scripts/Game/Waves/Wave1.gd<>res://Scripts/Game/Waves/Wave2.gd<>res://Scripts/Game/Waves/Wave3.gd<>res://Scripts/Game/Waves/Wave4.gd<>res://Scripts/Game/Waves/Wave5.gd<>res://Scripts/Game/Waves/Wave6.gd<>res://Scripts/Game/Waves/Wave7.gd<>res://Scripts/Game/Waves/Wave8.gd<>res://Scripts/Game/Waves/Wave9.gd<>res://Scripts/Game/Waves/Wave10.gd<>res://Scripts/Game/Waves/Wave12.gd<>res://Scripts/Game/Waves/Wave11.gd<>res://Scripts/Game/Waves/Wave13.gd<>res://Scripts/Game/Waves/Wave14.gd<>res://Scripts/Game/Waves/Wave15.gd<>res://Scripts/Game/Waves/Wave16.gd<>res://Scripts/Game/Waves/Wave17.gd<>res://Scripts/Game/Waves/Wave18.gd<>res://Scripts/Game/Waves/Wave19.gd<>res://Scripts/Game/Waves/Wave20.gd
 ::res://Scenes/Game/Classes/::1699503018
 ::res://Scenes/Game/Classes/Warrior/::1699503018
 ::res://Scenes/Game/Classes/Warrior/Effects/::1700711140
@@ -705,19 +780,19 @@ Warrior_attack2_Zeus.tscn::PackedScene::5982209768177878831::1700701745::0::1:::
 ::res://Scenes/Game/Collectables/::1701312515
 Collectable.tscn::PackedScene::708502007503376537::1701312515::0::1::::<><>::res://Scripts/Instances/Collectable.gd<>uid://plralsrcrafr
 Dracma.tscn::PackedScene::8115027374443532805::1700699827::0::1::::<><>::res://Scripts/Game/Dracma.gd<>uid://cc8fk1tr2jb6k
-::res://Scenes/Game/Constructions/::1701314477
-center.tscn::PackedScene::6446946541765855784::1701314477::0::1::::<><>::res://Scripts/Zones/Center/center.gd<>uid://dumjr4t8822i1::::res://Scenes/Game/Constructions/Portal.tscn<>uid://cs3igsuhbtryg::::res://Assets/Images/Constructions/Center/centroSemArco.png<>uid://c57220vbb85ts::::res://Assets/Images/Constructions/Center/arcos.png<>uid://c0rurmnfon8nm::::res://Scenes/Game/Constructions/Pool.tscn<>res://Scripts/Zones/Center/Towers.gd<>uid://dtu5sjvquowls::::res://Scenes/Game/Constructions/Defenses/Tower.tscn
-Pool.tscn::PackedScene::6563902229116834930::1701314477::0::1::::<><>::res://Scripts/Zones/Center/Pool.gd<>uid://cy5oax8echrbm::::res://Assets/Images/Constructions/AnimacaoPiscina/0001.png<>uid://chf3umacstfus::::res://Assets/Images/Constructions/AnimacaoPiscina/0004.png<>uid://dplv0ndumd70u::::res://Assets/Images/Constructions/AnimacaoPiscina/0010.png<>uid://bmn7km0snk8re::::res://Assets/Images/Constructions/AnimacaoPiscina/0011.png
+::res://Scenes/Game/Constructions/::1701315842
+center.tscn::PackedScene::6446946541765855784::1701315842::0::1::::<><>::res://Scripts/Zones/Center/center.gd<>uid://dumjr4t8822i1::::res://Scenes/Game/Constructions/Portal.tscn<>uid://cs3igsuhbtryg::::res://Assets/Images/Constructions/Center/centroSemArco.png<>uid://c57220vbb85ts::::res://Assets/Images/Constructions/Center/arcos.png<>uid://c0rurmnfon8nm::::res://Scenes/Game/Constructions/Pool.tscn<>res://Scripts/Zones/Center/Towers.gd<>uid://dtu5sjvquowls::::res://Scenes/Game/Constructions/Defenses/Tower.tscn
+Pool.tscn::PackedScene::6563902229116834930::1701315842::0::1::::<><>::res://Scripts/Zones/Center/Pool.gd<>uid://cy5oax8echrbm::::res://Assets/Images/Constructions/AnimacaoPiscina/0001.png<>uid://chf3umacstfus::::res://Assets/Images/Constructions/AnimacaoPiscina/0004.png<>uid://dplv0ndumd70u::::res://Assets/Images/Constructions/AnimacaoPiscina/0010.png<>uid://bmn7km0snk8re::::res://Assets/Images/Constructions/AnimacaoPiscina/0011.png
 Portal.tscn::PackedScene::8588389822392948446::1701089739::0::1::::<><>::res://Scripts/Zones/Center/Portal.gd<>uid://de28jmw6j0isv
 ::res://Scenes/Game/Constructions/Defenses/::1699560953
 Projectile.tscn::PackedScene::2410808219093842520::1699229338::0::1::::<><>::uid://bav7b1tv76dwv
 Tower.tscn::PackedScene::8535991795261709648::1699560953::0::1::::<><>::res://Scripts/Zones/Center/Tower.gd<>uid://bbetir8lvp4ns
-::res://Scenes/Game/Constructions/Temple/::1701312516
+::res://Scenes/Game/Constructions/Temple/::1701315844
 Item.tscn::PackedScene::3789408077711027493::1699231920::0::1::::<><>::res://Scripts/Zones/Temple/ItemSelectable.gd<>uid://d0xhqa10j30ok
-OpcaoUpgrade.tscn::PackedScene::1880745726022968015::1699230868::0::1::::<><>::res://Scripts/Zones/Temple/OpcaoUpgrade.gd
+OpcaoUpgrade.tscn::PackedScene::1880745726022968015::1701315844::0::1::::<><>::res://Scripts/Zones/Temple/OpcaoUpgrade.gd<>uid://df4il2aive3ok::::res://Assets/Fonts/Zeus-Land.otf
 Temple.tscn::PackedScene::4819231694312776984::1701312516::0::1::::<><>::res://Scripts/Zones/Temple/Temple.gd<>uid://brnbevp3jfyen
-TempleScreen.tscn::PackedScene::3516894069668338984::1700513757::0::1::::<><>::res://Scripts/Zones/Temple/MainPage.gd<>uid://dlwvyo6ejssc
-::res://Scenes/Game/Enemies/::1701314478
+TempleScreen.tscn::PackedScene::3516894069668338984::1701315784::0::1::::<><>::res://Scripts/Zones/Temple/MainPage.gd<>res://Scripts/Zones/Temple/ShopScript.gd<>uid://d3o00kxuo4h22::::res://Assets/Images/HUD/Loja/ScrollsBG.png<>uid://df4il2aive3ok::::res://Assets/Fonts/Zeus-Land.otf<>res://Scripts/Zones/Temple/PersonagemLoja.gd<>uid://cv1m856of8ntd::::res://Assets/Images/HUD/Loja/GoldPlace.png<>res://Scripts/Zones/Temple/Mineração.gd<>uid://costnafwkrulb::::res://Assets/Images/HUD/Loja/SilverPlace.png<>uid://ctvkf1u451ub3::::res://Assets/Images/HUD/Loja/Slots.png<>uid://12buwcnhifsh::::res://Scenes/Game/Constructions/Temple/OpcaoUpgrade.tscn<>uid://ddp41lr3tim83::::res://Assets/Images/HUD/Loja/Rock.png<>uid://2kytyugryrk4::::res://Assets/Images/HUD/Loja/Wood.png<>res://Scripts/Zones/Temple/Defender Point.gd<>uid://w1o6d8gum7h5::::res://Assets/Images/HUD/Loja/Gold.png<>uid://cuolto2djdbn6::::res://Assets/Images/HUD/Loja/BackgroundUpgrade.png<>uid://c8uedu3u1iprj::::res://Assets/Images/HUD/Loja/BarraMenu.png<>uid://chwrvs0tbfe6w::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Level1.png<>uid://cm4gdwyh5moli::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 27.png<>uid://rhlewolh2333::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 35.png<>uid://cuys4l4kq0nh2::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 24.png<>uid://dmhmaanyeb3pi::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 34.png<>uid://bmobxe3d0m8l4::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 25.png<>uid://cfn773mmr0u75::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 26.png<>uid://bre03wixp2mxa::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Level1.png<>uid://0krhv237uw5f::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 27.png<>uid://0fd1564ivhwq::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 33.png<>uid://dj6nmf1m3f3i::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 24.png<>uid://qud37guvu8i8::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 34.png<>uid://cl4n385fydxku::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 25.png<>uid://cgibsoarljan3::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 35.png<>uid://12y1urshsqad::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 26.png<>uid://c1lvo03360ies::::res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/BronzeSword.png<>uid://0rqev1k3nc4::::res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/BronzeDesativado.png<>uid://cprs05ls2ccdg::::res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/SilverSword.png<>uid://cliqkucmf383y::::res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/SilverDesativado.png<>uid://b3kaswp8s6ai3::::res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/GoldSword.png<>uid://6utf8shl363i::::res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/GoldDesativado.png<>uid://c7b0ng1vnyyms::::res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/FinalSword.png<>uid://pmexyd5fdvt8::::res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/FinalDesativado.png<>uid://djdvyofi1vk3r::::res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/SilverAbilities.png<>uid://ckimwulh442qa::::res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/SilverDesativado.png<>uid://bp065xj2l43eq::::res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/GoldAbilites.png<>uid://dx7gjumu0kq6s::::res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/GoldDesativado.png<>uid://dutmvvjo82fet::::res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/FinalAbilities.png<>uid://mhnkfhok2b44::::res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/FinalDesativado.png<>uid://cv8ldy7ml3jt4::::res://Assets/Images/HUD/Loja/BackgroundUpgrade2.png<>uid://cp6e0ckcup300::::res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 50.png<>uid://bb6k5j16yp2at::::res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 27.png<>uid://b2tr7gteesv1y::::res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 48.png<>uid://rycyswfok5vg::::res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 24.png<>uid://ci7fqe6tbvj30::::res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 49.png<>uid://bu46lhs01bcme::::res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 25.png<>uid://maoc8uvim6yi::::res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 47.png<>uid://doynnh7fpbof::::res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 26.png<>uid://chvrs06naamlr::::res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/UpgradeBasico.png<>uid://c48cryi3covp5::::res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/Group 27.png<>uid://ckcat5e32anfx::::res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/UpgradeBom.png<>uid://b0dh8i3p18ctv::::res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/Group 24.png<>uid://cvqn2lhkpcd2v::::res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/UpgradeOtimo.png<>uid://ft6mtrl5n7e5::::res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/Group 25.png<>uid://brt23tn7qgapj::::res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/UpgradeFinal.png<>uid://b0kmclpemayqm::::res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/Group 26.png<>uid://qh1a7w1p65yt::::res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/UpgradeBasico.png<>uid://b13358bq50xga::::res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/DesativoBasico.png<>uid://dsfqs7g0ddtr3::::res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/UpgradeBom.png<>uid://c3iemunvmtdv5::::res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/DesativoPrata.png<>uid://cjvp10vgpaomu::::res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/UpgradeOtimo.png<>uid://clax5xfamjwnk::::res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/DesativoOuro.png<>uid://bjvno8ccudkkp::::res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/UpgradeFinal.png<>uid://d4i2faw2nmtrw::::res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/DesativoFinal.png
+::res://Scenes/Game/Enemies/::1701315842
 Id001.tscn::PackedScene::8122017009690902834::1701205012::0::1::::<><>::res://Scripts/Enemies/Id001.gd<>uid://d3hana8ykekw1
 Id002.tscn::PackedScene::7155997110481103672::1701306825::0::1::::<><>::res://Scripts/Enemies/Id002.gd<>uid://b438i34mtljlq
 Id003.tscn::PackedScene::9212849254246374911::1701204522::0::1::::<><>::res://Scripts/Enemies/Id003.gd<>uid://bo5kija80wbx2
@@ -726,14 +801,14 @@ Id006.tscn::PackedScene::1868297516816215364::1701205013::0::1::::<><>::res://Sc
 Id009.tscn::PackedScene::242989692208950885::1701204526::0::1::::<><>::res://Scripts/Enemies/Id009.gd<>uid://dohhb60411vq7
 Id010.tscn::PackedScene::4621167442959291503::1701204524::0::1::::<><>::res://Scripts/Enemies/Id010.gd<>uid://b1vpgtfgn4n5o
 Id011.tscn::PackedScene::6955307657435513839::1701204524::0::1::::<><>::res://Scripts/Enemies/Id011.gd<>uid://b8hysfmshmp80
-Id012.tscn::PackedScene::1779179281027591926::1701314478::0::1::::<><>::res://Scripts/Enemies/Id012.gd<>uid://c3klqfi5dsqbx::::res://Assets/Images/Enemies/id012/harpia.png
+Id012.tscn::PackedScene::1779179281027591926::1701315842::0::1::::<><>::res://Scripts/Enemies/Id012.gd<>uid://c3klqfi5dsqbx::::res://Assets/Images/Enemies/id012/harpia.png
 Id017.tscn::PackedScene::8387890466755179342::1699497071::0::1::::<><>::uid://dnmslkvlal71r
 Id019.tscn::PackedScene::7160818112258951824::1701205012::0::1::::<><>::res://Scripts/Enemies/Id019.gd<>uid://ct8b6tdb5ibqh
 targetDummy.tscn::PackedScene::1942848793023782327::1699497071::0::1::::<><>::res://Scripts/Enemies/targetDummy.gd<>uid://bm4p5tfwtkhfv
 X.tscn::PackedScene::2254255041685325336::1699229338::0::1::::<><>::res://Scripts/Enemies/X.gd<>uid://gvfd28hjyvj3
-::res://Scenes/Game/Enemies/Id005/::1699891851
-ArrowCircle.tscn::PackedScene::8207875894164940352::1699229338::0::1::::<><>::uid://cffnqgwqs5cpf
-Id005.tscn::PackedScene::496003475875971092::1701311182::0::1::::<><>::res://Scripts/Enemies/Id005.gd<>uid://ctsk71xkun64p
+::res://Scenes/Game/Enemies/Id005/::1701315843
+ArrowCircle.tscn::PackedScene::8207875894164940352::1701315843::0::1::::<><>::uid://cffnqgwqs5cpf::::res://Assets/Images/Enemies/id005/cupidProjectile.png<>res://Scripts/Instances/ArrowCircle.gd
+Id005.tscn::PackedScene::496003475875971092::1701315843::0::1::::<><>::res://Scripts/Enemies/Id005.gd<>uid://be0xtvj6tj1bx::::res://Assets/Images/Enemies/id005/Eros.png
 ::res://Scenes/Game/Enemies/id007/::1699503022
 Id007.tscn::PackedScene::3393380698040152037::1699490984::0::1::::<><>::res://Scripts/Enemies/Id007.gd<>uid://ls1r7oagsto8
 Ryuseiken.tscn::PackedScene::7567173698228012061::1699229338::0::1::::<><>::res://Scripts/Instances/Ryuseiken.gd<>uid://bhem62rhdgnuw
@@ -756,8 +831,8 @@ Id016.tscn::PackedScene::4007304703529309770::1699492032::0::1::::<><>::res://Sc
 ::res://Scenes/Game/Enemies/id018/::1701302666
 FireEnergy.tscn::PackedScene::7698544794254353776::1699229338::0::1::::<><>::res://Scripts/Instances/FireEnergy.gd<>uid://cyqsy7btgag8v
 Id018.tscn::PackedScene::4984990590460644455::1701302666::0::1::::<><>::uid://demnaekgk731y
-::res://Scenes/Game/Enemies/id020/::1701314478
-Id020.tscn::PackedScene::7660765656886475688::1701314478::0::1::::<><>::res://Scripts/Enemies/Id020.gd<>uid://dgqdlges2lf7w::::res://Assets/Images/Enemies/id020/Cobra192.png
+::res://Scenes/Game/Enemies/id020/::1701315842
+Id020.tscn::PackedScene::7660765656886475688::1701315842::0::1::::<><>::res://Scripts/Enemies/Id020.gd<>uid://dgqdlges2lf7w::::res://Assets/Images/Enemies/id020/Cobra192.png
 Poison.tscn::PackedScene::8804950772704332267::1699229338::0::1::::<><>::res://Scripts/Instances/Poison.gd<>uid://dqkp5kvh3xg02
 ::res://Scenes/Game/ItemController/::1701306824
 item.tscn::PackedScene::1283619964385373126::1701306823::0::1::::<><>::uid://d8ydqptq0jku
@@ -930,7 +1005,7 @@ Id019.gd::GDScript::-1::1701202661::0::1::::<>Node2D<>::
 Id020.gd::GDScript::-1::1701314003::0::1::::<>Node2D<>::
 targetDummy.gd::GDScript::-1::1700696786::0::1::::<>Node2D<>::
 X.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
-::res://Scripts/Game/::1701314475
+::res://Scripts/Game/::1701315395
 BackgroundMusic.gd::GDScript::-1::1699229339::0::1::::<>AudioStreamPlayer<>::
 Dracma.gd::GDScript::-1::1700696775::0::1::::<>Node2D<>::
 Game.gd::GDScript::-1::1701200632::0::1::::<>Node2D<>::
@@ -944,7 +1019,7 @@ quadrant.gd::GDScript::-1::1701312420::0::1::::<>Area2D<>::
 SoundController.gd::GDScript::-1::1700696786::0::1::::<>Node2D<>::
 SpawnDamage.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
 Stats.gd::GDScript::-1::1701209701::0::1::::<>Node2D<>::
-WaveController.gd::GDScript::-1::1701314475::0::1::::<>Node2D<>::
+WaveController.gd::GDScript::-1::1701315395::0::1::::<>Node2D<>::
 ::res://Scripts/Game/ItemController/::1701302331
 ItemController.gd::GDScript::-1::1701302331::0::1::::<>Node2D<>::
 ::res://Scripts/Game/ItemController/Itens/::1701285330
@@ -1090,12 +1165,12 @@ Portal.gd::GDScript::-1::1700696784::0::1::::<>Node2D<>::
 Tower.gd::GDScript::-1::1700696787::0::1::::<>Node2D<>::
 Towers.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
 ::res://Scripts/Zones/Temple/::1701312489
-Defender Point.gd::GDScript::-1::1699228896::0::1::::<>Node2D<>::
+Defender Point.gd::GDScript::-1::1701192398::0::1::::<>Node2D<>::
 ItemSelectable.gd::GDScript::-1::1699228896::0::1::::<>Node2D<>::
-MainPage.gd::GDScript::-1::1701209358::0::1::::<>Node2D<>::
-Mineração.gd::GDScript::-1::1699228896::0::1::::<>Node2D<>::
-OpcaoUpgrade.gd::GDScript::-1::1699228896::0::1::::<>Node2D<>::
-PersonagemLoja.gd::GDScript::-1::1699230715::0::1::::<>Node2D<>::
-ShopScript.gd::GDScript::-1::1699235451::0::1::::<>Node2D<>::
+MainPage.gd::GDScript::-1::1701192398::0::1::::<>Node2D<>::
+Mineração.gd::GDScript::-1::1701192398::0::1::::<>Node2D<>::
+OpcaoUpgrade.gd::GDScript::-1::1701305499::0::1::::<>Node2D<>::
+PersonagemLoja.gd::GDScript::-1::1699235916::0::1::::<>Node2D<>::
+ShopScript.gd::GDScript::-1::1701192398::0::1::::<>Node2D<>::
 Temple.gd::GDScript::-1::1701312489::0::1::::<>Node2D<>::
 TempleSound.gd::GDScript::-1::1699232493::0::1::::<>Node2D<>::
