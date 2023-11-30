@@ -15,6 +15,10 @@ var ItemHud
 var Pause
 var PlayerMining
 
+var Tower
+var Pool
+var Center
+
 var startNode
 
 func _process(delta):

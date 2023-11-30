@@ -6,6 +6,9 @@ var nextHealDealy=0.1
 
 var playerInArea=false
 
+func _ready():
+	Global.Pool=self
+
 func _process(delta):
 	if playerInArea and !nextHealDelayPlayer:
 		nextHealDelayPlayer=true

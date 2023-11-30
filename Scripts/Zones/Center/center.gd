@@ -11,6 +11,9 @@ var heal=10
 var nextHealDelay=false
 var nextHealDealy=0.1
 
+func _ready():
+	Global.Center=self
+
 func _process(delta):
 	if (hp<=0):
 		hp=0
