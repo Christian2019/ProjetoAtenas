@@ -13,6 +13,7 @@ var LevelUp
 var ItemController
 var ItemHud
 var Pause
+var PlayerMining
 
 var startNode
 

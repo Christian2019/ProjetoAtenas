@@ -2,7 +2,7 @@ extends Node2D
 
 var mining_max_duration_frames = 2*60
 
-var wave = 1
+var wave = 11
 var maxWave=20
 
 var timer = 0
@@ -69,7 +69,7 @@ func spawnX(enemy):
 	
 func spawnGoblin():
 	var x = RandomNumberGenerator.new().randi_range(0, 99)
-	var chance = 2
+	var chance = 50
 	if (x<chance):
 		spawnX(PreLoads.id002.instantiate())	
 

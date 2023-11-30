@@ -60,6 +60,8 @@ var dracma=1000000
 var dracmaBag=0
 
 #Farming
+var itemsCarriage = []
+var MaxCarriage = 4
 var carryingItem
 
 var contactQuadrants = []
@@ -104,11 +106,9 @@ func _process(__delta):
 	animationController()
 	commandController()	
 	getCloserQuadrant()
-	
-	mining()
+	Global.PlayerMining.mining(farming,playerRight,closerQuadrant)
 	feedback()
-	
-	#contruction()
+
 
 func multiplierController():
 	maxHp=baseMaxHp*(1+maxHpPercentBonus)
@@ -361,30 +361,6 @@ func getCloserQuadrant():
 	if (closerQuadrant!=null):
 		closerQuadrant.get_node("ColorRect").visible=true
 		
-func mining():
-	if (!farming):
-		return
-		
-	if Input.is_action_pressed("Attack1"):
-		if (playerRight):
-			$CutAnimation.flip_h=false
-		else:
-			$CutAnimation.flip_h=true
-		$CutAnimation.play()
-		if closerQuadrant!=null:
-			if closerQuadrant.get_node("Resource").visible:
-				closerQuadrant.get_node("Resource").visible=false
-				var collectable_instance = PreLoads.collectable.instantiate()
-				
-				if (closerQuadrant.get_node("Resource").animation=="wood"):
-					collectable_instance.get_node("AnimatedSprite2D").animation="wood"
-				elif (closerQuadrant.get_node("Resource").animation=="gold"):
-					collectable_instance.get_node("AnimatedSprite2D").animation="gold"
-				elif (closerQuadrant.get_node("Resource").animation=="stone"):
-					collectable_instance.get_node("AnimatedSprite2D").animation="stone"
-				
-				collectable_instance.global_position=closerQuadrant.get_node("Resource").global_position
-				Global.Game.get_node("Instances/Collectable_instances").add_child(collectable_instance)	
 
 func feedback():
 	if (feedBackAtive):
@@ -406,14 +382,6 @@ func activateFeedback():
 func disableFeeback():
 	feedBackAtive=false
 	modulate.a=1
-
-func contruction():
-	if (Input.is_action_just_pressed("Turret")):
-		if (closerQuadrant!=null and closerQuadrant.allowToConstruct):
-			var tower_instance = PreLoads.tower.instantiate()
-			tower_instance.position = closerQuadrant.position
-			closerQuadrant.tower = tower_instance
-			get_parent().get_node("Towers").add_child(tower_instance)
 
 func _on_body_area_entered(area):
 	if area.get_parent().name == "Center":
