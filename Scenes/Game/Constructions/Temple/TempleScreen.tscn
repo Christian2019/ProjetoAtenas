@@ -613,6 +613,7 @@ theme_override_font_sizes/font_size = 25
 text = "2"
 
 [node name="For" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+layout_mode = 0
 offset_left = 139.0
 offset_top = 161.0
 offset_right = 226.0
@@ -624,6 +625,7 @@ text = "For
 "
 
 [node name="For2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+layout_mode = 0
 offset_left = 138.0
 offset_top = 282.0
 offset_right = 225.0
@@ -635,6 +637,7 @@ text = "For
 "
 
 [node name="For3" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+layout_mode = 0
 offset_left = 140.0
 offset_top = 414.0
 offset_right = 227.0
