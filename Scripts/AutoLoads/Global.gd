@@ -16,6 +16,7 @@ var Pause
 var Center
 var Pool
 var Turret
+var PlayerMining
 
 var startNode
 

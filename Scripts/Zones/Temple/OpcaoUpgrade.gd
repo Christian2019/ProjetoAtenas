@@ -45,15 +45,15 @@ func upgradeCentro():
 				get_parent().get_parent().current_level_centro += 1
 				Global.player.wood -= qtdOres
 				Global.Center.heal = valor 
-				Global.Center.maxHp = valor * 1000
-				Global.Center.nextHealDealy = 0.08
+				Global.Center.maxHp = valor * 10000
+				Global.Center.nextHealDealy = 0.01
 		if(usaOres and qualOre=="stone"):
 			if(Global.player.wood>=qtdOres and get_parent().get_parent().current_level_centro == 1):
 				get_parent().get_parent().current_level_centro += 1
 				Global.player.stone -= qtdOres
 				Global.Center.heal = valor 
-				Global.Center.maxHp = valor * 1000
-				Global.Center.nextHealDealy = 0.065
+				Global.Center.maxHp = valor * 10000
+				Global.Center.nextHealDealy = 0.001
 		elif(usaOres and qualOre=="gold"):
 			match(get_parent().get_parent().current_level_centro):
 				2:
@@ -61,24 +61,24 @@ func upgradeCentro():
 						get_parent().get_parent().current_level_centro+=1 
 						Global.player.gold-=qtdOres
 						Global.Center.heal = valor 
-						Global.Center.maxHp = valor * 1000
-						Global.Center.nextHealDealy = 0.05
+						Global.Center.maxHp = valor * 10000
+						Global.Center.nextHealDealy = 0.0001
 						pass
 				3:
 					if(Global.player.gold>=qtdOres and Global.player.dracma>=qtdDracma ):
 						get_parent().get_parent().current_level_centro+=1 
 						Global.player.gold-=qtdOres
 						Global.Center.heal = valor 
-						Global.Center.maxHp = valor * 1000
-						Global.Center.nextHealDealy = 0.045
+						Global.Center.maxHp = valor * 10000
+						Global.Center.nextHealDealy = 0.00001
 						pass
 				4: 
 					if(Global.player.gold>=qtdOres): 
 						get_parent().get_parent().current_level_centro+=1 
 						Global.player.gold-=qtdOres
 						Global.Center.heal = valor 
-						Global.Center.maxHp = valor * 1000
-						Global.Center.nextHealDealy = 0.04
+						Global.Center.maxHp = valor * 10000
+						Global.Center.nextHealDealy = 0.000001
 						pass  
 						
 		pass
@@ -115,7 +115,7 @@ func upgradeCentro():
 				get_parent().get_parent().current_level_piscina += 1
 				Global.player.wood -= qtdOres
 				Global.Pool.heal = valor
-				Global.Center.nextHealDealy = 0.08
+				Global.Pool.nextHealDealy = 0.01
 				#Mudar animação
 				Global.Pool.get_node("AnimatedSprite2D").animation = "default"
 		if(usaOres and qualOre=="stone"):
@@ -123,7 +123,7 @@ func upgradeCentro():
 				get_parent().get_parent().current_level_piscina += 1
 				Global.player.stone -= qtdOres
 				Global.Pool.heal = valor
-				Global.Center.nextHealDealy = 0.065
+				Global.Pool.nextHealDealy = 0.001
 				#Mudar animação
 				Global.Pool.get_node("AnimatedSprite2D").animation = "default"
 		elif(usaOres and qualOre=="gold"):
@@ -133,7 +133,7 @@ func upgradeCentro():
 						get_parent().get_parent().current_level_piscina+=1 
 						Global.player.gold-=qtdOres
 						Global.Pool.heal = valor
-						Global.Center.nextHealDealy = 0.05
+						Global.Pool.nextHealDealy = 0.0001
 						#Mudar animação
 						Global.Pool.get_node("AnimatedSprite2D").animation = "default"
 						pass
@@ -142,7 +142,7 @@ func upgradeCentro():
 						get_parent().get_parent().current_level_piscina+=1 
 						Global.player.gold-=qtdOres
 						Global.Pool.heal = valor
-						Global.Center.nextHealDealy = 0.045
+						Global.Pool.nextHealDealy = 0.00001
 						#Mudar animação
 						Global.Pool.get_node("AnimatedSprite2D").animation = "default"
 						pass
@@ -151,7 +151,7 @@ func upgradeCentro():
 						get_parent().get_parent().current_level_piscina+=1 
 						Global.player.gold-=qtdOres
 						Global.Pool.heal = valor
-						Global.Center.nextHealDealy = 0.04
+						Global.Center.nextHealDealy = 0.000001
 						#Mudar animação
 						Global.Pool.get_node("AnimatedSprite2D").animation = "default"
 						pass 

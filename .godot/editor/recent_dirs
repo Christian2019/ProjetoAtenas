@@ -1,3 +1,5 @@
+res://Scripts/Classes/Warrior/Warrior_Mining
+res://Scenes/Game/Collectables
 res://Assets/Fonts
 res://Assets/Images/HUD/Loja
 res://Scripts/Game
@@ -18,6 +20,4 @@ res://Scripts/Game/ItemController
 res://Assets/Images/LevelUp
 res://Assets/Images/HUD/SkillSelection
 res://Scripts/Classes/Warrior/Warrior_Turret
-res://Assets/Images/Constructions/Teleporter_Sprites/Teleporter_Sprites
-res://Scripts/Classes/Warrior/Warrior_Turret/Hades
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

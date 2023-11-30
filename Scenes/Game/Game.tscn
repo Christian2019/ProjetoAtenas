@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cb86td4m1hepw"]
+[gd_scene load_steps=23 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="Script" path="res://Scripts/Game/Game.gd" id="1_mli3i"]
 [ext_resource type="PackedScene" uid="uid://bnbfdi1wf6kki" path="res://Scenes/Game/Math_controller/Math_controller.tscn" id="2_7njp2"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://djfg2b82q3e1v" path="res://Assets/Images/Background/Elementos/Lava.png" id="13_khncd"]
 [ext_resource type="Texture2D" uid="uid://b7hblsmp8buki" path="res://Assets/Images/Background/Elementos/Ice.png" id="14_1sbx1"]
 [ext_resource type="Texture2D" uid="uid://vr7n6dsjomd5" path="res://Assets/Images/Background/Elementos/Clouds.png" id="15_jndto"]
+[ext_resource type="PackedScene" uid="uid://bi0hqmgalqjs3" path="res://Scenes/Game/PlayerMining.tscn" id="16_q4pfr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ma21g"]
 animations = [{
@@ -139,3 +140,5 @@ visible = false
 offset_right = 2570.0
 offset_bottom = 2758.0
 color = Color(0, 0, 0, 0.647059)
+
+[node name="PlayerMining" parent="." instance=ExtResource("16_q4pfr")]
