@@ -44,6 +44,3 @@ func _on_defender_point_pressed():
 	#Paginas devem fazer a transicao aqui
 	transition(4)   
 
-
-func _on_itens_pressed():
-	pass # Replace with function body.

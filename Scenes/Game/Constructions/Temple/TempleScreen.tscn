@@ -244,7 +244,8 @@ offset_left = 6.0
 offset_top = 226.0
 offset_right = 69.0
 offset_bottom = 252.0
-text = "Torreta"
+text = "Turret
+"
 
 [node name="Torreta" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
 layout_mode = 2
@@ -445,7 +446,7 @@ position = Vector2(205, 132)
 scale = Vector2(0.437427, 0.43)
 texture = ExtResource("7_1621l")
 
-[node name="1For25Rock" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro"]
+[node name="GoldForStone" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro"]
 offset_left = -43.4358
 offset_top = -120.93
 offset_right = 159.564
@@ -454,17 +455,17 @@ texture_normal = ExtResource("8_ncnii")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/1For25Rock"]
+[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForStone"]
 layout_mode = 0
-offset_left = 62.0
-offset_top = 190.326
-offset_right = 149.0
-offset_bottom = 217.326
+offset_left = 98.3021
+offset_top = 190.697
+offset_right = 185.302
+offset_bottom = 217.697
 theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
-text = "1 for 25"
+text = "1"
 
-[node name="1For50Wood" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro"]
+[node name="GoldForWood" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro"]
 offset_left = 224.037
 offset_top = -113.953
 offset_right = 432.037
@@ -473,27 +474,36 @@ texture_normal = ExtResource("9_koeqf")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/1For50Wood"]
+[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForWood"]
 layout_mode = 0
-offset_left = 57.1525
-offset_top = 183.721
-offset_right = 155.152
-offset_bottom = 210.721
+offset_left = 98.3024
+offset_top = 181.395
+offset_right = 196.302
+offset_bottom = 208.395
 theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
-text = "1 for 50"
+text = "1"
 
 [node name="Wood" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro"]
 position = Vector2(-333.77, -2.32568)
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("10_s2kx6")
 
+[node name="Sold" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro"]
+offset_left = -265.187
+offset_top = 67.4418
+offset_right = -178.187
+offset_bottom = 94.4418
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "2"
+
 [node name="Pedra" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
 position = Vector2(205, 254)
 scale = Vector2(0.437427, 0.43)
 texture = ExtResource("7_1621l")
 
-[node name="25For1Gold" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra"]
+[node name="StoneForGold" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra"]
 offset_left = -25.1471
 offset_top = -90.6976
 offset_right = 139.853
@@ -502,7 +512,7 @@ texture_normal = ExtResource("10_s2kx6")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/25For1Gold"]
+[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForGold"]
 layout_mode = 0
 offset_left = 43.4358
 offset_top = 158.14
@@ -512,7 +522,7 @@ theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
 text = "25 for 1"
 
-[node name="5For12Wood" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra"]
+[node name="StoneForWood" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra"]
 offset_left = 224.037
 offset_top = -120.93
 offset_right = 432.037
@@ -521,7 +531,7 @@ texture_normal = ExtResource("9_koeqf")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/5For12Wood"]
+[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForWood"]
 layout_mode = 0
 offset_left = 59.4385
 offset_top = 188.372
@@ -536,6 +546,15 @@ position = Vector2(-331.482, -13.9536)
 scale = Vector2(0.0888162, 0.09)
 texture = ExtResource("8_ncnii")
 
+[node name="Sold" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra"]
+offset_left = -265.187
+offset_top = 67.4418
+offset_right = -178.187
+offset_bottom = 94.4418
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "2"
+
 [node name="Madeira" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
 position = Vector2(205, 385)
 scale = Vector2(0.437427, 0.43)
@@ -546,7 +565,7 @@ position = Vector2(-329.191, 2.32715)
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("9_koeqf")
 
-[node name="50For1Gold" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira"]
+[node name="WoodForGold" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira"]
 offset_left = -36.5775
 offset_top = -100.0
 offset_right = 128.422
@@ -555,7 +574,7 @@ texture_normal = ExtResource("10_s2kx6")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/50For1Gold"]
+[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForGold"]
 layout_mode = 0
 offset_left = 50.2941
 offset_top = 169.767
@@ -565,7 +584,7 @@ theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
 text = "50 for 1"
 
-[node name="25For1Rock" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira"]
+[node name="WoodForStone" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira"]
 offset_left = 233.0
 offset_top = -119.0
 offset_right = 423.0
@@ -574,7 +593,7 @@ texture_normal = ExtResource("8_ncnii")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/25For1Rock"]
+[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForStone"]
 layout_mode = 0
 offset_left = 48.1898
 offset_top = 186.442
@@ -583,6 +602,48 @@ offset_bottom = 213.442
 theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
 text = "25 for 1"
+
+[node name="Sold" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira"]
+offset_left = -265.187
+offset_top = 67.4418
+offset_right = -178.187
+offset_bottom = 94.4418
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "2"
+
+[node name="For" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+offset_left = 139.0
+offset_top = 161.0
+offset_right = 226.0
+offset_bottom = 188.0
+scale = Vector2(0.437427, 0.43)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "For
+"
+
+[node name="For2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+offset_left = 138.0
+offset_top = 282.0
+offset_right = 225.0
+offset_bottom = 309.0
+scale = Vector2(0.437427, 0.43)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "For
+"
+
+[node name="For3" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+offset_left = 140.0
+offset_top = 414.0
+offset_right = 227.0
+offset_bottom = 441.0
+scale = Vector2(0.437427, 0.43)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "For
+"
 
 [node name="ItemHUD" parent="BG/SHOP/MINHAS_COISAS___TROCA" instance=ExtResource("11_ux1aq")]
 visible = false
@@ -1202,7 +1263,7 @@ theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
 theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
 theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
-text = "Mineração"
+text = "Mining"
 flat = true
 
 [node name="Personagem" type="Button" parent="BG/MenuPrincipal/Abas"]
@@ -1216,7 +1277,7 @@ theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
 theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
 theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
-text = "Personagem"
+text = "Character"
 flat = true
 
 [node name="Defender Point" type="Button" parent="BG/MenuPrincipal/Abas"]
@@ -1233,12 +1294,12 @@ theme_override_font_sizes/font_size = 25
 text = "Defender Point"
 flat = true
 
-[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/1For25Rock" to="BG/SHOP" method="_on_trade_20_stone_pressed"]
-[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/1For50Wood" to="BG/SHOP" method="_on_trade_100_wood_pressed"]
-[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/25For1Gold" to="BG/SHOP" method="_on_trade_1_gold_pressed"]
-[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/5For12Wood" to="BG/SHOP" method="_on_trade_50_wood_pressed"]
-[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/50For1Gold" to="BG/SHOP" method="_on_trade_wood_pressed"]
-[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/25For1Rock" to="BG/SHOP" method="_on_trade_wood_stone_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForStone" to="BG/SHOP" method="_on_gold_for_stone_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForWood" to="BG/SHOP" method="_on_gold_for_wood_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForGold" to="BG/SHOP" method="_on_stone_for_gold_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForWood" to="BG/SHOP" method="_on_stone_for_wood_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForGold" to="BG/SHOP" method="_on_wood_for_gold_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForStone" to="BG/SHOP" method="_on_wood_for_stone_pressed"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/MinhasCoisas" to="BG/SHOP" method="_on_minhas_coisas_pressed"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/Troca" to="BG/SHOP" method="_on_troca_pressed"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/Itens" to="BG/SHOP" method="_on_itens_pressed"]
