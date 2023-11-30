@@ -1,11 +1,12 @@
 extends Node2D
  
 var can_break = true
+var damage_mining = 0.5 
 
 func _ready():
 	Global.PlayerMining = self
 
-func mining(farming,playerRight,closerQuadrant,damage_mining):
+func mining(farming,playerRight,closerQuadrant):
 		if (!farming):
 			return
 		

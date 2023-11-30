@@ -161,7 +161,7 @@ func upgradeMineracao():
 		print()
 		if(qtdDracma <= Global.player.dracma): 
 			get_parent().get_parent().current_level_Power+=1 
-			Global.player.damage_mining = valor 
+			Global.PlayerMining.damage_mining = valor 
 			Global.player.dracma -= qtdDracma
 	elif(whatUpgrades=="Bag"):  
 		if(qtdDracma <= Global.player.dracma):

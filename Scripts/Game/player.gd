@@ -63,8 +63,7 @@ var dracmaBag=0
 #Farming
 var carryingItem 
 var itemsCarriage = []
-var MaxCarriage = 1
-var damage_mining = 0.5 
+var MaxCarriage = 1 
 
 var contactQuadrants = []
 var closerQuadrant 
@@ -109,7 +108,7 @@ func _process(__delta):
 	commandController()	
 	getCloserQuadrant()
 	
-	Global.PlayerMining.mining(farming,playerRight,closerQuadrant,damage_mining)
+	Global.PlayerMining.mining(farming,playerRight,closerQuadrant)
 	feedback() 
 	
 	#contruction()
