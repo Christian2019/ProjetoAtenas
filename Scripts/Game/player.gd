@@ -23,7 +23,7 @@ var armor=0
 var dodge=0.0
 var maxDodge=70
 
-var baseMoveSpeed=5.0
+var baseMoveSpeed=4.0
 var move_Speed = baseMoveSpeed
 var moveSpeedPercentBonus=0
 

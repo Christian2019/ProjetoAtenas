@@ -69,7 +69,7 @@ func spawnX(enemy):
 	
 func spawnGoblin():
 	var x = RandomNumberGenerator.new().randi_range(0, 99)
-	var chance = 50
+	var chance = 2
 	if (x<chance):
 		spawnX(PreLoads.id002.instantiate())	
 

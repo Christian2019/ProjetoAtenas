@@ -133,22 +133,22 @@ func dropIten(tier2Change,tier3Change,tier4Change,element):
 	var tier
 	var v=100
 	var t4=v*tier4Change*(1+Global.player.luck)
-	var t3=v*tier4Change*(1+Global.player.luck)
-	var t2=v*tier4Change*(1+Global.player.luck)
-	
+	var t3=v*tier3Change*(1+Global.player.luck)
+	var t2=v*tier2Change*(1+Global.player.luck)
+		
 	var rng = RandomNumberGenerator.new()
-	var r=rng.randi_range(0, v)
-	if (r<=t4):
+	var r=rng.randi_range(0, v-1)
+	if (r<t4):
 		tier=4
 	else:
 		v-=t4
-		r=rng.randi_range(0, v)
-		if (r<=t3):
+		r=rng.randi_range(0, v-1)
+		if (r<t3):
 			tier=3
 		else:
 			v-=t3
-			r=rng.randi_range(0, v)
-			if (r<=t2):
+			r=rng.randi_range(0, v-1)
+			if (r<t2):
 				tier=2
 			else:
 				tier=1
@@ -165,7 +165,6 @@ func dropIten(tier2Change,tier3Change,tier4Change,element):
 		itens=PreLoads.itens_tier4
 		
 	var item = itens[rng.randi_range(0, itens.size()-1)].instantiate()
-	#var item = PreLoads.itens_tier1[0].instantiate()
 	item.get_node("Item").visible=false
 	Global.Game.get_node("Instances/Itens").add_child(item)
 	item.global_position=element.global_position

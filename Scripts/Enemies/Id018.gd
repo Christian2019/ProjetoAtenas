@@ -104,7 +104,8 @@ func die():
 		var dracma = PreLoads.dracma.instantiate()
 		dracma.global_position=global_position
 		Global.Game.get_node("Instances/Dracmas").add_child(dracma)
-
+	
+	Global.ItemController.dropIten(0,0,1,self)
 	#Animacao de morte
 	call_deferred("queue_free")
 
