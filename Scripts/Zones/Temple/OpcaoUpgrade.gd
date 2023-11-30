@@ -208,7 +208,7 @@ func upgradePersonagem():
 						Global.player.gold-=qtdOres
 						Global.player.percentDamage = valor
 						Global.player.baseDamage = valor
-						Global.player.percentCritDamage = valor*0
+						Global.player.percentCritDamage = valor*0.1
 						pass
 				4: 
 					if(Global.player.gold>=qtdOres):
@@ -217,7 +217,7 @@ func upgradePersonagem():
 						Global.player.gold-=qtdOres
 						Global.player.percentDamage = valor
 						Global.player.baseDamage = valor
-						Global.player.percentCritDamage = valor*0
+						Global.player.percentCritDamage = valor*0.1
 						pass
 	if(whatUpgrades=="Defense"):  
 		var current_level_defense = get_parent().get_parent().current_level_defense

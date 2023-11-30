@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3wvfc3l1iq20"]
+
+[ext_resource type="Script" path="res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.gd" id="1_docjh"]
+
+[node name="CharacterOptions" type="Node2D"]
+script = ExtResource("1_docjh")

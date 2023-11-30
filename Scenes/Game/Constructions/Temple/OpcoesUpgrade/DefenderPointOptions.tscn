@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpieqc71pk5sp"]
+
+[ext_resource type="Script" path="res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/DefenderPointOptions.gd" id="1_uky6p"]
+
+[node name="DefenderPointOptions" type="Node2D"]
+script = ExtResource("1_uky6p")
