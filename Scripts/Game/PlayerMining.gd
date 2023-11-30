@@ -24,9 +24,12 @@ func mining(farming,playerRight,closerQuadrant):
 					Global.timerCreator("activateBreak",0.5,[],self)
 					if(closerQuadrant.life_till_break <= 0):
 						closerQuadrant.get_node("Resource").visible=false 
+						closerQuadrant.life_till_break=0
 						
 						var collectable_instance = PreLoads.collectable.instantiate()
 						collectable_instance.value=closerQuadrant.value
+						
+						itenDrop(closerQuadrant)
 						
 						if (closerQuadrant.get_node("Resource").animation=="wood"):
 							collectable_instance.get_node("AnimatedSprite2D").animation="wood"
@@ -43,3 +46,10 @@ func mining(farming,playerRight,closerQuadrant):
 
 func activateBreak():
 		can_break=true
+		
+func itenDrop(closerQuadrant):
+	var chance=10
+	var rng = RandomNumberGenerator.new().randi_range(0, 99)
+	
+	if (rng<chance):
+		Global.ItemController.dropIten(0.3,0.2,0.1,closerQuadrant.get_node("Resource"))

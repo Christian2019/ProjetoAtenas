@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Game/Game.gd" id="1_mli3i"]
 [ext_resource type="PackedScene" uid="uid://bnbfdi1wf6kki" path="res://Scenes/Game/Math_controller/Math_controller.tscn" id="2_7njp2"]
-[ext_resource type="PackedScene" uid="uid://bi0hqmgalqjs3" path="res://Scenes/Game/PlayerMining.tscn" id="2_h6507"]
+[ext_resource type="PackedScene" uid="uid://bi0hqmgalqjs3" path="res://Scenes/Game/Mining/PlayerMining.tscn" id="2_h6507"]
 [ext_resource type="PackedScene" uid="uid://d2y033wavrob3" path="res://Scenes/Game/Wave_controller.tscn" id="2_ixmr8"]
 [ext_resource type="PackedScene" uid="uid://cybhysdkyjmx5" path="res://Scenes/Game/SoundController.tscn" id="3_1hxhr"]
 [ext_resource type="PackedScene" uid="uid://bqji3jr451ges" path="res://Scenes/Game/Mining/matriz.tscn" id="4_di3q4"]

@@ -16,7 +16,8 @@ func appendItem(item):
 	var i = {"item": item}
 	itemEquipped.append(i)
 	item.addFunction()
-	Global.ItemHud.update(item)
+	Global.ItemHud.update(item.duplicate())
+	Global.ItemHudTempleShop.update(item.duplicate())
 
 func appendItemBag(item):
 	var i = {"item": item.duplicate()}

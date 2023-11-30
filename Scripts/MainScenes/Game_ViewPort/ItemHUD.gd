@@ -33,9 +33,6 @@ func _process(delta):
 		
 
 func update(item):
-	if (get_parent().name=="ItensHud"):
-		Global.ItemHudTempleShop.update(item.duplicate())
-		
 	$SubViewportContainer/SubViewport/Itens.add_child(item)
 	var columPosition=0
 	line=0
