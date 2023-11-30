@@ -1,8 +1,8 @@
-ColorRect
 Node2D
-Timer
 Sprite2D
 AnimatedSprite2D
+ColorRect
+Timer
 Label
 VideoStreamPlayer
 SubViewport

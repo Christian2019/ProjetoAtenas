@@ -1,3 +1,6 @@
+res://Assets/Images/HUD/Ultimates
+res://Assets/Images/HUD/SkillSelection/Divine
+res://Assets/Images/Scrolls
 res://Assets/Images/Enemies/id005
 res://Scripts/Game/ItemController/Itens/tier4
 res://Scripts/Game/ItemController/Itens/tier3
@@ -17,7 +20,4 @@ res://Assets/Images/Itens/Items/Ares'_Shield
 res://Assets/Images/Constructions
 res://Scripts/Game
 res://Assets/Images/Itens/background
-res://Scripts/MainScenes
-res://Assets/Images/Loading
-res://Scripts
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

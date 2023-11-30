@@ -1,9 +1,3 @@
 res://default_env.tres
-res://Scenes/Game/Mining/PlayerMining.tscn
-res://Scenes/MainScenes/Game_ViewPort.tscn
-res://Scenes/Game/Pause.tscn
-res://Scenes/Game/Mining/quadrant.tscn
-res://Scenes/Game/Enemies/Id002.tscn
-res://Scenes/Game/Wave_controller.tscn
-res://Scenes/Game/Constructions/Temple/TempleScreen.tscn
-res://Scenes/Game/Constructions/Temple/OpcaoUpgrade.tscn
+res://Scenes/Game/Scrolls/ScrollHud.tscn
+res://Scenes/Game/Scrolls/Scroll.tscn
