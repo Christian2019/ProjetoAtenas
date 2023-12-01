@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://crh5gyee5b16b"]
 
-[ext_resource type="Script" path="res://Scripts/Game/Pause.gd" id="1_8p0jy"]
 [ext_resource type="Texture2D" uid="uid://dsrqih1k0sd7s" path="res://Assets/Images/Pause/PauseMenu.png" id="1_qasa2"]
+[ext_resource type="Script" path="res://Scripts/Game/Pause/Pause.gd" id="1_rpavg"]
 [ext_resource type="Texture2D" uid="uid://b00lvg3j6tocl" path="res://Assets/Images/Pause/OptionsBG.png" id="3_7d2j2"]
 [ext_resource type="Texture2D" uid="uid://debbanjs23csa" path="res://Assets/Images/Menu/Grabber.png" id="4_sutky"]
 [ext_resource type="Texture2D" uid="uid://dpr3ku2wrs4kf" path="res://Assets/Images/Menu/BgSlider.png" id="5_sd2jm"]
@@ -46,7 +46,7 @@ texture = ExtResource("5_sd2jm")
 texture = ExtResource("5_sd2jm")
 
 [node name="Pause" type="Node2D"]
-script = ExtResource("1_8p0jy")
+script = ExtResource("1_rpavg")
 
 [node name="BG" type="ColorRect" parent="."]
 offset_right = 1024.0
