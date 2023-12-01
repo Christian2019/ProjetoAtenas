@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b8treb1euqxo8"]
+[gd_scene load_steps=20 format=3 uid="uid://b8treb1euqxo8"]
 
 [ext_resource type="Texture2D" uid="uid://yjcswgm42ljb" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00001.png" id="1_kq8nj"]
 [ext_resource type="Texture2D" uid="uid://bliuur2u7r03c" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00004.png" id="2_m5psp"]
@@ -60,6 +60,23 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("10_rmclu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hanoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6ddgs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_26i73"]
+animations = [{
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("9_g6vgt")
 }, {
 "duration": 1.0,
@@ -85,121 +102,372 @@ animations = [{
 [node name="Scroll" type="Node2D"]
 
 [node name="Divine" type="AnimatedSprite2D" parent="."]
-position = Vector2(12.5, -9.50001)
-scale = Vector2(2.9375, 1.21394)
+position = Vector2(105, 50)
+scale = Vector2(3.62971, 1.5)
 sprite_frames = SubResource("SpriteFrames_kl772")
-frame_progress = 0.0519289
+autoplay = "default"
+frame_progress = 0.502409
 
 [node name="Scroll" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.827451)
+position = Vector2(73.3333, 55)
+scale = Vector2(1.18333, 1.18333)
 sprite_frames = SubResource("SpriteFrames_1y00j")
 frame = 4
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-modulate = Color(0.129412, 0.129412, 0.129412, 1)
-position = Vector2(-168, 86)
-scale = Vector2(0.340067, 0.340067)
+[node name="Big" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Big"]
+position = Vector2(-174.5, -93.4415)
+scale = Vector2(0.328283, 0.245606)
+sprite_frames = SubResource("SpriteFrames_mktgu")
+frame = 1
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Big"]
+position = Vector2(315, -93)
+scale = Vector2(0.328283, 0.244203)
 sprite_frames = SubResource("SpriteFrames_mktgu")
 
-[node name="Labels" type="Node2D" parent="."]
+[node name="Labels" type="Node2D" parent="Big"]
+position = Vector2(67, 25)
 
-[node name="Scroll" type="Label" parent="Labels"]
-offset_left = -26.0
-offset_top = -198.0
-offset_right = 27.0
-offset_bottom = -175.0
+[node name="Scroll" type="Label" parent="Big/Labels"]
+offset_left = -59.0
+offset_top = -201.0
+offset_right = 17.0
+offset_bottom = -171.0
 theme_override_colors/font_color = Color(0.917647, 0.886275, 0.564706, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_250qx")
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 27
 text = "scroll"
 
-[node name="God" type="Label" parent="Labels"]
-offset_left = -251.0
-offset_top = -183.0
-offset_right = 289.0
-offset_bottom = -161.0
-theme_override_colors/font_color = Color(1, 1, 0, 1)
+[node name="God" type="Node2D" parent="Big/Labels"]
+position = Vector2(-96, -158)
+
+[node name="var" type="Label" parent="Big/Labels/God"]
+offset_right = 540.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0.917647, 0.886275, 0.564706, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_250qx")
 theme_override_font_sizes/font_size = 19
-text = "god: zeus
+text = "god: 
 "
 autowrap_mode = 2
 
-[node name="SkillType" type="Label" parent="Labels"]
-offset_left = -250.0
-offset_top = -160.0
-offset_right = 291.0
-offset_bottom = -138.0
+[node name="value" type="Label" parent="Big/Labels/God"]
+offset_left = 37.0
+offset_right = 577.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0.278431, 0.494118, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_250qx")
 theme_override_font_sizes/font_size = 19
-text = "skill type: Attack1"
+text = "poseidon
+"
 autowrap_mode = 2
 
-[node name="SD" type="Label" parent="Labels"]
-offset_left = -249.0
-offset_top = -137.0
-offset_right = 292.0
-offset_bottom = -93.0
+[node name="value2" type="Label" parent="Big/Labels/God"]
+offset_left = 109.0
+offset_right = 649.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0.278431, 0.494118, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_250qx")
 theme_override_font_sizes/font_size = 19
-text = "sd:10"
+text = "&
+"
 autowrap_mode = 2
 
-[node name="Cooldown" type="Label" parent="Labels"]
-offset_left = -249.0
-offset_top = -116.0
-offset_right = 292.0
-offset_bottom = -72.0
+[node name="value3" type="Label" parent="Big/Labels/God"]
+offset_left = 124.0
+offset_right = 664.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0.458824, 0, 0.768627, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_250qx")
 theme_override_font_sizes/font_size = 19
-text = "cooldown: 0.5 s"
+text = "hades
+"
 autowrap_mode = 2
 
-[node name="Active" type="Label" parent="Labels"]
-offset_left = -248.0
-offset_top = -94.0
-offset_right = 293.0
-offset_bottom = -50.0
+[node name="SkillType" type="Node2D" parent="Big/Labels"]
+position = Vector2(-96, -135)
+
+[node name="var" type="Label" parent="Big/Labels/SkillType"]
+offset_right = 540.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0.917647, 0.886275, 0.564706, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_250qx")
 theme_override_font_sizes/font_size = 19
-text = "active: your Attack emits a chain-lightning that deals 10 (sd) when you damage an enemy. it will produce 1 extra bounce"
+text = "skill type:
+"
 autowrap_mode = 2
 
-[node name="Passive" type="Label" parent="Labels"]
-offset_left = -57.0
-offset_top = -34.0
-offset_right = 283.0
-offset_bottom = 10.0
+[node name="value" type="Label" parent="Big/Labels/SkillType"]
+offset_left = 86.0
+offset_right = 626.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_250qx")
 theme_override_font_sizes/font_size = 19
-text = "passive: gain 1 damage"
+text = "Attack1
+"
 autowrap_mode = 2
 
-[node name="LegendaryDivineBonus" type="Label" parent="Labels"]
-offset_left = -54.0
-offset_top = -4.0
-offset_right = 282.0
-offset_bottom = 40.0
+[node name="SD" type="Node2D" parent="Big/Labels"]
+position = Vector2(-96, -112)
+
+[node name="var" type="Label" parent="Big/Labels/SD"]
+offset_right = 540.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0.917647, 0.886275, 0.564706, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_250qx")
 theme_override_font_sizes/font_size = 19
-text = "legendary bonus: enemies hit by your attack1 get electrified* (50%)"
+text = "sd:
+"
 autowrap_mode = 2
 
-[node name="ExtraInfo" type="Label" parent="Labels"]
-offset_left = -56.0
-offset_top = 43.0
-offset_right = 280.0
-offset_bottom = 87.0
+[node name="value" type="Label" parent="Big/Labels/SD"]
+offset_left = 29.0
+offset_right = 569.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_250qx")
 theme_override_font_sizes/font_size = 19
-text = "extra info: * electrified: receive extra damage from all sources for 5 seconds"
+text = "10
+"
 autowrap_mode = 2
+
+[node name="Cooldown" type="Node2D" parent="Big/Labels"]
+position = Vector2(-96, -87)
+
+[node name="var" type="Label" parent="Big/Labels/Cooldown"]
+offset_right = 540.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0.917647, 0.886275, 0.564706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "cooldown:
+"
+autowrap_mode = 2
+
+[node name="value" type="Label" parent="Big/Labels/Cooldown"]
+offset_left = 90.0
+offset_right = 630.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "0.5 s"
+autowrap_mode = 2
+
+[node name="Passive" type="Node2D" parent="Big/Labels"]
+position = Vector2(-96, -63)
+
+[node name="var" type="Label" parent="Big/Labels/Passive"]
+offset_right = 540.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0.917647, 0.886275, 0.564706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "passive:
+"
+autowrap_mode = 2
+
+[node name="var2" type="Label" parent="Big/Labels/Passive"]
+offset_top = 19.0
+offset_right = 540.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.917647, 0.886275, 0.564706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "passive2:
+"
+autowrap_mode = 2
+
+[node name="value" type="Label" parent="Big/Labels/Passive"]
+offset_left = 64.0
+offset_right = 604.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0, 0.894118, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "+1 damage"
+autowrap_mode = 2
+
+[node name="value2" type="Label" parent="Big/Labels/Passive"]
+offset_left = 74.0
+offset_top = 20.0
+offset_right = 614.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0, 0.894118, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "+30% damage"
+autowrap_mode = 2
+
+[node name="Active" type="Node2D" parent="Big/Labels"]
+position = Vector2(-336, -18)
+
+[node name="var" type="Label" parent="Big/Labels/Active"]
+offset_right = 540.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0.917647, 0.886275, 0.564706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "active: "
+autowrap_mode = 2
+
+[node name="var2" type="Label" parent="Big/Labels/Active"]
+offset_top = 50.0
+offset_right = 540.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.917647, 0.886275, 0.564706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "active2: "
+autowrap_mode = 2
+
+[node name="value" type="Label" parent="Big/Labels/Active"]
+offset_left = 54.0
+offset_right = 680.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "your Attack emits a chain-lightning that deals 10 (sd) when you damage an enemy. it will produce 1 extra bounce"
+autowrap_mode = 2
+
+[node name="value2" type="Label" parent="Big/Labels/Active"]
+offset_left = 65.0
+offset_top = 50.0
+offset_right = 683.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "your Attack emits a chain-lightning that deals 10 (sd) when you damage an enemy. it will produce 1 extra bounce"
+autowrap_mode = 2
+
+[node name="LegendaryDivineBonus" type="Node2D" parent="Big/Labels"]
+position = Vector2(-338, 87)
+
+[node name="var" type="Label" parent="Big/Labels/LegendaryDivineBonus"]
+offset_right = 540.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0.917647, 0.886275, 0.564706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "legendary bonus:"
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="var2" type="Label" parent="Big/Labels/LegendaryDivineBonus"]
+visible = false
+offset_top = 50.0
+offset_right = 540.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.917647, 0.886275, 0.564706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "legendary bonus2:"
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="value" type="Label" parent="Big/Labels/LegendaryDivineBonus"]
+offset_left = 135.0
+offset_right = 682.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "After 20 hits with attack1 your next attack2 cause heavyDamage* (20x/50x) 
+"
+autowrap_mode = 2
+
+[node name="value2" type="Label" parent="Big/Labels/LegendaryDivineBonus"]
+offset_left = 147.0
+offset_top = 50.0
+offset_right = 682.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "After 20 hits with attack1 your next attack2 cause heavyDamage* (20x/50x) 
+"
+autowrap_mode = 2
+
+[node name="ExtraInfo" type="Node2D" parent="Big/Labels"]
+position = Vector2(-336, 183)
+
+[node name="var" type="Label" parent="Big/Labels/ExtraInfo"]
+offset_right = 540.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0.917647, 0.886275, 0.564706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "extra info:"
+autowrap_mode = 2
+
+[node name="var2" type="Label" parent="Big/Labels/ExtraInfo"]
+offset_top = 50.0
+offset_right = 540.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.917647, 0.886275, 0.564706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "extra info2:"
+autowrap_mode = 2
+
+[node name="value" type="Label" parent="Big/Labels/ExtraInfo"]
+offset_left = 94.0
+offset_right = 680.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "* electrified: receive extra damage from all sources for 5 seconds"
+autowrap_mode = 2
+
+[node name="value2" type="Label" parent="Big/Labels/ExtraInfo"]
+offset_left = 102.0
+offset_top = 50.0
+offset_right = 694.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_250qx")
+theme_override_font_sizes/font_size = 19
+text = "receive extra damage from all sources for 5 seconds"
+autowrap_mode = 2
+
+[node name="Small" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Small"]
+position = Vector2(62, 55)
+scale = Vector2(0.641414, 0.641414)
+sprite_frames = SubResource("SpriteFrames_26i73")

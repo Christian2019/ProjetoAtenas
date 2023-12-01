@@ -201,9 +201,6 @@ scale = Vector2(0.55, 0.51)
 position = Vector2(768, 5)
 scale = Vector2(0.88, 1.372)
 
-[connection signal="pressed" from="Pause/Continue" to="." method="_on_continue_pressed"]
-[connection signal="pressed" from="Pause/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Pause/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="OptionsMenu/Back" to="." method="_on_back_pressed"]
 [connection signal="focus_entered" from="OptionsMenu/MasterAudio" to="." method="_on_master_audio_focus_entered"]
 [connection signal="toggled" from="OptionsMenu/FullScreen" to="." method="_on_full_screen_toggled"]

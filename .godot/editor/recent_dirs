@@ -1,4 +1,6 @@
 res://Assets/Images/HUD/Ultimates
+res://Scripts/Game/ScrollController
+res://Assets/Images
 res://Assets/Images/HUD/SkillSelection/Divine
 res://Assets/Images/Scrolls
 res://Assets/Images/Enemies/id005
@@ -18,6 +20,4 @@ res://Assets/Images/Itens/Items/Atenas'_Spear
 res://Assets/Images/Itens/Items/Artemis'_Bow
 res://Assets/Images/Itens/Items/Ares'_Shield
 res://Assets/Images/Constructions
-res://Scripts/Game
-res://Assets/Images/Itens/background
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

@@ -16,6 +16,8 @@ var ItemHudTempleShop
 var Pause
 var PlayerMining
 
+var ScrollController
+
 var Tower
 var Pool
 var Center
