@@ -51,10 +51,10 @@ stretch_mode = 0
 
 [node name="Aquired" type="Label" parent="."]
 visible = false
-offset_left = 17.0
-offset_top = 32.0
-offset_right = 66.0
-offset_bottom = 52.0
+offset_left = 46.0
+offset_top = 61.0
+offset_right = 95.0
+offset_bottom = 81.0
 theme_override_fonts/font = ExtResource("2_081o6")
 text = "Aquired"
 

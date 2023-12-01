@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://bqduy4u8regjo"]
+[gd_scene load_steps=76 format=3 uid="uid://bqduy4u8regjo"]
 
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/MainPage.gd" id="1_n2wv5"]
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/ShopScript.gd" id="2_m5fe6"]
@@ -9,7 +9,6 @@
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/Mineração.gd" id="6_b0i47"]
 [ext_resource type="Texture2D" uid="uid://costnafwkrulb" path="res://Assets/Images/HUD/Loja/SilverPlace.png" id="6_m6do7"]
 [ext_resource type="Texture2D" uid="uid://ctvkf1u451ub3" path="res://Assets/Images/HUD/Loja/Slots.png" id="7_1621l"]
-[ext_resource type="PackedScene" uid="uid://12buwcnhifsh" path="res://Scenes/Game/Constructions/Temple/OpcaoUpgrade.tscn" id="7_ydes4"]
 [ext_resource type="Texture2D" uid="uid://ddp41lr3tim83" path="res://Assets/Images/HUD/Loja/Rock.png" id="8_ncnii"]
 [ext_resource type="Texture2D" uid="uid://2kytyugryrk4" path="res://Assets/Images/HUD/Loja/Wood.png" id="9_koeqf"]
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/Defender Point.gd" id="10_imkf7"]
@@ -35,15 +34,19 @@
 [ext_resource type="Texture2D" uid="uid://12y1urshsqad" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 26.png" id="27_52r08"]
 [ext_resource type="Texture2D" uid="uid://c1lvo03360ies" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/BronzeSword.png" id="29_kj5ic"]
 [ext_resource type="Texture2D" uid="uid://0rqev1k3nc4" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/BronzeDesativado.png" id="30_601cn"]
+[ext_resource type="PackedScene" uid="uid://b3wvfc3l1iq20" path="res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.tscn" id="31_0x8vq"]
 [ext_resource type="Texture2D" uid="uid://cprs05ls2ccdg" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/SilverSword.png" id="31_dstbv"]
 [ext_resource type="Texture2D" uid="uid://cliqkucmf383y" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/SilverDesativado.png" id="32_4s5u5"]
 [ext_resource type="Texture2D" uid="uid://b3kaswp8s6ai3" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/GoldSword.png" id="33_vhahw"]
 [ext_resource type="Texture2D" uid="uid://6utf8shl363i" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/GoldDesativado.png" id="34_1yfjh"]
+[ext_resource type="PackedScene" uid="uid://dpieqc71pk5sp" path="res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/DefenderPointOptions.tscn" id="34_utq1v"]
 [ext_resource type="Texture2D" uid="uid://c7b0ng1vnyyms" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/FinalSword.png" id="35_3kwhs"]
 [ext_resource type="Texture2D" uid="uid://pmexyd5fdvt8" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/FinalDesativado.png" id="36_lygfb"]
 [ext_resource type="Texture2D" uid="uid://djdvyofi1vk3r" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/SilverAbilities.png" id="37_iie34"]
+[ext_resource type="Texture2D" uid="uid://li4f6271nb5i" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/BronzeAbilities.png" id="38_pvqti"]
 [ext_resource type="Texture2D" uid="uid://ckimwulh442qa" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/SilverDesativado.png" id="38_xhpp4"]
 [ext_resource type="Texture2D" uid="uid://bp065xj2l43eq" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/GoldAbilites.png" id="39_lh6bu"]
+[ext_resource type="Texture2D" uid="uid://35v5a2t1s0x8" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/BronzeDesativado.png" id="39_rgovf"]
 [ext_resource type="Texture2D" uid="uid://dx7gjumu0kq6s" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/GoldDesativado.png" id="40_0bbi6"]
 [ext_resource type="Texture2D" uid="uid://dutmvvjo82fet" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/FinalAbilities.png" id="41_corjx"]
 [ext_resource type="Texture2D" uid="uid://mhnkfhok2b44" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/FinalDesativado.png" id="42_07mek"]
@@ -84,7 +87,6 @@ offset_bottom = 604.0
 color = Color(0.337255, 0.337255, 0.337255, 1)
 
 [node name="SHOP" type="Node2D" parent="BG"]
-visible = false
 position = Vector2(1, 0)
 script = ExtResource("2_m5fe6")
 
@@ -776,6 +778,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Tem certeza que quer comprar este item?"
 
 [node name="Mineração" type="Node2D" parent="BG"]
+visible = false
 script = ExtResource("6_b0i47")
 
 [node name="BackgroundUpgrade" type="Sprite2D" parent="BG/Mineração"]
@@ -792,6 +795,7 @@ whatUpgrades = "Bag"
 qtdDracma = 5000
 qtdMinerios = 10
 Minerio = "wood"
+bag_valor = 2.0
 texture_normal = ExtResource("20_i736o")
 texture_hover = ExtResource("21_j5gij")
 
@@ -801,6 +805,7 @@ whatUpgrades = "Bag"
 qtdDracma = 5000
 qtdMinerios = 10
 Minerio = "stone"
+bag_valor = 3.0
 texture_normal = ExtResource("22_d4qg2")
 texture_hover = ExtResource("23_hgliy")
 
@@ -810,6 +815,7 @@ whatUpgrades = "Bag"
 qtdDracma = 5000
 qtdMinerios = 10
 Minerio = "gold"
+bag_valor = 4.0
 texture_normal = ExtResource("24_c8jab")
 texture_hover = ExtResource("25_gnafc")
 
@@ -819,6 +825,7 @@ whatUpgrades = "Bag"
 qtdDracma = 5000
 qtdMinerios = 10
 Minerio = "gold"
+bag_valor = 5.0
 texture_normal = ExtResource("26_1mvhd")
 texture_hover = ExtResource("27_52r08")
 
@@ -831,6 +838,7 @@ whatUpgrades = "Power"
 qtdDracma = 5000
 qtdMinerios = 10
 Minerio = "wood"
+mining_valor = 1.0
 texture_normal = ExtResource("13_u8pyb")
 texture_hover = ExtResource("14_y7d4u")
 
@@ -873,102 +881,6 @@ position = Vector2(520, 323.5)
 scale = Vector2(0.530021, 0.504915)
 texture = ExtResource("11_lp50v")
 
-[node name="Level Attack" type="Node2D" parent="BG/Personagem"]
-position = Vector2(127, 24)
-
-[node name="Level1" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
-position = Vector2(64, 110)
-scale = Vector2(2, 2)
-whatUpgrades = "Attack"
-valor = 2.0
-textura = ExtResource("29_kj5ic")
-textura_disable = ExtResource("30_601cn")
-usaOres = true
-qualOre = "wood"
-qtdOres = 10
-
-[node name="Level2" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
-position = Vector2(231, 110)
-scale = Vector2(2, 2)
-whatUpgrades = "Attack"
-valor = 3.0
-textura = ExtResource("31_dstbv")
-textura_disable = ExtResource("32_4s5u5")
-usaOres = true
-qualOre = "stone"
-qtdOres = 10
-
-[node name="Level3" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
-position = Vector2(393, 110)
-scale = Vector2(2, 2)
-whatUpgrades = "Attack"
-valor = 4.0
-textura = ExtResource("33_vhahw")
-textura_disable = ExtResource("34_1yfjh")
-usaOres = true
-qualOre = "gold"
-qtdOres = 10
-qtdDracma = 700
-
-[node name="Level4" parent="BG/Personagem/Level Attack" instance=ExtResource("7_ydes4")]
-position = Vector2(553, 110)
-scale = Vector2(2, 2)
-whatUpgrades = "Attack"
-valor = 5.0
-textura = ExtResource("35_3kwhs")
-textura_disable = ExtResource("36_lygfb")
-usaOres = true
-qualOre = "gold"
-qtdOres = 20
-
-[node name="Level Defesa" type="Node2D" parent="BG/Personagem"]
-position = Vector2(104, 6)
-
-[node name="Level1" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
-position = Vector2(98, 367)
-scale = Vector2(2, 2)
-whatUpgrades = "Defense"
-valor = 2.0
-textura = ExtResource("37_iie34")
-textura_disable = ExtResource("38_xhpp4")
-usaOres = true
-qualOre = "wood"
-qtdOres = 10
-
-[node name="Level2" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
-position = Vector2(265, 367)
-scale = Vector2(2, 2)
-whatUpgrades = "Defense"
-valor = 3.0
-textura = ExtResource("37_iie34")
-textura_disable = ExtResource("38_xhpp4")
-usaOres = true
-qualOre = "stone"
-qtdOres = 10
-
-[node name="Level3" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
-position = Vector2(427, 367)
-scale = Vector2(2, 2)
-whatUpgrades = "Defense"
-valor = 4.0
-textura = ExtResource("39_lh6bu")
-textura_disable = ExtResource("40_0bbi6")
-usaOres = true
-qualOre = "gold"
-qtdOres = 15
-qtdDracma = 950
-
-[node name="Level4" parent="BG/Personagem/Level Defesa" instance=ExtResource("7_ydes4")]
-position = Vector2(587, 367)
-scale = Vector2(2, 2)
-whatUpgrades = "Defense"
-valor = 5.0
-textura = ExtResource("41_corjx")
-textura_disable = ExtResource("42_07mek")
-usaOres = true
-qualOre = "gold"
-qtdOres = 20
-
 [node name="Warning2" type="Button" parent="BG/Personagem"]
 visible = false
 offset_left = -42.0
@@ -1010,6 +922,120 @@ offset_bottom = 154.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Tem certeza que quer evoluir esta habilidade?"
 
+[node name="Level Attack" type="Node2D" parent="BG/Personagem"]
+position = Vector2(127, 24)
+
+[node name="Level1" parent="BG/Personagem/Level Attack" instance=ExtResource("31_0x8vq")]
+position = Vector2(64, 110)
+whatUpgrades = "Attack"
+qtdDracma = 7500
+qtdMinerios = 10
+Minerio = "wood"
+percentDamage = 2.0
+percentCritDamage = 0.12
+baseDamage = 2.0
+texture_normal = ExtResource("29_kj5ic")
+texture_hover = ExtResource("30_601cn")
+
+[node name="Level2" parent="BG/Personagem/Level Attack" instance=ExtResource("31_0x8vq")]
+position = Vector2(231, 110)
+whatUpgrades = "Attack"
+qtdDracma = 7500
+qtdMinerios = 10
+Minerio = "stone"
+percentDamage = 3.0
+percentCritDamage = 0.13
+baseDamage = 3.0
+texture_normal = ExtResource("31_dstbv")
+texture_hover = ExtResource("32_4s5u5")
+
+[node name="Level3" parent="BG/Personagem/Level Attack" instance=ExtResource("31_0x8vq")]
+position = Vector2(393, 110)
+whatUpgrades = "Attack"
+qtdDracma = 7500
+qtdMinerios = 10
+Minerio = "gold"
+percentDamage = 4.0
+percentCritDamage = 0.14
+baseDamage = 4.0
+texture_normal = ExtResource("33_vhahw")
+texture_hover = ExtResource("34_1yfjh")
+
+[node name="Level4" parent="BG/Personagem/Level Attack" instance=ExtResource("31_0x8vq")]
+position = Vector2(553, 110)
+whatUpgrades = "Attack"
+qtdDracma = 7500
+qtdMinerios = 10
+Minerio = "gold"
+percentDamage = 5.0
+percentCritDamage = 0.15
+baseDamage = 5.0
+texture_normal = ExtResource("35_3kwhs")
+texture_hover = ExtResource("36_lygfb")
+
+[node name="Level Defesa" type="Node2D" parent="BG/Personagem"]
+position = Vector2(104, 6)
+
+[node name="Level1" parent="BG/Personagem/Level Defesa" instance=ExtResource("31_0x8vq")]
+position = Vector2(87, 367)
+whatUpgrades = "Defense"
+qtdDracma = 7500
+qtdMinerios = 10
+Minerio = "wood"
+percentDamage = 2.0
+percentCritDamage = 0.12
+baseDamage = 2.0
+dodge = 2.0
+armor = 2.0
+maxDodge = 40.0
+texture_normal = ExtResource("38_pvqti")
+texture_hover = ExtResource("39_rgovf")
+
+[node name="Level2" parent="BG/Personagem/Level Defesa" instance=ExtResource("31_0x8vq")]
+position = Vector2(254, 367)
+whatUpgrades = "Defense"
+qtdDracma = 7500
+qtdMinerios = 10
+Minerio = "stone"
+percentDamage = 3.0
+percentCritDamage = 0.13
+baseDamage = 3.0
+dodge = 3.0
+armor = 3.0
+maxDodge = 50.0
+texture_normal = ExtResource("37_iie34")
+texture_hover = ExtResource("38_xhpp4")
+
+[node name="Level3" parent="BG/Personagem/Level Defesa" instance=ExtResource("31_0x8vq")]
+position = Vector2(416, 367)
+whatUpgrades = "Defense"
+qtdDracma = 7500
+qtdMinerios = 10
+Minerio = "gold"
+percentDamage = 4.0
+percentCritDamage = 0.14
+baseDamage = 4.0
+dodge = 4.0
+armor = 4.0
+maxDodge = 60.0
+texture_normal = ExtResource("39_lh6bu")
+texture_hover = ExtResource("40_0bbi6")
+
+[node name="Level4" parent="BG/Personagem/Level Defesa" instance=ExtResource("31_0x8vq")]
+position = Vector2(576, 367)
+whatUpgrades = "Defense"
+qtdDracma = 7500
+qtdMinerios = 10
+Minerio = "gold"
+percentDamage = 5.0
+percentCritDamage = 0.15
+baseDamage = 5.0
+dodge = 5.0
+armor = 5.0
+maxDodge = 70.0
+texture_normal = ExtResource("41_corjx")
+texture_hover = ExtResource("42_07mek")
+
 [node name="Defender Point" type="Node2D" parent="BG"]
 visible = false
 script = ExtResource("10_imkf7")
@@ -1022,161 +1048,139 @@ texture = ExtResource("44_a3duy")
 [node name="Sentinela" type="Node2D" parent="BG/Defender Point"]
 position = Vector2(128, -11)
 
-[node name="Level1" parent="BG/Defender Point/Sentinela" instance=ExtResource("7_ydes4")]
+[node name="Level1" parent="BG/Defender Point/Sentinela" instance=ExtResource("34_utq1v")]
 position = Vector2(64, 110)
-scale = Vector2(2, 2)
-areaUpgrades = 1
-whatUpgrades = "sentinelas"
-valor = 2.0
-textura = ExtResource("45_6voh0")
-textura_disable = ExtResource("46_lm8c7")
-usaOres = true
-qualOre = "wood"
-qtdOres = 10
+whatUpgrades = "Tower"
+qtdDracma = 2500
+qtdMinerios = 10
+Minerio = "wood"
+texture_normal = ExtResource("45_6voh0")
+texture_hover = ExtResource("46_lm8c7")
 
-[node name="Level2" parent="BG/Defender Point/Sentinela" instance=ExtResource("7_ydes4")]
+[node name="Level2" parent="BG/Defender Point/Sentinela" instance=ExtResource("34_utq1v")]
 position = Vector2(231, 110)
-scale = Vector2(2, 2)
-areaUpgrades = 1
-whatUpgrades = "sentinelas"
-valor = 3.0
-textura = ExtResource("47_onmd5")
-textura_disable = ExtResource("48_itqjg")
-usaOres = true
-qualOre = "stone"
-qtdOres = 10
+whatUpgrades = "Tower"
+qtdDracma = 4000
+qtdMinerios = 10
+Minerio = "stone"
+texture_normal = ExtResource("47_onmd5")
+texture_hover = ExtResource("48_itqjg")
 
-[node name="Level3" parent="BG/Defender Point/Sentinela" instance=ExtResource("7_ydes4")]
-position = Vector2(393, 110)
-scale = Vector2(2, 2)
-areaUpgrades = 1
-whatUpgrades = "sentinelas"
-valor = 4.0
-textura = ExtResource("49_6581t")
-textura_disable = ExtResource("50_vebq6")
-usaOres = true
-qualOre = "gold"
-qtdOres = 10
-qtdDracma = 750
+[node name="Level3" parent="BG/Defender Point/Sentinela" instance=ExtResource("34_utq1v")]
+position = Vector2(392, 110)
+whatUpgrades = "Tower"
+qtdDracma = 5500
+qtdMinerios = 10
+Minerio = "gold"
+texture_normal = ExtResource("49_6581t")
+texture_hover = ExtResource("50_vebq6")
 
-[node name="Level4" parent="BG/Defender Point/Sentinela" instance=ExtResource("7_ydes4")]
+[node name="Level4" parent="BG/Defender Point/Sentinela" instance=ExtResource("34_utq1v")]
 position = Vector2(553, 110)
-scale = Vector2(2, 2)
-areaUpgrades = 1
-whatUpgrades = "sentinelas"
-valor = 5.0
-textura = ExtResource("51_3sf1u")
-textura_disable = ExtResource("52_vbyfq")
-usaOres = true
-qualOre = "gold"
-qtdOres = 10
-qtdDracma = 50
+whatUpgrades = "Tower"
+qtdDracma = 7500
+qtdMinerios = 15
+Minerio = "gold"
+texture_normal = ExtResource("51_3sf1u")
+texture_hover = ExtResource("52_vbyfq")
 
 [node name="Centro" type="Node2D" parent="BG/Defender Point"]
 position = Vector2(100, -102)
 
-[node name="Level1" parent="BG/Defender Point/Centro" instance=ExtResource("7_ydes4")]
-position = Vector2(98, 367)
-scale = Vector2(2, 2)
-areaUpgrades = 1
-whatUpgrades = "centro"
-valor = 2.0
-textura = ExtResource("53_fyrnl")
-textura_disable = ExtResource("54_guh1t")
-usaOres = true
-qualOre = "wood"
-qtdOres = 10
+[node name="Level1" parent="BG/Defender Point/Centro" instance=ExtResource("34_utq1v")]
+position = Vector2(92, 367)
+whatUpgrades = "Center"
+qtdDracma = 2500
+qtdMinerios = 10
+Minerio = "wood"
+heal = 2.0
+maxHp = 4500.0
+nextHealDealy = 0.04
+texture_normal = ExtResource("53_fyrnl")
+texture_hover = ExtResource("54_guh1t")
 
-[node name="Level2" parent="BG/Defender Point/Centro" instance=ExtResource("7_ydes4")]
-position = Vector2(265, 367)
-scale = Vector2(2, 2)
-areaUpgrades = 1
-whatUpgrades = "centro"
-valor = 3.0
-textura = ExtResource("55_en6mg")
-textura_disable = ExtResource("56_gjcv0")
-usaOres = true
-qualOre = "stone"
-qtdOres = 10
+[node name="Level2" parent="BG/Defender Point/Centro" instance=ExtResource("34_utq1v")]
+position = Vector2(259, 367)
+whatUpgrades = "Center"
+qtdDracma = 4000
+qtdMinerios = 10
+Minerio = "stone"
+heal = 3.0
+maxHp = 5500.0
+nextHealDealy = 0.03
+texture_normal = ExtResource("55_en6mg")
+texture_hover = ExtResource("56_gjcv0")
 
-[node name="Level3" parent="BG/Defender Point/Centro" instance=ExtResource("7_ydes4")]
-position = Vector2(427, 367)
-scale = Vector2(2, 2)
-areaUpgrades = 1
-whatUpgrades = "centro"
-valor = 3.0
-textura = ExtResource("57_xjsgn")
-textura_disable = ExtResource("58_g5o4q")
-usaOres = true
-qualOre = "gold"
-qtdOres = 400
-qtdDracma = 800
+[node name="Level3" parent="BG/Defender Point/Centro" instance=ExtResource("34_utq1v")]
+position = Vector2(420, 367)
+whatUpgrades = "Center"
+qtdDracma = 5500
+qtdMinerios = 10
+Minerio = "gold"
+heal = 4.0
+maxHp = 6500.0
+nextHealDealy = 0.02
+texture_normal = ExtResource("57_xjsgn")
+texture_hover = ExtResource("58_g5o4q")
 
-[node name="Level4" parent="BG/Defender Point/Centro" instance=ExtResource("7_ydes4")]
-position = Vector2(587, 367)
-scale = Vector2(2, 2)
-areaUpgrades = 1
-whatUpgrades = "centro"
-valor = 4.0
-textura = ExtResource("59_t6ey8")
-textura_disable = ExtResource("60_chr5c")
-usaOres = true
-qualOre = "gold"
-qtdOres = 1000
-qtdDracma = 1000
+[node name="Level4" parent="BG/Defender Point/Centro" instance=ExtResource("34_utq1v")]
+position = Vector2(581, 367)
+whatUpgrades = "Center"
+qtdDracma = 7500
+qtdMinerios = 10
+Minerio = "gold"
+heal = 5.0
+maxHp = 9500.0
+nextHealDealy = 0.01
+texture_normal = ExtResource("59_t6ey8")
+texture_hover = ExtResource("60_chr5c")
 
 [node name="Piscina" type="Node2D" parent="BG/Defender Point"]
 position = Vector2(97, 61)
 
-[node name="Level1" parent="BG/Defender Point/Piscina" instance=ExtResource("7_ydes4")]
-position = Vector2(98, 367)
-scale = Vector2(2, 2)
-areaUpgrades = 1
-whatUpgrades = "piscina"
-valor = 2.0
-textura = ExtResource("61_7vlwj")
-textura_disable = ExtResource("62_eg5oi")
-usaOres = true
-qualOre = "wood"
-qtdOres = 10
+[node name="Level1" parent="BG/Defender Point/Piscina" instance=ExtResource("34_utq1v")]
+position = Vector2(92, 367)
+whatUpgrades = "Pool"
+qtdDracma = 2500
+qtdMinerios = 10
+Minerio = "wood"
+poolHeal = 2.0
+poolHealDelay = 0.05
+texture_normal = ExtResource("61_7vlwj")
+texture_hover = ExtResource("62_eg5oi")
 
-[node name="Level2" parent="BG/Defender Point/Piscina" instance=ExtResource("7_ydes4")]
-position = Vector2(265, 367)
-scale = Vector2(2, 2)
-areaUpgrades = 1
-whatUpgrades = "piscina"
-valor = 3.0
-textura = ExtResource("63_2xuco")
-textura_disable = ExtResource("64_37pwe")
-usaOres = true
-qualOre = "stone"
-qtdOres = 10
+[node name="Level2" parent="BG/Defender Point/Piscina" instance=ExtResource("34_utq1v")]
+position = Vector2(259, 367)
+whatUpgrades = "Pool"
+qtdDracma = 4000
+qtdMinerios = 10
+Minerio = "stone"
+poolHeal = 3.0
+poolHealDelay = 0.04
+texture_normal = ExtResource("63_2xuco")
+texture_hover = ExtResource("64_37pwe")
 
-[node name="Level3" parent="BG/Defender Point/Piscina" instance=ExtResource("7_ydes4")]
-position = Vector2(427, 367)
-scale = Vector2(2, 2)
-areaUpgrades = 1
-whatUpgrades = "piscina"
-valor = 4.0
-textura = ExtResource("65_ejy87")
-textura_disable = ExtResource("66_4x5tq")
-usaOres = true
-qualOre = "gold"
-qtdOres = 15
-qtdDracma = 450
+[node name="Level3" parent="BG/Defender Point/Piscina" instance=ExtResource("34_utq1v")]
+position = Vector2(420, 367)
+whatUpgrades = "Pool"
+qtdDracma = 5500
+qtdMinerios = 10
+Minerio = "gold"
+poolHeal = 4.0
+poolHealDelay = 0.03
+texture_normal = ExtResource("65_ejy87")
+texture_hover = ExtResource("66_4x5tq")
 
-[node name="Level4" parent="BG/Defender Point/Piscina" instance=ExtResource("7_ydes4")]
-position = Vector2(587, 367)
-scale = Vector2(2, 2)
-areaUpgrades = 1
-whatUpgrades = "piscina"
-valor = 5.0
-textura = ExtResource("67_enbe8")
-textura_disable = ExtResource("68_htph6")
-usaOres = true
-qualOre = "gold"
-qtdOres = 15
-qtdDracma = 1000
+[node name="Level4" parent="BG/Defender Point/Piscina" instance=ExtResource("34_utq1v")]
+position = Vector2(581, 367)
+whatUpgrades = "Pool"
+qtdDracma = 7850
+qtdMinerios = 15
+Minerio = "gold"
+poolHeal = 5.0
+poolHealDelay = 0.02
+texture_normal = ExtResource("67_enbe8")
+texture_hover = ExtResource("68_htph6")
 
 [node name="MenuPrincipal" type="Sprite2D" parent="BG"]
 position = Vector2(519, 25)

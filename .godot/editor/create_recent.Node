@@ -1,7 +1,7 @@
+Label
 AnimatedSprite2D
 Node2D
 ColorRect
-Label
 TextureButton
 Sprite2D
 VideoStreamPlayer

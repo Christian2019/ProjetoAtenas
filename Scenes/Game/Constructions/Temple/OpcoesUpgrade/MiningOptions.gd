@@ -39,7 +39,7 @@ func _ready():
 
 func verificaOre():
 	if(qtdMinerios>0): 
-			if(Minerio == "ouro"):
+			if(Minerio == "gold"):
 				get_node("InfoDracma/QtdMinerio/Minerio").animation = Minerio
 				get_node("InfoDracma/QtdMinerio/Price").text = str(qtdMinerios)
 				qtd_ore_player = Global.player.gold
@@ -55,6 +55,13 @@ func verificaOre():
 				qtd_ore_player = Global.player.wood 
 				pass
 
+func decreaseOre():
+		if(Minerio=="gold"):
+			Global.player.gold -= qtdMinerios
+		elif(Minerio == "stone"):
+			Global.player.stone -= qtdMinerios
+		elif(Minerio=="wood"):
+			Global.player.wood -= qtdMinerios
 
 func _on_botao_pressed():
 	if(whatUpgrades=="Power"):   
@@ -62,12 +69,14 @@ func _on_botao_pressed():
 			get_parent().get_parent().current_level_Power+=1 
 			Global.PlayerMining.damage_mining = mining_valor 
 			Global.player.dracma -= qtdDracma
+			decreaseOre()
 			get_node("Aquired").visible=true
 	elif(whatUpgrades=="Bag"):  
 		if(qtdDracma <= Global.player.dracma and qtdMinerios <= qtd_ore_player):
 			get_parent().get_parent().current_level_Bag+=1 
 			Global.player.MaxCarriage = bag_valor   
 			Global.player.dracma -= qtdDracma
+			decreaseOre()
 			get_node("Aquired").visible=true
 	pass # Replace with function body.
 
