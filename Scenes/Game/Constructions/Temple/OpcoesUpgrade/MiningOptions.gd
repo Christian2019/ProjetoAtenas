@@ -25,18 +25,17 @@ func _ready():
 	$Imagem.texture_focused = texture_hover
 	
 	verificaOre()
-	#Texturas de minerios
-	gold = load("res://Assets/Images/HUD/Loja/Gold.png")
-	stone = load("res://Assets/Images/HUD/Loja/Rock.png")
-	wood = load("res://Assets/Images/HUD/Loja/Wood.png")
-	
-	
+	#Texturas de minerios 
 	#Text
 	get_node("InfoDracma/QtdDracma/Price").text = str(qtdDracma)
 	if(qtd_ore_player==0 or qtd_ore_player == null):
 		$InfoDracma/QtdMinerio.visible = false
+	if(whatUpgrades=="Power"):
+		$InfoDracma/UpgradesPower.text = "Power: "+str(mining_valor)
+	elif(whatUpgrades=="Bag"):
+		$InfoDracma/UpgradesPower.text = "Bag: "+str(bag_valor)
 	pass # Replace with function body.
-
+ 
 func verificaOre():
 	if(qtdMinerios>0): 
 			if(Minerio == "gold"):
@@ -82,7 +81,10 @@ func _on_botao_pressed():
 
 
 func _on_botao_mouse_entered():
-	get_node("InfoDracma").visible=true
+	if($Imagem.disabled==false):
+		$InfoDracma.visible = true
+	else:
+		$InfoDracma.visible = false 
 	pass # Replace with function body.
 
 

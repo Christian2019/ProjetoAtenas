@@ -41,6 +41,17 @@ animations = [{
 
 [node name="DefenderPointOptions" type="Node2D"]
 script = ExtResource("1_uky6p")
+whatUpgrades = null
+qtdDracma = null
+qtdMinerios = null
+Minerio = null
+heal = null
+maxHp = null
+nextHealDealy = null
+slow = null
+shootSpeed = null
+poolHeal = null
+poolHealDelay = null
 
 [node name="Imagem" type="TextureButton" parent="."]
 offset_right = 140.0
@@ -59,11 +70,13 @@ theme_override_fonts/font = ExtResource("2_6ouqc")
 text = "Aquired"
 
 [node name="InfoDracma" type="ColorRect" parent="."]
-offset_left = -168.0
-offset_right = -76.0
-offset_bottom = 95.0
+visible = false
+offset_left = -142.0
+offset_top = 1.0
+offset_right = -71.0
+offset_bottom = 39.0
 scale = Vector2(2, 2)
-color = Color(0, 0, 0, 0.580392)
+color = Color(0, 0, 0, 0.439216)
 
 [node name="QtdDracma" type="Node2D" parent="InfoDracma"]
 position = Vector2(0, -1.5)
@@ -89,58 +102,12 @@ position = Vector2(-0.5, 13.5)
 position = Vector2(9, 12)
 scale = Vector2(0.00614584, 0.00645833)
 sprite_frames = SubResource("SpriteFrames_nl8v3")
-animation = &"wood"
 
 [node name="Price" type="Label" parent="InfoDracma/QtdMinerio"]
 offset_left = 17.5
 offset_top = 3.5
 offset_right = 57.5
 offset_bottom = 19.5
-theme_override_fonts/font = ExtResource("2_6ouqc")
-theme_override_font_sizes/font_size = 12
-metadata/_edit_use_anchors_ = true
-
-[node name="Upgrade3" type="Label" parent="InfoDracma"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.179348
-anchor_top = 1.72368
-anchor_right = -0.179348
-anchor_bottom = 1.72368
-offset_left = 17.5
-offset_top = -94.75
-offset_right = 57.5
-offset_bottom = -78.75
-theme_override_fonts/font = ExtResource("2_6ouqc")
-theme_override_font_sizes/font_size = 12
-metadata/_edit_use_anchors_ = true
-
-[node name="Upgrade2" type="Label" parent="InfoDracma"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.173913
-anchor_top = 1.25
-anchor_right = -0.173913
-anchor_bottom = 1.25
-offset_left = 17.5
-offset_top = -67.75
-offset_right = 57.5
-offset_bottom = -51.75
-theme_override_fonts/font = ExtResource("2_6ouqc")
-theme_override_font_sizes/font_size = 12
-metadata/_edit_use_anchors_ = true
-
-[node name="Upgrade1" type="Label" parent="InfoDracma"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.173913
-anchor_top = 0.789474
-anchor_right = -0.173913
-anchor_bottom = 0.789474
-offset_left = 17.5
-offset_top = -41.5
-offset_right = 57.5
-offset_bottom = -25.5
 theme_override_fonts/font = ExtResource("2_6ouqc")
 theme_override_font_sizes/font_size = 12
 metadata/_edit_use_anchors_ = true

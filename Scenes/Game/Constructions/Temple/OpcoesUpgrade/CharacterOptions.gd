@@ -36,17 +36,35 @@ func _ready():
 	$Imagem.texture_focused = texture_hover
 	
 	verificaOre()
-	#Texturas de minerios
-	gold = load("res://Assets/Images/HUD/Loja/Gold.png")
-	stone = load("res://Assets/Images/HUD/Loja/Rock.png")
-	wood = load("res://Assets/Images/HUD/Loja/Wood.png")
-	
-	
+	upgrades() 
 	#Text
 	get_node("InfoDracma/QtdDracma/Price").text = str(qtdDracma)
 	if(qtd_ore_player==0 or qtd_ore_player == null):
 		$InfoDracma/QtdMinerio.visible = false
 	pass # Replace with function body.
+ 
+		
+func upgrades():
+	if(whatUpgrades=="Attack"):
+		#Upgrades
+		$InfoDracma/Upgrade1/Price.text = str(percentDamage)
+		$InfoDracma/Upgrade1/Upgrade.animation="%Damage"
+		#Upgrades2
+		$InfoDracma/Upgrade2/Price.text = str(percentCritDamage)
+		$InfoDracma/Upgrade2/Upgrade2.animation="%CritDamage"
+		#Upgrades3
+		$InfoDracma/Upgrade3/Price.text = str(baseDamage)
+		$InfoDracma/Upgrade3/Upgrade3.animation="BaseDamage"
+	elif(whatUpgrades=="Defense"):
+		#Upgrades
+		$InfoDracma/Upgrade1/Price.text = str(dodge)
+		$InfoDracma/Upgrade1/Upgrade.animation="Dodge"
+		#Upgrades2
+		$InfoDracma/Upgrade2/Price.text = str(armor)
+		$InfoDracma/Upgrade2/Upgrade2.animation="armor"
+		#Upgrades3
+		$InfoDracma/Upgrade3/Price.text = str(maxDodge)
+		$InfoDracma/Upgrade3/Upgrade3.animation="MaxDodge"
 
 func verificaOre():
 	if(qtdMinerios>0): 
@@ -75,7 +93,10 @@ func decreaseOre():
 			Global.player.wood -= qtdMinerios
  
 func _on_imagem_mouse_entered():
-	get_node("InfoDracma").visible=true
+	if($Imagem.disabled==false):
+		$InfoDracma.visible = true
+	else:
+		$InfoDracma.visible = false 
 	pass # Replace with function body.
 
 

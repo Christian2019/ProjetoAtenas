@@ -63,7 +63,7 @@ visible = false
 offset_left = -142.0
 offset_top = 1.0
 offset_right = -71.0
-offset_bottom = 39.0
+offset_bottom = 62.0
 scale = Vector2(2, 2)
 color = Color(0, 0, 0, 0.439216)
 
@@ -99,7 +99,14 @@ offset_right = 57.5
 offset_bottom = 19.5
 theme_override_fonts/font = ExtResource("2_081o6")
 theme_override_font_sizes/font_size = 12
-metadata/_edit_use_anchors_ = true
+
+[node name="UpgradesPower" type="Label" parent="InfoDracma"]
+offset_left = 1.5
+offset_top = 39.0
+offset_right = 41.5
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("2_081o6")
+theme_override_font_sizes/font_size = 12
 
 [connection signal="mouse_entered" from="Imagem" to="." method="_on_botao_mouse_entered"]
 [connection signal="mouse_exited" from="Imagem" to="." method="_on_botao_mouse_exited"]

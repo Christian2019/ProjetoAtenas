@@ -38,19 +38,34 @@ func _ready():
 	$Imagem.texture_disabled = texture_hover
 	$Imagem.texture_focused = texture_hover
 	
-	verificaOre()
-	#Texturas de minerios
-	gold = load("res://Assets/Images/HUD/Loja/Gold.png")
-	stone = load("res://Assets/Images/HUD/Loja/Rock.png")
-	wood = load("res://Assets/Images/HUD/Loja/Wood.png")
-	
+	verificaOre() 
+	upgrades()
 	
 	#Text
 	get_node("InfoDracma/QtdDracma/Price").text = str(qtdDracma)
 	if(qtd_ore_player==0 or qtd_ore_player == null):
 		$InfoDracma/QtdMinerio.visible = false
 	pass # Replace with function body.
+	
+func upgrades():
+	if(whatUpgrades=="Center"):
+		#Upgrades
+		$InfoDracma/Upgrade1.text = "Heal: "+ str(heal)
+		$InfoDracma/Upgrade2.text = "Max HP: "+ str(maxHp)
+		$InfoDracma/Upgrade3.text = "Heal speed:" + str(nextHealDealy)
+		pass
+	elif(whatUpgrades=="Tower"):
+		#Upgrades
+		$InfoDracma/Upgrade1.text = "slow speed: "+ str(slow)
+		$InfoDracma/Upgrade2.text = "shoot speed: "+ str(shootSpeed) 
+		pass
+	elif(whatUpgrades=="Pool"):
+		#Upgrades
+		$InfoDracma/Upgrade1.text = "Ammount Heal: "+ str(poolHeal)
+		$InfoDracma/Upgrade2.text = "Heal speed: "+ str(poolHealDelay)
+		pass
 
+ 
 func verificaOre():
 	if(qtdMinerios>0): 
 			if(Minerio == "gold"):
@@ -79,7 +94,10 @@ func decreaseOre():
 
 
 func _on_imagem_mouse_entered():
-	get_node("InfoDracma").visible=true
+	if($Imagem.disabled==false):
+		$InfoDracma.visible = true
+	else:
+		$InfoDracma.visible = false 
 	pass # Replace with function body.
 
 
