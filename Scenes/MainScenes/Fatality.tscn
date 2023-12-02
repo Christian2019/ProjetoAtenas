@@ -1,13 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://butuan5er7o5a"]
+[gd_scene load_steps=7 format=3 uid="uid://butuan5er7o5a"]
 
 [ext_resource type="Script" path="res://Scripts/MainScenes/Fatality.gd" id="1_ptcrv"]
-[ext_resource type="VideoStream" path="res://Assets/Videos/fatality.ogv" id="1_yhu8r"]
 [ext_resource type="AudioStream" uid="uid://ptqt4rl1wcxb" path="res://Assets/Sounds/fatality.mp3" id="3_yvl5s"]
 [ext_resource type="Texture2D" uid="uid://dba3t6yacyxtw" path="res://Assets/Images/HUD/Menu/GameOverScreen/Game over.png" id="4_ydliw"]
-[ext_resource type="Texture2D" uid="uid://dm1qu1iwn7j1r" path="res://Assets/Images/HUD/Menu/GameOverScreen/Retry.png" id="5_t8nmy"]
-[ext_resource type="Texture2D" uid="uid://dyqp7u0ukj2f3" path="res://Assets/Images/HUD/Menu/GameOverScreen/retry hover.png" id="6_oyb56"]
-[ext_resource type="Texture2D" uid="uid://b4io80y2lgqm3" path="res://Assets/Images/HUD/Menu/GameOverScreen/quit.png" id="7_gj62j"]
-[ext_resource type="Texture2D" uid="uid://drv7h5lpn336l" path="res://Assets/Images/HUD/Menu/GameOverScreen/quithover.png" id="8_wonrh"]
+[ext_resource type="FontFile" uid="uid://by6650mb11t63" path="res://Assets/Images/HUD/Menu/Zeus-Land.otf" id="4_yfp7i"]
 
 [sub_resource type="Animation" id="Animation_q5o10"]
 resource_name = "FadeIn"
@@ -32,50 +28,16 @@ _data = {
 [node name="Fatality" type="Node2D"]
 script = ExtResource("1_ptcrv")
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-visible = false
-offset_right = 1027.0
-offset_bottom = 602.0
-stream = ExtResource("1_yhu8r")
-volume_db = 9.7
-autoplay = true
-expand = true
-
 [node name="GameOver" type="Sprite2D" parent="."]
 position = Vector2(511, 301.5)
 scale = Vector2(0.534162, 0.515665)
 texture = ExtResource("4_ydliw")
 
-[node name="RETRY" type="TextureButton" parent="."]
-offset_left = 489.0
-offset_top = 358.0
-offset_right = 572.0
-offset_bottom = 396.0
-focus_neighbor_bottom = NodePath("../QUIT")
-texture_normal = ExtResource("5_t8nmy")
-texture_pressed = ExtResource("5_t8nmy")
-texture_hover = ExtResource("6_oyb56")
-texture_focused = ExtResource("6_oyb56")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="QUIT" type="TextureButton" parent="."]
-offset_left = 498.0
-offset_top = 413.0
-offset_right = 565.0
-offset_bottom = 441.0
-focus_neighbor_top = NodePath("../RETRY")
-texture_normal = ExtResource("7_gj62j")
-texture_pressed = ExtResource("7_gj62j")
-texture_hover = ExtResource("8_wonrh")
-texture_focused = ExtResource("8_wonrh")
-ignore_texture_size = true
-stretch_mode = 0
-
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 1025.0
 offset_bottom = 604.0
-color = Color(0, 0, 0, 0)
+color = Color(0, 0, 0, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_yvl5s")
@@ -86,6 +48,46 @@ libraries = {
 "": SubResource("AnimationLibrary_lb2i3")
 }
 
-[connection signal="pressed" from="RETRY" to="." method="_on_retry_pressed"]
-[connection signal="pressed" from="QUIT" to="." method="_on_quit_pressed"]
+[node name="Retry" type="Button" parent="."]
+offset_left = 467.0
+offset_top = 351.0
+offset_right = 596.0
+offset_bottom = 393.0
+theme_override_colors/font_pressed_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_focus_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_fonts/font = ExtResource("4_yfp7i")
+theme_override_font_sizes/font_size = 35
+text = "RETRY"
+flat = true
+
+[node name="Back to Menu" type="Button" parent="."]
+offset_left = 433.0
+offset_top = 404.0
+offset_right = 632.0
+offset_bottom = 446.0
+theme_override_colors/font_pressed_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_focus_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_fonts/font = ExtResource("4_yfp7i")
+theme_override_font_sizes/font_size = 35
+text = "BACK TO MENU"
+flat = true
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 498.0
+offset_top = 461.0
+offset_right = 565.0
+offset_bottom = 503.0
+theme_override_colors/font_pressed_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_focus_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_fonts/font = ExtResource("4_yfp7i")
+theme_override_font_sizes/font_size = 35
+text = "QUIT"
+flat = true
+
 [connection signal="animation_finished" from="FadeIn" to="." method="_on_fade_in_animation_finished"]
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Back to Menu" to="." method="_on_back_to_menu_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

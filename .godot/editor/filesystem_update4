@@ -1,9 +1,7 @@
+res://Scripts/MainScenes/Fatality.gd
 res://default_env.tres
+res://Scenes/MainScenes/Fatality.tscn
 res://Scenes/Game/Constructions/Temple/OpcaoUpgrade.tscn
-res://Assets/Images/Tiles/TileMap.tres
-res://Scripts/Zones/Temple/OpcaoUpgrade.gd
 res://Scenes/Game/Constructions/Temple/TempleScreen.tscn
 res://Scenes/Game/Constructions/Temple/Temple.tscn
-res://Scripts/Zones/Temple/Mineração.gd
-res://Scripts/Zones/Temple/Defender Point.gd
-res://Scripts/Zones/Temple/ShopScript.gd
+res://Scenes/MainScenes/PauseMenu.tscn

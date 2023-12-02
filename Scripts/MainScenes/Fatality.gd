@@ -17,15 +17,18 @@ func _process(delta):
 func _on_retry_pressed():
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/Loading.tscn")
 	pass # Replace with function body.
-
-
-func _on_quit_pressed():
-	get_tree().change_scene_to_file("res://Scenes/MainScenes/Menu.tscn")
-	pass # Replace with function body.
-
  
 
 func _on_fade_in_animation_finished(anim_name):
 	$ColorRect.queue_free()
-	$RETRY.grab_focus()
+	$Retry.grab_focus()
+	pass # Replace with function body. 
+
+func _on_back_to_menu_pressed():
+	get_tree().change_scene_to_file("res://Scenes/MainScenes/Menu.tscn")
+	pass # Replace with function body.
+
+
+func _on_quit_pressed():
+	get_tree().quit()
 	pass # Replace with function body.
