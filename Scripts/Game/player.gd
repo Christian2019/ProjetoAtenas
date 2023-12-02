@@ -45,11 +45,11 @@ var ultimate={"skill":PreLoads.warrior_ultimate_poseidon, "quality": "legendary"
 
 ## Se esta em CD
 var permissions = [
-	{"attack1_canUse" : true},
-	{"attack2_canUse" : true},
-	{"turret_canUse" : true},
-	{"dash_canUse" : true},
-	{"ultimate_canUse" : true},
+	true,
+	true,
+	true,
+	true,
+	true,
 	]
 
 #Resources
@@ -139,11 +139,11 @@ func animationController():
 		playAnimation ("Run")
 	elif Input.is_action_pressed("Move_Left"):
 		playAnimation ("Run")
-	elif (!Input.is_action_pressed("Attack1") and $Animation.frame==5):
+	elif (permissions[0]):
 		playAnimation ("Idle")
 		
 func playAnimation (animName):
-	if (animName=="Run" and Input.is_action_pressed("Attack1")):
+	if (animName=="Run" and !permissions[0]):
 		animName="Attack1Run"
 		
 	if lastMovement=="S":
