@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xw3saw8ssdfp"
-path="res://.godot/imported/scene00013.png-35bf27b1901e50684d61a541e1bdf112.ctex"
+uid="uid://dba3t6yacyxtw"
+path="res://.godot/imported/Game over.png-2f324ea005e22f26acea18bcc716a000.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Enemies/id014/Walking/scene00013.png"
-dest_files=["res://.godot/imported/scene00013.png-35bf27b1901e50684d61a541e1bdf112.ctex"]
+source_file="res://Assets/Images/GameOverScreen/Game over.png"
+dest_files=["res://.godot/imported/Game over.png-2f324ea005e22f26acea18bcc716a000.ctex"]
 
 [params]
 

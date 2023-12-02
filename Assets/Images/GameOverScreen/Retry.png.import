@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2on10jjmdbah"
-path="res://.godot/imported/scene00076.png-f3cd984dac30059f9c6ec865493eff64.ctex"
+uid="uid://dm1qu1iwn7j1r"
+path="res://.godot/imported/Retry.png-39151479a1f4fb66869b87fe0680c846.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Enemies/id014/Attacking/scene00076.png"
-dest_files=["res://.godot/imported/scene00076.png-f3cd984dac30059f9c6ec865493eff64.ctex"]
+source_file="res://Assets/Images/GameOverScreen/Retry.png"
+dest_files=["res://.godot/imported/Retry.png-39151479a1f4fb66869b87fe0680c846.ctex"]
 
 [params]
 

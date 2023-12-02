@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgx7hbvgqvih8"
-path="res://.godot/imported/scene00082.png-68be68673ee3d8b73c3c8ab33c5e9cf6.ctex"
+uid="uid://dyr0ls5h47rjn"
+path="res://.godot/imported/BarraDeVidaPlayer.png-48af3add9434db5ee30e24369c052b1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Enemies/id014/Attacking/scene00082.png"
-dest_files=["res://.godot/imported/scene00082.png-68be68673ee3d8b73c3c8ab33c5e9cf6.ctex"]
+source_file="res://Assets/Images/GameOverScreen/BarraDeVidaPlayer.png"
+dest_files=["res://.godot/imported/BarraDeVidaPlayer.png-48af3add9434db5ee30e24369c052b1b.ctex"]
 
 [params]
 

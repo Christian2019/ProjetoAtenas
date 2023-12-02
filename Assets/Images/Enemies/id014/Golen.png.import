@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3cklot0p4rwi"
-path="res://.godot/imported/scene00019.png-ddefae6fc689613eab58805f0e8e9c89.ctex"
+uid="uid://dkawv2squ2w6l"
+path="res://.godot/imported/Golen.png-f9448d33e052b5be22c65d6adb8f2a7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Enemies/id014/Walking/scene00019.png"
-dest_files=["res://.godot/imported/scene00019.png-ddefae6fc689613eab58805f0e8e9c89.ctex"]
+source_file="res://Assets/Images/Enemies/id014/Golen.png"
+dest_files=["res://.godot/imported/Golen.png-f9448d33e052b5be22c65d6adb8f2a7b.ctex"]
 
 [params]
 

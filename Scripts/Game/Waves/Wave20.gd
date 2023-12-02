@@ -14,8 +14,8 @@ func _process(delta):
 	
 func waveBehavior():
 	#spawn(1*60,1,PreLoads.targetDummy,false)
-	
-	allEnemies()
+	spawn(1*60,5,PreLoads.id014,false)
+	#allEnemies()
 			
 func allEnemies():
 	spawn(1*60,1,PreLoads.id001,false)

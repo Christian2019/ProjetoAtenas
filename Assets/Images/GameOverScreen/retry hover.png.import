@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuqlapdamhje3"
-path="res://.godot/imported/scene00073.png-07394aac91acaf68720ab85e5e9b0d98.ctex"
+uid="uid://dyqp7u0ukj2f3"
+path="res://.godot/imported/retry hover.png-1a49bcad6f116345f585ec84b47db66a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Enemies/id014/Attacking/scene00073.png"
-dest_files=["res://.godot/imported/scene00073.png-07394aac91acaf68720ab85e5e9b0d98.ctex"]
+source_file="res://Assets/Images/GameOverScreen/retry hover.png"
+dest_files=["res://.godot/imported/retry hover.png-1a49bcad6f116345f585ec84b47db66a.ctex"]
 
 [params]
 
