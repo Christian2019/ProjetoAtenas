@@ -49,7 +49,7 @@ func _ready():
 
 
 func _on_minhas_coisas_pressed():
-	$MINHAS_COISAS___TROCA/MINHASCOISAS.visible=true
+	$MINHAS_COISAS___TROCA/ScrollHud.visible=true
 	$MINHAS_COISAS___TROCA/TROCA.visible=false
 	$MINHAS_COISAS___TROCA/ItemHUD.visible=false
 	
@@ -59,7 +59,7 @@ func _on_minhas_coisas_pressed():
 	
 
 func _on_troca_pressed(): 
-	$MINHAS_COISAS___TROCA/MINHASCOISAS.visible=false
+	$MINHAS_COISAS___TROCA/ScrollHud.visible=false
 	$MINHAS_COISAS___TROCA/TROCA.visible=true
 	$MINHAS_COISAS___TROCA/ItemHUD.visible=false
 	
@@ -73,7 +73,7 @@ func _on_nope_pressed():
 	$Warning.visible=false;
 
 func _on_itens_pressed():
-	$MINHAS_COISAS___TROCA/MINHASCOISAS.visible=false
+	$MINHAS_COISAS___TROCA/ScrollHud.visible=false
 	$MINHAS_COISAS___TROCA/TROCA.visible=false
 	$MINHAS_COISAS___TROCA/ItemHUD.visible=true
 	

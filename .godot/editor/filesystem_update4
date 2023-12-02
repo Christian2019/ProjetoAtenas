@@ -1,6 +1,7 @@
+res://Scenes/Game/Constructions/Temple/UpgradeOptions/CharacterOptions.tscn
+res://Scenes/Game/Constructions/Temple/UpgradeOptions/DefenderPointOptions.tscn
+res://Scenes/Game/Constructions/Temple/UpgradeOptions/MiningOptions.tscn
 res://default_env.tres
-res://Scenes/Game/Wave_controller.tscn
-res://Scripts/Game/Waves/Wave20.gd
-res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack2/Scroll_Warrior_Attack2_Zeus.tscn
-res://Scenes/Game/Enemies/id008/Id008.tscn
-res://Scenes/Game/Enemies/id008/Dragon.tscn
+res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_Hades.tscn
+res://Scenes/Game/Constructions/Temple/TempleScreen.tscn
+res://Scenes/Game/Constructions/Temple/Upgrade/mineração.tscn
