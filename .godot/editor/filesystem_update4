@@ -1,10 +1,4 @@
 res://default_env.tres
-res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/MiningOptions.tscn
+res://Scenes/Game/Enemies/Id017.tscn
 res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/DefenderPointOptions.gd
-res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/MiningOptions.gd
 res://Scenes/Game/Constructions/Temple/TempleScreen.tscn
-res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.tscn
-res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/DefenderPointOptions.tscn
-res://Scripts/MainScenes/Fatality.gd
-res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.gd
-res://Scripts/Zones/Temple/MainPage.gd

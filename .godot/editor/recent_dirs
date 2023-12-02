@@ -1,3 +1,4 @@
+res://Assets/Images/Enemies/id017
 res://Scripts/Classes/Warrior/Warrior_Mining
 res://Scenes/Game/Collectables
 res://Assets/Fonts
@@ -19,5 +20,4 @@ res://Scripts/Game/ItemController/Itens/tier1
 res://Scripts/Game/ItemController
 res://Assets/Images/LevelUp
 res://Assets/Images/HUD/SkillSelection
-res://Scripts/Classes/Warrior/Warrior_Turret
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas
