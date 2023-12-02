@@ -36,15 +36,21 @@ func _ready():
 	if(qtd_ore_player==0 or qtd_ore_player == null):
 		$InfoDracma/QtdMinerio.visible = false
 	if(whatUpgrades=="Power"):
-		if(mining_valor > 0): 
-			$InfoDracma/UpgradesPower.text = "Power: [color=#00cc00]+"+str(mining_valor)+"[/color]"
+		$InfoDracma/Upgrades/WhatUpgrades.text = "Power:"
+		if(mining_valor > 0):  
+			$InfoDracma/Upgrades/Ammount.text = "+"+str(mining_valor)
+			$InfoDracma/Upgrades/Ammount.add_theme_color_override("font_color",Color("00cc00"))
 		else:
-			$InfoDracma/UpgradesPower.text = "Power: [color=#ff0000]-"+str(mining_valor)+"[/color]"
+			$InfoDracma/Upgrades/Ammount.text = "-"+str(mining_valor)
+			$InfoDracma/Upgrades/Ammount.add_theme_color_override("font_color",Color("ff0000"))
 	elif(whatUpgrades=="Bag"):
-		if(bag_valor > 0): 
-			$InfoDracma/UpgradesPower.text = "Bag: [color=#00cc00]+"+str(bag_valor)+"[/color]"
+		$InfoDracma/Upgrades/WhatUpgrades.text = "Bag:"
+		if(bag_valor > 0):  
+			$InfoDracma/Upgrades/Ammount.text = "+"+str(bag_valor)
+			$InfoDracma/Upgrades/Ammount.add_theme_color_override("font_color",Color("00cc00"))
 		else:
-			$InfoDracma/UpgradesPower.text = "Bag: [color=#ff0000]+"+str(bag_valor)+"[/color]"
+			$InfoDracma/Upgrades/Ammount.text = "-"+str(bag_valor)
+			$InfoDracma/Upgrades/Ammount.add_theme_color_override("font_color",Color("ff0000"))
 	pass # Replace with function body.
  
 func verificaOre():

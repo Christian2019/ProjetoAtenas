@@ -122,6 +122,7 @@ anchors_preset = 0
 script = ExtResource("1_docjh")
 
 [node name="Imagem" type="TextureButton" parent="."]
+layout_mode = 0
 offset_right = 140.0
 offset_bottom = 90.0
 scale = Vector2(1, 1.56)
@@ -130,6 +131,7 @@ stretch_mode = 0
 
 [node name="Aquired" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 46.0
 offset_top = 61.0
 offset_right = 95.0
@@ -138,6 +140,8 @@ theme_override_fonts/font = ExtResource("2_5hhw0")
 text = "Aquired"
 
 [node name="InfoDracma" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
 offset_left = -142.0
 offset_top = 1.0
 offset_right = -57.0
@@ -237,10 +241,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Titulo" type="Label" parent="InfoDracma"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0470588
-anchor_top = -0.0227273
-anchor_right = 0.0470588
-anchor_bottom = -0.0227273
+anchor_left = -0.205882
+anchor_top = -0.0272727
+anchor_right = -0.205882
+anchor_bottom = -0.0272727
 offset_left = 17.5
 offset_top = 3.5
 offset_right = 57.5
@@ -249,6 +253,8 @@ theme_override_fonts/font = ExtResource("2_5hhw0")
 theme_override_font_sizes/font_size = 12
 metadata/_edit_use_anchors_ = true
 
+[connection signal="focus_entered" from="Imagem" to="." method="_on_imagem_focus_entered"]
+[connection signal="focus_exited" from="Imagem" to="." method="_on_imagem_focus_exited"]
 [connection signal="mouse_entered" from="Imagem" to="." method="_on_imagem_mouse_entered"]
 [connection signal="mouse_exited" from="Imagem" to="." method="_on_imagem_mouse_exited"]
 [connection signal="pressed" from="Imagem" to="." method="_on_imagem_pressed"]

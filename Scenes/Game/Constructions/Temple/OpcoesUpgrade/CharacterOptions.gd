@@ -54,23 +54,53 @@ func _ready():
 func upgrades():
 	if(whatUpgrades=="Attack"):
 		#Upgrades
-		$InfoDracma/Upgrade1/Price.text = str(percentDamage)
+		if(percentDamage>0):
+			$InfoDracma/Upgrade1/Price.text = "+"+str(percentDamage)+"%"
+			$InfoDracma/Upgrade1/Price.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrade1/Price.text = "-"+str(percentDamage)+"%"
+			$InfoDracma/Upgrade1/Price.add_theme_color_override("font_color",Color("ff0000"))
 		$InfoDracma/Upgrade1/Upgrade.animation="%Damage"
 		#Upgrades2
-		$InfoDracma/Upgrade2/Price.text = str(percentCritDamage)
+		if(percentCritDamage>0):
+			$InfoDracma/Upgrade2/Price.text = "+"+str(percentCritDamage*100)+"%"
+			$InfoDracma/Upgrade2/Price.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrade2/Price.text = "-"+str(percentCritDamage*100)+"%"
+			$InfoDracma/Upgrade2/Price.add_theme_color_override("font_color",Color("ff0000"))
 		$InfoDracma/Upgrade2/Upgrade2.animation="%CritDamage"
 		#Upgrades3
-		$InfoDracma/Upgrade3/Price.text = str(baseDamage)
+		if(baseDamage>0):
+			$InfoDracma/Upgrade3/Price.text = "+"+str(baseDamage)
+			$InfoDracma/Upgrade3/Price.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrade3/Price.text = "-"+str(baseDamage)
+			$InfoDracma/Upgrade3/Price.add_theme_color_override("font_color",Color("ff0000")) 
 		$InfoDracma/Upgrade3/Upgrade3.animation="BaseDamage"
 	elif(whatUpgrades=="Defense"):
-		#Upgrades
-		$InfoDracma/Upgrade1/Price.text = str(dodge)
+		#Upgrades 
+		if(dodge>0):
+			$InfoDracma/Upgrade1/Price.text = "+"+str(dodge)
+			$InfoDracma/Upgrade1/Price.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrade1/Price.text = "-"+str(dodge)
+			$InfoDracma/Upgrade1/Price.add_theme_color_override("font_color",Color("ff0000")) 
 		$InfoDracma/Upgrade1/Upgrade.animation="Dodge"
-		#Upgrades2
-		$InfoDracma/Upgrade2/Price.text = str(armor)
+		#Upgrades2 
+		if(armor>0):
+			$InfoDracma/Upgrade2/Price.text = "+"+str(armor)
+			$InfoDracma/Upgrade2/Price.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrade2/Price.text = "-"+str(armor)
+			$InfoDracma/Upgrade2/Price.add_theme_color_override("font_color",Color("ff0000"))  
 		$InfoDracma/Upgrade2/Upgrade2.animation="armor"
 		#Upgrades3
-		$InfoDracma/Upgrade3/Price.text = str(maxDodge)
+		if(maxDodge>0):
+			$InfoDracma/Upgrade3/Price.text = "+"+str(maxDodge)
+			$InfoDracma/Upgrade3/Price.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrade3/Price.text = "-"+str(maxDodge)
+			$InfoDracma/Upgrade3/Price.add_theme_color_override("font_color",Color("ff0000"))  
 		$InfoDracma/Upgrade3/Upgrade3.animation="MaxDodge"
 
 func verificaOre():
@@ -133,4 +163,17 @@ func _on_imagem_pressed():
 			decreaseOre()
 			get_node("Aquired").visible=true
 	pass # Replace with function body.
+	pass # Replace with function body.
+
+
+func _on_imagem_focus_entered():
+	if($Imagem.disabled==false):
+		$InfoDracma.visible = true
+	else:
+		$InfoDracma.visible = false 
+	pass # Replace with function body.
+
+
+func _on_imagem_focus_exited():
+	get_node("InfoDracma").visible=false
 	pass # Replace with function body.

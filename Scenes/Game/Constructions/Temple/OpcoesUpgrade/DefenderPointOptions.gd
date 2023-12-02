@@ -56,19 +56,65 @@ func _ready():
 func upgrades():
 	if(whatUpgrades=="Center"):
 		#Upgrades
-		$InfoDracma/Upgrade1.text = "Heal: "+ str(heal)
-		$InfoDracma/Upgrade2.text = "Max HP: "+ str(maxHp)
-		$InfoDracma/Upgrade3.text = "Heal speed:" + str(nextHealDealy)
+		$InfoDracma/Upgrades/WhatUpgrades.text = "Heal:"
+		if(heal > 0):  
+			$InfoDracma/Upgrades/Ammount.text = "+"+str(heal)
+			$InfoDracma/Upgrades/Ammount.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrades/Ammount.text = "-"+str(heal)
+			$InfoDracma/Upgrades/Ammount.add_theme_color_override("font_color",Color("ff0000")) 
+			
+		$InfoDracma/Upgrades2/WhatUpgrades.text ="Max HP: "
+		if(maxHp > 0):  
+			$InfoDracma/Upgrades2/Ammount.text = "+"+str(maxHp)
+			$InfoDracma/Upgrades2/Ammount.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrades2/Ammount.text = "-"+str(maxHp)
+			$InfoDracma/Upgrades2/Ammount.add_theme_color_override("font_color",Color("ff0000"))
+			
+		$InfoDracma/Upgrades3/WhatUpgrades.text ="Heal speed:"
+		if(nextHealDealy > 0):  
+			$InfoDracma/Upgrades3/Ammount.text = "+"+str(nextHealDealy)
+			$InfoDracma/Upgrades3/Ammount.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrades3/Ammount.text = "-"+str(nextHealDealy)
+			$InfoDracma/Upgrades3/Ammount.add_theme_color_override("font_color",Color("ff0000"))
 		pass
 	elif(whatUpgrades=="Tower"):
-		#Upgrades
-		$InfoDracma/Upgrade1.text = "slow speed: "+ str(slow)
-		$InfoDracma/Upgrade2.text = "shoot speed: "+ str(shootSpeed) 
+		#Upgrades 
+		$InfoDracma/Upgrades/WhatUpgrades.text ="slow: "
+		if(slow > 0):  
+			$InfoDracma/Upgrades/Ammount.text = "+"+str(slow)
+			$InfoDracma/Upgrades/Ammount.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrades/Ammount.text = "-"+str(slow)
+			$InfoDracma/Upgrades/Ammount.add_theme_color_override("font_color",Color("ff0000"))
+			
+		$InfoDracma/Upgrades2/WhatUpgrades.text ="Fire speed: "
+		if(shootSpeed > 0):  
+			$InfoDracma/Upgrades2/Ammount.text = "+"+str(shootSpeed)
+			$InfoDracma/Upgrades2/Ammount.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrades2/Ammount.text = "-"+str(shootSpeed)
+			$InfoDracma/Upgrades2/Ammount.add_theme_color_override("font_color",Color("ff0000"))
 		pass
 	elif(whatUpgrades=="Pool"):
 		#Upgrades
-		$InfoDracma/Upgrade1.text = "Ammount Heal: "+ str(poolHeal)
-		$InfoDracma/Upgrade2.text = "Heal speed: "+ str(poolHealDelay)
+		$InfoDracma/Upgrades/WhatUpgrades.text ="Points Heal: "
+		if(poolHeal > 0):  
+			$InfoDracma/Upgrades/Ammount.text = "+"+str(poolHeal)
+			$InfoDracma/Upgrades/Ammount.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrades/Ammount.text = "-"+str(poolHeal)
+			$InfoDracma/Upgrades/Ammount.add_theme_color_override("font_color",Color("ff0000"))
+			
+		$InfoDracma/Upgrades2/WhatUpgrades.text ="Heal speed: "
+		if(poolHealDelay > 0):  
+			$InfoDracma/Upgrades2/Ammount.text = "+"+str(poolHealDelay)
+			$InfoDracma/Upgrades2/Ammount.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrades2/Ammount.text = "-"+str(poolHealDelay)
+			$InfoDracma/Upgrades2/Ammount.add_theme_color_override("font_color",Color("ff0000"))
 		pass
 
  
@@ -135,4 +181,17 @@ func _on_imagem_pressed():
 			decreaseOre()
 			get_node("Aquired").visible=true
 	pass # Replace with function body.
+	pass # Replace with function body.
+
+
+func _on_imagem_focus_entered():
+	if($Imagem.disabled==false):
+		$InfoDracma.visible = true
+	else:
+		$InfoDracma.visible = false 
+	pass # Replace with function body.
+
+
+func _on_imagem_focus_exited():
+	get_node("InfoDracma").visible=false
 	pass # Replace with function body.

@@ -1430,22 +1430,31 @@ position = Vector2(-984.849, -43.3889)
 scale = Vector2(1.88488, 1.57778)
 
 [node name="Ouro" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 16.9869
-offset_top = 13.0
-offset_right = 56.9869
-offset_bottom = 36.0
+offset_left = 25.4704
+offset_top = 14.5
+offset_right = 65.4704
+offset_bottom = 37.5
+theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 15
 
 [node name="Wood" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 93.9869
-offset_top = 13.0
-offset_right = 133.987
-offset_bottom = 36.0
+offset_left = 102.47
+offset_top = 14.5
+offset_right = 142.47
+offset_bottom = 37.5
+theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 15
 
 [node name="Stone" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 181.987
-offset_top = 13.0
-offset_right = 221.985
-offset_bottom = 36.0
+offset_left = 190.471
+offset_top = 14.5
+offset_right = 230.469
+offset_bottom = 37.5
+theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 15
 
 [node name="Abas" type="Node2D" parent="BG/MenuPrincipal"]
 position = Vector2(-984.849, -43.3889)

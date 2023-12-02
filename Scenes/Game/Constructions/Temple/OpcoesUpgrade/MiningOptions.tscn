@@ -45,6 +45,7 @@ anchors_preset = 0
 script = ExtResource("1_bgbbw")
 
 [node name="Imagem" type="TextureButton" parent="."]
+layout_mode = 0
 offset_right = 140.0
 offset_bottom = 90.0
 scale = Vector2(1, 1.56)
@@ -53,6 +54,7 @@ stretch_mode = 0
 
 [node name="Aquired" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 46.0
 offset_top = 61.0
 offset_right = 95.0
@@ -62,6 +64,7 @@ text = "Aquired"
 
 [node name="InfoDracma" type="ColorRect" parent="."]
 visible = false
+layout_mode = 0
 offset_left = -158.0
 offset_right = -79.0
 offset_bottom = 83.0
@@ -69,6 +72,7 @@ scale = Vector2(2, 2)
 color = Color(0, 0, 0, 0.541176)
 
 [node name="Titulo" type="Label" parent="InfoDracma"]
+layout_mode = 0
 offset_top = 0.5
 offset_right = 40.0
 offset_bottom = 16.5
@@ -109,12 +113,21 @@ offset_bottom = 19.5
 theme_override_fonts/font = ExtResource("2_081o6")
 theme_override_font_sizes/font_size = 12
 
-[node name="UpgradesPower" type="Label" parent="InfoDracma"]
-layout_mode = 0
+[node name="Upgrades" type="Node2D" parent="InfoDracma"]
+
+[node name="WhatUpgrades" type="Label" parent="InfoDracma/Upgrades"]
 offset_left = 1.5
 offset_top = 57.0
 offset_right = 41.5
 offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("2_081o6")
+theme_override_font_sizes/font_size = 12
+
+[node name="Ammount" type="Label" parent="InfoDracma/Upgrades"]
+offset_left = 43.0
+offset_top = 56.5
+offset_right = 77.0
+offset_bottom = 72.5
 theme_override_fonts/font = ExtResource("2_081o6")
 theme_override_font_sizes/font_size = 12
 
