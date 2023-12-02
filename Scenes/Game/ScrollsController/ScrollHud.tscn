@@ -342,49 +342,49 @@ texture = ExtResource("2_b3h6x")
 
 [node name="Scrolls" type="Node2D" parent="."]
 
-[node name="Scroll" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll0" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(777, 485)
 
-[node name="Scroll2" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll1" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(1790, 485)
 
-[node name="Scroll3" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll2" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(2803, 485)
 
-[node name="Scroll4" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll3" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(777, 1400)
 
-[node name="Scroll5" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll4" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(1790, 1400)
 
-[node name="Scroll6" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll5" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(2803, 1400)
 
-[node name="Scroll7" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll6" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(777, 2258)
 
-[node name="Scroll8" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll7" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(1790, 2258)
 
-[node name="Scroll9" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll8" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(2803, 2258)
 
-[node name="Scroll10" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll9" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(777, 3056)
 
-[node name="Scroll11" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll10" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(1790, 3056)
 
-[node name="Scroll12" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll11" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(2803, 3056)
 
-[node name="Scroll13" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll12" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(777, 3833)
 
-[node name="Scroll14" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll13" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(1790, 3833)
 
-[node name="Scroll15" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+[node name="Scroll14" parent="Scrolls" instance=ExtResource("4_gdcq3")]
 position = Vector2(2803, 3833)
 
 [node name="Selected" type="Node2D" parent="."]

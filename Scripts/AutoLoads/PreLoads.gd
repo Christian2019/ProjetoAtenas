@@ -242,3 +242,6 @@ var poseidon_tentacle=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimate
 var eletrified =preload("res://Scenes/Game/Math_controller/Effects/Electrified.tscn")
 var twister = preload("res://Scenes/Game/Math_controller/Effects/Twister.tscn")
 var disorientation= preload("res://Scenes/Game/Math_controller/Effects/Disorientation.tscn")
+
+##Scrolls
+var scroll_warrior_dash_hades=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_Hades.tscn")

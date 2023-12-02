@@ -34,7 +34,6 @@ var wood
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(Minerio)
 	#Texturas Botão
 	$Imagem.texture_normal = texture_normal
 	$Imagem.texture_hover = texture_hover
