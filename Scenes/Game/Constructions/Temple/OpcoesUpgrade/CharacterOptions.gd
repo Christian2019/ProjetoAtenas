@@ -1,4 +1,7 @@
-extends Node2D
+extends Control
+
+@export var titulo = ""
+@export var colorTitulo = Color()
 
 @export var whatUpgrades = ""
 @export var qtdDracma = 0
@@ -37,6 +40,10 @@ func _ready():
 	
 	verificaOre()
 	upgrades() 
+	
+	#Titulo
+	$InfoDracma/Titulo.add_theme_color_override("font_color",colorTitulo)
+	$InfoDracma/Titulo.text = titulo
 	#Text
 	get_node("InfoDracma/QtdDracma/Price").text = str(qtdDracma)
 	if(qtd_ore_player==0 or qtd_ore_player == null):

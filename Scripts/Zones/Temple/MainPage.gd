@@ -35,11 +35,14 @@ func _on_shop_pressed():
 func _on_mineração_pressed():
 	#Paginas devem fazer a transicao aqui
 	transition(2) 
+	$"BG/Mineração/POWER/Level1".grab_focus()
 
 func _on_personagem_pressed():
 	#Paginas devem fazer a transicao aqui
 	transition(3) 
+	$"BG/Personagem/Level Attack/Level1".grab_focus()
 
 func _on_defender_point_pressed():
 	#Paginas devem fazer a transicao aqui
+	$"BG/Defender Point/Sentinela/Level1".grab_focus()
 	transition(4)   

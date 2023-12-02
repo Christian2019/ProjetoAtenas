@@ -188,6 +188,8 @@ columns = 3
 
 [node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1"]
 layout_mode = 2
+focus_neighbor_right = NodePath("../Passivo1")
+focus_neighbor_bottom = NodePath("../../Attack2/Ativo")
 
 [node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Ativo"]
 layout_mode = 0
@@ -204,6 +206,9 @@ texture = ExtResource("5_uoj13")
 
 [node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../Ativo")
+focus_neighbor_right = NodePath("../Passivo2")
+focus_neighbor_bottom = NodePath("../../Attack2/Passivo1")
 
 [node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo1"]
 layout_mode = 0
@@ -220,6 +225,8 @@ texture = ExtResource("6_m6do7")
 
 [node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../Passivo1")
+focus_neighbor_bottom = NodePath("../../Attack2/Passivo2")
 
 [node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo2"]
 layout_mode = 0
@@ -253,6 +260,9 @@ columns = 3
 
 [node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../../Attack1/Ativo")
+focus_neighbor_right = NodePath("../Passivo1")
+focus_neighbor_bottom = NodePath("../../Torreta/Ativo")
 
 [node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Ativo"]
 layout_mode = 0
@@ -269,6 +279,10 @@ texture = ExtResource("5_uoj13")
 
 [node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../Ativo")
+focus_neighbor_top = NodePath("../../Attack1/Passivo1")
+focus_neighbor_right = NodePath("../../Attack1/Passivo2")
+focus_neighbor_bottom = NodePath("../../Torreta/Passivo1")
 
 [node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo1"]
 layout_mode = 0
@@ -285,6 +299,9 @@ texture = ExtResource("6_m6do7")
 
 [node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../Passivo1")
+focus_neighbor_top = NodePath("../../Attack1/Passivo2")
+focus_neighbor_bottom = NodePath("../../Torreta/Passivo2")
 
 [node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo2"]
 layout_mode = 0
@@ -318,6 +335,9 @@ columns = 3
 
 [node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../../Attack2/Ativo")
+focus_neighbor_right = NodePath("../Passivo1")
+focus_neighbor_bottom = NodePath("../../Dash/Ativo")
 
 [node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Ativo"]
 layout_mode = 0
@@ -334,6 +354,10 @@ texture = ExtResource("5_uoj13")
 
 [node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../Ativo")
+focus_neighbor_top = NodePath("../../Attack2/Passivo1")
+focus_neighbor_right = NodePath("../Passivo2")
+focus_neighbor_bottom = NodePath("../../Dash/Passivo1")
 
 [node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo1"]
 layout_mode = 0
@@ -350,6 +374,9 @@ texture = ExtResource("6_m6do7")
 
 [node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../Passivo1")
+focus_neighbor_top = NodePath("../../Attack2/Passivo2")
+focus_neighbor_bottom = NodePath(".")
 
 [node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo2"]
 layout_mode = 0
@@ -383,6 +410,9 @@ columns = 3
 
 [node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../../Torreta/Ativo")
+focus_neighbor_right = NodePath("../../Torreta/Passivo1")
+focus_neighbor_bottom = NodePath(".")
 
 [node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Ativo"]
 layout_mode = 0
@@ -399,6 +429,10 @@ texture = ExtResource("5_uoj13")
 
 [node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../Ativo")
+focus_neighbor_top = NodePath("../../Torreta/Passivo1")
+focus_neighbor_right = NodePath("../Passivo2")
+focus_neighbor_bottom = NodePath("../../Ultimate/Passivo1")
 
 [node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Passivo1"]
 layout_mode = 0
@@ -415,6 +449,9 @@ texture = ExtResource("6_m6do7")
 
 [node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../Passivo1")
+focus_neighbor_top = NodePath("../../Torreta/Passivo2")
+focus_neighbor_bottom = NodePath("../../Ultimate/Passivo2")
 
 [node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Passivo2"]
 layout_mode = 0
@@ -447,6 +484,9 @@ columns = 3
 
 [node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../../Dash/Ativo")
+focus_neighbor_right = NodePath("../Passivo1")
+focus_neighbor_bottom = NodePath("../../../MinhasCoisas")
 
 [node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Ativo"]
 layout_mode = 0
@@ -463,6 +503,10 @@ texture = ExtResource("5_uoj13")
 
 [node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../Ativo")
+focus_neighbor_top = NodePath("../../Dash/Passivo1")
+focus_neighbor_right = NodePath("../Passivo2")
+focus_neighbor_bottom = NodePath("../../../MinhasCoisas")
 
 [node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Passivo1"]
 layout_mode = 0
@@ -479,6 +523,9 @@ texture = ExtResource("6_m6do7")
 
 [node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../Passivo1")
+focus_neighbor_top = NodePath("../../Dash/Passivo2")
+focus_neighbor_bottom = NodePath("../../../MinhasCoisas")
 
 [node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Passivo2"]
 layout_mode = 0
@@ -650,6 +697,8 @@ offset_left = 471.0
 offset_top = 572.0
 offset_right = 627.0
 offset_bottom = 603.0
+focus_neighbor_top = NodePath("../MINHASCOISAS/Ultimate/Ativo")
+focus_neighbor_right = NodePath("../Troca")
 theme_override_colors/font_color = Color(0.410156, 0.410156, 0.410156, 1)
 theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
 theme_override_fonts/font = ExtResource("4_l0n46")
@@ -662,6 +711,8 @@ offset_left = 639.0
 offset_top = 572.0
 offset_right = 693.0
 offset_bottom = 603.0
+focus_neighbor_left = NodePath("../MinhasCoisas")
+focus_neighbor_top = NodePath("../MINHASCOISAS/Ultimate/Ativo")
 theme_override_colors/font_color = Color(0.410156, 0.410156, 0.410156, 1)
 theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
 theme_override_fonts/font = ExtResource("4_l0n46")
@@ -758,6 +809,7 @@ offset_left = 17.0
 offset_top = 212.0
 offset_right = 270.0
 offset_bottom = 255.0
+focus_neighbor_right = NodePath("../NOPE")
 text = "SIM"
 
 [node name="NOPE" type="Button" parent="BG/SHOP/Warning/Background"]
@@ -766,6 +818,7 @@ offset_left = 327.0
 offset_top = 212.0
 offset_right = 580.0
 offset_bottom = 255.0
+focus_neighbor_left = NodePath("../YES")
 text = "NÃO"
 
 [node name="Label" type="Label" parent="BG/SHOP/Warning/Background"]
@@ -786,54 +839,19 @@ position = Vector2(520, 323.5)
 scale = Vector2(0.530021, 0.504915)
 texture = ExtResource("11_lp50v")
 
-[node name="BAG" type="Node2D" parent="BG/Mineração"]
-position = Vector2(121, -10)
-
-[node name="Level1" parent="BG/Mineração/BAG" instance=ExtResource("13_8sh6w")]
-position = Vector2(79, 388)
-whatUpgrades = "Bag"
-qtdDracma = 5000
-qtdMinerios = 10
-Minerio = "wood"
-bag_valor = 2.0
-texture_normal = ExtResource("20_i736o")
-texture_hover = ExtResource("21_j5gij")
-
-[node name="Level2" parent="BG/Mineração/BAG" instance=ExtResource("13_8sh6w")]
-position = Vector2(237, 388)
-whatUpgrades = "Bag"
-qtdDracma = 5000
-qtdMinerios = 10
-Minerio = "stone"
-bag_valor = 3.0
-texture_normal = ExtResource("22_d4qg2")
-texture_hover = ExtResource("23_hgliy")
-
-[node name="Level3" parent="BG/Mineração/BAG" instance=ExtResource("13_8sh6w")]
-position = Vector2(399, 388)
-whatUpgrades = "Bag"
-qtdDracma = 5000
-qtdMinerios = 10
-Minerio = "gold"
-bag_valor = 4.0
-texture_normal = ExtResource("24_c8jab")
-texture_hover = ExtResource("25_gnafc")
-
-[node name="Level4" parent="BG/Mineração/BAG" instance=ExtResource("13_8sh6w")]
-position = Vector2(559, 388)
-whatUpgrades = "Bag"
-qtdDracma = 5000
-qtdMinerios = 10
-Minerio = "gold"
-bag_valor = 5.0
-texture_normal = ExtResource("26_1mvhd")
-texture_hover = ExtResource("27_52r08")
-
 [node name="POWER" type="Node2D" parent="BG/Mineração"]
 position = Vector2(139, 3)
 
 [node name="Level1" parent="BG/Mineração/POWER" instance=ExtResource("13_8sh6w")]
-position = Vector2(61, 117)
+offset_left = 61.0
+offset_top = 117.0
+offset_right = 61.0
+offset_bottom = 117.0
+focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Mineração")
+focus_neighbor_right = NodePath("../Level2")
+focus_neighbor_bottom = NodePath("../../BAG/Level1")
+titulo = "Mining Power Lvl 1"
+colorTitulo = Color(0, 0.486275, 0, 1)
 whatUpgrades = "Power"
 qtdDracma = 5000
 qtdMinerios = 10
@@ -843,7 +861,16 @@ texture_normal = ExtResource("13_u8pyb")
 texture_hover = ExtResource("14_y7d4u")
 
 [node name="Level2" parent="BG/Mineração/POWER" instance=ExtResource("13_8sh6w")]
-position = Vector2(219, 117)
+offset_left = 219.0
+offset_top = 117.0
+offset_right = 219.0
+offset_bottom = 117.0
+focus_neighbor_left = NodePath("../Level1")
+focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Mineração")
+focus_neighbor_right = NodePath("../Level3")
+focus_neighbor_bottom = NodePath("../../BAG/Level2")
+titulo = "Mining Power Lvl 2"
+colorTitulo = Color(0.309804, 0.517647, 1, 1)
 whatUpgrades = "Power"
 qtdDracma = 5000
 qtdMinerios = 10
@@ -853,7 +880,16 @@ texture_normal = ExtResource("24_0khjf")
 texture_hover = ExtResource("16_63fxb")
 
 [node name="Level3" parent="BG/Mineração/POWER" instance=ExtResource("13_8sh6w")]
-position = Vector2(381, 117)
+offset_left = 381.0
+offset_top = 117.0
+offset_right = 381.0
+offset_bottom = 117.0
+focus_neighbor_left = NodePath("../Level2")
+focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Mineração")
+focus_neighbor_right = NodePath("../Level4")
+focus_neighbor_bottom = NodePath("../../BAG/Level3")
+titulo = "Mining Power Lvl 3"
+colorTitulo = Color(0.654902, 0.313726, 1, 1)
 whatUpgrades = "Power"
 qtdDracma = 5000
 qtdMinerios = 10
@@ -863,7 +899,15 @@ texture_normal = ExtResource("17_i6y15")
 texture_hover = ExtResource("18_vdkuh")
 
 [node name="Level4" parent="BG/Mineração/POWER" instance=ExtResource("13_8sh6w")]
-position = Vector2(541, 117)
+offset_left = 541.0
+offset_top = 117.0
+offset_right = 541.0
+offset_bottom = 117.0
+focus_neighbor_left = NodePath("../Level3")
+focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Mineração")
+focus_neighbor_bottom = NodePath("../../BAG/Level4")
+titulo = "Mining Power Lvl 4"
+colorTitulo = Color(1, 0.396078, 0, 1)
 whatUpgrades = "Power"
 qtdDracma = 5000
 qtdMinerios = 10
@@ -871,6 +915,79 @@ Minerio = "wood"
 mining_valor = 5.0
 texture_normal = ExtResource("15_sn0qt")
 texture_hover = ExtResource("19_fni2o")
+
+[node name="BAG" type="Node2D" parent="BG/Mineração"]
+position = Vector2(121, -10)
+
+[node name="Level1" parent="BG/Mineração/BAG" instance=ExtResource("13_8sh6w")]
+offset_left = 79.0
+offset_top = 388.0
+offset_right = 79.0
+offset_bottom = 388.0
+focus_neighbor_top = NodePath("../../POWER/Level1")
+focus_neighbor_right = NodePath("../Level2")
+titulo = "Bag size Lvl 1"
+colorTitulo = Color(0, 0.8, 0, 1)
+whatUpgrades = "Bag"
+qtdDracma = 5000
+qtdMinerios = 10
+Minerio = "wood"
+bag_valor = 2.0
+texture_normal = ExtResource("20_i736o")
+texture_hover = ExtResource("21_j5gij")
+
+[node name="Level2" parent="BG/Mineração/BAG" instance=ExtResource("13_8sh6w")]
+offset_left = 237.0
+offset_top = 388.0
+offset_right = 237.0
+offset_bottom = 388.0
+focus_neighbor_left = NodePath("../Level1")
+focus_neighbor_top = NodePath("../../POWER/Level2")
+focus_neighbor_right = NodePath("../Level3")
+titulo = "Bag size Lvl 1"
+colorTitulo = Color(0.309804, 0.517647, 1, 1)
+whatUpgrades = "Bag"
+qtdDracma = 5000
+qtdMinerios = 10
+Minerio = "stone"
+bag_valor = 3.0
+texture_normal = ExtResource("22_d4qg2")
+texture_hover = ExtResource("23_hgliy")
+
+[node name="Level3" parent="BG/Mineração/BAG" instance=ExtResource("13_8sh6w")]
+offset_left = 399.0
+offset_top = 388.0
+offset_right = 399.0
+offset_bottom = 388.0
+focus_neighbor_left = NodePath("../Level2")
+focus_neighbor_top = NodePath("../../POWER/Level3")
+focus_neighbor_right = NodePath("../Level4")
+titulo = "Bag size Lvl 1"
+colorTitulo = Color(0.654902, 0.313726, 1, 1)
+whatUpgrades = "Bag"
+qtdDracma = 5000
+qtdMinerios = 10
+Minerio = "gold"
+bag_valor = 4.0
+texture_normal = ExtResource("24_c8jab")
+texture_hover = ExtResource("25_gnafc")
+
+[node name="Level4" parent="BG/Mineração/BAG" instance=ExtResource("13_8sh6w")]
+offset_left = 559.0
+offset_top = 388.0
+offset_right = 559.0
+offset_bottom = 388.0
+focus_neighbor_left = NodePath("../Level3")
+focus_neighbor_top = NodePath("../../POWER/Level4")
+titulo = "Bag size Lvl 1"
+colorTitulo = Color(1, 0.396078, 0, 1)
+whatUpgrades = "Bag"
+qtdDracma = 5000
+qtdMinerios = 10
+Minerio = "gold"
+bag_valor = 5.0
+texture_normal = ExtResource("26_1mvhd")
+texture_hover = ExtResource("27_52r08")
 
 [node name="Personagem" type="Node2D" parent="BG"]
 visible = false
@@ -881,52 +998,19 @@ position = Vector2(520, 323.5)
 scale = Vector2(0.530021, 0.504915)
 texture = ExtResource("11_lp50v")
 
-[node name="Warning2" type="Button" parent="BG/Personagem"]
-visible = false
-offset_left = -42.0
-offset_top = -17.0
-offset_right = 1064.0
-offset_bottom = 674.0
-disabled = true
-
-[node name="Background" type="ColorRect" parent="BG/Personagem/Warning2"]
-layout_mode = 0
-offset_left = 262.0
-offset_top = 127.0
-offset_right = 861.0
-offset_bottom = 394.0
-color = Color(0, 0, 0, 0.403922)
-
-[node name="YES" type="Button" parent="BG/Personagem/Warning2/Background"]
-layout_mode = 0
-offset_left = 17.0
-offset_top = 212.0
-offset_right = 270.0
-offset_bottom = 255.0
-text = "SIM"
-
-[node name="NOPE" type="Button" parent="BG/Personagem/Warning2/Background"]
-layout_mode = 0
-offset_left = 327.0
-offset_top = 212.0
-offset_right = 580.0
-offset_bottom = 255.0
-text = "NÃO"
-
-[node name="Label" type="Label" parent="BG/Personagem/Warning2/Background"]
-layout_mode = 0
-offset_left = 130.0
-offset_top = 116.0
-offset_right = 473.0
-offset_bottom = 154.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Tem certeza que quer evoluir esta habilidade?"
-
 [node name="Level Attack" type="Node2D" parent="BG/Personagem"]
 position = Vector2(127, 24)
 
 [node name="Level1" parent="BG/Personagem/Level Attack" instance=ExtResource("31_0x8vq")]
-position = Vector2(64, 110)
+offset_left = 64.0
+offset_top = 110.0
+offset_right = 64.0
+offset_bottom = 110.0
+focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Personagem")
+focus_neighbor_right = NodePath("../Level2")
+focus_neighbor_bottom = NodePath("../../Level Defesa/Level1")
+titulo = "Damage Lvl 1"
+colorTitulo = Color(0, 0.486275, 0, 1)
 whatUpgrades = "Attack"
 qtdDracma = 7500
 qtdMinerios = 10
@@ -938,7 +1022,16 @@ texture_normal = ExtResource("29_kj5ic")
 texture_hover = ExtResource("30_601cn")
 
 [node name="Level2" parent="BG/Personagem/Level Attack" instance=ExtResource("31_0x8vq")]
-position = Vector2(231, 110)
+offset_left = 231.0
+offset_top = 110.0
+offset_right = 231.0
+offset_bottom = 110.0
+focus_neighbor_left = NodePath("../Level1")
+focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Personagem")
+focus_neighbor_right = NodePath("../Level3")
+focus_neighbor_bottom = NodePath("../../Level Defesa/Level2")
+titulo = "Damage Lvl 2"
+colorTitulo = Color(0.309804, 0.517647, 1, 1)
 whatUpgrades = "Attack"
 qtdDracma = 7500
 qtdMinerios = 10
@@ -950,7 +1043,16 @@ texture_normal = ExtResource("31_dstbv")
 texture_hover = ExtResource("32_4s5u5")
 
 [node name="Level3" parent="BG/Personagem/Level Attack" instance=ExtResource("31_0x8vq")]
-position = Vector2(393, 110)
+offset_left = 393.0
+offset_top = 110.0
+offset_right = 393.0
+offset_bottom = 110.0
+focus_neighbor_left = NodePath("../Level2")
+focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Personagem")
+focus_neighbor_right = NodePath("../Level4")
+focus_neighbor_bottom = NodePath("../../Level Defesa/Level3")
+titulo = "Damage Lvl 3"
+colorTitulo = Color(0.654902, 0.313726, 1, 1)
 whatUpgrades = "Attack"
 qtdDracma = 7500
 qtdMinerios = 10
@@ -962,7 +1064,15 @@ texture_normal = ExtResource("33_vhahw")
 texture_hover = ExtResource("34_1yfjh")
 
 [node name="Level4" parent="BG/Personagem/Level Attack" instance=ExtResource("31_0x8vq")]
-position = Vector2(553, 110)
+offset_left = 553.0
+offset_top = 110.0
+offset_right = 553.0
+offset_bottom = 110.0
+focus_neighbor_left = NodePath("../Level3")
+focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Personagem")
+focus_neighbor_bottom = NodePath("../../Level Defesa/Level4")
+titulo = "Damage Lvl 4"
+colorTitulo = Color(1, 0.396078, 0, 1)
 whatUpgrades = "Attack"
 qtdDracma = 7500
 qtdMinerios = 10
@@ -977,7 +1087,14 @@ texture_hover = ExtResource("36_lygfb")
 position = Vector2(104, 6)
 
 [node name="Level1" parent="BG/Personagem/Level Defesa" instance=ExtResource("31_0x8vq")]
-position = Vector2(87, 367)
+offset_left = 87.0
+offset_top = 367.0
+offset_right = 87.0
+offset_bottom = 367.0
+focus_neighbor_top = NodePath("../../Level Attack/Level1")
+focus_neighbor_right = NodePath("../Level2")
+titulo = "Defense Lvl 1"
+colorTitulo = Color(0, 0.486275, 0, 1)
 whatUpgrades = "Defense"
 qtdDracma = 7500
 qtdMinerios = 10
@@ -992,7 +1109,15 @@ texture_normal = ExtResource("38_pvqti")
 texture_hover = ExtResource("39_rgovf")
 
 [node name="Level2" parent="BG/Personagem/Level Defesa" instance=ExtResource("31_0x8vq")]
-position = Vector2(254, 367)
+offset_left = 254.0
+offset_top = 367.0
+offset_right = 254.0
+offset_bottom = 367.0
+focus_neighbor_left = NodePath("../Level1")
+focus_neighbor_top = NodePath("../../Level Attack/Level3")
+focus_neighbor_right = NodePath("../Level3")
+titulo = "Defense Lvl 2"
+colorTitulo = Color(0.309804, 0.517647, 1, 1)
 whatUpgrades = "Defense"
 qtdDracma = 7500
 qtdMinerios = 10
@@ -1007,7 +1132,15 @@ texture_normal = ExtResource("37_iie34")
 texture_hover = ExtResource("38_xhpp4")
 
 [node name="Level3" parent="BG/Personagem/Level Defesa" instance=ExtResource("31_0x8vq")]
-position = Vector2(416, 367)
+offset_left = 416.0
+offset_top = 367.0
+offset_right = 416.0
+offset_bottom = 367.0
+focus_neighbor_left = NodePath("../Level2")
+focus_neighbor_top = NodePath("../../Level Attack/Level3")
+focus_neighbor_right = NodePath("../Level4")
+titulo = "Defense Lvl 3"
+colorTitulo = Color(0.654902, 0.313726, 1, 1)
 whatUpgrades = "Defense"
 qtdDracma = 7500
 qtdMinerios = 10
@@ -1022,7 +1155,14 @@ texture_normal = ExtResource("39_lh6bu")
 texture_hover = ExtResource("40_0bbi6")
 
 [node name="Level4" parent="BG/Personagem/Level Defesa" instance=ExtResource("31_0x8vq")]
-position = Vector2(576, 367)
+offset_left = 576.0
+offset_top = 367.0
+offset_right = 576.0
+offset_bottom = 367.0
+focus_neighbor_left = NodePath("../Level3")
+focus_neighbor_top = NodePath("../../Level Attack/Level4")
+titulo = "Defense Lvl 4"
+colorTitulo = Color(1, 0.396078, 0, 1)
 whatUpgrades = "Defense"
 qtdDracma = 7500
 qtdMinerios = 10
@@ -1049,7 +1189,15 @@ texture = ExtResource("44_a3duy")
 position = Vector2(128, -11)
 
 [node name="Level1" parent="BG/Defender Point/Sentinela" instance=ExtResource("34_utq1v")]
-position = Vector2(64, 110)
+offset_left = 64.0
+offset_top = 110.0
+offset_right = 64.0
+offset_bottom = 110.0
+focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Defender Point")
+focus_neighbor_right = NodePath("../Level2")
+focus_neighbor_bottom = NodePath("../../Centro/Level1")
+titulo = "Tower Lvl 1"
+colorTitulo = Color(0, 0.486275, 0, 1)
 whatUpgrades = "Tower"
 qtdDracma = 2500
 qtdMinerios = 10
@@ -1058,7 +1206,16 @@ texture_normal = ExtResource("45_6voh0")
 texture_hover = ExtResource("46_lm8c7")
 
 [node name="Level2" parent="BG/Defender Point/Sentinela" instance=ExtResource("34_utq1v")]
-position = Vector2(231, 110)
+offset_left = 231.0
+offset_top = 110.0
+offset_right = 231.0
+offset_bottom = 110.0
+focus_neighbor_left = NodePath("../Level1")
+focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Defender Point")
+focus_neighbor_right = NodePath("../Level3")
+focus_neighbor_bottom = NodePath("../../Centro/Level2")
+titulo = "Tower Lvl 2"
+colorTitulo = Color(0.309804, 0.517647, 1, 1)
 whatUpgrades = "Tower"
 qtdDracma = 4000
 qtdMinerios = 10
@@ -1067,7 +1224,16 @@ texture_normal = ExtResource("47_onmd5")
 texture_hover = ExtResource("48_itqjg")
 
 [node name="Level3" parent="BG/Defender Point/Sentinela" instance=ExtResource("34_utq1v")]
-position = Vector2(392, 110)
+offset_left = 392.0
+offset_top = 110.0
+offset_right = 392.0
+offset_bottom = 110.0
+focus_neighbor_left = NodePath("../Level2")
+focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Defender Point")
+focus_neighbor_right = NodePath("../Level4")
+focus_neighbor_bottom = NodePath("../../Centro/Level3")
+titulo = "Tower Lvl 3"
+colorTitulo = Color(0.654902, 0.313726, 1, 1)
 whatUpgrades = "Tower"
 qtdDracma = 5500
 qtdMinerios = 10
@@ -1076,7 +1242,15 @@ texture_normal = ExtResource("49_6581t")
 texture_hover = ExtResource("50_vebq6")
 
 [node name="Level4" parent="BG/Defender Point/Sentinela" instance=ExtResource("34_utq1v")]
-position = Vector2(553, 110)
+offset_left = 553.0
+offset_top = 110.0
+offset_right = 553.0
+offset_bottom = 110.0
+focus_neighbor_left = NodePath("../Level3")
+focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Defender Point")
+focus_neighbor_bottom = NodePath("../../Centro/Level4")
+titulo = "Tower Lvl 4"
+colorTitulo = Color(1, 0.396078, 0, 1)
 whatUpgrades = "Tower"
 qtdDracma = 7500
 qtdMinerios = 15
@@ -1088,7 +1262,15 @@ texture_hover = ExtResource("52_vbyfq")
 position = Vector2(100, -102)
 
 [node name="Level1" parent="BG/Defender Point/Centro" instance=ExtResource("34_utq1v")]
-position = Vector2(92, 367)
+offset_left = 92.0
+offset_top = 367.0
+offset_right = 92.0
+offset_bottom = 367.0
+focus_neighbor_top = NodePath("../../Sentinela/Level1")
+focus_neighbor_right = NodePath("../Level2")
+focus_neighbor_bottom = NodePath("../../Piscina/Level1")
+titulo = "Center Lvl 1"
+colorTitulo = Color(0, 0.486275, 0, 1)
 whatUpgrades = "Center"
 qtdDracma = 2500
 qtdMinerios = 10
@@ -1100,7 +1282,16 @@ texture_normal = ExtResource("53_fyrnl")
 texture_hover = ExtResource("54_guh1t")
 
 [node name="Level2" parent="BG/Defender Point/Centro" instance=ExtResource("34_utq1v")]
-position = Vector2(259, 367)
+offset_left = 259.0
+offset_top = 367.0
+offset_right = 259.0
+offset_bottom = 367.0
+focus_neighbor_left = NodePath("../Level1")
+focus_neighbor_top = NodePath("../../Sentinela/Level2")
+focus_neighbor_right = NodePath("../Level3")
+focus_neighbor_bottom = NodePath("../../Piscina/Level2")
+titulo = "Center Lvl 2"
+colorTitulo = Color(0.309804, 0.517647, 1, 1)
 whatUpgrades = "Center"
 qtdDracma = 4000
 qtdMinerios = 10
@@ -1112,7 +1303,16 @@ texture_normal = ExtResource("55_en6mg")
 texture_hover = ExtResource("56_gjcv0")
 
 [node name="Level3" parent="BG/Defender Point/Centro" instance=ExtResource("34_utq1v")]
-position = Vector2(420, 367)
+offset_left = 420.0
+offset_top = 367.0
+offset_right = 420.0
+offset_bottom = 367.0
+focus_neighbor_left = NodePath("../Level2")
+focus_neighbor_top = NodePath("../../Sentinela/Level3")
+focus_neighbor_right = NodePath("../Level4")
+focus_neighbor_bottom = NodePath("../../Piscina/Level3")
+titulo = "Center Lvl 3"
+colorTitulo = Color(0.654902, 0.313726, 1, 1)
 whatUpgrades = "Center"
 qtdDracma = 5500
 qtdMinerios = 10
@@ -1124,7 +1324,15 @@ texture_normal = ExtResource("57_xjsgn")
 texture_hover = ExtResource("58_g5o4q")
 
 [node name="Level4" parent="BG/Defender Point/Centro" instance=ExtResource("34_utq1v")]
-position = Vector2(581, 367)
+offset_left = 581.0
+offset_top = 367.0
+offset_right = 581.0
+offset_bottom = 367.0
+focus_neighbor_left = NodePath("../Level3")
+focus_neighbor_top = NodePath("../../Sentinela/Level4")
+focus_neighbor_bottom = NodePath("../../Piscina/Level4")
+titulo = "Center Lvl 4"
+colorTitulo = Color(1, 0.396078, 0, 1)
 whatUpgrades = "Center"
 qtdDracma = 7500
 qtdMinerios = 10
@@ -1139,7 +1347,14 @@ texture_hover = ExtResource("60_chr5c")
 position = Vector2(97, 61)
 
 [node name="Level1" parent="BG/Defender Point/Piscina" instance=ExtResource("34_utq1v")]
-position = Vector2(92, 367)
+offset_left = 92.0
+offset_top = 367.0
+offset_right = 92.0
+offset_bottom = 367.0
+focus_neighbor_top = NodePath("../../Centro/Level1")
+focus_neighbor_right = NodePath("../Level2")
+titulo = "Pool Lvl 1"
+colorTitulo = Color(0, 0.486275, 0, 1)
 whatUpgrades = "Pool"
 qtdDracma = 2500
 qtdMinerios = 10
@@ -1150,7 +1365,15 @@ texture_normal = ExtResource("61_7vlwj")
 texture_hover = ExtResource("62_eg5oi")
 
 [node name="Level2" parent="BG/Defender Point/Piscina" instance=ExtResource("34_utq1v")]
-position = Vector2(259, 367)
+offset_left = 259.0
+offset_top = 367.0
+offset_right = 259.0
+offset_bottom = 367.0
+focus_neighbor_left = NodePath("../Level1")
+focus_neighbor_top = NodePath("../../Centro/Level2")
+focus_neighbor_right = NodePath("../Level3")
+titulo = "Pool Lvl 2"
+colorTitulo = Color(0.309804, 0.517647, 1, 1)
 whatUpgrades = "Pool"
 qtdDracma = 4000
 qtdMinerios = 10
@@ -1161,7 +1384,15 @@ texture_normal = ExtResource("63_2xuco")
 texture_hover = ExtResource("64_37pwe")
 
 [node name="Level3" parent="BG/Defender Point/Piscina" instance=ExtResource("34_utq1v")]
-position = Vector2(420, 367)
+offset_left = 420.0
+offset_top = 367.0
+offset_right = 420.0
+offset_bottom = 367.0
+focus_neighbor_left = NodePath("../Level2")
+focus_neighbor_top = NodePath("../../Centro/Level3")
+focus_neighbor_right = NodePath("../Level4")
+titulo = "Pool Lvl 3"
+colorTitulo = Color(0.654902, 0.313726, 1, 1)
 whatUpgrades = "Pool"
 qtdDracma = 5500
 qtdMinerios = 10
@@ -1172,7 +1403,14 @@ texture_normal = ExtResource("65_ejy87")
 texture_hover = ExtResource("66_4x5tq")
 
 [node name="Level4" parent="BG/Defender Point/Piscina" instance=ExtResource("34_utq1v")]
-position = Vector2(581, 367)
+offset_left = 581.0
+offset_top = 367.0
+offset_right = 581.0
+offset_bottom = 367.0
+focus_neighbor_left = NodePath("../Level3")
+focus_neighbor_top = NodePath("../../Centro/Level4")
+titulo = "Pool Lvl 4"
+colorTitulo = Color(1, 0.396078, 0, 1)
 whatUpgrades = "Pool"
 qtdDracma = 7850
 qtdMinerios = 15
@@ -1218,6 +1456,7 @@ offset_left = 302.43
 offset_top = 9.0
 offset_right = 384.43
 offset_bottom = 41.0
+focus_neighbor_right = NodePath("../Mineração")
 theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
 theme_override_colors/font_pressed_color = Color(0.27451, 0.27451, 0.27451, 1)
 theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
@@ -1232,6 +1471,8 @@ offset_left = 389.43
 offset_top = 9.0
 offset_right = 502.43
 offset_bottom = 41.0
+focus_neighbor_left = NodePath("../Shop")
+focus_neighbor_right = NodePath("../Personagem")
 theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
 theme_override_colors/font_pressed_color = Color(0.227451, 0.227451, 0.227451, 1)
 theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
@@ -1246,6 +1487,8 @@ offset_left = 507.03
 offset_top = 9.0
 offset_right = 640.03
 offset_bottom = 41.0
+focus_neighbor_left = NodePath("../Mineração")
+focus_neighbor_right = NodePath("../Defender Point")
 theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
 theme_override_colors/font_pressed_color = Color(0.227451, 0.227451, 0.227451, 1)
 theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
@@ -1283,8 +1526,6 @@ flat = true
 [connection signal="pressed" from="BG/SHOP/Botoes/SCROLL4" to="BG/SHOP" method="_on_scroll_4_pressed"]
 [connection signal="pressed" from="BG/SHOP/Warning/Background/YES" to="BG/SHOP" method="_on_yes_pressed"]
 [connection signal="pressed" from="BG/SHOP/Warning/Background/NOPE" to="BG/SHOP" method="_on_nope_pressed"]
-[connection signal="pressed" from="BG/Personagem/Warning2/Background/YES" to="BG/Personagem" method="_on_yes_pressed"]
-[connection signal="pressed" from="BG/Personagem/Warning2/Background/NOPE" to="BG/Personagem" method="_on_nope_pressed"]
 [connection signal="pressed" from="BG/MenuPrincipal/Abas/Shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="BG/MenuPrincipal/Abas/Mineração" to="." method="_on_mineração_pressed"]
 [connection signal="pressed" from="BG/MenuPrincipal/Abas/Personagem" to="." method="_on_personagem_pressed"]

@@ -1,8 +1,9 @@
 res://default_env.tres
+res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/DefenderPointOptions.tscn
+res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.tscn
 res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/MiningOptions.tscn
+res://Scenes/Game/Constructions/Temple/TempleScreen.tscn
 res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/MiningOptions.gd
 res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.gd
-res://Scenes/Game/Constructions/Temple/TempleScreen.tscn
-res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.tscn
 res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/DefenderPointOptions.gd
-res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/DefenderPointOptions.tscn
+res://Scripts/Zones/Temple/MainPage.gd

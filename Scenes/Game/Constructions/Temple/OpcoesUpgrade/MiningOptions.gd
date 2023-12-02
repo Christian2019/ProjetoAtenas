@@ -1,4 +1,7 @@
-extends Node2D
+extends Control
+
+@export var titulo = ""
+@export var colorTitulo = Color()
 
 @export var whatUpgrades = ""
 @export var qtdDracma = 0
@@ -26,14 +29,22 @@ func _ready():
 	
 	verificaOre()
 	#Texturas de minerios 
+	$InfoDracma/Titulo.add_theme_color_override("font_color",colorTitulo)
+	$InfoDracma/Titulo.text = titulo
 	#Text
 	get_node("InfoDracma/QtdDracma/Price").text = str(qtdDracma)
 	if(qtd_ore_player==0 or qtd_ore_player == null):
 		$InfoDracma/QtdMinerio.visible = false
 	if(whatUpgrades=="Power"):
-		$InfoDracma/UpgradesPower.text = "Power: "+str(mining_valor)
+		if(mining_valor > 0): 
+			$InfoDracma/UpgradesPower.text = "Power: [color=#00cc00]+"+str(mining_valor)+"[/color]"
+		else:
+			$InfoDracma/UpgradesPower.text = "Power: [color=#ff0000]-"+str(mining_valor)+"[/color]"
 	elif(whatUpgrades=="Bag"):
-		$InfoDracma/UpgradesPower.text = "Bag: "+str(bag_valor)
+		if(bag_valor > 0): 
+			$InfoDracma/UpgradesPower.text = "Bag: [color=#00cc00]+"+str(bag_valor)+"[/color]"
+		else:
+			$InfoDracma/UpgradesPower.text = "Bag: [color=#ff0000]+"+str(bag_valor)+"[/color]"
 	pass # Replace with function body.
  
 func verificaOre():
@@ -89,5 +100,18 @@ func _on_botao_mouse_entered():
 
 
 func _on_botao_mouse_exited():
+	get_node("InfoDracma").visible=false
+	pass # Replace with function body.
+
+
+func _on_imagem_focus_entered():
+	if($Imagem.disabled==false):
+		$InfoDracma.visible = true
+	else:
+		$InfoDracma.visible = false 
+	pass # Replace with function body.
+
+
+func _on_imagem_focus_exited():
 	get_node("InfoDracma").visible=false
 	pass # Replace with function body.

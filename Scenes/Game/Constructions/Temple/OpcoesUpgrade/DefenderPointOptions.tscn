@@ -39,7 +39,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="DefenderPointOptions" type="Node2D"]
+[node name="DefenderPointOptions" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_uky6p")
 
 [node name="Imagem" type="TextureButton" parent="."]
@@ -59,14 +61,15 @@ theme_override_fonts/font = ExtResource("2_6ouqc")
 text = "Aquired"
 
 [node name="InfoDracma" type="ColorRect" parent="."]
+visible = false
 offset_left = -168.0
 offset_right = -76.0
-offset_bottom = 95.0
+offset_bottom = 117.0
 scale = Vector2(2, 2)
 color = Color(0, 0, 0, 0.580392)
 
 [node name="QtdDracma" type="Node2D" parent="InfoDracma"]
-position = Vector2(0, -1.5)
+position = Vector2(0.5, 17)
 
 [node name="Dracma" type="Sprite2D" parent="InfoDracma/QtdDracma"]
 position = Vector2(9, 9.5)
@@ -83,7 +86,7 @@ theme_override_font_sizes/font_size = 12
 metadata/_edit_use_anchors_ = true
 
 [node name="QtdMinerio" type="Node2D" parent="InfoDracma"]
-position = Vector2(-0.5, 13.5)
+position = Vector2(0, 32)
 
 [node name="Minerio" type="AnimatedSprite2D" parent="InfoDracma/QtdMinerio"]
 position = Vector2(9, 12)
@@ -107,10 +110,10 @@ anchor_left = -0.179348
 anchor_top = 1.72368
 anchor_right = -0.179348
 anchor_bottom = 1.72368
-offset_left = 17.5
-offset_top = -94.75
-offset_right = 57.5
-offset_bottom = -78.75
+offset_left = 18.0
+offset_top = -114.171
+offset_right = 58.0
+offset_bottom = -98.171
 theme_override_fonts/font = ExtResource("2_6ouqc")
 theme_override_font_sizes/font_size = 12
 metadata/_edit_use_anchors_ = true
@@ -122,10 +125,10 @@ anchor_left = -0.173913
 anchor_top = 1.25
 anchor_right = -0.173913
 anchor_bottom = 1.25
-offset_left = 17.5
-offset_top = -67.75
-offset_right = 57.5
-offset_bottom = -51.75
+offset_left = 18.0
+offset_top = -76.75
+offset_right = 58.0
+offset_bottom = -60.75
 theme_override_fonts/font = ExtResource("2_6ouqc")
 theme_override_font_sizes/font_size = 12
 metadata/_edit_use_anchors_ = true
@@ -137,12 +140,27 @@ anchor_left = -0.173913
 anchor_top = 0.789474
 anchor_right = -0.173913
 anchor_bottom = 0.789474
-offset_left = 17.5
-offset_top = -41.5
-offset_right = 57.5
-offset_bottom = -25.5
+offset_left = 18.0
+offset_top = -40.3684
+offset_right = 58.0
+offset_bottom = -24.3684
 theme_override_fonts/font = ExtResource("2_6ouqc")
 theme_override_font_sizes/font_size = 12
+metadata/_edit_use_anchors_ = true
+
+[node name="Titulo" type="Label" parent="InfoDracma"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.139674
+anchor_top = -0.673022
+anchor_right = -0.139674
+anchor_bottom = -0.673022
+offset_left = 12.85
+offset_top = 78.7435
+offset_right = 52.85
+offset_bottom = 94.7435
+theme_override_fonts/font = ExtResource("2_6ouqc")
+theme_override_font_sizes/font_size = 10
 metadata/_edit_use_anchors_ = true
 
 [connection signal="mouse_entered" from="Imagem" to="." method="_on_imagem_mouse_entered"]

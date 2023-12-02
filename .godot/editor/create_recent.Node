@@ -1,5 +1,7 @@
-AnimatedSprite2D
+Control
+RichTextLabel
 Label
+AnimatedSprite2D
 Node2D
 ColorRect
 TextureButton

@@ -39,7 +39,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="MiningOptions" type="Node2D"]
+[node name="MiningOptions" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_bgbbw")
 
 [node name="Imagem" type="TextureButton" parent="."]
@@ -60,15 +62,21 @@ text = "Aquired"
 
 [node name="InfoDracma" type="ColorRect" parent="."]
 visible = false
-offset_left = -142.0
-offset_top = 1.0
-offset_right = -71.0
-offset_bottom = 62.0
+offset_left = -158.0
+offset_right = -79.0
+offset_bottom = 83.0
 scale = Vector2(2, 2)
-color = Color(0, 0, 0, 0.439216)
+color = Color(0, 0, 0, 0.541176)
+
+[node name="Titulo" type="Label" parent="InfoDracma"]
+offset_top = 0.5
+offset_right = 40.0
+offset_bottom = 16.5
+theme_override_fonts/font = ExtResource("2_081o6")
+theme_override_font_sizes/font_size = 10
 
 [node name="QtdDracma" type="Node2D" parent="InfoDracma"]
-position = Vector2(0, -1.5)
+position = Vector2(0, 16.5)
 
 [node name="Dracma" type="Sprite2D" parent="InfoDracma/QtdDracma"]
 position = Vector2(9, 9.5)
@@ -85,12 +93,13 @@ theme_override_font_sizes/font_size = 12
 metadata/_edit_use_anchors_ = true
 
 [node name="QtdMinerio" type="Node2D" parent="InfoDracma"]
-position = Vector2(-0.5, 13.5)
+position = Vector2(-0.5, 31.5)
 
 [node name="Minerio" type="AnimatedSprite2D" parent="InfoDracma/QtdMinerio"]
 position = Vector2(9, 12)
 scale = Vector2(0.00614584, 0.00645833)
 sprite_frames = SubResource("SpriteFrames_4rv0q")
+animation = &"gold"
 
 [node name="Price" type="Label" parent="InfoDracma/QtdMinerio"]
 offset_left = 17.5
@@ -101,13 +110,16 @@ theme_override_fonts/font = ExtResource("2_081o6")
 theme_override_font_sizes/font_size = 12
 
 [node name="UpgradesPower" type="Label" parent="InfoDracma"]
+layout_mode = 0
 offset_left = 1.5
-offset_top = 39.0
+offset_top = 57.0
 offset_right = 41.5
-offset_bottom = 55.0
+offset_bottom = 73.0
 theme_override_fonts/font = ExtResource("2_081o6")
 theme_override_font_sizes/font_size = 12
 
+[connection signal="focus_entered" from="Imagem" to="." method="_on_imagem_focus_entered"]
+[connection signal="focus_exited" from="Imagem" to="." method="_on_imagem_focus_exited"]
 [connection signal="mouse_entered" from="Imagem" to="." method="_on_botao_mouse_entered"]
 [connection signal="mouse_exited" from="Imagem" to="." method="_on_botao_mouse_exited"]
 [connection signal="pressed" from="Imagem" to="." method="_on_botao_pressed"]
