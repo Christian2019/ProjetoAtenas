@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://cb86td4m1hepw"]
+[gd_scene load_steps=24 format=3 uid="uid://cb86td4m1hepw"]
 
 [ext_resource type="Script" path="res://Scripts/Game/Game.gd" id="1_mli3i"]
 [ext_resource type="PackedScene" uid="uid://bnbfdi1wf6kki" path="res://Scenes/Game/Math_controller/Math_controller.tscn" id="2_7njp2"]
+[ext_resource type="PackedScene" uid="uid://dub4b5f558ykq" path="res://Scenes/Game/HUD/PlayerHudController.tscn" id="2_23qtk"]
 [ext_resource type="PackedScene" uid="uid://bi0hqmgalqjs3" path="res://Scenes/Game/Mining/PlayerMining.tscn" id="2_h6507"]
 [ext_resource type="PackedScene" uid="uid://d2y033wavrob3" path="res://Scenes/Game/Wave_controller.tscn" id="2_ixmr8"]
 [ext_resource type="PackedScene" uid="uid://dv7ghongua4dn" path="res://Scenes/Game/ScrollsController/ScrollController.tscn" id="2_p87dt"]
@@ -53,6 +54,8 @@ size = Vector2(5764.5, 1939.25)
 script = ExtResource("1_mli3i")
 metadata/_edit_horizontal_guides_ = [2752.0]
 metadata/_edit_vertical_guides_ = [2560.0]
+
+[node name="PlayerHudController" parent="." instance=ExtResource("2_23qtk")]
 
 [node name="ScrollController" parent="." instance=ExtResource("2_p87dt")]
 

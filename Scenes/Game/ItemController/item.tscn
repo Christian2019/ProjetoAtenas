@@ -1,6 +1,7 @@
-[gd_scene load_steps=58 format=3 uid="uid://sj2bep2rsd1g"]
+[gd_scene load_steps=59 format=3 uid="uid://sj2bep2rsd1g"]
 
 [ext_resource type="Texture2D" uid="uid://d8ydqptq0jku" path="res://Assets/Images/Itens/background/ItemGood.png" id="1_k331i"]
+[ext_resource type="Script" path="res://Scripts/Game/ItemController/ItemSelected.gd" id="1_shhps"]
 [ext_resource type="Texture2D" uid="uid://bvx2vk62vlqhp" path="res://Assets/Images/Itens/background/ItemBlue.png" id="2_ulxcc"]
 [ext_resource type="Texture2D" uid="uid://bucv3v2r5e4vt" path="res://Assets/Images/Itens/background/ItemPurple.png" id="3_m1ov0"]
 [ext_resource type="Texture2D" uid="uid://4rrrmt58fwou" path="res://Assets/Images/Itens/background/ItemOrange.png" id="4_y67rq"]
@@ -235,6 +236,7 @@ animations = [{
 }]
 
 [node name="Item" type="Node2D"]
+script = ExtResource("1_shhps")
 
 [node name="Quality" type="AnimatedSprite2D" parent="."]
 position = Vector2(126.5, 92.057)
@@ -277,7 +279,7 @@ offset_bottom = 113.0
 theme_override_colors/font_color = Color(0, 0.894118, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_hq151")
-theme_override_font_sizes/font_size = 11
+theme_override_font_sizes/font_size = 12
 text = "+ 3 max hp and + 2 hp regen and + 1% life steal and + 5% damage and + 3% move speed and + 3% dodge and + 1 armor and + 5% luck"
 autowrap_mode = 2
 
@@ -289,6 +291,14 @@ offset_bottom = 159.0
 theme_override_colors/font_color = Color(0.898039, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_hq151")
-theme_override_font_sizes/font_size = 11
+theme_override_font_sizes/font_size = 12
 text = "+ 3 max hp and + 2 hp regen and + 1% life steal and + 5% damage and + 3% move speed and + 3% dodge and + 1 armor and + 5% luck"
 autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 254.0
+offset_bottom = 185.0
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]

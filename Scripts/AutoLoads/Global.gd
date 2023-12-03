@@ -24,6 +24,8 @@ var Center
 
 var startNode
 
+var PlayrHudController
+
 func _process(delta):
 	if Input.is_action_just_pressed("Restart"):
 		get_tree().change_scene_to_file("res://Scenes/MainScenes/Game_ViewPort.tscn")

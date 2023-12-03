@@ -432,3 +432,127 @@ offset_bottom = 409.5
 theme_override_fonts/font = ExtResource("5_g58ql")
 theme_override_font_sizes/font_size = 22
 text = "close"
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Button0" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 475.0
+offset_top = 244.0
+offset_right = 1279.0
+offset_bottom = 824.0
+
+[node name="Button1" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1427.0
+offset_top = 254.0
+offset_right = 2231.0
+offset_bottom = 834.0
+
+[node name="Button2" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2440.0
+offset_top = 258.0
+offset_right = 3244.0
+offset_bottom = 838.0
+
+[node name="Button3" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 423.0
+offset_top = 1165.0
+offset_right = 1227.0
+offset_bottom = 1745.0
+
+[node name="Button4" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1440.0
+offset_top = 1178.0
+offset_right = 2244.0
+offset_bottom = 1758.0
+
+[node name="Button5" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2440.0
+offset_top = 1165.0
+offset_right = 3244.0
+offset_bottom = 1745.0
+
+[node name="Button6" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 418.0
+offset_top = 2025.0
+offset_right = 1222.0
+offset_bottom = 2605.0
+
+[node name="Button7" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1452.0
+offset_top = 2025.0
+offset_right = 2256.0
+offset_bottom = 2605.0
+
+[node name="Button8" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2461.0
+offset_top = 2034.0
+offset_right = 3265.0
+offset_bottom = 2614.0
+
+[node name="Button9" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 410.0
+offset_top = 2839.0
+offset_right = 1214.0
+offset_bottom = 3419.0
+
+[node name="Button10" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1444.0
+offset_top = 2831.0
+offset_right = 2248.0
+offset_bottom = 3411.0
+
+[node name="Button11" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2453.0
+offset_top = 2839.0
+offset_right = 3257.0
+offset_bottom = 3419.0
+
+[node name="Button12" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 418.0
+offset_top = 3627.0
+offset_right = 1222.0
+offset_bottom = 4207.0
+
+[node name="Button13" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1461.0
+offset_top = 3619.0
+offset_right = 2265.0
+offset_bottom = 4199.0
+
+[node name="Button14" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2461.0
+offset_top = 3636.0
+offset_right = 3265.0
+offset_bottom = 4216.0
+
+[connection signal="pressed" from="Selected/Buttons/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Buttons/Button0" to="." method="_on_button_0_pressed"]
+[connection signal="pressed" from="Buttons/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Buttons/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Buttons/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Buttons/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Buttons/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Buttons/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Buttons/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="Buttons/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="Buttons/Button9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="Buttons/Button10" to="." method="_on_button_10_pressed"]
+[connection signal="pressed" from="Buttons/Button11" to="." method="_on_button_11_pressed"]
+[connection signal="pressed" from="Buttons/Button12" to="." method="_on_button_12_pressed"]
+[connection signal="pressed" from="Buttons/Button13" to="." method="_on_button_13_pressed"]
+[connection signal="pressed" from="Buttons/Button14" to="." method="_on_button_14_pressed"]

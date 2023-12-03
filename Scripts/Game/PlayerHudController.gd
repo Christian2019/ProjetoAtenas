@@ -1,13 +1,5 @@
 extends Node2D
-	
-var selected=1
-var changeSkillHud=false
-var skills=[{"skill":0,"quality":3},
-{"skill":0,"quality":3},
-{"skill":4,"quality":0},
-{"skill":0,"quality":0},
-{"skill":2,"quality":3}
-]
+
 
 var attack1=[PreLoads.warrior_attack1_noGod,
 	PreLoads.warrior_attack1_zeus,
@@ -55,65 +47,18 @@ var qualitys = ["common",
 "legendary"
 ]
 
+var skills=[{"skill":0,"quality":0},
+{"skill":0,"quality":0},
+{"skill":4,"quality":0},
+{"skill":0,"quality":0},
+{"skill":0,"quality":0}
+]
+
 func _ready():
-	Global.Game = self
-
-func _process(_delta):
-	
-	if (Input.is_action_just_pressed("zoomOut")):
-		Global.camera.zoom.x=0.5
-		Global.camera.zoom.y=0.5
-
-	if (Input.is_action_just_pressed("zoomIn")):
-		Global.camera.zoom.x=0.75
-		Global.camera.zoom.y=0.75
-		
-	if (Input.is_action_just_pressed("IncresseWave")):
-		if (Global.WaveController.wave+1>Global.WaveController.maxWave):
-			Global.WaveController.wave=1
-		else:
-			Global.WaveController.wave+=1	
-	elif (Input.is_action_just_pressed("DecressWave")):
-		if (Global.WaveController.wave>1):
-			Global.WaveController.wave-=1
-	
-	changeSkills()
-	
-	if Input.is_action_just_pressed("Pause"):
-		Global.Pause.pauseActive=!Global.Pause.pauseActive
-
-func changeSkills():
-	if (Input.is_action_just_pressed("ChangeSkillSelected")):
-		selected+=1
-		if (selected>4):
-			selected=0
-		Global.hud.get_node("Skills/Selected/Label").text=str(selected)
-		
-	elif (Input.is_action_just_pressed("ChangeSkillGod")):
-		changeSkillGod()
-		
-	elif (Input.is_action_just_pressed("ChangeSkillQuality")):
-		ChangeSkillQuality()
-	
-	if (changeSkillHud):
-		changePlayerSkillFunction()
-		
-func changeSkillGod():
-	skills[selected].skill+=1
-	if (skills[selected].skill)>6:
-		skills[selected].skill=0
-		
-	changeSkillHud=true
-
-func ChangeSkillQuality():
-	skills[selected].quality+=1
-	if (skills[selected].quality)>3:
-		skills[selected].quality=0
-	changeSkillHud=true
+	Global.PlayrHudController=self
+	Global.timerCreator("changePlayerSkillFunction",0.1,[],self)
 
 func changePlayerSkillFunction():
-	changeSkillHud=false
-
 	Global.player.attack1={"skill":attack1[skills[0].skill], "quality": qualitys[skills[0].quality]}
 	Global.hud.get_node("Skills/Attack1/Attack1").frame=skills[0].skill
 	changeColor("Skills/Attack1/Border",skills[0].quality)

@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpfityhkpmxkm"]
+[gd_scene load_steps=4 format=3 uid="uid://bpfityhkpmxkm"]
 
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/ItemHUD.gd" id="1_5x15q"]
+[ext_resource type="PackedScene" uid="uid://sj2bep2rsd1g" path="res://Scenes/Game/ItemController/item.tscn" id="2_5y31l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exsvs"]
+size = Vector2(810, 993)
 
 [node name="ItemHUD" type="Node2D"]
 script = ExtResource("1_5x15q")
@@ -22,3 +26,28 @@ color = Color(0, 0, 0, 0.545098)
 
 [node name="Itens" type="Node2D" parent="SubViewportContainer/SubViewport"]
 position = Vector2(8, 8)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(395, 486.5)
+shape = SubResource("RectangleShape2D_exsvs")
+
+[node name="SelectedItemBigLeft" type="Node2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(-803, -79)
+scale = Vector2(3, 3)
+
+[node name="Item" parent="SelectedItemBigLeft" instance=ExtResource("2_5y31l")]
+
+[node name="SelectedItemBigRight" type="Node2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(841, -47)
+scale = Vector2(3, 3)
+
+[node name="Item" parent="SelectedItemBigRight" instance=ExtResource("2_5y31l")]
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

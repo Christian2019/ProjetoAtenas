@@ -43,7 +43,7 @@ position = Vector2(-3, -21)
 position = Vector2(97, 83)
 scale = Vector2(0.238, 0.238)
 
-[node name="Buy" type="Button" parent="Slots/Slot1/ScrollOrItem/Scroll"]
+[node name="BuyScrollSlot1" type="Button" parent="Slots/Slot1/ScrollOrItem/Scroll"]
 offset_left = 225.0
 offset_top = 78.0
 offset_right = 331.0
@@ -53,7 +53,7 @@ theme_override_fonts/font = ExtResource("3_uaka8")
 text = "9999"
 alignment = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot1/ScrollOrItem/Scroll/Buy"]
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot1/ScrollOrItem/Scroll/BuyScrollSlot1"]
 position = Vector2(90, 16)
 scale = Vector2(0.375, 0.375)
 texture = ExtResource("3_hfi3p")
@@ -68,63 +68,68 @@ scale = Vector2(0.745, 0.745)
 [node name="id010" parent="Slots/Slot1/ScrollOrItem/Item/Item" instance=ExtResource("2_xrw00")]
 script = null
 
-[node name="PriceSlot1" type="ColorRect" parent="Slots/Slot1/ScrollOrItem/Item"]
-offset_left = 187.0
+[node name="BuyItemSlot1" type="Button" parent="Slots/Slot1/ScrollOrItem/Item"]
+offset_left = 188.0
 offset_top = -1.0
 offset_right = 294.0
-offset_bottom = 102.0
-color = Color(0.419608, 0.419608, 0.419608, 0.964706)
+offset_bottom = 104.0
+text = "
+"
 
-[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot1/ScrollOrItem/Item/PriceSlot1"]
-position = Vector2(89, 14)
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot1/ScrollOrItem/Item/BuyItemSlot1"]
+position = Vector2(88, 14)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_cpwfd")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Slots/Slot1/ScrollOrItem/Item/PriceSlot1"]
-position = Vector2(89, 51)
+[node name="Sprite2D2" type="Sprite2D" parent="Slots/Slot1/ScrollOrItem/Item/BuyItemSlot1"]
+position = Vector2(88, 51)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_0tpyh")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Slots/Slot1/ScrollOrItem/Item/PriceSlot1"]
-position = Vector2(89, 84)
+[node name="Sprite2D3" type="Sprite2D" parent="Slots/Slot1/ScrollOrItem/Item/BuyItemSlot1"]
+position = Vector2(88, 84)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_ivr6o")
 
-[node name="Wood" type="Label" parent="Slots/Slot1/ScrollOrItem/Item/PriceSlot1"]
-offset_left = 2.0
+[node name="Wood" type="Label" parent="Slots/Slot1/ScrollOrItem/Item/BuyItemSlot1"]
+layout_mode = 0
+offset_left = 1.0
 offset_top = 7.0
-offset_right = 76.0
+offset_right = 75.0
 offset_bottom = 28.0
 theme_override_fonts/font = ExtResource("3_uaka8")
 text = "9999"
 autowrap_mode = 2
 
-[node name="Gold" type="Label" parent="Slots/Slot1/ScrollOrItem/Item/PriceSlot1"]
-offset_left = 2.0
+[node name="Gold" type="Label" parent="Slots/Slot1/ScrollOrItem/Item/BuyItemSlot1"]
+layout_mode = 0
+offset_left = 1.0
 offset_top = 44.0
-offset_right = 76.0
+offset_right = 75.0
 offset_bottom = 65.0
 theme_override_fonts/font = ExtResource("3_uaka8")
 text = "9999"
 autowrap_mode = 2
 
-[node name="Stone" type="Label" parent="Slots/Slot1/ScrollOrItem/Item/PriceSlot1"]
-offset_left = 2.0
+[node name="Stone" type="Label" parent="Slots/Slot1/ScrollOrItem/Item/BuyItemSlot1"]
+layout_mode = 0
+offset_left = 1.0
 offset_top = 78.0
-offset_right = 76.0
+offset_right = 75.0
 offset_bottom = 99.0
 theme_override_fonts/font = ExtResource("3_uaka8")
 text = "9999"
 autowrap_mode = 2
 
-[node name="BuySlot1" type="Button" parent="Slots/Slot1"]
+[node name="ColorRect" type="ColorRect" parent="Slots/Slot1"]
+visible = false
 offset_left = 342.0
-offset_top = 59.0
-offset_right = 448.0
-offset_bottom = 93.0
-text = "Buy"
+offset_top = 95.0
+offset_right = 449.0
+offset_bottom = 129.0
+color = Color(1, 0, 0, 1)
 
-[node name="Lock" type="Button" parent="Slots/Slot1"]
+[node name="LockSlot1" type="Button" parent="Slots/Slot1"]
 offset_left = 342.0
 offset_top = 95.0
 offset_right = 448.0
@@ -134,7 +139,7 @@ theme_override_fonts/font = ExtResource("3_uaka8")
 text = "Lock"
 alignment = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot1/Lock"]
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot1/LockSlot1"]
 position = Vector2(89, 17)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("4_akuc4")
@@ -150,7 +155,7 @@ position = Vector2(-1, 105)
 position = Vector2(96, 99)
 scale = Vector2(0.238, 0.238)
 
-[node name="Buy" type="Button" parent="Slots/Slot2/ScrollOrItem/Scroll"]
+[node name="BuyScrollSlot2" type="Button" parent="Slots/Slot2/ScrollOrItem/Scroll"]
 offset_left = 224.0
 offset_top = 93.0
 offset_right = 330.0
@@ -160,7 +165,7 @@ theme_override_fonts/font = ExtResource("3_uaka8")
 text = "9999"
 alignment = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot2/ScrollOrItem/Scroll/Buy"]
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot2/ScrollOrItem/Scroll/BuyScrollSlot2"]
 position = Vector2(90, 16)
 scale = Vector2(0.375, 0.375)
 texture = ExtResource("3_hfi3p")
@@ -175,7 +180,69 @@ scale = Vector2(0.745, 0.745)
 [node name="id010" parent="Slots/Slot2/ScrollOrItem/Item/Item" instance=ExtResource("2_xrw00")]
 script = null
 
-[node name="Lock" type="Button" parent="Slots/Slot2"]
+[node name="BuyItemSlot2" type="Button" parent="Slots/Slot2/ScrollOrItem/Item"]
+offset_left = 186.0
+offset_top = 14.0
+offset_right = 292.0
+offset_bottom = 116.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot2/ScrollOrItem/Item/BuyItemSlot2"]
+position = Vector2(89, 14)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_cpwfd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Slots/Slot2/ScrollOrItem/Item/BuyItemSlot2"]
+position = Vector2(89, 51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_0tpyh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Slots/Slot2/ScrollOrItem/Item/BuyItemSlot2"]
+position = Vector2(89, 84)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ivr6o")
+
+[node name="Wood" type="Label" parent="Slots/Slot2/ScrollOrItem/Item/BuyItemSlot2"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="Gold" type="Label" parent="Slots/Slot2/ScrollOrItem/Item/BuyItemSlot2"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 44.0
+offset_right = 76.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="Stone" type="Label" parent="Slots/Slot2/ScrollOrItem/Item/BuyItemSlot2"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 78.0
+offset_right = 76.0
+offset_bottom = 99.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="Slots/Slot2"]
+visible = false
+offset_left = 342.0
+offset_top = 94.0
+offset_right = 449.0
+offset_bottom = 128.0
+color = Color(1, 0, 0, 1)
+
+[node name="LockSlot2" type="Button" parent="Slots/Slot2"]
 offset_left = 344.0
 offset_top = 94.0
 offset_right = 450.0
@@ -185,7 +252,7 @@ theme_override_fonts/font = ExtResource("3_uaka8")
 text = "Lock"
 alignment = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot2/Lock"]
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot2/LockSlot2"]
 position = Vector2(89, 17)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("4_akuc4")
@@ -201,7 +268,7 @@ position = Vector2(0, 231)
 position = Vector2(97, 114)
 scale = Vector2(0.238, 0.238)
 
-[node name="Buy" type="Button" parent="Slots/Slot3/ScrollOrItem/Scroll"]
+[node name="BuyScrollSlot3" type="Button" parent="Slots/Slot3/ScrollOrItem/Scroll"]
 offset_left = 224.0
 offset_top = 107.0
 offset_right = 330.0
@@ -211,7 +278,7 @@ theme_override_fonts/font = ExtResource("3_uaka8")
 text = "9999"
 alignment = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot3/ScrollOrItem/Scroll/Buy"]
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot3/ScrollOrItem/Scroll/BuyScrollSlot3"]
 position = Vector2(90, 16)
 scale = Vector2(0.375, 0.375)
 texture = ExtResource("3_hfi3p")
@@ -226,7 +293,69 @@ scale = Vector2(0.745, 0.745)
 [node name="id010" parent="Slots/Slot3/ScrollOrItem/Item/Item" instance=ExtResource("2_xrw00")]
 script = null
 
-[node name="Lock" type="Button" parent="Slots/Slot3"]
+[node name="BuyItemSlot3" type="Button" parent="Slots/Slot3/ScrollOrItem/Item"]
+offset_left = 186.0
+offset_top = 28.0
+offset_right = 292.0
+offset_bottom = 130.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot3/ScrollOrItem/Item/BuyItemSlot3"]
+position = Vector2(89, 14)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_cpwfd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Slots/Slot3/ScrollOrItem/Item/BuyItemSlot3"]
+position = Vector2(89, 51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_0tpyh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Slots/Slot3/ScrollOrItem/Item/BuyItemSlot3"]
+position = Vector2(89, 84)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ivr6o")
+
+[node name="Wood" type="Label" parent="Slots/Slot3/ScrollOrItem/Item/BuyItemSlot3"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="Gold" type="Label" parent="Slots/Slot3/ScrollOrItem/Item/BuyItemSlot3"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 44.0
+offset_right = 76.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="Stone" type="Label" parent="Slots/Slot3/ScrollOrItem/Item/BuyItemSlot3"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 78.0
+offset_right = 76.0
+offset_bottom = 99.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="Slots/Slot3"]
+visible = false
+offset_left = 340.0
+offset_top = 110.0
+offset_right = 447.0
+offset_bottom = 144.0
+color = Color(1, 0, 0, 1)
+
+[node name="LockSlot3" type="Button" parent="Slots/Slot3"]
 offset_left = 340.0
 offset_top = 110.0
 offset_right = 446.0
@@ -236,7 +365,7 @@ theme_override_fonts/font = ExtResource("3_uaka8")
 text = "Lock"
 alignment = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot3/Lock"]
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot3/LockSlot3"]
 position = Vector2(89, 17)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("4_akuc4")
@@ -252,7 +381,7 @@ position = Vector2(0, 357)
 position = Vector2(98, 128)
 scale = Vector2(0.238, 0.238)
 
-[node name="Buy" type="Button" parent="Slots/Slot4/ScrollOrItem/Scroll"]
+[node name="BuyScrollSlot4" type="Button" parent="Slots/Slot4/ScrollOrItem/Scroll"]
 offset_left = 224.0
 offset_top = 122.0
 offset_right = 330.0
@@ -262,7 +391,7 @@ theme_override_fonts/font = ExtResource("3_uaka8")
 text = "9999"
 alignment = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot4/ScrollOrItem/Scroll/Buy"]
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot4/ScrollOrItem/Scroll/BuyScrollSlot4"]
 position = Vector2(90, 16)
 scale = Vector2(0.375, 0.375)
 texture = ExtResource("3_hfi3p")
@@ -277,7 +406,69 @@ scale = Vector2(0.745, 0.745)
 [node name="id010" parent="Slots/Slot4/ScrollOrItem/Item/Item" instance=ExtResource("2_xrw00")]
 script = null
 
-[node name="Lock" type="Button" parent="Slots/Slot4"]
+[node name="BuyItemSlot4" type="Button" parent="Slots/Slot4/ScrollOrItem/Item"]
+offset_left = 186.0
+offset_top = 43.0
+offset_right = 292.0
+offset_bottom = 145.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot4/ScrollOrItem/Item/BuyItemSlot4"]
+position = Vector2(89, 14)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_cpwfd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Slots/Slot4/ScrollOrItem/Item/BuyItemSlot4"]
+position = Vector2(89, 51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_0tpyh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Slots/Slot4/ScrollOrItem/Item/BuyItemSlot4"]
+position = Vector2(89, 84)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ivr6o")
+
+[node name="Wood" type="Label" parent="Slots/Slot4/ScrollOrItem/Item/BuyItemSlot4"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="Gold" type="Label" parent="Slots/Slot4/ScrollOrItem/Item/BuyItemSlot4"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 44.0
+offset_right = 76.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="Stone" type="Label" parent="Slots/Slot4/ScrollOrItem/Item/BuyItemSlot4"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 78.0
+offset_right = 76.0
+offset_bottom = 99.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="Slots/Slot4"]
+visible = false
+offset_left = 340.0
+offset_top = 121.0
+offset_right = 447.0
+offset_bottom = 155.0
+color = Color(1, 0, 0, 1)
+
+[node name="LockSlot4" type="Button" parent="Slots/Slot4"]
 offset_left = 340.0
 offset_top = 122.0
 offset_right = 446.0
@@ -287,7 +478,7 @@ theme_override_fonts/font = ExtResource("3_uaka8")
 text = "Lock"
 alignment = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot4/Lock"]
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot4/LockSlot4"]
 position = Vector2(89, 17)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("4_akuc4")
@@ -351,162 +542,18 @@ position = Vector2(4, 423)
 position = Vector2(107.5, 70.5)
 shape = SubResource("RectangleShape2D_a8bf3")
 
-[node name="BuyItens" type="Node2D" parent="."]
-
-[node name="BuyItemSlot2" type="Button" parent="BuyItens"]
-offset_left = 223.0
-offset_top = 166.0
-offset_right = 329.0
-offset_bottom = 268.0
-focus_neighbor_bottom = NodePath("../Options")
-theme_override_fonts/font = ExtResource("3_uaka8")
-alignment = 0
-
-[node name="Sprite2D" type="Sprite2D" parent="BuyItens/BuyItemSlot2"]
-position = Vector2(89, 14)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("5_cpwfd")
-
-[node name="Sprite2D2" type="Sprite2D" parent="BuyItens/BuyItemSlot2"]
-position = Vector2(89, 51)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_0tpyh")
-
-[node name="Sprite2D3" type="Sprite2D" parent="BuyItens/BuyItemSlot2"]
-position = Vector2(89, 84)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("7_ivr6o")
-
-[node name="Wood" type="Label" parent="BuyItens/BuyItemSlot2"]
-offset_left = 2.0
-offset_top = 7.0
-offset_right = 76.0
-offset_bottom = 28.0
-theme_override_fonts/font = ExtResource("3_uaka8")
-text = "9999"
-autowrap_mode = 2
-
-[node name="Gold" type="Label" parent="BuyItens/BuyItemSlot2"]
-offset_left = 2.0
-offset_top = 44.0
-offset_right = 76.0
-offset_bottom = 65.0
-theme_override_fonts/font = ExtResource("3_uaka8")
-text = "9999"
-autowrap_mode = 2
-
-[node name="Stone" type="Label" parent="BuyItens/BuyItemSlot2"]
-offset_left = 2.0
-offset_top = 78.0
-offset_right = 76.0
-offset_bottom = 99.0
-theme_override_fonts/font = ExtResource("3_uaka8")
-text = "9999"
-autowrap_mode = 2
-
-[node name="BuyItemSlot3" type="Button" parent="BuyItens"]
-offset_left = 224.0
-offset_top = 306.0
-offset_right = 330.0
-offset_bottom = 408.0
-focus_neighbor_bottom = NodePath("../Options")
-theme_override_fonts/font = ExtResource("3_uaka8")
-alignment = 0
-
-[node name="Sprite2D" type="Sprite2D" parent="BuyItens/BuyItemSlot3"]
-position = Vector2(89, 14)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("5_cpwfd")
-
-[node name="Sprite2D2" type="Sprite2D" parent="BuyItens/BuyItemSlot3"]
-position = Vector2(89, 51)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_0tpyh")
-
-[node name="Sprite2D3" type="Sprite2D" parent="BuyItens/BuyItemSlot3"]
-position = Vector2(89, 84)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("7_ivr6o")
-
-[node name="Wood" type="Label" parent="BuyItens/BuyItemSlot3"]
-offset_left = 2.0
-offset_top = 7.0
-offset_right = 76.0
-offset_bottom = 28.0
-theme_override_fonts/font = ExtResource("3_uaka8")
-text = "9999"
-autowrap_mode = 2
-
-[node name="Gold" type="Label" parent="BuyItens/BuyItemSlot3"]
-offset_left = 2.0
-offset_top = 44.0
-offset_right = 76.0
-offset_bottom = 65.0
-theme_override_fonts/font = ExtResource("3_uaka8")
-text = "9999"
-autowrap_mode = 2
-
-[node name="Stone" type="Label" parent="BuyItens/BuyItemSlot3"]
-offset_left = 2.0
-offset_top = 78.0
-offset_right = 76.0
-offset_bottom = 99.0
-theme_override_fonts/font = ExtResource("3_uaka8")
-text = "9999"
-autowrap_mode = 2
-
-[node name="BuyItemSlot4" type="Button" parent="BuyItens"]
-offset_left = 224.0
-offset_top = 447.0
-offset_right = 330.0
-offset_bottom = 549.0
-focus_neighbor_bottom = NodePath("../Options")
-theme_override_fonts/font = ExtResource("3_uaka8")
-alignment = 0
-
-[node name="Sprite2D" type="Sprite2D" parent="BuyItens/BuyItemSlot4"]
-position = Vector2(89, 14)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("5_cpwfd")
-
-[node name="Sprite2D2" type="Sprite2D" parent="BuyItens/BuyItemSlot4"]
-position = Vector2(89, 51)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_0tpyh")
-
-[node name="Sprite2D3" type="Sprite2D" parent="BuyItens/BuyItemSlot4"]
-position = Vector2(89, 84)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("7_ivr6o")
-
-[node name="Wood" type="Label" parent="BuyItens/BuyItemSlot4"]
-offset_left = 2.0
-offset_top = 7.0
-offset_right = 76.0
-offset_bottom = 28.0
-theme_override_fonts/font = ExtResource("3_uaka8")
-text = "9999"
-autowrap_mode = 2
-
-[node name="Gold" type="Label" parent="BuyItens/BuyItemSlot4"]
-offset_left = 2.0
-offset_top = 44.0
-offset_right = 76.0
-offset_bottom = 65.0
-theme_override_fonts/font = ExtResource("3_uaka8")
-text = "9999"
-autowrap_mode = 2
-
-[node name="Stone" type="Label" parent="BuyItens/BuyItemSlot4"]
-offset_left = 2.0
-offset_top = 78.0
-offset_right = 76.0
-offset_bottom = 99.0
-theme_override_fonts/font = ExtResource("3_uaka8")
-text = "9999"
-autowrap_mode = 2
-
-[connection signal="pressed" from="Slots/Slot1/BuySlot1" to="." method="_on_buy_item_slot_1_pressed"]
+[connection signal="pressed" from="Slots/Slot1/ScrollOrItem/Scroll/BuyScrollSlot1" to="." method="_on_buy_scroll_slot_1_pressed"]
+[connection signal="pressed" from="Slots/Slot1/ScrollOrItem/Item/BuyItemSlot1" to="." method="_on_buy_item_slot_1_pressed"]
+[connection signal="pressed" from="Slots/Slot1/LockSlot1" to="." method="_on_lock_slot_1_pressed"]
+[connection signal="pressed" from="Slots/Slot2/ScrollOrItem/Scroll/BuyScrollSlot2" to="." method="_on_buy_scroll_slot_2_pressed"]
+[connection signal="pressed" from="Slots/Slot2/ScrollOrItem/Item/BuyItemSlot2" to="." method="_on_buy_item_slot_2_pressed"]
+[connection signal="pressed" from="Slots/Slot2/LockSlot2" to="." method="_on_lock_slot_2_pressed"]
+[connection signal="pressed" from="Slots/Slot3/ScrollOrItem/Scroll/BuyScrollSlot3" to="." method="_on_buy_scroll_slot_3_pressed"]
+[connection signal="pressed" from="Slots/Slot3/ScrollOrItem/Item/BuyItemSlot3" to="." method="_on_buy_item_slot_3_pressed"]
+[connection signal="pressed" from="Slots/Slot3/LockSlot3" to="." method="_on_lock_slot_3_pressed"]
+[connection signal="pressed" from="Slots/Slot4/ScrollOrItem/Scroll/BuyScrollSlot4" to="." method="_on_buy_scroll_slot_4_pressed"]
+[connection signal="pressed" from="Slots/Slot4/ScrollOrItem/Item/BuyItemSlot4" to="." method="_on_buy_item_slot_4_pressed"]
+[connection signal="pressed" from="Slots/Slot4/LockSlot4" to="." method="_on_lock_slot_4_pressed"]
 [connection signal="pressed" from="Refresh" to="." method="_on_refresh_pressed"]
 [connection signal="mouse_entered" from="Focus/SlotsAreas/FocusSlot1" to="." method="_on_focus_slot_1_mouse_entered"]
 [connection signal="mouse_exited" from="Focus/SlotsAreas/FocusSlot1" to="." method="_on_focus_slot_1_mouse_exited"]
@@ -516,6 +563,3 @@ autowrap_mode = 2
 [connection signal="mouse_exited" from="Focus/SlotsAreas/FocusSlot3" to="." method="_on_focus_slot_3_mouse_exited"]
 [connection signal="mouse_entered" from="Focus/SlotsAreas/FocusSlot4" to="." method="_on_focus_slot_4_mouse_entered"]
 [connection signal="mouse_exited" from="Focus/SlotsAreas/FocusSlot4" to="." method="_on_focus_slot_4_mouse_exited"]
-[connection signal="pressed" from="BuyItens/BuyItemSlot2" to="." method="_on_buy_item_slot_2_pressed"]
-[connection signal="pressed" from="BuyItens/BuyItemSlot3" to="." method="_on_buy_item_slot_3_pressed"]
-[connection signal="pressed" from="BuyItens/BuyItemSlot4" to="." method="_on_buy_item_slot_4_pressed"]

@@ -13,15 +13,20 @@ var scrollHuds=[]
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	Global.ScrollController=self
-	Global.timerCreator("test",0.1,[],self)
-	
-func test():
-	var skill =PreLoads.scroll_warrior_dash_hades.instantiate()
-	skill.quality=2
-	scrollsActives[skill.skilltype]=skill
-	skill.start()
-	updateHuds()
-	
+	Global.timerCreator("updateHuds",0.1,[],self)
+
+func getCurrentScrollPrice(scroll):
+	var baseValue =5
+	var value = baseValue*(scroll.quality+1)*Global.WaveController.wave
+	return value
+
+func displayBig(scrollBig,selected):
+	scrollSelected=selected
+	var s=getSelectedSroll()
+	if s==null:
+		return false
+	s.updateScroll(scrollBig)
+	return true
 
 func updateHuds():
 	var scroll
@@ -65,3 +70,28 @@ func getSelectedSroll():
 		if p==scrollSelected:
 			return scrollsPassives[i]
 
+func addScroll(scroll):
+	#Adicao Ativa
+	if scrollsActives[scroll.skilltype]==null:
+		scrollsActives[scroll.skilltype]=scroll
+		scroll.start()
+		scroll.addActiveFunction()
+		updateHuds()
+		return true
+	
+	#Adicao Passiva
+	for i in range(0,scrollsPassives.size(),1):
+		if (scrollsPassives[i]==null):
+			scrollsPassives[i]=scroll
+			scroll.start()
+			scroll.addPassiveFunction()
+			updateHuds()
+			return true
+			
+	if tryToCombine():
+		return true
+			
+	return false
+
+func tryToCombine():
+	return false

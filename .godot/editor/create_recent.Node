@@ -1,8 +1,9 @@
-ColorRect
 Button
 Node2D
-Area2D
+ColorRect
 CollisionShape2D
+Area2D
+TextureButton
 Label
 Sprite2D
 AnimatedSprite2D

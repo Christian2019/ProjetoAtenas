@@ -3,7 +3,6 @@ extends Node2D
 var quality=0
 var sellPrice
 
-var skillPreload
 var godType=0
 var skilltype=3
 
@@ -12,7 +11,7 @@ var passive
 var hpRengen
 
 func start():
-	skillPreload=PreLoads.warrior_dash_hades
+	sellPrice=Global.ScrollController.getCurrentScrollPrice(self)
 	cd=[3,2.5,2,1.5]
 	passive=[Global.LevelUp.hp,Global.LevelUp.hp*2,Global.LevelUp.hp*3,Global.LevelUp.hp*4]
 	hpRengen=[Global.LevelUp.hpRegeneration*2,Global.LevelUp.hpRegeneration*5,Global.LevelUp.hpRegeneration*10,Global.LevelUp.hpRegeneration*25]
@@ -22,8 +21,15 @@ func addPassiveFunction():
 func removePassiveFunction():
 	Global.player.baseMaxHp-=passive[quality]
 
-func updateScroll(scroll):
+func addActiveFunction():
+	Global.PlayrHudController.skills[skilltype]={"skill":3,"quality":quality}	
+	Global.PlayrHudController.changePlayerSkillFunction()
 
+func removeActiveFunction():
+	Global.PlayrHudController.skills[skilltype]={"skill":0,"quality":0}	
+	Global.PlayrHudController.changePlayerSkillFunction()
+
+func updateScroll(scroll):
 	scroll.get_node("Divine").visible=false
 	scroll.get_node("Scroll").frame=quality
 	scroll.get_node("Big/AnimatedSprite2D").frame=godType
