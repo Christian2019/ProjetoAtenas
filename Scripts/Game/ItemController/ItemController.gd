@@ -16,8 +16,14 @@ func appendItem(item):
 	var i = {"item": item}
 	itemEquipped.append(i)
 	item.addFunction()
-	Global.ItemHud.update(item.duplicate())
-	Global.ItemHudTempleShop.update(item.duplicate())
+	var itemCopy=item.duplicate()
+	var itemCopy2=item.duplicate()
+	if itemCopy.get_node_or_null("ItemGrab")!=null:
+		itemCopy.get_node("ItemGrab").queue_free()
+	if itemCopy2.get_node_or_null("ItemGrab")!=null:
+		itemCopy2.get_node("ItemGrab").queue_free()	
+	Global.ItemHud.update(itemCopy)
+	Global.ItemHudTempleShop.update(itemCopy2)
 
 func appendItemBag(item):
 	var i = {"item": item.duplicate()}
@@ -124,11 +130,14 @@ func itenReadyFunction(item):
 	item.get_node("Item").get_node("item_name").text=item.item_name
 	item.get_node("Item").get_node("descriptionPositive").text=item.descriptionPositive
 	item.get_node("Item").get_node("descriptionNegative").text=item.descriptionNegative
-	item.get_node("ItemGrab").get_node("Itens").frame=item.itenGrabFrame
+	
 	var resources=getRandomValue(item.quality)
-	item.wood=resources.wood
+	item.wood=resources.wood	
 	item.stone=resources.stone
 	item.gold=resources.gold
+
+	if item.get_node_or_null("ItemGrab")!=null:
+		item.get_node("ItemGrab").get_node("Itens").frame=item.itenGrabFrame
 	
 func dropIten(tier2Change,tier3Change,tier4Change,element):
 	var tier

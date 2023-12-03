@@ -1,6 +1,6 @@
 extends Node2D
 
-var scrollSelected=9
+var scrollSelected=null
 
 var scrollsActives=[null,null,null,null,null]
 var sAHudPosition=[0,3,6,9,12]
@@ -45,7 +45,7 @@ func updateHuds():
 				scrollsPassives[j].updateScroll(scroll)
 				scroll.visible=true
 		
-		scroll=sh.get_node("Selected/Scroll")
+		scroll=sh.get_node("Selected")
 		if (scrollSelected==null):
 			scroll.visible=false
 		else:

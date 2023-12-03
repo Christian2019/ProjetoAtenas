@@ -1,0 +1,185 @@
+[gd_scene load_steps=8 format=3 uid="uid://dpieqc71pk5sp"]
+
+[ext_resource type="Script" path="res://Scripts/Zones/Temple/UpgradeOptions/DefenderPointOptions.gd" id="1_uky6p"]
+[ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="2_6ouqc"]
+[ext_resource type="Texture2D" uid="uid://detogg1xdpi7s" path="res://Assets/Images/LevelUp/dracma.png" id="3_1i611"]
+[ext_resource type="Texture2D" uid="uid://bp4nnroubqrqp" path="res://Assets/Images/HUD/Loja/Ores/Gold.png" id="4_yvhhx"]
+[ext_resource type="Texture2D" uid="uid://cvi4vcyjfl284" path="res://Assets/Images/HUD/Loja/Ores/Rock.png" id="5_8b4dr"]
+[ext_resource type="Texture2D" uid="uid://cxnn4leqp0b1i" path="res://Assets/Images/HUD/Loja/Ores/Wood.png" id="6_wlar1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nl8v3"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_yvhhx")
+}],
+"loop": true,
+"name": &"gold",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8b4dr")
+}],
+"loop": true,
+"name": &"stone",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_wlar1")
+}],
+"loop": true,
+"name": &"wood",
+"speed": 5.0
+}]
+
+[node name="DefenderPointOptions" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_uky6p")
+
+[node name="Imagem" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 140.0
+offset_bottom = 90.0
+scale = Vector2(1, 1.56)
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Aquired" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 61.0
+offset_right = 95.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_6ouqc")
+text = "Aquired"
+
+[node name="InfoDracma" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -183.0
+offset_top = -40.0
+offset_right = -91.0
+offset_bottom = 77.0
+scale = Vector2(2, 2)
+color = Color(0, 0, 0, 0.580392)
+
+[node name="Titulo" type="Label" parent="InfoDracma"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.139674
+anchor_top = -0.673022
+anchor_right = -0.139674
+anchor_bottom = -0.673022
+offset_left = 12.85
+offset_top = 78.7435
+offset_right = 52.85
+offset_bottom = 94.7435
+theme_override_fonts/font = ExtResource("2_6ouqc")
+theme_override_font_sizes/font_size = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="QtdDracma" type="Node2D" parent="InfoDracma"]
+position = Vector2(0.5, 17)
+
+[node name="Dracma" type="Sprite2D" parent="InfoDracma/QtdDracma"]
+position = Vector2(9, 9.5)
+scale = Vector2(0.171687, 0.175287)
+texture = ExtResource("3_1i611")
+
+[node name="Price" type="Label" parent="InfoDracma/QtdDracma"]
+offset_left = 17.5
+offset_top = 3.5
+offset_right = 57.5
+offset_bottom = 19.5
+theme_override_fonts/font = ExtResource("2_6ouqc")
+theme_override_font_sizes/font_size = 12
+metadata/_edit_use_anchors_ = true
+
+[node name="QtdMinerio" type="Node2D" parent="InfoDracma"]
+position = Vector2(0, 32)
+
+[node name="Minerio" type="AnimatedSprite2D" parent="InfoDracma/QtdMinerio"]
+position = Vector2(9, 12)
+scale = Vector2(0.00614584, 0.00645833)
+sprite_frames = SubResource("SpriteFrames_nl8v3")
+animation = &"wood"
+
+[node name="Price" type="Label" parent="InfoDracma/QtdMinerio"]
+offset_left = 17.5
+offset_top = 3.5
+offset_right = 57.5
+offset_bottom = 19.5
+theme_override_fonts/font = ExtResource("2_6ouqc")
+theme_override_font_sizes/font_size = 12
+metadata/_edit_use_anchors_ = true
+
+[node name="Upgrades" type="Node2D" parent="InfoDracma"]
+
+[node name="WhatUpgrades" type="Label" parent="InfoDracma/Upgrades"]
+offset_left = 1.5
+offset_top = 57.0
+offset_right = 41.5
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("2_6ouqc")
+theme_override_font_sizes/font_size = 12
+
+[node name="Ammount" type="Label" parent="InfoDracma/Upgrades"]
+offset_left = 60.5
+offset_top = 56.0
+offset_right = 94.5
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_6ouqc")
+theme_override_font_sizes/font_size = 12
+
+[node name="Upgrades2" type="Node2D" parent="InfoDracma"]
+position = Vector2(0, 18)
+
+[node name="WhatUpgrades" type="Label" parent="InfoDracma/Upgrades2"]
+offset_left = 1.5
+offset_top = 57.0
+offset_right = 41.5
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("2_6ouqc")
+theme_override_font_sizes/font_size = 12
+
+[node name="Ammount" type="Label" parent="InfoDracma/Upgrades2"]
+offset_left = 60.5
+offset_top = 56.0
+offset_right = 94.5
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_6ouqc")
+theme_override_font_sizes/font_size = 12
+
+[node name="Upgrades3" type="Node2D" parent="InfoDracma"]
+position = Vector2(0, 37)
+
+[node name="WhatUpgrades" type="Label" parent="InfoDracma/Upgrades3"]
+offset_left = 1.5
+offset_top = 57.0
+offset_right = 41.5
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("2_6ouqc")
+theme_override_font_sizes/font_size = 12
+
+[node name="Ammount" type="Label" parent="InfoDracma/Upgrades3"]
+offset_left = 60.5
+offset_top = 56.0
+offset_right = 94.5
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_6ouqc")
+theme_override_font_sizes/font_size = 12
+
+[connection signal="focus_entered" from="Imagem" to="." method="_on_imagem_focus_entered"]
+[connection signal="focus_exited" from="Imagem" to="." method="_on_imagem_focus_exited"]
+[connection signal="mouse_entered" from="Imagem" to="." method="_on_imagem_mouse_entered"]
+[connection signal="mouse_exited" from="Imagem" to="." method="_on_imagem_mouse_exited"]
+[connection signal="pressed" from="Imagem" to="." method="_on_imagem_pressed"]

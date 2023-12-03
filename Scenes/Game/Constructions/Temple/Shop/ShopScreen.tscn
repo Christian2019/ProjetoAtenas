@@ -1,0 +1,521 @@
+[gd_scene load_steps=14 format=3 uid="uid://bn814iyfbtpnc"]
+
+[ext_resource type="PackedScene" uid="uid://b8treb1euqxo8" path="res://Scenes/Game/ScrollsController/Scroll.tscn" id="1_05sl1"]
+[ext_resource type="Script" path="res://Scripts/Zones/Temple/Shop/ShopScreen.gd" id="1_lqdp7"]
+[ext_resource type="PackedScene" uid="uid://dacqi2fipojl5" path="res://Scenes/Game/ItemController/Itens/tier2/id010.tscn" id="2_xrw00"]
+[ext_resource type="Texture2D" uid="uid://05u58rbkivwr" path="res://Assets/Images/Resources/64x64.png" id="3_hfi3p"]
+[ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="3_uaka8"]
+[ext_resource type="Texture2D" uid="uid://4h5655d14eji" path="res://Assets/Images/HUD/Loja/lock.png" id="4_akuc4"]
+[ext_resource type="Texture2D" uid="uid://cxnn4leqp0b1i" path="res://Assets/Images/HUD/Loja/Ores/Wood.png" id="5_cpwfd"]
+[ext_resource type="Texture2D" uid="uid://bp4nnroubqrqp" path="res://Assets/Images/HUD/Loja/Ores/Gold.png" id="6_0tpyh"]
+[ext_resource type="Texture2D" uid="uid://cvi4vcyjfl284" path="res://Assets/Images/HUD/Loja/Ores/Rock.png" id="7_ivr6o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pfej4"]
+size = Vector2(139, 105)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqm0y"]
+size = Vector2(139, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vr7xp"]
+size = Vector2(141.25, 109.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8bf3"]
+size = Vector2(135, 99)
+
+[node name="ShopScreen" type="Node2D"]
+script = ExtResource("1_lqdp7")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 461.0
+offset_bottom = 573.0
+color = Color(0.592157, 0.592157, 0.592157, 1)
+
+[node name="Slots" type="Node2D" parent="."]
+
+[node name="Slot1" type="Node2D" parent="Slots"]
+position = Vector2(-3, -21)
+
+[node name="ScrollOrItem" type="Node2D" parent="Slots/Slot1"]
+
+[node name="Scroll" type="Node2D" parent="Slots/Slot1/ScrollOrItem"]
+
+[node name="ScrollImage" parent="Slots/Slot1/ScrollOrItem/Scroll" instance=ExtResource("1_05sl1")]
+position = Vector2(97, 83)
+scale = Vector2(0.238, 0.238)
+
+[node name="Buy" type="Button" parent="Slots/Slot1/ScrollOrItem/Scroll"]
+offset_left = 225.0
+offset_top = 78.0
+offset_right = 331.0
+offset_bottom = 112.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot1/ScrollOrItem/Scroll/Buy"]
+position = Vector2(90, 16)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("3_hfi3p")
+
+[node name="Item" type="Node2D" parent="Slots/Slot1/ScrollOrItem"]
+position = Vector2(38, 47)
+
+[node name="Item" type="Node2D" parent="Slots/Slot1/ScrollOrItem/Item"]
+position = Vector2(-16, -20)
+scale = Vector2(0.745, 0.745)
+
+[node name="id010" parent="Slots/Slot1/ScrollOrItem/Item/Item" instance=ExtResource("2_xrw00")]
+script = null
+
+[node name="PriceSlot1" type="ColorRect" parent="Slots/Slot1/ScrollOrItem/Item"]
+offset_left = 187.0
+offset_top = -1.0
+offset_right = 294.0
+offset_bottom = 102.0
+color = Color(0.419608, 0.419608, 0.419608, 0.964706)
+
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot1/ScrollOrItem/Item/PriceSlot1"]
+position = Vector2(89, 14)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_cpwfd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Slots/Slot1/ScrollOrItem/Item/PriceSlot1"]
+position = Vector2(89, 51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_0tpyh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Slots/Slot1/ScrollOrItem/Item/PriceSlot1"]
+position = Vector2(89, 84)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ivr6o")
+
+[node name="Wood" type="Label" parent="Slots/Slot1/ScrollOrItem/Item/PriceSlot1"]
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="Gold" type="Label" parent="Slots/Slot1/ScrollOrItem/Item/PriceSlot1"]
+offset_left = 2.0
+offset_top = 44.0
+offset_right = 76.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="Stone" type="Label" parent="Slots/Slot1/ScrollOrItem/Item/PriceSlot1"]
+offset_left = 2.0
+offset_top = 78.0
+offset_right = 76.0
+offset_bottom = 99.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="BuySlot1" type="Button" parent="Slots/Slot1"]
+offset_left = 342.0
+offset_top = 59.0
+offset_right = 448.0
+offset_bottom = 93.0
+text = "Buy"
+
+[node name="Lock" type="Button" parent="Slots/Slot1"]
+offset_left = 342.0
+offset_top = 95.0
+offset_right = 448.0
+offset_bottom = 129.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "Lock"
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot1/Lock"]
+position = Vector2(89, 17)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_akuc4")
+
+[node name="Slot2" type="Node2D" parent="Slots"]
+position = Vector2(-1, 105)
+
+[node name="ScrollOrItem" type="Node2D" parent="Slots/Slot2"]
+
+[node name="Scroll" type="Node2D" parent="Slots/Slot2/ScrollOrItem"]
+
+[node name="ScrollImage" parent="Slots/Slot2/ScrollOrItem/Scroll" instance=ExtResource("1_05sl1")]
+position = Vector2(96, 99)
+scale = Vector2(0.238, 0.238)
+
+[node name="Buy" type="Button" parent="Slots/Slot2/ScrollOrItem/Scroll"]
+offset_left = 224.0
+offset_top = 93.0
+offset_right = 330.0
+offset_bottom = 127.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot2/ScrollOrItem/Scroll/Buy"]
+position = Vector2(90, 16)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("3_hfi3p")
+
+[node name="Item" type="Node2D" parent="Slots/Slot2/ScrollOrItem"]
+position = Vector2(38, 47)
+
+[node name="Item" type="Node2D" parent="Slots/Slot2/ScrollOrItem/Item"]
+position = Vector2(-17, -4)
+scale = Vector2(0.745, 0.745)
+
+[node name="id010" parent="Slots/Slot2/ScrollOrItem/Item/Item" instance=ExtResource("2_xrw00")]
+script = null
+
+[node name="Lock" type="Button" parent="Slots/Slot2"]
+offset_left = 344.0
+offset_top = 94.0
+offset_right = 450.0
+offset_bottom = 128.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "Lock"
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot2/Lock"]
+position = Vector2(89, 17)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_akuc4")
+
+[node name="Slot3" type="Node2D" parent="Slots"]
+position = Vector2(0, 231)
+
+[node name="ScrollOrItem" type="Node2D" parent="Slots/Slot3"]
+
+[node name="Scroll" type="Node2D" parent="Slots/Slot3/ScrollOrItem"]
+
+[node name="ScrollImage" parent="Slots/Slot3/ScrollOrItem/Scroll" instance=ExtResource("1_05sl1")]
+position = Vector2(97, 114)
+scale = Vector2(0.238, 0.238)
+
+[node name="Buy" type="Button" parent="Slots/Slot3/ScrollOrItem/Scroll"]
+offset_left = 224.0
+offset_top = 107.0
+offset_right = 330.0
+offset_bottom = 141.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot3/ScrollOrItem/Scroll/Buy"]
+position = Vector2(90, 16)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("3_hfi3p")
+
+[node name="Item" type="Node2D" parent="Slots/Slot3/ScrollOrItem"]
+position = Vector2(38, 47)
+
+[node name="Item" type="Node2D" parent="Slots/Slot3/ScrollOrItem/Item"]
+position = Vector2(-16, 11)
+scale = Vector2(0.745, 0.745)
+
+[node name="id010" parent="Slots/Slot3/ScrollOrItem/Item/Item" instance=ExtResource("2_xrw00")]
+script = null
+
+[node name="Lock" type="Button" parent="Slots/Slot3"]
+offset_left = 340.0
+offset_top = 110.0
+offset_right = 446.0
+offset_bottom = 144.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "Lock"
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot3/Lock"]
+position = Vector2(89, 17)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_akuc4")
+
+[node name="Slot4" type="Node2D" parent="Slots"]
+position = Vector2(0, 357)
+
+[node name="ScrollOrItem" type="Node2D" parent="Slots/Slot4"]
+
+[node name="Scroll" type="Node2D" parent="Slots/Slot4/ScrollOrItem"]
+
+[node name="ScrollImage" parent="Slots/Slot4/ScrollOrItem/Scroll" instance=ExtResource("1_05sl1")]
+position = Vector2(98, 128)
+scale = Vector2(0.238, 0.238)
+
+[node name="Buy" type="Button" parent="Slots/Slot4/ScrollOrItem/Scroll"]
+offset_left = 224.0
+offset_top = 122.0
+offset_right = 330.0
+offset_bottom = 156.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot4/ScrollOrItem/Scroll/Buy"]
+position = Vector2(90, 16)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("3_hfi3p")
+
+[node name="Item" type="Node2D" parent="Slots/Slot4/ScrollOrItem"]
+position = Vector2(38, 47)
+
+[node name="Item" type="Node2D" parent="Slots/Slot4/ScrollOrItem/Item"]
+position = Vector2(-15, 25)
+scale = Vector2(0.745, 0.745)
+
+[node name="id010" parent="Slots/Slot4/ScrollOrItem/Item/Item" instance=ExtResource("2_xrw00")]
+script = null
+
+[node name="Lock" type="Button" parent="Slots/Slot4"]
+offset_left = 340.0
+offset_top = 122.0
+offset_right = 446.0
+offset_bottom = 156.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "Lock"
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Slots/Slot4/Lock"]
+position = Vector2(89, 17)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_akuc4")
+
+[node name="Refresh" type="Button" parent="."]
+offset_left = 342.0
+offset_top = 536.0
+offset_right = 459.0
+offset_bottom = 570.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "reroll 9999 "
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Refresh"]
+position = Vector2(103, 15)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("3_hfi3p")
+
+[node name="Focus" type="Node2D" parent="."]
+
+[node name="ScrollSelected" parent="Focus" instance=ExtResource("1_05sl1")]
+visible = false
+z_index = 1
+position = Vector2(666, 155)
+scale = Vector2(0.5, 0.5)
+
+[node name="Item" type="Node2D" parent="Focus"]
+visible = false
+z_index = 1
+position = Vector2(499, 34)
+scale = Vector2(1.6, 1.6)
+
+[node name="id010" parent="Focus/Item" instance=ExtResource("2_xrw00")]
+script = null
+
+[node name="SlotsAreas" type="Node2D" parent="Focus"]
+
+[node name="FocusSlot1" type="Area2D" parent="Focus/SlotsAreas"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Focus/SlotsAreas/FocusSlot1"]
+position = Vector2(111.5, 75.5)
+shape = SubResource("RectangleShape2D_pfej4")
+
+[node name="FocusSlot2" type="Area2D" parent="Focus/SlotsAreas"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Focus/SlotsAreas/FocusSlot2"]
+position = Vector2(113.5, 219)
+shape = SubResource("RectangleShape2D_nqm0y")
+
+[node name="FocusSlot3" type="Area2D" parent="Focus/SlotsAreas"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Focus/SlotsAreas/FocusSlot3"]
+position = Vector2(110.375, 351.25)
+shape = SubResource("RectangleShape2D_vr7xp")
+
+[node name="FocusSlot4" type="Area2D" parent="Focus/SlotsAreas"]
+position = Vector2(4, 423)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Focus/SlotsAreas/FocusSlot4"]
+position = Vector2(107.5, 70.5)
+shape = SubResource("RectangleShape2D_a8bf3")
+
+[node name="BuyItens" type="Node2D" parent="."]
+
+[node name="BuyItemSlot2" type="Button" parent="BuyItens"]
+offset_left = 223.0
+offset_top = 166.0
+offset_right = 329.0
+offset_bottom = 268.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="BuyItens/BuyItemSlot2"]
+position = Vector2(89, 14)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_cpwfd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BuyItens/BuyItemSlot2"]
+position = Vector2(89, 51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_0tpyh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="BuyItens/BuyItemSlot2"]
+position = Vector2(89, 84)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ivr6o")
+
+[node name="Wood" type="Label" parent="BuyItens/BuyItemSlot2"]
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="Gold" type="Label" parent="BuyItens/BuyItemSlot2"]
+offset_left = 2.0
+offset_top = 44.0
+offset_right = 76.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="Stone" type="Label" parent="BuyItens/BuyItemSlot2"]
+offset_left = 2.0
+offset_top = 78.0
+offset_right = 76.0
+offset_bottom = 99.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="BuyItemSlot3" type="Button" parent="BuyItens"]
+offset_left = 224.0
+offset_top = 306.0
+offset_right = 330.0
+offset_bottom = 408.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="BuyItens/BuyItemSlot3"]
+position = Vector2(89, 14)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_cpwfd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BuyItens/BuyItemSlot3"]
+position = Vector2(89, 51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_0tpyh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="BuyItens/BuyItemSlot3"]
+position = Vector2(89, 84)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ivr6o")
+
+[node name="Wood" type="Label" parent="BuyItens/BuyItemSlot3"]
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="Gold" type="Label" parent="BuyItens/BuyItemSlot3"]
+offset_left = 2.0
+offset_top = 44.0
+offset_right = 76.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="Stone" type="Label" parent="BuyItens/BuyItemSlot3"]
+offset_left = 2.0
+offset_top = 78.0
+offset_right = 76.0
+offset_bottom = 99.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="BuyItemSlot4" type="Button" parent="BuyItens"]
+offset_left = 224.0
+offset_top = 447.0
+offset_right = 330.0
+offset_bottom = 549.0
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("3_uaka8")
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="BuyItens/BuyItemSlot4"]
+position = Vector2(89, 14)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_cpwfd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BuyItens/BuyItemSlot4"]
+position = Vector2(89, 51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_0tpyh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="BuyItens/BuyItemSlot4"]
+position = Vector2(89, 84)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ivr6o")
+
+[node name="Wood" type="Label" parent="BuyItens/BuyItemSlot4"]
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="Gold" type="Label" parent="BuyItens/BuyItemSlot4"]
+offset_left = 2.0
+offset_top = 44.0
+offset_right = 76.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[node name="Stone" type="Label" parent="BuyItens/BuyItemSlot4"]
+offset_left = 2.0
+offset_top = 78.0
+offset_right = 76.0
+offset_bottom = 99.0
+theme_override_fonts/font = ExtResource("3_uaka8")
+text = "9999"
+autowrap_mode = 2
+
+[connection signal="pressed" from="Slots/Slot1/BuySlot1" to="." method="_on_buy_item_slot_1_pressed"]
+[connection signal="pressed" from="Refresh" to="." method="_on_refresh_pressed"]
+[connection signal="mouse_entered" from="Focus/SlotsAreas/FocusSlot1" to="." method="_on_focus_slot_1_mouse_entered"]
+[connection signal="mouse_exited" from="Focus/SlotsAreas/FocusSlot1" to="." method="_on_focus_slot_1_mouse_exited"]
+[connection signal="mouse_entered" from="Focus/SlotsAreas/FocusSlot2" to="." method="_on_focus_slot_2_mouse_entered"]
+[connection signal="mouse_exited" from="Focus/SlotsAreas/FocusSlot2" to="." method="_on_focus_slot_2_mouse_exited"]
+[connection signal="mouse_entered" from="Focus/SlotsAreas/FocusSlot3" to="." method="_on_focus_slot_3_mouse_entered"]
+[connection signal="mouse_exited" from="Focus/SlotsAreas/FocusSlot3" to="." method="_on_focus_slot_3_mouse_exited"]
+[connection signal="mouse_entered" from="Focus/SlotsAreas/FocusSlot4" to="." method="_on_focus_slot_4_mouse_entered"]
+[connection signal="mouse_exited" from="Focus/SlotsAreas/FocusSlot4" to="." method="_on_focus_slot_4_mouse_exited"]
+[connection signal="pressed" from="BuyItens/BuyItemSlot2" to="." method="_on_buy_item_slot_2_pressed"]
+[connection signal="pressed" from="BuyItens/BuyItemSlot3" to="." method="_on_buy_item_slot_3_pressed"]
+[connection signal="pressed" from="BuyItens/BuyItemSlot4" to="." method="_on_buy_item_slot_4_pressed"]

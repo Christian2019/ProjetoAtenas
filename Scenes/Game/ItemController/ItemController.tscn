@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://Scripts/Game/ItemController/ItemController.gd" id="1_38px7"]
 [ext_resource type="PackedScene" uid="uid://dvgvp2thpqg12" path="res://Scenes/Game/LevelUp/Stats.tscn" id="2_scuos"]
 [ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="4_dufhy"]
-[ext_resource type="Texture2D" uid="uid://bp4nnroubqrqp" path="res://Assets/Images/Resources/Ores/Gold.png" id="5_5b71g"]
-[ext_resource type="Texture2D" uid="uid://cvi4vcyjfl284" path="res://Assets/Images/Resources/Ores/Rock.png" id="6_g2efc"]
-[ext_resource type="Texture2D" uid="uid://cxnn4leqp0b1i" path="res://Assets/Images/Resources/Ores/Wood.png" id="7_giwaq"]
+[ext_resource type="Texture2D" uid="uid://bp4nnroubqrqp" path="res://Assets/Images/HUD/Loja/Ores/Gold.png" id="5_5b71g"]
+[ext_resource type="Texture2D" uid="uid://cvi4vcyjfl284" path="res://Assets/Images/HUD/Loja/Ores/Rock.png" id="6_g2efc"]
+[ext_resource type="Texture2D" uid="uid://cxnn4leqp0b1i" path="res://Assets/Images/HUD/Loja/Ores/Wood.png" id="7_giwaq"]
 
 [node name="ItemController" type="Node2D"]
 script = ExtResource("1_38px7")

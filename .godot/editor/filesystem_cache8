@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701543277
-default_env.tres::Environment::8363765569308027888::1701542939::0::1::::<><>::
+::res://::1701565165
+default_env.tres::Environment::8363765569308027888::1701565165::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1687928995::0::1::::<><>::
 icon.png::CompressedTexture2D::8961917463339288538::1687313253::1687928995::1::::<><>::
 ::res://Assets/::1700543940
@@ -156,17 +156,15 @@ retry hover.png::CompressedTexture2D::8877793332763060698::1701477627::170148055
 Retry.png::CompressedTexture2D::8056210563087367097::1701477627::1701480551::1::::<><>::
 ::res://Assets/Images/HUD/::1701541357
 HUD GAME3.png::CompressedTexture2D::767571284368620175::1700856834::1700856836::1::::<><>::
-::res://Assets/Images/HUD/Loja/::1701541357
+::res://Assets/Images/HUD/Loja/::1701565405
 BackgroundUpgrade2.png::CompressedTexture2D::6315606104526181719::1701480653::1701480653::1::::<><>::
 BackgroundUpgrade.png::CompressedTexture2D::6206222122893384869::1701480653::1701480653::1::::<><>::
 BarraMenu.png::CompressedTexture2D::7130610082540558951::1701480653::1701480653::1::::<><>::
-Gold.png::CompressedTexture2D::1598733988000493228::1701480653::1701480653::1::::<><>::
 GoldPlace.png::CompressedTexture2D::6301270064736027029::1701480653::1701480653::1::::<><>::
-Rock.png::CompressedTexture2D::7402602077052490078::1701480654::1701480654::1::::<><>::
+lock.png::CompressedTexture2D::2051805601392235826::1701565405::1701565409::1::::<><>::
 ScrollsBG.png::CompressedTexture2D::9155014092860399829::1701480654::1701480654::1::::<><>::
 SilverPlace.png::CompressedTexture2D::5793820824812714351::1701480654::1701480654::1::::<><>::
 Slots.png::CompressedTexture2D::6150398826103216350::1701480654::1701480654::1::::<><>::
-Wood.png::CompressedTexture2D::1917234985430845637::1701480654::1701480654::1::::<><>::
 ::res://Assets/Images/HUD/Loja/ItensUpgrade/::1701541358
 ::res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/::1701541357
 BronzeAbilities.png::CompressedTexture2D::790363695233351504::1701480653::1701480653::1::::<><>::
@@ -231,6 +229,11 @@ Group 47.png::CompressedTexture2D::843121498274914868::1701480654::1701480654::1
 Group 48.png::CompressedTexture2D::4321832318208302192::1701480654::1701480654::1::::<><>::
 Group 49.png::CompressedTexture2D::5400744621134468301::1701480654::1701480654::1::::<><>::
 Group 50.png::CompressedTexture2D::5889957365764194003::1701480654::1701480654::1::::<><>::
+::res://Assets/Images/HUD/Loja/Ores/::1701564596
+Gold.png::CompressedTexture2D::3499933744792956163::1701563522::1701564596::1::::<><>::
+Ores.png::CompressedTexture2D::1076573605081247491::1701298808::1701564596::1::::<><>::
+Rock.png::CompressedTexture2D::6265120542817662131::1701563658::1701564596::1::::<><>::
+Wood.png::CompressedTexture2D::6414863375476995768::1701563704::1701564596::1::::<><>::
 ::res://Assets/Images/HUD/SkillSelection/::1700428268
 attack1hudNoGod.png::CompressedTexture2D::4202473749654828605::1700428266::1700428268::1::::<><>::
 attack2hudNoGod.png::CompressedTexture2D::4050416490525923864::1700428240::1700428268::1::::<><>::
@@ -511,7 +514,7 @@ scene00022.png::CompressedTexture2D::1913644162189365136::1699229337::1699229337
 ::res://Assets/Images/Player/Ultimates/Zeus/::1700709946
 thunder.png::CompressedTexture2D::8878824488455811312::1699229337::1700709907::1::::<><>::
 zeusUlt3.png::CompressedTexture2D::460986427871908098::1699229337::1700709946::1::::<><>::
-::res://Assets/Images/Resources/::1701194125
+::res://Assets/Images/Resources/::1701564595
 64x64.png::CompressedTexture2D::1817922096836447121::1698457234::1700711401::1::::<><>::
 dracmaBag.png::CompressedTexture2D::2473103289730155732::1699229337::1699229337::1::::<><>::
 gold.png::CompressedTexture2D::234649245323503638::1687928993::1687928993::1::::<><>::
@@ -525,11 +528,6 @@ Pedra.png::CompressedTexture2D::2199567483271215155::1698959693::1699496002::1::
 PredaOro.png::CompressedTexture2D::4433970350069676857::1699496060::1699496208::1::::<><>::
 stone.png::CompressedTexture2D::8078597493450302878::1687928993::1687928993::1::::<><>::
 wood.png::CompressedTexture2D::5514395398908059001::1687928993::1687928993::1::::<><>::
-::res://Assets/Images/Resources/Ores/::1701311537
-Gold.png::CompressedTexture2D::3499933744792956163::1701132248::1701194132::1::::<><>::
-Ores.png::CompressedTexture2D::1076573605081247491::1701298808::1701311537::1::::<><>::
-Rock.png::CompressedTexture2D::6265120542817662131::1701132248::1701194132::1::::<><>::
-Wood.png::CompressedTexture2D::6414863375476995768::1701132248::1701194132::1::::<><>::
 ::res://Assets/Images/Scrolls/::1701376261
 ScrollBlue.png::CompressedTexture2D::3030083475534162963::1700631225::1701376261::1::::<><>::
 ScrollGreen.png::CompressedTexture2D::7028953450845477738::1691345116::1701376260::1::::<><>::
@@ -665,8 +663,8 @@ Warrior_attack2_Poseidon.tscn::PackedScene::5679300120722759049::1700701738::0::
 ::res://Scenes/Game/Classes/Warrior/Warrior_Attack2/Warrior_attack2_Zeus/::1700701745
 LightiningBolt.tscn::PackedScene::8746525305652530072::1699560956::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_attack2/Warrior_attack2_Zeus/LightiningBolt.gd<>uid://d2jsc0roj53pf
 Warrior_attack2_Zeus.tscn::PackedScene::5982209768177878831::1700701745::0::1::::<><>::res://Scripts/Classes/Warrior/Warrior_attack2/Warrior_attack2_Zeus/Warrior_attack2_Zeus.gd
-::res://Scenes/Game/Collectables/::1701312515
-Collectable.tscn::PackedScene::708502007503376537::1701312515::0::1::::<><>::res://Scripts/Instances/Collectable.gd<>uid://plralsrcrafr
+::res://Scenes/Game/Collectables/::1701564595
+Collectable.tscn::PackedScene::708502007503376537::1701564595::0::1::::<><>::res://Scripts/Instances/Collectable.gd<>uid://plralsrcrafr::::res://Assets/Images/HUD/Loja/Ores/Ores.png
 Dracma.tscn::PackedScene::8115027374443532805::1700699827::0::1::::<><>::res://Scripts/Game/Dracma.gd<>uid://cc8fk1tr2jb6k
 ::res://Scenes/Game/Constructions/::1701318535
 center.tscn::PackedScene::6446946541765855784::1701318535::0::1::::<><>::res://Scripts/Zones/Center/center.gd<>uid://dumjr4t8822i1
@@ -675,19 +673,20 @@ Portal.tscn::PackedScene::8588389822392948446::1701089739::0::1::::<><>::res://S
 ::res://Scenes/Game/Constructions/Defenses/::1699560953
 Projectile.tscn::PackedScene::2410808219093842520::1699229338::0::1::::<><>::uid://bav7b1tv76dwv
 Tower.tscn::PackedScene::8535991795261709648::1699560953::0::1::::<><>::res://Scripts/Zones/Center/Tower.gd<>uid://bbetir8lvp4ns
-::res://Scenes/Game/Constructions/Temple/::1701542938
-Item.tscn::PackedScene::3789408077711027493::1699231920::0::1::::<><>::res://Scripts/Zones/Temple/ItemSelectable.gd<>uid://d0xhqa10j30ok
-OpcaoUpgrade.tscn::PackedScene::1880745726022968015::1701397026::0::1::::<><>::res://Scripts/Zones/Temple/OpcaoUpgrade.gd<>uid://df4il2aive3ok
+::res://Scenes/Game/Constructions/Temple/::1701565165
 Temple.tscn::PackedScene::4819231694312776984::1701318536::0::1::::<><>::res://Scripts/Zones/Temple/Temple.gd<>uid://brnbevp3jfyen
-TempleScreen.tscn::PackedScene::3516894069668338984::1701542938::0::1::::<><>::res://Scripts/Zones/Temple/MainPage.gd<>res://Scripts/Zones/Temple/ShopScript.gd<>uid://d3o00kxuo4h22::::res://Assets/Images/HUD/Loja/ScrollsBG.png<>uid://dsr560ixpdq5a::::res://Scenes/Game/ScrollsController/ScrollHud.tscn<>uid://df4il2aive3ok::::res://Assets/Fonts/Zeus-Land.otf<>uid://ctvkf1u451ub3::::res://Assets/Images/HUD/Loja/Slots.png<>uid://ddp41lr3tim83::::res://Assets/Images/HUD/Loja/Rock.png<>uid://2kytyugryrk4::::res://Assets/Images/HUD/Loja/Wood.png<>uid://w1o6d8gum7h5::::res://Assets/Images/HUD/Loja/Gold.png<>uid://bpfityhkpmxkm::::res://Scenes/Game/ItemController/ItemHUD.tscn<>uid://deg8hjpbk2ykd::::res://Scenes/Game/Constructions/Temple/Upgrade/mineração.tscn<>uid://dvgvp2thpqg12::::res://Scenes/Game/LevelUp/Stats.tscn<>uid://c8uedu3u1iprj::::res://Assets/Images/HUD/Loja/BarraMenu.png<>uid://d3gj72p3eit3p::::res://Scenes/Game/Constructions/Temple/Upgrade/personagem.tscn<>uid://cooqeupudot5l::::res://Scenes/Game/Constructions/Temple/Upgrade/defender_point.tscn
-::res://Scenes/Game/Constructions/Temple/Upgrade/::1701542939
+TempleScreen.tscn::PackedScene::3516894069668338984::1701565165::0::1::::<><>::res://Scripts/Zones/Temple/MainPage.gd<>res://Scripts/Zones/Temple/ShopScript.gd<>uid://d3o00kxuo4h22::::res://Assets/Images/HUD/Loja/ScrollsBG.png<>uid://dsr560ixpdq5a::::res://Scenes/Game/ScrollsController/ScrollHud.tscn<>uid://df4il2aive3ok::::res://Assets/Fonts/Zeus-Land.otf<>uid://bn814iyfbtpnc::::res://Scenes/Game/Constructions/Temple/Shop/ShopScreen.tscn<>uid://ctvkf1u451ub3::::res://Assets/Images/HUD/Loja/Slots.png<>uid://cvi4vcyjfl284::::res://Assets/Images/HUD/Loja/Ores/Rock.png<>uid://cxnn4leqp0b1i::::res://Assets/Images/HUD/Loja/Ores/Wood.png<>uid://bp4nnroubqrqp::::res://Assets/Images/HUD/Loja/Ores/Gold.png<>uid://bpfityhkpmxkm::::res://Scenes/Game/ItemController/ItemHUD.tscn<>uid://deg8hjpbk2ykd::::res://Scenes/Game/Constructions/Temple/Upgrade/mineração.tscn<>uid://dvgvp2thpqg12::::res://Scenes/Game/LevelUp/Stats.tscn<>uid://c8uedu3u1iprj::::res://Assets/Images/HUD/Loja/BarraMenu.png<>uid://d3gj72p3eit3p::::res://Scenes/Game/Constructions/Temple/Upgrade/personagem.tscn<>uid://cooqeupudot5l::::res://Scenes/Game/Constructions/Temple/Upgrade/defender_point.tscn
+::res://Scenes/Game/Constructions/Temple/Shop/::1701564596
+ShopScreen.tscn::PackedScene::3368631004198049856::1701564596::0::1::::<><>::uid://b8treb1euqxo8::::res://Scenes/Game/ScrollsController/Scroll.tscn<>uid://dacqi2fipojl5::::res://Scenes/Game/ItemController/Itens/tier2/id010.tscn<>uid://05u58rbkivwr::::res://Assets/Images/Resources/64x64.png<>uid://df4il2aive3ok::::res://Assets/Fonts/Zeus-Land.otf<>uid://4h5655d14eji::::res://Assets/Images/HUD/Loja/lock.png<>uid://cxnn4leqp0b1i::::res://Assets/Images/HUD/Loja/Ores/Wood.png<>uid://bp4nnroubqrqp::::res://Assets/Images/HUD/Loja/Ores/Gold.png<>uid://cvi4vcyjfl284::::res://Assets/Images/HUD/Loja/Ores/Rock.png
+::res://Scenes/Game/Constructions/Temple/Upgrade/::1701560747
 defender_point.tscn::PackedScene::5785366156487735219::1701542248::0::1::::<><>::res://Scripts/Zones/Temple/Defender Point.gd<>uid://cv8ldy7ml3jt4
-mineração.tscn::PackedScene::7454420349416524559::1701542939::0::1::::<><>::res://Scripts/Zones/Temple/Mineração.gd<>uid://cuolto2djdbn6::::res://Assets/Images/HUD/Loja/BackgroundUpgrade.png<>uid://3rfb2rkcrutr::::res://Scenes/Game/Constructions/Temple/UpgradeOptions/MiningOptions.tscn<>uid://chwrvs0tbfe6w::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Level1.png<>uid://cm4gdwyh5moli::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 27.png<>uid://dsu7dgjjcfn88::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 33.png<>uid://cuys4l4kq0nh2::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 24.png<>uid://dmhmaanyeb3pi::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 34.png<>uid://bmobxe3d0m8l4::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 25.png<>uid://rhlewolh2333::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 35.png<>uid://cfn773mmr0u75::::res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 26.png<>uid://bre03wixp2mxa::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Level1.png<>uid://0krhv237uw5f::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 27.png<>uid://0fd1564ivhwq::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 33.png<>uid://dj6nmf1m3f3i::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 24.png<>uid://qud37guvu8i8::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 34.png<>uid://cl4n385fydxku::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 25.png<>uid://cgibsoarljan3::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 35.png<>uid://12y1urshsqad::::res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 26.png
+mineração.tscn::PackedScene::7454420349416524559::1701542939::0::1::::<><>::res://Scripts/Zones/Temple/Mineração.gd<>uid://cuolto2djdbn6
+OpcaoUpgrade.tscn::PackedScene::1880745726022968015::1701555548::0::1::::<><>::res://Scripts/Zones/Temple/OpcaoUpgrade.gd<>uid://df4il2aive3ok
 personagem.tscn::PackedScene::9137540980388818131::1701542245::0::1::::<><>::res://Scripts/Zones/Temple/PersonagemLoja.gd<>uid://cuolto2djdbn6
-::res://Scenes/Game/Constructions/Temple/UpgradeOptions/::1701542755
-CharacterOptions.tscn::PackedScene::4398408750801035311::1701542705::0::1::::<><>::res://Scripts/Zones/Temple/UpgradeOptions/CharacterOptions.gd<>uid://df4il2aive3ok::::res://Assets/Fonts/Zeus-Land.otf<>uid://detogg1xdpi7s::::res://Assets/Images/LevelUp/dracma.png<>uid://b1lulqfh7dxl2::::res://Assets/Images/LevelUp/baseDamage.png<>uid://w1o6d8gum7h5::::res://Assets/Images/HUD/Loja/Gold.png<>uid://ddp41lr3tim83::::res://Assets/Images/HUD/Loja/Rock.png<>uid://cp1tv3148b287::::res://Assets/Images/LevelUp/dodge.png<>uid://2kytyugryrk4::::res://Assets/Images/HUD/Loja/Wood.png<>uid://de0orf26ul1x2::::res://Assets/Images/LevelUp/percentDamage.png<>uid://cbth1bpv6l2tm::::res://Assets/Images/LevelUp/percentCritDamage.png<>uid://cxwuyt6m3b26w::::res://Assets/Images/LevelUp/armor.png
-DefenderPointOptions.tscn::PackedScene::8228881324038047339::1701542747::0::1::::<><>::res://Scripts/Zones/Temple/UpgradeOptions/DefenderPointOptions.gd<>uid://df4il2aive3ok::::res://Assets/Fonts/Zeus-Land.otf<>uid://detogg1xdpi7s::::res://Assets/Images/LevelUp/dracma.png<>uid://w1o6d8gum7h5::::res://Assets/Images/HUD/Loja/Gold.png<>uid://ddp41lr3tim83::::res://Assets/Images/HUD/Loja/Rock.png<>uid://2kytyugryrk4::::res://Assets/Images/HUD/Loja/Wood.png
-MiningOptions.tscn::PackedScene::2000688859291507983::1701542755::0::1::::<><>::res://Scripts/Zones/Temple/UpgradeOptions/MiningOptions.gd<>uid://df4il2aive3ok::::res://Assets/Fonts/Zeus-Land.otf<>uid://detogg1xdpi7s::::res://Assets/Images/LevelUp/dracma.png<>uid://w1o6d8gum7h5::::res://Assets/Images/HUD/Loja/Gold.png<>uid://ddp41lr3tim83::::res://Assets/Images/HUD/Loja/Rock.png<>uid://2kytyugryrk4::::res://Assets/Images/HUD/Loja/Wood.png
+::res://Scenes/Game/Constructions/Temple/Upgrade/UpgradeOptions/::1701555548
+CharacterOptions.tscn::PackedScene::4398408750801035311::1701555548::0::1::::<><>::res://Scripts/Zones/Temple/UpgradeOptions/CharacterOptions.gd<>uid://df4il2aive3ok
+DefenderPointOptions.tscn::PackedScene::8228881324038047339::1701542747::0::1::::<><>::res://Scripts/Zones/Temple/UpgradeOptions/DefenderPointOptions.gd<>uid://df4il2aive3ok
+MiningOptions.tscn::PackedScene::2000688859291507983::1701542755::0::1::::<><>::res://Scripts/Zones/Temple/UpgradeOptions/MiningOptions.gd<>uid://df4il2aive3ok
 ::res://Scenes/Game/Enemies/::1701397025
 Id001.tscn::PackedScene::8122017009690902834::1701205012::0::1::::<><>::res://Scripts/Enemies/Id001.gd<>uid://d3hana8ykekw1
 Id002.tscn::PackedScene::7155997110481103672::1701397025::0::1::::<><>::res://Scripts/Enemies/Id002.gd<>uid://b438i34mtljlq
@@ -794,9 +793,9 @@ id005.tscn::PackedScene::5182990788792687078::1701295634::0::1::::<><>::res://Sc
 LevelUp.tscn::PackedScene::2331666253345788911::1701294040::0::1::::<><>::res://Scripts/Game/LevelUp.gd<>uid://c1duvvphxq7y2
 Stats.tscn::PackedScene::8646917325579478583::1701294034::0::1::::<><>::res://Scripts/Game/Stats.gd<>uid://df4il2aive3ok
 Upgrade.tscn::PackedScene::6605197403276425179::1700699832::0::1::::<><>::uid://cxwuyt6m3b26w
-::res://Scenes/Game/Math_controller/::1701191249
+::res://Scenes/Game/Math_controller/::1701555548
 Math_controller.tscn::PackedScene::3301249432446336140::1701191249::0::1::::<><>::res://Scripts/Game/MathController/MathController.gd<>res://Scripts/Game/MathController/Skills/attack1/Zeus/MC_attack1_zeus.gd<>res://Scripts/Game/MathController/Skills/attack1/Poseidon/MC_attack1_poseidon.gd<>res://Scripts/Game/MathController/Skills/attack1/Hades/MC_attack1_hades.gd<>res://Scripts/Game/MathController/Skills/attack2/Zeus/MC_attack2_zeus.gd<>res://Scripts/Game/MathController/BonusStatus/Active/Attack2/Poseidon.gd<>res://Scripts/Game/MathController/Skills/attack2/Hades/MC_attack2_hades.gd<>res://Scripts/Game/MathController/BonusStatus/Active/Attack2/Hades.gd<>res://Scripts/Game/MathController/Skills/dash/Zeus/Zeus.gd<>res://Scripts/Game/MathController/Skills/dash/Poseidon/Poseidon.gd<>res://Scripts/Game/MathController/BonusStatus/Active/Dash/Zeus.gd<>res://Scripts/Game/MathController/BonusStatus/Active/Dash/Poseidon.gd<>res://Scripts/Game/MathController/BonusStatus/Active/Dash/Hades.gd
-SpawnDamage.tscn::PackedScene::5443384678974541085::1700590699::0::1::::<><>::res://Scripts/Game/SpawnDamage.gd<>uid://df4il2aive3ok
+SpawnDamage.tscn::PackedScene::5443384678974541085::1701555548::0::1::::<><>::res://Scripts/Game/SpawnDamage.gd<>uid://df4il2aive3ok
 ::res://Scenes/Game/Math_controller/Effects/::1700711143
 Disorientation.tscn::PackedScene::8984648196222026734::1699497070::0::1::::<><>::uid://dlfnll0vhennw
 Electrified.tscn::PackedScene::389500452469703700::1699334260::0::1::::<><>::uid://d2jsc0roj53pf
@@ -805,14 +804,14 @@ Twister.tscn::PackedScene::186835686679495346::1700711143::0::1::::<><>::uid://c
 matriz.tscn::PackedScene::3528557820190198722::1701312515::0::1::::<><>::res://Scripts/Game/matriz.gd
 PlayerMining.tscn::PackedScene::2999995107865065940::1701397020::0::1::::<><>::res://Scripts/Game/PlayerMining.gd
 quadrant.tscn::PackedScene::1391591709849316792::1701397025::0::1::::<><>::res://Scripts/Game/quadrant.gd<>uid://b4f33xq4dy6i4
-::res://Scenes/Game/ScrollsController/::1701542233
-Scroll.tscn::PackedScene::4742915126025344281::1701488671::0::1::::<><>::uid://yjcswgm42ljb
-ScrollController.tscn::PackedScene::8699665413830561447::1701487043::0::1::::<><>::res://Scripts/Game/ScrollController/ScrollController.gd
-ScrollHud.tscn::PackedScene::8459633854284334116::1701542233::0::1::::<><>::res://Scripts/Game/ScrollController/ScrollHud.gd<>uid://cv1m856of8ntd
+::res://Scenes/Game/ScrollsController/::1701555602
+Scroll.tscn::PackedScene::4742915126025344281::1701555548::0::1::::<><>::uid://yjcswgm42ljb
+ScrollController.tscn::PackedScene::8699665413830561447::1701555548::0::1::::<><>::res://Scripts/Game/ScrollController/ScrollController.gd
+ScrollHud.tscn::PackedScene::8459633854284334116::1701555602::0::1::::<><>::res://Scripts/Game/ScrollController/ScrollHud.gd<>uid://cv1m856of8ntd
 ::res://Scenes/Game/ScrollsController/Scrolls/::1701483318
 ::res://Scenes/Game/ScrollsController/Scrolls/Warrior/::1701483457
-::res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/::1701542938
-Scroll_Warrior_Dash_Hades.tscn::PackedScene::8383075307320977959::1701542938::0::1::::<><>::res://Scripts/Game/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_Hades.gd
+::res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/::1701555548
+Scroll_Warrior_Dash_Hades.tscn::PackedScene::8383075307320977959::1701555548::0::1::::<><>::res://Scripts/Game/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_Hades.gd
 Scroll_Warrior_Dash_Poseidon.tscn::PackedScene::5196631900088500915::1701483818::0::1::::<><>::
 Scroll_Warrior_Dash_Zeus.tscn::PackedScene::1842391916444925942::1701488738::0::1::::<><>::
 ::res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Divine/::1701488808
@@ -857,10 +856,10 @@ Game_ViewPort.tscn::PackedScene::7418050984438387124::1701397025::0::1::::<><>::
 Loading.tscn::PackedScene::1350444753072594925::1701312515::0::1::::<><>::res://Scripts/MainScenes/Loading.gd<>uid://b82dirn1fyr7h
 Menu.tscn::PackedScene::962977223449213015::1701482133::0::1::::<><>::res://Scripts/MainScenes/Menu/Menu.gd<>uid://dxsn2vwpfc331
 ::res://Scripts/::1700717061
-::res://Scripts/AutoLoads/::1701463755
+::res://Scripts/AutoLoads/::1701552060
 Global.gd::GDScript::-1::1701463755::0::1::::<>Node<>::
 OptionsController.gd::GDScript::-1::1700694977::0::1::::<>Node<>::
-PreLoads.gd::GDScript::-1::1701291089::0::1::::<>Node<>::
+PreLoads.gd::GDScript::-1::1701552060::0::1::::<>Node<>::
 ::res://Scripts/Classes/::1700081020
 ::res://Scripts/Classes/Warrior/::1700163414
 ::res://Scripts/Classes/Warrior/WarriorUltimates/::1700696789
@@ -1061,13 +1060,13 @@ Zeus.gd::GDScript::-1::1700696795::0::1::::<>Node2D<>::
 ::res://Scripts/Game/Pause/::1701482055
 Pause.gd::GDScript::-1::1701482055::0::1::::<>Node2D<>::
 PauseMenu.gd::GDScript::-1::1701477634::0::1::::<>Node2D<>::
-::res://Scripts/Game/ScrollController/::1701469372
-ScrollController.gd::GDScript::-1::1701464105::0::1::::<>Node2D<>::
-ScrollHud.gd::GDScript::-1::1701469372::0::1::::<>Node2D<>::
+::res://Scripts/Game/ScrollController/::1701555546
+ScrollController.gd::GDScript::-1::1701553971::0::1::::<>Node2D<>::
+ScrollHud.gd::GDScript::-1::1701555546::0::1::::<>Node2D<>::
 ::res://Scripts/Game/Scrolls/::1701540927
 ::res://Scripts/Game/Scrolls/Warrior/::1701540938
-::res://Scripts/Game/Scrolls/Warrior/WarriorDash/::1701540949
-Scroll_Warrior_Dash_Hades.gd::GDScript::-1::1701540949::0::1::::<>Node2D<>::
+::res://Scripts/Game/Scrolls/Warrior/WarriorDash/::1701555159
+Scroll_Warrior_Dash_Hades.gd::GDScript::-1::1701555159::0::1::::<>Node2D<>::
 ::res://Scripts/Game/Waves/::1701540511
 Wave1.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
 Wave2.gd::GDScript::-1::1699229339::0::1::::<>Node2D<>::
@@ -1126,7 +1125,7 @@ PersonagemLoja.gd::GDScript::-1::1699235916::0::1::::<>Node2D<>::
 ShopScript.gd::GDScript::-1::1701541860::0::1::::<>Node2D<>::
 Temple.gd::GDScript::-1::1701312489::0::1::::<>Node2D<>::
 TempleSound.gd::GDScript::-1::1699232493::0::1::::<>Node2D<>::
-::res://Scripts/Zones/Temple/UpgradeOptions/::1701542598
-CharacterOptions.gd::GDScript::-1::1701486599::0::1::::<>Control<>::
-DefenderPointOptions.gd::GDScript::-1::1701486624::0::1::::<>Control<>::
-MiningOptions.gd::GDScript::-1::1701481711::0::1::::<>Control<>::
+::res://Scripts/Zones/Temple/UpgradeOptions/::1701553079
+CharacterOptions.gd::GDScript::-1::1701552982::0::1::::<>Control<>::
+DefenderPointOptions.gd::GDScript::-1::1701553079::0::1::::<>Control<>::
+MiningOptions.gd::GDScript::-1::1701553079::0::1::::<>Control<>::

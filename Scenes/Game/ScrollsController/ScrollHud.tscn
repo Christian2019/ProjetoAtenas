@@ -393,11 +393,11 @@ position = Vector2(2803, 3833)
 position = Vector2(-2062, 1331)
 scale = Vector2(3.75034, 3.75034)
 
-[node name="Buttons" type="Node2D" parent="."]
+[node name="Buttons" type="Node2D" parent="Selected"]
 position = Vector2(-5541, 942)
 scale = Vector2(8, 8)
 
-[node name="Combine" type="Button" parent="Buttons"]
+[node name="Combine" type="Button" parent="Selected/Buttons"]
 offset_left = 360.199
 offset_top = 230.693
 offset_right = 580.199
@@ -406,7 +406,7 @@ theme_override_fonts/font = ExtResource("5_g58ql")
 theme_override_font_sizes/font_size = 22
 text = "combine"
 
-[node name="Sell" type="Button" parent="Buttons"]
+[node name="Sell" type="Button" parent="Selected/Buttons"]
 offset_left = 360.199
 offset_top = 280.625
 offset_right = 580.199
@@ -415,7 +415,7 @@ theme_override_fonts/font = ExtResource("5_g58ql")
 theme_override_font_sizes/font_size = 22
 text = "sell"
 
-[node name="Equip" type="Button" parent="Buttons"]
+[node name="Equip" type="Button" parent="Selected/Buttons"]
 offset_left = 360.199
 offset_top = 328.75
 offset_right = 580.199
@@ -424,7 +424,7 @@ theme_override_fonts/font = ExtResource("5_g58ql")
 theme_override_font_sizes/font_size = 22
 text = "equip as passive"
 
-[node name="Close" type="Button" parent="Buttons"]
+[node name="Close" type="Button" parent="Selected/Buttons"]
 offset_left = 360.199
 offset_top = 375.5
 offset_right = 580.199
