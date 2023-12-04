@@ -2,6 +2,7 @@ extends Node2D
 
 func _ready():
 	Global.timerCreator("sortTowers",1,[],self)
+	Global.Tower = get_children()
 
 func sortTowers():
 	Global.timerCreator("sortTowers",1,[],self)

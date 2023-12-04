@@ -12,11 +12,15 @@ var Stats
 var LevelUp
 var ItemController
 var ItemHud
+var ItemHudTempleShop
 var Pause
-var Center
-var Pool
-var Turret
 var PlayerMining
+
+var ScrollController
+
+var Tower 
+var Pool
+var Center
 
 var startNode
 

@@ -2,7 +2,7 @@ extends Node2D
 
 var mining_max_duration_frames = 2*60
 
-var wave = 1
+var wave = 20
 var maxWave=20
 
 var timer = 0
@@ -46,6 +46,7 @@ func clearWave():
 	clearChildren("Instances/X")
 	clearChildren("Allies")
 	clearChildren("Instances/Explosions")
+	clearChildren("Instances/Itens")
 	
 	Global.MathController.clearArrays()
 	

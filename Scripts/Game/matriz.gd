@@ -24,10 +24,13 @@ func _process(_delta):
 					var index = rng.randi_range(0, resources.size()-1)
 					if (resources[index]!="empty"):
 						quadrant_instance.get_node("Resource").visible=true
-						quadrant_instance.get_node("BarraDeVida").visible = true
 						quadrant_instance.get_node("Resource").animation=resources[index]
 					resources.remove_at(index)
-									
+				
+				if (linha>29 and linha<36):
+					quadrant_instance.level=1
+				elif linha>=36:
+					quadrant_instance.level=2				
 				add_child(quadrant_instance)
 
 func canUse(linha,coluna):
@@ -52,7 +55,6 @@ func createResources():
 	var empty_quantity = total_quantity-wood_quantity-gold_quantity-stone_quantity
 
 	for i in range(0,wood_quantity,1):
-		
 		resources.append("wood")
 	for i in range(0,gold_quantity,1):
 		resources.append("gold")

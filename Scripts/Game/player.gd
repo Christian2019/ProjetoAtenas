@@ -3,7 +3,7 @@ extends Node2D
 var dead = false
 
 ##Stats
-var baseMaxHp=10000.0
+var baseMaxHp=100.0
 var maxHpPercentBonus=0
 var maxHp=baseMaxHp
 var hp = maxHp
@@ -20,15 +20,14 @@ var attack_Speed = 1.0
 
 var armor=0
 
-var dodge=0
+var dodge=0.0
 var maxDodge=70
 
-var baseMoveSpeed=5.0
+var baseMoveSpeed=4.0
 var move_Speed = baseMoveSpeed
 var moveSpeedPercentBonus=0
 
-var luck=0
-var can_break = true
+var luck=0.0
 var collect_radios=200
 
 #Controle do ultimo movimento, pode ser N,S,W,E,NE,NW,SE,SW. Usado para controle da direacao do ataque
@@ -46,24 +45,24 @@ var ultimate={"skill":PreLoads.warrior_ultimate_poseidon, "quality": "legendary"
 
 ## Se esta em CD
 var permissions = [
-	{"attack1_canUse" : true},
-	{"attack2_canUse" : true},
-	{"turret_canUse" : true},
-	{"dash_canUse" : true},
-	{"ultimate_canUse" : true},
+	true,
+	true,
+	true,
+	true,
+	true,
 	]
 
 #Resources
-var wood =1000000
-var stone =1000000
-var gold =1000000
+var wood =0
+var stone =0
+var gold =0
 var dracma=1000000
 var dracmaBag=0
 
 #Farming
-var carryingItem 
 var itemsCarriage = []
-var MaxCarriage = 1 
+var MaxCarriage = 4
+var carryingItem
 
 var contactQuadrants = []
 var closerQuadrant 
@@ -107,11 +106,9 @@ func _process(__delta):
 	animationController()
 	commandController()	
 	getCloserQuadrant()
-	
 	Global.PlayerMining.mining(farming,playerRight,closerQuadrant)
-	feedback() 
-	
-	#contruction()
+	feedback()
+
 
 func multiplierController():
 	maxHp=baseMaxHp*(1+maxHpPercentBonus)
@@ -124,7 +121,7 @@ func animationController():
 	if (dashing or animAttacking):
 		return
 	if ($CutAnimation.frame==6):
-		$CutAnimation.frame=1
+		$CutAnimation.frame=0
 		$CutAnimation.stop()
 	if Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Right"):
 		playAnimation ("Run")
@@ -142,11 +139,11 @@ func animationController():
 		playAnimation ("Run")
 	elif Input.is_action_pressed("Move_Left"):
 		playAnimation ("Run")
-	elif (!Input.is_action_pressed("Attack1") and $Animation.frame==5):
+	elif (permissions[0]):
 		playAnimation ("Idle")
 		
 func playAnimation (animName):
-	if (animName=="Run" and Input.is_action_pressed("Attack1")):
+	if (animName=="Run" and !permissions[0]):
 		animName="Attack1Run"
 		
 	if lastMovement=="S":
@@ -362,10 +359,8 @@ func getCloserQuadrant():
 			closerQuadrant.get_node("ColorRect").visible=false
 			closerQuadrant=contactQuadrants[i]
 	if (closerQuadrant!=null):
-		closerQuadrant.get_node("ColorRect").visible=true   
-
-func activateBreak():
-	can_break=true
+		closerQuadrant.get_node("ColorRect").visible=true
+		
 
 func feedback():
 	if (feedBackAtive):
@@ -388,14 +383,6 @@ func disableFeeback():
 	feedBackAtive=false
 	modulate.a=1
 
-func contruction():
-	if (Input.is_action_just_pressed("Turret")):
-		if (closerQuadrant!=null and closerQuadrant.allowToConstruct):
-			var tower_instance = PreLoads.tower.instantiate()
-			tower_instance.position = closerQuadrant.position
-			closerQuadrant.tower = tower_instance
-			get_parent().get_node("Towers").add_child(tower_instance)
-
 func _on_body_area_entered(area):
 	if area.get_parent().name == "Center":
 		playerOnCenterPoint=true
@@ -408,3 +395,7 @@ func _on_body_area_exited(area):
 func _on_animation_animation_looped():
 	if (animAttacking):
 		animAttacking=false
+
+
+func _on_timer_timeout():
+	return

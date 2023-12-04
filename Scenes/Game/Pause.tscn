@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://crh5gyee5b16b"]
 
-[ext_resource type="Script" path="res://Scripts/Game/Pause.gd" id="1_8p0jy"]
 [ext_resource type="Texture2D" uid="uid://dsrqih1k0sd7s" path="res://Assets/Images/Pause/PauseMenu.png" id="1_qasa2"]
+[ext_resource type="Script" path="res://Scripts/Game/Pause/Pause.gd" id="1_rpavg"]
 [ext_resource type="Texture2D" uid="uid://b00lvg3j6tocl" path="res://Assets/Images/Pause/OptionsBG.png" id="3_7d2j2"]
 [ext_resource type="Texture2D" uid="uid://debbanjs23csa" path="res://Assets/Images/Menu/Grabber.png" id="4_sutky"]
 [ext_resource type="Texture2D" uid="uid://dpr3ku2wrs4kf" path="res://Assets/Images/Menu/BgSlider.png" id="5_sd2jm"]
@@ -46,7 +46,7 @@ texture = ExtResource("5_sd2jm")
 texture = ExtResource("5_sd2jm")
 
 [node name="Pause" type="Node2D"]
-script = ExtResource("1_8p0jy")
+script = ExtResource("1_rpavg")
 
 [node name="BG" type="ColorRect" parent="."]
 offset_right = 1024.0
@@ -55,36 +55,55 @@ color = Color(0, 0, 0, 0.490196)
 
 [node name="Pause" type="Node2D" parent="."]
 position = Vector2(103, -9)
+scale = Vector2(1.005, 1.01)
 
 [node name="PausedBG" type="Sprite2D" parent="Pause"]
-position = Vector2(530, 297)
-scale = Vector2(0.451764, 0.481085)
+position = Vector2(406, 308)
+scale = Vector2(0.527, 0.506)
 texture = ExtResource("1_qasa2")
 
 [node name="Continue" type="Button" parent="Pause"]
-offset_left = 430.0
-offset_top = 254.0
-offset_right = 650.0
-offset_bottom = 288.0
+offset_left = 360.199
+offset_top = 230.693
+offset_right = 580.199
+offset_bottom = 264.693
 focus_neighbor_bottom = NodePath("../Options")
 text = "CONTINUE"
 
 [node name="Options" type="Button" parent="Pause"]
-offset_left = 430.0
-offset_top = 304.0
-offset_right = 650.0
-offset_bottom = 338.0
+offset_left = 360.199
+offset_top = 280.693
+offset_right = 580.199
+offset_bottom = 314.693
 focus_neighbor_top = NodePath("../Continue")
 focus_neighbor_bottom = NodePath("../Exit")
 text = "OPTIONS"
 
 [node name="Exit" type="Button" parent="Pause"]
-offset_left = 430.0
-offset_top = 352.0
-offset_right = 650.0
-offset_bottom = 386.0
+offset_left = 360.199
+offset_top = 328.693
+offset_right = 580.199
+offset_bottom = 362.693
 focus_neighbor_top = NodePath("../Options")
 text = "EXIT"
+
+[node name="ItensHud" type="Node2D" parent="."]
+position = Vector2(-11, -14)
+scale = Vector2(0.83, 1.085)
+
+[node name="Selected" type="ColorRect" parent="ItensHud"]
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 472.0
+offset_bottom = 540.0
+
+[node name="ItemHUD" parent="ItensHud" instance=ExtResource("9_fwftd")]
+position = Vector2(26, 28)
+scale = Vector2(0.55, 0.51)
+
+[node name="Stats" parent="." instance=ExtResource("11_0wmvh")]
+position = Vector2(768, 5)
+scale = Vector2(0.88, 1.372)
 
 [node name="OptionsMenu" type="Node2D" parent="."]
 visible = false
@@ -181,23 +200,6 @@ offset_bottom = 33.0
 theme_override_fonts/font = ExtResource("7_yuhk3")
 theme_override_font_sizes/font_size = 25
 text = "Window size"
-
-[node name="ItensHud" type="Node2D" parent="."]
-
-[node name="Selected" type="ColorRect" parent="ItensHud"]
-visible = false
-offset_left = 18.0
-offset_top = 18.0
-offset_right = 472.0
-offset_bottom = 540.0
-
-[node name="ItemHUD" parent="ItensHud" instance=ExtResource("9_fwftd")]
-position = Vector2(26, 28)
-scale = Vector2(0.665, 0.515)
-
-[node name="Stats" parent="." instance=ExtResource("11_0wmvh")]
-position = Vector2(799, 17)
-scale = Vector2(0.76, 1.315)
 
 [connection signal="pressed" from="Pause/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Pause/Options" to="." method="_on_options_pressed"]

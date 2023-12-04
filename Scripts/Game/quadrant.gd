@@ -7,19 +7,50 @@ var tower
 var allowToConstruct=false
 
 #Numero de hits que deve ser dado antes de quebrar
-var life_till_break = 5
- 
+var lifeMax=5
+var life_till_break
+var maxHpBarWidth
+
+var level=0
+var value=1
+
+func _ready():
+	$Level.modulate.a=0
+	maxHpBarWidth=$BarraDeVida.size.x
+	if ($Resource.animation=="gold"):
+		$BarraDeVida.color = Color("FFD700")
+	elif ($Resource.animation=="stone"):
+		$BarraDeVida.color = Color("2c2d3c")
+	elif ($Resource.animation=="wood"):
+		$BarraDeVida.color = Color("966F33")
+	if ($Resource.visible and !$BarraDeVida.visible):
+		$BarraDeVida.visible=true
+		
+	if (level==1):
+		lifeMax*=2
+		value*=2
+		$Level.modulate.a=0.2
+	if (level==2):
+		lifeMax*=4
+		value*=4
+		$Level.modulate.a=0.4
 	
+	life_till_break=lifeMax
+
 func _process(_delta):
 	permissions()
-	$BarraDeVida.scale = Vector2(life_till_break*2,2)  
+	lifebar()
 	
+
+func lifebar():
+	$BarraDeVida.size.x=maxHpBarWidth*life_till_break/lifeMax
 
 func permissions():
 	if (constructionArea):
 		if (tower==null and !allowToConstruct):
 			allowToConstruct=true
 			$ColorRect.color = Color("00f813")
+			
 		elif (tower!=null and allowToConstruct):
 			allowToConstruct=false
 			$ColorRect.color = Color("f44336")

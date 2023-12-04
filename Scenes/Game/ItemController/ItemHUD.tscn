@@ -1,90 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpfityhkpmxkm"]
+[gd_scene load_steps=2 format=3 uid="uid://bpfityhkpmxkm"]
 
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/ItemHUD.gd" id="1_5x15q"]
-[ext_resource type="PackedScene" uid="uid://c20aa546elo80" path="res://Scenes/Game/ItemController/Itens/tier1/id001.tscn" id="1_8sdg1"]
 
 [node name="ItemHUD" type="Node2D"]
 script = ExtResource("1_5x15q")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-offset_right = 655.0
+offset_right = 796.0
 offset_bottom = 984.0
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(655, 984)
+size = Vector2i(796, 984)
 render_target_update_mode = 4
 
 [node name="ColorRect" type="ColorRect" parent="SubViewportContainer/SubViewport"]
-offset_right = 655.0
+offset_right = 800.0
 offset_bottom = 984.0
 color = Color(0, 0, 0, 0.545098)
 
 [node name="Itens" type="Node2D" parent="SubViewportContainer/SubViewport"]
 position = Vector2(8, 8)
-
-[node name="id001" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-
-[node name="id002" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(210, 0)
-
-[node name="id003" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(0, 155)
-
-[node name="id004" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(648, 2)
-
-[node name="id005" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(0, 310)
-
-[node name="id006" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(210, 0)
-
-[node name="id007" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(0, 155)
-
-[node name="id008" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(648, 2)
-
-[node name="id009" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-
-[node name="id010" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(210, 0)
-
-[node name="id011" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(0, 155)
-
-[node name="id012" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(648, 2)
-
-[node name="id013" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-
-[node name="id014" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(210, 0)
-
-[node name="id015" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(0, 155)
-
-[node name="id016" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(648, 2)
-
-[node name="id017" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(210, 0)
-
-[node name="id018" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(0, 155)
-
-[node name="id019" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(648, 2)
-
-[node name="id020" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-
-[node name="id021" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(210, 0)
-
-[node name="id022" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(0, 155)
-
-[node name="id023" parent="SubViewportContainer/SubViewport/Itens" instance=ExtResource("1_8sdg1")]
-position = Vector2(648, 2)

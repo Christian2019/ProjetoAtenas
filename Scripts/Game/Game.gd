@@ -80,7 +80,7 @@ func _process(_delta):
 	changeSkills()
 	
 	if Input.is_action_just_pressed("Pause"):
-		Global.Pause.visible=!Global.Pause.visible
+		Global.Pause.pauseActive=!Global.Pause.pauseActive
 
 func changeSkills():
 	if (Input.is_action_just_pressed("ChangeSkillSelected")):

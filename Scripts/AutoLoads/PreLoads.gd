@@ -1,5 +1,69 @@
 extends Node
 
+##Itens
+#Tier1
+var itens_tier1=[
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id001.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id002.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id003.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id004.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id005.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id006.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id007.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id008.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id009.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id010.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id011.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id012.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id013.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id014.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id015.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id016.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id017.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id018.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id019.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier1/id020.tscn")
+]
+#Tier2
+var itens_tier2=[
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id001.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id002.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id003.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id004.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id005.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id006.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id007.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id008.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id009.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id010.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id011.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id012.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id013.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id014.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier2/id015.tscn")
+]
+#Tier3
+var itens_tier3=[
+	preload("res://Scenes/Game/ItemController/Itens/tier3/id001.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier3/id002.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier3/id003.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier3/id004.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier3/id005.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier3/id006.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier3/id007.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier3/id008.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier3/id009.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier3/id010.tscn")
+]
+#Tier4
+var itens_tier4=[
+	preload("res://Scenes/Game/ItemController/Itens/tier4/id001.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier4/id002.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier4/id003.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier4/id004.tscn"),
+	preload("res://Scenes/Game/ItemController/Itens/tier4/id005.tscn"),	
+]
+
 #Colectables
 var collectable = preload("res://Scenes/Game/Collectables/Collectable.tscn")
 var dracma = preload("res://Scenes/Game/Collectables/Dracma.tscn")
@@ -110,7 +174,6 @@ var targetDummy=preload("res://Scenes/Game/Enemies/targetDummy.tscn")
 
 ##Classes
 ##Warrior
- 
 
 #Attack1
 var warrior_attack1_noGod=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_noGod.tscn")

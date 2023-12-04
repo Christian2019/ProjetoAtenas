@@ -1,25 +1,89 @@
-[gd_scene load_steps=4 format=3 uid="uid://butuan5er7o5a"]
+[gd_scene load_steps=6 format=3 uid="uid://butuan5er7o5a"]
 
 [ext_resource type="Script" path="res://Scripts/MainScenes/Fatality.gd" id="1_ptcrv"]
-[ext_resource type="VideoStream" path="res://Assets/Videos/fatality.ogv" id="1_yhu8r"]
 [ext_resource type="AudioStream" uid="uid://ptqt4rl1wcxb" path="res://Assets/Sounds/fatality.mp3" id="3_yvl5s"]
+[ext_resource type="Texture2D" uid="uid://dba3t6yacyxtw" path="res://Assets/Images/GameOverScreen/Game over.png" id="4_ydliw"]
+
+[sub_resource type="Animation" id="Animation_q5o10"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lb2i3"]
+_data = {
+"FadeIn": SubResource("Animation_q5o10")
+}
 
 [node name="Fatality" type="Node2D"]
 script = ExtResource("1_ptcrv")
 
+[node name="GameOver" type="Sprite2D" parent="."]
+position = Vector2(511, 301.5)
+scale = Vector2(0.534162, 0.515665)
+texture = ExtResource("4_ydliw")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 1025.0
 offset_bottom = 604.0
 color = Color(0, 0, 0, 1)
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-offset_right = 1027.0
-offset_bottom = 602.0
-stream = ExtResource("1_yhu8r")
-volume_db = 9.7
-autoplay = true
-expand = true
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_yvl5s")
 autoplay = true
+
+[node name="FadeIn" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lb2i3")
+}
+
+[node name="Retry" type="Button" parent="."]
+offset_left = 467.0
+offset_top = 351.0
+offset_right = 596.0
+offset_bottom = 393.0
+theme_override_colors/font_pressed_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_focus_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_font_sizes/font_size = 35
+text = "RETRY"
+flat = true
+
+[node name="Back to Menu" type="Button" parent="."]
+offset_left = 433.0
+offset_top = 404.0
+offset_right = 632.0
+offset_bottom = 446.0
+theme_override_colors/font_pressed_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_focus_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_font_sizes/font_size = 35
+text = "BACK TO MENU"
+flat = true
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 467.0
+offset_top = 460.0
+offset_right = 596.0
+offset_bottom = 517.0
+theme_override_colors/font_pressed_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_focus_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_font_sizes/font_size = 35
+text = "QUIT"
+flat = true
+
+[connection signal="animation_finished" from="FadeIn" to="." method="_on_fade_in_animation_finished"]
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Back to Menu" to="." method="_on_back_to_menu_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

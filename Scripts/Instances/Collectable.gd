@@ -2,6 +2,7 @@ extends Node2D
 
 var isCarrying=false
 
+var value
 
 func _process(_delta):
 	if (isCarrying):

@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw4apq634lwqy"]
+
+[ext_resource type="Script" path="res://Scripts/Game/ItemController/Itens/tier1/id020.gd" id="1_uex2y"]
+[ext_resource type="PackedScene" uid="uid://sj2bep2rsd1g" path="res://Scenes/Game/ItemController/item.tscn" id="2_3tn47"]
+[ext_resource type="PackedScene" uid="uid://buer8qtk6isip" path="res://Scenes/Game/ItemController/ItemGrab.tscn" id="8_v3sa7"]
+
+[node name="id020" type="Node2D"]
+script = ExtResource("1_uex2y")
+
+[node name="Item" parent="." instance=ExtResource("2_3tn47")]
+
+[node name="ItemGrab" parent="." instance=ExtResource("8_v3sa7")]

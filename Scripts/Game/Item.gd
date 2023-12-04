@@ -10,9 +10,7 @@ var endTurn = false
 
 func _ready():
 	basic_radios = Global.player.collect_radios
-	var rng = RandomNumberGenerator.new().randi_range(0, 209)
-	$Itens.frame=rng 
-
+	
 func _process(delta):
 	if (Global.Game.get_node("WaveController").mining):
 		endTurn=true
@@ -28,7 +26,9 @@ func _process(delta):
 func _on_area_2d_area_entered(area):
 	if (area.get_parent().name=="Player"):
 		playSound()
-		queue_free()
+		visible=false
+		$Area2D.queue_free()
+		Global.ItemController.appendItemBag(get_parent())
 
 func playSound():
 	for i in range(0, Global.Game.get_node("SoundController/Dracma").get_child_count(),1):

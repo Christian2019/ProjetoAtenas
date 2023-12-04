@@ -1,80 +1,20 @@
-[gd_scene load_steps=76 format=3 uid="uid://bqduy4u8regjo"]
+[gd_scene load_steps=16 format=3 uid="uid://bqduy4u8regjo"]
 
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/MainPage.gd" id="1_n2wv5"]
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/ShopScript.gd" id="2_m5fe6"]
 [ext_resource type="Texture2D" uid="uid://d3o00kxuo4h22" path="res://Assets/Images/HUD/Loja/ScrollsBG.png" id="3_0xrjq"]
+[ext_resource type="PackedScene" uid="uid://dsr560ixpdq5a" path="res://Scenes/Game/ScrollsController/ScrollHud.tscn" id="4_3pkcr"]
 [ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="4_l0n46"]
-[ext_resource type="Script" path="res://Scripts/Zones/Temple/PersonagemLoja.gd" id="5_1cq4t"]
-[ext_resource type="Texture2D" uid="uid://cv1m856of8ntd" path="res://Assets/Images/HUD/Loja/GoldPlace.png" id="5_uoj13"]
-[ext_resource type="Script" path="res://Scripts/Zones/Temple/Mineração.gd" id="6_b0i47"]
-[ext_resource type="Texture2D" uid="uid://costnafwkrulb" path="res://Assets/Images/HUD/Loja/SilverPlace.png" id="6_m6do7"]
 [ext_resource type="Texture2D" uid="uid://ctvkf1u451ub3" path="res://Assets/Images/HUD/Loja/Slots.png" id="7_1621l"]
 [ext_resource type="Texture2D" uid="uid://ddp41lr3tim83" path="res://Assets/Images/HUD/Loja/Rock.png" id="8_ncnii"]
 [ext_resource type="Texture2D" uid="uid://2kytyugryrk4" path="res://Assets/Images/HUD/Loja/Wood.png" id="9_koeqf"]
-[ext_resource type="Script" path="res://Scripts/Zones/Temple/Defender Point.gd" id="10_imkf7"]
 [ext_resource type="Texture2D" uid="uid://w1o6d8gum7h5" path="res://Assets/Images/HUD/Loja/Gold.png" id="10_s2kx6"]
-[ext_resource type="Texture2D" uid="uid://cuolto2djdbn6" path="res://Assets/Images/HUD/Loja/BackgroundUpgrade.png" id="11_lp50v"]
+[ext_resource type="PackedScene" uid="uid://bpfityhkpmxkm" path="res://Scenes/Game/ItemController/ItemHUD.tscn" id="11_ux1aq"]
+[ext_resource type="PackedScene" uid="uid://deg8hjpbk2ykd" path="res://Scenes/Game/Constructions/Temple/Upgrade/mineração.tscn" id="12_e63eq"]
+[ext_resource type="PackedScene" uid="uid://dvgvp2thpqg12" path="res://Scenes/Game/LevelUp/Stats.tscn" id="12_lb4mt"]
 [ext_resource type="Texture2D" uid="uid://c8uedu3u1iprj" path="res://Assets/Images/HUD/Loja/BarraMenu.png" id="12_wrag8"]
-[ext_resource type="PackedScene" uid="uid://3rfb2rkcrutr" path="res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/MiningOptions.tscn" id="13_8sh6w"]
-[ext_resource type="Texture2D" uid="uid://chwrvs0tbfe6w" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Level1.png" id="13_u8pyb"]
-[ext_resource type="Texture2D" uid="uid://cm4gdwyh5moli" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 27.png" id="14_y7d4u"]
-[ext_resource type="Texture2D" uid="uid://rhlewolh2333" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 35.png" id="15_sn0qt"]
-[ext_resource type="Texture2D" uid="uid://cuys4l4kq0nh2" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 24.png" id="16_63fxb"]
-[ext_resource type="Texture2D" uid="uid://dmhmaanyeb3pi" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 34.png" id="17_i6y15"]
-[ext_resource type="Texture2D" uid="uid://bmobxe3d0m8l4" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 25.png" id="18_vdkuh"]
-[ext_resource type="Texture2D" uid="uid://cfn773mmr0u75" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 26.png" id="19_fni2o"]
-[ext_resource type="Texture2D" uid="uid://bre03wixp2mxa" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Level1.png" id="20_i736o"]
-[ext_resource type="Texture2D" uid="uid://0krhv237uw5f" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 27.png" id="21_j5gij"]
-[ext_resource type="Texture2D" uid="uid://0fd1564ivhwq" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 33.png" id="22_d4qg2"]
-[ext_resource type="Texture2D" uid="uid://dj6nmf1m3f3i" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 24.png" id="23_hgliy"]
-[ext_resource type="Texture2D" uid="uid://dsu7dgjjcfn88" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 33.png" id="24_0khjf"]
-[ext_resource type="Texture2D" uid="uid://qud37guvu8i8" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 34.png" id="24_c8jab"]
-[ext_resource type="Texture2D" uid="uid://cl4n385fydxku" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 25.png" id="25_gnafc"]
-[ext_resource type="Texture2D" uid="uid://cgibsoarljan3" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 35.png" id="26_1mvhd"]
-[ext_resource type="Texture2D" uid="uid://12y1urshsqad" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 26.png" id="27_52r08"]
-[ext_resource type="Texture2D" uid="uid://c1lvo03360ies" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/BronzeSword.png" id="29_kj5ic"]
-[ext_resource type="Texture2D" uid="uid://0rqev1k3nc4" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/BronzeDesativado.png" id="30_601cn"]
-[ext_resource type="PackedScene" uid="uid://b3wvfc3l1iq20" path="res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.tscn" id="31_0x8vq"]
-[ext_resource type="Texture2D" uid="uid://cprs05ls2ccdg" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/SilverSword.png" id="31_dstbv"]
-[ext_resource type="Texture2D" uid="uid://cliqkucmf383y" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/SilverDesativado.png" id="32_4s5u5"]
-[ext_resource type="Texture2D" uid="uid://b3kaswp8s6ai3" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/GoldSword.png" id="33_vhahw"]
-[ext_resource type="Texture2D" uid="uid://6utf8shl363i" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/GoldDesativado.png" id="34_1yfjh"]
-[ext_resource type="PackedScene" uid="uid://dpieqc71pk5sp" path="res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/DefenderPointOptions.tscn" id="34_utq1v"]
-[ext_resource type="Texture2D" uid="uid://c7b0ng1vnyyms" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/FinalSword.png" id="35_3kwhs"]
-[ext_resource type="Texture2D" uid="uid://pmexyd5fdvt8" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/FinalDesativado.png" id="36_lygfb"]
-[ext_resource type="Texture2D" uid="uid://djdvyofi1vk3r" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/SilverAbilities.png" id="37_iie34"]
-[ext_resource type="Texture2D" uid="uid://li4f6271nb5i" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/BronzeAbilities.png" id="38_pvqti"]
-[ext_resource type="Texture2D" uid="uid://ckimwulh442qa" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/SilverDesativado.png" id="38_xhpp4"]
-[ext_resource type="Texture2D" uid="uid://bp065xj2l43eq" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/GoldAbilites.png" id="39_lh6bu"]
-[ext_resource type="Texture2D" uid="uid://35v5a2t1s0x8" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/BronzeDesativado.png" id="39_rgovf"]
-[ext_resource type="Texture2D" uid="uid://dx7gjumu0kq6s" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/GoldDesativado.png" id="40_0bbi6"]
-[ext_resource type="Texture2D" uid="uid://dutmvvjo82fet" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/FinalAbilities.png" id="41_corjx"]
-[ext_resource type="Texture2D" uid="uid://mhnkfhok2b44" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/FinalDesativado.png" id="42_07mek"]
-[ext_resource type="Texture2D" uid="uid://cv8ldy7ml3jt4" path="res://Assets/Images/HUD/Loja/BackgroundUpgrade2.png" id="44_a3duy"]
-[ext_resource type="Texture2D" uid="uid://cp6e0ckcup300" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 50.png" id="45_6voh0"]
-[ext_resource type="Texture2D" uid="uid://bb6k5j16yp2at" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 27.png" id="46_lm8c7"]
-[ext_resource type="Texture2D" uid="uid://b2tr7gteesv1y" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 48.png" id="47_onmd5"]
-[ext_resource type="Texture2D" uid="uid://rycyswfok5vg" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 24.png" id="48_itqjg"]
-[ext_resource type="Texture2D" uid="uid://ci7fqe6tbvj30" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 49.png" id="49_6581t"]
-[ext_resource type="Texture2D" uid="uid://bu46lhs01bcme" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 25.png" id="50_vebq6"]
-[ext_resource type="Texture2D" uid="uid://maoc8uvim6yi" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 47.png" id="51_3sf1u"]
-[ext_resource type="Texture2D" uid="uid://doynnh7fpbof" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 26.png" id="52_vbyfq"]
-[ext_resource type="Texture2D" uid="uid://chvrs06naamlr" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/UpgradeBasico.png" id="53_fyrnl"]
-[ext_resource type="Texture2D" uid="uid://c48cryi3covp5" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/Group 27.png" id="54_guh1t"]
-[ext_resource type="Texture2D" uid="uid://ckcat5e32anfx" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/UpgradeBom.png" id="55_en6mg"]
-[ext_resource type="Texture2D" uid="uid://b0dh8i3p18ctv" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/Group 24.png" id="56_gjcv0"]
-[ext_resource type="Texture2D" uid="uid://cvqn2lhkpcd2v" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/UpgradeOtimo.png" id="57_xjsgn"]
-[ext_resource type="Texture2D" uid="uid://ft6mtrl5n7e5" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/Group 25.png" id="58_g5o4q"]
-[ext_resource type="Texture2D" uid="uid://brt23tn7qgapj" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/UpgradeFinal.png" id="59_t6ey8"]
-[ext_resource type="Texture2D" uid="uid://b0kmclpemayqm" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/Group 26.png" id="60_chr5c"]
-[ext_resource type="Texture2D" uid="uid://qh1a7w1p65yt" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/UpgradeBasico.png" id="61_7vlwj"]
-[ext_resource type="Texture2D" uid="uid://b13358bq50xga" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/DesativoBasico.png" id="62_eg5oi"]
-[ext_resource type="Texture2D" uid="uid://dsfqs7g0ddtr3" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/UpgradeBom.png" id="63_2xuco"]
-[ext_resource type="Texture2D" uid="uid://c3iemunvmtdv5" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/DesativoPrata.png" id="64_37pwe"]
-[ext_resource type="Texture2D" uid="uid://cjvp10vgpaomu" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/UpgradeOtimo.png" id="65_ejy87"]
-[ext_resource type="Texture2D" uid="uid://clax5xfamjwnk" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/DesativoOuro.png" id="66_4x5tq"]
-[ext_resource type="Texture2D" uid="uid://bjvno8ccudkkp" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/UpgradeFinal.png" id="67_enbe8"]
-[ext_resource type="Texture2D" uid="uid://d4i2faw2nmtrw" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/DesativoFinal.png" id="68_htph6"]
+[ext_resource type="PackedScene" uid="uid://d3gj72p3eit3p" path="res://Scenes/Game/Constructions/Temple/Upgrade/personagem.tscn" id="13_mclth"]
+[ext_resource type="PackedScene" uid="uid://cooqeupudot5l" path="res://Scenes/Game/Constructions/Temple/Upgrade/defender_point.tscn" id="14_ij6xs"]
 
 [node name="TempleScreen" type="Node2D"]
 script = ExtResource("1_n2wv5")
@@ -102,443 +42,11 @@ position = Vector2(235.5, 321)
 scale = Vector2(0.748777, 0.501786)
 texture = ExtResource("3_0xrjq")
 
-[node name="ITEMS" type="ColorRect" parent="BG/SHOP"]
-offset_left = 882.0
-offset_top = 203.0
-offset_right = 1033.0
-offset_bottom = 605.0
-color = Color(0.482353, 0.482353, 0.482353, 1)
-
-[node name="Title" type="Label" parent="BG/SHOP/ITEMS"]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 3.0
-offset_right = 106.0
-offset_bottom = 29.0
-theme_override_fonts/font = ExtResource("4_l0n46")
-text = "Items"
-
-[node name="ScrollContainer" type="ScrollContainer" parent="BG/SHOP/ITEMS"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 35.0
-offset_right = 149.0
-offset_bottom = 392.0
-
-[node name="Itens" type="GridContainer" parent="BG/SHOP/ITEMS/ScrollContainer"]
-layout_mode = 2
-columns = 2
-
-[node name="STATUS" type="ColorRect" parent="BG/SHOP"]
-offset_left = 882.0
-offset_top = 41.0
-offset_right = 1034.0
-offset_bottom = 203.0
-color = Color(0.486275, 0.462745, 0.466667, 1)
-
-[node name="Title" type="Label" parent="BG/SHOP/STATUS"]
-layout_mode = 0
-offset_left = 65.0
-offset_top = 5.0
-offset_right = 105.0
-offset_bottom = 31.0
-rotation = 0.00316421
-theme_override_fonts/font = ExtResource("4_l0n46")
-text = "stats"
-
-[node name="Label" type="Label" parent="BG/SHOP/STATUS"]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 34.0
-offset_right = 156.0
-offset_bottom = 154.0
-theme_override_font_sizes/font_size = 10
-text = "Max HP:                            0
-Damage:                           0
-Speed:                               0
-Life Steal:                         0
-Engineering:                    0
-Range:                              0"
-
 [node name="MINHAS_COISAS___TROCA" type="Node2D" parent="BG/SHOP"]
 
-[node name="MINHASCOISAS" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
-offset_left = 465.0
-offset_top = 42.0
-offset_right = 892.0
-offset_bottom = 605.0
-color = Color(0.592157, 0.592157, 0.592157, 1)
-
-[node name="Attack_1" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
-layout_mode = 2
-offset_left = 7.0
-offset_top = 3.0
-offset_right = 70.0
-offset_bottom = 29.0
-text = "Attack 1"
-
-[node name="Attack1" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
-layout_mode = 2
-offset_left = 61.0
-offset_top = 38.0
-offset_right = 361.0
-offset_bottom = 38.0
-theme_override_constants/h_separation = 120
-columns = 3
-
-[node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1"]
-layout_mode = 2
-focus_neighbor_right = NodePath("../Passivo1")
-focus_neighbor_bottom = NodePath("../../Attack2/Ativo")
-
-[node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Ativo"]
-layout_mode = 0
-offset_left = -13.0
-offset_top = -5.0
-offset_right = 102.0
-offset_bottom = 64.0
-color = Color(0.414063, 0.414063, 0.414063, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Ativo"]
-position = Vector2(44.5, 29.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("5_uoj13")
-
-[node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1"]
-layout_mode = 2
-focus_neighbor_left = NodePath("../Ativo")
-focus_neighbor_right = NodePath("../Passivo2")
-focus_neighbor_bottom = NodePath("../../Attack2/Passivo1")
-
-[node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo1"]
-layout_mode = 0
-offset_left = -7.0
-offset_top = -5.0
-offset_right = 108.0
-offset_bottom = 64.0
-color = Color(0.415686, 0.415686, 0.415686, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo1"]
-position = Vector2(50.5, 29.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("6_m6do7")
-
-[node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1"]
-layout_mode = 2
-focus_neighbor_left = NodePath("../Passivo1")
-focus_neighbor_bottom = NodePath("../../Attack2/Passivo2")
-
-[node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo2"]
-layout_mode = 0
-offset_left = -1.0
-offset_top = -5.0
-offset_right = 114.0
-offset_bottom = 64.0
-color = Color(0.415686, 0.415686, 0.415686, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack1/Passivo2"]
-position = Vector2(56.5, 29.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("6_m6do7")
-
-[node name="Attack_2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
-layout_mode = 2
-offset_left = 7.0
-offset_top = 118.0
-offset_right = 70.0
-offset_bottom = 144.0
-text = "Attack 2"
-
-[node name="Attack2" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
-layout_mode = 2
-offset_left = 61.0
-offset_top = 124.0
-offset_right = 301.0
-offset_bottom = 150.0
-theme_override_constants/h_separation = 120
-columns = 3
-
-[node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2"]
-layout_mode = 2
-focus_neighbor_top = NodePath("../../Attack1/Ativo")
-focus_neighbor_right = NodePath("../Passivo1")
-focus_neighbor_bottom = NodePath("../../Torreta/Ativo")
-
-[node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Ativo"]
-layout_mode = 0
-offset_left = -13.0
-offset_top = 23.0
-offset_right = 102.0
-offset_bottom = 92.0
-color = Color(0.414063, 0.414063, 0.414063, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Ativo"]
-position = Vector2(44.5, 57.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("5_uoj13")
-
-[node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2"]
-layout_mode = 2
-focus_neighbor_left = NodePath("../Ativo")
-focus_neighbor_top = NodePath("../../Attack1/Passivo1")
-focus_neighbor_right = NodePath("../../Attack1/Passivo2")
-focus_neighbor_bottom = NodePath("../../Torreta/Passivo1")
-
-[node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo1"]
-layout_mode = 0
-offset_left = -7.0
-offset_top = 23.0
-offset_right = 108.0
-offset_bottom = 92.0
-color = Color(0.415686, 0.415686, 0.415686, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo1"]
-position = Vector2(50.5, 57.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("6_m6do7")
-
-[node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2"]
-layout_mode = 2
-focus_neighbor_left = NodePath("../Passivo1")
-focus_neighbor_top = NodePath("../../Attack1/Passivo2")
-focus_neighbor_bottom = NodePath("../../Torreta/Passivo2")
-
-[node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo2"]
-layout_mode = 0
-offset_left = -1.0
-offset_top = 23.0
-offset_right = 114.0
-offset_bottom = 92.0
-color = Color(0.415686, 0.415686, 0.415686, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Attack2/Passivo2"]
-position = Vector2(56.5, 57.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("6_m6do7")
-
-[node name="Torreta2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 226.0
-offset_right = 69.0
-offset_bottom = 252.0
-text = "Torreta"
-
-[node name="Torreta" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
-layout_mode = 2
-offset_left = 62.0
-offset_top = 211.0
-offset_right = 302.0
-offset_bottom = 211.0
-theme_override_constants/h_separation = 120
-columns = 3
-
-[node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta"]
-layout_mode = 2
-focus_neighbor_top = NodePath("../../Attack2/Ativo")
-focus_neighbor_right = NodePath("../Passivo1")
-focus_neighbor_bottom = NodePath("../../Dash/Ativo")
-
-[node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Ativo"]
-layout_mode = 0
-offset_left = -13.0
-offset_top = 44.0
-offset_right = 102.0
-offset_bottom = 111.0
-color = Color(0.414063, 0.414063, 0.414063, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Ativo"]
-position = Vector2(44.5, 77.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("5_uoj13")
-
-[node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta"]
-layout_mode = 2
-focus_neighbor_left = NodePath("../Ativo")
-focus_neighbor_top = NodePath("../../Attack2/Passivo1")
-focus_neighbor_right = NodePath("../Passivo2")
-focus_neighbor_bottom = NodePath("../../Dash/Passivo1")
-
-[node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo1"]
-layout_mode = 0
-offset_left = -7.0
-offset_top = 43.0
-offset_right = 108.0
-offset_bottom = 112.0
-color = Color(0.415686, 0.415686, 0.415686, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo1"]
-position = Vector2(50.5, 77.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("6_m6do7")
-
-[node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta"]
-layout_mode = 2
-focus_neighbor_left = NodePath("../Passivo1")
-focus_neighbor_top = NodePath("../../Attack2/Passivo2")
-focus_neighbor_bottom = NodePath(".")
-
-[node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo2"]
-layout_mode = 0
-offset_left = -1.0
-offset_top = 43.0
-offset_right = 114.0
-offset_bottom = 112.0
-color = Color(0.415686, 0.415686, 0.415686, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Torreta/Passivo2"]
-position = Vector2(56.5, 77.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("6_m6do7")
-
-[node name="Dash2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
-layout_mode = 0
-offset_left = 9.0
-offset_top = 326.0
-offset_right = 48.0
-offset_bottom = 352.0
-text = "Dash"
-
-[node name="Dash" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
-layout_mode = 2
-offset_left = 62.0
-offset_top = 405.0
-offset_right = 302.0
-offset_bottom = 405.0
-theme_override_constants/h_separation = 120
-columns = 3
-
-[node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash"]
-layout_mode = 2
-focus_neighbor_top = NodePath("../../Torreta/Ativo")
-focus_neighbor_right = NodePath("../../Torreta/Passivo1")
-focus_neighbor_bottom = NodePath(".")
-
-[node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Ativo"]
-layout_mode = 0
-offset_left = -13.0
-offset_top = -50.0
-offset_right = 102.0
-offset_bottom = 17.0
-color = Color(0.414063, 0.414063, 0.414063, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Ativo"]
-position = Vector2(44.5, -16.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("5_uoj13")
-
-[node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash"]
-layout_mode = 2
-focus_neighbor_left = NodePath("../Ativo")
-focus_neighbor_top = NodePath("../../Torreta/Passivo1")
-focus_neighbor_right = NodePath("../Passivo2")
-focus_neighbor_bottom = NodePath("../../Ultimate/Passivo1")
-
-[node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Passivo1"]
-layout_mode = 0
-offset_left = -6.0
-offset_top = -51.0
-offset_right = 109.0
-offset_bottom = 18.0
-color = Color(0.415686, 0.415686, 0.415686, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Passivo1"]
-position = Vector2(51.5, -16.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("6_m6do7")
-
-[node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash"]
-layout_mode = 2
-focus_neighbor_left = NodePath("../Passivo1")
-focus_neighbor_top = NodePath("../../Torreta/Passivo2")
-focus_neighbor_bottom = NodePath("../../Ultimate/Passivo2")
-
-[node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Passivo2"]
-layout_mode = 0
-offset_top = -51.0
-offset_right = 115.0
-offset_bottom = 17.0
-color = Color(0.415686, 0.415686, 0.415686, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Dash/Passivo2"]
-position = Vector2(57.5, -16.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("6_m6do7")
-
-[node name="Ultimate2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 425.0
-offset_right = 72.0
-offset_bottom = 451.0
-text = "Ultimate"
-
-[node name="Ultimate" type="GridContainer" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS"]
-layout_mode = 2
-offset_left = 61.0
-offset_top = 307.0
-offset_right = 301.0
-offset_bottom = 307.0
-theme_override_constants/h_separation = 120
-columns = 3
-
-[node name="Ativo" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate"]
-layout_mode = 2
-focus_neighbor_top = NodePath("../../Dash/Ativo")
-focus_neighbor_right = NodePath("../Passivo1")
-focus_neighbor_bottom = NodePath("../../../MinhasCoisas")
-
-[node name="Ativo_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Ativo"]
-layout_mode = 0
-offset_left = -12.0
-offset_top = 145.0
-offset_right = 103.0
-offset_bottom = 212.0
-color = Color(0.414063, 0.414063, 0.414063, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Ativo"]
-position = Vector2(45.5, 178.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("5_uoj13")
-
-[node name="Passivo1" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate"]
-layout_mode = 2
-focus_neighbor_left = NodePath("../Ativo")
-focus_neighbor_top = NodePath("../../Dash/Passivo1")
-focus_neighbor_right = NodePath("../Passivo2")
-focus_neighbor_bottom = NodePath("../../../MinhasCoisas")
-
-[node name="Passivo1_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Passivo1"]
-layout_mode = 0
-offset_left = -5.0
-offset_top = 145.0
-offset_right = 110.0
-offset_bottom = 212.0
-color = Color(0.415686, 0.415686, 0.415686, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Passivo1"]
-position = Vector2(52.5, 178.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("6_m6do7")
-
-[node name="Passivo2" type="Control" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate"]
-layout_mode = 2
-focus_neighbor_left = NodePath("../Passivo1")
-focus_neighbor_top = NodePath("../../Dash/Passivo2")
-focus_neighbor_bottom = NodePath("../../../MinhasCoisas")
-
-[node name="Passivo2_Spot" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Passivo2"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 145.0
-offset_right = 116.0
-offset_bottom = 212.0
-color = Color(0.415686, 0.415686, 0.415686, 1)
-
-[node name="GoldPlace" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/MINHASCOISAS/Ultimate/Passivo2"]
-position = Vector2(58.5, 178.5)
-scale = Vector2(0.61, 0.575)
-texture = ExtResource("6_m6do7")
+[node name="ScrollHud" parent="BG/SHOP/MINHAS_COISAS___TROCA" instance=ExtResource("4_3pkcr")]
+position = Vector2(465, 41)
+scale = Vector2(0.125, 0.125)
 
 [node name="TROCA" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
 visible = false
@@ -553,7 +61,7 @@ position = Vector2(205, 132)
 scale = Vector2(0.437427, 0.43)
 texture = ExtResource("7_1621l")
 
-[node name="1For25Rock" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro"]
+[node name="GoldForStone" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro"]
 offset_left = -43.4358
 offset_top = -120.93
 offset_right = 159.564
@@ -562,17 +70,17 @@ texture_normal = ExtResource("8_ncnii")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/1For25Rock"]
+[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForStone"]
 layout_mode = 0
-offset_left = 62.0
-offset_top = 190.326
-offset_right = 149.0
-offset_bottom = 217.326
+offset_left = 98.3021
+offset_top = 190.697
+offset_right = 185.302
+offset_bottom = 217.697
 theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
-text = "1 for 25"
+text = "1"
 
-[node name="1For50Wood" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro"]
+[node name="GoldForWood" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro"]
 offset_left = 224.037
 offset_top = -113.953
 offset_right = 432.037
@@ -581,27 +89,36 @@ texture_normal = ExtResource("9_koeqf")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/1For50Wood"]
+[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForWood"]
 layout_mode = 0
-offset_left = 57.1525
-offset_top = 183.721
-offset_right = 155.152
-offset_bottom = 210.721
+offset_left = 98.3024
+offset_top = 181.395
+offset_right = 196.302
+offset_bottom = 208.395
 theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
-text = "1 for 50"
+text = "1"
 
 [node name="Wood" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro"]
 position = Vector2(-333.77, -2.32568)
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("10_s2kx6")
 
+[node name="Sold" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro"]
+offset_left = -265.187
+offset_top = 67.4418
+offset_right = -178.187
+offset_bottom = 94.4418
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "2"
+
 [node name="Pedra" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
 position = Vector2(205, 254)
 scale = Vector2(0.437427, 0.43)
 texture = ExtResource("7_1621l")
 
-[node name="25For1Gold" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra"]
+[node name="StoneForGold" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra"]
 offset_left = -25.1471
 offset_top = -90.6976
 offset_right = 139.853
@@ -610,7 +127,7 @@ texture_normal = ExtResource("10_s2kx6")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/25For1Gold"]
+[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForGold"]
 layout_mode = 0
 offset_left = 43.4358
 offset_top = 158.14
@@ -620,7 +137,7 @@ theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
 text = "25 for 1"
 
-[node name="5For12Wood" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra"]
+[node name="StoneForWood" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra"]
 offset_left = 224.037
 offset_top = -120.93
 offset_right = 432.037
@@ -629,7 +146,7 @@ texture_normal = ExtResource("9_koeqf")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/5For12Wood"]
+[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForWood"]
 layout_mode = 0
 offset_left = 59.4385
 offset_top = 188.372
@@ -644,6 +161,15 @@ position = Vector2(-331.482, -13.9536)
 scale = Vector2(0.0888162, 0.09)
 texture = ExtResource("8_ncnii")
 
+[node name="Sold" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra"]
+offset_left = -265.187
+offset_top = 67.4418
+offset_right = -178.187
+offset_bottom = 94.4418
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "2"
+
 [node name="Madeira" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
 position = Vector2(205, 385)
 scale = Vector2(0.437427, 0.43)
@@ -654,7 +180,7 @@ position = Vector2(-329.191, 2.32715)
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("9_koeqf")
 
-[node name="50For1Gold" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira"]
+[node name="WoodForGold" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira"]
 offset_left = -36.5775
 offset_top = -100.0
 offset_right = 128.422
@@ -663,7 +189,7 @@ texture_normal = ExtResource("10_s2kx6")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/50For1Gold"]
+[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForGold"]
 layout_mode = 0
 offset_left = 50.2941
 offset_top = 169.767
@@ -673,7 +199,7 @@ theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
 text = "50 for 1"
 
-[node name="25For1Rock" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira"]
+[node name="WoodForStone" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira"]
 offset_left = 233.0
 offset_top = -119.0
 offset_right = 423.0
@@ -682,7 +208,7 @@ texture_normal = ExtResource("8_ncnii")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/25For1Rock"]
+[node name="Ammount" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForStone"]
 layout_mode = 0
 offset_left = 48.1898
 offset_top = 186.442
@@ -692,18 +218,66 @@ theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
 text = "25 for 1"
 
+[node name="Sold" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira"]
+offset_left = -265.187
+offset_top = 67.4418
+offset_right = -178.187
+offset_bottom = 94.4418
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "2"
+
+[node name="For" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 161.0
+offset_right = 226.0
+offset_bottom = 188.0
+scale = Vector2(0.437427, 0.43)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "For
+"
+
+[node name="For2" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 282.0
+offset_right = 225.0
+offset_bottom = 309.0
+scale = Vector2(0.437427, 0.43)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "For
+"
+
+[node name="For3" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA"]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 414.0
+offset_right = 227.0
+offset_bottom = 441.0
+scale = Vector2(0.437427, 0.43)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 25
+text = "For
+"
+
+[node name="ItemHUD" parent="BG/SHOP/MINHAS_COISAS___TROCA" instance=ExtResource("11_ux1aq")]
+visible = false
+position = Vector2(466, 41)
+scale = Vector2(0.52, 0.525)
+
 [node name="MinhasCoisas" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
 offset_left = 471.0
 offset_top = 572.0
 offset_right = 627.0
 offset_bottom = 603.0
-focus_neighbor_top = NodePath("../MINHASCOISAS/Ultimate/Ativo")
-focus_neighbor_right = NodePath("../Troca")
 theme_override_colors/font_color = Color(0.410156, 0.410156, 0.410156, 1)
 theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
 theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 20
-text = "Meus Pergaminhos"
+text = "skills"
 flat = true
 
 [node name="Troca" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
@@ -711,13 +285,23 @@ offset_left = 639.0
 offset_top = 572.0
 offset_right = 693.0
 offset_bottom = 603.0
-focus_neighbor_left = NodePath("../MinhasCoisas")
-focus_neighbor_top = NodePath("../MINHASCOISAS/Ultimate/Ativo")
 theme_override_colors/font_color = Color(0.410156, 0.410156, 0.410156, 1)
 theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
 theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 20
-text = "Troca"
+text = "trade"
+flat = true
+
+[node name="Itens" type="Button" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
+offset_left = 736.0
+offset_top = 572.0
+offset_right = 800.0
+offset_bottom = 603.0
+theme_override_colors/font_color = Color(0.410156, 0.410156, 0.410156, 1)
+theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("4_l0n46")
+theme_override_font_sizes/font_size = 20
+text = "itens"
 flat = true
 
 [node name="Botoes" type="Node2D" parent="BG/SHOP"]
@@ -809,7 +393,6 @@ offset_left = 17.0
 offset_top = 212.0
 offset_right = 270.0
 offset_bottom = 255.0
-focus_neighbor_right = NodePath("../NOPE")
 text = "SIM"
 
 [node name="NOPE" type="Button" parent="BG/SHOP/Warning/Background"]
@@ -818,7 +401,6 @@ offset_left = 327.0
 offset_top = 212.0
 offset_right = 580.0
 offset_bottom = 255.0
-focus_neighbor_left = NodePath("../YES")
 text = "NÃO"
 
 [node name="Label" type="Label" parent="BG/SHOP/Warning/Background"]
@@ -830,598 +412,18 @@ offset_bottom = 154.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Tem certeza que quer comprar este item?"
 
-[node name="Mineração" type="Node2D" parent="BG"]
-visible = false
-script = ExtResource("6_b0i47")
+[node name="Stats" parent="BG/SHOP" instance=ExtResource("12_lb4mt")]
+position = Vector2(893, 42)
+scale = Vector2(0.49, 1.29)
 
-[node name="BackgroundUpgrade" type="Sprite2D" parent="BG/Mineração"]
-position = Vector2(520, 323.5)
-scale = Vector2(0.530021, 0.504915)
-texture = ExtResource("11_lp50v")
+[node name="Mineração" parent="BG" instance=ExtResource("12_e63eq")]
 
-[node name="POWER" type="Node2D" parent="BG/Mineração"]
-position = Vector2(139, 3)
+[node name="Personagem" parent="BG" instance=ExtResource("13_mclth")]
 
-[node name="Level1" parent="BG/Mineração/POWER" instance=ExtResource("13_8sh6w")]
-offset_left = 61.0
-offset_top = 117.0
-offset_right = 61.0
-offset_bottom = 117.0
-focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Mineração")
-focus_neighbor_right = NodePath("../Level2")
-focus_neighbor_bottom = NodePath("../../BAG/Level1")
-titulo = "Mining Power Lvl 1"
-colorTitulo = Color(0, 0.486275, 0, 1)
-whatUpgrades = "Power"
-qtdDracma = 5000
-qtdMinerios = 10
-Minerio = "wood"
-mining_valor = 1.0
-texture_normal = ExtResource("13_u8pyb")
-texture_hover = ExtResource("14_y7d4u")
-
-[node name="Level2" parent="BG/Mineração/POWER" instance=ExtResource("13_8sh6w")]
-offset_left = 219.0
-offset_top = 117.0
-offset_right = 219.0
-offset_bottom = 117.0
-focus_neighbor_left = NodePath("../Level1")
-focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Mineração")
-focus_neighbor_right = NodePath("../Level3")
-focus_neighbor_bottom = NodePath("../../BAG/Level2")
-titulo = "Mining Power Lvl 2"
-colorTitulo = Color(0.309804, 0.517647, 1, 1)
-whatUpgrades = "Power"
-qtdDracma = 5000
-qtdMinerios = 10
-Minerio = "stone"
-mining_valor = 1.25
-texture_normal = ExtResource("24_0khjf")
-texture_hover = ExtResource("16_63fxb")
-
-[node name="Level3" parent="BG/Mineração/POWER" instance=ExtResource("13_8sh6w")]
-offset_left = 381.0
-offset_top = 117.0
-offset_right = 381.0
-offset_bottom = 117.0
-focus_neighbor_left = NodePath("../Level2")
-focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Mineração")
-focus_neighbor_right = NodePath("../Level4")
-focus_neighbor_bottom = NodePath("../../BAG/Level3")
-titulo = "Mining Power Lvl 3"
-colorTitulo = Color(0.654902, 0.313726, 1, 1)
-whatUpgrades = "Power"
-qtdDracma = 5000
-qtdMinerios = 10
-Minerio = "wood"
-mining_valor = 2.5
-texture_normal = ExtResource("17_i6y15")
-texture_hover = ExtResource("18_vdkuh")
-
-[node name="Level4" parent="BG/Mineração/POWER" instance=ExtResource("13_8sh6w")]
-offset_left = 541.0
-offset_top = 117.0
-offset_right = 541.0
-offset_bottom = 117.0
-focus_neighbor_left = NodePath("../Level3")
-focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Mineração")
-focus_neighbor_bottom = NodePath("../../BAG/Level4")
-titulo = "Mining Power Lvl 4"
-colorTitulo = Color(1, 0.396078, 0, 1)
-whatUpgrades = "Power"
-qtdDracma = 5000
-qtdMinerios = 10
-Minerio = "wood"
-mining_valor = 5.0
-texture_normal = ExtResource("15_sn0qt")
-texture_hover = ExtResource("19_fni2o")
-
-[node name="BAG" type="Node2D" parent="BG/Mineração"]
-position = Vector2(121, -10)
-
-[node name="Level1" parent="BG/Mineração/BAG" instance=ExtResource("13_8sh6w")]
-offset_left = 79.0
-offset_top = 388.0
-offset_right = 79.0
-offset_bottom = 388.0
-focus_neighbor_top = NodePath("../../POWER/Level1")
-focus_neighbor_right = NodePath("../Level2")
-titulo = "Bag size Lvl 1"
-colorTitulo = Color(0, 0.8, 0, 1)
-whatUpgrades = "Bag"
-qtdDracma = 5000
-qtdMinerios = 10
-Minerio = "wood"
-bag_valor = 2.0
-texture_normal = ExtResource("20_i736o")
-texture_hover = ExtResource("21_j5gij")
-
-[node name="Level2" parent="BG/Mineração/BAG" instance=ExtResource("13_8sh6w")]
-offset_left = 237.0
-offset_top = 388.0
-offset_right = 237.0
-offset_bottom = 388.0
-focus_neighbor_left = NodePath("../Level1")
-focus_neighbor_top = NodePath("../../POWER/Level2")
-focus_neighbor_right = NodePath("../Level3")
-titulo = "Bag size Lvl 1"
-colorTitulo = Color(0.309804, 0.517647, 1, 1)
-whatUpgrades = "Bag"
-qtdDracma = 5000
-qtdMinerios = 10
-Minerio = "stone"
-bag_valor = 3.0
-texture_normal = ExtResource("22_d4qg2")
-texture_hover = ExtResource("23_hgliy")
-
-[node name="Level3" parent="BG/Mineração/BAG" instance=ExtResource("13_8sh6w")]
-offset_left = 399.0
-offset_top = 388.0
-offset_right = 399.0
-offset_bottom = 388.0
-focus_neighbor_left = NodePath("../Level2")
-focus_neighbor_top = NodePath("../../POWER/Level3")
-focus_neighbor_right = NodePath("../Level4")
-titulo = "Bag size Lvl 1"
-colorTitulo = Color(0.654902, 0.313726, 1, 1)
-whatUpgrades = "Bag"
-qtdDracma = 5000
-qtdMinerios = 10
-Minerio = "gold"
-bag_valor = 4.0
-texture_normal = ExtResource("24_c8jab")
-texture_hover = ExtResource("25_gnafc")
-
-[node name="Level4" parent="BG/Mineração/BAG" instance=ExtResource("13_8sh6w")]
-offset_left = 559.0
-offset_top = 388.0
-offset_right = 559.0
-offset_bottom = 388.0
-focus_neighbor_left = NodePath("../Level3")
-focus_neighbor_top = NodePath("../../POWER/Level4")
-titulo = "Bag size Lvl 1"
-colorTitulo = Color(1, 0.396078, 0, 1)
-whatUpgrades = "Bag"
-qtdDracma = 5000
-qtdMinerios = 10
-Minerio = "gold"
-bag_valor = 5.0
-texture_normal = ExtResource("26_1mvhd")
-texture_hover = ExtResource("27_52r08")
-
-[node name="Personagem" type="Node2D" parent="BG"]
-visible = false
-script = ExtResource("5_1cq4t")
-
-[node name="BackgroundUpgrade" type="Sprite2D" parent="BG/Personagem"]
-position = Vector2(520, 323.5)
-scale = Vector2(0.530021, 0.504915)
-texture = ExtResource("11_lp50v")
-
-[node name="Level Attack" type="Node2D" parent="BG/Personagem"]
-position = Vector2(127, 24)
-
-[node name="Level1" parent="BG/Personagem/Level Attack" instance=ExtResource("31_0x8vq")]
-offset_left = 64.0
-offset_top = 110.0
-offset_right = 64.0
-offset_bottom = 110.0
-focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Personagem")
-focus_neighbor_right = NodePath("../Level2")
-focus_neighbor_bottom = NodePath("../../Level Defesa/Level1")
-titulo = "Damage Lvl 1"
-colorTitulo = Color(0, 0.486275, 0, 1)
-whatUpgrades = "Attack"
-qtdDracma = 7500
-qtdMinerios = 10
-Minerio = "wood"
-percentDamage = 2.0
-percentCritDamage = 0.12
-baseDamage = 2.0
-texture_normal = ExtResource("29_kj5ic")
-texture_hover = ExtResource("30_601cn")
-
-[node name="Level2" parent="BG/Personagem/Level Attack" instance=ExtResource("31_0x8vq")]
-offset_left = 231.0
-offset_top = 110.0
-offset_right = 231.0
-offset_bottom = 110.0
-focus_neighbor_left = NodePath("../Level1")
-focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Personagem")
-focus_neighbor_right = NodePath("../Level3")
-focus_neighbor_bottom = NodePath("../../Level Defesa/Level2")
-titulo = "Damage Lvl 2"
-colorTitulo = Color(0.309804, 0.517647, 1, 1)
-whatUpgrades = "Attack"
-qtdDracma = 7500
-qtdMinerios = 10
-Minerio = "stone"
-percentDamage = 3.0
-percentCritDamage = 0.13
-baseDamage = 3.0
-texture_normal = ExtResource("31_dstbv")
-texture_hover = ExtResource("32_4s5u5")
-
-[node name="Level3" parent="BG/Personagem/Level Attack" instance=ExtResource("31_0x8vq")]
-offset_left = 393.0
-offset_top = 110.0
-offset_right = 393.0
-offset_bottom = 110.0
-focus_neighbor_left = NodePath("../Level2")
-focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Personagem")
-focus_neighbor_right = NodePath("../Level4")
-focus_neighbor_bottom = NodePath("../../Level Defesa/Level3")
-titulo = "Damage Lvl 3"
-colorTitulo = Color(0.654902, 0.313726, 1, 1)
-whatUpgrades = "Attack"
-qtdDracma = 7500
-qtdMinerios = 10
-Minerio = "gold"
-percentDamage = 4.0
-percentCritDamage = 0.14
-baseDamage = 4.0
-texture_normal = ExtResource("33_vhahw")
-texture_hover = ExtResource("34_1yfjh")
-
-[node name="Level4" parent="BG/Personagem/Level Attack" instance=ExtResource("31_0x8vq")]
-offset_left = 553.0
-offset_top = 110.0
-offset_right = 553.0
-offset_bottom = 110.0
-focus_neighbor_left = NodePath("../Level3")
-focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Personagem")
-focus_neighbor_bottom = NodePath("../../Level Defesa/Level4")
-titulo = "Damage Lvl 4"
-colorTitulo = Color(1, 0.396078, 0, 1)
-whatUpgrades = "Attack"
-qtdDracma = 7500
-qtdMinerios = 10
-Minerio = "gold"
-percentDamage = 5.0
-percentCritDamage = 0.15
-baseDamage = 5.0
-texture_normal = ExtResource("35_3kwhs")
-texture_hover = ExtResource("36_lygfb")
-
-[node name="Level Defesa" type="Node2D" parent="BG/Personagem"]
-position = Vector2(104, 6)
-
-[node name="Level1" parent="BG/Personagem/Level Defesa" instance=ExtResource("31_0x8vq")]
-offset_left = 87.0
-offset_top = 367.0
-offset_right = 87.0
-offset_bottom = 367.0
-focus_neighbor_top = NodePath("../../Level Attack/Level1")
-focus_neighbor_right = NodePath("../Level2")
-titulo = "Defense Lvl 1"
-colorTitulo = Color(0, 0.486275, 0, 1)
-whatUpgrades = "Defense"
-qtdDracma = 7500
-qtdMinerios = 10
-Minerio = "wood"
-percentDamage = 2.0
-percentCritDamage = 0.12
-baseDamage = 2.0
-dodge = 2.0
-armor = 2.0
-maxDodge = 40.0
-texture_normal = ExtResource("38_pvqti")
-texture_hover = ExtResource("39_rgovf")
-
-[node name="Level2" parent="BG/Personagem/Level Defesa" instance=ExtResource("31_0x8vq")]
-offset_left = 254.0
-offset_top = 367.0
-offset_right = 254.0
-offset_bottom = 367.0
-focus_neighbor_left = NodePath("../Level1")
-focus_neighbor_top = NodePath("../../Level Attack/Level3")
-focus_neighbor_right = NodePath("../Level3")
-titulo = "Defense Lvl 2"
-colorTitulo = Color(0.309804, 0.517647, 1, 1)
-whatUpgrades = "Defense"
-qtdDracma = 7500
-qtdMinerios = 10
-Minerio = "stone"
-percentDamage = 3.0
-percentCritDamage = 0.13
-baseDamage = 3.0
-dodge = 3.0
-armor = 3.0
-maxDodge = 50.0
-texture_normal = ExtResource("37_iie34")
-texture_hover = ExtResource("38_xhpp4")
-
-[node name="Level3" parent="BG/Personagem/Level Defesa" instance=ExtResource("31_0x8vq")]
-offset_left = 416.0
-offset_top = 367.0
-offset_right = 416.0
-offset_bottom = 367.0
-focus_neighbor_left = NodePath("../Level2")
-focus_neighbor_top = NodePath("../../Level Attack/Level3")
-focus_neighbor_right = NodePath("../Level4")
-titulo = "Defense Lvl 3"
-colorTitulo = Color(0.654902, 0.313726, 1, 1)
-whatUpgrades = "Defense"
-qtdDracma = 7500
-qtdMinerios = 10
-Minerio = "gold"
-percentDamage = 4.0
-percentCritDamage = 0.14
-baseDamage = 4.0
-dodge = 4.0
-armor = 4.0
-maxDodge = 60.0
-texture_normal = ExtResource("39_lh6bu")
-texture_hover = ExtResource("40_0bbi6")
-
-[node name="Level4" parent="BG/Personagem/Level Defesa" instance=ExtResource("31_0x8vq")]
-offset_left = 576.0
-offset_top = 367.0
-offset_right = 576.0
-offset_bottom = 367.0
-focus_neighbor_left = NodePath("../Level3")
-focus_neighbor_top = NodePath("../../Level Attack/Level4")
-titulo = "Defense Lvl 4"
-colorTitulo = Color(1, 0.396078, 0, 1)
-whatUpgrades = "Defense"
-qtdDracma = 7500
-qtdMinerios = 10
-Minerio = "gold"
-percentDamage = 5.0
-percentCritDamage = 0.15
-baseDamage = 5.0
-dodge = 5.0
-armor = 5.0
-maxDodge = 70.0
-texture_normal = ExtResource("41_corjx")
-texture_hover = ExtResource("42_07mek")
-
-[node name="Defender Point" type="Node2D" parent="BG"]
-visible = false
-script = ExtResource("10_imkf7")
-
-[node name="BackgroundUpgrade" type="Sprite2D" parent="BG/Defender Point"]
-position = Vector2(520, 323.5)
-scale = Vector2(0.530021, 0.504915)
-texture = ExtResource("44_a3duy")
-
-[node name="Sentinela" type="Node2D" parent="BG/Defender Point"]
-position = Vector2(128, -11)
-
-[node name="Level1" parent="BG/Defender Point/Sentinela" instance=ExtResource("34_utq1v")]
-offset_left = 64.0
-offset_top = 110.0
-offset_right = 64.0
-offset_bottom = 110.0
-focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Defender Point")
-focus_neighbor_right = NodePath("../Level2")
-focus_neighbor_bottom = NodePath("../../Centro/Level1")
-titulo = "Tower Lvl 1"
-colorTitulo = Color(0, 0.486275, 0, 1)
-whatUpgrades = "Tower"
-qtdDracma = 2500
-qtdMinerios = 10
-Minerio = "wood"
-texture_normal = ExtResource("45_6voh0")
-texture_hover = ExtResource("46_lm8c7")
-
-[node name="Level2" parent="BG/Defender Point/Sentinela" instance=ExtResource("34_utq1v")]
-offset_left = 231.0
-offset_top = 110.0
-offset_right = 231.0
-offset_bottom = 110.0
-focus_neighbor_left = NodePath("../Level1")
-focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Defender Point")
-focus_neighbor_right = NodePath("../Level3")
-focus_neighbor_bottom = NodePath("../../Centro/Level2")
-titulo = "Tower Lvl 2"
-colorTitulo = Color(0.309804, 0.517647, 1, 1)
-whatUpgrades = "Tower"
-qtdDracma = 4000
-qtdMinerios = 10
-Minerio = "stone"
-texture_normal = ExtResource("47_onmd5")
-texture_hover = ExtResource("48_itqjg")
-
-[node name="Level3" parent="BG/Defender Point/Sentinela" instance=ExtResource("34_utq1v")]
-offset_left = 392.0
-offset_top = 110.0
-offset_right = 392.0
-offset_bottom = 110.0
-focus_neighbor_left = NodePath("../Level2")
-focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Defender Point")
-focus_neighbor_right = NodePath("../Level4")
-focus_neighbor_bottom = NodePath("../../Centro/Level3")
-titulo = "Tower Lvl 3"
-colorTitulo = Color(0.654902, 0.313726, 1, 1)
-whatUpgrades = "Tower"
-qtdDracma = 5500
-qtdMinerios = 10
-Minerio = "gold"
-texture_normal = ExtResource("49_6581t")
-texture_hover = ExtResource("50_vebq6")
-
-[node name="Level4" parent="BG/Defender Point/Sentinela" instance=ExtResource("34_utq1v")]
-offset_left = 553.0
-offset_top = 110.0
-offset_right = 553.0
-offset_bottom = 110.0
-focus_neighbor_left = NodePath("../Level3")
-focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Defender Point")
-focus_neighbor_bottom = NodePath("../../Centro/Level4")
-titulo = "Tower Lvl 4"
-colorTitulo = Color(1, 0.396078, 0, 1)
-whatUpgrades = "Tower"
-qtdDracma = 7500
-qtdMinerios = 15
-Minerio = "gold"
-texture_normal = ExtResource("51_3sf1u")
-texture_hover = ExtResource("52_vbyfq")
-
-[node name="Centro" type="Node2D" parent="BG/Defender Point"]
-position = Vector2(100, -102)
-
-[node name="Level1" parent="BG/Defender Point/Centro" instance=ExtResource("34_utq1v")]
-offset_left = 92.0
-offset_top = 367.0
-offset_right = 92.0
-offset_bottom = 367.0
-focus_neighbor_top = NodePath("../../Sentinela/Level1")
-focus_neighbor_right = NodePath("../Level2")
-focus_neighbor_bottom = NodePath("../../Piscina/Level1")
-titulo = "Center Lvl 1"
-colorTitulo = Color(0, 0.486275, 0, 1)
-whatUpgrades = "Center"
-qtdDracma = 2500
-qtdMinerios = 10
-Minerio = "wood"
-heal = 2.0
-maxHp = 4500.0
-nextHealDealy = 0.04
-texture_normal = ExtResource("53_fyrnl")
-texture_hover = ExtResource("54_guh1t")
-
-[node name="Level2" parent="BG/Defender Point/Centro" instance=ExtResource("34_utq1v")]
-offset_left = 259.0
-offset_top = 367.0
-offset_right = 259.0
-offset_bottom = 367.0
-focus_neighbor_left = NodePath("../Level1")
-focus_neighbor_top = NodePath("../../Sentinela/Level2")
-focus_neighbor_right = NodePath("../Level3")
-focus_neighbor_bottom = NodePath("../../Piscina/Level2")
-titulo = "Center Lvl 2"
-colorTitulo = Color(0.309804, 0.517647, 1, 1)
-whatUpgrades = "Center"
-qtdDracma = 4000
-qtdMinerios = 10
-Minerio = "stone"
-heal = 3.0
-maxHp = 5500.0
-nextHealDealy = 0.03
-texture_normal = ExtResource("55_en6mg")
-texture_hover = ExtResource("56_gjcv0")
-
-[node name="Level3" parent="BG/Defender Point/Centro" instance=ExtResource("34_utq1v")]
-offset_left = 420.0
-offset_top = 367.0
-offset_right = 420.0
-offset_bottom = 367.0
-focus_neighbor_left = NodePath("../Level2")
-focus_neighbor_top = NodePath("../../Sentinela/Level3")
-focus_neighbor_right = NodePath("../Level4")
-focus_neighbor_bottom = NodePath("../../Piscina/Level3")
-titulo = "Center Lvl 3"
-colorTitulo = Color(0.654902, 0.313726, 1, 1)
-whatUpgrades = "Center"
-qtdDracma = 5500
-qtdMinerios = 10
-Minerio = "gold"
-heal = 4.0
-maxHp = 6500.0
-nextHealDealy = 0.02
-texture_normal = ExtResource("57_xjsgn")
-texture_hover = ExtResource("58_g5o4q")
-
-[node name="Level4" parent="BG/Defender Point/Centro" instance=ExtResource("34_utq1v")]
-offset_left = 581.0
-offset_top = 367.0
-offset_right = 581.0
-offset_bottom = 367.0
-focus_neighbor_left = NodePath("../Level3")
-focus_neighbor_top = NodePath("../../Sentinela/Level4")
-focus_neighbor_bottom = NodePath("../../Piscina/Level4")
-titulo = "Center Lvl 4"
-colorTitulo = Color(1, 0.396078, 0, 1)
-whatUpgrades = "Center"
-qtdDracma = 7500
-qtdMinerios = 10
-Minerio = "gold"
-heal = 5.0
-maxHp = 9500.0
-nextHealDealy = 0.01
-texture_normal = ExtResource("59_t6ey8")
-texture_hover = ExtResource("60_chr5c")
-
-[node name="Piscina" type="Node2D" parent="BG/Defender Point"]
-position = Vector2(97, 61)
-
-[node name="Level1" parent="BG/Defender Point/Piscina" instance=ExtResource("34_utq1v")]
-offset_left = 92.0
-offset_top = 367.0
-offset_right = 92.0
-offset_bottom = 367.0
-focus_neighbor_top = NodePath("../../Centro/Level1")
-focus_neighbor_right = NodePath("../Level2")
-titulo = "Pool Lvl 1"
-colorTitulo = Color(0, 0.486275, 0, 1)
-whatUpgrades = "Pool"
-qtdDracma = 2500
-qtdMinerios = 10
-Minerio = "wood"
-poolHeal = 2.0
-poolHealDelay = 0.05
-texture_normal = ExtResource("61_7vlwj")
-texture_hover = ExtResource("62_eg5oi")
-
-[node name="Level2" parent="BG/Defender Point/Piscina" instance=ExtResource("34_utq1v")]
-offset_left = 259.0
-offset_top = 367.0
-offset_right = 259.0
-offset_bottom = 367.0
-focus_neighbor_left = NodePath("../Level1")
-focus_neighbor_top = NodePath("../../Centro/Level2")
-focus_neighbor_right = NodePath("../Level3")
-titulo = "Pool Lvl 2"
-colorTitulo = Color(0.309804, 0.517647, 1, 1)
-whatUpgrades = "Pool"
-qtdDracma = 4000
-qtdMinerios = 10
-Minerio = "stone"
-poolHeal = 3.0
-poolHealDelay = 0.04
-texture_normal = ExtResource("63_2xuco")
-texture_hover = ExtResource("64_37pwe")
-
-[node name="Level3" parent="BG/Defender Point/Piscina" instance=ExtResource("34_utq1v")]
-offset_left = 420.0
-offset_top = 367.0
-offset_right = 420.0
-offset_bottom = 367.0
-focus_neighbor_left = NodePath("../Level2")
-focus_neighbor_top = NodePath("../../Centro/Level3")
-focus_neighbor_right = NodePath("../Level4")
-titulo = "Pool Lvl 3"
-colorTitulo = Color(0.654902, 0.313726, 1, 1)
-whatUpgrades = "Pool"
-qtdDracma = 5500
-qtdMinerios = 10
-Minerio = "gold"
-poolHeal = 4.0
-poolHealDelay = 0.03
-texture_normal = ExtResource("65_ejy87")
-texture_hover = ExtResource("66_4x5tq")
-
-[node name="Level4" parent="BG/Defender Point/Piscina" instance=ExtResource("34_utq1v")]
-offset_left = 581.0
-offset_top = 367.0
-offset_right = 581.0
-offset_bottom = 367.0
-focus_neighbor_left = NodePath("../Level3")
-focus_neighbor_top = NodePath("../../Centro/Level4")
-titulo = "Pool Lvl 4"
-colorTitulo = Color(1, 0.396078, 0, 1)
-whatUpgrades = "Pool"
-qtdDracma = 7850
-qtdMinerios = 15
-Minerio = "gold"
-poolHeal = 5.0
-poolHealDelay = 0.02
-texture_normal = ExtResource("67_enbe8")
-texture_hover = ExtResource("68_htph6")
+[node name="Defender Point" parent="BG" instance=ExtResource("14_ij6xs")]
 
 [node name="MenuPrincipal" type="Sprite2D" parent="BG"]
-position = Vector2(519, 25)
+position = Vector2(519.5, 24.5)
 scale = Vector2(0.531574, 0.633803)
 texture = ExtResource("12_wrag8")
 
@@ -1430,31 +432,22 @@ position = Vector2(-984.849, -43.3889)
 scale = Vector2(1.88488, 1.57778)
 
 [node name="Ouro" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 25.4704
-offset_top = 14.5
-offset_right = 65.4704
-offset_bottom = 37.5
-theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
-theme_override_fonts/font = ExtResource("4_l0n46")
-theme_override_font_sizes/font_size = 15
+offset_left = 16.9869
+offset_top = 13.0
+offset_right = 56.9869
+offset_bottom = 36.0
 
 [node name="Wood" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 102.47
-offset_top = 14.5
-offset_right = 142.47
-offset_bottom = 37.5
-theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
-theme_override_fonts/font = ExtResource("4_l0n46")
-theme_override_font_sizes/font_size = 15
+offset_left = 93.9869
+offset_top = 13.0
+offset_right = 133.987
+offset_bottom = 36.0
 
 [node name="Stone" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 190.471
-offset_top = 14.5
-offset_right = 230.469
-offset_bottom = 37.5
-theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
-theme_override_fonts/font = ExtResource("4_l0n46")
-theme_override_font_sizes/font_size = 15
+offset_left = 181.987
+offset_top = 13.0
+offset_right = 221.985
+offset_bottom = 36.0
 
 [node name="Abas" type="Node2D" parent="BG/MenuPrincipal"]
 position = Vector2(-984.849, -43.3889)
@@ -1465,7 +458,6 @@ offset_left = 302.43
 offset_top = 9.0
 offset_right = 384.43
 offset_bottom = 41.0
-focus_neighbor_right = NodePath("../Mineração")
 theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
 theme_override_colors/font_pressed_color = Color(0.27451, 0.27451, 0.27451, 1)
 theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
@@ -1480,15 +472,13 @@ offset_left = 389.43
 offset_top = 9.0
 offset_right = 502.43
 offset_bottom = 41.0
-focus_neighbor_left = NodePath("../Shop")
-focus_neighbor_right = NodePath("../Personagem")
 theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
 theme_override_colors/font_pressed_color = Color(0.227451, 0.227451, 0.227451, 1)
 theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
 theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
 theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
-text = "Mineração"
+text = "Mining"
 flat = true
 
 [node name="Personagem" type="Button" parent="BG/MenuPrincipal/Abas"]
@@ -1496,15 +486,13 @@ offset_left = 507.03
 offset_top = 9.0
 offset_right = 640.03
 offset_bottom = 41.0
-focus_neighbor_left = NodePath("../Mineração")
-focus_neighbor_right = NodePath("../Defender Point")
 theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
 theme_override_colors/font_pressed_color = Color(0.227451, 0.227451, 0.227451, 1)
 theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
 theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
 theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
-text = "Personagem"
+text = "Character"
 flat = true
 
 [node name="Defender Point" type="Button" parent="BG/MenuPrincipal/Abas"]
@@ -1521,14 +509,15 @@ theme_override_font_sizes/font_size = 25
 text = "Defender Point"
 flat = true
 
-[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/1For25Rock" to="BG/SHOP" method="_on_trade_20_stone_pressed"]
-[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/1For50Wood" to="BG/SHOP" method="_on_trade_100_wood_pressed"]
-[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/25For1Gold" to="BG/SHOP" method="_on_trade_1_gold_pressed"]
-[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/5For12Wood" to="BG/SHOP" method="_on_trade_50_wood_pressed"]
-[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/50For1Gold" to="BG/SHOP" method="_on_trade_wood_pressed"]
-[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/25For1Rock" to="BG/SHOP" method="_on_trade_wood_stone_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForStone" to="BG/SHOP" method="_on_gold_for_stone_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForWood" to="BG/SHOP" method="_on_gold_for_wood_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForGold" to="BG/SHOP" method="_on_stone_for_gold_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForWood" to="BG/SHOP" method="_on_stone_for_wood_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForGold" to="BG/SHOP" method="_on_wood_for_gold_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForStone" to="BG/SHOP" method="_on_wood_for_stone_pressed"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/MinhasCoisas" to="BG/SHOP" method="_on_minhas_coisas_pressed"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/Troca" to="BG/SHOP" method="_on_troca_pressed"]
+[connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/Itens" to="BG/SHOP" method="_on_itens_pressed"]
 [connection signal="pressed" from="BG/SHOP/Botoes/SCROLL1" to="BG/SHOP" method="_on_scroll_1_pressed"]
 [connection signal="pressed" from="BG/SHOP/Botoes/SCROLL2" to="BG/SHOP" method="_on_scroll_2_pressed"]
 [connection signal="pressed" from="BG/SHOP/Botoes/SCROLL3" to="BG/SHOP" method="_on_scroll_3_pressed"]

@@ -12,10 +12,11 @@ var damage = 1
 
 var canDamage = true
 
-func _ready():
-	Global.timerCreator("call_deferred",liveTime,["free"],self)
+func _ready():  
+	Global.timerCreator("call_deferred",liveTime,["free"],self) 
 
 func _process(_delta):
+	print(damage)
 	if (target!=null):
 		moveLocation = Vector2(target.position.x,target.position.y)
 	move()

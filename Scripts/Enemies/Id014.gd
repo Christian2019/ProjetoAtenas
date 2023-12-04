@@ -18,6 +18,9 @@ var hpBarWidth = maxHpBarWidth
 var speed = 3.0
 
 var isMoving=true
+var currentAnimation="Walking"
+var verticalDir="down"
+var horizontalDir="right"
 
 var playerInside=false
 var centerPointInside=false
@@ -70,7 +73,9 @@ func _process(_delta):
 	contactDamage()
 	
 
-		
+func playAnimation (animName):
+	$AnimatedSprite2D.play(animName+"_"+verticalDir+"_"+horizontalDir)
+
 func getTarget():
 	
 	if (global_position.distance_to(escapePoint)<speed):
@@ -107,12 +112,23 @@ func hpBarController():
 	$HPBar/Green.size.x=hpBarWidth
 	
 func createArrowAttack():
-	if ($AnimatedSprite2D.animation!="Attacking"):
-		$AnimatedSprite2D.play("Attacking")
-	if (global_position.x-target.position.x>0):
-		$AnimatedSprite2D.flip_h=true
+	if (currentAnimation!="Attacking"):
+		currentAnimation = "Attacking"
+	
+	var distanceXtotTarget = global_position.x-target.global_position.x
+	var distanceYtoTarget = global_position.y-target.global_position.y
+	
+	if (distanceXtotTarget>0):
+		horizontalDir="left"
 	else:
-		$AnimatedSprite2D.flip_h=false
+		horizontalDir="right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir="up"
+	else:
+		verticalDir="down"
+	
+	playAnimation(currentAnimation)
 	
 	if (onCD):
 		return
@@ -171,14 +187,26 @@ func move():
 			createArrowAttack()
 			return
 
-	if ($AnimatedSprite2D.animation!="Walking"):
-		$AnimatedSprite2D.play("Walking")
+	if (currentAnimation!="Walking"):
+		currentAnimation = "Walking"
 
-	if (speedModifer.z>0):
-		$AnimatedSprite2D.flip_h=true
+	var distanceXtotTarget = global_position.x-target.global_position.x
+	var distanceYtoTarget = global_position.y-target.global_position.y
+	
+	if (distanceXtotTarget>0):
+		horizontalDir="left"
 	else:
-		$AnimatedSprite2D.flip_h=false
-		
+		horizontalDir="right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir="up"
+	else:
+		verticalDir="down"
+	
+	playAnimation(currentAnimation)
+	
+
+
 func getSpeedModifier(tagetMovement):
 	var targetPointX= tagetMovement.x
 	var targetPointY= tagetMovement.y

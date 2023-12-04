@@ -20,7 +20,7 @@ var playerInside=false
 
 var target
 
-var dracmas=8
+var dracmas=0
 
 var attackSpeedModifierVar=[nextHitDelay]
 
@@ -104,15 +104,7 @@ func hpBarController():
 	$HPBar/Green.size.x=hpBarWidth
 
 func die():
-	for i in range(0,dracmas,1):
-		var dracma = PreLoads.dracma.instantiate()
-		dracma.global_position=global_position
-		Global.Game.get_node("Instances/Dracmas").add_child(dracma)
-	
-	var item = PreLoads.item.instantiate()
-	item.global_position=global_position
-	Global.Game.get_node("Instances/Itens").add_child(item)
-
+	Global.ItemController.dropIten(0.2,0.1,0,self)
 	#Animacao de morte
 	call_deferred("queue_free")
 

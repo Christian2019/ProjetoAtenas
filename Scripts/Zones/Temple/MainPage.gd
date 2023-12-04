@@ -14,7 +14,7 @@ func _ready():
 func _process(delta):   
 	get_node("BG/MenuPrincipal/Labels/Ouro").text=str("Gold: ",Global.player.gold)
 	get_node("BG/MenuPrincipal/Labels/Wood").text=str("Wood: ",Global.player.wood)
-	get_node("BG/MenuPrincipal/Labels/Stone").text= str("stone: ",Global.player.stone)  
+	get_node("BG/MenuPrincipal/Labels/Stone").text= str("Stone: ",Global.player.stone)  
 	if Input.is_action_just_pressed("Exit"): 
 		get_tree().paused = false
 		visible=false
@@ -35,14 +35,12 @@ func _on_shop_pressed():
 func _on_mineração_pressed():
 	#Paginas devem fazer a transicao aqui
 	transition(2) 
-	$"BG/Mineração/POWER/Level1".grab_focus()
 
 func _on_personagem_pressed():
 	#Paginas devem fazer a transicao aqui
 	transition(3) 
-	$"BG/Personagem/Level Attack/Level1".grab_focus()
 
 func _on_defender_point_pressed():
 	#Paginas devem fazer a transicao aqui
-	$"BG/Defender Point/Sentinela/Level1".grab_focus()
 	transition(4)   
+

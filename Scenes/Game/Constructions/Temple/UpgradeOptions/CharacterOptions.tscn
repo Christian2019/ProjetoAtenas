@@ -1,0 +1,282 @@
+[gd_scene load_steps=16 format=3 uid="uid://b3wvfc3l1iq20"]
+
+[ext_resource type="Script" path="res://Scripts/Zones/Temple/UpgradeOptions/CharacterOptions.gd" id="1_docjh"]
+[ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="2_5hhw0"]
+[ext_resource type="Texture2D" uid="uid://detogg1xdpi7s" path="res://Assets/Images/LevelUp/dracma.png" id="3_m5d3l"]
+[ext_resource type="Texture2D" uid="uid://b1lulqfh7dxl2" path="res://Assets/Images/LevelUp/baseDamage.png" id="4_gix4x"]
+[ext_resource type="Texture2D" uid="uid://w1o6d8gum7h5" path="res://Assets/Images/HUD/Loja/Gold.png" id="4_yu8vu"]
+[ext_resource type="Texture2D" uid="uid://ddp41lr3tim83" path="res://Assets/Images/HUD/Loja/Rock.png" id="5_5tiuw"]
+[ext_resource type="Texture2D" uid="uid://cp1tv3148b287" path="res://Assets/Images/LevelUp/dodge.png" id="5_js22t"]
+[ext_resource type="Texture2D" uid="uid://2kytyugryrk4" path="res://Assets/Images/HUD/Loja/Wood.png" id="6_kqaaw"]
+[ext_resource type="Texture2D" uid="uid://de0orf26ul1x2" path="res://Assets/Images/LevelUp/percentDamage.png" id="6_rpu5g"]
+[ext_resource type="Texture2D" uid="uid://cbth1bpv6l2tm" path="res://Assets/Images/LevelUp/percentCritDamage.png" id="7_ygn8h"]
+[ext_resource type="Texture2D" uid="uid://cxwuyt6m3b26w" path="res://Assets/Images/LevelUp/armor.png" id="8_0bute"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p8k0k"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_yu8vu")
+}],
+"loop": true,
+"name": &"gold",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_5tiuw")
+}],
+"loop": true,
+"name": &"stone",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_kqaaw")
+}],
+"loop": true,
+"name": &"wood",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4lf8j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_rpu5g")
+}],
+"loop": true,
+"name": &"%Damage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_js22t")
+}],
+"loop": true,
+"name": &"Dodge",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e5dsl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ygn8h")
+}],
+"loop": true,
+"name": &"%CritDamage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_0bute")
+}],
+"loop": true,
+"name": &"armor",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_umnjk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_gix4x")
+}],
+"loop": true,
+"name": &"BaseDamage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_js22t")
+}],
+"loop": true,
+"name": &"MaxDodge",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterOptions" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_docjh")
+
+[node name="Imagem" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 140.0
+offset_bottom = 90.0
+scale = Vector2(1, 1.56)
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Aquired" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 61.0
+offset_right = 95.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_5hhw0")
+text = "Aquired"
+
+[node name="InfoDracma" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -142.0
+offset_top = 1.0
+offset_right = -57.0
+offset_bottom = 111.0
+scale = Vector2(2, 2)
+color = Color(0, 0, 0, 0.458824)
+
+[node name="QtdDracma" type="Node2D" parent="InfoDracma"]
+position = Vector2(-0.5, 20.5)
+
+[node name="Dracma" type="Sprite2D" parent="InfoDracma/QtdDracma"]
+position = Vector2(9, 9.5)
+scale = Vector2(0.171687, 0.175287)
+texture = ExtResource("3_m5d3l")
+
+[node name="Price" type="Label" parent="InfoDracma/QtdDracma"]
+offset_left = 17.5
+offset_top = 3.5
+offset_right = 57.5
+offset_bottom = 19.5
+theme_override_fonts/font = ExtResource("2_5hhw0")
+theme_override_font_sizes/font_size = 12
+metadata/_edit_use_anchors_ = true
+
+[node name="QtdMinerio" type="Node2D" parent="InfoDracma"]
+position = Vector2(-1, 35.5)
+
+[node name="Price" type="Label" parent="InfoDracma/QtdMinerio"]
+offset_left = 17.5
+offset_top = 3.5
+offset_right = 57.5
+offset_bottom = 19.5
+theme_override_fonts/font = ExtResource("2_5hhw0")
+theme_override_font_sizes/font_size = 12
+metadata/_edit_use_anchors_ = true
+
+[node name="Minerio" type="AnimatedSprite2D" parent="InfoDracma/QtdMinerio"]
+position = Vector2(9.5, 11.5)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_p8k0k")
+animation = &"wood"
+
+[node name="Upgrade1" type="Node2D" parent="InfoDracma"]
+position = Vector2(0, 49.5)
+
+[node name="Upgrade" type="AnimatedSprite2D" parent="InfoDracma/Upgrade1"]
+position = Vector2(9.5, 11.5)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_4lf8j")
+animation = &"Dodge"
+
+[node name="Price" type="Label" parent="InfoDracma/Upgrade1"]
+offset_left = 17.5
+offset_top = 3.5
+offset_right = 57.5
+offset_bottom = 19.5
+theme_override_fonts/font = ExtResource("2_5hhw0")
+theme_override_font_sizes/font_size = 12
+metadata/_edit_use_anchors_ = true
+
+[node name="Upgrade2" type="Node2D" parent="InfoDracma"]
+position = Vector2(0, 65.5)
+
+[node name="Upgrade2" type="AnimatedSprite2D" parent="InfoDracma/Upgrade2"]
+position = Vector2(9, 12)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_e5dsl")
+animation = &"armor"
+
+[node name="Price" type="Label" parent="InfoDracma/Upgrade2"]
+offset_left = 17.5
+offset_top = 3.5
+offset_right = 57.5
+offset_bottom = 19.5
+theme_override_fonts/font = ExtResource("2_5hhw0")
+theme_override_font_sizes/font_size = 12
+metadata/_edit_use_anchors_ = true
+
+[node name="Upgrade3" type="Node2D" parent="InfoDracma"]
+position = Vector2(0, 85)
+
+[node name="Upgrade3" type="AnimatedSprite2D" parent="InfoDracma/Upgrade3"]
+position = Vector2(9, 12)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_umnjk")
+animation = &"MaxDodge"
+
+[node name="Price" type="Label" parent="InfoDracma/Upgrade3"]
+offset_left = 17.5
+offset_top = 3.5
+offset_right = 57.5
+offset_bottom = 19.5
+theme_override_fonts/font = ExtResource("2_5hhw0")
+theme_override_font_sizes/font_size = 12
+metadata/_edit_use_anchors_ = true
+
+[node name="Titulo" type="Label" parent="InfoDracma"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.205882
+anchor_top = -0.0272727
+anchor_right = -0.205882
+anchor_bottom = -0.0272727
+offset_left = 17.5
+offset_top = 3.5
+offset_right = 57.5
+offset_bottom = 19.5
+theme_override_fonts/font = ExtResource("2_5hhw0")
+theme_override_font_sizes/font_size = 12
+metadata/_edit_use_anchors_ = true
+
+[node name="WarningSign" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -3.0
+offset_top = 142.0
+offset_right = 145.0
+offset_bottom = 162.0
+color = Color(0, 0, 0, 0.45098)
+
+[node name="Warning" type="Label" parent="WarningSign"]
+layout_mode = 0
+offset_right = 148.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(1, 0.537255, 0.470588, 1)
+theme_override_fonts/font = ExtResource("2_5hhw0")
+text = "teste"
+
+[node name="TurnOffWarning" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.5
+
+[connection signal="focus_entered" from="Imagem" to="." method="_on_imagem_focus_entered"]
+[connection signal="focus_exited" from="Imagem" to="." method="_on_imagem_focus_exited"]
+[connection signal="mouse_entered" from="Imagem" to="." method="_on_imagem_mouse_entered"]
+[connection signal="mouse_exited" from="Imagem" to="." method="_on_imagem_mouse_exited"]
+[connection signal="pressed" from="Imagem" to="." method="_on_imagem_pressed"]
+[connection signal="timeout" from="TurnOffWarning" to="." method="_on_turn_off_warning_timeout"]
