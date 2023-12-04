@@ -91,9 +91,10 @@ var warrior_dash_divine_poseidon_passive=0.3
 var warrior_dash_divine_poseidon_chance=20
 var warrior_dash_divine_poseidon_destructionInstinct=1
 #Zeus
-var warrior_dash_divine_zeus_passive
-var  warrior_dash_divine_zeus_moveSpeedPercentBonus=0.3
+var warrior_dash_divine_zeus_passive=16
+var warrior_dash_divine_zeus_moveSpeedPercentBonus=0.3
 var warrior_dash_divine_zeus_UltraInstinct={"armor":10,"dodge":0.30,"maxDodge":80}
+var warrior_dash_divine_zeus_bonusSpeedDuration=2
 
 ##Normal
 #Hades
@@ -104,7 +105,7 @@ var warrior_dash_poseidon_passive=[0.05,0.1,0.15,0.20]
 var warrior_dash_poseidon_chance=[1,2,4,10]
 var warrior_dash_poseidon_destructionInstinct=0.5
 #Zeus
-var warrior_dash_zeus_passive=[1,2,4,8,16]
+var warrior_dash_zeus_passive=[1,2,4,8]
 var warrior_dash_zeus_moveSpeedPercentBonus=[0.05,0.1,0.15,0.2]
 var warrior_dash_zeus_UltraInstinct = {"armor":5,"dodge":0.15,"maxDodge":80}
 var warrior_dash_zeus_bonusSpeedDuration=2
