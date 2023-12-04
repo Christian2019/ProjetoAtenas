@@ -28,15 +28,15 @@ func _ready():
 
 func qualityStatus():
 	if ( quality=="common"):
-		cd=AllSkillsValues.warrior_dash_hades_cd[0]
+		cd=AllSkillsValues.warrior_dash_cd[0]
 	elif ( quality=="rare"):
-		cd=AllSkillsValues.warrior_dash_hades_cd[1]
+		cd=AllSkillsValues.warrior_dash_cd[1]
 	elif ( quality=="epic"):
-		cd=AllSkillsValues.warrior_dash_hades_cd[2]
+		cd=AllSkillsValues.warrior_dash_cd[2]
 	elif ( quality=="legendary"):
-		cd=AllSkillsValues.warrior_dash_hades_cd[3]
+		cd=AllSkillsValues.warrior_dash_cd[3]
 	elif ( quality=="divine"):
-		cd=AllSkillsValues.warrior_dash_hades_cd[4]
+		cd=AllSkillsValues.warrior_dash_cd[4]
 	
 
 func stopDashing():

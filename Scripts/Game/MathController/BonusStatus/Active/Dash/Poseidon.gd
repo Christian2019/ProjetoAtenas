@@ -23,9 +23,9 @@ func _process(delta):
 		bonus=true
 		
 		if ( quality=="legendary"):
-			bonusCrit=0.5*baseDamageCheck/100
+			bonusCrit=AllSkillsValues.warrior_dash_poseidon_destructionInstinct*baseDamageCheck/100
 		elif (quality=="divine"):
-			bonusCrit=baseDamageCheck/100
+			bonusCrit=AllSkillsValues.warrior_dash_divine_poseidon_destructionInstinct*baseDamageCheck/100
 			
 		Global.player.percentCritDamage+=bonusCrit
 

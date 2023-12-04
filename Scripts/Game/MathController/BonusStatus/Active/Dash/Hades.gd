@@ -33,7 +33,7 @@ func _process(delta):
 				bonusHPRecovering=(bonusHPRecovering+Global.player.hpRegeneration)*2
 				bonusHPRecovering-=Global.player.hpRegeneration
 		elif (quality=="divine"):
-			bonusHPRecovering=100
+			bonusHPRecovering=AllSkillsValues.warrior_dash_divine_hades_hpRengen
 			if hp50Percert:
 				bonusHPRecovering=(bonusHPRecovering+Global.player.hpRegeneration)*3
 				bonusHPRecovering-=Global.player.hpRegeneration

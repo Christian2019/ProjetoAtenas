@@ -44,7 +44,8 @@ var ultimate=[PreLoads.warrior_ultimate_noGod,
 var qualitys = ["common",
 "rare",
 "epic",
-"legendary"
+"legendary",
+"divine"
 ]
 
 var skills=[{"skill":0,"quality":0},

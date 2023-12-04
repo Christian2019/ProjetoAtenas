@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://dbife0yqxe1bd"]
+[gd_scene load_steps=2 format=3 uid="uid://dbife0yqxe1bd"]
+
+[ext_resource type="Script" path="res://Scripts/Game/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_HadesPoseidon.gd" id="1_xkd17"]
 
 [node name="Scroll_Warrior_Dash_HadesPoseidon" type="Node2D"]
+script = ExtResource("1_xkd17")

@@ -247,4 +247,6 @@ var disorientation= preload("res://Scenes/Game/Math_controller/Effects/Disorient
 #Turret
 var scroll_warrior_turret_poseidon=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorTurret/Scroll_Warrior_Turret_Poseidon.tscn")
 #Dash
+var scroll_warrior_dash_hadesPoseidon=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Divine/Scroll_Warrior_Dash_HadesPoseidon.tscn")
 var scroll_warrior_dash_hades=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_Hades.tscn")
+var scroll_warrior_dash_poseidon=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_Poseidon.tscn")

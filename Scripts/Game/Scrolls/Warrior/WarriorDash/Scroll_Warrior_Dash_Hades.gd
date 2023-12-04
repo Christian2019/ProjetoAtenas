@@ -16,7 +16,7 @@ var hpRengen
 
 func start():
 	sellPrice=Global.ScrollController.getCurrentScrollPrice(self)
-	cd=AllSkillsValues.warrior_dash_hades_cd
+	cd=AllSkillsValues.warrior_dash_cd
 	passive=AllSkillsValues.warrior_dash_hades_passive
 	hpRengen=AllSkillsValues.warrior_dash_hades_hpRengen
 

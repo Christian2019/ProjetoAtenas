@@ -28,15 +28,15 @@ func effect():
 		var breakPoint
 		
 		if ( quality=="common"):
-			breakPoint=1
+			breakPoint=AllSkillsValues.warrior_dash_poseidon_chance[0]
 		elif ( quality=="rare"):
-			breakPoint=2
+			breakPoint=AllSkillsValues.warrior_dash_poseidon_chance[1]
 		elif ( quality=="epic"):
-			breakPoint=4
+			breakPoint=AllSkillsValues.warrior_dash_poseidon_chance[2]
 		elif ( quality=="legendary"):
-			breakPoint=10
+			breakPoint=AllSkillsValues.warrior_dash_poseidon_chance[3]
 		elif (quality=="divine"):
-			breakPoint=20
+			breakPoint=AllSkillsValues.warrior_dash_divine_poseidon_chance
 			
 		if (r<=breakPoint):
 			Global.player.baseDamage+=1

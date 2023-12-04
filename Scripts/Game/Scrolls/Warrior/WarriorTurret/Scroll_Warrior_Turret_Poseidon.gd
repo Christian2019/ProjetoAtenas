@@ -21,7 +21,7 @@ var waterDamage
 
 func start():
 	sellPrice=Global.ScrollController.getCurrentScrollPrice(self)
-	passive=[Global.LevelUp.percentDamage*1,Global.LevelUp.percentDamage*2,Global.LevelUp.percentDamage*3,Global.LevelUp.percentDamage*4]
+	passive=AllSkillsValues.warrior_turret_poseidon_passive
 	
 	quantity=AllSkillsValues.turretsQuantity
 	sd=AllSkillsValues.warrior_turret_poseidon_sd
@@ -55,8 +55,8 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/SkillType/value").text="turret"
 	scroll.get_node("Big/Labels/Cooldown/var").text="quantity:"
 	scroll.get_node("Big/Labels/Cooldown/value").text=str(quantity[quality])
-	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive[quality])+"% damage"
+	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive[quality]*100)+"% damage"
 	scroll.get_node("Big/Labels/Active/value").text="turrets’s attack causes "+str(sd[quality])+"(sd). it also pierce for "+str(pierce[quality])
-	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="turret’s attack cause waterDamage*"+str(waterDamage[0])
+	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="turret’s attack cause waterDamage*"+str(waterDamage)
 	scroll.get_node("Big/Labels/ExtraInfo/value").text="waterDamage*: extra x sd against same enemy after consecutives attacks."
 	
