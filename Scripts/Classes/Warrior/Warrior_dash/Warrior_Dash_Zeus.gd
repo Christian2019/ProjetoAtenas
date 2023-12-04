@@ -30,20 +30,20 @@ func _ready():
 
 func qualityStatus():
 	if ( quality=="common"):
-		cd=0.6
-		moveSpeedPercentBonus=0.05
+		cd=AllSkillsValues.warrior_dash_cd[0]
+		moveSpeedPercentBonus=AllSkillsValues.warrior_dash_zeus_moveSpeedPercentBonus[0]
 	elif ( quality=="rare"):
-		cd=0.5
-		moveSpeedPercentBonus=0.1
+		cd=AllSkillsValues.warrior_dash_cd[1]
+		moveSpeedPercentBonus=AllSkillsValues.warrior_dash_zeus_moveSpeedPercentBonus[1]
 	elif ( quality=="epic"):
-		cd=0.4
-		moveSpeedPercentBonus=0.15
+		cd=AllSkillsValues.warrior_dash_cd[2]
+		moveSpeedPercentBonus=AllSkillsValues.warrior_dash_zeus_moveSpeedPercentBonus[2]
 	elif ( quality=="legendary"):
-		cd=0.3
-		moveSpeedPercentBonus=0.2
+		cd=AllSkillsValues.warrior_dash_cd[3]
+		moveSpeedPercentBonus=AllSkillsValues.warrior_dash_zeus_moveSpeedPercentBonus[3]
 	elif ( quality=="divine"):
-		cd=0.2
-		moveSpeedPercentBonus=0.3
+		cd=AllSkillsValues.warrior_dash_cd[4]
+		moveSpeedPercentBonus=AllSkillsValues.warrior_dash_divine_zeus_moveSpeedPercentBonus
 	
 
 func stopDashing():

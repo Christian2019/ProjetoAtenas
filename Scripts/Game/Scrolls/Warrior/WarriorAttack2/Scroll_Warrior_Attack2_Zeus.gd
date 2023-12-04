@@ -6,7 +6,7 @@ var skillGod=1
 #0-hades 1-poseidon 2-zeus
 var godType=2
 #0-attack1 1-attack2 2-turret 3-dash 4-ultimate
-var skilltype=3
+var skilltype=1
 
 #NAO MEXER
 var quality=0
@@ -17,25 +17,23 @@ var passive2
 var colors=[Color8(117,0,196),Color8(71,126,255),Color8(249,218,101),Color8(0,228,0),Color8(255,255,255)]
 
 var cd
-var warrior_dash_zeus_moveSpeedPercentBonus
-var warrior_dash_zeus_UltraInstinct
-var warrior_dash_zeus_bonusSpeedDuration
+var warrior_dash_poseidon_chance
+var warrior_dash_poseidon_destructionInstinct
 
 func start():
 	sellPrice=Global.ScrollController.getCurrentScrollPrice(self)
-	
+	passive=AllSkillsValues.warrior_dash_poseidon_passive
 	#passive2=AllSkillsValues.warrior_dash_hadesPoseidon_passive2
-	passive=AllSkillsValues.warrior_dash_zeus_passive
+	
 	cd=AllSkillsValues.warrior_dash_cd
-	warrior_dash_zeus_moveSpeedPercentBonus=AllSkillsValues.warrior_dash_zeus_moveSpeedPercentBonus
-	warrior_dash_zeus_UltraInstinct=AllSkillsValues.warrior_dash_zeus_UltraInstinct
-	warrior_dash_zeus_bonusSpeedDuration=AllSkillsValues.warrior_dash_zeus_bonusSpeedDuration
+	warrior_dash_poseidon_chance=AllSkillsValues.warrior_dash_poseidon_chance
+	warrior_dash_poseidon_destructionInstinct=AllSkillsValues.warrior_dash_poseidon_destructionInstinct
 
 func addPassiveFunction():
-	Global.player.baseDamage+=passive[quality]
+	Global.player.percentDamage+=passive[quality]
 	#Global.player.baseMaxHp+=passive2
 func removePassiveFunction():
-	Global.player.baseDamage-=passive[quality]
+	Global.player.percentDamage-=passive[quality]
 	#Global.player.baseMaxHp-=passive2
 
 func addActiveFunction():
@@ -65,20 +63,21 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/God/value3").visible=divine
 	
 	#Somente se for divine
-	#0-hades 1-poseidon 2-zeus segundo deus do nome
+	#0-hades 1-poseidon 2-zeus
 	scroll.get_node("Big/AnimatedSprite2D2").frame=1
 	scroll.get_node("Big/Labels/God/value3").text="poseidon"
 	scroll.get_node("Big/Labels/God/value3").set("theme_override_colors/font_color", colors[1])
 	
-	#Olhar sempre primeiro deus
+	#Olhar sempre
 	scroll.get_node("Big/Labels/God/value").text="zeus"
 	scroll.get_node("Big/Labels/God/value").set("theme_override_colors/font_color", colors[2])
-	scroll.get_node("Big/Labels/SkillType/value").text="dash"
-	scroll.get_node("Big/Labels/Cooldown/var").text="cooldown:"
-	scroll.get_node("Big/Labels/Active/value").text="increase your movement speed by "+str(warrior_dash_zeus_moveSpeedPercentBonus[quality])+"% for "+str(warrior_dash_zeus_bonusSpeedDuration)+" seconds after dashes, cannot stack."
-	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="gain ultra instinct* "+str(warrior_dash_zeus_UltraInstinct.armor)+"/"+str(warrior_dash_zeus_UltraInstinct.dodge*100)+"%."
-	scroll.get_node("Big/Labels/ExtraInfo/value").text="ultra instinct*: increase dodge and armor by that amount. Max dodge cap at "+str(warrior_dash_zeus_UltraInstinct.maxDodge)+"%"
+	scroll.get_node("Big/Labels/SkillType/value").text="attack 2"
+	scroll.get_node("Big/Labels/Cooldown/var").text="cooldown:" 
+	scroll.get_node("Big/Labels/Active/value").text="enemies hit by attack 2 get strikes by one lighting bolt  "+str(warrior_dash_poseidon_chance[quality])+" sd"
+	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="enemies hit by heavy attack get disoriented* "+str(warrior_dash_poseidon_destructionInstinct*100)+"%."
+	scroll.get_node("Big/Labels/ExtraInfo/value").text="disoriantationt*: movement and attack speed slowed by % ammount for 10 seconds."
 	
-	#Nao mexer
+
+	#NAO MEXER
 	scroll.get_node("Big/Labels/Cooldown/value").text=str(cd[quality])+"s"
-	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive[quality])+"damage"
+	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive[quality]*100)+"% damage"

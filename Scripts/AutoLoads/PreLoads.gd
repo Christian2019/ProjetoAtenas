@@ -250,3 +250,4 @@ var scroll_warrior_turret_poseidon=preload("res://Scenes/Game/ScrollsController/
 var scroll_warrior_dash_hadesPoseidon=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Divine/Scroll_Warrior_Dash_HadesPoseidon.tscn")
 var scroll_warrior_dash_hades=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_Hades.tscn")
 var scroll_warrior_dash_poseidon=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_Poseidon.tscn")
+var scroll_warrior_dash_zeus=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_Zeus.tscn")

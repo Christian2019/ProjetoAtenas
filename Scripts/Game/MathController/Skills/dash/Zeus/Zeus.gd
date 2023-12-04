@@ -2,7 +2,7 @@ extends Node2D
 
 var moveSpeedBonus=false
 var moveSpeedBonus_frames=-1
-var moveSpeedBonus_maxFrames=2*60
+var moveSpeedBonus_maxFrames=AllSkillsValues.warrior_dash_zeus_bonusSpeedDuration*60
 var dashQuality
 
 func addMoveSpeed(d):
@@ -16,15 +16,15 @@ func addMoveSpeed(d):
 	
 	quality=dashQuality
 	if ( quality=="common"):
-		bonus=0.05
+		bonus=AllSkillsValues.warrior_dash_zeus_moveSpeedPercentBonus[0]
 	elif ( quality=="rare"):
-		bonus=0.10
+		bonus=AllSkillsValues.warrior_dash_zeus_moveSpeedPercentBonus[1]
 	elif ( quality=="epic"):
-		bonus=0.15
+		bonus=AllSkillsValues.warrior_dash_zeus_moveSpeedPercentBonus[2]
 	elif ( quality=="legendary"):
-		bonus=0.20
+		bonus=AllSkillsValues.warrior_dash_zeus_moveSpeedPercentBonus[3]
 	elif ( quality=="divine"):
-		bonus=0.30
+		bonus=AllSkillsValues.warrior_dash_divine_zeus_moveSpeedPercentBonus
 	
 	Global.player.moveSpeedPercentBonus+=bonus
 	
@@ -35,15 +35,15 @@ func removeMoveSpeedBonus():
 	var bonus
 
 	if ( quality=="common"):
-		bonus=0.05
+		bonus=AllSkillsValues.warrior_dash_zeus_moveSpeedPercentBonus[0]
 	elif ( quality=="rare"):
-		bonus=0.10
+		bonus=AllSkillsValues.warrior_dash_zeus_moveSpeedPercentBonus[1]
 	elif ( quality=="epic"):
-		bonus=0.15
+		bonus=AllSkillsValues.warrior_dash_zeus_moveSpeedPercentBonus[2]
 	elif ( quality=="legendary"):
-		bonus=0.20
+		bonus=AllSkillsValues.warrior_dash_zeus_moveSpeedPercentBonus[3]
 	elif ( quality=="divine"):
-		bonus=0.30
+		bonus=AllSkillsValues.warrior_dash_divine_zeus_moveSpeedPercentBonus
 		
 	bonus*=(-1)
 	
