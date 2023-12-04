@@ -11,14 +11,15 @@ var selected=null
 
 func _ready():
 	chageAllScrollsImages()
+	clearItens()
+	$Refresh.text="reroll "+str(refreshCost)
+	Global.timerCreator("refresh",0.1,[0],self)
+	
+func clearItens():
 	clearItensSlot($Slots/Slot1/ScrollOrItem/Item/Item)
 	clearItensSlot($Slots/Slot2/ScrollOrItem/Item/Item)
 	clearItensSlot($Slots/Slot3/ScrollOrItem/Item/Item)
 	clearItensSlot($Slots/Slot4/ScrollOrItem/Item/Item)
-
-	$Refresh.text="reroll "+str(refreshCost)
-	Global.timerCreator("refresh",0.1,[0],self)
-
 
 func chageAllScrollsImages():
 	changeScrollsImageToSmall($Slots/Slot1/ScrollOrItem/Scroll/ScrollImage)
@@ -180,7 +181,7 @@ func addItem(slot):
 
 	
 func getRandomScroll():
-	return 	PreLoads.scroll_warrior_dash_hades.instantiate()
+	return 	PreLoads.scroll_warrior_turret_poseidon.instantiate()
 
 func getRandomQuality(tier2Change,tier3Change,tier4Change):
 	var tier

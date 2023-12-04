@@ -2,19 +2,23 @@ extends Node2D
 
 var quality=0
 var sellPrice
+var passive
 
+#0-noGod 1-zeus 2-poseidon 3-hades 4-ZeusPoseidon 5-ZeusHades 6-HadesPoseidon
+var skillGod=3	
+#0-hades 1-poseidon 2-zeus
 var godType=0
+#0-attack1 1-attack2 2-turret 3-dash 4-ultimate
 var skilltype=3
 
 var cd
-var passive
 var hpRengen
 
 func start():
 	sellPrice=Global.ScrollController.getCurrentScrollPrice(self)
-	cd=[3,2.5,2,1.5]
-	passive=[Global.LevelUp.hp,Global.LevelUp.hp*2,Global.LevelUp.hp*3,Global.LevelUp.hp*4]
-	hpRengen=[Global.LevelUp.hpRegeneration*2,Global.LevelUp.hpRegeneration*5,Global.LevelUp.hpRegeneration*10,Global.LevelUp.hpRegeneration*25]
+	cd=AllSkillsValues.warrior_dash_hades_cd
+	passive=AllSkillsValues.warrior_dash_hades_passive
+	hpRengen=AllSkillsValues.warrior_dash_hades_hpRengen
 
 func addPassiveFunction():
 	Global.player.baseMaxHp+=passive[quality]
@@ -22,7 +26,7 @@ func removePassiveFunction():
 	Global.player.baseMaxHp-=passive[quality]
 
 func addActiveFunction():
-	Global.PlayrHudController.skills[skilltype]={"skill":3,"quality":quality}	
+	Global.PlayrHudController.skills[skilltype]={"skill":skillGod,"quality":quality}	
 	Global.PlayrHudController.changePlayerSkillFunction()
 
 func removeActiveFunction():
@@ -45,4 +49,4 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/LegendaryDivineBonus/var").text="legendary bonus:"
 	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="gain immortal instinct* x2"
 	scroll.get_node("Big/Labels/ExtraInfo/value").text="immortal instinct*: multiply your hp recovery by X when life is below 50%."
-	scroll.get_node("Small/AnimatedSprite2D").frame=1
+	scroll.get_node("Small/AnimatedSprite2D").frame=skillGod

@@ -8,17 +8,17 @@ var selected=4
 var rerollPrice=1
 
 #Base values Upgrade
-var hp=3.0
-var hpRegeneration=2.0
-var lifeStealChance=0.01
-var percentDamage=0.05
-var damage=1.0
-var attack_Speed = 0.05
-var percentCritDamage=0.03
-var armor=1.0
-var dodge=0.03
-var moveSpeed=0.03
-var luck=0.05
+var hp=AllSkillsValues.hp
+var hpRegeneration=AllSkillsValues.hpRegeneration
+var lifeStealChance=AllSkillsValues.lifeStealChance
+var percentDamage=AllSkillsValues.percentDamage
+var damage=AllSkillsValues.damage
+var attack_Speed = AllSkillsValues.attack_Speed
+var percentCritDamage=AllSkillsValues.percentCritDamage
+var armor=AllSkillsValues.armor
+var dodge=AllSkillsValues.dodge
+var moveSpeed=AllSkillsValues.moveSpeed
+var luck=AllSkillsValues.luck
 
 #Base Quality Chance Table
 var tier2={"minLevel":1,"plusChancePerLevel":0.06,"maxChance":0.6}

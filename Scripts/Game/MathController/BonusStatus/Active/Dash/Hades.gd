@@ -20,15 +20,15 @@ func _process(delta):
 	if !bonus and verifyActivation():
 	
 		bonus=true
-	
+
 		if ( quality=="common"):
-			bonusHPRecovering=5
+			bonusHPRecovering=AllSkillsValues.warrior_dash_hades_hpRengen[0]
 		elif ( quality=="rare"):
-			bonusHPRecovering=10
+			bonusHPRecovering=AllSkillsValues.warrior_dash_hades_hpRengen[1]
 		elif ( quality=="epic"):
-			bonusHPRecovering=20
+			bonusHPRecovering=AllSkillsValues.warrior_dash_hades_hpRengen[2]
 		elif ( quality=="legendary"):
-			bonusHPRecovering=50
+			bonusHPRecovering=AllSkillsValues.warrior_dash_hades_hpRengen[3]
 			if hp50Percert:
 				bonusHPRecovering=(bonusHPRecovering+Global.player.hpRegeneration)*2
 				bonusHPRecovering-=Global.player.hpRegeneration

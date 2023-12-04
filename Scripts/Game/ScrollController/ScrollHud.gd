@@ -9,7 +9,7 @@ func _ready():
 
 func showSelected(index):
 	if ($Scrolls.get_child(index).visible):
-		if Global.ScrollController.displayBig($Selected/Scroll,index):
+		if Global.ScrollController.displayBig($Selected/Scroll,index,$Selected/Buttons/Sell,$Selected/Buttons/Equip):
 			$Selected.visible=true	
 
 func _on_button_0_pressed():
@@ -60,3 +60,12 @@ func _on_button_14_pressed():
 
 func _on_close_pressed():
 	$Selected.visible=false
+	Global.ScrollController.scrollSelected=null
+
+
+func _on_sell_pressed():
+	Global.ScrollController.sell()
+
+
+func _on_equip_focus_entered():
+	Global.ScrollController.changeScrollPostion()

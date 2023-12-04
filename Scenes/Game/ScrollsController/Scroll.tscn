@@ -77,22 +77,25 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_g6vgt")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_rmclu")
+"texture": ExtResource("14_6ddgs")
 }, {
 "duration": 1.0,
 "texture": ExtResource("11_hanoi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_5nmqy")
+"texture": ExtResource("10_rmclu")
 }, {
 "duration": 1.0,
 "texture": ExtResource("13_87psm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_6ddgs")
+"texture": ExtResource("12_5nmqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_g6vgt")
 }],
 "loop": true,
 "name": &"default",

@@ -1,3 +1,5 @@
+res://Scripts/AutoLoads
+res://Scripts/Game/Scrolls/Warrior/WarriorTurret
 res://Scripts/Game
 res://Scripts/Game/ItemController
 res://Scripts/Zones/Temple/Shop
@@ -18,6 +20,4 @@ res://Assets/Images/Itens/Items/Zeus'_Thunder
 res://Assets/Images/Itens/Items/Warrior's_Sword
 res://Assets/Images/Itens/Items/Poseidon's_Staff
 res://Assets/Images/Itens/Items/Midas'_Hand
-res://Assets/Images/Itens/Items/Herme's_Shoes
-res://Assets/Images/Itens/Items/Dionisio's_CUP
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

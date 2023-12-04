@@ -15,14 +15,14 @@ func checkQuality():
 		quality="divine"
 	else:
 		quality= Global.player.turret.quality
-		
+
 	if ( quality=="common"):
-		maxTurrets=1
+		maxTurrets=AllSkillsValues.turretsQuantity[0]
 	elif ( quality=="rare"):
-		maxTurrets=2
+		maxTurrets=AllSkillsValues.turretsQuantity[1]
 	elif ( quality=="epic"):
-		maxTurrets=3
+		maxTurrets=AllSkillsValues.turretsQuantity[2]
 	elif ( quality=="legendary"):
-		maxTurrets=4
+		maxTurrets=AllSkillsValues.turretsQuantity[3]
 	elif (quality=="divine"):
-		maxTurrets=10
+		maxTurrets=AllSkillsValues.turretsQuantity[4]

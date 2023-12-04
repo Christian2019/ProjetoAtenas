@@ -27,27 +27,28 @@ func _ready():
 	attackSpeedModifier()
 	attackSpeedModifier()
 	qualityStatus()
+	
 
 func attackSpeedModifier():
 	cd=cd/Global.player.attack_Speed
 
 func qualityStatus():
 	if ( quality=="common"):
-		damage=2
+		damage=AllSkillsValues.warrior_turret_poseidon_sd[0]
 	elif ( quality=="rare"):
-		damage=4
-		pierce=1
+		damage=AllSkillsValues.warrior_turret_poseidon_sd[1]
+		pierce=AllSkillsValues.warrior_turret_poseidon_pierce[1]
 	elif ( quality=="epic"):
-		damage=8
-		pierce=2
+		damage=AllSkillsValues.warrior_turret_poseidon_sd[2]
+		pierce=AllSkillsValues.warrior_turret_poseidon_pierce[2]
 	elif ( quality=="legendary"):
-		damage=10
-		pierce=3
-		waterDamage=1
+		damage=AllSkillsValues.warrior_turret_poseidon_sd[3]
+		pierce=AllSkillsValues.warrior_turret_poseidon_pierce[3]
+		waterDamage=AllSkillsValues.warrior_turret_poseidon_waterDamage[0]
 	elif ( quality=="divine"):
-		damage=20
-		pierce=4
-		waterDamage=2
+		damage=AllSkillsValues.warrior_turret_poseidon_sd[4]
+		pierce=AllSkillsValues.warrior_turret_poseidon_pierce[4]
+		waterDamage=AllSkillsValues.warrior_turret_poseidon_waterDamage[1]
 		
 func destroy():
 	call_deferred("queue_free")

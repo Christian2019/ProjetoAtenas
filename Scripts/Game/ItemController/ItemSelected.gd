@@ -1,7 +1,7 @@
 extends Node
 
 func _on_button_mouse_entered():
-	if Global.TempleScreen.visible:
+	if Global.TempleScreen.visible and Global.ItemHudTempleShop.select:
 		Global.ItemHudTempleShop.get_node("SelectedItemBigLeft").get_child(0).queue_free()
 		var copy=self.duplicate()
 		copy.get_node("Button").queue_free()

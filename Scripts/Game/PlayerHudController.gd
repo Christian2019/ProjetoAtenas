@@ -49,7 +49,7 @@ var qualitys = ["common",
 
 var skills=[{"skill":0,"quality":0},
 {"skill":0,"quality":0},
-{"skill":4,"quality":0},
+{"skill":0,"quality":0},
 {"skill":0,"quality":0},
 {"skill":0,"quality":0}
 ]
