@@ -244,6 +244,9 @@ var twister = preload("res://Scenes/Game/Math_controller/Effects/Twister.tscn")
 var disorientation= preload("res://Scenes/Game/Math_controller/Effects/Disorientation.tscn")
 
 ##Scrolls
+#Attack1
+#Attack2
+var scroll_warrior_attack2_zeus=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack2/Scroll_Warrior_Attack2_Zeus.tscn")
 #Turret
 var scroll_warrior_turret_poseidon=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorTurret/Scroll_Warrior_Turret_Poseidon.tscn")
 #Dash
@@ -251,3 +254,4 @@ var scroll_warrior_dash_hadesPoseidon=preload("res://Scenes/Game/ScrollsControll
 var scroll_warrior_dash_hades=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_Hades.tscn")
 var scroll_warrior_dash_poseidon=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_Poseidon.tscn")
 var scroll_warrior_dash_zeus=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_Zeus.tscn")
+#Ultimate

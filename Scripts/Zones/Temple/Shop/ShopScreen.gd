@@ -181,7 +181,7 @@ func addItem(slot):
 
 	
 func getRandomScroll():
-	return 	PreLoads.scroll_warrior_dash_zeus.instantiate()
+	return 	PreLoads.scroll_warrior_attack2_zeus.instantiate()
 
 func getRandomQuality(tier2Change,tier3Change,tier4Change):
 	var tier

@@ -16,6 +16,8 @@ var luck=0.05
 ####All
 ###WARRIOR
 
+#Attack2
+var warrior_attack2_cd=1
 #Turrets
 var turretsQuantity=[1,2,3,4,5]
 #Dash
@@ -23,45 +25,61 @@ var warrior_dash_cd=[0.6,0.5,0.4,0.3,0.2]
 
 ###ATTACK1
 ##Divine
-
 #Hades
+var warrior_attack1_divine_hades_passive
 #Poseidon
+var warrior_attack1_divine_poseidon_passive
 #Zeus
+var warrior_attack1_divine_zeus_passive
 
 ##Normal
-
 #Hades
+var warrior_attack1_hades_passive
 #Poseidon
+var warrior_attack1_poseidon_passive
 #Zeus
+var warrior_attack1_zeus_passive
 
 ###ATTACK2
 ##Divine
-
 #Hades
+var warrior_attack2_divine_hades_passive
 #Poseidon
+var warrior_attack2_divine_poseidon_passive
 #Zeus
+var warrior_attack2_divine_zeus_passive=16
+var warrior_attack2_divine_zeus_lightningBoltDamage=400
+var warrior_attack2_divine_zeus_disorientation=0.6
 
 ##Normal
-
 #Hades
+var warrior_attack2_hades_passive
 #Poseidon
+var warrior_attack2_poseidon_passive
 #Zeus
+var warrior_attack2_zeus_passive=[1,2,4,8]
+var warrior_attack2_zeus_lightningBoltDamage=[20,48,90,160]
+var warrior_attack2_zeus_disorientation=0.9
 
 ###TURRET
 ##Divine
-
 #Hades
+var warrior_turret_divine_hades_passive
 #Poseidon
+var warrior_turret_divine_poseidon_passive
 #Zeus
+var warrior_turret_divine_zeus_passive
 
 ##Normal
 #Hades
+var warrior_turret_hades_passive
 #Poseidon
 var warrior_turret_poseidon_passive=[percentDamage*1,percentDamage*2,percentDamage*3,percentDamage*4]
 var warrior_turret_poseidon_sd=[2,4,8,10,20]
 var warrior_turret_poseidon_pierce=[0,1,2,3,4]
 var warrior_turret_poseidon_waterDamage=1
 #Zeus
+var warrior_turret_zeus_passive
 
 ##DASH
 ##Divine
@@ -73,6 +91,7 @@ var warrior_dash_divine_poseidon_passive=0.3
 var warrior_dash_divine_poseidon_chance=20
 var warrior_dash_divine_poseidon_destructionInstinct=1
 #Zeus
+var warrior_dash_divine_zeus_passive
 var  warrior_dash_divine_zeus_moveSpeedPercentBonus=0.3
 var warrior_dash_divine_zeus_UltraInstinct={"armor":10,"dodge":0.30,"maxDodge":80}
 
@@ -93,13 +112,17 @@ var warrior_dash_zeus_bonusSpeedDuration=2
 
 ###ULTIMATE
 ##Divine
-
 #Hades
+var warrior_ultimate_divine_hades_passive
 #Poseidon
+var warrior_ultimate_divine_poseidon_passive
 #Zeus
+var warrior_ultimate_divine_zeus_passive
 
 ##Normal
-
 #Hades
+var warrior_ultimate_hades_passive
 #Poseidon
+var warrior_ultimate_poseidon_passive
 #Zeus
+var warrior_ultimate_zeus_passive

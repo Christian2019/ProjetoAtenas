@@ -17,23 +17,26 @@ var passive2
 var colors=[Color8(117,0,196),Color8(71,126,255),Color8(249,218,101),Color8(0,228,0),Color8(255,255,255)]
 
 var cd
-var warrior_dash_poseidon_chance
-var warrior_dash_poseidon_destructionInstinct
+var warrior_attack2_zeus_passive
+var warrior_attack2_zeus_lightningBoltDamage
+var warrior_attack2_zeus_disorientation
 
 func start():
 	sellPrice=Global.ScrollController.getCurrentScrollPrice(self)
-	passive=AllSkillsValues.warrior_dash_poseidon_passive
-	#passive2=AllSkillsValues.warrior_dash_hadesPoseidon_passive2
 	
-	cd=AllSkillsValues.warrior_dash_cd
-	warrior_dash_poseidon_chance=AllSkillsValues.warrior_dash_poseidon_chance
-	warrior_dash_poseidon_destructionInstinct=AllSkillsValues.warrior_dash_poseidon_destructionInstinct
+	#passive2=AllSkillsValues.warrior_dash_hadesPoseidon_passive2
+	passive=AllSkillsValues.warrior_attack2_zeus_passive
+	cd=AllSkillsValues.warrior_attack2_cd
+	warrior_attack2_zeus_passive=AllSkillsValues.warrior_attack2_zeus_passive
+	warrior_attack2_zeus_lightningBoltDamage=AllSkillsValues.warrior_attack2_zeus_lightningBoltDamage
+	warrior_attack2_zeus_disorientation=AllSkillsValues.warrior_attack2_zeus_disorientation
+	
 
 func addPassiveFunction():
-	Global.player.percentDamage+=passive[quality]
+	Global.player.baseDamage+=passive[quality]
 	#Global.player.baseMaxHp+=passive2
 func removePassiveFunction():
-	Global.player.percentDamage-=passive[quality]
+	Global.player.baseDamage-=passive[quality]
 	#Global.player.baseMaxHp-=passive2
 
 func addActiveFunction():
@@ -73,11 +76,10 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/God/value").set("theme_override_colors/font_color", colors[2])
 	scroll.get_node("Big/Labels/SkillType/value").text="attack 2"
 	scroll.get_node("Big/Labels/Cooldown/var").text="cooldown:" 
-	scroll.get_node("Big/Labels/Active/value").text="enemies hit by attack 2 get strikes by one lighting bolt  "+str(warrior_dash_poseidon_chance[quality])+" sd"
-	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="enemies hit by heavy attack get disoriented* "+str(warrior_dash_poseidon_destructionInstinct*100)+"%."
-	scroll.get_node("Big/Labels/ExtraInfo/value").text="disoriantationt*: movement and attack speed slowed by % ammount for 10 seconds."
-	
+	scroll.get_node("Big/Labels/Active/value").text="enemies hit by attack 2 get strikes by one lighting bolt  "+str(warrior_attack2_zeus_lightningBoltDamage[quality])+" sd"
+	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="enemies hit by heavy attack get disoriantationt* "+str((1-warrior_attack2_zeus_disorientation)*100)+"%."
+	scroll.get_node("Big/Labels/ExtraInfo/value").text="disoriantationt*: movement and attack speed slowed by x% ammount for 10 seconds."
 
 	#NAO MEXER
-	scroll.get_node("Big/Labels/Cooldown/value").text=str(cd[quality])+"s"
-	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive[quality]*100)+"% damage"
+	scroll.get_node("Big/Labels/Cooldown/value").text=str(cd)+"s"
+	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive[quality])+" damage"
