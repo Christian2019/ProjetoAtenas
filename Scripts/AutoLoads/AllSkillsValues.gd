@@ -45,7 +45,10 @@ var warrior_attack1_zeus_passive
 #Hades
 var warrior_attack2_divine_hades_passive
 #Poseidon
-var warrior_attack2_divine_poseidon_passive
+var warrior_attack2_divine_poseidon_passive=percentDamage*5
+var warrior_attack2_divine_poseidon_maxHpPercentBonus=0.48
+var warrior_attack2_divine_poseidon_damage=200
+var warrior_attack2_divine_poseidon_explosionDamage=1
 #Zeus
 var warrior_attack2_divine_zeus_passive=16
 var warrior_attack2_divine_zeus_lightningBoltDamage=400
@@ -55,7 +58,10 @@ var warrior_attack2_divine_zeus_disorientation=0.6
 #Hades
 var warrior_attack2_hades_passive
 #Poseidon
-var warrior_attack2_poseidon_passive
+var warrior_attack2_poseidon_passive=[percentDamage*1,percentDamage*2,percentDamage*3,percentDamage*4]
+var warrior_attack2_poseidon_maxHpPercentBonus=[0.03,0.06,0.12,0.24]
+var warrior_attack2_poseidon_damage=[10,24,45,80]
+var warrior_attack2_poseidon_explosionDamage=0.5
 #Zeus
 var warrior_attack2_zeus_passive=[1,2,4,8]
 var warrior_attack2_zeus_lightningBoltDamage=[20,48,90,160]

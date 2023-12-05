@@ -23,15 +23,15 @@ func _process(delta):
 	
 		
 		if ( quality=="common"):
-			Global.player.maxHpPercentBonus+=0.03
+			Global.player.maxHpPercentBonus+=AllSkillsValues.warrior_attack2_poseidon_maxHpPercentBonus[0]
 		elif ( quality=="rare"):
-			Global.player.maxHpPercentBonus+=0.06
+			Global.player.maxHpPercentBonus+=AllSkillsValues.warrior_attack2_poseidon_maxHpPercentBonus[1]
 		elif ( quality=="epic"):
-			Global.player.maxHpPercentBonus+=0.12
+			Global.player.maxHpPercentBonus+=AllSkillsValues.warrior_attack2_poseidon_maxHpPercentBonus[2]
 		elif ( quality=="legendary"):
-			Global.player.maxHpPercentBonus+=0.24
+			Global.player.maxHpPercentBonus+=AllSkillsValues.warrior_attack2_poseidon_maxHpPercentBonus[3]
 		elif (quality=="divine"):
-			Global.player.maxHpPercentBonus+=0.48
+			Global.player.maxHpPercentBonus+=AllSkillsValues.warrior_attack2_divine_poseidon_maxHpPercentBonus
 			
 
 	
@@ -43,13 +43,13 @@ func _process(delta):
 		var quality=lastQuality
 		
 		if ( quality=="common"):
-			Global.player.maxHpPercentBonus-=0.03
+			Global.player.maxHpPercentBonus-=AllSkillsValues.warrior_attack2_poseidon_maxHpPercentBonus[0]
 		elif ( quality=="rare"):
-			Global.player.maxHpPercentBonus-=0.06
+			Global.player.maxHpPercentBonus-=AllSkillsValues.warrior_attack2_poseidon_maxHpPercentBonus[1]
 		elif ( quality=="epic"):
-			Global.player.maxHpPercentBonus-=0.12
+			Global.player.maxHpPercentBonus-=AllSkillsValues.warrior_attack2_poseidon_maxHpPercentBonus[2]
 		elif ( quality=="legendary"):
-			Global.player.maxHpPercentBonus-=0.24
+			Global.player.maxHpPercentBonus-=AllSkillsValues.warrior_attack2_poseidon_maxHpPercentBonus[3]
 		elif (quality=="divine"):
-			Global.player.maxHpPercentBonus-=0.48
+			Global.player.maxHpPercentBonus-=AllSkillsValues.warrior_attack2_divine_poseidon_maxHpPercentBonus
 		
