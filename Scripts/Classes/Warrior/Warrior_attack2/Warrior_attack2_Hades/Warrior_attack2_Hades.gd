@@ -49,15 +49,15 @@ func _ready():
 func qualityStatus():
 	#10/24/45/80/200 SD Gain extra 3%/6%/12%/24%/48% maxHP.
 	if ( quality=="common"):
-		damage+=10
+		damage+=AllSkillsValues.warrior_attack2_hades_damage[0]
 	elif ( quality=="rare"):
-		damage+=24
+		damage+=AllSkillsValues.warrior_attack2_hades_damage[1]
 	elif ( quality=="epic"):
-		damage+=45
+		damage+=AllSkillsValues.warrior_attack2_hades_damage[2]
 	elif ( quality=="legendary"):
-		damage+=80
+		damage+=AllSkillsValues.warrior_attack2_hades_damage[3]
 	elif ( quality=="divine"):
-		damage+=200
+		damage+=AllSkillsValues.warrior_attack2_divine_hades_damage
 	
 	damage=1
 func createAnimation():

@@ -22,15 +22,15 @@ func _process(delta):
 		lastQuality=quality
 
 		if ( quality=="common"):
-			Global.player.hpRegeneration+=2
+			Global.player.hpRegeneration+=AllSkillsValues.warrior_attack2_hades_hpRengen[0]
 		elif ( quality=="rare"):
-			Global.player.hpRegeneration+=4
+			Global.player.hpRegeneration+=AllSkillsValues.warrior_attack2_hades_hpRengen[1]
 		elif ( quality=="epic"):
-			Global.player.hpRegeneration+=6
+			Global.player.hpRegeneration+=AllSkillsValues.warrior_attack2_hades_hpRengen[2]
 		elif ( quality=="legendary"):
-			Global.player.hpRegeneration+=8
+			Global.player.hpRegeneration+=AllSkillsValues.warrior_attack2_hades_hpRengen[3]
 		elif (quality=="divine"):
-			Global.player.hpRegeneration+=10
+			Global.player.hpRegeneration+=AllSkillsValues.warrior_attack2_divine_hades_hpRengen
 
 
 	if ((Global.player.attack2.skill!=PreLoads.warrior_attack2_hades and
@@ -41,12 +41,12 @@ func _process(delta):
 		var quality=lastQuality
 
 		if ( quality=="common"):
-			Global.player.hpRegeneration-=2
+			Global.player.hpRegeneration-=AllSkillsValues.warrior_attack2_hades_hpRengen[0]
 		elif ( quality=="rare"):
-			Global.player.hpRegeneration-=4
+			Global.player.hpRegeneration-=AllSkillsValues.warrior_attack2_hades_hpRengen[1]
 		elif ( quality=="epic"):
-			Global.player.hpRegeneration-=6
+			Global.player.hpRegeneration-=AllSkillsValues.warrior_attack2_hades_hpRengen[2]
 		elif ( quality=="legendary"):
-			Global.player.hpRegeneration-=8
+			Global.player.hpRegeneration-=AllSkillsValues.warrior_attack2_hades_hpRengen[3]
 		elif (quality=="divine"):
-			Global.player.hpRegeneration-=10
+			Global.player.hpRegeneration-=AllSkillsValues.warrior_attack2_divine_hades_hpRengen

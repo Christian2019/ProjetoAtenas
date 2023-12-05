@@ -43,7 +43,9 @@ var warrior_attack1_zeus_passive
 ###ATTACK2
 ##Divine
 #Hades
-var warrior_attack2_divine_hades_passive
+var warrior_attack2_divine_hades_passive=hp*5
+var warrior_attack2_divine_hades_damage=200
+var warrior_attack2_divine_hades_hpRengen=hpRegeneration*50
 #Poseidon
 var warrior_attack2_divine_poseidon_passive=percentDamage*5
 var warrior_attack2_divine_poseidon_maxHpPercentBonus=0.48
@@ -56,7 +58,10 @@ var warrior_attack2_divine_zeus_disorientation=0.6
 
 ##Normal
 #Hades
-var warrior_attack2_hades_passive
+var warrior_attack2_hades_passive=[hp,hp*2,hp*3,hp*4]
+var warrior_attack2_hades_damage=[10,24,45,80]
+var warrior_attack2_hades_soulStealCursNaxHpGain=1.0
+var	warrior_attack2_hades_hpRengen=[hpRegeneration*2,hpRegeneration*5,hpRegeneration*10,hpRegeneration*25]
 #Poseidon
 var warrior_attack2_poseidon_passive=[percentDamage*1,percentDamage*2,percentDamage*3,percentDamage*4]
 var warrior_attack2_poseidon_maxHpPercentBonus=[0.03,0.06,0.12,0.24]

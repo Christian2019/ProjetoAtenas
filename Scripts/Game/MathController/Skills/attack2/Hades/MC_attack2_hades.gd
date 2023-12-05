@@ -29,7 +29,7 @@ func soulStealFunc():
 	if positions.size()>=20:
 	
 		Global.SoundController.playSound(Global.SoundController.soulSteal)
-		var maxHpGain=1.0
+		var maxHpGain=AllSkillsValues.warrior_attack2_hades_soulStealCursNaxHpGain
 		for i in range(0,positions.size(),1):
 			var s=PreLoads.warrior_attack2_hades_soul.instantiate()
 			s.maxHP=maxHpGain/positions.size()
