@@ -1,11 +1,11 @@
 res://default_env.tres
-res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorUltimates/Scroll_Warrior_Ultimate_Zeus.tscn
-res://Scripts/Game/Scrolls/Warrior/WarriorUltimate/Scroll_Warrior_Ultimate_Zeus.gd
-res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimateZeus.tscn
-res://Scripts/AutoLoads/AllSkillsValues.gd
-res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimateZeus.gd
+res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorUltimates/Divine/Scroll_Warrior_Ultimate_HadesPoseidon.tscn
+res://Scripts/Game/Scrolls/Warrior/WarriorUltimate/Scroll_Warrior_Ultimate_HadesPoseidon.gd
+res://Scenes/Game/Classes/Warrior/WarriorUltimates/WarriorUltimate_divine_HadesPoseidon.tscn
+res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimate_divine_HadesPoseidon.gd
 res://Scripts/AutoLoads/PreLoads.gd
 res://Scenes/Game/Constructions/Temple/Shop/ShopScreen.tscn
 res://Scripts/Zones/Temple/Shop/ShopScreen.gd
 res://Scenes/Game/player.tscn
 res://Scenes/Game/Math_controller/Math_controller.tscn
+res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorUltimates/Scroll_Warrior_Ultimate_Poseidon.tscn

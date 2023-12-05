@@ -1,10 +1,11 @@
 extends Node2D
 var quality
 var skillsFinish=0
-var cd=20
+var cd
 
 
 func _ready():
+	cd=int((AllSkillsValues.warrior_ultimate_hades_cd+AllSkillsValues.warrior_ultimate_poseidon_cd)/2)
 	createDivineInstance(PreLoads.warrior_ultimate_hades).global_position-=Vector2(0,200)
 	Global.timerCreator("createSecondInstance",0.2,[],self)
 
