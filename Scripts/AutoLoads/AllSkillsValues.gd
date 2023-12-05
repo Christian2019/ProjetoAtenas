@@ -148,6 +148,8 @@ var warrior_ultimate_divine_poseidon_damage=4500
 var warrior_ultimate_divine_poseidon_tentaclesQuantity=10
 #Zeus
 var warrior_ultimate_divine_zeus_passive=16
+var warrior_ultimate_divine_zeus_damage=900
+var warrior_ultimate_divine_zeus_cdReduction=2
 
 ##Normal
 #Hades
@@ -165,3 +167,7 @@ var warrior_ultimate_poseidon_tentaclesQuantity=5
 
 #Zeus
 var warrior_ultimate_zeus_passive=[1,2,4,8]
+var warrior_ultimate_zeus_cd=30
+var warrior_ultimate_zeus_damage=[200,300,400,600]
+var warrior_ultimate_zeus_cdReduction=1
+	

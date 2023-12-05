@@ -6,7 +6,7 @@ var quality="common"
 var damage
 var enableDamage=false
 #Duracao em segundos
-var cd = 30
+var cd
 var cdRed=0
 
 var nextHitDelay = 0.2
@@ -22,6 +22,7 @@ var monstersInArea = []
 var divineReference
 
 func _ready():
+	cd=AllSkillsValues.warrior_ultimate_zeus_cd
 	$Sprite2D.modulate.a=0
 	Global.timerCreator("destroy", max_duration,[],self)
 	Global.Game.get_node("Night").visible=true
@@ -33,15 +34,15 @@ func attackSpeedModifier():
 
 func qualityStatus():
 	if ( quality=="common"):
-		damage=200
+		damage=AllSkillsValues.warrior_ultimate_zeus_damage[0]
 	elif ( quality=="rare"):
-		damage=300
+		damage=AllSkillsValues.warrior_ultimate_zeus_damage[1]
 	elif ( quality=="epic"):
-		damage=400
+		damage=AllSkillsValues.warrior_ultimate_zeus_damage[2]
 	elif ( quality=="legendary"):
-		damage=600
+		damage=AllSkillsValues.warrior_ultimate_zeus_damage[3]
 	elif ( quality=="divine"):
-		damage=900
+		damage=AllSkillsValues.warrior_ultimate_divine_zeus_damage
 
 func destroy():
 	if (quality=="divine"):
@@ -74,9 +75,9 @@ func _process(delta):
 
 func extraBonus():
 	if quality=="legendary":
-		cdRed=float(Global.MathController.attack1_zeus.electrified.size())*1
+		cdRed=float(Global.MathController.attack1_zeus.electrified.size())*AllSkillsValues.warrior_ultimate_zeus_cdReduction
 	if quality=="divine":
-		cdRed=float(Global.MathController.attack1_zeus.electrified.size())*2	
+		cdRed=float(Global.MathController.attack1_zeus.electrified.size())*AllSkillsValues.warrior_ultimate_divine_zeus_cdReduction	
 
 
 func damageAction():

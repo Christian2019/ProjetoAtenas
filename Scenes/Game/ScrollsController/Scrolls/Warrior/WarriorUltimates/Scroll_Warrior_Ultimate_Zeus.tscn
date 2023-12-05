@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://b2w05j578ldns"]
+[gd_scene load_steps=2 format=3 uid="uid://b2w05j578ldns"]
+
+[ext_resource type="Script" path="res://Scripts/Game/Scrolls/Warrior/WarriorUltimate/Scroll_Warrior_Ultimate_Zeus.gd" id="1_7pa63"]
 
 [node name="Scroll_Warrior_Ultimate_Zeus" type="Node2D"]
+script = ExtResource("1_7pa63")

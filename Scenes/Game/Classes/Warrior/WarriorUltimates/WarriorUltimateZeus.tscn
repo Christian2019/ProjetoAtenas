@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimateZeus.gd" id="1_sy0il"]
 [ext_resource type="AudioStream" uid="uid://cwb8astmjglgm" path="res://Assets/Sounds/thunder.wav" id="2_7x0ai"]
 [ext_resource type="AudioStream" uid="uid://ch1danorl6kw4" path="res://Assets/Sounds/zeusvoice.mp3" id="3_puwtv"]
-[ext_resource type="Texture2D" uid="uid://dyq77bc1xhaea" path="res://Assets/Images/Player/thunder.png" id="4_nxeup"]
-[ext_resource type="Texture2D" uid="uid://gtkm5i1qkq6u" path="res://Assets/Images/Player/zeusUlt3.png" id="5_3b2ki"]
+[ext_resource type="Texture2D" uid="uid://dyq77bc1xhaea" path="res://Assets/Images/Player/Ultimates/Zeus/thunder.png" id="4_nxeup"]
+[ext_resource type="Texture2D" uid="uid://gtkm5i1qkq6u" path="res://Assets/Images/Player/Ultimates/Zeus/zeusUlt3.png" id="5_3b2ki"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gnbrf"]
 atlas = ExtResource("4_nxeup")
