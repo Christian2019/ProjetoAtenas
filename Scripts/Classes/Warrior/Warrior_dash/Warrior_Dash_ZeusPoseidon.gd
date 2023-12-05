@@ -28,31 +28,15 @@ func _ready():
 	qualityStatus()
 	Global.MathController.dash_zeus.addMoveSpeed(self)
 
-
 func qualityStatus():
-	if ( quality=="common"):
-		cd=0.6
-		moveSpeedPercentBonus=0.05
-	elif ( quality=="rare"):
-		cd=0.5
-		moveSpeedPercentBonus=0.1
-	elif ( quality=="epic"):
-		cd=0.4
-		moveSpeedPercentBonus=0.15
-	elif ( quality=="legendary"):
-		cd=0.3
-		moveSpeedPercentBonus=0.2
-	elif ( quality=="divine"):
-		cd=0.2
-		moveSpeedPercentBonus=0.3
+	cd=AllSkillsValues.warrior_dash_cd[4]
+	moveSpeedPercentBonus=AllSkillsValues.warrior_dash_divine_zeus_moveSpeedPercentBonus
 	
-
 func stopDashing():
 	Global.player.dashing=false
 	Global.timerCreator("enableAttackUse",cd,[3],Global.player)
 	Global.player.playAnimation ("Idle")
 	queue_free()
-
 
 func _process(delta):
 	move()
@@ -79,7 +63,6 @@ func move():
 	
 	if (interrupted):
 		stopDashing()
-
 
 func createShadow():
 	var dashShadow = PreLoads.dashShadow.instantiate()
