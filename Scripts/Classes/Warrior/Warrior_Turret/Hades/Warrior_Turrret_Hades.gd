@@ -40,17 +40,17 @@ func attackSpeedModifier():
 
 func qualityStatus():
 	if ( quality=="common"):
-		damage=10
+		damage=AllSkillsValues.warrior_turret_hades_damage[0]
 	elif ( quality=="rare"):
-		damage=15
+		damage=AllSkillsValues.warrior_turret_hades_damage[1]
 	elif ( quality=="epic"):
-		damage=20
+		damage=AllSkillsValues.warrior_turret_hades_damage[2]
 	elif ( quality=="legendary"):
-		damage=30
-		area=1.5
+		damage=AllSkillsValues.warrior_turret_hades_damage[3]
+		area=AllSkillsValues.warrior_turret_hades_area
 	elif ( quality=="divine"):
-		damage=40
-		area=2
+		damage=AllSkillsValues.warrior_turret_divine_hades_damage
+		area=AllSkillsValues.warrior_turret_divine_hades_area
 		
 func destroy():
 	createExplosion()

@@ -1,10 +1,11 @@
 res://default_env.tres
-res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack2/Divine/Scroll_Warrior_Attack2_ZeusPoseidon.tscn
-res://Scripts/Game/Scrolls/Warrior/WarriorAttack2/Scroll_Warrior_Attack2_ZeusPoseidon.gd
+res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorTurret/Scroll_Warrior_Turret_Hades.tscn
+res://Scenes/Game/Classes/Warrior/WarriorTurret/Warrior_Turrret_Hades/Warrior_Turrret_Hades.tscn
+res://Scripts/AutoLoads/AllSkillsValues.gd
+res://Scripts/Classes/Warrior/Warrior_Turret/Hades/Warrior_Turrret_Hades.gd
+res://Scripts/Game/Scrolls/Warrior/WarriorTurret/Scroll_Warrior_Turret_Hades.gd
 res://Scripts/AutoLoads/PreLoads.gd
 res://Scenes/Game/Constructions/Temple/Shop/ShopScreen.tscn
 res://Scripts/Zones/Temple/Shop/ShopScreen.gd
 res://Scenes/Game/player.tscn
 res://Scenes/Game/Math_controller/Math_controller.tscn
-res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack2/Divine/Scroll_Warrior_Attack2_ZeusHades.tscn
-res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack2/Divine/Scroll_Warrior_Attack2_HadesPoseidon.tscn

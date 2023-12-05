@@ -75,7 +75,9 @@ var warrior_attack2_zeus_disorientation=0.9
 ###TURRET
 ##Divine
 #Hades
-var warrior_turret_divine_hades_passive
+var warrior_turret_divine_hades_passive=hp*5
+var warrior_turret_divine_hades_damage=40
+var warrior_turret_divine_hades_area=2
 #Poseidon
 var warrior_turret_divine_poseidon_passive
 #Zeus
@@ -83,7 +85,10 @@ var warrior_turret_divine_zeus_passive
 
 ##Normal
 #Hades
-var warrior_turret_hades_passive
+var warrior_turret_hades_passive=[hp,hp*2,hp*3,hp*4]
+var warrior_turret_hades_damage=[10,15,20,30]
+var warrior_turret_hades_area=1.5
+
 #Poseidon
 var warrior_turret_poseidon_passive=[percentDamage*1,percentDamage*2,percentDamage*3,percentDamage*4]
 var warrior_turret_poseidon_sd=[2,4,8,10,20]
