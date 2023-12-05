@@ -26,6 +26,7 @@ var krakenAlly
 var divineReference
 
 func _ready():
+	cd=AllSkillsValues.warrior_ultimate_poseidon_cd
 	$Sprite2D.modulate.a=0
 	$Sprite2D2.visible=false
 	Global.Game.get_node("Night").visible=true
@@ -40,18 +41,18 @@ func attackSpeedModifier():
 
 func qualityStatus():
 	if ( quality=="common"):
-		damage=1000
+		damage=AllSkillsValues.warrior_ultimate_poseidon_damage[0]
 	elif ( quality=="rare"):
-		damage=1500
+		damage==AllSkillsValues.warrior_ultimate_poseidon_damage[1]
 	elif ( quality=="epic"):
-		damage=2000
+		damage==AllSkillsValues.warrior_ultimate_poseidon_damage[2]
 	elif ( quality=="legendary"):
-		damage=3000
-		tentaclesQuantity=5
+		damage==AllSkillsValues.warrior_ultimate_poseidon_damage[3]
+		tentaclesQuantity=AllSkillsValues.warrior_ultimate_poseidon_tentaclesQuantity
 		createTentacles()
 	elif ( quality=="divine"):
-		damage=4500
-		tentaclesQuantity=10
+		damage==AllSkillsValues.warrior_ultimate_divine_poseidon_damage
+		tentaclesQuantity=AllSkillsValues.warrior_ultimate_divine_poseidon_tentaclesQuantity
 		createTentacles()
 		
 func createTentacles():
