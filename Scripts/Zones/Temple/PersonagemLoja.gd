@@ -16,14 +16,14 @@ func _ready():
 	upgrades_defense = get_node("Level Defesa").get_children()
 	
 func _process(delta): 
-	if(current_level_attack<=4):
+	if(current_level_attack<4):
 		for i in range(0,upgrades_attack.size()):
 			if(current_level_attack == i):
 				upgrades_attack[i].get_node("Imagem").disabled=false
 			else:
 				upgrades_attack[i].get_node("Imagem").disabled=true  
 				
-	if(current_level_defense<=4):
+	if(current_level_defense<4):
 		for i in range(0,upgrades_defense.size()):
 			if(current_level_defense == i):
 				upgrades_defense[i].get_node("Imagem").disabled=false

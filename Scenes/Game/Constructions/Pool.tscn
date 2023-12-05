@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c0rurmnfon8nm"]
+[gd_scene load_steps=21 format=3 uid="uid://c0rurmnfon8nm"]
 
 [ext_resource type="Script" path="res://Scripts/Zones/Center/Pool.gd" id="1_puot0"]
 [ext_resource type="Texture2D" uid="uid://dnhtl2o3nedsg" path="res://Assets/Images/Constructions/AnimacaoPiscina/Piscina.png" id="2_yx60n"]
@@ -18,22 +18,6 @@ region = Rect2(170, 0, 170, 194)
 [sub_resource type="AtlasTexture" id="AtlasTexture_w3ydr"]
 atlas = ExtResource("2_yx60n")
 region = Rect2(340, 0, 170, 194)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jy1pw"]
-atlas = ExtResource("2_yx60n")
-region = Rect2(0, 0, 170, 194)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_corgq"]
-atlas = ExtResource("2_yx60n")
-region = Rect2(170, 0, 170, 194)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8qh6h"]
-atlas = ExtResource("2_yx60n")
-region = Rect2(340, 0, 170, 194)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_llxtd"]
-atlas = ExtResource("2_yx60n")
-region = Rect2(510, 0, 170, 194)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8dfsn"]
 atlas = ExtResource("2_yx60n")
@@ -104,23 +88,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jy1pw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_corgq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8qh6h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_llxtd")
-}],
-"loop": true,
-"name": &"Level1",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_8dfsn")
 }, {
 "duration": 1.0,
@@ -133,7 +100,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_pw3hm")
 }],
 "loop": true,
-"name": &"Level2",
+"name": &"Level1",
 "speed": 5.0
 }, {
 "frames": [{
@@ -150,7 +117,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_2ls5s")
 }],
 "loop": true,
-"name": &"Level3",
+"name": &"Level2",
 "speed": 5.0
 }, {
 "frames": [{
@@ -167,7 +134,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_mnvu7")
 }],
 "loop": true,
-"name": &"Level4",
+"name": &"Level3",
 "speed": 5.0
 }]
 
@@ -181,8 +148,7 @@ script = ExtResource("1_puot0")
 position = Vector2(-3, 2)
 scale = Vector2(0.668, 0.61456)
 sprite_frames = SubResource("SpriteFrames_le652")
-animation = &"Level0"
-frame_progress = 0.891314
+animation = &"Level3"
 
 [node name="Area2D" type="Area2D" parent="."]
 

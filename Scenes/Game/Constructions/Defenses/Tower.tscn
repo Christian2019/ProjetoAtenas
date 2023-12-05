@@ -1,13 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dtu5sjvquowls"]
+[gd_scene load_steps=8 format=3 uid="uid://dtu5sjvquowls"]
 
 [ext_resource type="Script" path="res://Scripts/Zones/Center/Tower.gd" id="1_2xse4"]
 [ext_resource type="Texture2D" uid="uid://bbetir8lvp4ns" path="res://Assets/Images/Constructions/Defenses/SpriteSheetConstrucoes.png" id="2_uvsiy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ghte"]
-atlas = ExtResource("2_uvsiy")
-region = Rect2(0, 0, 250, 250)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c0k6t"]
 atlas = ExtResource("2_uvsiy")
 region = Rect2(0, 0, 250, 250)
 
@@ -35,7 +31,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c0k6t")
+"texture": SubResource("AtlasTexture_ouwkd")
 }],
 "loop": true,
 "name": &"Level1",
@@ -43,7 +39,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ouwkd")
+"texture": SubResource("AtlasTexture_gxmkn")
 }],
 "loop": true,
 "name": &"Level2",
@@ -51,18 +47,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gxmkn")
-}],
-"loop": true,
-"name": &"Level3",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_2wj1v")
 }],
 "loop": true,
-"name": &"Level4",
+"name": &"Level3",
 "speed": 5.0
 }]
 

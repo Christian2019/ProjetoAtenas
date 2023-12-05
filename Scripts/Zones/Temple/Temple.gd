@@ -15,9 +15,9 @@ func _on_area_2d_area_entered(area):
 	if (area.get_parent().name=="Player"):
 		areaPlayerEnter=true
 		var player = area.get_parent()  
-		if(player.itemsCarriage.size() > 0):
-			print(player.itemsCarriage.size())
+		if(player.itemsCarriage.size() > 0): 
 			for i in range(0,player.itemsCarriage.size()):
+				print(player.itemsCarriage[0])
 				if(player.itemsCarriage[0].get_node("AnimatedSprite2D").animation == "wood"):
 					player.wood+=player.itemsCarriage[0].value
 				elif(player.itemsCarriage[0].get_node("AnimatedSprite2D").animation == "stone"):

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bi0hqmgalqjs3"]
 
-[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_Mining/WarriorMining.gd" id="1_7d3qi"]
+[ext_resource type="Script" path="res://Scripts/Game/PlayerMining.gd" id="1_7d3qi"]
 
 [node name="PlayerMining" type="Node2D"]
 script = ExtResource("1_7d3qi")

@@ -31,8 +31,7 @@ func shoot(enemy):
 	Global.timerCreator("setAllowToShoot",reloadTime,[true],self)
 	var arrow = PreLoads.tower_projectile.instantiate()
 	arrow.speed = speedArrowLevelUp
-	arrow.damage = damageLevelUp
-	arrow.get_node("Sprite2D").animation = "Level"+str(currentLevelStore)
+	arrow.damage = damageLevelUp 
 	arrow.position = position
 	arrow.position.x+=28
 	arrow.target=enemy

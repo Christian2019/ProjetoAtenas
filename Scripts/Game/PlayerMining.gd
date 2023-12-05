@@ -27,7 +27,8 @@ func mining(farming,playerRight,closerQuadrant):
 						closerQuadrant.life_till_break=0
 						
 						var collectable_instance = PreLoads.collectable.instantiate()
-						collectable_instance.value=closerQuadrant.value
+						collectable_instance.value = closerQuadrant.value
+						print(closerQuadrant.value)
 						
 						itenDrop(closerQuadrant)
 						
