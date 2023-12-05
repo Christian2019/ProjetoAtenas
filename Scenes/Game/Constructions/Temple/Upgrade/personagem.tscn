@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/PersonagemLoja.gd" id="1_p27ws"]
 [ext_resource type="Texture2D" uid="uid://cuolto2djdbn6" path="res://Assets/Images/HUD/Loja/BackgroundUpgrade.png" id="2_v0k4h"]
-[ext_resource type="PackedScene" uid="uid://b3wvfc3l1iq20" path="res://Scenes/Game/Constructions/Temple/UpgradeOptions/CharacterOptions.tscn" id="3_fydkf"]
+[ext_resource type="PackedScene" uid="uid://b3wvfc3l1iq20" path="res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.tscn" id="3_fydkf"]
 [ext_resource type="Texture2D" uid="uid://c1lvo03360ies" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/BronzeSword.png" id="4_p7k46"]
 [ext_resource type="Texture2D" uid="uid://0rqev1k3nc4" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/BronzeDesativado.png" id="5_uitx0"]
 [ext_resource type="Texture2D" uid="uid://cprs05ls2ccdg" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/SilverSword.png" id="6_1xhvy"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://dx7gjumu0kq6s" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/GoldDesativado.png" id="17_khevy"]
 
 [node name="Personagem" type="Node2D"]
-visible = false
 script = ExtResource("1_p27ws")
 
 [node name="BackgroundUpgrade" type="Sprite2D" parent="."]
@@ -26,7 +25,7 @@ scale = Vector2(0.530021, 0.504915)
 texture = ExtResource("2_v0k4h")
 
 [node name="Level Attack" type="Node2D" parent="."]
-position = Vector2(127, 24)
+position = Vector2(229, 0)
 
 [node name="Level1" parent="Level Attack" instance=ExtResource("3_fydkf")]
 offset_left = 64.0
@@ -90,7 +89,7 @@ texture_normal = ExtResource("8_oo60p")
 texture_hover = ExtResource("9_6u300")
 
 [node name="Level Defesa" type="Node2D" parent="."]
-position = Vector2(104, 6)
+position = Vector2(204, 6)
 
 [node name="Level1" parent="Level Defesa" instance=ExtResource("3_fydkf")]
 offset_left = 87.0

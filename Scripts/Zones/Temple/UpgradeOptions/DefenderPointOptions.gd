@@ -104,7 +104,13 @@ func upgrades():
 			$InfoDracma/Upgrades2/Ammount.text = "-"+str(reloadTime)
 			$InfoDracma/Upgrades2/Ammount.add_theme_color_override("font_color",Color("ff0000"))
 		
-		$InfoDracma/Upgrades3/WhatUpgrades.text = ""
+		$InfoDracma/Upgrades3/WhatUpgrades.text = "Bullet DMG: "
+		if(damageBullet > 0):  
+			$InfoDracma/Upgrades3/Ammount.text = "+"+str(damageBullet)
+			$InfoDracma/Upgrades3/Ammount.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrades3/Ammount.text = "-"+str(damageBullet)
+			$InfoDracma/Upgrades3/Ammount.add_theme_color_override("font_color",Color("ff0000"))
 		pass
 	elif(whatUpgrades=="Pool"):
 		#Upgrades

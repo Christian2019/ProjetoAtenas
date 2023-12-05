@@ -31,7 +31,7 @@ scale = Vector2(0.530021, 0.504915)
 texture = ExtResource("2_icrsw")
 
 [node name="Sentinela" type="Node2D" parent="."]
-position = Vector2(174, -11)
+position = Vector2(229, -20)
 
 [node name="Level1" parent="Sentinela" instance=ExtResource("3_moltb")]
 offset_left = 64.0
@@ -92,7 +92,7 @@ texture_normal = ExtResource("8_2dycd")
 texture_hover = ExtResource("9_j4phm")
 
 [node name="Centro" type="Node2D" parent="."]
-position = Vector2(100, -102)
+position = Vector2(202, -102)
 
 [node name="Level1" parent="Centro" instance=ExtResource("3_moltb")]
 offset_left = 92.0
@@ -156,7 +156,7 @@ texture_normal = ExtResource("16_kdgtr")
 texture_hover = ExtResource("17_mif5m")
 
 [node name="Piscina" type="Node2D" parent="."]
-position = Vector2(143, 61)
+position = Vector2(202, 61)
 
 [node name="Level1" parent="Piscina" instance=ExtResource("3_moltb")]
 offset_left = 92.0

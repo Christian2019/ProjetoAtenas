@@ -133,9 +133,9 @@ theme_override_fonts/font = ExtResource("2_6ouqc")
 theme_override_font_sizes/font_size = 12
 
 [node name="Ammount" type="Label" parent="InfoDracma/Upgrades"]
-offset_left = 63.5
+offset_left = 68.0
 offset_top = 56.5
-offset_right = 97.5
+offset_right = 102.0
 offset_bottom = 72.5
 theme_override_fonts/font = ExtResource("2_6ouqc")
 theme_override_font_sizes/font_size = 12
@@ -152,9 +152,9 @@ theme_override_fonts/font = ExtResource("2_6ouqc")
 theme_override_font_sizes/font_size = 12
 
 [node name="Ammount" type="Label" parent="InfoDracma/Upgrades2"]
-offset_left = 63.5
+offset_left = 62.5
 offset_top = 56.5
-offset_right = 97.5
+offset_right = 96.5
 offset_bottom = 72.5
 theme_override_fonts/font = ExtResource("2_6ouqc")
 theme_override_font_sizes/font_size = 12
