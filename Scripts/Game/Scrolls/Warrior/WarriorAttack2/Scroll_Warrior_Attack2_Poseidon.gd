@@ -76,7 +76,7 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/SkillType/value").text="attack 2"
 	scroll.get_node("Big/Labels/Cooldown/var").text="cooldown:" 
 	scroll.get_node("Big/Labels/Active/value").text="gain extra "+str(warrior_attack2_poseidon_damage[quality])+" sd gain extra "+ str(warrior_attack2_poseidon_maxHpPercentBonus[quality]*100) +"% max hp"
-	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="enemies hit by attack 2 explode, causing "+str(warrior_attack2_poseidon_explosionDamage*100)+"% of your attack 2 damage ir an area."
+	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="enemies hit by attack 2 explode, causing "+str(warrior_attack2_poseidon_explosionDamage*100)+"% of the damage in an area."
 	scroll.get_node("Big/Labels/ExtraInfo/var").visible=false
 	scroll.get_node("Big/Labels/ExtraInfo/value").text=""
 	

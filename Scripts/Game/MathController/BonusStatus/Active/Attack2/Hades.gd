@@ -4,7 +4,7 @@ var regenBonus=false
 var lastQuality
 
 func _process(delta):
-
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	if ((Global.player.attack2.skill==PreLoads.warrior_attack2_hades or
 	Global.player.attack2.skill==PreLoads.warrior_attack2_divine_HadesPoseidon or
 	Global.player.attack2.skill==PreLoads.warrior_attack2_divine_ZeusHades) and !regenBonus):

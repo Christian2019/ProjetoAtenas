@@ -14,7 +14,7 @@ var bonusHPRecovering
 
 
 func _process(delta):
-	
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	recalculate()
 
 	if !bonus and verifyActivation():

@@ -11,6 +11,7 @@ func _ready():
 	
 
 func _process(delta):
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	if (baseDamageCheck!=Global.player.baseDamage):
 		
 		baseDamageCheck=Global.player.baseDamage

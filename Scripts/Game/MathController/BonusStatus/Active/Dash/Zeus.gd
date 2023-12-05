@@ -6,7 +6,7 @@ var lastQuality
 var quality
 
 func _process(delta):
-
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	if !bonus and verifyActivation():
 	
 		bonus=true

@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://dcjygyc88swga"]
+[gd_scene load_steps=2 format=3 uid="uid://dcjygyc88swga"]
+
+[ext_resource type="Script" path="res://Scripts/Game/Scrolls/Warrior/WarriorAttack2/Scroll_Warrior_Attack2_HadesPoseidon.gd" id="1_elg2n"]
 
 [node name="Scroll_Warrior_Attack2_HadesPoseidon" type="Node2D"]
+script = ExtResource("1_elg2n")

@@ -5,7 +5,7 @@ var lastQuality
 
 
 func _process(delta):
-
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	if ((Global.player.attack2.skill==PreLoads.warrior_attack2_poseidon or
 	Global.player.attack2.skill==PreLoads.warrior_attack2_divine_ZeusPoseidon or
 	Global.player.attack2.skill==PreLoads.warrior_attack2_divine_HadesPoseidon) and !maxHpPercentBonus):

@@ -337,7 +337,7 @@ text = "After 20 hits with attack1 your next attack2 cause heavyDamage* (20x/50x
 autowrap_mode = 2
 
 [node name="ExtraInfo" type="Node2D" parent="Big/Labels"]
-position = Vector2(-336, 183)
+position = Vector2(-334, 209)
 
 [node name="var" type="Label" parent="Big/Labels/ExtraInfo"]
 offset_left = -2.0
