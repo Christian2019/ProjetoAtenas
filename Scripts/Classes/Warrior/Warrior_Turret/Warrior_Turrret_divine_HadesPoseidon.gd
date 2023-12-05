@@ -44,10 +44,10 @@ func attackSpeedModifier():
 	cd=cd/Global.player.attack_Speed
 
 func qualityStatus():
-		damage=40
-		area=2
-		pierce=4
-		waterDamage=2
+		damage=AllSkillsValues.warrior_turret_divine_poseidon_sd+AllSkillsValues.warrior_turret_divine_hades_damage
+		area=AllSkillsValues.warrior_turret_divine_hades_area
+		pierce=AllSkillsValues.warrior_turret_divine_poseidon_pierce
+		waterDamage=AllSkillsValues.warrior_turret_divine_poseidon_waterDamage
 		
 func destroy():
 	createExplosion()

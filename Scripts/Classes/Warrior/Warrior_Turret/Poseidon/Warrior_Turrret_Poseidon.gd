@@ -46,9 +46,9 @@ func qualityStatus():
 		pierce=AllSkillsValues.warrior_turret_poseidon_pierce[3]
 		waterDamage=AllSkillsValues.warrior_turret_poseidon_waterDamage
 	elif ( quality=="divine"):
-		damage=AllSkillsValues.warrior_turret_poseidon_sd[4]
-		pierce=AllSkillsValues.warrior_turret_poseidon_pierce[4]
-		waterDamage=2
+		damage=AllSkillsValues.warrior_turret_divine_poseidon_sd
+		pierce=AllSkillsValues.warrior_turret_divine_poseidon_pierce
+		waterDamage=AllSkillsValues.warrior_turret_divine_poseidon_waterDamage
 		
 func destroy():
 	call_deferred("queue_free")

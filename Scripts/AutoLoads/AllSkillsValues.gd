@@ -80,6 +80,9 @@ var warrior_turret_divine_hades_damage=40
 var warrior_turret_divine_hades_area=2
 #Poseidon
 var warrior_turret_divine_poseidon_passive=percentDamage*5
+var warrior_turret_divine_poseidon_sd=20
+var warrior_turret_divine_poseidon_pierce=4
+var warrior_turret_divine_poseidon_waterDamage=2
 #Zeus
 var warrior_turret_divine_zeus_passive=16
 var warrior_turret_divine_zeus_damage=90
@@ -93,8 +96,8 @@ var warrior_turret_hades_area=1.5
 
 #Poseidon
 var warrior_turret_poseidon_passive=[percentDamage*1,percentDamage*2,percentDamage*3,percentDamage*4]
-var warrior_turret_poseidon_sd=[2,4,8,10,20]
-var warrior_turret_poseidon_pierce=[0,1,2,3,4]
+var warrior_turret_poseidon_sd=[2,4,8,10]
+var warrior_turret_poseidon_pierce=[0,1,2,3]
 var warrior_turret_poseidon_waterDamage=1
 #Zeus
 var warrior_turret_zeus_passive=[1,2,4,8]
