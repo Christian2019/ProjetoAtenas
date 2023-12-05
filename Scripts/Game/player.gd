@@ -53,9 +53,9 @@ var permissions = [
 	]
 
 #Resources
-var wood =0
-var stone =0
-var gold =0
+var wood = 1000000
+var stone = 1000000
+var gold = 1000000
 var dracma=1000000
 var dracmaBag=0
 

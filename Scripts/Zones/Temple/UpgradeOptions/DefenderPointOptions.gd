@@ -103,6 +103,8 @@ func upgrades():
 		else:
 			$InfoDracma/Upgrades2/Ammount.text = "-"+str(reloadTime)
 			$InfoDracma/Upgrades2/Ammount.add_theme_color_override("font_color",Color("ff0000"))
+		
+		$InfoDracma/Upgrades3/WhatUpgrades.text = ""
 		pass
 	elif(whatUpgrades=="Pool"):
 		#Upgrades
@@ -216,6 +218,7 @@ func _on_imagem_pressed():
 			get_parent().get_parent().current_level_piscina+=1 
 			Global.Pool.heal = poolHeal
 			Global.Pool.nextHealDealy = poolHealDelay
+			Global.Pool.get_node("Animacao").play("Level"+str(get_parent().get_parent().current_level_piscina))
 			decreaseOre()
 			get_node("Aquired").visible=true
 		else: 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ucbeycoc7ycc"
-path="res://.godot/imported/wave14.png-9947456f9db5a2db10a7e8feaeb4b7e0.ctex"
+uid="uid://dnhtl2o3nedsg"
+path="res://.godot/imported/Piscina.png-c76903c076da7ff989da46f6b316aa82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/HUD/waves/wave14.png"
-dest_files=["res://.godot/imported/wave14.png-9947456f9db5a2db10a7e8feaeb4b7e0.ctex"]
+source_file="res://Assets/Images/Constructions/AnimacaoPiscina/Piscina.png"
+dest_files=["res://.godot/imported/Piscina.png-c76903c076da7ff989da46f6b316aa82.ctex"]
 
 [params]
 
