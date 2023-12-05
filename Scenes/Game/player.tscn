@@ -1,4 +1,4 @@
-[gd_scene load_steps=300 format=3 uid="uid://cq8fbkkwauxoo"]
+[gd_scene load_steps=301 format=3 uid="uid://cq8fbkkwauxoo"]
 
 [ext_resource type="Script" path="res://Scripts/Game/player.gd" id="1_s0uo2"]
 [ext_resource type="Texture2D" uid="uid://cgi55afgdxyx8" path="res://Assets/Images/Player/Animations/normal_armor_normal_sword/attack1run.png" id="2_x7sba"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cl8v2a7wrxluw" path="res://Assets/Images/Player/Animations/normal_armor_normal_sword/dash.png" id="5_ijbm0"]
 [ext_resource type="Texture2D" uid="uid://cpteephh768xe" path="res://Assets/Images/Player/Animations/normal_armor_normal_sword/idle.png" id="6_r88pk"]
 [ext_resource type="Texture2D" uid="uid://dijeckw7xx5bv" path="res://Assets/Images/Player/Animations/normal_armor_normal_sword/run.png" id="7_cofby"]
+[ext_resource type="PackedScene" uid="uid://bcr76q5px10xh" path="res://Scenes/Game/PlayerAnimation/normal_armor_normal_sword.tscn" id="8_mjfx2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmyrq"]
 atlas = ExtResource("2_x7sba")
@@ -2288,7 +2289,24 @@ script = ExtResource("1_s0uo2")
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ddi15")
-animation = &"Run_Up_Right"
+animation = &"Idle_Down"
+
+[node name="PlayerAnimation" type="Node2D" parent="."]
+
+[node name="Animation_0_0" parent="PlayerAnimation" instance=ExtResource("8_mjfx2")]
+visible = false
+animation = &"Idle_Down"
+frame_progress = 0.0
+
+[node name="weapon0" type="Node2D" parent="PlayerAnimation"]
+
+[node name="Node2D" type="Node2D" parent="PlayerAnimation/weapon0"]
+
+[node name="weapon1" type="Node2D" parent="PlayerAnimation"]
+
+[node name="weapon2" type="Node2D" parent="PlayerAnimation"]
+
+[node name="weapon3" type="Node2D" parent="PlayerAnimation"]
 
 [node name="CutAnimation" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 5.68434e-14)

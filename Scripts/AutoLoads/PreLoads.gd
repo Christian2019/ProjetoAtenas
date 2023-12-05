@@ -175,6 +175,9 @@ var targetDummy=preload("res://Scenes/Game/Enemies/targetDummy.tscn")
 ##Classes
 ##Warrior
 
+#PlayerAnimations
+var normal_armor_normal_sword=preload("res://Scenes/Game/PlayerAnimation/normal_armor_normal_sword.tscn")
+
 #Attack1
 var warrior_attack1_noGod=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_noGod.tscn")
 var warrior_attack1_zeus=preload("res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Zeus/Warrior_attack1_Zeus.tscn")

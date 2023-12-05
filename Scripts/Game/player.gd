@@ -1,5 +1,10 @@
 extends Node2D
 
+var animation
+
+var lvlarmor = 0
+var lvlsword = 0
+
 var dead = false
 
 ##Stats
@@ -80,6 +85,7 @@ var animAttacking=false
 
 func _ready():
 	Global.player = self
+	
 	hpRegenerationFunction()
 	playAnimation ("Idle")
 	

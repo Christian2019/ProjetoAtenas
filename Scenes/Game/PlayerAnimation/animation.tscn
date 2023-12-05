@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcr76q5px10xh"]
+
+[ext_resource type="SpriteFrames" uid="uid://xhiwufg7gbj8" path="res://Assets/Animations/diamond_armor_diamond_sword.tres" id="1_htuqe"]
+
+[node name="Animation" type="AnimatedSprite2D"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("1_htuqe")
+animation = &"Run_Up_Right"

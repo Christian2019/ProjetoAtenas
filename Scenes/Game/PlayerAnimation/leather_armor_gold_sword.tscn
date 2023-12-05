@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp1s48nk3op6p"]
+
+[ext_resource type="SpriteFrames" uid="uid://dwvj15edi60kg" path="res://Assets/Animations/leather_armor_gold_sword.tres" id="1_ly4u5"]
+
+[node name="Animation" type="AnimatedSprite2D"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("1_ly4u5")
+animation = &"Attack1Run_Down"
