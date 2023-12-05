@@ -267,6 +267,7 @@ var scroll_warrior_dash_hades=preload("res://Scenes/Game/ScrollsController/Scrol
 var scroll_warrior_dash_poseidon=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_Poseidon.tscn")
 var scroll_warrior_dash_zeus=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorDash/Scroll_Warrior_Dash_Zeus.tscn")
 #Ultimate
+var scroll_warrior_ultimate_zeusHades=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorUltimates/Divine/Scroll_Warrior_Ultimate_ZeusHades.tscn")
 var scroll_warrior_ultimate_hadesPoseidon=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorUltimates/Divine/Scroll_Warrior_Ultimate_HadesPoseidon.tscn")
 var scroll_warrior_ultimate_zeus=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorUltimates/Scroll_Warrior_Ultimate_Zeus.tscn")
 var scroll_warrior_ultimate_poseidon=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorUltimates/Scroll_Warrior_Ultimate_Poseidon.tscn")
