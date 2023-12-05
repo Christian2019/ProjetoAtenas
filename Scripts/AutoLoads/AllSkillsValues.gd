@@ -27,6 +27,8 @@ var warrior_dash_cd=[0.6,0.5,0.4,0.3,0.2]
 ##Divine
 #Hades
 var warrior_attack1_divine_hades_passive=hp*5
+var warrior_attack1_divine_hades_attackSpeedBonusPercent=0.06
+var warrior_attack1_divine_hades_frenzyPercent=0.02
 #Poseidon
 var warrior_attack1_divine_poseidon_passive=percentDamage*5
 #Zeus
@@ -35,6 +37,9 @@ var warrior_attack1_divine_zeus_passive=16
 ##Normal
 #Hades
 var warrior_attack1_hades_passive=[hp,hp*2,hp*3,hp*4]
+var warrior_attack1_hades_attackSpeedBonusPercent=[0.01,0.02,0.03,0.04]
+var warrior_attack1_hades_frenzyPercent=0.01
+
 #Poseidon
 var warrior_attack1_poseidon_passive=[percentDamage*1,percentDamage*2,percentDamage*3,percentDamage*4]
 #Zeus
