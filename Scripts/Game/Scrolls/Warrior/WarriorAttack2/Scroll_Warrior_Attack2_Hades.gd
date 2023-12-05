@@ -17,7 +17,6 @@ var passive2
 var colors=[Color8(117,0,196),Color8(71,126,255),Color8(249,218,101),Color8(0,228,0),Color8(255,255,255)]
 
 var cd
-var warrior_attack2_hades_passive
 var warrior_attack2_hades_damage
 var warrior_attack2_hades_soulStealCursNaxHpGain
 var	warrior_attack2_hades_hpRengen

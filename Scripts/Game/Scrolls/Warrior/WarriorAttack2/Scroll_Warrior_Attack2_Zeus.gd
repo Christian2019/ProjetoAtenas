@@ -17,7 +17,6 @@ var passive2
 var colors=[Color8(117,0,196),Color8(71,126,255),Color8(249,218,101),Color8(0,228,0),Color8(255,255,255)]
 
 var cd
-var warrior_attack2_zeus_passive
 var warrior_attack2_zeus_lightningBoltDamage
 var warrior_attack2_zeus_disorientation
 
@@ -27,7 +26,6 @@ func start():
 	#passive2=AllSkillsValues.warrior_dash_hadesPoseidon_passive2
 	passive=AllSkillsValues.warrior_attack2_zeus_passive
 	cd=AllSkillsValues.warrior_attack2_cd
-	warrior_attack2_zeus_passive=AllSkillsValues.warrior_attack2_zeus_passive
 	warrior_attack2_zeus_lightningBoltDamage=AllSkillsValues.warrior_attack2_zeus_lightningBoltDamage
 	warrior_attack2_zeus_disorientation=AllSkillsValues.warrior_attack2_zeus_disorientation
 	

@@ -85,7 +85,7 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/God/value").set("theme_override_colors/font_color", colors[0])
 	scroll.get_node("Big/Labels/SkillType/value").text="attack 2"
 	scroll.get_node("Big/Labels/Cooldown/var").text="cooldown: " 
-	scroll.get_node("Big/Labels/Active/value").text="create 2 attack 2 instances. "+"first gain extra "+str(warrior_attack2_divine_hades_damage)+" sd gain extra "+ str(warrior_attack2_divine_poseidon_maxHpPercentBonus*100) +"% max hp"+" second gain extra "+str(warrior_attack2_divine_poseidon_damage)+" sd gain extra "+ str(warrior_attack2_divine_poseidon_maxHpPercentBonus*100) +"% max hp"
+	scroll.get_node("Big/Labels/Active/value").text="create 2 attack 2 instances. "+"first gain extra "+str(warrior_attack2_divine_hades_damage)+"sd gain extra "+ str(warrior_attack2_divine_hades_hpRengen) +"hp regen."+" second gain extra "+str(warrior_attack2_divine_poseidon_damage)+" sd gain extra "+ str(warrior_attack2_divine_poseidon_maxHpPercentBonus*100) +"% max hp"
 	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="enemies hit by heavy attack get permanent cursed with soul steal curse* " + "enemies hit by poseidon attack 2 instance explode, causing "+str(warrior_attack2_divine_poseidon_explosionDamage*100)+"% of the damage in an area."
 	scroll.get_node("Big/Labels/ExtraInfo/value").text="soul steal curse*: every 20 enemies that die while cursed gives you + "+str(warrior_attack2_hades_soulStealCursNaxHpGain) +" max hp."
 
