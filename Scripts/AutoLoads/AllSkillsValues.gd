@@ -26,19 +26,19 @@ var warrior_dash_cd=[0.6,0.5,0.4,0.3,0.2]
 ###ATTACK1
 ##Divine
 #Hades
-var warrior_attack1_divine_hades_passive
+var warrior_attack1_divine_hades_passive=hp*5
 #Poseidon
-var warrior_attack1_divine_poseidon_passive
+var warrior_attack1_divine_poseidon_passive=percentDamage*5
 #Zeus
-var warrior_attack1_divine_zeus_passive
+var warrior_attack1_divine_zeus_passive=16
 
 ##Normal
 #Hades
-var warrior_attack1_hades_passive
+var warrior_attack1_hades_passive=[hp,hp*2,hp*3,hp*4]
 #Poseidon
-var warrior_attack1_poseidon_passive
+var warrior_attack1_poseidon_passive=[percentDamage*1,percentDamage*2,percentDamage*3,percentDamage*4]
 #Zeus
-var warrior_attack1_zeus_passive
+var warrior_attack1_zeus_passive=[1,2,4,8]
 
 ###ATTACK2
 ##Divine
@@ -79,9 +79,11 @@ var warrior_turret_divine_hades_passive=hp*5
 var warrior_turret_divine_hades_damage=40
 var warrior_turret_divine_hades_area=2
 #Poseidon
-var warrior_turret_divine_poseidon_passive
+var warrior_turret_divine_poseidon_passive=percentDamage*5
 #Zeus
-var warrior_turret_divine_zeus_passive
+var warrior_turret_divine_zeus_passive=16
+var warrior_turret_divine_zeus_damage=90
+var warrior_turret_divine_zeus_extraBounces=8
 
 ##Normal
 #Hades
@@ -95,7 +97,10 @@ var warrior_turret_poseidon_sd=[2,4,8,10,20]
 var warrior_turret_poseidon_pierce=[0,1,2,3,4]
 var warrior_turret_poseidon_waterDamage=1
 #Zeus
-var warrior_turret_zeus_passive
+var warrior_turret_zeus_passive=[1,2,4,8]
+var warrior_turret_zeus_damage=[20,30,45,60]
+var warrior_turret_zeus_extraBounces=4
+
 
 ##DASH
 ##Divine
@@ -103,7 +108,7 @@ var warrior_turret_zeus_passive
 var warrior_dash_divine_hades_passive=hp*5
 var	warrior_dash_divine_hades_hpRengen=hpRegeneration*50
 #Poseidon
-var warrior_dash_divine_poseidon_passive=0.3
+var warrior_dash_divine_poseidon_passive=percentDamage*5
 var warrior_dash_divine_poseidon_chance=20
 var warrior_dash_divine_poseidon_destructionInstinct=1
 #Zeus
@@ -117,7 +122,7 @@ var warrior_dash_divine_zeus_bonusSpeedDuration=2
 var warrior_dash_hades_passive=[hp,hp*2,hp*3,hp*4]
 var	warrior_dash_hades_hpRengen=[hpRegeneration*2,hpRegeneration*5,hpRegeneration*10,hpRegeneration*25]
 #Poseidon
-var warrior_dash_poseidon_passive=[0.05,0.1,0.15,0.20]
+var warrior_dash_poseidon_passive=[percentDamage*1,percentDamage*2,percentDamage*3,percentDamage*4]
 var warrior_dash_poseidon_chance=[1,2,4,10]
 var warrior_dash_poseidon_destructionInstinct=0.5
 #Zeus
@@ -130,16 +135,16 @@ var warrior_dash_zeus_bonusSpeedDuration=2
 ###ULTIMATE
 ##Divine
 #Hades
-var warrior_ultimate_divine_hades_passive
+var warrior_ultimate_divine_hades_passive=hp*5
 #Poseidon
-var warrior_ultimate_divine_poseidon_passive
+var warrior_ultimate_divine_poseidon_passive=percentDamage*5
 #Zeus
-var warrior_ultimate_divine_zeus_passive
+var warrior_ultimate_divine_zeus_passive=16
 
 ##Normal
 #Hades
-var warrior_ultimate_hades_passive
+var warrior_ultimate_hades_passive=[hp,hp*2,hp*3,hp*4]
 #Poseidon
-var warrior_ultimate_poseidon_passive
+var warrior_ultimate_poseidon_passive=[percentDamage*1,percentDamage*2,percentDamage*3,percentDamage*4]
 #Zeus
-var warrior_ultimate_zeus_passive
+var warrior_ultimate_zeus_passive=[1,2,4,8]

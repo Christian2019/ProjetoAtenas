@@ -32,17 +32,17 @@ func attackSpeedModifier():
 
 func qualityStatus():
 	if ( quality=="common"):
-		damage=20
+		damage=AllSkillsValues.warrior_turret_zeus_damage[0]
 	elif ( quality=="rare"):
-		damage=30
+		damage=AllSkillsValues.warrior_turret_zeus_damage[1]
 	elif ( quality=="epic"):
-		damage=45
+		damage=AllSkillsValues.warrior_turret_zeus_damage[2]
 	elif ( quality=="legendary"):
-		damage=60
-		extraBounces=4
+		damage=AllSkillsValues.warrior_turret_zeus_damage[3]
+		extraBounces=AllSkillsValues.warrior_turret_zeus_extraBounces
 	elif ( quality=="divine"):
-		damage=90
-		extraBounces=8
+		damage=AllSkillsValues.warrior_turret_divine_zeus_damage
+		extraBounces=AllSkillsValues.warrior_turret_divine_zeus_extraBounces
 		
 func destroy():
 	call_deferred("queue_free")
