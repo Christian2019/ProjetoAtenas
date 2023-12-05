@@ -16,6 +16,11 @@ var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
 var speed = 4.0
+var currentAnimation="Flying"
+var verticalDir="down"
+var last_vDir
+var horizontalDir="right"
+var last_hDir
 
 var playerInside=false
 var centerPointInside=false
@@ -35,7 +40,9 @@ var moveBackWardsY=false
 var attackSpeedModifierVar=[nextHitDelay,cd]
 
 func _ready():
-	$AnimatedSprite2D.play("Flying")
+	playAnimation("Flying")
+	last_vDir=verticalDir
+	last_hDir=horizontalDir
 	maxHpBarWidth=$HPBar/Red.size.x
 	Global.timerCreator("disableCd",attackSpeedModifierVar[1],[],self)
 	getCloserTarget()
@@ -53,7 +60,19 @@ func _process(_delta):
 	move()
 	attack()
 	hpBarController()
+
+func playAnimation (animName):
+	$AnimatedSprite2D.play(animName+"_"+verticalDir+"_"+horizontalDir)
 	
+
+func changeAnimDir():
+	var currentFrame=$AnimatedSprite2D.frame
+	
+	
+	
+	playAnimation(currentAnimation)
+	$AnimatedSprite2D.frame=currentFrame+1
+
 func disableCd():
 	onCd=false
 
@@ -95,7 +114,8 @@ func getCloserTarget():
 func attack():
 	#Flecha
 	if (!onCd):
-		$AnimatedSprite2D.play("Attacking")
+		currentAnimation="Attacking"
+		playAnimation(currentAnimation)
 				
 		onCd=true
 		Global.timerCreator("disableCd",attackSpeedModifierVar[1],[],self)
@@ -135,10 +155,25 @@ func die():
 	call_deferred("queue_free")
 
 func move():
-	var targetPointX= target.position.x
-	var targetPointY= target.position.y
-	var distanceXtoTarget = position.x-targetPointX
-	var distanceYtoTarget = position.y-targetPointY
+	var targetPointX= target.global_position.x
+	var targetPointY= target.global_position.y
+	var distanceXtoTarget = global_position.x-targetPointX
+	var distanceYtoTarget = global_position.y-targetPointY
+	
+	if (distanceXtoTarget>0):
+		horizontalDir="left"
+	else:
+		horizontalDir="right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir="up"
+	else:
+		verticalDir="down"
+	
+	if last_hDir != horizontalDir or last_vDir != verticalDir:
+		last_hDir = horizontalDir
+		last_vDir = verticalDir
+		changeAnimDir()
 	
 	var absoluteTotalValue = abs(distanceYtoTarget)+abs(distanceXtoTarget)
 	
@@ -165,11 +200,8 @@ func move():
 		
 	tryToMove(-speedXModifier,-speedYModifier)
 	
-	if (distanceXtoTarget>0):
-		$AnimatedSprite2D.flip_h=true
-	else:
-		$AnimatedSprite2D.flip_h=false
-		
+	
+	
 func tryToMove(speedX,speedY):
 	var topSpeed = 150
 	if (abs(speedX)>topSpeed):
@@ -221,6 +253,7 @@ func _on_area_2d_area_exited(area):
 
 
 func _on_animated_sprite_2d_animation_looped():
-	if $AnimatedSprite2D.animation=="Attacking":
-		$AnimatedSprite2D.play("Flying")
+	if currentAnimation=="Attacking":
+		currentAnimation="Flying"
+		playAnimation("Flying")
 		shoot()

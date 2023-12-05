@@ -410,7 +410,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attacking_down_left",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -433,7 +433,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attacking_down_right",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -456,7 +456,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attacking_up_left",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -479,7 +479,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attacking_up_right",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -502,7 +502,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Charging_down_left",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -525,7 +525,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Charging_down_right",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -548,7 +548,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Charging_up_left",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -571,7 +571,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Charging_up_right",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -594,7 +594,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Dashing_down_left",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -617,7 +617,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Dashing_down_right",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -640,7 +640,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Dashing_up_left",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -663,7 +663,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Dashing_up_right",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -686,7 +686,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walking_down_left",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -709,7 +709,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walking_down_right",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -732,7 +732,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walking_up_left",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -755,7 +755,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walking_up_right",
-"speed": 9.0
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
@@ -770,8 +770,8 @@ script = ExtResource("1_2c847")
 position = Vector2(0, -10)
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_ikprs")
-animation = &"Walking_up_right"
-frame_progress = 0.128307
+animation = &"Attacking_down_left"
+frame_progress = 0.59422
 
 [node name="Area2D" type="Area2D" parent="."]
 

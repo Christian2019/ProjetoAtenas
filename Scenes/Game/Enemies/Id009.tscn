@@ -1,82 +1,7 @@
-[gd_scene load_steps=112 format=3 uid="uid://dpyafp5eitp2"]
+[gd_scene load_steps=102 format=3 uid="uid://dpyafp5eitp2"]
 
 [ext_resource type="Script" path="res://Scripts/Enemies/Id009.gd" id="1_jncno"]
-[ext_resource type="Texture2D" uid="uid://cs7f728plvrfr" path="res://Assets/Images/Enemies/id009/Mino2.png" id="2_u6f4l"]
 [ext_resource type="Texture2D" uid="uid://dohhb60411vq7" path="res://Assets/Images/Enemies/id009/minotaur3.png" id="3_rqurw"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bfmyl"]
-atlas = ExtResource("2_u6f4l")
-region = Rect2(864, 192, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ljxx"]
-atlas = ExtResource("2_u6f4l")
-region = Rect2(960, 192, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r8ewl"]
-atlas = ExtResource("2_u6f4l")
-region = Rect2(1056, 192, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rljic"]
-atlas = ExtResource("2_u6f4l")
-region = Rect2(672, 0, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3u2qj"]
-atlas = ExtResource("2_u6f4l")
-region = Rect2(768, 0, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3b1vo"]
-atlas = ExtResource("2_u6f4l")
-region = Rect2(576, 192, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gcwk0"]
-atlas = ExtResource("2_u6f4l")
-region = Rect2(672, 192, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y72sg"]
-atlas = ExtResource("2_u6f4l")
-region = Rect2(768, 192, 96, 96)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_grjig"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bfmyl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4ljxx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r8ewl")
-}],
-"loop": true,
-"name": &"Attacking",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rljic")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3u2qj")
-}],
-"loop": true,
-"name": &"Charging",
-"speed": 2.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3b1vo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gcwk0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y72sg")
-}],
-"loop": true,
-"name": &"Walking",
-"speed": 6.0
-}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ic4d"]
 atlas = ExtResource("3_rqurw")
@@ -841,17 +766,10 @@ size = Vector2(76, 70)
 [node name="Id009" type="Node2D"]
 script = ExtResource("1_jncno")
 
-[node name="AnimatedSprite2D1" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(0, -4)
-scale = Vector2(0.792069, 0.792069)
-sprite_frames = SubResource("SpriteFrames_grjig")
-animation = &"Charging"
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_7e8fi")
-animation = &"Walking_up_right"
+animation = &"Attacking_up_left"
 
 [node name="Area2D" type="Area2D" parent="."]
 

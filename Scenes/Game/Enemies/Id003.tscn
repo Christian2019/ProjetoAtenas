@@ -218,7 +218,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attacking_down_left",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -241,7 +241,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attacking_down_right",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -264,7 +264,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attacking_up_left",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -287,7 +287,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attacking_up_right",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -310,7 +310,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walking_down_left",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -333,7 +333,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walking_down_right",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -356,7 +356,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walking_up_left",
-"speed": 9.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -379,7 +379,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walking_up_right",
-"speed": 9.0
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmar3"]
@@ -392,8 +392,7 @@ script = ExtResource("1_rripe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6xdij")
-animation = &"Attacking_down_left"
-frame_progress = 0.763848
+animation = &"Walking_up_right"
 
 [node name="Area2D" type="Area2D" parent="."]
 

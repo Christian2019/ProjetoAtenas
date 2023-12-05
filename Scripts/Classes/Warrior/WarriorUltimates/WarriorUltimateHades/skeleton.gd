@@ -6,6 +6,9 @@ var heal=10
 var duration=15
 
 var speed = 5
+var currentAnimation = "Walking"
+var verticalDir="down"
+var horizontalDir="right"
 
 var target
 
@@ -22,7 +25,7 @@ var nextHitDelay = 1
 var cerberus=null
 
 func _ready():
-	$AnimatedSprite2D.play("Walking")
+	playAnimation("Walking")
 	Global.timerCreator("die",duration,[],self)
 	attackSpeedModifier()
 
@@ -40,9 +43,9 @@ func _process(_delta):
 
 
 func attack():
-	if ($AnimatedSprite2D.animation!= "Attacking"):
-		$AnimatedSprite2D.animation= "Attacking"
-
+	if (currentAnimation!= "Attacking"):
+		currentAnimation= "Attacking"
+	playAnimation(currentAnimation)
 	for j in range(0,monstersInArea.size(),1):
 			var i = getMonsterHitIndex(monstersInArea[j])
 			if itsValid(monstersHit[i]):
@@ -75,12 +78,12 @@ func die():
 	call_deferred("queue_free")
 
 func move():
-	if ($AnimatedSprite2D.animation== "Attacking" and $AnimatedSprite2D.frame!=$AnimatedSprite2D.sprite_frames.get_frame_count("Attacking")-1):
+	if (currentAnimation== "Attacking"):
 		attack()
 		return
 	
-	if ($AnimatedSprite2D.animation!= "Walking"):
-		$AnimatedSprite2D.animation= "Walking"
+	if (currentAnimation!= "Walking"):
+		currentAnimation= "Walking"
 
 	var targetPointX= target.position.x
 	var targetPointY= target.position.y
@@ -95,12 +98,20 @@ func move():
 	position.x -= speedXModifier
 	position.y -= speedYModifier
 	
-	if (distanceXtotTarget<0):
-		$AnimatedSprite2D.flip_h=true
+	if (distanceXtotTarget>0):
+		horizontalDir = "left"
 	else:
-		$AnimatedSprite2D.flip_h=false
+		horizontalDir = "right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir = "up"
+	else:
+		verticalDir = "down"
+	
+	playAnimation(currentAnimation)
 
-
+func playAnimation (animName):
+	$AnimatedSprite2D.play(animName+"_"+verticalDir+"_"+horizontalDir)
 
 func _on_area_2d_area_entered(area):
 	if area.get_parent().get_parent().name == "Enemies":

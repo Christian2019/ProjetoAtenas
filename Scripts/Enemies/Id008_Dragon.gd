@@ -17,6 +17,9 @@ var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
 var speed = 2.0
+var currentAnimation="Flying"
+var verticalDir="down"
+var horizontalDir="right"
 
 var playerInside=false
 var centerPointInside=false
@@ -33,7 +36,7 @@ var shootCD=0.5
 var attackSpeedModifierVar=[nextHitDelay,shootCD]
 
 func _ready():
-	$AnimatedSprite2D.play("Flying")
+	playAnimation(currentAnimation)
 	maxHpBarWidth=$HPBar/Red.size.x
 
 func enableShoot():
@@ -50,11 +53,16 @@ func _process(_delta):
 	hpBarController()
 	getCloserTarget()
 	action()
-	if ($AnimatedSprite2D.animation=="Flying"):
+	
+	if (currentAnimation=="Flying"):
 		move()
 	else:
 		attack()
 	
+
+func playAnimation (animName):
+	$AnimatedSprite2D.play(animName+"_"+verticalDir+"_"+horizontalDir)
+
 func getCloserTarget():
 	
 	var center = Global.Game.get_node("Zones/Center/CenterArea/CollisionShape2D")
@@ -70,17 +78,24 @@ func getCloserTarget():
 		target=center
 
 func action():
-	if ($AnimatedSprite2D.animation=="Flying"):
+	if (currentAnimation=="Flying"):
 		if (global_position.distance_to(target.global_position)<targetMinDistance):
-			$AnimatedSprite2D.animation="Attacking"
-	if ($AnimatedSprite2D.animation=="Attacking"):
+			currentAnimation="Attacking"
+	if (currentAnimation=="Attacking"):
 		if (global_position.distance_to(target.global_position)>targetMaxDistance):
-			$AnimatedSprite2D.animation="Flying"
+			currentAnimation="Flying"
 	
 	if (global_position.x-(target.global_position.x)>0):
-		$AnimatedSprite2D.flip_h=true
+		horizontalDir="left"
 	else:
-		$AnimatedSprite2D.flip_h=false
+		horizontalDir="right"
+	
+	if (global_position.y-(target.global_position.y)>0):
+		verticalDir="up"
+	else:
+		verticalDir="down"
+	
+	playAnimation(currentAnimation)
 	
 func enableHit(nextHitDelayTarget):
 	if nextHitDelayTarget==0:

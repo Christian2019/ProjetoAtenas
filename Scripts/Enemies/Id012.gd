@@ -20,6 +20,9 @@ var speedFrames=0
 var maxSpeedFrames=10*60
 
 var isMoving=true
+var currentAnimation="Flying"
+var verticalDir="down"
+var horizontalDir="right"
 
 var playerInside=false
 var centerPointInside=false
@@ -31,7 +34,7 @@ var dracmas=1
 var attackSpeedModifierVar=[nextHitDelay]
 
 func _ready():
-	$AnimatedSprite2D.play("Flying")
+	playAnimation("Flying")
 	maxHpBarWidth=$HPBar/Red.size.x
 
 func enableHit(nextHitDelayTarget):
@@ -63,6 +66,9 @@ func _process(_delta):
 	hpBarController()
 	
 
+func playAnimation (animName):
+	$AnimatedSprite2D.play(animName+"_"+verticalDir+"_"+horizontalDir)
+
 	
 func speedController():
 	if (speedFrames<maxSpeedFrames):
@@ -82,11 +88,26 @@ func getCloserTarget():
 		target=player
 	else:
 		target=center
+	
+	var distanceXtotTarget = global_position.x-target.global_position.x
+	var distanceYtoTarget = global_position.y-target.global_position.y
+	
+	if (distanceXtotTarget>0):
+		horizontalDir="left"
+	else:
+		horizontalDir="right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir="up"
+	else:
+		verticalDir="down"
+	
 
 func attack():
-	if ($AnimatedSprite2D.animation!= "Attacking"):
-		$AnimatedSprite2D.animation= "Attacking"
-		
+	if (currentAnimation!= "Attacking"):
+		currentAnimation= "Attacking"
+	playAnimation(currentAnimation)
+	
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
 		Global.timerCreator("enableHit",attackSpeedModifierVar[0],[0],self)
@@ -100,7 +121,6 @@ func attack():
 		
 		Global.Game.get_node("Zones/Center").hp-=damages.damage
 		Global.Game.get_node("Zones/Center").activateFeedback()
-	
 	
 
 func hpBarController():
@@ -118,8 +138,9 @@ func die():
 	call_deferred("queue_free")
 
 func move():
-	if ($AnimatedSprite2D.animation!= "Flying"):
-		$AnimatedSprite2D.animation= "Flying"
+	if (currentAnimation != "Flying"):
+		currentAnimation = "Flying"
+	playAnimation(currentAnimation)
 
 	var targetPointX= target.position.x
 	var targetPointY= target.position.y
@@ -134,10 +155,7 @@ func move():
 	position.x -= speedXModifier
 	position.y -= speedYModifier
 	
-	if (distanceXtotTarget>0):
-		$AnimatedSprite2D.flip_h=true
-	else:
-		$AnimatedSprite2D.flip_h=false
+	
 
 
 func _on_area_2d_area_entered(area):

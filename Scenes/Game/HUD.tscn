@@ -587,8 +587,8 @@ vertical_alignment = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wave"]
 position = Vector2(397, 133)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_g7qxd")
-frame = 10
 
 [node name="LevelUp" type="Node2D" parent="."]
 position = Vector2(-136, 103)
