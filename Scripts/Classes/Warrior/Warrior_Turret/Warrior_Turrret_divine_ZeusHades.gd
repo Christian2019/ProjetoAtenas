@@ -43,10 +43,9 @@ func attackSpeedModifier():
 	cd=cd/Global.player.attack_Speed
 
 func qualityStatus():
-		damage=90
-		area=2
-		extraBounces=8
-
+		damage=AllSkillsValues.warrior_turret_divine_zeus_damage +AllSkillsValues.warrior_turret_divine_hades_damage
+		area=AllSkillsValues.warrior_turret_divine_hades_area
+		extraBounces=AllSkillsValues.warrior_turret_divine_zeus_extraBounces
 		
 func destroy():
 	createExplosion()
