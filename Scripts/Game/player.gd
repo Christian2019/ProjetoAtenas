@@ -101,9 +101,11 @@ func hpRegenerationFunction():
 func change_animation():
 	for i in range(0,get_node("PlayerAnimations").get_child_count()):
 		for j in range(0,get_node("PlayerAnimations").get_child(i).get_child_count()):
+			get_node("PlayerAnimations").get_child(i).get_child(j).get_child(0).stop()
 			get_node("PlayerAnimations").get_child(i).get_child(j).get_child(0).visible=false 
 	get_node("PlayerAnimations").get_child(current_level_armor).get_child(current_level_sword).get_child(0).visible=true 
 	animation = get_node("PlayerAnimations").get_child(current_level_armor).get_child(current_level_sword).get_child(0)
+
 func _process(__delta):
 	if (dead):
 		return

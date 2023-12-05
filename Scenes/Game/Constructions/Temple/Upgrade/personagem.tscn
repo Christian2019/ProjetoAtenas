@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/PersonagemLoja.gd" id="1_p27ws"]
 [ext_resource type="Texture2D" uid="uid://cuolto2djdbn6" path="res://Assets/Images/HUD/Loja/BackgroundUpgrade.png" id="2_v0k4h"]
-[ext_resource type="PackedScene" uid="uid://b3wvfc3l1iq20" path="res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.tscn" id="3_fydkf"]
+[ext_resource type="PackedScene" uid="uid://b3wvfc3l1iq20" path="res://Scenes/Game/Constructions/Temple/UpgradeOptions/CharacterOptions.tscn" id="3_fydkf"]
 [ext_resource type="Texture2D" uid="uid://c1lvo03360ies" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/BronzeSword.png" id="4_p7k46"]
 [ext_resource type="Texture2D" uid="uid://0rqev1k3nc4" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/BronzeDesativado.png" id="5_uitx0"]
 [ext_resource type="Texture2D" uid="uid://cprs05ls2ccdg" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/SilverSword.png" id="6_1xhvy"]
