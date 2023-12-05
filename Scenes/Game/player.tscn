@@ -2285,7 +2285,148 @@ size = Vector2(32, 32)
 [node name="Player" type="Node2D"]
 script = ExtResource("1_s0uo2")
 
+[node name="PlayerAnimations" type="Node2D" parent="."]
+
+[node name="Armor0" type="Node2D" parent="PlayerAnimations"]
+
+[node name="Sword0" type="Node2D" parent="PlayerAnimations/Armor0"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor0/Sword0"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Sword1" type="Node2D" parent="PlayerAnimations/Armor0"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor0/Sword1"]
+visible = false
+modulate = Color(0.239216, 0.0901961, 0.0627451, 1)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Sword2" type="Node2D" parent="PlayerAnimations/Armor0"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor0/Sword2"]
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Sword3" type="Node2D" parent="PlayerAnimations/Armor0"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor0/Sword3"]
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Armor1" type="Node2D" parent="PlayerAnimations"]
+
+[node name="Sword0" type="Node2D" parent="PlayerAnimations/Armor1"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor1/Sword0"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Sword1" type="Node2D" parent="PlayerAnimations/Armor1"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor1/Sword1"]
+visible = false
+modulate = Color(0.564706, 0.117647, 0, 1)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Sword2" type="Node2D" parent="PlayerAnimations/Armor1"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor1/Sword2"]
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Sword3" type="Node2D" parent="PlayerAnimations/Armor1"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor1/Sword3"]
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Armor2" type="Node2D" parent="PlayerAnimations"]
+
+[node name="Sword0" type="Node2D" parent="PlayerAnimations/Armor2"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor2/Sword0"]
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Sword1" type="Node2D" parent="PlayerAnimations/Armor2"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor2/Sword1"]
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Sword2" type="Node2D" parent="PlayerAnimations/Armor2"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor2/Sword2"]
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Sword3" type="Node2D" parent="PlayerAnimations/Armor2"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor2/Sword3"]
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Armor3" type="Node2D" parent="PlayerAnimations"]
+
+[node name="Sword0" type="Node2D" parent="PlayerAnimations/Armor3"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor3/Sword0"]
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Sword1" type="Node2D" parent="PlayerAnimations/Armor3"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor3/Sword1"]
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Sword2" type="Node2D" parent="PlayerAnimations/Armor3"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor3/Sword2"]
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
+[node name="Sword3" type="Node2D" parent="PlayerAnimations/Armor3"]
+
+[node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor3/Sword3"]
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ddi15")
+animation = &"Run_Up_Right"
+
 [node name="Animation" type="AnimatedSprite2D" parent="."]
+visible = false
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ddi15")
 animation = &"Run_Up_Right"
@@ -2304,6 +2445,22 @@ shape = SubResource("RectangleShape2D_5b8iw")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[connection signal="animation_looped" from="PlayerAnimations/Armor0/Sword0/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor0/Sword1/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor0/Sword2/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor0/Sword3/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor1/Sword0/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor1/Sword1/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor1/Sword2/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor1/Sword3/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor2/Sword0/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor2/Sword1/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor2/Sword2/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor2/Sword3/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor3/Sword0/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor3/Sword1/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor3/Sword2/Animation" to="." method="_on_animation_animation_looped"]
+[connection signal="animation_looped" from="PlayerAnimations/Armor3/Sword3/Animation" to="." method="_on_animation_animation_looped"]
 [connection signal="animation_looped" from="Animation" to="." method="_on_animation_animation_looped"]
 [connection signal="area_entered" from="Body" to="." method="_on_body_area_entered"]
 [connection signal="area_exited" from="Body" to="." method="_on_body_area_exited"]

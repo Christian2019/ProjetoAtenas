@@ -1,6 +1,6 @@
 extends Node2D
 
-var dead = false
+var dead = false 
 
 ##Stats
 var baseMaxHp=100.0
@@ -78,9 +78,16 @@ var reverseAlphaChange=false
 
 var animAttacking=false
 
+
+var current_level_sword = 0 
+var current_level_armor = 0
+
+var animation
+
 func _ready():
 	Global.player = self
-	hpRegenerationFunction()
+	hpRegenerationFunction() 
+	animation = get_node("PlayerAnimations").get_child(current_level_armor).get_child(current_level_sword).get_child(0)
 	playAnimation ("Idle")
 	
 func hpRegenerationFunction():
@@ -91,7 +98,12 @@ func hpRegenerationFunction():
 		if (hp>maxHp):
 			hp=maxHp
 	
-
+func change_animation():
+	for i in range(0,get_node("PlayerAnimations").get_child_count()):
+		for j in range(0,get_node("PlayerAnimations").get_child(i).get_child_count()):
+			get_node("PlayerAnimations").get_child(i).get_child(j).get_child(0).visible=false 
+	get_node("PlayerAnimations").get_child(current_level_armor).get_child(current_level_sword).get_child(0).visible=true 
+	animation = get_node("PlayerAnimations").get_child(current_level_armor).get_child(current_level_sword).get_child(0)
 func _process(__delta):
 	if (dead):
 		return
@@ -100,8 +112,8 @@ func _process(__delta):
 		hp=0
 		dead=true
 		restartGame()
-		return
-	
+		return 
+		
 	multiplierController()
 	animationController()
 	commandController()	
@@ -147,24 +159,24 @@ func playAnimation (animName):
 		animName="Attack1Run"
 		
 	if lastMovement=="S":
-		$Animation.play(animName+"_Down")
+		animation.play(animName+"_Down")
 	elif lastMovement=="SE":
-		$Animation.play(animName+"_Down_Right")
+		animation.play(animName+"_Down_Right")
 	elif lastMovement=="SW":
-		$Animation.play(animName+"_Down_Left")
+		animation.play(animName+"_Down_Left")
 	elif lastMovement=="N":
-		$Animation.play(animName+"_Up")
+		animation.play(animName+"_Up")
 	elif lastMovement=="NE":
-		$Animation.play(animName+"_Up_Right")
+		animation.play(animName+"_Up_Right")
 	elif lastMovement=="NW":
-		$Animation.play(animName+"_Up_Left")
+		animation.play(animName+"_Up_Left")
 	elif lastMovement=="E":
-		$Animation.play(animName+"_Right")
+		animation.play(animName+"_Right")
 	elif lastMovement=="W":
-		$Animation.play(animName+"_Left")
+		animation.play(animName+"_Left")
 	
 	if (animName=="Run"):
-		$Animation.speed_scale=move_Speed/5
+		animation.speed_scale=move_Speed/5
 		
 
 func commandController():
@@ -268,7 +280,7 @@ func attack1Controller():
 		attackInstance.global_position=global_position
 
 		playAnimation ("Attack1")
-		$Animation.speed_scale=attack_Speed
+		animation.speed_scale=attack_Speed
 		
 		
 func creatAttackInstance(classChild):
@@ -311,7 +323,7 @@ func attack2Controller():
 		
 		animAttacking=true
 		playAnimation ("Attack2")
-		$Animation.speed_scale=attack_Speed
+		animation.speed_scale=attack_Speed
 		
 		
 func turretController():
@@ -335,10 +347,10 @@ func dashController():
 		
 		
 func enableDisableAnimation():
-	if($Animation.is_playing()):
-		$Animation.stop()
+	if(animation.is_playing()):
+		animation.stop()
 	else:
-		$Animation.play()	
+		animation.play()	
 		
 func ultimateController():
 	var classChild=4	

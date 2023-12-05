@@ -23,3 +23,7 @@ res://Scripts/Game/quadrant.gd
 res://Scenes/Game/Mining/PlayerMining.tscn
 res://Scripts/Game/PlayerMining.gd
 res://Scenes/Game/PlayerMining.tscn
+res://Scripts/Zones/Temple/UpgradeOptions/CharacterOptions.gd
+res://Scripts/Game/player.gd
+res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.tscn
+res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.gd

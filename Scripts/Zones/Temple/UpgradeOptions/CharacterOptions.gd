@@ -107,8 +107,7 @@ func upgrades():
 			$InfoDracma/Upgrade3/Price.text = "-"+str(maxDodge)
 			$InfoDracma/Upgrade3/Price.add_theme_color_override("font_color",Color("ff0000"))  
 		$InfoDracma/Upgrade3/Upgrade3.animation="MaxDodge"
-
-
+ 
 func verificaOre():
 	if(qtdMinerios>=0):  
 			if(Minerio == "gold"):

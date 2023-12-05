@@ -1,9 +1,10 @@
+Node2D
+Node
 Sprite2D
 AnimatedSprite2D
 AnimationTree
 Timer
 ColorRect
-Node2D
 Label
 VideoStreamPlayer
 SubViewport
@@ -12,7 +13,6 @@ BoxContainer
 CollisionShape2D
 Area2D
 AudioStreamPlayer
-Node
 AudioStreamPlayer2D
 LineEdit
 Line2D
