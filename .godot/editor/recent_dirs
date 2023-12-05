@@ -1,6 +1,14 @@
+res://Scripts/Game/Scrolls/Warrior/WarriorTurret/Divine
+res://Scripts/Game/Scrolls/Warrior/WarriorTurret
+res://Scripts/Game/Scrolls/Warrior/WarriorUltimates/Divine
+res://Scripts/Game/Scrolls/Warrior/WarriorUltimates
+res://Scripts/Game/Scrolls/Warrior/WarriorAttack1/Divine
+res://Scripts/Game/Scrolls/Warrior/WarriorAttack1
+res://Scripts/Game/Scrolls/Warrior/WarriorAttack2/Divine
+res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack2
+res://Scripts/Game/Scrolls/Warrior/WarriorAttack2
 res://Scripts/Game/Scrolls/Warrior/WarriorDash
 res://Scripts/AutoLoads
-res://Scripts/Game/Scrolls/Warrior/WarriorTurret
 res://Scripts/Game
 res://Scripts/Game/ItemController
 res://Scripts/Zones/Temple/Shop
@@ -12,12 +20,4 @@ res://Assets/Images/HUD/SkillSelection/Divine
 res://Assets/Images/Scrolls
 res://Assets/Images/Enemies/id005
 res://Scripts/Game/ItemController/Itens/tier4
-res://Scripts/Game/ItemController/Itens/tier3
-res://Scripts/Game/ItemController/Itens/tier2
-res://Scenes/Game/ItemController
-res://Scripts/Game/ItemController/Itens/tier1
-res://Assets/Images/Itens/Items/Zeus'_Thunder
-res://Assets/Images/Itens/Items/Warrior's_Sword
-res://Assets/Images/Itens/Items/Poseidon's_Staff
-res://Assets/Images/Itens/Items/Midas'_Hand
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

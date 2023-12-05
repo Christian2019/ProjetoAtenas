@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://b8wfjev78sd7n"]
+[gd_scene load_steps=2 format=3 uid="uid://b8wfjev78sd7n"]
+
+[ext_resource type="Script" path="res://Scripts/Game/Scrolls/Warrior/WarriorUltimates/Scroll_Warrior_Ultimate_Hades.gd" id="1_b6whx"]
 
 [node name="Scroll_Warrior_Ultimate_Hades" type="Node2D"]
+script = ExtResource("1_b6whx")

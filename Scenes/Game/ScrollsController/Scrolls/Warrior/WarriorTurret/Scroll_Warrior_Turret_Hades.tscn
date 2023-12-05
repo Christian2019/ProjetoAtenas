@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://bc0gybjmji4me"]
+[gd_scene load_steps=2 format=3 uid="uid://bc0gybjmji4me"]
+
+[ext_resource type="Script" path="res://Scripts/Game/Scrolls/Warrior/WarriorTurret/Scroll_Warrior_Turret_Hades.gd" id="1_sjtm4"]
 
 [node name="Scroll_Warrior_Turret_Hades" type="Node2D"]
+script = ExtResource("1_sjtm4")
