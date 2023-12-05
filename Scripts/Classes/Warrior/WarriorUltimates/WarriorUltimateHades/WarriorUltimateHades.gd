@@ -6,7 +6,7 @@ var currentHPPercentDamage
 var skeletonQuantity=15
 
 #Duracao em segundos
-var cd = 20
+var cd 
 
 var frame=0
 var max_duration = 15
@@ -17,6 +17,7 @@ var Allycerberus
 var divineReference
 
 func _ready():
+	cd= AllSkillsValues.warrior_ultimate_hades_cd
 	Global.Game.get_node("Night").visible=true
 	$Sprite2D.modulate.a=0
 	Global.timerCreator("destroy", max_duration,[],self)
@@ -25,23 +26,23 @@ func _ready():
 	
 func qualityStatus():
 	if ( quality=="common"):
-		currentHPPercentDamage=0.1
-		skeletonQuantity=15
+		currentHPPercentDamage=AllSkillsValues.warrior_ultimate_hades_currentHPPercentDamage[0]
+		skeletonQuantity=AllSkillsValues.warrior_ultimate_hades_skeletonQuantity[0]
 	elif ( quality=="rare"):
-		currentHPPercentDamage=0.15
-		skeletonQuantity=30
+		currentHPPercentDamage=AllSkillsValues.warrior_ultimate_hades_currentHPPercentDamage[1]
+		skeletonQuantity=AllSkillsValues.warrior_ultimate_hades_skeletonQuantity[1]
 	elif ( quality=="epic"):
-		currentHPPercentDamage=0.2
-		skeletonQuantity=45
+		currentHPPercentDamage=AllSkillsValues.warrior_ultimate_hades_currentHPPercentDamage[2]
+		skeletonQuantity=AllSkillsValues.warrior_ultimate_hades_skeletonQuantity[2]
 	elif ( quality=="legendary"):
-		cerberusDamage=1500
-		currentHPPercentDamage=0.3
-		skeletonQuantity=60
+		cerberusDamage=AllSkillsValues.warrior_ultimate_hades_cerberusDamage
+		currentHPPercentDamage=AllSkillsValues.warrior_ultimate_hades_currentHPPercentDamage[3]
+		skeletonQuantity=AllSkillsValues.warrior_ultimate_hades_skeletonQuantity[3]
 		creatCerberus()
 	elif ( quality=="divine"):
-		cerberusDamage=3000
-		currentHPPercentDamage=0.5
-		skeletonQuantity=90
+		cerberusDamage=AllSkillsValues.warrior_ultimate_divine_hades_cerberusDamage
+		currentHPPercentDamage=AllSkillsValues.warrior_ultimate_divine_hades_currentHPPercentDamage
+		skeletonQuantity=AllSkillsValues.warrior_ultimate_divine_hades_skeletonQuantity
 		creatCerberus()
 
 func creatCerberus():

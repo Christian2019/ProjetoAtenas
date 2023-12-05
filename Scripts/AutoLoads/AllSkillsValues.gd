@@ -139,6 +139,9 @@ var warrior_dash_zeus_bonusSpeedDuration=2
 ##Divine
 #Hades
 var warrior_ultimate_divine_hades_passive=hp*5
+var warrior_ultimate_divine_hades_currentHPPercentDamage=0.5
+var warrior_ultimate_divine_hades_skeletonQuantity=90
+var warrior_ultimate_divine_hades_cerberusDamage=3000
 #Poseidon
 var warrior_ultimate_divine_poseidon_passive=percentDamage*5
 #Zeus
@@ -147,6 +150,11 @@ var warrior_ultimate_divine_zeus_passive=16
 ##Normal
 #Hades
 var warrior_ultimate_hades_passive=[hp,hp*2,hp*3,hp*4]
+var warrior_ultimate_hades_cd=20
+var warrior_ultimate_hades_currentHPPercentDamage=[0.1,0.15,0.2,0.3]
+var warrior_ultimate_hades_skeletonQuantity=[15,30,45,60]
+var warrior_ultimate_hades_cerberusDamage=1500
+
 #Poseidon
 var warrior_ultimate_poseidon_passive=[percentDamage*1,percentDamage*2,percentDamage*3,percentDamage*4]
 #Zeus
