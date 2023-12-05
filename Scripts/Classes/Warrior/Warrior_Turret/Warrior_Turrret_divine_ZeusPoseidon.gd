@@ -36,10 +36,10 @@ func attackSpeedModifier():
 	cd=cd/Global.player.attack_Speed
 
 func qualityStatus():
-		damage=90
-		extraBounces=8
-		pierce=4
-		waterDamage=2
+		damage=AllSkillsValues.warrior_turret_divine_zeus_damage+AllSkillsValues.warrior_turret_divine_poseidon_sd
+		extraBounces=AllSkillsValues.warrior_turret_divine_zeus_extraBounces
+		pierce=AllSkillsValues.warrior_turret_divine_poseidon_pierce
+		waterDamage=AllSkillsValues.warrior_turret_divine_poseidon_waterDamage
 		
 func destroy():
 	call_deferred("queue_free")

@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://ckdodsxxol2j0"]
+[gd_scene load_steps=2 format=3 uid="uid://ckdodsxxol2j0"]
+
+[ext_resource type="Script" path="res://Scripts/Game/Scrolls/Warrior/WarriorTurret/Scroll_Warrior_Turret_ZeusPoseidon.gd" id="1_4fg2p"]
 
 [node name="Scroll_Warrior_Turret_ZeusPoseidon" type="Node2D"]
+script = ExtResource("1_4fg2p")
