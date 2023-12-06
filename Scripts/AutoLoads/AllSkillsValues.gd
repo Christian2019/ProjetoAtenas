@@ -31,6 +31,8 @@ var warrior_attack1_divine_hades_attackSpeedBonusPercent=0.06
 var warrior_attack1_divine_hades_frenzyPercent=0.02
 #Poseidon
 var warrior_attack1_divine_poseidon_passive=percentDamage*5
+var warrior_attack1_divine_poseidon_extraDamagePerConsHit=10
+var warrior_attack1_divine_poseidon_heavyDamageInstances=20
 #Zeus
 var warrior_attack1_divine_zeus_passive=16
 
@@ -42,6 +44,9 @@ var warrior_attack1_hades_frenzyPercent=0.01
 
 #Poseidon
 var warrior_attack1_poseidon_passive=[percentDamage*1,percentDamage*2,percentDamage*3,percentDamage*4]
+var warrior_attack1_poseidon_extraDamagePerConsHit=[2,4,6,8]
+var warrior_attack1_poseidon_heavyDamageInstances=10
+
 #Zeus
 var warrior_attack1_zeus_passive=[1,2,4,8]
 

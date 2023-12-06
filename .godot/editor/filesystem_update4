@@ -1,9 +1,9 @@
 res://default_env.tres
-res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Hades/Warrior_attack1_Hades.tscn
+res://Scenes/Game/Classes/Warrior/Warrior_Attack1/Warrior_attack1_Poseidon/Warrior_attack1_Poseidon.tscn
 res://Scripts/AutoLoads/AllSkillsValues.gd
-res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Hades/Warrior_attack1_Hades.gd
-res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack1/Scroll_Warrior_Attack1_Hades.tscn
-res://Scripts/Game/Scrolls/Warrior/WarriorAttack1/Scroll_Warrior_Attack1_Hades.gd
+res://Scripts/Classes/Warrior/Warrior_attack1/Warrior_attack1_Poseidon/Warrior_attack1_Poseidon.gd
+res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack1/Scroll_Warrior_Attack1_Poseidon.tscn
+res://Scripts/Game/Scrolls/Warrior/WarriorAttack1/Scroll_Warrior_Attack1_Poseidon.gd
 res://Scripts/AutoLoads/PreLoads.gd
 res://Scenes/Game/Constructions/Temple/Shop/ShopScreen.tscn
 res://Scripts/Zones/Temple/Shop/ShopScreen.gd
