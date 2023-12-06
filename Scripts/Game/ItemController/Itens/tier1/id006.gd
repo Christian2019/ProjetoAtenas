@@ -9,13 +9,13 @@ var quality=0
 var id="006"
 var item_name="artemis bow 1"
 var itenGrabFrame=5
-var descriptionPositive="+ 1 damage and +3% crit"
-var descriptionNegative="- 1 max hp"
+var descriptionPositive="+ "+ str(AllSkillsValues.damage) +" damage and +"+ str(int(AllSkillsValues.percentCritDamage*100)) +"% crit"
+var descriptionNegative="- "+ str(AllSkillsValues.hp/3) +" max hp"
 
 func addFunction():
-	Global.player.baseDamage+=1.0
-	Global.player.percentCritDamage+=0.03
-	Global.player.baseMaxHp-=1.0
+	Global.player.baseDamage+=AllSkillsValues.damage
+	Global.player.percentCritDamage+=AllSkillsValues.percentCritDamage
+	Global.player.baseMaxHp-=AllSkillsValues.hp/3
 
 func _ready():
 	Global.ItemController.itenReadyFunction(self)

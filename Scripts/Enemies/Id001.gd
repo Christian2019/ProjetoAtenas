@@ -4,7 +4,7 @@ var id=1
 var maxHp=30
 var hp = maxHp
 var damages = {
-	"damage":10.0
+	"damage":1.0
 	}
 
 

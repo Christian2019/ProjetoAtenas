@@ -11,6 +11,7 @@ var selected=null
 var normalScrolls
 
 func _ready():
+	Global.ShopScreen=self
 	loadScrolls()
 	chageAllScrollsImages()
 	clearItens()
@@ -253,6 +254,7 @@ func getRandomItem(tier2Change,tier3Change,tier4Change):
 		
 	var item = itens[rng.randi_range(0, itens.size()-1)].instantiate()
 	
+	#item=PreLoads.itens_tier1[5].instantiate()
 	return item
 	
 

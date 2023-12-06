@@ -201,7 +201,7 @@ offset_right = 153.0
 offset_bottom = 150.0
 theme_override_fonts/font = ExtResource("1_f3yfy")
 theme_override_font_sizes/font_size = 20
-text = "Crit"
+text = "Crit%"
 
 [node name="Value" type="Label" parent="AllStats/percentCritDamage"]
 offset_left = 149.0
@@ -227,7 +227,7 @@ offset_right = 153.0
 offset_bottom = 150.0
 theme_override_fonts/font = ExtResource("1_f3yfy")
 theme_override_font_sizes/font_size = 20
-text = "attack speed"
+text = "attack speed%"
 
 [node name="Value" type="Label" parent="AllStats/attackSpeed"]
 offset_left = 149.0

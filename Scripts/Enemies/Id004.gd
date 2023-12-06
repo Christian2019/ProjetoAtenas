@@ -5,7 +5,7 @@ var maxHp=300
 var hp = maxHp
 var damages = {
 	"damage":1.0,
-	"chargeDamage":10.0
+	"chargeDamage":5.0
 	}
 
 var nextHitDelayPlayer=false

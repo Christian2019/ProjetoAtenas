@@ -70,7 +70,19 @@ func damageController(damage,target):
 		finalDamage=effects(target,finalDamage)
 
 		#Stats Damage Extra
-		finalDamage*=Global.player.baseDamage*Global.player.percentDamage
+		var damageMultiplier1
+		var damageMultiplier2
+		if (Global.player.baseDamage<1):
+			damageMultiplier1=1
+		else:
+			damageMultiplier1=Global.player.baseDamage
+			
+		if (Global.player.percentDamage<0):
+			damageMultiplier2=0
+		else:
+			damageMultiplier2=Global.player.percentDamage
+				
+		finalDamage*=damageMultiplier1*damageMultiplier2
 
 		#Crit
 		if (Global.player.percentCritDamage>0):

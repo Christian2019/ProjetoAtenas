@@ -13,6 +13,7 @@ var LevelUp
 var ItemController
 var ItemHud
 var ItemHudTempleShop
+var ShopScreen
 var Pause
 var PlayerMining
 

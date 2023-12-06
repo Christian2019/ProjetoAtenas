@@ -13,7 +13,7 @@ func _ready():
 
 	MasterVolume = -12
 	MusicVolume = 0
-	get_window().mode=Window.MODE_WINDOWED
-	get_window().size=Resolution
+	#get_window().mode=Window.MODE_WINDOWED
+	#get_window().size=Resolution
 
  

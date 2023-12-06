@@ -1,13 +1,13 @@
 extends Node2D
 
-var maxHp=999999
+var maxHp=50
 var hp = maxHp
 
 ##Feedback por levar dano ou curar
 var feedBackAtive=false
 var reverseAlphaChange=false
 
-var heal=10
+var heal=0.1
 var nextHealDelay=false
 var nextHealDealy=0.1
 
