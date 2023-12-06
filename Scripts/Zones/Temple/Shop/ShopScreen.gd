@@ -8,12 +8,34 @@ var slot4={"Scroll":null,"Item":null,"Lock":false}
 var refreshCost=0
 var selected=null
 
+var normalScrolls
 
 func _ready():
+	loadScrolls()
 	chageAllScrollsImages()
 	clearItens()
 	$Refresh.text="reroll "+str(refreshCost)
 	Global.timerCreator("refresh",0.1,[0],self)
+
+func loadScrolls():
+	normalScrolls=[
+	PreLoads.scroll_warrior_attack1_zeus,
+	PreLoads.scroll_warrior_attack1_poseidon,
+	PreLoads.scroll_warrior_attack1_hades,
+	PreLoads.scroll_warrior_attack2_zeus,
+	PreLoads.scroll_warrior_attack2_poseidon,
+	PreLoads.scroll_warrior_attack2_hades,
+	PreLoads.scroll_warrior_turret_zeus,
+	PreLoads.scroll_warrior_turret_poseidon,
+	PreLoads.scroll_warrior_turret_hades,
+	PreLoads.scroll_warrior_dash_zeus,
+	PreLoads.scroll_warrior_dash_poseidon,
+	PreLoads.scroll_warrior_dash_hades,
+	PreLoads.scroll_warrior_ultimate_zeus,
+	PreLoads.scroll_warrior_ultimate_poseidon,
+	PreLoads.scroll_warrior_ultimate_hades,
+	]
+
 	
 func clearItens():
 	clearItensSlot($Slots/Slot1/ScrollOrItem/Item/Item)
@@ -157,6 +179,7 @@ func addScroll():
 	var quality=getRandomQuality(0.2,0.1,0.05)-1
 	var scroll = getRandomScroll()
 	scroll.quality=quality
+	#scroll.quality=3
 	scroll.start()
 	return {"Scroll":scroll,"Item":null,"Lock":false}
 
@@ -181,7 +204,10 @@ func addItem(slot):
 
 	
 func getRandomScroll():
-	return 	PreLoads.scroll_warrior_attack1_zeusPoseidon.instantiate()
+	var rng = RandomNumberGenerator.new()
+	var r=rng.randi_range(0, normalScrolls.size()-1)
+	
+	return 	normalScrolls[r].instantiate()
 
 func getRandomQuality(tier2Change,tier3Change,tier4Change):
 	var tier

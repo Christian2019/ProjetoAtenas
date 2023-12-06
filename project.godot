@@ -13,7 +13,6 @@ config_version=5
 config/name="Projeto Atenas"
 run/main_scene="res://Scenes/MainScenes/Loading.tscn"
 config/features=PackedStringArray("4.1")
-run/max_fps=60
 config/icon="res://icon.png"
 
 [autoload]
@@ -30,7 +29,6 @@ window/size/viewport_height=600
 window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
-window/vsync/vsync_mode=0
 
 [gui]
 

@@ -16,6 +16,11 @@ var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
 var speed = 5.0
+var currentAnimation="move"
+var verticalDir="down"
+var last_vDir
+var horizontalDir="right"
+var last_hDir
 
 var isMoving=true
 
@@ -183,20 +188,41 @@ func move():
 	var distanceXtoTarget = position.x-targetPointX
 	var distanceYtoTarget = position.y-targetPointY
 	
+	if (distanceXtoTarget>0):
+		horizontalDir="left"
+	else:
+		horizontalDir="right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir="up"
+	else:
+		verticalDir="down"
+		
+	
+	if last_hDir != horizontalDir or last_vDir != verticalDir:
+		last_hDir = horizontalDir
+		last_vDir = verticalDir
+		changeAnimDir()
+		
 	var absoluteTotalValue = abs(distanceYtoTarget)+abs(distanceXtoTarget)
 	
 	var speedXModifier = speed*(distanceXtoTarget/absoluteTotalValue)
 	var speedYModifier = speed*(distanceYtoTarget/absoluteTotalValue)
-
+	playAnimation (currentAnimation)
 	if !tryToMove(-speedXModifier,-speedYModifier):
-			getRandomMoveTarget()
-			
-		
-	if (distanceXtoTarget>0):
-		$AnimatedSprite2D.flip_h=true
-	else:
-		$AnimatedSprite2D.flip_h=false
+			getRandomMoveTarget() 
 
+
+		
+func playAnimation (animName):
+	$AnimatedSprite2D.play(animName+"_"+verticalDir+"_"+horizontalDir)
+
+func changeAnimDir():
+	var currentFrame=$AnimatedSprite2D.frame
+	
+	playAnimation(currentAnimation)
+	$AnimatedSprite2D.frame=currentFrame+1
+	
 func getRandomMoveTarget():
 	var x = RandomNumberGenerator.new().randi_range(0, 2561)
 	var y = RandomNumberGenerator.new().randi_range(0, 1280)

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cb86td4m1hepw" path="res://Scenes/Game/Game.tscn" id="1_no1qw"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/Camera2D.gd" id="2_ah0pv"]
-[ext_resource type="PackedScene" uid="uid://b18nigm5wn5ab" path="res://Scenes/Game/HUD.tscn" id="3_agpu4"]
+[ext_resource type="PackedScene" uid="uid://b18nigm5wn5ab" path="res://Scenes/Game/HUD/HUD.tscn" id="3_agpu4"]
 [ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="4_xvseb"]
 [ext_resource type="Script" path="res://Scripts/MainScenes/FPS.gd" id="5_c2jos"]
 [ext_resource type="PackedScene" uid="uid://bqduy4u8regjo" path="res://Scenes/Game/Constructions/Temple/TempleScreen.tscn" id="6_rsejt"]
@@ -42,15 +42,6 @@ script = ExtResource("2_ah0pv")
 position = Vector2(-3, -1.19209e-07)
 scale = Vector2(0.937318, 0.597639)
 
-[node name="FPS" type="Label" parent="HUD"]
-offset_left = 1028.47
-offset_top = 125.494
-offset_right = 1127.47
-offset_bottom = 166.494
-text = "fps:60"
-label_settings = SubResource("LabelSettings_4aqw1")
-script = ExtResource("5_c2jos")
-
 [node name="TempleNode" type="Node2D" parent="."]
 position = Vector2(0, -1)
 
@@ -80,3 +71,12 @@ scale = Vector2(0.870214, 0.870214)
 [node name="Pause" parent="." instance=ExtResource("13_ce228")]
 
 [node name="ItemController" parent="." instance=ExtResource("13_mu1bd")]
+
+[node name="FPS" type="Label" parent="."]
+offset_left = 961.003
+offset_top = 75.0001
+offset_right = 1060.0
+offset_bottom = 116.0
+text = "fps:60"
+label_settings = SubResource("LabelSettings_4aqw1")
+script = ExtResource("5_c2jos")

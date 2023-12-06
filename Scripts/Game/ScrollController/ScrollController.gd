@@ -55,7 +55,7 @@ func getCurrentScrollPrice(scroll):
 	var value = baseValue*(scroll.quality+1)*Global.WaveController.wave
 	return value
 
-func displayBig(scrollBig,selected,buttonPrice,equipButton):
+func displayBig(scrollBig,selected,buttonPrice,equipButton,scrollHud):
 	scrollSelected=selected
 	var s=getSelectedSroll()
 	if s==null:
@@ -64,8 +64,10 @@ func displayBig(scrollBig,selected,buttonPrice,equipButton):
 	buttonPrice.text="sell "+str(s.sellPrice)
 	if sAHudPosition.has(scrollSelected):
 		equipButton.text="change to passive"
+		scrollHud.selectPassive=false
 	else:
 		equipButton.text="change to active"
+		scrollHud.selectPassive=true
 	return true
 
 func updateHuds():
@@ -138,9 +140,6 @@ func addScroll(scroll):
 		updateHuds()
 		return true
 				
-	if tryToCombine():
-		return true
-			
 	return false
 
 func addActive(scroll):
@@ -160,5 +159,75 @@ func addPassive(scroll):
 			return true
 	return false
 
-func tryToCombine():
-	return false
+func combineButton():
+	var scroll=getSelectedSroll()
+	#divinos nao podem combinar
+	if (scroll.skillGod>3):
+		return
+		
+	if scrollsActives[scroll.skilltype]==null:
+		return
+	if scroll.quality<3 and scrollsActives[scroll.skilltype].quality==scroll.quality and scroll.skillGod==scrollsActives[scroll.skilltype].skillGod:
+		scrollsActives[scroll.skilltype]=null
+		removeSelectedScroll(scroll)
+		scrollSelected=null
+		scroll.quality+=1
+		var ns=newScroll(scroll)
+		addActive(ns)
+		updateHuds()
+		return
+	
+	if 	scroll.quality==3 and scrollsActives[scroll.skilltype].quality==3:
+		var divineScroll=getDivineScroll(scroll,scrollsActives[scroll.skilltype])
+		if divineScroll==null:
+			return
+		scrollsActives[scroll.skilltype]=null
+		removeSelectedScroll(scroll)
+		scrollSelected=null
+		var ns=newScroll(divineScroll.instantiate())
+		addActive(ns)
+		updateHuds()
+		
+			
+func getDivineScroll(s1,s2):
+	if s1.skilltype==0:
+		if s1.godType==2 and s2.godType==1 or s1.godType==1 and s2.godType==2:
+			return PreLoads.scroll_warrior_attack1_zeusPoseidon
+		if s1.godType==2 and s2.godType==0 or s1.godType==0 and s2.godType==2:
+			return PreLoads.scroll_warrior_attack1_zeusHades
+		if s1.godType==0 and s2.godType==1 or s1.godType==1 and s2.godType==0:
+			return PreLoads.scroll_warrior_attack1_hadesPoseidon
+			
+	if s1.skilltype==1:
+		if s1.godType==2 and s2.godType==1 or s1.godType==1 and s2.godType==2:
+			return PreLoads.scroll_warrior_attack2_zeusPoseidon
+		if s1.godType==2 and s2.godType==0 or s1.godType==0 and s2.godType==2:
+			return PreLoads.scroll_warrior_attack2_zeusHades
+		if s1.godType==0 and s2.godType==1 or s1.godType==1 and s2.godType==0:
+			return PreLoads.scroll_warrior_attack2_hadesPoseidon
+			
+	if s1.skilltype==2:
+		if s1.godType==2 and s2.godType==1 or s1.godType==1 and s2.godType==2:
+			return PreLoads.scroll_warrior_turret_zeusPoseidon
+		if s1.godType==2 and s2.godType==0 or s1.godType==0 and s2.godType==2:
+			return PreLoads.scroll_warrior_turret_zeusHades
+		if s1.godType==0 and s2.godType==1 or s1.godType==1 and s2.godType==0:
+			return PreLoads.scroll_warrior_turret_hadesPoseidon
+			
+	if s1.skilltype==3:
+		if s1.godType==2 and s2.godType==1 or s1.godType==1 and s2.godType==2:
+			return PreLoads.scroll_warrior_dash_zeusPoseidon
+		if s1.godType==2 and s2.godType==0 or s1.godType==0 and s2.godType==2:
+			return PreLoads.scroll_warrior_dash_zeusHades
+		if s1.godType==0 and s2.godType==1 or s1.godType==1 and s2.godType==0:
+			return PreLoads.scroll_warrior_dash_hadesPoseidon
+			
+	if s1.skilltype==4:
+		if s1.godType==2 and s2.godType==1 or s1.godType==1 and s2.godType==2:
+			return PreLoads.scroll_warrior_ultimate_zeusPoseidon
+		if s1.godType==2 and s2.godType==0 or s1.godType==0 and s2.godType==2:
+			return PreLoads.scroll_warrior_ultimate_zeusHades
+		if s1.godType==0 and s2.godType==1 or s1.godType==1 and s2.godType==0:
+			return PreLoads.scroll_warrior_ultimate_hadesPoseidon		
+	return null
+

@@ -18,6 +18,8 @@ var hpBarWidth = maxHpBarWidth
 var speed = 5.0
 
 var isMoving=true
+var verticalDir="down"
+var horizontalDir="right"
 
 var playerInside=false
 var centerPointInside=false
@@ -179,7 +181,7 @@ func die():
 		dracma.global_position=global_position
 		Global.Game.get_node("Instances/Dracmas").add_child(dracma)
 		
-	Global.ItemController.dropIten(0,0,1,self)	
+		
 	#Animacao de morte
 	call_deferred("queue_free")
 
@@ -211,9 +213,24 @@ func move():
 			
 		
 	if (distanceXtoTarget>0):
-		$AnimatedSprite2D.flip_h=true
+		horizontalDir = "left"
 	else:
-		$AnimatedSprite2D.flip_h=false
+		horizontalDir = "right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir = "up"
+	else:
+		verticalDir = "down"
+	
+	playAnimation()
+
+func playAnimation ():
+	var current_frame = $AnimatedSprite2D.get_frame()
+	var current_progress = $AnimatedSprite2D.get_frame_progress()
+	
+	$AnimatedSprite2D.play("Walking_"+verticalDir+"_"+horizontalDir)
+	$AnimatedSprite2D.set_frame_and_progress(current_frame, current_progress)
+
 
 func getRandomMoveTarget():
 	var x = RandomNumberGenerator.new().randi_range(0, 2561)

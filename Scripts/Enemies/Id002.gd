@@ -15,17 +15,19 @@ var hpBarWidth = maxHpBarWidth
 
 var speed=5.0
 var isMoving=true
+var verticalDir="down"
+var horizontalDir="right"
 
 var playerInside=false
 
 var target
 
-var dracmas=0
+var dracmas=8
 
 var attackSpeedModifierVar=[nextHitDelay]
 
 func _ready():
-	$AnimatedSprite2D.play("Walking")
+	playAnimation()
 	maxHpBarWidth=$HPBar/Red.size.x
 	getTarget()
 
@@ -115,12 +117,28 @@ func move():
 	var movement = getSpeedModifier()
 	if (!tryToMove(movement.x,movement.y)):
 		getTarget()
-
-
-	if (movement.z<0):
-		$AnimatedSprite2D.flip_h=true
+	
+	var distanceXtoTarget = position.x-target.x
+	var distanceYtoTarget = position.y-target.y
+	
+	if (distanceXtoTarget>0):
+		horizontalDir = "left"
 	else:
-		$AnimatedSprite2D.flip_h=false
+		horizontalDir = "right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir = "up"
+	else:
+		verticalDir = "down"
+	
+	playAnimation()
+
+func playAnimation ():
+	var current_frame = $AnimatedSprite2D.get_frame()
+	var current_progress = $AnimatedSprite2D.get_frame_progress()
+	
+	$AnimatedSprite2D.play("Walking"+"_"+verticalDir+"_"+horizontalDir)
+	$AnimatedSprite2D.set_frame_and_progress(current_frame, current_progress)
 
 func getSpeedModifier():
 	var targetPointX= target.x

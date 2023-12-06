@@ -3,7 +3,7 @@ extends Node2D
 var dead = false
 
 ##Stats
-var baseMaxHp=100000000000.0
+var baseMaxHp=1000.0
 var maxHpPercentBonus=0
 var maxHp=baseMaxHp
 var hp = maxHp
