@@ -93,7 +93,7 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/Cooldown/var").text="cooldown: "
 	scroll.get_node("Big/Labels/Cooldown/value").text=str(cd)+"s"
 	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive[quality])+" damage" 
-	scroll.get_node("Big/Labels/Active/value").text="your attack1 emits a chain-lightning that deals "+str(warrior_attack1_zeus_lightningDamage[quality])+" sd when you damage an enemy.  Produce "+str(warrior_attack1_zeus_extraBounces[quality])+" extra bounce."
-	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="enemies hit by attack1 get Electrified* " +str((warrior_attack1_zeus_extraPercentDamage-1)*100)+"%"
+	scroll.get_node("Big/Labels/Active/value").text="your attack1 emits a chain-lightning that deals "+str(warrior_attack1_zeus_lightningDamage[quality])+" sd when you damage an enemy.  produce "+str(warrior_attack1_zeus_extraBounces[quality])+" extra bounce."
+	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="enemies hit by attack1 get electrified* " +str((warrior_attack1_zeus_extraPercentDamage-1)*100)+"%"
 	#scroll.get_node("Big/Labels/ExtraInfo").visible=false
 	scroll.get_node("Big/Labels/ExtraInfo/value").text="electrified*: receive extra x damage from all sources for 5 seconds."

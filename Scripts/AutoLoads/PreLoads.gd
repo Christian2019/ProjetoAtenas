@@ -245,6 +245,7 @@ var disorientation= preload("res://Scenes/Game/Math_controller/Effects/Disorient
 
 ##Scrolls
 #Attack1
+var scroll_warrior_attack1_zeusHades=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack1/Divine/Scroll_Warrior_Attack1_ZeusHades.tscn")
 var scroll_warrior_attack1_hadesPoseidon=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack1/Divine/Scroll_Warrior_Attack1_HadesPoseidon.tscn")
 var scroll_warrior_attack1_zeus=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack1/Scroll_Warrior_Attack1_Zeus.tscn")
 var scroll_warrior_attack1_poseidon=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack1/Scroll_Warrior_Attack1_Poseidon.tscn")
