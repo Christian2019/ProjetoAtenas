@@ -57,7 +57,7 @@ func qualityStatus():
 		attackSpeedBonusPercent=AllSkillsValues.warrior_attack1_hades_attackSpeedBonusPercent[3]
 		frenzyPercent=AllSkillsValues.warrior_attack1_hades_frenzyPercent
 	elif ( quality=="divine"):
-		attackSpeedBonusPercent==AllSkillsValues.warrior_attack1_divine_hades_attackSpeedBonusPercent
+		attackSpeedBonusPercent=AllSkillsValues.warrior_attack1_divine_hades_attackSpeedBonusPercent
 		frenzyPercent=AllSkillsValues.warrior_attack1_divine_hades_frenzyPercent
 
 func _process(_delta):

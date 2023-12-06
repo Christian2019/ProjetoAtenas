@@ -56,10 +56,10 @@ func qualityStatus():
 		extraDamagePerConsHit=AllSkillsValues.warrior_attack1_poseidon_extraDamagePerConsHit[2]
 	elif ( quality=="legendary"):
 		extraDamagePerConsHit=AllSkillsValues.warrior_attack1_poseidon_extraDamagePerConsHit[3]
-		Global.MathController.attack1_poseidon.heavyDamageInstances==AllSkillsValues.warrior_attack1_poseidon_heavyDamageInstances
+		Global.MathController.attack1_poseidon.heavyDamageInstances=AllSkillsValues.warrior_attack1_poseidon_heavyDamageInstances
 	elif ( quality=="divine"):
-		extraDamagePerConsHit==AllSkillsValues.warrior_attack1_divine_poseidon_extraDamagePerConsHit
-		Global.MathController.attack1_poseidon.heavyDamageInstances==AllSkillsValues.warrior_attack1_divine_poseidon_heavyDamageInstances
+		extraDamagePerConsHit=AllSkillsValues.warrior_attack1_divine_poseidon_extraDamagePerConsHit
+		Global.MathController.attack1_poseidon.heavyDamageInstances=AllSkillsValues.warrior_attack1_divine_poseidon_heavyDamageInstances
 
 func _process(_delta):
 	animation()

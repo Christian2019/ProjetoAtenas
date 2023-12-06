@@ -122,6 +122,7 @@ func animation():
 """
 
 func destroy():
+	
 	if (quality=="divine"):
 		if is_instance_valid(divineReference):
 			divineReference.skillsFinish+=1

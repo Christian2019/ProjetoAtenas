@@ -3,7 +3,7 @@ extends Node2D
 var dead = false
 
 ##Stats
-var baseMaxHp=100.0
+var baseMaxHp=100000000000.0
 var maxHpPercentBonus=0
 var maxHp=baseMaxHp
 var hp = maxHp
@@ -118,7 +118,7 @@ func restartGame():
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/Fatality.tscn")
 	
 func animationController():
-	if (dashing or animAttacking):
+	if (dashing or animAttacking or Global.MathController.attack1_poseidon.heavyDamageOn):
 		return
 	if ($CutAnimation.frame==6):
 		$CutAnimation.frame=0
@@ -175,7 +175,6 @@ func commandController():
 	
 	if (farming or playerOnCenterPoint or Global.Game.get_node("WaveController").mining):
 		return
-	
 	attack1Controller()
 	attack2Controller()
 	turretController()
@@ -303,6 +302,7 @@ func creatAttackInstance(classChild):
 	return attackInstance
 
 func attack2Controller():
+	
 	var classChild=1	
 	if (Input.is_action_pressed("Attack2") and permissions[classChild] and permissions[0]):
 		var attackInstance = creatAttackInstance(classChild)
