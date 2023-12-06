@@ -47,11 +47,81 @@ texture = ExtResource("3_0xrjq")
 position = Vector2(20, 51)
 scale = Vector2(0.933, 0.963)
 
+[node name="ScrollImage" parent="BG/SHOP/ShopScreen/Slots/Slot1/ScrollOrItem/Scroll" index="0"]
+focus_neighbor_top = NodePath("../../../../../../../MenuPrincipal/Abas/Shop")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("../../../../Slot2/ScrollOrItem/Scroll/ScrollImage")
+
+[node name="BuyScrollSlot1" parent="BG/SHOP/ShopScreen/Slots/Slot1/ScrollOrItem/Scroll" index="1"]
+focus_neighbor_top = NodePath("../../../../../../../MenuPrincipal/Abas/Shop")
+focus_neighbor_bottom = NodePath("../../../../Slot2/ScrollOrItem/Item/BuyItemSlot2")
+
+[node name="BuyItemSlot1" parent="BG/SHOP/ShopScreen/Slots/Slot1/ScrollOrItem/Item" index="1"]
+focus_neighbor_left = NodePath("../../Scroll/ScrollImage")
+focus_neighbor_right = NodePath("../../../LockSlot1")
+focus_neighbor_bottom = NodePath("../../../../Slot2/ScrollOrItem/Item/BuyItemSlot2")
+
+[node name="LockSlot1" parent="BG/SHOP/ShopScreen/Slots/Slot1" index="2"]
+focus_neighbor_top = NodePath("../../../../../MenuPrincipal/Abas/Shop")
+focus_neighbor_bottom = NodePath("../../Slot2/LockSlot2")
+
+[node name="BuyScrollSlot2" parent="BG/SHOP/ShopScreen/Slots/Slot2/ScrollOrItem/Scroll" index="1"]
+focus_neighbor_top = NodePath("../../../../Slot1/ScrollOrItem/Item/BuyItemSlot1")
+focus_neighbor_bottom = NodePath("../../../../Slot3/ScrollOrItem/Item/BuyItemSlot3")
+
+[node name="Item" parent="BG/SHOP/ShopScreen/Slots/Slot2/ScrollOrItem" index="1"]
+visible = false
+
+[node name="LockSlot2" parent="BG/SHOP/ShopScreen/Slots/Slot2" index="2"]
+focus_neighbor_top = NodePath("../../Slot1/LockSlot1")
+focus_neighbor_bottom = NodePath("../../Slot3/LockSlot3")
+
+[node name="LockSlot3" parent="BG/SHOP/ShopScreen/Slots/Slot3" index="2"]
+focus_neighbor_top = NodePath("../../Slot2/LockSlot2")
+focus_neighbor_bottom = NodePath("../../Slot4/LockSlot4")
+
+[node name="LockSlot4" parent="BG/SHOP/ShopScreen/Slots/Slot4" index="2"]
+focus_neighbor_top = NodePath("../../Slot3/LockSlot3")
+focus_neighbor_bottom = NodePath("../../../Refresh")
+
+[node name="Refresh" parent="BG/SHOP/ShopScreen" index="2"]
+focus_neighbor_right = NodePath("../../MINHAS_COISAS___TROCA/MinhasCoisas")
+focus_neighbor_bottom = NodePath("")
+
 [node name="MINHAS_COISAS___TROCA" type="Node2D" parent="BG/SHOP"]
 
 [node name="ScrollHud" parent="BG/SHOP/MINHAS_COISAS___TROCA" instance=ExtResource("4_3pkcr")]
 position = Vector2(465, 41)
 scale = Vector2(0.125, 0.125)
+
+[node name="Passives" parent="BG/SHOP/MINHAS_COISAS___TROCA/ScrollHud/MINHASCOISAS" index="11"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 11.0
+offset_right = 63.0
+offset_bottom = 37.0
+
+[node name="Selected" parent="BG/SHOP/MINHAS_COISAS___TROCA/ScrollHud" index="2"]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/ScrollHud/Selected" index="0"]
+offset_left = -3608.0
+offset_top = -88.0
+offset_right = -64.0
+offset_bottom = 4448.0
+color = Color(0, 0, 0, 0.737255)
+
+[node name="Combine" parent="BG/SHOP/MINHAS_COISAS___TROCA/ScrollHud/Selected/Buttons" index="0"]
+flat = true
+
+[node name="Sell" parent="BG/SHOP/MINHAS_COISAS___TROCA/ScrollHud/Selected/Buttons" index="1"]
+flat = true
+
+[node name="Equip" parent="BG/SHOP/MINHAS_COISAS___TROCA/ScrollHud/Selected/Buttons" index="2"]
+flat = true
+
+[node name="Close" parent="BG/SHOP/MINHAS_COISAS___TROCA/ScrollHud/Selected/Buttons" index="3"]
+flat = true
 
 [node name="TROCA" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA"]
 visible = false
@@ -71,6 +141,8 @@ offset_left = -43.4358
 offset_top = -120.93
 offset_right = 159.564
 offset_bottom = 88.0697
+focus_neighbor_right = NodePath("../GoldForWood")
+focus_neighbor_bottom = NodePath("../../Pedra/StoneForGold")
 texture_normal = ExtResource("7_irgpp")
 ignore_texture_size = true
 stretch_mode = 0
@@ -85,11 +157,22 @@ theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
 text = "1"
 
+[node name="Selected" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForStone"]
+visible = false
+layout_mode = 0
+offset_left = 4.43604
+offset_top = 20.93
+offset_right = 203.436
+offset_bottom = 220.93
+color = Color(0, 0, 0, 0.513726)
+
 [node name="GoldForWood" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro"]
 offset_left = 224.037
 offset_top = -113.953
 offset_right = 432.037
 offset_bottom = 101.047
+focus_neighbor_left = NodePath("../GoldForStone")
+focus_neighbor_bottom = NodePath("../../Pedra/StoneForWood")
 texture_normal = ExtResource("9_chtjw")
 ignore_texture_size = true
 stretch_mode = 0
@@ -103,6 +186,15 @@ offset_bottom = 208.395
 theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
 text = "1"
+
+[node name="Selected" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForWood"]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 14.0
+offset_right = 204.0
+offset_bottom = 214.0
+color = Color(0, 0, 0, 0.513726)
 
 [node name="Wood" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro"]
 position = Vector2(-340.628, -2.32562)
@@ -128,6 +220,9 @@ offset_left = -25.1471
 offset_top = -90.6976
 offset_right = 139.853
 offset_bottom = 76.3024
+focus_neighbor_top = NodePath("../../Ouro/GoldForStone")
+focus_neighbor_right = NodePath("../StoneForWood")
+focus_neighbor_bottom = NodePath("../../Madeira/WoodForGold")
 texture_normal = ExtResource("10_pnbkw")
 ignore_texture_size = true
 stretch_mode = 0
@@ -142,11 +237,23 @@ theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
 text = "25 for 1"
 
+[node name="Selected" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForGold"]
+visible = false
+layout_mode = 0
+offset_left = -13.7166
+offset_top = -9.30243
+offset_right = 185.283
+offset_bottom = 190.698
+color = Color(0, 0, 0, 0.513726)
+
 [node name="StoneForWood" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra"]
 offset_left = 224.037
 offset_top = -120.93
 offset_right = 432.037
 offset_bottom = 98.0697
+focus_neighbor_left = NodePath("../StoneForGold")
+focus_neighbor_top = NodePath("../../Ouro/GoldForWood")
+focus_neighbor_bottom = NodePath("../../Madeira/WoodForStone")
 texture_normal = ExtResource("9_chtjw")
 ignore_texture_size = true
 stretch_mode = 0
@@ -160,6 +267,15 @@ offset_bottom = 215.372
 theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
 text = "5 for 12"
+
+[node name="Selected" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForWood"]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 21.0
+offset_right = 203.0
+offset_bottom = 221.0
+color = Color(0, 0, 0, 0.513726)
 
 [node name="Wood" type="Sprite2D" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra"]
 position = Vector2(-331.482, -13.9536)
@@ -190,6 +306,9 @@ offset_left = -36.5775
 offset_top = -100.0
 offset_right = 128.422
 offset_bottom = 71.9999
+focus_neighbor_top = NodePath("../../Pedra/StoneForGold")
+focus_neighbor_right = NodePath("../WoodForStone")
+focus_neighbor_bottom = NodePath("../../../Troca")
 texture_normal = ExtResource("10_pnbkw")
 ignore_texture_size = true
 stretch_mode = 0
@@ -204,11 +323,22 @@ theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
 text = "50 for 1"
 
+[node name="Selected" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForGold"]
+visible = false
+layout_mode = 0
+offset_left = -2.28613
+offset_right = 196.714
+offset_bottom = 200.0
+color = Color(0, 0, 0, 0.513726)
+
 [node name="WoodForStone" type="TextureButton" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira"]
 offset_left = 233.0
 offset_top = -119.0
 offset_right = 423.0
 offset_bottom = 79.0
+focus_neighbor_left = NodePath("../WoodForGold")
+focus_neighbor_top = NodePath("../../Pedra/StoneForWood")
+focus_neighbor_bottom = NodePath("../../../Troca")
 texture_normal = ExtResource("7_irgpp")
 ignore_texture_size = true
 stretch_mode = 0
@@ -222,6 +352,15 @@ offset_bottom = 213.442
 theme_override_fonts/font = ExtResource("4_l0n46")
 theme_override_font_sizes/font_size = 25
 text = "25 for 1"
+
+[node name="Selected" type="ColorRect" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForStone"]
+visible = false
+layout_mode = 0
+offset_left = -7.0
+offset_top = 19.0
+offset_right = 194.0
+offset_bottom = 219.0
+color = Color(0, 0, 0, 0.513726)
 
 [node name="Sold" type="Label" parent="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira"]
 offset_left = -265.187
@@ -278,6 +417,8 @@ offset_left = 471.0
 offset_top = 572.0
 offset_right = 627.0
 offset_bottom = 603.0
+focus_neighbor_left = NodePath("../../ShopScreen/Refresh")
+focus_neighbor_right = NodePath("../Troca")
 theme_override_colors/font_color = Color(0.410156, 0.410156, 0.410156, 1)
 theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
 theme_override_fonts/font = ExtResource("4_l0n46")
@@ -302,6 +443,7 @@ offset_left = 736.0
 offset_top = 572.0
 offset_right = 800.0
 offset_bottom = 603.0
+focus_neighbor_left = NodePath("../Troca")
 theme_override_colors/font_color = Color(0.410156, 0.410156, 0.410156, 1)
 theme_override_colors/font_disabled_color = Color(0.27451, 0.27451, 0.27451, 1)
 theme_override_fonts/font = ExtResource("4_l0n46")
@@ -314,6 +456,7 @@ position = Vector2(893, 42)
 scale = Vector2(0.49, 1.29)
 
 [node name="Mineração" parent="BG" instance=ExtResource("12_e63eq")]
+visible = false
 
 [node name="Personagem" parent="BG" instance=ExtResource("13_mclth")]
 
@@ -355,6 +498,8 @@ offset_left = 302.43
 offset_top = 9.0
 offset_right = 384.43
 offset_bottom = 41.0
+focus_neighbor_left = NodePath("../Defender Point")
+focus_neighbor_right = NodePath("../Mineração")
 theme_override_colors/font_color = Color(0.411765, 0.411765, 0.411765, 1)
 theme_override_colors/font_pressed_color = Color(0.27451, 0.27451, 0.27451, 1)
 theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
@@ -406,11 +551,23 @@ theme_override_font_sizes/font_size = 25
 text = "Defender Point"
 flat = true
 
+[connection signal="focus_entered" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForStone" to="BG/SHOP" method="_on_gold_for_stone_focus_entered"]
+[connection signal="focus_exited" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForStone" to="BG/SHOP" method="_on_gold_for_stone_focus_exited"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForStone" to="BG/SHOP" method="_on_gold_for_stone_pressed"]
+[connection signal="focus_entered" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForWood" to="BG/SHOP" method="_on_gold_for_wood_focus_entered"]
+[connection signal="focus_exited" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForWood" to="BG/SHOP" method="_on_gold_for_wood_focus_exited"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForWood" to="BG/SHOP" method="_on_gold_for_wood_pressed"]
+[connection signal="focus_entered" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForGold" to="BG/SHOP" method="_on_stone_for_gold_focus_entered"]
+[connection signal="focus_exited" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForGold" to="BG/SHOP" method="_on_stone_for_gold_focus_exited"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForGold" to="BG/SHOP" method="_on_stone_for_gold_pressed"]
+[connection signal="focus_entered" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForWood" to="BG/SHOP" method="_on_stone_for_wood_focus_entered"]
+[connection signal="focus_exited" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForWood" to="BG/SHOP" method="_on_stone_for_wood_focus_exited"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForWood" to="BG/SHOP" method="_on_stone_for_wood_pressed"]
+[connection signal="focus_entered" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForGold" to="BG/SHOP" method="_on_wood_for_gold_focus_entered"]
+[connection signal="focus_exited" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForGold" to="BG/SHOP" method="_on_wood_for_gold_focus_exited"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForGold" to="BG/SHOP" method="_on_wood_for_gold_pressed"]
+[connection signal="focus_entered" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForStone" to="BG/SHOP" method="_on_wood_for_stone_focus_entered"]
+[connection signal="focus_exited" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForStone" to="BG/SHOP" method="_on_wood_for_stone_focus_exited"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForStone" to="BG/SHOP" method="_on_wood_for_stone_pressed"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/MinhasCoisas" to="BG/SHOP" method="_on_minhas_coisas_pressed"]
 [connection signal="pressed" from="BG/SHOP/MINHAS_COISAS___TROCA/Troca" to="BG/SHOP" method="_on_troca_pressed"]
@@ -419,3 +576,6 @@ flat = true
 [connection signal="pressed" from="BG/MenuPrincipal/Abas/Mineração" to="." method="_on_mineração_pressed"]
 [connection signal="pressed" from="BG/MenuPrincipal/Abas/Personagem" to="." method="_on_personagem_pressed"]
 [connection signal="pressed" from="BG/MenuPrincipal/Abas/Defender Point" to="." method="_on_defender_point_pressed"]
+
+[editable path="BG/SHOP/ShopScreen"]
+[editable path="BG/SHOP/MINHAS_COISAS___TROCA/ScrollHud"]

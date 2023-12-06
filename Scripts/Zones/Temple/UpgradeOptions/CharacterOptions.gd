@@ -174,10 +174,13 @@ func _on_imagem_focus_entered():
 	if($Imagem.disabled==false):
 		$InfoDracma.visible = true
 	else:
+		if($Aquired.visible==false):
+			$NotAquired.visible=true
 		$InfoDracma.visible = false 
 	pass # Replace with function body.
 
 
 func _on_imagem_focus_exited():
+	$NotAquired.visible=false
 	get_node("InfoDracma").visible=false
 	pass # Replace with function body.

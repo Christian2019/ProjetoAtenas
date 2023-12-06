@@ -25,4 +25,4 @@ func _process(delta):
 				upgrades_BAG[i].get_node("Imagem").disabled=false
 			else:
 				upgrades_BAG[i].get_node("Imagem").disabled=true 
-	pass
+	pass 

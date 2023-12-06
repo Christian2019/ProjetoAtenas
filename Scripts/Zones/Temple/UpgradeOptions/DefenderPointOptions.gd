@@ -255,12 +255,15 @@ func _on_imagem_focus_entered():
 	if($Imagem.disabled==false):
 		$InfoDracma.visible = true
 	else:
+		if($Aquired.visible==false):
+			$NotAquired.visible=true
 		$InfoDracma.visible = false 
 	pass # Replace with function body.
 
 
 func _on_imagem_focus_exited():
 	get_node("InfoDracma").visible=false
+	$NotAquired.visible=false
 	pass # Replace with function body.
 
 func _on_turn_off_warning_timeout():

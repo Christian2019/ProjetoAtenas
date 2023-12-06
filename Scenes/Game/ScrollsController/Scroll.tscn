@@ -102,7 +102,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Scroll" type="Node2D"]
+[node name="Scroll" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="Divine" type="AnimatedSprite2D" parent="."]
 position = Vector2(105, 50)

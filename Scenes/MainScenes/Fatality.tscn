@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://butuan5er7o5a"]
+[gd_scene load_steps=8 format=3 uid="uid://butuan5er7o5a"]
 
 [ext_resource type="Script" path="res://Scripts/MainScenes/Fatality.gd" id="1_ptcrv"]
 [ext_resource type="AudioStream" uid="uid://ptqt4rl1wcxb" path="res://Assets/Sounds/fatality.mp3" id="3_yvl5s"]
+[ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="4_doxa3"]
 [ext_resource type="Texture2D" uid="uid://dba3t6yacyxtw" path="res://Assets/Images/GameOverScreen/Game over.png" id="4_ydliw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_naq7b"]
 
 [sub_resource type="Animation" id="Animation_q5o10"]
 resource_name = "FadeIn"
@@ -32,8 +35,55 @@ position = Vector2(511, 301.5)
 scale = Vector2(0.534162, 0.515665)
 texture = ExtResource("4_ydliw")
 
+[node name="Retry" type="Button" parent="."]
+offset_left = 467.0
+offset_top = 351.0
+offset_right = 596.0
+offset_bottom = 393.0
+focus_neighbor_top = NodePath("../Quit")
+focus_neighbor_bottom = NodePath("../Back to Menu")
+theme_override_colors/font_pressed_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_focus_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_fonts/font = ExtResource("4_doxa3")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxTexture_naq7b")
+text = "RETRY"
+flat = true
+
+[node name="Back to Menu" type="Button" parent="."]
+offset_left = 433.0
+offset_top = 404.0
+offset_right = 632.0
+offset_bottom = 446.0
+focus_neighbor_top = NodePath("../Retry")
+focus_neighbor_bottom = NodePath("../Quit")
+theme_override_colors/font_pressed_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_focus_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_fonts/font = ExtResource("4_doxa3")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxTexture_naq7b")
+text = "BACK TO MENU"
+flat = true
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 467.0
+offset_top = 460.0
+offset_right = 596.0
+offset_bottom = 517.0
+focus_neighbor_top = NodePath("../Back to Menu")
+focus_neighbor_bottom = NodePath("../Retry")
+theme_override_colors/font_pressed_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_colors/font_focus_color = Color(0.32549, 0.054902, 0.141176, 1)
+theme_override_fonts/font = ExtResource("4_doxa3")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxTexture_naq7b")
+text = "QUIT"
+flat = true
+
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 offset_right = 1025.0
 offset_bottom = 604.0
 color = Color(0, 0, 0, 1)
@@ -47,43 +97,7 @@ libraries = {
 "": SubResource("AnimationLibrary_lb2i3")
 }
 
-[node name="Retry" type="Button" parent="."]
-offset_left = 467.0
-offset_top = 351.0
-offset_right = 596.0
-offset_bottom = 393.0
-theme_override_colors/font_pressed_color = Color(0.32549, 0.054902, 0.141176, 1)
-theme_override_colors/font_hover_color = Color(0.32549, 0.054902, 0.141176, 1)
-theme_override_colors/font_focus_color = Color(0.32549, 0.054902, 0.141176, 1)
-theme_override_font_sizes/font_size = 35
-text = "RETRY"
-flat = true
-
-[node name="Back to Menu" type="Button" parent="."]
-offset_left = 433.0
-offset_top = 404.0
-offset_right = 632.0
-offset_bottom = 446.0
-theme_override_colors/font_pressed_color = Color(0.32549, 0.054902, 0.141176, 1)
-theme_override_colors/font_hover_color = Color(0.32549, 0.054902, 0.141176, 1)
-theme_override_colors/font_focus_color = Color(0.32549, 0.054902, 0.141176, 1)
-theme_override_font_sizes/font_size = 35
-text = "BACK TO MENU"
-flat = true
-
-[node name="Quit" type="Button" parent="."]
-offset_left = 467.0
-offset_top = 460.0
-offset_right = 596.0
-offset_bottom = 517.0
-theme_override_colors/font_pressed_color = Color(0.32549, 0.054902, 0.141176, 1)
-theme_override_colors/font_hover_color = Color(0.32549, 0.054902, 0.141176, 1)
-theme_override_colors/font_focus_color = Color(0.32549, 0.054902, 0.141176, 1)
-theme_override_font_sizes/font_size = 35
-text = "QUIT"
-flat = true
-
-[connection signal="animation_finished" from="FadeIn" to="." method="_on_fade_in_animation_finished"]
 [connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="Back to Menu" to="." method="_on_back_to_menu_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="animation_finished" from="FadeIn" to="." method="_on_fade_in_animation_finished"]

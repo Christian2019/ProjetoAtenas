@@ -139,6 +139,15 @@ offset_bottom = 81.0
 theme_override_fonts/font = ExtResource("2_5hhw0")
 text = "Aquired"
 
+[node name="NotAquired" type="Label" parent="."]
+visible = false
+offset_left = 49.0
+offset_top = 61.0
+offset_right = 123.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_5hhw0")
+text = "Locked"
+
 [node name="InfoDracma" type="ColorRect" parent="."]
 visible = false
 layout_mode = 0

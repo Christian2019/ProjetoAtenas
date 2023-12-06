@@ -40,15 +40,20 @@ position = Vector2(-3, -21)
 [node name="Scroll" type="Node2D" parent="Slots/Slot1/ScrollOrItem"]
 
 [node name="ScrollImage" parent="Slots/Slot1/ScrollOrItem/Scroll" instance=ExtResource("1_05sl1")]
-position = Vector2(97, 83)
+offset_left = 97.0
+offset_top = 83.0
+offset_right = 97.0
+offset_bottom = 83.0
 scale = Vector2(0.238, 0.238)
+focus_neighbor_right = NodePath("../BuyScrollSlot1")
 
 [node name="BuyScrollSlot1" type="Button" parent="Slots/Slot1/ScrollOrItem/Scroll"]
 offset_left = 225.0
 offset_top = 78.0
 offset_right = 331.0
 offset_bottom = 112.0
-focus_neighbor_bottom = NodePath("../Options")
+focus_neighbor_left = NodePath("../ScrollImage")
+focus_neighbor_right = NodePath("../../../LockSlot1")
 theme_override_fonts/font = ExtResource("3_uaka8")
 text = "9999"
 alignment = 0
@@ -152,7 +157,10 @@ position = Vector2(-1, 105)
 [node name="Scroll" type="Node2D" parent="Slots/Slot2/ScrollOrItem"]
 
 [node name="ScrollImage" parent="Slots/Slot2/ScrollOrItem/Scroll" instance=ExtResource("1_05sl1")]
-position = Vector2(96, 99)
+offset_left = 96.0
+offset_top = 99.0
+offset_right = 96.0
+offset_bottom = 99.0
 scale = Vector2(0.238, 0.238)
 
 [node name="BuyScrollSlot2" type="Button" parent="Slots/Slot2/ScrollOrItem/Scroll"]
@@ -265,7 +273,10 @@ position = Vector2(0, 231)
 [node name="Scroll" type="Node2D" parent="Slots/Slot3/ScrollOrItem"]
 
 [node name="ScrollImage" parent="Slots/Slot3/ScrollOrItem/Scroll" instance=ExtResource("1_05sl1")]
-position = Vector2(97, 114)
+offset_left = 97.0
+offset_top = 114.0
+offset_right = 97.0
+offset_bottom = 114.0
 scale = Vector2(0.238, 0.238)
 
 [node name="BuyScrollSlot3" type="Button" parent="Slots/Slot3/ScrollOrItem/Scroll"]
@@ -378,7 +389,10 @@ position = Vector2(0, 357)
 [node name="Scroll" type="Node2D" parent="Slots/Slot4/ScrollOrItem"]
 
 [node name="ScrollImage" parent="Slots/Slot4/ScrollOrItem/Scroll" instance=ExtResource("1_05sl1")]
-position = Vector2(98, 128)
+offset_left = 98.0
+offset_top = 128.0
+offset_right = 98.0
+offset_bottom = 128.0
 scale = Vector2(0.238, 0.238)
 
 [node name="BuyScrollSlot4" type="Button" parent="Slots/Slot4/ScrollOrItem/Scroll"]
@@ -503,7 +517,10 @@ texture = ExtResource("3_hfi3p")
 [node name="ScrollSelected" parent="Focus" instance=ExtResource("1_05sl1")]
 visible = false
 z_index = 1
-position = Vector2(666, 155)
+offset_left = 666.0
+offset_top = 155.0
+offset_right = 666.0
+offset_bottom = 155.0
 scale = Vector2(0.5, 0.5)
 
 [node name="Item" type="Node2D" parent="Focus"]
@@ -523,11 +540,26 @@ script = null
 position = Vector2(111.5, 75.5)
 shape = SubResource("RectangleShape2D_pfej4")
 
+[node name="FocusSlot1" type="Button" parent="Focus/SlotsAreas/FocusSlot1"]
+offset_left = 102.0
+offset_top = 76.0
+offset_right = 110.0
+offset_bottom = 84.0
+focus_neighbor_bottom = NodePath("../../FocusSlot2/FocusSlot2")
+flat = true
+
 [node name="FocusSlot2" type="Area2D" parent="Focus/SlotsAreas"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Focus/SlotsAreas/FocusSlot2"]
 position = Vector2(113.5, 219)
 shape = SubResource("RectangleShape2D_nqm0y")
+
+[node name="FocusSlot2" type="Button" parent="Focus/SlotsAreas/FocusSlot2"]
+offset_left = 102.0
+offset_top = 218.0
+offset_right = 110.0
+offset_bottom = 226.0
+flat = true
 
 [node name="FocusSlot3" type="Area2D" parent="Focus/SlotsAreas"]
 
@@ -535,12 +567,26 @@ shape = SubResource("RectangleShape2D_nqm0y")
 position = Vector2(110.375, 351.25)
 shape = SubResource("RectangleShape2D_vr7xp")
 
+[node name="FocusSlot3" type="Button" parent="Focus/SlotsAreas/FocusSlot3"]
+offset_left = 103.0
+offset_top = 359.0
+offset_right = 111.0
+offset_bottom = 367.0
+flat = true
+
 [node name="FocusSlot4" type="Area2D" parent="Focus/SlotsAreas"]
 position = Vector2(4, 423)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Focus/SlotsAreas/FocusSlot4"]
 position = Vector2(107.5, 70.5)
 shape = SubResource("RectangleShape2D_a8bf3")
+
+[node name="FocusSlot4" type="Button" parent="Focus/SlotsAreas/FocusSlot4"]
+offset_left = 102.0
+offset_top = 76.0
+offset_right = 110.0
+offset_bottom = 84.0
+flat = true
 
 [connection signal="pressed" from="Slots/Slot1/ScrollOrItem/Scroll/BuyScrollSlot1" to="." method="_on_buy_scroll_slot_1_pressed"]
 [connection signal="pressed" from="Slots/Slot1/ScrollOrItem/Item/BuyItemSlot1" to="." method="_on_buy_item_slot_1_pressed"]
@@ -557,9 +603,17 @@ shape = SubResource("RectangleShape2D_a8bf3")
 [connection signal="pressed" from="Refresh" to="." method="_on_refresh_pressed"]
 [connection signal="mouse_entered" from="Focus/SlotsAreas/FocusSlot1" to="." method="_on_focus_slot_1_mouse_entered"]
 [connection signal="mouse_exited" from="Focus/SlotsAreas/FocusSlot1" to="." method="_on_focus_slot_1_mouse_exited"]
+[connection signal="focus_entered" from="Focus/SlotsAreas/FocusSlot1/FocusSlot1" to="." method="_on_focus_slot_1_focus_entered"]
+[connection signal="focus_exited" from="Focus/SlotsAreas/FocusSlot1/FocusSlot1" to="." method="_on_focus_slot_1_focus_exited"]
 [connection signal="mouse_entered" from="Focus/SlotsAreas/FocusSlot2" to="." method="_on_focus_slot_2_mouse_entered"]
 [connection signal="mouse_exited" from="Focus/SlotsAreas/FocusSlot2" to="." method="_on_focus_slot_2_mouse_exited"]
+[connection signal="focus_entered" from="Focus/SlotsAreas/FocusSlot2/FocusSlot2" to="." method="_on_focus_slot_2_focus_entered"]
+[connection signal="focus_exited" from="Focus/SlotsAreas/FocusSlot2/FocusSlot2" to="." method="_on_focus_slot_2_focus_exited"]
 [connection signal="mouse_entered" from="Focus/SlotsAreas/FocusSlot3" to="." method="_on_focus_slot_3_mouse_entered"]
 [connection signal="mouse_exited" from="Focus/SlotsAreas/FocusSlot3" to="." method="_on_focus_slot_3_mouse_exited"]
+[connection signal="focus_entered" from="Focus/SlotsAreas/FocusSlot3/FocusSlot3" to="." method="_on_focus_slot_3_focus_entered"]
+[connection signal="focus_exited" from="Focus/SlotsAreas/FocusSlot3/FocusSlot3" to="." method="_on_focus_slot_3_focus_exited"]
 [connection signal="mouse_entered" from="Focus/SlotsAreas/FocusSlot4" to="." method="_on_focus_slot_4_mouse_entered"]
 [connection signal="mouse_exited" from="Focus/SlotsAreas/FocusSlot4" to="." method="_on_focus_slot_4_mouse_exited"]
+[connection signal="focus_entered" from="Focus/SlotsAreas/FocusSlot4/FocusSlot4" to="." method="_on_focus_slot_4_focus_entered"]
+[connection signal="focus_exited" from="Focus/SlotsAreas/FocusSlot4/FocusSlot4" to="." method="_on_focus_slot_4_focus_exited"]

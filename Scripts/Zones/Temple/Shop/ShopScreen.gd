@@ -395,3 +395,43 @@ func _on_buy_scroll_slot_4_pressed():
 	$Slots/Slot4/ColorRect.visible=false
 	slot4.Lock=false
 	buyScroll(slot4)
+
+
+func _on_focus_slot_1_focus_entered():
+	focusSlot(slot1)
+	pass # Replace with function body.
+
+
+func _on_focus_slot_1_focus_exited():
+	removeFocus(slot1)
+	pass # Replace with function body.
+
+
+func _on_focus_slot_2_focus_entered():
+	focusSlot(slot2)
+	pass # Replace with function body.
+
+
+func _on_focus_slot_2_focus_exited():
+	removeFocus(slot2)
+	pass # Replace with function body.
+
+
+func _on_focus_slot_3_focus_entered():
+	focusSlot(slot3)
+	pass # Replace with function body.
+
+
+func _on_focus_slot_3_focus_exited():
+	removeFocus(slot3)
+	pass # Replace with function body.
+
+
+func _on_focus_slot_4_focus_entered():
+	focusSlot(slot4)
+	pass # Replace with function body.
+
+
+func _on_focus_slot_4_focus_exited():
+	removeFocus(slot4)
+	pass # Replace with function body.

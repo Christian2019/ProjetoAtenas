@@ -4,7 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://sj2bep2rsd1g" path="res://Scenes/Game/ItemController/item.tscn" id="2_436nv"]
 [ext_resource type="PackedScene" uid="uid://buer8qtk6isip" path="res://Scenes/Game/ItemController/ItemGrab.tscn" id="3_gnidj"]
 
-[node name="id010" type="Node2D"]
+[node name="id010" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_8o0rv")
 
 [node name="Item" parent="." instance=ExtResource("2_436nv")]

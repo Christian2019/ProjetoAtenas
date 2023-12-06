@@ -2,16 +2,18 @@ extends Node2D
 var selectPassive=false
 func _ready():
 	Global.ScrollController.scrollHuds.append({"scrollHud":self})
+	$Selected/Buttons/Combine.grab_focus()
 	for i in range(0,$Scrolls.get_child_count(),1):
 		var s =$Scrolls.get_child(i)
 		s.get_node("Big").visible=false
 		s.get_node("Small").visible=true
 
+
 func showSelected(index):
 	if ($Scrolls.get_child(index).visible):
 		if Global.ScrollController.displayBig($Selected/Scroll,index,$Selected/Buttons/Sell,$Selected/Buttons/Equip,self):
 			$Selected.visible=true
-			$Selected/Buttons/Combine.visible=selectPassive	
+			$Selected/Buttons/Combine.visible=selectPassive 
 
 func _on_button_0_pressed():
 	showSelected(0)

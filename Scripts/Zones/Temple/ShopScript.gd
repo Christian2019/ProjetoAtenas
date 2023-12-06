@@ -125,3 +125,60 @@ func _on_wood_for_stone_pressed():
 	if(Global.player.wood>=trade.Sold):
 		Global.player.wood-=trade.Sold
 		Global.player.stone+=trade.Buy
+
+ 
+
+#Stone Trade
+func _on_stone_for_gold_focus_entered():
+	$MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForGold/Selected.visible=true
+	pass # Replace with function body.
+
+func _on_stone_for_gold_focus_exited():
+	$MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForGold/Selected.visible=false
+	pass # Replace with function body.
+	
+func _on_stone_for_wood_focus_entered():
+	$MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForWood/Selected.visible=true
+	pass # Replace with function body.
+
+func _on_stone_for_wood_focus_exited():
+	$MINHAS_COISAS___TROCA/TROCA/Pedra/StoneForWood/Selected.visible=false
+	pass # Replace with function body.
+
+#Gold Trade
+func _on_gold_for_stone_focus_entered():
+	$MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForStone/Selected.visible=true
+	pass # Replace with function body.
+
+func _on_gold_for_stone_focus_exited():
+	$MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForStone/Selected.visible=false
+	pass # Replace with function body.
+
+func _on_gold_for_wood_focus_entered():
+	$MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForWood/Selected.visible=true
+	pass # Replace with function body.
+
+func _on_gold_for_wood_focus_exited():
+	$MINHAS_COISAS___TROCA/TROCA/Ouro/GoldForWood/Selected.visible=false
+	pass # Replace with function body.
+
+
+#Wood Trade
+func _on_wood_for_gold_focus_entered():
+	$MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForGold/Selected.visible=true
+	pass # Replace with function body.
+
+
+func _on_wood_for_gold_focus_exited():
+	$MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForGold/Selected.visible=false
+	pass # Replace with function body.
+
+
+func _on_wood_for_stone_focus_entered():
+	$MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForStone/Selected.visible=true
+	pass # Replace with function body.
+
+
+func _on_wood_for_stone_focus_exited():
+	$MINHAS_COISAS___TROCA/TROCA/Madeira/WoodForStone/Selected.visible=false
+	pass # Replace with function body.

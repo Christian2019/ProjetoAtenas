@@ -6,6 +6,7 @@ var buttons;
  
 func _ready(): 
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+	$BG/MenuPrincipal/Abas/Shop.grab_focus()
 	Global.TempleScreen = self  
 	pages = [get_node("BG/SHOP"),get_node("BG/Mineração"),get_node("BG/Personagem"),get_node("BG/Defender Point")]
 	buttons = $BG/MenuPrincipal/Abas.get_children() 
@@ -44,3 +45,5 @@ func _on_defender_point_pressed():
 	#Paginas devem fazer a transicao aqui
 	transition(4)   
 
+
+ 

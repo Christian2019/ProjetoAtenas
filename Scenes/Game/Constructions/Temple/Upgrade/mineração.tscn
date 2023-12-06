@@ -21,7 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://12y1urshsqad" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 26.png" id="19_k3eyu"]
 
 [node name="Mineração" type="Node2D"]
-visible = false
 script = ExtResource("1_kikr4")
 
 [node name="BackgroundUpgrade" type="Sprite2D" parent="."]

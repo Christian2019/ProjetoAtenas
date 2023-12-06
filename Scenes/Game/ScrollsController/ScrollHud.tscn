@@ -10,17 +10,25 @@
 script = ExtResource("1_6ajho")
 
 [node name="MINHASCOISAS" type="ColorRect" parent="."]
-offset_right = 427.0
+offset_right = 173.0
 offset_bottom = 563.0
 scale = Vector2(8, 8)
 color = Color(0.592157, 0.592157, 0.592157, 1)
 
+[node name="ColorRect" type="ColorRect" parent="MINHASCOISAS"]
+layout_mode = 0
+offset_left = 170.0
+offset_right = 435.0
+offset_bottom = 563.0
+color = Color(0.478431, 0.478431, 0.478431, 1)
+
 [node name="Attack_1" type="Label" parent="MINHASCOISAS"]
 layout_mode = 2
-offset_left = 7.0
-offset_top = 3.0
-offset_right = 70.0
-offset_bottom = 29.0
+offset_left = 82.0
+offset_top = 10.25
+offset_right = 145.0
+offset_bottom = 36.25
+theme_override_fonts/font = ExtResource("5_g58ql")
 text = "Attack 1"
 
 [node name="Attack1" type="GridContainer" parent="MINHASCOISAS"]
@@ -82,10 +90,11 @@ texture = ExtResource("2_b3h6x")
 
 [node name="Attack_2" type="Label" parent="MINHASCOISAS"]
 layout_mode = 2
-offset_left = 7.0
-offset_top = 118.0
-offset_right = 70.0
-offset_bottom = 144.0
+offset_left = 76.5
+offset_top = 122.25
+offset_right = 139.5
+offset_bottom = 148.25
+theme_override_fonts/font = ExtResource("5_g58ql")
 text = "Attack 2"
 
 [node name="Attack2" type="GridContainer" parent="MINHASCOISAS"]
@@ -147,10 +156,11 @@ texture = ExtResource("2_b3h6x")
 
 [node name="Torreta2" type="Label" parent="MINHASCOISAS"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 226.0
-offset_right = 69.0
-offset_bottom = 252.0
+offset_left = 84.25
+offset_top = 231.125
+offset_right = 147.25
+offset_bottom = 257.125
+theme_override_fonts/font = ExtResource("5_g58ql")
 text = "Turret
 "
 
@@ -213,10 +223,11 @@ texture = ExtResource("2_b3h6x")
 
 [node name="Dash2" type="Label" parent="MINHASCOISAS"]
 layout_mode = 0
-offset_left = 9.0
-offset_top = 326.0
-offset_right = 48.0
-offset_bottom = 352.0
+offset_left = 94.375
+offset_top = 331.125
+offset_right = 133.375
+offset_bottom = 357.125
+theme_override_fonts/font = ExtResource("5_g58ql")
 text = "Dash"
 
 [node name="Dash" type="GridContainer" parent="MINHASCOISAS"]
@@ -277,10 +288,11 @@ texture = ExtResource("2_b3h6x")
 
 [node name="Ultimate2" type="Label" parent="MINHASCOISAS"]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 425.0
-offset_right = 72.0
-offset_bottom = 451.0
+offset_left = 80.375
+offset_top = 430.625
+offset_right = 148.375
+offset_bottom = 456.625
+theme_override_fonts/font = ExtResource("5_g58ql")
 text = "Ultimate"
 
 [node name="Ultimate" type="GridContainer" parent="MINHASCOISAS"]
@@ -340,57 +352,113 @@ position = Vector2(58.5, 178.5)
 scale = Vector2(0.61, 0.575)
 texture = ExtResource("2_b3h6x")
 
+[node name="Passives" type="Label" parent="MINHASCOISAS"]
+offset_left = 267.0
+offset_top = 5.0
+offset_right = 330.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("5_g58ql")
+text = "Passives"
+
 [node name="Scrolls" type="Node2D" parent="."]
 
 [node name="Scroll0" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(777, 485)
+offset_left = 777.0
+offset_top = 485.0
+offset_right = 777.0
+offset_bottom = 485.0
 
 [node name="Scroll1" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(1790, 485)
+offset_left = 1790.0
+offset_top = 485.0
+offset_right = 1790.0
+offset_bottom = 485.0
 
 [node name="Scroll2" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(2803, 485)
+offset_left = 2803.0
+offset_top = 485.0
+offset_right = 2803.0
+offset_bottom = 485.0
 
 [node name="Scroll3" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(777, 1400)
+offset_left = 777.0
+offset_top = 1400.0
+offset_right = 777.0
+offset_bottom = 1400.0
 
 [node name="Scroll4" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(1790, 1400)
+offset_left = 1790.0
+offset_top = 1400.0
+offset_right = 1790.0
+offset_bottom = 1400.0
 
 [node name="Scroll5" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(2803, 1400)
+offset_left = 2803.0
+offset_top = 1400.0
+offset_right = 2803.0
+offset_bottom = 1400.0
 
 [node name="Scroll6" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(777, 2258)
+offset_left = 777.0
+offset_top = 2258.0
+offset_right = 777.0
+offset_bottom = 2258.0
 
 [node name="Scroll7" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(1790, 2258)
+offset_left = 1790.0
+offset_top = 2258.0
+offset_right = 1790.0
+offset_bottom = 2258.0
 
 [node name="Scroll8" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(2803, 2258)
+offset_left = 2803.0
+offset_top = 2258.0
+offset_right = 2803.0
+offset_bottom = 2258.0
 
 [node name="Scroll9" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(777, 3056)
+offset_left = 777.0
+offset_top = 3056.0
+offset_right = 777.0
+offset_bottom = 3056.0
 
 [node name="Scroll10" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(1790, 3056)
+offset_left = 1790.0
+offset_top = 3056.0
+offset_right = 1790.0
+offset_bottom = 3056.0
 
 [node name="Scroll11" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(2803, 3056)
+offset_left = 2803.0
+offset_top = 3056.0
+offset_right = 2803.0
+offset_bottom = 3056.0
 
 [node name="Scroll12" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(777, 3833)
+offset_left = 777.0
+offset_top = 3833.0
+offset_right = 777.0
+offset_bottom = 3833.0
 
 [node name="Scroll13" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(1790, 3833)
+offset_left = 1790.0
+offset_top = 3833.0
+offset_right = 1790.0
+offset_bottom = 3833.0
 
 [node name="Scroll14" parent="Scrolls" instance=ExtResource("4_gdcq3")]
-position = Vector2(2803, 3833)
+offset_left = 2803.0
+offset_top = 3833.0
+offset_right = 2803.0
+offset_bottom = 3833.0
 
 [node name="Selected" type="Node2D" parent="."]
 
 [node name="Scroll" parent="Selected" instance=ExtResource("4_gdcq3")]
-position = Vector2(-2062, 1331)
+offset_left = -2062.0
+offset_top = 1331.0
+offset_right = -2062.0
+offset_bottom = 1331.0
 scale = Vector2(3.75034, 3.75034)
 
 [node name="Buttons" type="Node2D" parent="Selected"]
@@ -402,6 +470,8 @@ offset_left = 360.199
 offset_top = 230.693
 offset_right = 580.199
 offset_bottom = 264.693
+focus_neighbor_top = NodePath("../Close")
+focus_neighbor_bottom = NodePath("../Sell")
 theme_override_fonts/font = ExtResource("5_g58ql")
 theme_override_font_sizes/font_size = 22
 text = "combine"
@@ -411,6 +481,8 @@ offset_left = 360.199
 offset_top = 280.625
 offset_right = 580.199
 offset_bottom = 314.625
+focus_neighbor_top = NodePath("../Combine")
+focus_neighbor_bottom = NodePath("../Equip")
 theme_override_fonts/font = ExtResource("5_g58ql")
 theme_override_font_sizes/font_size = 22
 text = "sell"
@@ -420,6 +492,8 @@ offset_left = 360.199
 offset_top = 328.75
 offset_right = 580.199
 offset_bottom = 362.75
+focus_neighbor_top = NodePath("../Sell")
+focus_neighbor_bottom = NodePath("../Close")
 theme_override_fonts/font = ExtResource("5_g58ql")
 theme_override_font_sizes/font_size = 22
 text = "equip as passive"
