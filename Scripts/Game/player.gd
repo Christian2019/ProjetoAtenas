@@ -83,8 +83,11 @@ var current_level_sword = 0
 var current_level_armor = 0
 
 var animation
+var cutAnim
 
 func _ready():
+	cutAnim = $CutAnimation
+	cutAnim.visible=false
 	Global.player = self
 	hpRegenerationFunction() 
 	animation = get_node("PlayerAnimations").get_child(current_level_armor).get_child(current_level_sword).get_child(0)
@@ -105,6 +108,15 @@ func change_animation():
 			get_node("PlayerAnimations").get_child(i).get_child(j).get_child(0).visible=false 
 	get_node("PlayerAnimations").get_child(current_level_armor).get_child(current_level_sword).get_child(0).visible=true 
 	animation = get_node("PlayerAnimations").get_child(current_level_armor).get_child(current_level_sword).get_child(0)
+	
+	if current_level_armor == 0:
+		cutAnim.set_sprite_frames(PreLoads.mine_leather)
+	elif current_level_armor == 1:
+		cutAnim.set_sprite_frames(PreLoads.mine_normal)
+	elif current_level_armor == 2:
+		cutAnim.set_sprite_frames(PreLoads.mine_gold)
+	elif current_level_armor == 3:
+		cutAnim.set_sprite_frames(PreLoads.mine_diamond)
 
 func _process(__delta):
 	if (dead):
@@ -134,9 +146,13 @@ func restartGame():
 func animationController():
 	if (dashing or animAttacking):
 		return
-	if ($CutAnimation.frame==6):
-		$CutAnimation.frame=0
-		$CutAnimation.stop()
+	
+	if (cutAnim.frame==5):
+		cutAnim.stop()
+		cutAnim.frame=0
+		cutAnim.visible=false
+		animation.visible=true
+	
 	if Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Right"):
 		playAnimation ("Run")
 	elif Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Left"):
@@ -180,6 +196,28 @@ func playAnimation (animName):
 	if (animName=="Run"):
 		animation.speed_scale=move_Speed/5
 		
+
+func playMineAnimation():
+	if !cutAnim.visible:
+		cutAnim.visible=true
+		animation.visible=false
+	
+	if lastMovement=="S":
+		cutAnim.play("mine_down")
+	elif lastMovement=="SE":
+		cutAnim.play("mine_down_right")
+	elif lastMovement=="SW":
+		cutAnim.play("mine_down_left")
+	elif lastMovement=="N":
+		cutAnim.play("mine_up")
+	elif lastMovement=="NE":
+		cutAnim.play("mine_up_right")
+	elif lastMovement=="NW":
+		cutAnim.play("mine_up_left")
+	elif lastMovement=="E":
+		cutAnim.play("mine_right")
+	elif lastMovement=="W":
+		cutAnim.play("mine_left")
 
 func commandController():
 	if (dashing):

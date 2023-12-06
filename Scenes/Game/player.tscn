@@ -1,29 +1,29 @@
-[gd_scene load_steps=316 format=3 uid="uid://cq8fbkkwauxoo"]
+[gd_scene load_steps=307 format=3 uid="uid://cq8fbkkwauxoo"]
 
 [ext_resource type="Script" path="res://Scripts/Game/player.gd" id="1_s0uo2"]
-[ext_resource type="SpriteFrames" uid="uid://b0mgxlrurbdfw" path="res://Assets/Animations/leather_armor_wood_sword.tres" id="2_en3j7"]
+[ext_resource type="SpriteFrames" uid="uid://b0mgxlrurbdfw" path="res://Assets/Animations/Leather/leather_armor_wood_sword.tres" id="2_iffj1"]
 [ext_resource type="Texture2D" uid="uid://cgi55afgdxyx8" path="res://Assets/Images/Player/Animations/normal_armor_normal_sword/attack1run.png" id="2_x7sba"]
+[ext_resource type="SpriteFrames" uid="uid://cnivqk3wi4ns4" path="res://Assets/Animations/Leather/leather_armor_normal_sword.tres" id="3_0f6es"]
 [ext_resource type="Texture2D" uid="uid://5t6be022jk6q" path="res://Assets/Images/Player/Animations/normal_armor_normal_sword/attack1.png" id="3_rflj0"]
-[ext_resource type="SpriteFrames" uid="uid://cnivqk3wi4ns4" path="res://Assets/Animations/leather_armor_normal_sword.tres" id="3_ylo6y"]
+[ext_resource type="SpriteFrames" uid="uid://biehwwlkiwput" path="res://Assets/Animations/Leather/leather_armor_gold_sword.tres" id="4_j1ekn"]
 [ext_resource type="Texture2D" uid="uid://djobdfm8pc0q8" path="res://Assets/Images/Player/Animations/normal_armor_normal_sword/attack2.png" id="4_jpe1e"]
-[ext_resource type="Texture2D" uid="uid://dq86388qxvwk" path="res://Assets/Images/Player/axe_spin_spritesheet.png" id="4_n0xky"]
-[ext_resource type="SpriteFrames" uid="uid://biehwwlkiwput" path="res://Assets/Animations/leather_armor_gold_sword.tres" id="4_pe0v4"]
-[ext_resource type="SpriteFrames" uid="uid://c25s7dffbdj2x" path="res://Assets/Animations/leather_armor_diamond_sword.tres" id="5_0pj4p"]
 [ext_resource type="Texture2D" uid="uid://cl8v2a7wrxluw" path="res://Assets/Images/Player/Animations/normal_armor_normal_sword/dash.png" id="5_ijbm0"]
-[ext_resource type="SpriteFrames" uid="uid://b25r2fa14g53q" path="res://Assets/Animations/normal_armor_wood_sword.tres" id="6_4go6f"]
+[ext_resource type="SpriteFrames" uid="uid://c25s7dffbdj2x" path="res://Assets/Animations/Leather/leather_armor_diamond_sword.tres" id="5_ktoac"]
+[ext_resource type="SpriteFrames" uid="uid://b25r2fa14g53q" path="res://Assets/Animations/Normal/normal_armor_wood_sword.tres" id="6_4go6f"]
 [ext_resource type="Texture2D" uid="uid://cpteephh768xe" path="res://Assets/Images/Player/Animations/normal_armor_normal_sword/idle.png" id="6_r88pk"]
-[ext_resource type="SpriteFrames" uid="uid://bknost3cc1rca" path="res://Assets/Animations/normal_armor_normal_sword.tres" id="7_b32cp"]
+[ext_resource type="SpriteFrames" uid="uid://bknost3cc1rca" path="res://Assets/Animations/Normal/normal_armor_normal_sword.tres" id="7_b32cp"]
 [ext_resource type="Texture2D" uid="uid://dijeckw7xx5bv" path="res://Assets/Images/Player/Animations/normal_armor_normal_sword/run.png" id="7_cofby"]
-[ext_resource type="SpriteFrames" uid="uid://y6sy7h8ptxjj" path="res://Assets/Animations/normal_armor_gold_sword.tres" id="8_vrd6k"]
-[ext_resource type="SpriteFrames" uid="uid://dk8fdjmkedxbl" path="res://Assets/Animations/normal_armor_diamond_sword.tres" id="9_derc0"]
-[ext_resource type="SpriteFrames" uid="uid://cuarau6jy8kts" path="res://Assets/Animations/gold_armor_wood_sword.tres" id="10_bd33h"]
-[ext_resource type="SpriteFrames" uid="uid://b7qci8kqdw3w0" path="res://Assets/Animations/gold_armor_normal_sword.tres" id="11_thh58"]
-[ext_resource type="SpriteFrames" uid="uid://cscydscoypqj3" path="res://Assets/Animations/gold_armor_gold_sword.tres" id="12_x2334"]
-[ext_resource type="SpriteFrames" uid="uid://b5nhpetm6lvi5" path="res://Assets/Animations/gold_armor_diamond_sword.tres" id="13_kj32d"]
-[ext_resource type="SpriteFrames" uid="uid://bn8a5ssjregq5" path="res://Assets/Animations/diamond_armor_wood_sword.tres" id="14_nh73w"]
-[ext_resource type="SpriteFrames" uid="uid://dthnpnhkb1x1o" path="res://Assets/Animations/diamond_armor_normal_sword.tres" id="15_s82gg"]
-[ext_resource type="SpriteFrames" uid="uid://m36hl0xj74jw" path="res://Assets/Animations/diamond_armor_gold_sword.tres" id="16_03qri"]
-[ext_resource type="SpriteFrames" uid="uid://c51fulyy047jc" path="res://Assets/Animations/diamond_armor_diamond_sword.tres" id="17_5ncav"]
+[ext_resource type="SpriteFrames" uid="uid://y6sy7h8ptxjj" path="res://Assets/Animations/Normal/normal_armor_gold_sword.tres" id="8_vrd6k"]
+[ext_resource type="SpriteFrames" uid="uid://dk8fdjmkedxbl" path="res://Assets/Animations/Normal/normal_armor_diamond_sword.tres" id="9_derc0"]
+[ext_resource type="SpriteFrames" uid="uid://cuarau6jy8kts" path="res://Assets/Animations/Gold/gold_armor_wood_sword.tres" id="10_ocn5n"]
+[ext_resource type="SpriteFrames" uid="uid://b7qci8kqdw3w0" path="res://Assets/Animations/Gold/gold_armor_normal_sword.tres" id="11_tttoj"]
+[ext_resource type="SpriteFrames" uid="uid://cscydscoypqj3" path="res://Assets/Animations/Gold/gold_armor_gold_sword.tres" id="12_swdmd"]
+[ext_resource type="SpriteFrames" uid="uid://b5nhpetm6lvi5" path="res://Assets/Animations/Gold/gold_armor_diamond_sword.tres" id="13_2wth8"]
+[ext_resource type="SpriteFrames" uid="uid://bn8a5ssjregq5" path="res://Assets/Animations/Diamond/diamond_armor_wood_sword.tres" id="14_7fpfj"]
+[ext_resource type="SpriteFrames" uid="uid://dthnpnhkb1x1o" path="res://Assets/Animations/Diamond/diamond_armor_normal_sword.tres" id="15_svo8r"]
+[ext_resource type="SpriteFrames" uid="uid://m36hl0xj74jw" path="res://Assets/Animations/Diamond/diamond_armor_gold_sword.tres" id="16_ur52t"]
+[ext_resource type="SpriteFrames" uid="uid://c51fulyy047jc" path="res://Assets/Animations/Diamond/diamond_armor_diamond_sword.tres" id="17_qssvx"]
+[ext_resource type="SpriteFrames" uid="uid://cfmx8ktmufgyd" path="res://Assets/Animations/Mininig/mine_leather_armor.tres" id="24_jk0wt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmyrq"]
 atlas = ExtResource("2_x7sba")
@@ -2228,73 +2228,6 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lgflb"]
-atlas = ExtResource("4_n0xky")
-region = Rect2(0, 0, 148, 148)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bohqw"]
-atlas = ExtResource("4_n0xky")
-region = Rect2(148, 0, 148, 148)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2p72t"]
-atlas = ExtResource("4_n0xky")
-region = Rect2(296, 0, 148, 148)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o1pda"]
-atlas = ExtResource("4_n0xky")
-region = Rect2(444, 0, 148, 148)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nel51"]
-atlas = ExtResource("4_n0xky")
-region = Rect2(592, 0, 148, 148)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lxnrf"]
-atlas = ExtResource("4_n0xky")
-region = Rect2(740, 0, 148, 148)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6n8n8"]
-atlas = ExtResource("4_n0xky")
-region = Rect2(888, 0, 148, 148)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5eptj"]
-atlas = ExtResource("4_n0xky")
-region = Rect2(1036, 0, 148, 148)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_pwiwe"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lgflb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bohqw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2p72t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o1pda")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nel51")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lxnrf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6n8n8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5eptj")
-}],
-"loop": false,
-"name": &"Axe",
-"speed": 10.0
-}]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5b8iw"]
 size = Vector2(32, 32)
 
@@ -2309,15 +2242,15 @@ script = ExtResource("1_s0uo2")
 
 [node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor0/Sword0"]
 scale = Vector2(0.5, 0.5)
-sprite_frames = ExtResource("2_en3j7")
-animation = &"Attack2_Down"
+sprite_frames = ExtResource("2_iffj1")
+animation = &"Attack2_Down_Right"
 
 [node name="Sword1" type="Node2D" parent="PlayerAnimations/Armor0"]
 
 [node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor0/Sword1"]
 visible = false
 scale = Vector2(0.5, 0.5)
-sprite_frames = ExtResource("3_ylo6y")
+sprite_frames = ExtResource("3_0f6es")
 animation = &"Run_Up_Right"
 
 [node name="Sword2" type="Node2D" parent="PlayerAnimations/Armor0"]
@@ -2325,7 +2258,7 @@ animation = &"Run_Up_Right"
 [node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor0/Sword2"]
 visible = false
 scale = Vector2(0.5, 0.5)
-sprite_frames = ExtResource("4_pe0v4")
+sprite_frames = ExtResource("4_j1ekn")
 animation = &"Run_Up_Right"
 
 [node name="Sword3" type="Node2D" parent="PlayerAnimations/Armor0"]
@@ -2333,7 +2266,7 @@ animation = &"Run_Up_Right"
 [node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor0/Sword3"]
 visible = false
 scale = Vector2(0.5, 0.5)
-sprite_frames = ExtResource("5_0pj4p")
+sprite_frames = ExtResource("5_ktoac")
 animation = &"Run_Up_Right"
 
 [node name="Armor1" type="Node2D" parent="PlayerAnimations"]
@@ -2377,7 +2310,7 @@ animation = &"Run_Up_Right"
 [node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor2/Sword0"]
 visible = false
 scale = Vector2(0.5, 0.5)
-sprite_frames = ExtResource("10_bd33h")
+sprite_frames = ExtResource("10_ocn5n")
 animation = &"Run_Up_Right"
 
 [node name="Sword1" type="Node2D" parent="PlayerAnimations/Armor2"]
@@ -2385,7 +2318,7 @@ animation = &"Run_Up_Right"
 [node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor2/Sword1"]
 visible = false
 scale = Vector2(0.5, 0.5)
-sprite_frames = ExtResource("11_thh58")
+sprite_frames = ExtResource("11_tttoj")
 animation = &"Run_Up_Right"
 
 [node name="Sword2" type="Node2D" parent="PlayerAnimations/Armor2"]
@@ -2393,7 +2326,7 @@ animation = &"Run_Up_Right"
 [node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor2/Sword2"]
 visible = false
 scale = Vector2(0.5, 0.5)
-sprite_frames = ExtResource("12_x2334")
+sprite_frames = ExtResource("12_swdmd")
 animation = &"Run_Up_Right"
 
 [node name="Sword3" type="Node2D" parent="PlayerAnimations/Armor2"]
@@ -2401,7 +2334,7 @@ animation = &"Run_Up_Right"
 [node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor2/Sword3"]
 visible = false
 scale = Vector2(0.5, 0.5)
-sprite_frames = ExtResource("13_kj32d")
+sprite_frames = ExtResource("13_2wth8")
 animation = &"Run_Up_Right"
 
 [node name="Armor3" type="Node2D" parent="PlayerAnimations"]
@@ -2411,7 +2344,7 @@ animation = &"Run_Up_Right"
 [node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor3/Sword0"]
 visible = false
 scale = Vector2(0.5, 0.5)
-sprite_frames = ExtResource("14_nh73w")
+sprite_frames = ExtResource("14_7fpfj")
 animation = &"Run_Up_Right"
 
 [node name="Sword1" type="Node2D" parent="PlayerAnimations/Armor3"]
@@ -2419,7 +2352,7 @@ animation = &"Run_Up_Right"
 [node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor3/Sword1"]
 visible = false
 scale = Vector2(0.5, 0.5)
-sprite_frames = ExtResource("15_s82gg")
+sprite_frames = ExtResource("15_svo8r")
 animation = &"Run_Up_Right"
 
 [node name="Sword2" type="Node2D" parent="PlayerAnimations/Armor3"]
@@ -2427,7 +2360,7 @@ animation = &"Run_Up_Right"
 [node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor3/Sword2"]
 visible = false
 scale = Vector2(0.5, 0.5)
-sprite_frames = ExtResource("16_03qri")
+sprite_frames = ExtResource("16_ur52t")
 animation = &"Run_Up_Right"
 
 [node name="Sword3" type="Node2D" parent="PlayerAnimations/Armor3"]
@@ -2435,8 +2368,8 @@ animation = &"Run_Up_Right"
 [node name="Animation" type="AnimatedSprite2D" parent="PlayerAnimations/Armor3/Sword3"]
 visible = false
 scale = Vector2(0.5, 0.5)
-sprite_frames = ExtResource("17_5ncav")
-animation = &"Run_Up_Right"
+sprite_frames = ExtResource("17_qssvx")
+animation = &"Attack1Run_Down"
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -2445,10 +2378,11 @@ sprite_frames = SubResource("SpriteFrames_ddi15")
 animation = &"Run_Up_Right"
 
 [node name="CutAnimation" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(0, 5.68434e-14)
-scale = Vector2(0.241627, 0.241627)
-sprite_frames = SubResource("SpriteFrames_pwiwe")
-animation = &"Axe"
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("24_jk0wt")
+animation = &"mine_down_left"
 
 [node name="Body" type="Area2D" parent="."]
 

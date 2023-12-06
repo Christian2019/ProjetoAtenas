@@ -242,3 +242,9 @@ var poseidon_tentacle=preload("res://Scenes/Game/Classes/Warrior/WarriorUltimate
 var eletrified =preload("res://Scenes/Game/Math_controller/Effects/Electrified.tscn")
 var twister = preload("res://Scenes/Game/Math_controller/Effects/Twister.tscn")
 var disorientation= preload("res://Scenes/Game/Math_controller/Effects/Disorientation.tscn")
+
+#Mining Animations
+var mine_leather = preload("res://Assets/Animations/Mininig/mine_leather_armor.tres")
+var mine_normal = preload("res://Assets/Animations/Mininig/mine_normal_armor.tres")
+var mine_gold = preload("res://Assets/Animations/Mininig/mine_gold_armor.tres")
+var mine_diamond = preload("res://Assets/Animations/Mininig/mine_diamond_armor.tres")
