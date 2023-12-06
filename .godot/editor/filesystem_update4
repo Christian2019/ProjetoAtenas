@@ -21,3 +21,10 @@ res://Assets/Animations/Diamond/diamond_armor_wood_sword.tres
 res://Assets/Animations/Diamond/diamond_armor_normal_sword.tres
 res://Assets/Animations/Diamond/diamond_armor_gold_sword.tres
 res://Assets/Animations/Diamond/diamond_armor_diamond_sword.tres
+res://Scenes/Game/player.tscn
+res://Scripts/Game/player.gd
+res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.tscn
+res://Scenes/Game/Wave_controller.tscn
+res://Scenes/Game/Constructions/Temple/Upgrade/defender_point.tscn
+res://Scenes/Game/Constructions/Temple/UpgradeOptions/DefenderPointOptions.tscn
+res://Scenes/Game/Constructions/Temple/Upgrade/personagem.tscn

@@ -2382,7 +2382,7 @@ visible = false
 position = Vector2(0, 5.68434e-14)
 scale = Vector2(0.5, 0.5)
 sprite_frames = ExtResource("24_jk0wt")
-animation = &"mine_down_left"
+animation = &"mine_down"
 
 [node name="Body" type="Area2D" parent="."]
 

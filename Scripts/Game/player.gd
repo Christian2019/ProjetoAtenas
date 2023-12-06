@@ -118,7 +118,7 @@ func change_animation():
 	elif current_level_armor == 3:
 		cutAnim.set_sprite_frames(PreLoads.mine_diamond)
 
-func _process(__delta):
+func _process(_delta):
 	if (dead):
 		return
 	
