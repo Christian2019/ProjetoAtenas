@@ -1,25 +1,80 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjkiw1fl7gm4d"]
+[gd_scene load_steps=15 format=3 uid="uid://bjkiw1fl7gm4d"]
 
 [ext_resource type="Script" path="res://Scripts/Instances/Ryuseiken.gd" id="1_1hsdb"]
-[ext_resource type="Texture2D" uid="uid://cwf3hgvukhm2f" path="res://Assets/Images/Enemies/id015/energyBallAnimation/scene00118.png" id="2_oialc"]
-[ext_resource type="Texture2D" uid="uid://csw1huf0438dy" path="res://Assets/Images/Enemies/id015/energyBallAnimation/scene00121.png" id="3_yfm1f"]
-[ext_resource type="Texture2D" uid="uid://5tuq766b84o1" path="res://Assets/Images/Enemies/id015/energyBallAnimation/scene00124.png" id="4_fexss"]
-[ext_resource type="Texture2D" uid="uid://clcxovru184mm" path="res://Assets/Images/Enemies/id015/energyBallAnimation/scene00127.png" id="5_g30qf"]
+[ext_resource type="Texture2D" uid="uid://d274c0unfafxh" path="res://Assets/Images/Projectiles/EsferaEnergia.png" id="2_cyhmd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vekeu"]
+atlas = ExtResource("2_cyhmd")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqwng"]
+atlas = ExtResource("2_cyhmd")
+region = Rect2(40, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eh6ow"]
+atlas = ExtResource("2_cyhmd")
+region = Rect2(80, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bstbr"]
+atlas = ExtResource("2_cyhmd")
+region = Rect2(120, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ow424"]
+atlas = ExtResource("2_cyhmd")
+region = Rect2(160, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0l6kc"]
+atlas = ExtResource("2_cyhmd")
+region = Rect2(0, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvf7l"]
+atlas = ExtResource("2_cyhmd")
+region = Rect2(40, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnhra"]
+atlas = ExtResource("2_cyhmd")
+region = Rect2(80, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fysw6"]
+atlas = ExtResource("2_cyhmd")
+region = Rect2(120, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8in28"]
+atlas = ExtResource("2_cyhmd")
+region = Rect2(160, 40, 40, 40)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_60aqq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_oialc")
+"texture": SubResource("AtlasTexture_vekeu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_yfm1f")
+"texture": SubResource("AtlasTexture_bqwng")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_fexss")
+"texture": SubResource("AtlasTexture_eh6ow")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_g30qf")
+"texture": SubResource("AtlasTexture_bstbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ow424")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0l6kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvf7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnhra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fysw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8in28")
 }],
 "loop": true,
 "name": &"default",
@@ -34,11 +89,10 @@ scale = Vector2(0.2, 0.2)
 script = ExtResource("1_1hsdb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(10, 0)
-scale = Vector2(0.473935, 0.473935)
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_60aqq")
 autoplay = "default"
-frame_progress = 0.373886
+frame_progress = 0.271585
 
 [node name="Area2D" type="Area2D" parent="."]
 

@@ -1,12 +1,10 @@
 extends Node2D
-
+var speedScale=0.2
 func _ready():
 	global_position=Global.player.global_position
+	$Sprite2D.scale=Vector2(0,0)
 
 func _process(delta):
-	
-	if $AnimatedSprite2D.frame==$AnimatedSprite2D.sprite_frames.get_frame_count("default")-1:
-		$AnimatedSprite2D.visible=false
-		
-	if !$AnimatedSprite2D.visible and !$AudioStreamPlayer.is_playing():
+	$Sprite2D.scale+=Vector2(speedScale,speedScale)
+	if $Sprite2D.scale.x>10:
 		queue_free()

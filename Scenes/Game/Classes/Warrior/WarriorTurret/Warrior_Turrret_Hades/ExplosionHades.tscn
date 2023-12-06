@@ -1,41 +1,52 @@
-[gd_scene load_steps=12 format=3 uid="uid://pyamlwhpgwf2"]
+[gd_scene load_steps=11 format=3 uid="uid://pyamlwhpgwf2"]
 
 [ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_Turret/Hades/ExplosionHades.gd" id="1_3n5ey"]
-[ext_resource type="Texture2D" uid="uid://c46wvec0nqar2" path="res://Assets/Images/Player/Turrets/turretHades/purpleExplosion/ep01.png" id="1_u7mxq"]
-[ext_resource type="Texture2D" uid="uid://cmfnbjeyflg2t" path="res://Assets/Images/Player/Turrets/turretHades/purpleExplosion/ep04.png" id="2_oxk3c"]
-[ext_resource type="Texture2D" uid="uid://dchpejq4gu6wg" path="res://Assets/Images/Player/Turrets/turretHades/purpleExplosion/ep07.png" id="3_4uo1i"]
-[ext_resource type="Texture2D" uid="uid://byqwlfyff21l1" path="res://Assets/Images/Player/Turrets/turretHades/purpleExplosion/ep10.png" id="4_8ncf3"]
-[ext_resource type="Texture2D" uid="uid://cfrtlfo5tyo1o" path="res://Assets/Images/Player/Turrets/turretHades/purpleExplosion/ep13.png" id="5_6ubcr"]
-[ext_resource type="Texture2D" uid="uid://faxw4jejaocu" path="res://Assets/Images/Player/Turrets/turretHades/purpleExplosion/ep16.png" id="6_uik54"]
-[ext_resource type="Texture2D" uid="uid://b17ln1sbw70rg" path="res://Assets/Images/Player/Turrets/turretHades/purpleExplosion/ep19.png" id="7_1fp0m"]
-[ext_resource type="Texture2D" uid="uid://dm72ju6ca7d75" path="res://Assets/Images/Player/Turrets/turretHades/purpleExplosion/ep22.png" id="8_4s3vu"]
+[ext_resource type="Texture2D" uid="uid://ccp6wgt4dj03r" path="res://Assets/Images/Projectiles/ExplosionAnimation.png" id="2_qlnbg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8onls"]
+atlas = ExtResource("2_qlnbg")
+region = Rect2(0, 0, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mncn"]
+atlas = ExtResource("2_qlnbg")
+region = Rect2(352, 0, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hmry"]
+atlas = ExtResource("2_qlnbg")
+region = Rect2(704, 0, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ms1dh"]
+atlas = ExtResource("2_qlnbg")
+region = Rect2(0, 280, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tkqt"]
+atlas = ExtResource("2_qlnbg")
+region = Rect2(352, 280, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0l855"]
+atlas = ExtResource("2_qlnbg")
+region = Rect2(704, 280, 352, 280)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1g2er"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_u7mxq")
+"texture": SubResource("AtlasTexture_8onls")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_oxk3c")
+"texture": SubResource("AtlasTexture_3mncn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_4uo1i")
+"texture": SubResource("AtlasTexture_5hmry")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_8ncf3")
+"texture": SubResource("AtlasTexture_ms1dh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_6ubcr")
+"texture": SubResource("AtlasTexture_0tkqt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_uik54")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_1fp0m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_4s3vu")
+"texture": SubResource("AtlasTexture_0l855")
 }],
 "loop": true,
 "name": &"default",
@@ -49,18 +60,18 @@ scale = Vector2(0.2, 0.2)
 script = ExtResource("1_3n5ey")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(1.5, 1.5)
+scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_1g2er")
 autoplay = "default"
-frame_progress = 0.0616783
+frame_progress = 0.00197068
 
-[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
-scale = Vector2(2, 1.55333)
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(3, 2.32999)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1.66663, -0.515045)
 scale = Vector2(14.237, 14.237)
 shape = SubResource("CircleShape2D_ddoa7")
 
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
-[connection signal="area_entered" from="AnimatedSprite2D/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

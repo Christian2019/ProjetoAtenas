@@ -1,3 +1,4 @@
+Sprite2D
 Button
 Node2D
 ColorRect
@@ -5,7 +6,6 @@ CollisionShape2D
 Area2D
 TextureButton
 Label
-Sprite2D
 AnimatedSprite2D
 Timer
 VideoStreamPlayer

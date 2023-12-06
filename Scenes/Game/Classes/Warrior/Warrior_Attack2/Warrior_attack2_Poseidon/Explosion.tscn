@@ -1,37 +1,52 @@
 [gd_scene load_steps=11 format=3 uid="uid://m4d3h3t4vkgd"]
 
 [ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_attack2/Warrior_attack2_Poseidon/Explosion.gd" id="1_tsb2p"]
-[ext_resource type="Texture2D" uid="uid://dlqhxsqkwov8y" path="res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon/scene00046.png" id="2_sk8lv"]
-[ext_resource type="Texture2D" uid="uid://dc2xdcu1t7be5" path="res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon/scene00049.png" id="3_h0tdq"]
-[ext_resource type="Texture2D" uid="uid://b23fte7rbukrm" path="res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon/scene00052.png" id="4_mswm6"]
-[ext_resource type="Texture2D" uid="uid://dl376361wu8l6" path="res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon/scene00055.png" id="5_42emp"]
-[ext_resource type="Texture2D" uid="uid://qt4muydn4cfd" path="res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon/scene00058.png" id="6_73vit"]
-[ext_resource type="Texture2D" uid="uid://cx0yv3moxfafr" path="res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon/scene00061.png" id="7_rwny0"]
-[ext_resource type="Texture2D" uid="uid://85g51jhax7ra" path="res://Assets/Images/Player/Attack2/Poseidon/ExplosionAttack2Poseidon/scene00064.png" id="8_37gq1"]
+[ext_resource type="Texture2D" uid="uid://csb1dabjssguf" path="res://Assets/Images/Projectiles/BlueExplosion.png" id="2_q255g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0gtu"]
+atlas = ExtResource("2_q255g")
+region = Rect2(0, 0, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmf7e"]
+atlas = ExtResource("2_q255g")
+region = Rect2(352, 0, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghl8n"]
+atlas = ExtResource("2_q255g")
+region = Rect2(704, 0, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ve3c"]
+atlas = ExtResource("2_q255g")
+region = Rect2(0, 280, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6mb6"]
+atlas = ExtResource("2_q255g")
+region = Rect2(352, 280, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p82ls"]
+atlas = ExtResource("2_q255g")
+region = Rect2(704, 280, 352, 280)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_60aqq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_sk8lv")
+"texture": SubResource("AtlasTexture_s0gtu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_h0tdq")
+"texture": SubResource("AtlasTexture_cmf7e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_mswm6")
+"texture": SubResource("AtlasTexture_ghl8n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_42emp")
+"texture": SubResource("AtlasTexture_5ve3c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_73vit")
+"texture": SubResource("AtlasTexture_x6mb6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_rwny0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_37gq1")
+"texture": SubResource("AtlasTexture_p82ls")
 }],
 "loop": true,
 "name": &"default",
@@ -45,16 +60,14 @@ scale = Vector2(0.2, 0.2)
 script = ExtResource("1_tsb2p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1065, 155)
 scale = Vector2(3, 2.33)
 sprite_frames = SubResource("SpriteFrames_60aqq")
 autoplay = "default"
-frame_progress = 0.542874
+frame_progress = 0.591229
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
-position = Vector2(350, -55.794)
 scale = Vector2(14.237, 14.237)
 shape = SubResource("CircleShape2D_ddoa7")
 
