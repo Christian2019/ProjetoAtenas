@@ -2,7 +2,7 @@ extends Node2D
 
 ##MEXER
 #0-noGod 1-zeus 2-poseidon 3-hades 4-ZeusPoseidon 5-ZeusHades 6-HadesPoseidon
-var skillGod=5
+var skillGod=4
 #0-hades 1-poseidon 2-zeus
 var godType=2
 #0-attack1 1-attack2 2-turret 3-dash 4-ultimate
@@ -18,47 +18,46 @@ var colors=[Color8(117,0,196),Color8(71,126,255),Color8(249,218,101),Color8(0,22
 
 var cd
 
+#Poseidon
+var warrior_attack1_divine_poseidon_extraDamagePerConsHit
+var warrior_attack1_divine_poseidon_heavyDamageInstances
 #Zeus
 var warrior_attack1_divine_zeus_lightningDamage
 var warrior_attack1_divine_zeus_extraBounces
 var warrior_attack1_divine_zeus_extraPercentDamage
 
-#Hades
-var warrior_attack1_divine_hades_attackSpeedBonusPercent
-var warrior_attack1_divine_hades_frenzyPercent
-
 func start():
 	sellPrice=Global.ScrollController.getCurrentScrollPrice(self)
 	cd=0.5
 	passive=AllSkillsValues.warrior_attack1_divine_zeus_passive
-	passive2=AllSkillsValues.warrior_attack1_divine_hades_passive
+	passive2=AllSkillsValues.warrior_attack1_divine_poseidon_passive
 	
 	#Zeus
 	warrior_attack1_divine_zeus_lightningDamage=AllSkillsValues.warrior_attack1_divine_zeus_lightningDamage
 	warrior_attack1_divine_zeus_extraBounces=AllSkillsValues.warrior_attack1_divine_zeus_extraBounces
 	warrior_attack1_divine_zeus_extraPercentDamage=AllSkillsValues.warrior_attack1_divine_zeus_extraPercentDamage
 	
-	#Hades
-	warrior_attack1_divine_hades_attackSpeedBonusPercent=AllSkillsValues.warrior_attack1_divine_hades_attackSpeedBonusPercent
-	warrior_attack1_divine_hades_frenzyPercent=AllSkillsValues.warrior_attack1_divine_hades_frenzyPercent
+	#Poseidon
+	warrior_attack1_divine_poseidon_extraDamagePerConsHit=AllSkillsValues.warrior_attack1_divine_poseidon_extraDamagePerConsHit
+	warrior_attack1_divine_poseidon_heavyDamageInstances=AllSkillsValues.warrior_attack1_divine_poseidon_heavyDamageInstances
 
 	
 func addPassiveFunction():
 	#Poseidon
-	#Global.player.percentDamage+=passive2
+	Global.player.percentDamage+=passive2
 	
 	#Hades
-	Global.player.baseMaxHp+=passive2
+	#Global.player.baseMaxHp+=passive2
 	
 	#Zeus
 	Global.player.baseDamage+=passive
 	
 func removePassiveFunction():
 	#Poseidon
-	#Global.player.percentDamage-=passive2
+	Global.player.percentDamage-=passive2
 	
 	#Hades
-	Global.player.baseMaxHp-=passive2
+	#Global.player.baseMaxHp-=passive2
 	
 	#Zeus
 	Global.player.baseDamage-=passive
@@ -91,9 +90,9 @@ func updateScroll(scroll):
 	
 	#Somente se for divine segundo deus
 	#0-hades 1-poseidon 2-zeus
-	scroll.get_node("Big/AnimatedSprite2D2").frame=0
-	scroll.get_node("Big/Labels/God/value3").text="hades"
-	scroll.get_node("Big/Labels/God/value3").set("theme_override_colors/font_color", colors[0])
+	scroll.get_node("Big/AnimatedSprite2D2").frame=1
+	scroll.get_node("Big/Labels/God/value3").text="poseidon"
+	scroll.get_node("Big/Labels/God/value3").set("theme_override_colors/font_color", colors[1])
 	
 	#Olhar sempre
 	scroll.get_node("Big/Labels/God/value").text="zeus"
@@ -101,8 +100,8 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/SkillType/value").text="attack1"
 	scroll.get_node("Big/Labels/Cooldown/var").text="cooldown: "
 	scroll.get_node("Big/Labels/Cooldown/value").text=str(cd)+"s"
-	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive)+" damage "+"+ "+str(passive2)+" max hp " 
-	scroll.get_node("Big/Labels/Active/value").text="your attack1 emits a chain-lightning that deals "+str(warrior_attack1_divine_zeus_lightningDamage)+" sd when you damage an enemy.  produce "+str(warrior_attack1_divine_zeus_extraBounces)+" extra bounce. "+"gain temporary "+str(warrior_attack1_divine_hades_attackSpeedBonusPercent*100) +"% attack speed for 5 seconds after hitting an enemy."
-	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="enemies hit by attack1 get electrified* " +str((warrior_attack1_divine_zeus_extraPercentDamage-1)*100)+"%."+" gain frenezy* "+str(warrior_attack1_divine_hades_frenzyPercent*100)+"%."
+	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive)+" damage "+"+ "+str(passive2*100)+"% damage" 
+	scroll.get_node("Big/Labels/Active/value").text="your attack1 emits a chain-lightning that deals "+str(warrior_attack1_divine_zeus_lightningDamage)+" sd when you damage an enemy.  produce "+str(warrior_attack1_divine_zeus_extraBounces)+" extra bounce. "+" gain water damage* "+ str(warrior_attack1_divine_poseidon_extraDamagePerConsHit) +" sd"
+	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="enemies hit by attack1 get electrified* " +str((warrior_attack1_divine_zeus_extraPercentDamage-1)*100)+"%."+" after 20 hits with attack1 your next attack2 cause heavyDamage* "+ str(warrior_attack1_divine_poseidon_heavyDamageInstances)
 	#scroll.get_node("Big/Labels/ExtraInfo").visible=false
-	scroll.get_node("Big/Labels/ExtraInfo/value").text="electrified*: receive extra x damage from all sources for 5 seconds."+" frenezy*: gain  life steal for every x of your attack speed."
+	scroll.get_node("Big/Labels/ExtraInfo/value").text="electrified*: receive extra x damage from all sources for 5 seconds."+" heavyDamage*: x instances of attack1 in a short time. water damage*: extra x sd against same enemy."

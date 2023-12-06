@@ -1,12 +1,11 @@
 res://default_env.tres
+res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack1/Divine/Scroll_Warrior_Attack1_ZeusPoseidon.tscn
+res://Scripts/Game/Scrolls/Warrior/WarriorAttack1/Scroll_Warrior_Attack1_ZeusPoseidon.gd
 res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack1/Divine/Scroll_Warrior_Attack1_ZeusHades.tscn
 res://Scripts/Game/Scrolls/Warrior/WarriorAttack1/Scroll_Warrior_Attack1_ZeusHades.gd
-res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack1/Divine/Scroll_Warrior_Attack1_HadesPoseidon.tscn
-res://Scripts/Game/Scrolls/Warrior/WarriorAttack1/Scroll_Warrior_Attack1_HadesPoseidon.gd
-res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack1/Scroll_Warrior_Attack1_Zeus.tscn
-res://Scripts/Game/Scrolls/Warrior/WarriorAttack1/Scroll_Warrior_Attack1_Zeus.gd
-res://Scripts/AutoLoads/PreLoads.gd
 res://Scenes/Game/Constructions/Temple/Shop/ShopScreen.tscn
-res://Scripts/Zones/Temple/Shop/ShopScreen.gd
 res://Scenes/Game/player.tscn
 res://Scenes/Game/Math_controller/Math_controller.tscn
+res://Scenes/Game/ScrollsController/Scrolls/Warrior/Warrior_Attack1/Divine/Scroll_Warrior_Attack1_HadesPoseidon.tscn
+res://Scripts/AutoLoads/PreLoads.gd
+res://Scripts/Zones/Temple/Shop/ShopScreen.gd
