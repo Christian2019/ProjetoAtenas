@@ -1,5 +1,9 @@
 res://default_env.tres
-res://Scenes/Game/player.tscn
+res://Scenes/Game/HUD.tscn
+res://Assets/Animations/Mininig/mine_leather_armor.tres
+res://Assets/Animations/Mininig/mine_normal_armor.tres
+res://Assets/Animations/Mininig/mine_gold_armor.tres
+res://Assets/Animations/Mininig/mine_diamond_armor.tres
 res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/DefenderPointOptions.gd
 res://Assets/Animations/Leather/leather_armor_wood_sword.tres
 res://Assets/Animations/Leather/leather_armor_normal_sword.tres
@@ -17,15 +21,3 @@ res://Assets/Animations/Diamond/diamond_armor_wood_sword.tres
 res://Assets/Animations/Diamond/diamond_armor_normal_sword.tres
 res://Assets/Animations/Diamond/diamond_armor_gold_sword.tres
 res://Assets/Animations/Diamond/diamond_armor_diamond_sword.tres
-res://Assets/Animations/Mininig/mine_leather_armor.tres
-res://Assets/Animations/Mininig/mine_diamond_armor.tres
-res://Assets/Animations/Mininig/mine_gold_armor.tres
-res://Assets/Animations/Mininig/mine_normal_armor.tres
-res://Scripts/Game/player.gd
-res://Scripts/AutoLoads/PreLoads.gd
-res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.tscn
-res://Scenes/Game/Wave_controller.tscn
-res://Scenes/Game/Constructions/Temple/Upgrade/defender_point.tscn
-res://Scenes/Game/Constructions/Temple/UpgradeOptions/DefenderPointOptions.tscn
-res://Scenes/Game/Constructions/Temple/Upgrade/personagem.tscn
-res://Scripts/Game/PlayerMining.gd

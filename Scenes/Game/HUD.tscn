@@ -15,9 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://b8bt7vnrbwgnq" path="res://Assets/Images/HUD/waves/wave11.png" id="20_7d1ov"]
 [ext_resource type="Texture2D" uid="uid://dkdhjk3ijj8br" path="res://Assets/Images/HUD/waves/wave12.png" id="21_gi4ho"]
 [ext_resource type="Texture2D" uid="uid://d1h8iml8hxpuu" path="res://Assets/Images/HUD/waves/wave13.png" id="22_dqewb"]
-[ext_resource type="Texture2D" uid="uid://2krbaswfgqvr" path="res://Assets/Images/HUD/waves/wave14.png" id="23_rgjax"]
+[ext_resource type="Texture2D" uid="uid://ucbeycoc7ycc" path="res://Assets/Images/HUD/waves/wave14.png" id="23_rgjax"]
 [ext_resource type="Texture2D" uid="uid://ctg762m2e8oo2" path="res://Assets/Images/HUD/waves/wave15.png" id="24_hi4v3"]
-[ext_resource type="Texture2D" uid="uid://bdkh7uydrw7hp" path="res://Assets/Images/HUD/waves/wave16.png" id="25_p37ns"]
+[ext_resource type="Texture2D" uid="uid://bo50yglysj7m2" path="res://Assets/Images/HUD/waves/wave16.png" id="25_p37ns"]
 [ext_resource type="Texture2D" uid="uid://biq4y3oyype2c" path="res://Assets/Images/HUD/waves/wave17.png" id="26_v5m2a"]
 [ext_resource type="Texture2D" uid="uid://2pcdgtdowi0p" path="res://Assets/Images/HUD/waves/wave18.png" id="27_50f01"]
 [ext_resource type="Texture2D" uid="uid://gawpunthm68w" path="res://Assets/Images/HUD/waves/wave19.png" id="28_b4n51"]
@@ -587,8 +587,9 @@ vertical_alignment = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wave"]
 position = Vector2(397, 133)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_g7qxd")
-frame = 10
+frame = 18
 
 [node name="LevelUp" type="Node2D" parent="."]
 position = Vector2(-136, 103)
