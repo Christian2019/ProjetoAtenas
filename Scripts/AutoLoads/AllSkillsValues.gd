@@ -35,6 +35,9 @@ var warrior_attack1_divine_poseidon_extraDamagePerConsHit=10
 var warrior_attack1_divine_poseidon_heavyDamageInstances=20
 #Zeus
 var warrior_attack1_divine_zeus_passive=16
+var warrior_attack1_divine_zeus_lightningDamage=40
+var warrior_attack1_divine_zeus_extraBounces=40
+var warrior_attack1_divine_zeus_extraPercentDamage=2
 
 ##Normal
 #Hades
@@ -49,6 +52,9 @@ var warrior_attack1_poseidon_heavyDamageInstances=10
 
 #Zeus
 var warrior_attack1_zeus_passive=[1,2,4,8]
+var warrior_attack1_zeus_lightningDamage=[10,12,15,20]
+var warrior_attack1_zeus_extraBounces=[5,10,15,20]
+var warrior_attack1_zeus_extraPercentDamage=1.5
 
 ###ATTACK2
 ##Divine

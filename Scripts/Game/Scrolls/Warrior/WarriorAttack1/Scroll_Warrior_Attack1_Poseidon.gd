@@ -23,7 +23,7 @@ var warrior_attack1_poseidon_heavyDamageInstances
 
 func start():
 	sellPrice=Global.ScrollController.getCurrentScrollPrice(self)
-	cd=1
+	cd=0.5
 	passive=AllSkillsValues.warrior_attack1_poseidon_passive
 	#passive2=AllSkillsValues.warrior_turret_divine_poseidon_passive
 	

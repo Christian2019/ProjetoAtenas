@@ -38,13 +38,10 @@ var extraPercentDamage=0
 var divineReference
 
 func _ready():
-	
 	attackSpeedModifier()
 	Global.timerCreator("enableReverseOrder",max_duration/2,[],self)
 	$Animation.visible=false
 	qualityStatus()
-
-
 
 func attackSpeedModifier():
 	max_duration=max_duration/Global.player.attack_Speed
@@ -52,23 +49,22 @@ func attackSpeedModifier():
 
 func qualityStatus():
 	if ( quality=="common"):
-		lightningDamage=10
-		extraBounces=5
+		lightningDamage=AllSkillsValues.warrior_attack1_zeus_lightningDamage[0]
+		extraBounces=AllSkillsValues.warrior_attack1_zeus_extraBounces[0]
 	elif ( quality=="rare"):
-		lightningDamage=12
-		extraBounces=10
+		lightningDamage=AllSkillsValues.warrior_attack1_zeus_lightningDamage[1]
+		extraBounces=AllSkillsValues.warrior_attack1_zeus_extraBounces[1]
 	elif ( quality=="epic"):
-		lightningDamage=15
-		extraBounces=15
+		lightningDamage=AllSkillsValues.warrior_attack1_zeus_lightningDamage[2]
+		extraBounces=AllSkillsValues.warrior_attack1_zeus_extraBounces[2]
 	elif ( quality=="legendary"):
-		lightningDamage=20
-		extraPercentDamage=1.5
-		extraBounces=20
+		lightningDamage=AllSkillsValues.warrior_attack1_zeus_lightningDamage[3]
+		extraPercentDamage=AllSkillsValues.warrior_attack1_zeus_extraPercentDamage
+		extraBounces=AllSkillsValues.warrior_attack1_zeus_extraBounces[3]
 	elif ( quality=="divine"):
-		lightningDamage=40
-		extraPercentDamage=2
-		extraBounces=40
-
+		lightningDamage=AllSkillsValues.warrior_attack1_divine_zeus_lightningDamage
+		extraPercentDamage=AllSkillsValues.warrior_attack1_divine_zeus_extraPercentDamage
+		extraBounces=AllSkillsValues.warrior_attack1_divine_zeus_extraBounces
 
 func _process(_delta):
 	
