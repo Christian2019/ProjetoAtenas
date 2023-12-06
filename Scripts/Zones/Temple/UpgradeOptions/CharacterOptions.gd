@@ -31,6 +31,7 @@ var wood
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(Minerio)
 	#Texturas Botão
 	$Imagem.texture_normal = texture_normal
 	$Imagem.texture_hover = texture_hover
@@ -150,6 +151,8 @@ func _on_imagem_pressed():
 			Global.player.baseDamage = baseDamage
 			Global.player.percentCritDamage = percentCritDamage
 			Global.player.dracma -= qtdDracma
+			Global.player.current_level_sword = get_parent().get_parent().current_level_attack
+			Global.player.change_animation()
 			decreaseOre()
 			get_node("Aquired").visible=true
 	elif(whatUpgrades=="Defense"):  
@@ -159,6 +162,8 @@ func _on_imagem_pressed():
 			Global.player.armor = armor
 			Global.player.maxDodge = maxDodge
 			Global.player.dracma -= qtdDracma
+			Global.player.current_level_armor = get_parent().get_parent().current_level_defense
+			Global.player.change_animation()
 			decreaseOre()
 			get_node("Aquired").visible=true
 	pass # Replace with function body.

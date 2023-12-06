@@ -1,32 +1,26 @@
-[gd_scene load_steps=28 format=3 uid="uid://cooqeupudot5l"]
+[gd_scene load_steps=22 format=3 uid="uid://cooqeupudot5l"]
 
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/Defender Point.gd" id="1_so6l2"]
 [ext_resource type="Texture2D" uid="uid://cv8ldy7ml3jt4" path="res://Assets/Images/HUD/Loja/BackgroundUpgrade2.png" id="2_icrsw"]
-[ext_resource type="PackedScene" uid="uid://dpieqc71pk5sp" path="res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/DefenderPointOptions.tscn" id="3_moltb"]
+[ext_resource type="PackedScene" uid="uid://dpieqc71pk5sp" path="res://Scenes/Game/Constructions/Temple/Upgrade/UpgradeOptions/DefenderPointOptions.tscn" id="3_moltb"]
 [ext_resource type="Texture2D" uid="uid://cp6e0ckcup300" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 50.png" id="4_qyqwo"]
 [ext_resource type="Texture2D" uid="uid://bb6k5j16yp2at" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 27.png" id="5_3yrpk"]
 [ext_resource type="Texture2D" uid="uid://b2tr7gteesv1y" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 48.png" id="6_jhna3"]
 [ext_resource type="Texture2D" uid="uid://rycyswfok5vg" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 24.png" id="7_1pael"]
 [ext_resource type="Texture2D" uid="uid://ci7fqe6tbvj30" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 49.png" id="8_2dycd"]
 [ext_resource type="Texture2D" uid="uid://bu46lhs01bcme" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 25.png" id="9_j4phm"]
-[ext_resource type="Texture2D" uid="uid://maoc8uvim6yi" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 47.png" id="10_xmou0"]
-[ext_resource type="Texture2D" uid="uid://doynnh7fpbof" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Torre/Group 26.png" id="11_v642v"]
 [ext_resource type="Texture2D" uid="uid://chvrs06naamlr" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/UpgradeBasico.png" id="12_2qt4m"]
 [ext_resource type="Texture2D" uid="uid://c48cryi3covp5" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/Group 27.png" id="13_7msxv"]
 [ext_resource type="Texture2D" uid="uid://ckcat5e32anfx" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/UpgradeBom.png" id="14_x5i7r"]
 [ext_resource type="Texture2D" uid="uid://b0dh8i3p18ctv" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/Group 24.png" id="15_ndqou"]
 [ext_resource type="Texture2D" uid="uid://cvqn2lhkpcd2v" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/UpgradeOtimo.png" id="16_kdgtr"]
 [ext_resource type="Texture2D" uid="uid://ft6mtrl5n7e5" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/Group 25.png" id="17_mif5m"]
-[ext_resource type="Texture2D" uid="uid://brt23tn7qgapj" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/UpgradeFinal.png" id="18_qwn3v"]
-[ext_resource type="Texture2D" uid="uid://b0kmclpemayqm" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Centro/Group 26.png" id="19_ibauv"]
 [ext_resource type="Texture2D" uid="uid://qh1a7w1p65yt" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/UpgradeBasico.png" id="20_0i2gv"]
 [ext_resource type="Texture2D" uid="uid://b13358bq50xga" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/DesativoBasico.png" id="21_57stc"]
 [ext_resource type="Texture2D" uid="uid://dsfqs7g0ddtr3" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/UpgradeBom.png" id="22_gvkm7"]
 [ext_resource type="Texture2D" uid="uid://c3iemunvmtdv5" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/DesativoPrata.png" id="23_lpocn"]
 [ext_resource type="Texture2D" uid="uid://cjvp10vgpaomu" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/UpgradeOtimo.png" id="24_tjebs"]
 [ext_resource type="Texture2D" uid="uid://clax5xfamjwnk" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/DesativoOuro.png" id="25_4xtmu"]
-[ext_resource type="Texture2D" uid="uid://bjvno8ccudkkp" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/UpgradeFinal.png" id="26_dakrs"]
-[ext_resource type="Texture2D" uid="uid://d4i2faw2nmtrw" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Piscina/DesativoFinal.png" id="27_csak7"]
 
 [node name="Defender Point" type="Node2D"]
 visible = false
@@ -38,7 +32,7 @@ scale = Vector2(0.530021, 0.504915)
 texture = ExtResource("2_icrsw")
 
 [node name="Sentinela" type="Node2D" parent="."]
-position = Vector2(128, -11)
+position = Vector2(229, -20)
 
 [node name="Level1" parent="Sentinela" instance=ExtResource("3_moltb")]
 offset_left = 64.0
@@ -52,8 +46,10 @@ titulo = "Tower Lvl 1"
 colorTitulo = Color(0, 0.486275, 0, 1)
 whatUpgrades = "Tower"
 qtdDracma = 2500
-qtdMinerios = 10
 Minerio = "wood"
+bulletSpeed = 4
+reloadTime = 4
+damageBullet = 2
 texture_normal = ExtResource("4_qyqwo")
 texture_hover = ExtResource("5_3yrpk")
 
@@ -70,8 +66,10 @@ titulo = "Tower Lvl 2"
 colorTitulo = Color(0.309804, 0.517647, 1, 1)
 whatUpgrades = "Tower"
 qtdDracma = 4000
-qtdMinerios = 10
 Minerio = "stone"
+bulletSpeed = 5
+reloadTime = 3
+damageBullet = 3
 texture_normal = ExtResource("6_jhna3")
 texture_hover = ExtResource("7_1pael")
 
@@ -82,36 +80,20 @@ offset_right = 392.0
 offset_bottom = 110.0
 focus_neighbor_left = NodePath("../Level2")
 focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Defender Point")
-focus_neighbor_right = NodePath("../Level4")
 focus_neighbor_bottom = NodePath("../../Centro/Level3")
 titulo = "Tower Lvl 3"
 colorTitulo = Color(0.654902, 0.313726, 1, 1)
 whatUpgrades = "Tower"
 qtdDracma = 5500
-qtdMinerios = 10
 Minerio = "gold"
+bulletSpeed = 6
+reloadTime = 2
+damageBullet = 4
 texture_normal = ExtResource("8_2dycd")
 texture_hover = ExtResource("9_j4phm")
 
-[node name="Level4" parent="Sentinela" instance=ExtResource("3_moltb")]
-offset_left = 553.0
-offset_top = 110.0
-offset_right = 553.0
-offset_bottom = 110.0
-focus_neighbor_left = NodePath("../Level3")
-focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Defender Point")
-focus_neighbor_bottom = NodePath("../../Centro/Level4")
-titulo = "Tower Lvl 4"
-colorTitulo = Color(1, 0.396078, 0, 1)
-whatUpgrades = "Tower"
-qtdDracma = 7500
-qtdMinerios = 15
-Minerio = "gold"
-texture_normal = ExtResource("10_xmou0")
-texture_hover = ExtResource("11_v642v")
-
 [node name="Centro" type="Node2D" parent="."]
-position = Vector2(100, -102)
+position = Vector2(202, -102)
 
 [node name="Level1" parent="Centro" instance=ExtResource("3_moltb")]
 offset_left = 92.0
@@ -161,7 +143,6 @@ offset_right = 420.0
 offset_bottom = 367.0
 focus_neighbor_left = NodePath("../Level2")
 focus_neighbor_top = NodePath("../../Sentinela/Level3")
-focus_neighbor_right = NodePath("../Level4")
 focus_neighbor_bottom = NodePath("../../Piscina/Level3")
 titulo = "Center Lvl 3"
 colorTitulo = Color(0.654902, 0.313726, 1, 1)
@@ -175,28 +156,8 @@ nextHealDealy = 0.02
 texture_normal = ExtResource("16_kdgtr")
 texture_hover = ExtResource("17_mif5m")
 
-[node name="Level4" parent="Centro" instance=ExtResource("3_moltb")]
-offset_left = 581.0
-offset_top = 367.0
-offset_right = 581.0
-offset_bottom = 367.0
-focus_neighbor_left = NodePath("../Level3")
-focus_neighbor_top = NodePath("../../Sentinela/Level4")
-focus_neighbor_bottom = NodePath("../../Piscina/Level4")
-titulo = "Center Lvl 4"
-colorTitulo = Color(1, 0.396078, 0, 1)
-whatUpgrades = "Center"
-qtdDracma = 7500
-qtdMinerios = 10
-Minerio = "gold"
-heal = 5.0
-maxHp = 9500.0
-nextHealDealy = 0.01
-texture_normal = ExtResource("18_qwn3v")
-texture_hover = ExtResource("19_ibauv")
-
 [node name="Piscina" type="Node2D" parent="."]
-position = Vector2(97, 61)
+position = Vector2(202, 61)
 
 [node name="Level1" parent="Piscina" instance=ExtResource("3_moltb")]
 offset_left = 92.0
@@ -242,7 +203,6 @@ offset_right = 420.0
 offset_bottom = 367.0
 focus_neighbor_left = NodePath("../Level2")
 focus_neighbor_top = NodePath("../../Centro/Level3")
-focus_neighbor_right = NodePath("../Level4")
 titulo = "Pool Lvl 3"
 colorTitulo = Color(0.654902, 0.313726, 1, 1)
 whatUpgrades = "Pool"
@@ -253,21 +213,3 @@ poolHeal = 4.0
 poolHealDelay = 0.03
 texture_normal = ExtResource("24_tjebs")
 texture_hover = ExtResource("25_4xtmu")
-
-[node name="Level4" parent="Piscina" instance=ExtResource("3_moltb")]
-offset_left = 581.0
-offset_top = 367.0
-offset_right = 581.0
-offset_bottom = 367.0
-focus_neighbor_left = NodePath("../Level3")
-focus_neighbor_top = NodePath("../../Centro/Level4")
-titulo = "Pool Lvl 4"
-colorTitulo = Color(1, 0.396078, 0, 1)
-whatUpgrades = "Pool"
-qtdDracma = 7850
-qtdMinerios = 15
-Minerio = "gold"
-poolHeal = 5.0
-poolHealDelay = 0.02
-texture_normal = ExtResource("26_dakrs")
-texture_hover = ExtResource("27_csak7")

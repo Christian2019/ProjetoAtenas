@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/Mineração.gd" id="1_kikr4"]
 [ext_resource type="Texture2D" uid="uid://cuolto2djdbn6" path="res://Assets/Images/HUD/Loja/BackgroundUpgrade.png" id="2_n5u7x"]
-[ext_resource type="PackedScene" uid="uid://3rfb2rkcrutr" path="res://Scenes/Game/Constructions/Temple/UpgradeOptions/MiningOptions.tscn" id="3_dhi6b"]
+[ext_resource type="PackedScene" uid="uid://3rfb2rkcrutr" path="res://Scenes/Game/Constructions/Temple/Upgrade/UpgradeOptions/MiningOptions.tscn" id="3_dhi6b"]
 [ext_resource type="Texture2D" uid="uid://chwrvs0tbfe6w" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Level1.png" id="4_blu34"]
 [ext_resource type="Texture2D" uid="uid://cm4gdwyh5moli" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 27.png" id="5_gbo5q"]
 [ext_resource type="Texture2D" uid="uid://dsu7dgjjcfn88" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 33.png" id="6_dg3xk"]

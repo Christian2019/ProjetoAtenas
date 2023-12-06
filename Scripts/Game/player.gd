@@ -1,9 +1,9 @@
 extends Node2D
 
-var dead = false
+var dead = false 
 
 ##Stats
-var baseMaxHp=1000.0
+var baseMaxHp=100.0
 var maxHpPercentBonus=0
 var maxHp=baseMaxHp
 var hp = maxHp
@@ -53,9 +53,9 @@ var permissions = [
 	]
 
 #Resources
-var wood =1000
-var stone =1000
-var gold =1000
+var wood = 1000000
+var stone = 1000000
+var gold = 1000000
 var dracma=1000000
 var dracmaBag=0
 
@@ -78,9 +78,19 @@ var reverseAlphaChange=false
 
 var animAttacking=false
 
+
+var current_level_sword = 0 
+var current_level_armor = 0
+
+var animation
+var cutAnim
+
 func _ready():
+	cutAnim = $CutAnimation
+	cutAnim.visible=false
 	Global.player = self
-	hpRegenerationFunction()
+	hpRegenerationFunction() 
+	animation = get_node("PlayerAnimations").get_child(current_level_armor).get_child(current_level_sword).get_child(0)
 	playAnimation ("Idle")
 	
 func hpRegenerationFunction():
@@ -91,6 +101,22 @@ func hpRegenerationFunction():
 		if (hp>maxHp):
 			hp=maxHp
 	
+func change_animation():
+	for i in range(0,get_node("PlayerAnimations").get_child_count()):
+		for j in range(0,get_node("PlayerAnimations").get_child(i).get_child_count()):
+			get_node("PlayerAnimations").get_child(i).get_child(j).get_child(0).stop()
+			get_node("PlayerAnimations").get_child(i).get_child(j).get_child(0).visible=false 
+	get_node("PlayerAnimations").get_child(current_level_armor).get_child(current_level_sword).get_child(0).visible=true 
+	animation = get_node("PlayerAnimations").get_child(current_level_armor).get_child(current_level_sword).get_child(0)
+	
+	if current_level_armor == 0:
+		cutAnim.set_sprite_frames(PreLoads.mine_leather)
+	elif current_level_armor == 1:
+		cutAnim.set_sprite_frames(PreLoads.mine_normal)
+	elif current_level_armor == 2:
+		cutAnim.set_sprite_frames(PreLoads.mine_gold)
+	elif current_level_armor == 3:
+		cutAnim.set_sprite_frames(PreLoads.mine_diamond)
 
 func _process(__delta):
 	if (dead):
@@ -100,8 +126,8 @@ func _process(__delta):
 		hp=0
 		dead=true
 		restartGame()
-		return
-	
+		return 
+		
 	multiplierController()
 	animationController()
 	commandController()	
@@ -118,11 +144,15 @@ func restartGame():
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/Fatality.tscn")
 	
 func animationController():
-	if (dashing or animAttacking or Global.MathController.attack1_poseidon.heavyDamageOn):
+	if (dashing or animAttacking):
 		return
-	if ($CutAnimation.frame==6):
-		$CutAnimation.frame=0
-		$CutAnimation.stop()
+	
+	if (cutAnim.frame==5):
+		cutAnim.stop()
+		cutAnim.frame=0
+		cutAnim.visible=false
+		animation.visible=true
+	
 	if Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Right"):
 		playAnimation ("Run")
 	elif Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Left"):
@@ -147,25 +177,47 @@ func playAnimation (animName):
 		animName="Attack1Run"
 		
 	if lastMovement=="S":
-		$Animation.play(animName+"_Down")
+		animation.play(animName+"_Down")
 	elif lastMovement=="SE":
-		$Animation.play(animName+"_Down_Right")
+		animation.play(animName+"_Down_Right")
 	elif lastMovement=="SW":
-		$Animation.play(animName+"_Down_Left")
+		animation.play(animName+"_Down_Left")
 	elif lastMovement=="N":
-		$Animation.play(animName+"_Up")
+		animation.play(animName+"_Up")
 	elif lastMovement=="NE":
-		$Animation.play(animName+"_Up_Right")
+		animation.play(animName+"_Up_Right")
 	elif lastMovement=="NW":
-		$Animation.play(animName+"_Up_Left")
+		animation.play(animName+"_Up_Left")
 	elif lastMovement=="E":
-		$Animation.play(animName+"_Right")
+		animation.play(animName+"_Right")
 	elif lastMovement=="W":
-		$Animation.play(animName+"_Left")
+		animation.play(animName+"_Left")
 	
 	if (animName=="Run"):
-		$Animation.speed_scale=move_Speed/5
+		animation.speed_scale=move_Speed/5
 		
+
+func playMineAnimation():
+	if !cutAnim.visible:
+		cutAnim.visible=true
+		animation.visible=false
+	
+	if lastMovement=="S":
+		cutAnim.play("mine_down")
+	elif lastMovement=="SE":
+		cutAnim.play("mine_down_right")
+	elif lastMovement=="SW":
+		cutAnim.play("mine_down_left")
+	elif lastMovement=="N":
+		cutAnim.play("mine_up")
+	elif lastMovement=="NE":
+		cutAnim.play("mine_up_right")
+	elif lastMovement=="NW":
+		cutAnim.play("mine_up_left")
+	elif lastMovement=="E":
+		cutAnim.play("mine_right")
+	elif lastMovement=="W":
+		cutAnim.play("mine_left")
 
 func commandController():
 	if (dashing):
@@ -175,6 +227,7 @@ func commandController():
 	
 	if (farming or playerOnCenterPoint or Global.Game.get_node("WaveController").mining):
 		return
+	
 	attack1Controller()
 	attack2Controller()
 	turretController()
@@ -267,7 +320,7 @@ func attack1Controller():
 		attackInstance.global_position=global_position
 
 		playAnimation ("Attack1")
-		$Animation.speed_scale=attack_Speed
+		animation.speed_scale=attack_Speed
 		
 		
 func creatAttackInstance(classChild):
@@ -302,7 +355,6 @@ func creatAttackInstance(classChild):
 	return attackInstance
 
 func attack2Controller():
-	
 	var classChild=1	
 	if (Input.is_action_pressed("Attack2") and permissions[classChild] and permissions[0]):
 		var attackInstance = creatAttackInstance(classChild)
@@ -311,7 +363,7 @@ func attack2Controller():
 		
 		animAttacking=true
 		playAnimation ("Attack2")
-		$Animation.speed_scale=attack_Speed
+		animation.speed_scale=attack_Speed
 		
 		
 func turretController():
@@ -335,10 +387,10 @@ func dashController():
 		
 		
 func enableDisableAnimation():
-	if($Animation.is_playing()):
-		$Animation.stop()
+	if(animation.is_playing()):
+		animation.stop()
 	else:
-		$Animation.play()	
+		animation.play()	
 		
 func ultimateController():
 	var classChild=4	

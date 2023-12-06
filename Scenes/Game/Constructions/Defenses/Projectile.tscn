@@ -1,15 +1,59 @@
-[gd_scene load_steps=4 format=3 uid="uid://bal2wn8bf7iai"]
+[gd_scene load_steps=8 format=3 uid="uid://bal2wn8bf7iai"]
 
-[ext_resource type="Texture2D" uid="uid://bav7b1tv76dwv" path="res://Assets/Images/Resources/stone.png" id="1_24s2u"]
 [ext_resource type="Script" path="res://Scripts/Instances/TowerProjectile.gd" id="1_d5k6n"]
+[ext_resource type="Texture2D" uid="uid://plralsrcrafr" path="res://Assets/Images/HUD/Loja/Ores/Ores.png" id="2_o8h3l"]
+[ext_resource type="Texture2D" uid="uid://e5rvr0d38ve3" path="res://Assets/Images/Constructions/Defenses/Flecha.png" id="3_4uadr"]
+[ext_resource type="Texture2D" uid="uid://cffnqgwqs5cpf" path="res://Assets/Images/Enemies/id005/cupidProjectile.png" id="4_a8m8g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46rgm"]
+atlas = ExtResource("2_o8h3l")
+region = Rect2(62, 0, 62, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qgmvi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46rgm")
+}],
+"loop": true,
+"name": &"Level0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4uadr")
+}],
+"loop": true,
+"name": &"Level1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4uadr")
+}],
+"loop": true,
+"name": &"Level2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_a8m8g")
+}],
+"loop": true,
+"name": &"Level3",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lae8y"]
 
 [node name="Projectile" type="Node2D"]
 script = ExtResource("1_d5k6n")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_24s2u")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -5.36442e-07)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_qgmvi")
+animation = &"Level0"
 
 [node name="Area2D" type="Area2D" parent="."]
 

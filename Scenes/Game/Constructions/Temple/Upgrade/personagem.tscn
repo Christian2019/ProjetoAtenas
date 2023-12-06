@@ -1,24 +1,20 @@
-[gd_scene load_steps=20 format=3 uid="uid://d3gj72p3eit3p"]
+[gd_scene load_steps=16 format=3 uid="uid://d3gj72p3eit3p"]
 
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/PersonagemLoja.gd" id="1_p27ws"]
 [ext_resource type="Texture2D" uid="uid://cuolto2djdbn6" path="res://Assets/Images/HUD/Loja/BackgroundUpgrade.png" id="2_v0k4h"]
-[ext_resource type="PackedScene" uid="uid://b3wvfc3l1iq20" path="res://Scenes/Game/Constructions/Temple/OpcoesUpgrade/CharacterOptions.tscn" id="3_fydkf"]
+[ext_resource type="PackedScene" uid="uid://b3wvfc3l1iq20" path="res://Scenes/Game/Constructions/Temple/Upgrade/UpgradeOptions/CharacterOptions.tscn" id="3_fydkf"]
 [ext_resource type="Texture2D" uid="uid://c1lvo03360ies" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/BronzeSword.png" id="4_p7k46"]
 [ext_resource type="Texture2D" uid="uid://0rqev1k3nc4" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/BronzeDesativado.png" id="5_uitx0"]
 [ext_resource type="Texture2D" uid="uid://cprs05ls2ccdg" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/SilverSword.png" id="6_1xhvy"]
 [ext_resource type="Texture2D" uid="uid://cliqkucmf383y" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/SilverDesativado.png" id="7_y024q"]
 [ext_resource type="Texture2D" uid="uid://b3kaswp8s6ai3" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/GoldSword.png" id="8_oo60p"]
 [ext_resource type="Texture2D" uid="uid://6utf8shl363i" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/GoldDesativado.png" id="9_6u300"]
-[ext_resource type="Texture2D" uid="uid://c7b0ng1vnyyms" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/FinalSword.png" id="10_kxrrf"]
-[ext_resource type="Texture2D" uid="uid://pmexyd5fdvt8" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Sword/FinalDesativado.png" id="11_j6spq"]
 [ext_resource type="Texture2D" uid="uid://li4f6271nb5i" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/BronzeAbilities.png" id="12_p4d70"]
 [ext_resource type="Texture2D" uid="uid://35v5a2t1s0x8" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/BronzeDesativado.png" id="13_qd3ov"]
 [ext_resource type="Texture2D" uid="uid://djdvyofi1vk3r" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/SilverAbilities.png" id="14_drwjr"]
 [ext_resource type="Texture2D" uid="uid://ckimwulh442qa" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/SilverDesativado.png" id="15_agakn"]
 [ext_resource type="Texture2D" uid="uid://bp065xj2l43eq" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/GoldAbilites.png" id="16_p0jcc"]
 [ext_resource type="Texture2D" uid="uid://dx7gjumu0kq6s" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/GoldDesativado.png" id="17_khevy"]
-[ext_resource type="Texture2D" uid="uid://dutmvvjo82fet" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/FinalAbilities.png" id="18_p3o11"]
-[ext_resource type="Texture2D" uid="uid://mhnkfhok2b44" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Abilities/FinalDesativado.png" id="19_3oyc7"]
 
 [node name="Personagem" type="Node2D"]
 visible = false
@@ -30,7 +26,7 @@ scale = Vector2(0.530021, 0.504915)
 texture = ExtResource("2_v0k4h")
 
 [node name="Level Attack" type="Node2D" parent="."]
-position = Vector2(127, 24)
+position = Vector2(229, 0)
 
 [node name="Level1" parent="Level Attack" instance=ExtResource("3_fydkf")]
 offset_left = 64.0
@@ -80,7 +76,6 @@ offset_right = 393.0
 offset_bottom = 110.0
 focus_neighbor_left = NodePath("../Level2")
 focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Personagem")
-focus_neighbor_right = NodePath("../Level4")
 focus_neighbor_bottom = NodePath("../../Level Defesa/Level3")
 titulo = "Damage Lvl 3"
 colorTitulo = Color(0.654902, 0.313726, 1, 1)
@@ -94,28 +89,8 @@ baseDamage = 4.0
 texture_normal = ExtResource("8_oo60p")
 texture_hover = ExtResource("9_6u300")
 
-[node name="Level4" parent="Level Attack" instance=ExtResource("3_fydkf")]
-offset_left = 553.0
-offset_top = 110.0
-offset_right = 553.0
-offset_bottom = 110.0
-focus_neighbor_left = NodePath("../Level3")
-focus_neighbor_top = NodePath("../../../MenuPrincipal/Abas/Personagem")
-focus_neighbor_bottom = NodePath("../../Level Defesa/Level4")
-titulo = "Damage Lvl 4"
-colorTitulo = Color(1, 0.396078, 0, 1)
-whatUpgrades = "Attack"
-qtdDracma = 7500
-qtdMinerios = 10
-Minerio = "gold"
-percentDamage = 5.0
-percentCritDamage = 0.15
-baseDamage = 5.0
-texture_normal = ExtResource("10_kxrrf")
-texture_hover = ExtResource("11_j6spq")
-
 [node name="Level Defesa" type="Node2D" parent="."]
-position = Vector2(104, 6)
+position = Vector2(204, 6)
 
 [node name="Level1" parent="Level Defesa" instance=ExtResource("3_fydkf")]
 offset_left = 87.0
@@ -169,7 +144,6 @@ offset_right = 416.0
 offset_bottom = 367.0
 focus_neighbor_left = NodePath("../Level2")
 focus_neighbor_top = NodePath("../../Level Attack/Level3")
-focus_neighbor_right = NodePath("../Level4")
 titulo = "Defense Lvl 3"
 colorTitulo = Color(0.654902, 0.313726, 1, 1)
 whatUpgrades = "Defense"
@@ -184,25 +158,3 @@ armor = 4.0
 maxDodge = 60.0
 texture_normal = ExtResource("16_p0jcc")
 texture_hover = ExtResource("17_khevy")
-
-[node name="Level4" parent="Level Defesa" instance=ExtResource("3_fydkf")]
-offset_left = 576.0
-offset_top = 367.0
-offset_right = 576.0
-offset_bottom = 367.0
-focus_neighbor_left = NodePath("../Level3")
-focus_neighbor_top = NodePath("../../Level Attack/Level4")
-titulo = "Defense Lvl 4"
-colorTitulo = Color(1, 0.396078, 0, 1)
-whatUpgrades = "Defense"
-qtdDracma = 7500
-qtdMinerios = 10
-Minerio = "gold"
-percentDamage = 5.0
-percentCritDamage = 0.15
-baseDamage = 5.0
-dodge = 5.0
-armor = 5.0
-maxDodge = 70.0
-texture_normal = ExtResource("18_p3o11")
-texture_hover = ExtResource("19_3oyc7")

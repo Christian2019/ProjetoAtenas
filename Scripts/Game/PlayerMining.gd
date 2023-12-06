@@ -11,11 +11,7 @@ func mining(farming,playerRight,closerQuadrant):
 			return
 		
 		if Input.is_action_pressed("Attack1") and can_break: 
-			if (playerRight):
-				Global.player.get_node("CutAnimation").flip_h=false
-			else:
-				Global.player.get_node("CutAnimation").flip_h=true 
-			Global.player.get_node("CutAnimation").play()   
+			Global.player.playMineAnimation()
 			
 			if closerQuadrant!=null:
 				if closerQuadrant.get_node("Resource").visible:
@@ -27,7 +23,8 @@ func mining(farming,playerRight,closerQuadrant):
 						closerQuadrant.life_till_break=0
 						
 						var collectable_instance = PreLoads.collectable.instantiate()
-						collectable_instance.value=closerQuadrant.value
+						collectable_instance.value = closerQuadrant.value
+						print(closerQuadrant.value)
 						
 						itenDrop(closerQuadrant)
 						

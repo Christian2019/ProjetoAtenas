@@ -279,3 +279,9 @@ var scroll_warrior_ultimate_hadesPoseidon=preload("res://Scenes/Game/ScrollsCont
 var scroll_warrior_ultimate_zeus=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorUltimates/Scroll_Warrior_Ultimate_Zeus.tscn")
 var scroll_warrior_ultimate_poseidon=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorUltimates/Scroll_Warrior_Ultimate_Poseidon.tscn")
 var scroll_warrior_ultimate_hades=preload("res://Scenes/Game/ScrollsController/Scrolls/Warrior/WarriorUltimates/Scroll_Warrior_Ultimate_Hades.tscn")
+
+#Mining Animations
+var mine_leather = preload("res://Assets/Animations/Mininig/mine_leather_armor.tres")
+var mine_normal = preload("res://Assets/Animations/Mininig/mine_normal_armor.tres")
+var mine_gold = preload("res://Assets/Animations/Mininig/mine_gold_armor.tres")
+var mine_diamond = preload("res://Assets/Animations/Mininig/mine_diamond_armor.tres")

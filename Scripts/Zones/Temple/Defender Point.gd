@@ -14,21 +14,21 @@ func _ready():
 	upgrades_sentinela = get_node("Sentinela").get_children()
 	
 func _process(delta): 
-	if(current_level_centro<=4):
+	if(current_level_centro<4):
 		for i in range(0,upgrades_centro.size()):
 			if(current_level_centro == i):
 				upgrades_centro[i].get_node("Imagem").disabled=false
 			else:
 				upgrades_centro[i].get_node("Imagem").disabled=true 
 				
-	if(current_level_piscina<=4):
+	if(current_level_piscina<4):
 		for i in range(0,upgrades_piscina.size()):
 			if(current_level_piscina == i):
 				upgrades_piscina[i].get_node("Imagem").disabled=false
 			else:
 				upgrades_piscina[i].get_node("Imagem").disabled=true 
 				
-	if(current_level_sentinela<=4):
+	if(current_level_sentinela<4):
 		for i in range(0,upgrades_sentinela.size()):
 			if(current_level_sentinela == i):
 				upgrades_sentinela[i].get_node("Imagem").disabled=false

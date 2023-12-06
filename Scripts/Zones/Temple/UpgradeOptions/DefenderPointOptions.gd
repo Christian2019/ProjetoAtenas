@@ -14,8 +14,9 @@ extends Control
 @export var nextHealDealy = 0.0
 
 #Torre
-@export var slow = 0.0
-@export var shootSpeed = 0.0 
+@export var bulletSpeed = 0
+@export var reloadTime = 0
+@export var damageBullet = 0
 
 #Piscina
 @export var poolHeal = 0.0
@@ -32,6 +33,14 @@ var gold
 var stone
 var wood
 
+func _process(delta):
+	if(Minerio == "gold"):
+		qtd_ore_player = Global.player.gold
+	elif(Minerio == "stone"):
+		qtd_ore_player = Global.player.stone
+	elif(Minerio == "wood"):
+		qtd_ore_player = Global.player.wood
+		
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#Texturas Botão
@@ -47,9 +56,7 @@ func _ready():
 	$InfoDracma/Titulo.add_theme_color_override("font_color",colorTitulo)
 	
 	#Text
-	get_node("InfoDracma/QtdDracma/Price").text = str(qtdDracma)
-	if(qtd_ore_player==0 or qtd_ore_player == null):
-		$InfoDracma/QtdMinerio.visible = false
+	get_node("InfoDracma/QtdDracma/Price").text = str(qtdDracma) 
 	pass # Replace with function body.
 	
 func upgrades():
@@ -81,21 +88,29 @@ func upgrades():
 		pass
 	elif(whatUpgrades=="Tower"):
 		#Upgrades 
-		$InfoDracma/Upgrades/WhatUpgrades.text ="slow: "
-		if(slow > 0):  
-			$InfoDracma/Upgrades/Ammount.text = "+"+str(slow)
+		$InfoDracma/Upgrades/WhatUpgrades.text = "Bullet speed: "
+		if(bulletSpeed > 0):  
+			$InfoDracma/Upgrades/Ammount.text = "+"+str(bulletSpeed)
 			$InfoDracma/Upgrades/Ammount.add_theme_color_override("font_color",Color("00cc00"))
 		else:
-			$InfoDracma/Upgrades/Ammount.text = "-"+str(slow)
+			$InfoDracma/Upgrades/Ammount.text = "-"+str(bulletSpeed)
 			$InfoDracma/Upgrades/Ammount.add_theme_color_override("font_color",Color("ff0000"))
 			
 		$InfoDracma/Upgrades2/WhatUpgrades.text ="Fire speed: "
-		if(shootSpeed > 0):  
-			$InfoDracma/Upgrades2/Ammount.text = "+"+str(shootSpeed)
+		if(reloadTime > 0):  
+			$InfoDracma/Upgrades2/Ammount.text = "+"+str(reloadTime)
 			$InfoDracma/Upgrades2/Ammount.add_theme_color_override("font_color",Color("00cc00"))
 		else:
-			$InfoDracma/Upgrades2/Ammount.text = "-"+str(shootSpeed)
+			$InfoDracma/Upgrades2/Ammount.text = "-"+str(reloadTime)
 			$InfoDracma/Upgrades2/Ammount.add_theme_color_override("font_color",Color("ff0000"))
+		
+		$InfoDracma/Upgrades3/WhatUpgrades.text = "Bullet DMG: "
+		if(damageBullet > 0):  
+			$InfoDracma/Upgrades3/Ammount.text = "+"+str(damageBullet)
+			$InfoDracma/Upgrades3/Ammount.add_theme_color_override("font_color",Color("00cc00"))
+		else:
+			$InfoDracma/Upgrades3/Ammount.text = "-"+str(damageBullet)
+			$InfoDracma/Upgrades3/Ammount.add_theme_color_override("font_color",Color("ff0000"))
 		pass
 	elif(whatUpgrades=="Pool"):
 		#Upgrades
@@ -117,24 +132,23 @@ func upgrades():
 		pass
 
  
+
 func verificaOre():
-	if(qtdMinerios>0): 
+	if(qtdMinerios>=0):  
 			if(Minerio == "gold"):
 				get_node("InfoDracma/QtdMinerio/Minerio").animation = Minerio
-				get_node("InfoDracma/QtdMinerio/Price").text = str(qtdMinerios)
-				qtd_ore_player = Global.player.gold
+				get_node("InfoDracma/QtdMinerio/Price").text = str(qtdMinerios) 
 				pass
 			elif(Minerio == "stone"):
 				get_node("InfoDracma/QtdMinerio/Minerio").animation = Minerio
-				get_node("InfoDracma/QtdMinerio/Price").text = str(qtdMinerios)
-				qtd_ore_player = Global.player.stone
+				get_node("InfoDracma/QtdMinerio/Price").text = str(qtdMinerios) 
 				pass
 			elif(Minerio == "wood"):
 				get_node("InfoDracma/QtdMinerio/Minerio").animation = Minerio
-				get_node("InfoDracma/QtdMinerio/Price").text = str(qtdMinerios)
-				qtd_ore_player = Global.player.wood 
+				get_node("InfoDracma/QtdMinerio/Price").text = str(qtdMinerios) 
 				pass
-
+	else:
+		qtd_ore_player = 0
 func decreaseOre():
 		if(Minerio=="gold"):
 			Global.player.gold -= qtdMinerios
@@ -166,22 +180,76 @@ func _on_imagem_pressed():
 			Global.Center.nextHealDealy = nextHealDealy
 			decreaseOre()
 			get_node("Aquired").visible=true
+		else: 
+			turnOnWarning()
+			if(qtdDracma > Global.player.dracma): 
+				get_node("WarningSign/Warning").text = "You need more Dracmas"
+			else:
+				if(Minerio == "gold"):
+					if(qtd_ore_player < qtdMinerios):
+						get_node("WarningSign/Warning").text = "You need more gold"
+				elif(Minerio == "stone"):
+					if(qtd_ore_player < qtdMinerios):
+						get_node("WarningSign/Warning").text = "You need more stone"
+				elif(Minerio == "wood"):
+					if(qtd_ore_player < qtdMinerios):
+						get_node("WarningSign/Warning").text = "You need more wood"
 	elif(whatUpgrades=="Tower"):  
 		if(qtdDracma <= Global.player.dracma and qtdMinerios <= qtd_ore_player):
-			get_parent().get_parent().current_level_sentinela+=1 
-			#
+			get_parent().get_parent().current_level_sentinela+=1   
+			for tower in Global.Tower:  
+				tower.reloadTime = reloadTime
+				tower.speedArrowLevelUp = bulletSpeed
+				tower.damageLevelUp = damageBullet
+				tower.currentLevelStore = get_parent().get_parent().current_level_sentinela
+				tower.get_node("AnimatedSprite2D").animation  = "Level"+str(get_parent().get_parent().current_level_sentinela)
 			decreaseOre()
 			get_node("Aquired").visible=true
+		else: 
+			turnOnWarning()
+			if(qtdDracma > Global.player.dracma):
+				get_node("WarningSign/Warning").text = "You need more Dracmas"
+			else: 
+				if(Minerio == "gold"):
+					if(qtd_ore_player < qtdMinerios):
+						get_node("WarningSign/Warning").text = "You need more gold"
+				elif(Minerio == "stone"):
+					if(qtd_ore_player < qtdMinerios):
+						get_node("WarningSign/Warning").text = "You need more stone"
+				elif(Minerio == "wood"):
+					if(qtd_ore_player < qtdMinerios):
+						get_node("WarningSign/Warning").text = "You need more wood"
 	elif(whatUpgrades == "Pool"):
 		if(qtdDracma <= Global.player.dracma and qtdMinerios <= qtd_ore_player):
 			get_parent().get_parent().current_level_piscina+=1 
 			Global.Pool.heal = poolHeal
 			Global.Pool.nextHealDealy = poolHealDelay
+			Global.Pool.get_node("Animacao").play("Level"+str(get_parent().get_parent().current_level_piscina))
 			decreaseOre()
 			get_node("Aquired").visible=true
-	pass # Replace with function body.
-	pass # Replace with function body.
+		else: 
+			turnOnWarning()
+			if(qtdDracma > Global.player.dracma):
+				get_node("WarningSign/Warning").text = "You need more Dracmas"
+			else: 
+				if(Minerio == "gold"):
+					if(qtd_ore_player < qtdMinerios):
+						get_node("WarningSign/Warning").text = "You need more gold"
+				elif(Minerio == "stone"):
+					if(qtd_ore_player < qtdMinerios):
+						get_node("WarningSign/Warning").text = "You need more stone"
+				elif(Minerio == "wood"):
+					if(qtd_ore_player < qtdMinerios):
+						get_node("WarningSign/Warning").text = "You need more wood"
+	pass # Replace with function body. 
 
+func turnOnWarning():
+	get_node("WarningSign").visible=true 
+	$TurnOffWarning.start()
+	
+
+func turnOffWarning():
+	get_node("WarningSign").visible=false
 
 func _on_imagem_focus_entered():
 	if($Imagem.disabled==false):
@@ -193,4 +261,9 @@ func _on_imagem_focus_entered():
 
 func _on_imagem_focus_exited():
 	get_node("InfoDracma").visible=false
+	pass # Replace with function body.
+
+func _on_turn_off_warning_timeout():
+	$TurnOffWarning.wait_time=0.2
+	turnOffWarning()
 	pass # Replace with function body.
