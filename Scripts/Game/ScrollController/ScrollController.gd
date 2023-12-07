@@ -51,7 +51,7 @@ func sell():
 	updateHuds()
 
 func getCurrentScrollPrice(scroll):
-	var baseValue =5
+	var baseValue =1
 	var value = baseValue*(scroll.quality+1)*Global.WaveController.wave
 	return value
 

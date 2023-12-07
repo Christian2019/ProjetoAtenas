@@ -1,7 +1,7 @@
+ColorRect
 Sprite2D
 Button
 Node2D
-ColorRect
 CollisionShape2D
 Area2D
 TextureButton

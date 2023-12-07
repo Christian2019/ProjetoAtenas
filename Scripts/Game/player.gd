@@ -3,8 +3,8 @@ extends Node2D
 var dead = false 
 
 ##Stats
-var baseMaxHp=10.0
-var maxHpPercentBonus=0
+var baseMaxHp=10000.0
+var maxHpPercentBonus=0.0
 var maxHp=baseMaxHp
 var hp = maxHp
 
@@ -53,15 +53,15 @@ var permissions = [
 	]
 
 #Resources
-var wood = 0
-var stone = 0
-var gold = 0
-var dracma=0
+var wood = 1000
+var stone = 1000
+var gold = 1000
+var dracma=1000
 var dracmaBag=0
 
 #Farming
 var itemsCarriage = []
-var MaxCarriage = 4
+var MaxCarriage = 1
 var carryingItem
 
 var contactQuadrants = []
@@ -369,7 +369,7 @@ func attack2Controller():
 func turretController():
 	var classChild=2	
 	if (Input.is_action_just_pressed("Turret")):
-		print("Turret")
+		#print("Turret")
 		var attackInstance = creatAttackInstance(classChild)
 		if (attackInstance==null):
 			return
@@ -379,7 +379,7 @@ func turretController():
 func dashController():
 	var classChild=3	
 	if (Input.is_action_pressed("Dash") and permissions[classChild]):
-		print("Dash")
+		#print("Dash")
 		var attackInstance = creatAttackInstance(classChild)
 		attackInstance.direction= lastMovement
 		add_child(attackInstance)
@@ -395,7 +395,7 @@ func enableDisableAnimation():
 func ultimateController():
 	var classChild=4	
 	if (Input.is_action_just_pressed("Ultimate") and permissions[classChild]):
-		print("Ultimate")
+		#print("Ultimate")
 		var attackInstance = creatAttackInstance(classChild)
 		if (attackInstance==null):
 			return

@@ -9,14 +9,14 @@ extends Control
 @export var Minerio = ""
 
 #Ataque
-@export var percentDamage = 0.0
-@export var percentCritDamage = 0.0
-@export var baseDamage = 0.0
+@export var percentDamage = 0
+@export var percentCritDamage = 0
+@export var baseDamage = 0
 
 #Defense
-@export var dodge = 0.0
-@export var armor = 0.0
-@export var maxDodge = 0.0
+@export var dodge = 0
+@export var armor = 0
+@export var percentHp=0
 
 
 @export var texture_normal = Texture.new()
@@ -52,53 +52,54 @@ func _ready():
 		
 func upgrades():
 	if(whatUpgrades=="Attack"):
+		print(percentDamage)
 		#Upgrades
 		if(percentDamage>0):
-			$InfoDracma/Upgrade1/Price.text = "+"+str(percentDamage)+"%"
+			$InfoDracma/Upgrade1/Price.text = "+"+str(percentDamage*AllSkillsValues.percentDamage*100)+"%"
 			$InfoDracma/Upgrade1/Price.add_theme_color_override("font_color",Color("00cc00"))
 		else:
-			$InfoDracma/Upgrade1/Price.text = "-"+str(percentDamage)+"%"
+			$InfoDracma/Upgrade1/Price.text = "-"+str(percentDamage*AllSkillsValues.percentDamage*100)+"%"
 			$InfoDracma/Upgrade1/Price.add_theme_color_override("font_color",Color("ff0000"))
 		$InfoDracma/Upgrade1/Upgrade.animation="%Damage"
 		#Upgrades2
 		if(percentCritDamage>0):
-			$InfoDracma/Upgrade2/Price.text = "+"+str(percentCritDamage*100)+"%"
+			$InfoDracma/Upgrade2/Price.text = "+"+str(percentCritDamage*AllSkillsValues.percentCritDamage*100)+"%"
 			$InfoDracma/Upgrade2/Price.add_theme_color_override("font_color",Color("00cc00"))
 		else:
-			$InfoDracma/Upgrade2/Price.text = "-"+str(percentCritDamage*100)+"%"
+			$InfoDracma/Upgrade2/Price.text = "-"+str(percentCritDamage*AllSkillsValues.percentCritDamage*100)+"%"
 			$InfoDracma/Upgrade2/Price.add_theme_color_override("font_color",Color("ff0000"))
 		$InfoDracma/Upgrade2/Upgrade2.animation="%CritDamage"
 		#Upgrades3
 		if(baseDamage>0):
-			$InfoDracma/Upgrade3/Price.text = "+"+str(baseDamage)
+			$InfoDracma/Upgrade3/Price.text = "+"+str(baseDamage*AllSkillsValues.damage)
 			$InfoDracma/Upgrade3/Price.add_theme_color_override("font_color",Color("00cc00"))
 		else:
-			$InfoDracma/Upgrade3/Price.text = "-"+str(baseDamage)
+			$InfoDracma/Upgrade3/Price.text = "-"+str(baseDamage*AllSkillsValues.damage)
 			$InfoDracma/Upgrade3/Price.add_theme_color_override("font_color",Color("ff0000")) 
 		$InfoDracma/Upgrade3/Upgrade3.animation="BaseDamage"
 	elif(whatUpgrades=="Defense"):
 		#Upgrades 
 		if(dodge>0):
-			$InfoDracma/Upgrade1/Price.text = "+"+str(dodge)
+			$InfoDracma/Upgrade1/Price.text = "+"+str(dodge*AllSkillsValues.dodge*100)+"%"
 			$InfoDracma/Upgrade1/Price.add_theme_color_override("font_color",Color("00cc00"))
 		else:
-			$InfoDracma/Upgrade1/Price.text = "-"+str(dodge)
+			$InfoDracma/Upgrade1/Price.text = "-"+str(dodge*AllSkillsValues.dodge*100)+"%"
 			$InfoDracma/Upgrade1/Price.add_theme_color_override("font_color",Color("ff0000")) 
 		$InfoDracma/Upgrade1/Upgrade.animation="Dodge"
 		#Upgrades2 
 		if(armor>0):
-			$InfoDracma/Upgrade2/Price.text = "+"+str(armor)
+			$InfoDracma/Upgrade2/Price.text = "+"+str(armor*AllSkillsValues.armor)
 			$InfoDracma/Upgrade2/Price.add_theme_color_override("font_color",Color("00cc00"))
 		else:
-			$InfoDracma/Upgrade2/Price.text = "-"+str(armor)
+			$InfoDracma/Upgrade2/Price.text = "-"+str(armor*AllSkillsValues.armor)
 			$InfoDracma/Upgrade2/Price.add_theme_color_override("font_color",Color("ff0000"))  
 		$InfoDracma/Upgrade2/Upgrade2.animation="armor"
 		#Upgrades3
-		if(maxDodge>0):
-			$InfoDracma/Upgrade3/Price.text = "+"+str(maxDodge)
+		if(percentHp>0):
+			$InfoDracma/Upgrade3/Price.text = "+"+str(percentHp*0.2*100)+"%"
 			$InfoDracma/Upgrade3/Price.add_theme_color_override("font_color",Color("00cc00"))
 		else:
-			$InfoDracma/Upgrade3/Price.text = "-"+str(maxDodge)
+			$InfoDracma/Upgrade3/Price.text = "-"+str(percentHp*0.2*100)+"%"
 			$InfoDracma/Upgrade3/Price.add_theme_color_override("font_color",Color("ff0000"))  
 		$InfoDracma/Upgrade3/Upgrade3.animation="MaxDodge"
 
@@ -146,9 +147,9 @@ func _on_imagem_pressed():
 	if(whatUpgrades=="Attack"):   
 		if(qtdDracma <= Global.player.dracma and qtdMinerios <= qtd_ore_player): 
 			get_parent().get_parent().current_level_attack+=1 
-			Global.player.percentDamage = percentDamage
-			Global.player.baseDamage = baseDamage
-			Global.player.percentCritDamage = percentCritDamage
+			Global.player.percentDamage += percentDamage*AllSkillsValues.percentDamage
+			Global.player.baseDamage += baseDamage*AllSkillsValues.damage
+			Global.player.percentCritDamage += percentCritDamage*AllSkillsValues.percentCritDamage
 			Global.player.dracma -= qtdDracma
 			Global.player.current_level_sword = get_parent().get_parent().current_level_attack
 			Global.player.change_animation()
@@ -157,16 +158,15 @@ func _on_imagem_pressed():
 	elif(whatUpgrades=="Defense"):  
 		if(qtdDracma <= Global.player.dracma and qtdMinerios <= qtd_ore_player):
 			get_parent().get_parent().current_level_defense+=1
-			Global.player.dodge = dodge
-			Global.player.armor = armor
-			Global.player.maxDodge = maxDodge
+			Global.player.dodge += dodge*AllSkillsValues.dodge
+			Global.player.armor += armor*AllSkillsValues.armor
+			Global.player.maxHpPercentBonus += percentHp*0.2
 			Global.player.dracma -= qtdDracma
 			Global.player.current_level_armor = get_parent().get_parent().current_level_defense
 			Global.player.change_animation()
 			decreaseOre()
 			get_node("Aquired").visible=true
-	pass # Replace with function body.
-	pass # Replace with function body.
+
 
 
 func _on_imagem_focus_entered():

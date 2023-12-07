@@ -389,6 +389,13 @@ position = Vector2(2803, 3833)
 
 [node name="Selected" type="Node2D" parent="."]
 
+[node name="ColorRect" type="ColorRect" parent="Selected"]
+offset_left = -3667.0
+offset_top = 12.0
+offset_right = -13.0
+offset_bottom = 4505.0
+color = Color(0, 0, 0, 0.8)
+
 [node name="Scroll" parent="Selected" instance=ExtResource("4_gdcq3")]
 position = Vector2(-2062, 1331)
 scale = Vector2(3.75034, 3.75034)

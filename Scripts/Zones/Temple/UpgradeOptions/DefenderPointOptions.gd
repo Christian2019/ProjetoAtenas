@@ -11,7 +11,6 @@ extends Control
 #Centro
 @export var heal = 0.0
 @export var maxHp = 0.0
-@export var nextHealDealy = 0.0
 
 #Torre
 @export var bulletSpeed = 0
@@ -78,14 +77,7 @@ func upgrades():
 			$InfoDracma/Upgrades2/Ammount.text = "-"+str(maxHp)
 			$InfoDracma/Upgrades2/Ammount.add_theme_color_override("font_color",Color("ff0000"))
 			
-		$InfoDracma/Upgrades3/WhatUpgrades.text ="Heal speed:"
-		if(nextHealDealy > 0):  
-			$InfoDracma/Upgrades3/Ammount.text = "+"+str(nextHealDealy)
-			$InfoDracma/Upgrades3/Ammount.add_theme_color_override("font_color",Color("00cc00"))
-		else:
-			$InfoDracma/Upgrades3/Ammount.text = "-"+str(nextHealDealy)
-			$InfoDracma/Upgrades3/Ammount.add_theme_color_override("font_color",Color("ff0000"))
-		pass
+				
 	elif(whatUpgrades=="Tower"):
 		#Upgrades 
 		$InfoDracma/Upgrades/WhatUpgrades.text = "Bullet speed: "
@@ -177,7 +169,6 @@ func _on_imagem_pressed():
 			get_parent().get_parent().current_level_centro += 1
 			Global.Center.heal = heal
 			Global.Center.maxHp = maxHp
-			Global.Center.nextHealDealy = nextHealDealy
 			decreaseOre()
 			get_node("Aquired").visible=true
 		else: 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b3wvfc3l1iq20"]
+[gd_scene load_steps=17 format=3 uid="uid://b3wvfc3l1iq20"]
 
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/UpgradeOptions/CharacterOptions.gd" id="1_docjh"]
 [ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="2_5hhw0"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://de0orf26ul1x2" path="res://Assets/Images/LevelUp/percentDamage.png" id="6_rpu5g"]
 [ext_resource type="Texture2D" uid="uid://cbth1bpv6l2tm" path="res://Assets/Images/LevelUp/percentCritDamage.png" id="7_ygn8h"]
 [ext_resource type="Texture2D" uid="uid://cxwuyt6m3b26w" path="res://Assets/Images/LevelUp/armor.png" id="8_0bute"]
+[ext_resource type="Texture2D" uid="uid://ci5p1w6eb7qm2" path="res://Assets/Images/LevelUp/hp.png" id="12_0jhxk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p8k0k"]
 animations = [{
@@ -104,7 +105,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_js22t")
+"texture": ExtResource("12_0jhxk")
 }],
 "loop": true,
 "name": &"MaxDodge",

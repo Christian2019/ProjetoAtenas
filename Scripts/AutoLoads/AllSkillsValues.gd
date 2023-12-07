@@ -1,6 +1,6 @@
 extends Node
 #Base values
-var hp=3.0
+var hp=30.0
 var hpRegeneration=2.0
 var lifeStealChance=0.01
 var percentDamage=0.05
@@ -12,6 +12,10 @@ var dodge=0.03
 var maxDodge=70
 var moveSpeed=0.03
 var luck=0.05
+
+#Enemies
+var enemyBaseHpWaveMultiplier=1.5
+var enemyBaseDamageWaveMultiplier=1.01
 
 ####All
 ###WARRIOR

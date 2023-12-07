@@ -1,11 +1,11 @@
 extends Node2D
 
 var id=18
-var maxHp=30000
+var maxHp=1000000
 var hp = maxHp
 var damages = {
-	"damage":1.0,
-	"projectileDamage":10.0
+	"damage":200.0,
+	"projectileDamage":300.0
 	}
 
 var nextHitDelayPlayer=false
@@ -59,6 +59,13 @@ var t2StartDistanceFromPlayer=500
 var attackSpeedModifierVar=[nextHitDelay,cd]
 
 func _ready():
+	maxHp=maxHp*AllSkillsValues.enemyBaseHpWaveMultiplier**(Global.WaveController.wave-1)
+	hp = maxHp
+	for i in range(0,damages.values().size(),1):
+		damages[damages.keys()[i]]*=AllSkillsValues.enemyBaseDamageWaveMultiplier**(Global.WaveController.wave-1)
+	if Global.WaveController.wave>10:
+		dracmas=2
+		
 	maxHpBarWidth=$HPBar/Red.size.x
 	wave = Global.WaveController.get_child(Global.WaveController.wave-1)
 	getRandomMoveTarget()

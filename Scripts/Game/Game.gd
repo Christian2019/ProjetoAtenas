@@ -58,6 +58,7 @@ var qualitys = ["common",
 func _ready():
 	Global.Game = self
 
+
 func _process(_delta):
 	
 	if (Input.is_action_just_pressed("zoomOut")):
