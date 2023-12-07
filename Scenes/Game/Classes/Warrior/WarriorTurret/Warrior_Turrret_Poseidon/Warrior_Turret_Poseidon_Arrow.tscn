@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdc21ga324il7"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_Turret/Poseidon/Warrior_Turret_Poeseidon_Arrow.gd" id="1_gakum"]
+[ext_resource type="Texture2D" uid="uid://cfr6sqjwddlkn" path="res://Assets/Images/Player/Attack1/Effects/attack1.png" id="2_2s4pc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scuxx"]
+atlas = ExtResource("2_2s4pc")
+region = Rect2(28, 212, 14, 106)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5me3"]
+atlas = ExtResource("2_2s4pc")
+region = Rect2(42, 212, 14, 106)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg8pj"]
+atlas = ExtResource("2_2s4pc")
+region = Rect2(56, 212, 14, 106)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_60aqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scuxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5me3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg8pj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ramb3"]
+size = Vector2(239, 30)
+
+[node name="Warrior_Turret_Poeseidon_Arrow" type="Node2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_gakum")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-25, 0)
+rotation = 1.5708
+scale = Vector2(1.62011, 2.46194)
+sprite_frames = SubResource("SpriteFrames_60aqq")
+autoplay = "default"
+frame_progress = 0.609829
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, -1)
+shape = SubResource("RectangleShape2D_ramb3")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

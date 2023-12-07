@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2lwjmx5h5k0t"]
+
+[ext_resource type="Script" path="res://Scripts/Game/Scrolls/Warrior/WarriorAttack1/Scroll_Warrior_Attack1_Poseidon.gd" id="1_c1sxd"]
+
+[node name="Scroll_Warrior_Attack1_Poseidon" type="Node2D"]
+script = ExtResource("1_c1sxd")

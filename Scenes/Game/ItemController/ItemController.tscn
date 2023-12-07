@@ -1,0 +1,154 @@
+[gd_scene load_steps=7 format=3 uid="uid://58abiep406e0"]
+
+[ext_resource type="Script" path="res://Scripts/Game/ItemController/ItemController.gd" id="1_38px7"]
+[ext_resource type="PackedScene" uid="uid://dvgvp2thpqg12" path="res://Scenes/Game/LevelUp/Stats.tscn" id="2_scuos"]
+[ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="4_dufhy"]
+[ext_resource type="Texture2D" uid="uid://bp4nnroubqrqp" path="res://Assets/Images/HUD/Loja/Ores/Gold.png" id="5_5b71g"]
+[ext_resource type="Texture2D" uid="uid://cvi4vcyjfl284" path="res://Assets/Images/HUD/Loja/Ores/Rock.png" id="6_g2efc"]
+[ext_resource type="Texture2D" uid="uid://cxnn4leqp0b1i" path="res://Assets/Images/HUD/Loja/Ores/Wood.png" id="7_giwaq"]
+
+[node name="ItemController" type="Node2D"]
+script = ExtResource("1_38px7")
+
+[node name="ItemBagScreen" type="Node2D" parent="."]
+
+[node name="Stats" parent="ItemBagScreen" instance=ExtResource("2_scuos")]
+position = Vector2(594, 47)
+
+[node name="Item" type="Node2D" parent="ItemBagScreen"]
+position = Vector2(253, 157)
+
+[node name="Label" type="Label" parent="ItemBagScreen"]
+offset_left = 285.0
+offset_top = 85.0
+offset_right = 488.0
+offset_bottom = 148.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_dufhy")
+theme_override_font_sizes/font_size = 43
+text = "item found!"
+
+[node name="Label2" type="Label" parent="ItemBagScreen"]
+offset_left = 271.0
+offset_top = 108.0
+offset_right = 474.0
+offset_bottom = 171.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_dufhy")
+theme_override_font_sizes/font_size = 26
+text = "(99)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Take" type="Node2D" parent="ItemBagScreen"]
+position = Vector2(200, 39)
+
+[node name="Selected" type="ColorRect" parent="ItemBagScreen/Take"]
+offset_left = 119.0
+offset_top = 311.0
+offset_right = 243.0
+offset_bottom = 342.0
+color = Color(1, 1, 1, 0.776471)
+
+[node name="UnSelected" type="ColorRect" parent="ItemBagScreen/Take"]
+visible = false
+offset_left = 119.0
+offset_top = 311.0
+offset_right = 243.0
+offset_bottom = 342.0
+color = Color(0.392157, 0.392157, 0.392157, 0.776471)
+
+[node name="Label" type="Label" parent="ItemBagScreen/Take"]
+offset_left = 148.0
+offset_top = 316.0
+offset_right = 210.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_dufhy")
+theme_override_font_sizes/font_size = 18
+text = "take"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Recycle" type="Node2D" parent="ItemBagScreen"]
+position = Vector2(200, 93)
+
+[node name="Selected" type="ColorRect" parent="ItemBagScreen/Recycle"]
+offset_left = 119.0
+offset_top = 311.0
+offset_right = 243.0
+offset_bottom = 396.0
+color = Color(1, 1, 1, 0.776471)
+
+[node name="UnSelected" type="ColorRect" parent="ItemBagScreen/Recycle"]
+offset_left = 119.0
+offset_top = 311.0
+offset_right = 243.0
+offset_bottom = 396.0
+color = Color(0.392157, 0.392157, 0.392157, 0.776471)
+
+[node name="Label" type="Label" parent="ItemBagScreen/Recycle"]
+offset_left = 149.0
+offset_top = 371.0
+offset_right = 211.0
+offset_bottom = 394.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_dufhy")
+theme_override_font_sizes/font_size = 18
+text = "Recycle"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gold" type="Node2D" parent="ItemBagScreen/Recycle"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ItemBagScreen/Recycle/Gold"]
+position = Vector2(130, 321)
+scale = Vector2(0.0103125, 0.0103125)
+texture = ExtResource("5_5b71g")
+
+[node name="Label" type="Label" parent="ItemBagScreen/Recycle/Gold"]
+offset_left = 147.0
+offset_top = 312.0
+offset_right = 209.0
+offset_bottom = 335.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_dufhy")
+theme_override_font_sizes/font_size = 14
+text = "22222"
+vertical_alignment = 1
+
+[node name="Stone" type="Node2D" parent="ItemBagScreen/Recycle"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="ItemBagScreen/Recycle/Stone"]
+position = Vector2(130, 338)
+scale = Vector2(0.0103125, 0.0103125)
+texture = ExtResource("6_g2efc")
+
+[node name="Label" type="Label" parent="ItemBagScreen/Recycle/Stone"]
+offset_left = 147.0
+offset_top = 330.0
+offset_right = 209.0
+offset_bottom = 353.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_dufhy")
+theme_override_font_sizes/font_size = 14
+text = "22222"
+vertical_alignment = 1
+
+[node name="Wood" type="Node2D" parent="ItemBagScreen/Recycle"]
+
+[node name="Sprite2D3" type="Sprite2D" parent="ItemBagScreen/Recycle/Wood"]
+position = Vector2(130, 360)
+scale = Vector2(0.0103125, 0.0103125)
+texture = ExtResource("7_giwaq")
+
+[node name="Label" type="Label" parent="ItemBagScreen/Recycle/Wood"]
+offset_left = 147.0
+offset_top = 349.0
+offset_right = 209.0
+offset_bottom = 372.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_dufhy")
+theme_override_font_sizes/font_size = 14
+text = "22222"
+vertical_alignment = 1

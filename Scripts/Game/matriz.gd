@@ -26,14 +26,18 @@ func _process(_delta):
 						quadrant_instance.get_node("Resource").visible=true
 						quadrant_instance.get_node("Resource").animation=resources[index]
 					resources.remove_at(index)
-									
+				
+				if (linha>29 and linha<36):
+					quadrant_instance.level=1
+				elif linha>=36:
+					quadrant_instance.level=2				
 				add_child(quadrant_instance)
 
 func canUse(linha,coluna):
 	#Evitar o templo
 	var linhaMin = 0
 	var linhaMax=29
-	var colunaMin=16
+	var colunaMin=12
 	var colunaMax=24
 	
 	if linha<linhaMax and coluna>colunaMin and coluna<colunaMax:

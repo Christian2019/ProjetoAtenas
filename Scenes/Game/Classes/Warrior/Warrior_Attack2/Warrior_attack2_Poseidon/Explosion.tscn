@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://m4d3h3t4vkgd"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_attack2/Warrior_attack2_Poseidon/Explosion.gd" id="1_tsb2p"]
+[ext_resource type="Texture2D" uid="uid://csb1dabjssguf" path="res://Assets/Images/Projectiles/BlueExplosion.png" id="2_q255g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0gtu"]
+atlas = ExtResource("2_q255g")
+region = Rect2(0, 0, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmf7e"]
+atlas = ExtResource("2_q255g")
+region = Rect2(352, 0, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghl8n"]
+atlas = ExtResource("2_q255g")
+region = Rect2(704, 0, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ve3c"]
+atlas = ExtResource("2_q255g")
+region = Rect2(0, 280, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6mb6"]
+atlas = ExtResource("2_q255g")
+region = Rect2(352, 280, 352, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p82ls"]
+atlas = ExtResource("2_q255g")
+region = Rect2(704, 280, 352, 280)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_60aqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0gtu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmf7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghl8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ve3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6mb6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p82ls")
+}],
+"loop": true,
+"name": &"default",
+"speed": 14.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ddoa7"]
+
+[node name="Explosion" type="Node2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_tsb2p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 2.33)
+sprite_frames = SubResource("SpriteFrames_60aqq")
+autoplay = "default"
+frame_progress = 0.591229
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+scale = Vector2(14.237, 14.237)
+shape = SubResource("CircleShape2D_ddoa7")
+
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
+[connection signal="area_entered" from="AnimatedSprite2D/Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,11 +1,11 @@
 extends Node2D
 
 var id=20
-var maxHp=3000
+var maxHp=10000
 var hp = maxHp
 var damages = {
-	"damage":4.0,
-	"poisonDamage":50.0
+	"damage":110.0,
+	"poisonDamage":200.0
 	}
 
 var nextHitDelayPlayer=false
@@ -17,6 +17,9 @@ var hpBarWidth = maxHpBarWidth
 
 var speed=4.0
 var canMove=true
+var currentAnimation="Moving"
+var verticalDir="down"
+var horizontalDir="right"
 
 var playerInside=false
 var centerPointInside=false
@@ -36,7 +39,13 @@ var poisonSpeed=3
 var attackSpeedModifierVar=[nextHitDelay,cd]
 
 func _ready():
-	$AnimatedSprite2D.play("Moving")
+	maxHp=maxHp*AllSkillsValues.enemyBaseHpWaveMultiplier**(Global.WaveController.wave-1)
+	hp = maxHp
+	for i in range(0,damages.values().size(),1):
+		damages[damages.keys()[i]]*=AllSkillsValues.enemyBaseDamageWaveMultiplier**(Global.WaveController.wave-1)
+	if Global.WaveController.wave>10:
+		dracmas=2
+		
 	maxHpBarWidth=$HPBar/Red.size.x
 	
 func _process(_delta):
@@ -56,6 +65,9 @@ func _process(_delta):
 
 	contactDamage()
 	
+
+func playAnimation (animName):
+	$AnimatedSprite2D.play(animName+"_"+verticalDir+"_"+horizontalDir)
 
 func die():
 	for i in range(0,dracmas,1):
@@ -80,14 +92,27 @@ func getTarget():
 		target=center
 	else:
 		target=player
+	
+	var distanceXtotTarget = global_position.x-target.global_position.x
+	var distanceYtoTarget = global_position.y-target.global_position.y
+	
+	if (distanceXtotTarget>0):
+		horizontalDir="left"
+	else:
+		horizontalDir="right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir="up"
+	else:
+		verticalDir="down"
 
 func move():
 	if (!canMove):
 		return
 	
 	
-	if ($AnimatedSprite2D.animation!= "Moving"):
-		$AnimatedSprite2D.animation= "Moving"
+	if (currentAnimation != "Moving"):
+		currentAnimation = "Moving"
 
 	var targetPointX= target.position.x
 	var targetPointY= target.position.y
@@ -102,10 +127,7 @@ func move():
 	position.x -= speedXModifier
 	position.y -= speedYModifier
 	
-	if (distanceXtotTarget>0):
-		$AnimatedSprite2D.flip_h=true
-	else:
-		$AnimatedSprite2D.flip_h=false
+	playAnimation(currentAnimation)
 
 func attack():
 	if (!onCd and global_position.distance_to(target.global_position)<minDistance):
@@ -114,24 +136,27 @@ func attack():
 		Global.timerCreator("disableCD",attackSpeedModifierVar[1],[],self)
 		canMove=false
 		usingPoison=true
-		$AnimatedSprite2D.animation="Spiting"
-		$AnimatedSprite2D.frame=0
+		#currentAnimation = "Spiting"
+		#playAnimation(currentAnimation)
+		#$AnimatedSprite2D.frame=0
 		return
 	
 	if (usingPoison):
-		if $AnimatedSprite2D.frame==$AnimatedSprite2D.sprite_frames.get_frame_count("Spiting")-1:
+		if $AnimatedSprite2D.frame==$AnimatedSprite2D.sprite_frames.get_frame_count("Spiting"+"_"+verticalDir+"_"+horizontalDir)-1:
 			usingPoison=false
 		return
 		
 	if (playerInside or (centerPointInside and (Global.player.playerOnCenterPoint or Global.player.farming))):
 		canMove=false
-		if ($AnimatedSprite2D.animation!= "Attacking"):
-			$AnimatedSprite2D.animation= "Attacking"
+		if (currentAnimation != "Attacking"):
+			currentAnimation = "Attacking"
+		playAnimation(currentAnimation)
 	else:
 		canMove=true
 
 func spit():
-	$AnimatedSprite2D.animation= "Spiting"
+	currentAnimation = "Spiting"
+	playAnimation(currentAnimation)
 	$AnimatedSprite2D.frame=0
 	for i in range(0,360,int(360.0/numberOfProjetiles)):
 		var p= PreLoads.poison.instantiate()

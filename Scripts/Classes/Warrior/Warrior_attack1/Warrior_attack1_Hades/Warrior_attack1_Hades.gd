@@ -48,17 +48,17 @@ func attackSpeedModifier():
 
 func qualityStatus():
 	if ( quality=="common"):
-		attackSpeedBonusPercent=0.01
+		attackSpeedBonusPercent=AllSkillsValues.warrior_attack1_hades_attackSpeedBonusPercent[0]
 	elif ( quality=="rare"):
-		attackSpeedBonusPercent=0.02
+		attackSpeedBonusPercent=AllSkillsValues.warrior_attack1_hades_attackSpeedBonusPercent[1]
 	elif ( quality=="epic"):
-		attackSpeedBonusPercent=0.03
+		attackSpeedBonusPercent=AllSkillsValues.warrior_attack1_hades_attackSpeedBonusPercent[2]
 	elif ( quality=="legendary"):
-		attackSpeedBonusPercent=0.04
-		frenzyPercent=0.1
+		attackSpeedBonusPercent=AllSkillsValues.warrior_attack1_hades_attackSpeedBonusPercent[3]
+		frenzyPercent=AllSkillsValues.warrior_attack1_hades_frenzyPercent
 	elif ( quality=="divine"):
-		attackSpeedBonusPercent=0.06
-		frenzyPercent=0.2
+		attackSpeedBonusPercent=AllSkillsValues.warrior_attack1_divine_hades_attackSpeedBonusPercent
+		frenzyPercent=AllSkillsValues.warrior_attack1_divine_hades_frenzyPercent
 
 func _process(_delta):
 	animation()

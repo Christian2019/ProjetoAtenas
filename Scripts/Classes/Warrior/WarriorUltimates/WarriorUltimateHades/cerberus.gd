@@ -4,6 +4,9 @@ var damage=500
 var totalHeal=0
 
 var speed = 10
+var currentAnimation = "Walking"
+var verticalDir="down"
+var horizontalDir="right"
 
 var target
 
@@ -23,7 +26,11 @@ var eyes_frame=0
 var eyes_max_frame=5*60
 
 func _ready():
-	$Sprite2D.modulate.a=0	
+	$Sprite2D.modulate.a=0
+	attackSpeedModifier()
+
+func attackSpeedModifier():
+	nextHitDelay=nextHitDelay/Global.player.attack_Speed	
 
 func _process(_delta):
 	if (eyes_frame<eyes_max_frame):
@@ -50,7 +57,7 @@ func attack():
 			var i = getMonsterHitIndex(monstersInArea[j])
 			if itsValid(monstersHit[i]):
 				if (!monstersHit[i].onHitDelay):
-					monstersHit[i].monster.hp-=damage+totalHeal
+					Global.MathController.damageController((damage+totalHeal),monstersHit[i].monster)
 					monstersHit[i].onHitDelay=true
 					Global.timerCreator("removeNextHitDelay",nextHitDelay,[i],self)
 
@@ -76,23 +83,35 @@ func move():
 
 	var targetPointX= target.position.x
 	var targetPointY= target.position.y
-	var distanceXtotTarget = position.x-targetPointX
+	var distanceXtoTarget = position.x-targetPointX
 	var distanceYtoTarget = position.y-targetPointY
 	
-	var absoluteTotalValue = abs(distanceYtoTarget)+abs(distanceXtotTarget)
+	var absoluteTotalValue = abs(distanceYtoTarget)+abs(distanceXtoTarget)
 	
-	var speedXModifier = speed*(distanceXtotTarget/absoluteTotalValue)
+	var speedXModifier = speed*(distanceXtoTarget/absoluteTotalValue)
 	var speedYModifier = speed*(distanceYtoTarget/absoluteTotalValue)
 
 	position.x -= speedXModifier
 	position.y -= speedYModifier
 	
-	if (distanceXtotTarget>0):
-		$AnimatedSprite2D.flip_h=true
+	if (distanceXtoTarget>0):
+		horizontalDir = "left"
 	else:
-		$AnimatedSprite2D.flip_h=false
+		horizontalDir = "right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir = "up"
+	else:
+		verticalDir = "down"
+	
+	playAnimation()
 
-
+func playAnimation ():
+	var current_frame = $AnimatedSprite2D.get_frame()
+	var current_progress = $AnimatedSprite2D.get_frame_progress()
+	
+	$AnimatedSprite2D.play("Moving_"+verticalDir+"_"+horizontalDir)
+	$AnimatedSprite2D.set_frame_and_progress(current_frame, current_progress)
 
 func _on_area_2d_area_entered(area):
 	if area.get_parent().get_parent().name == "Enemies":

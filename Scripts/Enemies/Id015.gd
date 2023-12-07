@@ -1,11 +1,11 @@
 extends Node2D
 
 var id=15
-var maxHp=30000
+var maxHp=500000
 var hp = maxHp
 var damages = {
-	"damage":1.0,
-	"projectileDamage":50.0
+	"damage":100.0,
+	"projectileDamage":150.0
 	}
 
 var nextHitDelayPlayer=false
@@ -16,6 +16,11 @@ var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
 var speed = 5.0
+var currentAnimation="move"
+var verticalDir="down"
+var last_vDir
+var horizontalDir="right"
+var last_hDir
 
 var isMoving=true
 
@@ -41,6 +46,13 @@ var moveTarget
 var attackSpeedModifierVar=[nextHitDelay,cd0,cd1,cd2]
 
 func _ready():
+	maxHp=maxHp*AllSkillsValues.enemyBaseHpWaveMultiplier**(Global.WaveController.wave-1)
+	hp = maxHp
+	for i in range(0,damages.values().size(),1):
+		damages[damages.keys()[i]]*=AllSkillsValues.enemyBaseDamageWaveMultiplier**(Global.WaveController.wave-1)
+	if Global.WaveController.wave>10:
+		dracmas=2
+		
 	maxHpBarWidth=$HPBar/Red.size.x
 	wave = Global.WaveController.get_child(Global.WaveController.wave-1)
 	getRandomMoveTarget()
@@ -169,7 +181,7 @@ func die():
 		dracma.global_position=global_position
 		Global.Game.get_node("Instances/Dracmas").add_child(dracma)
 		
-		
+	Global.ItemController.dropIten(0,0,1,self)	
 	#Animacao de morte
 	call_deferred("queue_free")
 
@@ -183,20 +195,41 @@ func move():
 	var distanceXtoTarget = position.x-targetPointX
 	var distanceYtoTarget = position.y-targetPointY
 	
+	if (distanceXtoTarget>0):
+		horizontalDir="left"
+	else:
+		horizontalDir="right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir="up"
+	else:
+		verticalDir="down"
+		
+	
+	if last_hDir != horizontalDir or last_vDir != verticalDir:
+		last_hDir = horizontalDir
+		last_vDir = verticalDir
+		changeAnimDir()
+		
 	var absoluteTotalValue = abs(distanceYtoTarget)+abs(distanceXtoTarget)
 	
 	var speedXModifier = speed*(distanceXtoTarget/absoluteTotalValue)
 	var speedYModifier = speed*(distanceYtoTarget/absoluteTotalValue)
-
+	playAnimation (currentAnimation)
 	if !tryToMove(-speedXModifier,-speedYModifier):
-			getRandomMoveTarget()
-			
-		
-	if (distanceXtoTarget>0):
-		$AnimatedSprite2D.flip_h=true
-	else:
-		$AnimatedSprite2D.flip_h=false
+			getRandomMoveTarget() 
 
+
+		
+func playAnimation (animName):
+	$AnimatedSprite2D.play(animName+"_"+verticalDir+"_"+horizontalDir)
+
+func changeAnimDir():
+	var currentFrame=$AnimatedSprite2D.frame
+	
+	playAnimation(currentAnimation)
+	$AnimatedSprite2D.frame=currentFrame+1
+	
 func getRandomMoveTarget():
 	var x = RandomNumberGenerator.new().randi_range(0, 2561)
 	var y = RandomNumberGenerator.new().randi_range(0, 1280)

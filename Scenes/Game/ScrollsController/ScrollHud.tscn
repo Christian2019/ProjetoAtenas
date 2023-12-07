@@ -1,0 +1,568 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsr560ixpdq5a"]
+
+[ext_resource type="Script" path="res://Scripts/Game/ScrollController/ScrollHud.gd" id="1_6ajho"]
+[ext_resource type="Texture2D" uid="uid://cv1m856of8ntd" path="res://Assets/Images/HUD/Loja/GoldPlace.png" id="1_h70ib"]
+[ext_resource type="Texture2D" uid="uid://costnafwkrulb" path="res://Assets/Images/HUD/Loja/SilverPlace.png" id="2_b3h6x"]
+[ext_resource type="PackedScene" uid="uid://b8treb1euqxo8" path="res://Scenes/Game/ScrollsController/Scroll.tscn" id="4_gdcq3"]
+[ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="5_g58ql"]
+
+[node name="ScrollHud" type="Node2D"]
+script = ExtResource("1_6ajho")
+
+[node name="MINHASCOISAS" type="ColorRect" parent="."]
+offset_right = 427.0
+offset_bottom = 563.0
+scale = Vector2(8, 8)
+color = Color(0.592157, 0.592157, 0.592157, 1)
+
+[node name="Attack_1" type="Label" parent="MINHASCOISAS"]
+layout_mode = 2
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 70.0
+offset_bottom = 29.0
+text = "Attack 1"
+
+[node name="Attack1" type="GridContainer" parent="MINHASCOISAS"]
+layout_mode = 2
+offset_left = 61.0
+offset_top = 38.0
+offset_right = 361.0
+offset_bottom = 38.0
+theme_override_constants/h_separation = 120
+columns = 3
+
+[node name="Ativo" type="Control" parent="MINHASCOISAS/Attack1"]
+layout_mode = 2
+
+[node name="Ativo_Spot" type="ColorRect" parent="MINHASCOISAS/Attack1/Ativo"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = -5.0
+offset_right = 102.0
+offset_bottom = 64.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Attack1/Ativo"]
+position = Vector2(44.5, 29.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("1_h70ib")
+
+[node name="Passivo1" type="Control" parent="MINHASCOISAS/Attack1"]
+layout_mode = 2
+
+[node name="Passivo1_Spot" type="ColorRect" parent="MINHASCOISAS/Attack1/Passivo1"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 108.0
+offset_bottom = 64.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Attack1/Passivo1"]
+position = Vector2(50.5, 29.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("2_b3h6x")
+
+[node name="Passivo2" type="Control" parent="MINHASCOISAS/Attack1"]
+layout_mode = 2
+
+[node name="Passivo2_Spot" type="ColorRect" parent="MINHASCOISAS/Attack1/Passivo2"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -5.0
+offset_right = 114.0
+offset_bottom = 64.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Attack1/Passivo2"]
+position = Vector2(56.5, 29.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("2_b3h6x")
+
+[node name="Attack_2" type="Label" parent="MINHASCOISAS"]
+layout_mode = 2
+offset_left = 7.0
+offset_top = 118.0
+offset_right = 70.0
+offset_bottom = 144.0
+text = "Attack 2"
+
+[node name="Attack2" type="GridContainer" parent="MINHASCOISAS"]
+layout_mode = 2
+offset_left = 61.0
+offset_top = 124.0
+offset_right = 301.0
+offset_bottom = 150.0
+theme_override_constants/h_separation = 120
+columns = 3
+
+[node name="Ativo" type="Control" parent="MINHASCOISAS/Attack2"]
+layout_mode = 2
+
+[node name="Ativo_Spot" type="ColorRect" parent="MINHASCOISAS/Attack2/Ativo"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 23.0
+offset_right = 102.0
+offset_bottom = 92.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Attack2/Ativo"]
+position = Vector2(44.5, 57.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("1_h70ib")
+
+[node name="Passivo1" type="Control" parent="MINHASCOISAS/Attack2"]
+layout_mode = 2
+
+[node name="Passivo1_Spot" type="ColorRect" parent="MINHASCOISAS/Attack2/Passivo1"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 23.0
+offset_right = 108.0
+offset_bottom = 92.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Attack2/Passivo1"]
+position = Vector2(50.5, 57.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("2_b3h6x")
+
+[node name="Passivo2" type="Control" parent="MINHASCOISAS/Attack2"]
+layout_mode = 2
+
+[node name="Passivo2_Spot" type="ColorRect" parent="MINHASCOISAS/Attack2/Passivo2"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 23.0
+offset_right = 114.0
+offset_bottom = 92.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Attack2/Passivo2"]
+position = Vector2(56.5, 57.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("2_b3h6x")
+
+[node name="Torreta2" type="Label" parent="MINHASCOISAS"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 226.0
+offset_right = 69.0
+offset_bottom = 252.0
+text = "Turret
+"
+
+[node name="Torreta" type="GridContainer" parent="MINHASCOISAS"]
+layout_mode = 2
+offset_left = 62.0
+offset_top = 211.0
+offset_right = 302.0
+offset_bottom = 211.0
+theme_override_constants/h_separation = 120
+columns = 3
+
+[node name="Ativo" type="Control" parent="MINHASCOISAS/Torreta"]
+layout_mode = 2
+
+[node name="Ativo_Spot" type="ColorRect" parent="MINHASCOISAS/Torreta/Ativo"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 44.0
+offset_right = 102.0
+offset_bottom = 111.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Torreta/Ativo"]
+position = Vector2(44.5, 77.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("1_h70ib")
+
+[node name="Passivo1" type="Control" parent="MINHASCOISAS/Torreta"]
+layout_mode = 2
+
+[node name="Passivo1_Spot" type="ColorRect" parent="MINHASCOISAS/Torreta/Passivo1"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 43.0
+offset_right = 108.0
+offset_bottom = 112.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Torreta/Passivo1"]
+position = Vector2(50.5, 77.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("2_b3h6x")
+
+[node name="Passivo2" type="Control" parent="MINHASCOISAS/Torreta"]
+layout_mode = 2
+
+[node name="Passivo2_Spot" type="ColorRect" parent="MINHASCOISAS/Torreta/Passivo2"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 43.0
+offset_right = 114.0
+offset_bottom = 112.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Torreta/Passivo2"]
+position = Vector2(56.5, 77.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("2_b3h6x")
+
+[node name="Dash2" type="Label" parent="MINHASCOISAS"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 326.0
+offset_right = 48.0
+offset_bottom = 352.0
+text = "Dash"
+
+[node name="Dash" type="GridContainer" parent="MINHASCOISAS"]
+layout_mode = 2
+offset_left = 62.0
+offset_top = 405.0
+offset_right = 302.0
+offset_bottom = 405.0
+theme_override_constants/h_separation = 120
+columns = 3
+
+[node name="Ativo" type="Control" parent="MINHASCOISAS/Dash"]
+layout_mode = 2
+
+[node name="Ativo_Spot" type="ColorRect" parent="MINHASCOISAS/Dash/Ativo"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = -50.0
+offset_right = 102.0
+offset_bottom = 17.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Dash/Ativo"]
+position = Vector2(44.5, -16.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("1_h70ib")
+
+[node name="Passivo1" type="Control" parent="MINHASCOISAS/Dash"]
+layout_mode = 2
+
+[node name="Passivo1_Spot" type="ColorRect" parent="MINHASCOISAS/Dash/Passivo1"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = -51.0
+offset_right = 109.0
+offset_bottom = 18.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Dash/Passivo1"]
+position = Vector2(51.5, -16.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("2_b3h6x")
+
+[node name="Passivo2" type="Control" parent="MINHASCOISAS/Dash"]
+layout_mode = 2
+
+[node name="Passivo2_Spot" type="ColorRect" parent="MINHASCOISAS/Dash/Passivo2"]
+layout_mode = 0
+offset_top = -51.0
+offset_right = 115.0
+offset_bottom = 17.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Dash/Passivo2"]
+position = Vector2(57.5, -16.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("2_b3h6x")
+
+[node name="Ultimate2" type="Label" parent="MINHASCOISAS"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 425.0
+offset_right = 72.0
+offset_bottom = 451.0
+text = "Ultimate"
+
+[node name="Ultimate" type="GridContainer" parent="MINHASCOISAS"]
+layout_mode = 2
+offset_left = 61.0
+offset_top = 307.0
+offset_right = 301.0
+offset_bottom = 307.0
+theme_override_constants/h_separation = 120
+columns = 3
+
+[node name="Ativo" type="Control" parent="MINHASCOISAS/Ultimate"]
+layout_mode = 2
+
+[node name="Ativo_Spot" type="ColorRect" parent="MINHASCOISAS/Ultimate/Ativo"]
+layout_mode = 0
+offset_left = -12.0
+offset_top = 145.0
+offset_right = 103.0
+offset_bottom = 212.0
+color = Color(0.414063, 0.414063, 0.414063, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Ultimate/Ativo"]
+position = Vector2(45.5, 178.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("1_h70ib")
+
+[node name="Passivo1" type="Control" parent="MINHASCOISAS/Ultimate"]
+layout_mode = 2
+
+[node name="Passivo1_Spot" type="ColorRect" parent="MINHASCOISAS/Ultimate/Passivo1"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 145.0
+offset_right = 110.0
+offset_bottom = 212.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Ultimate/Passivo1"]
+position = Vector2(52.5, 178.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("2_b3h6x")
+
+[node name="Passivo2" type="Control" parent="MINHASCOISAS/Ultimate"]
+layout_mode = 2
+
+[node name="Passivo2_Spot" type="ColorRect" parent="MINHASCOISAS/Ultimate/Passivo2"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 145.0
+offset_right = 116.0
+offset_bottom = 212.0
+color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="GoldPlace" type="Sprite2D" parent="MINHASCOISAS/Ultimate/Passivo2"]
+position = Vector2(58.5, 178.5)
+scale = Vector2(0.61, 0.575)
+texture = ExtResource("2_b3h6x")
+
+[node name="Scrolls" type="Node2D" parent="."]
+
+[node name="Scroll0" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(777, 485)
+
+[node name="Scroll1" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(1790, 485)
+
+[node name="Scroll2" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(2803, 485)
+
+[node name="Scroll3" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(777, 1400)
+
+[node name="Scroll4" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(1790, 1400)
+
+[node name="Scroll5" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(2803, 1400)
+
+[node name="Scroll6" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(777, 2258)
+
+[node name="Scroll7" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(1790, 2258)
+
+[node name="Scroll8" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(2803, 2258)
+
+[node name="Scroll9" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(777, 3056)
+
+[node name="Scroll10" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(1790, 3056)
+
+[node name="Scroll11" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(2803, 3056)
+
+[node name="Scroll12" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(777, 3833)
+
+[node name="Scroll13" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(1790, 3833)
+
+[node name="Scroll14" parent="Scrolls" instance=ExtResource("4_gdcq3")]
+position = Vector2(2803, 3833)
+
+[node name="Selected" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Selected"]
+offset_left = -3667.0
+offset_top = 12.0
+offset_right = -13.0
+offset_bottom = 4505.0
+color = Color(0, 0, 0, 0.8)
+
+[node name="Scroll" parent="Selected" instance=ExtResource("4_gdcq3")]
+position = Vector2(-2062, 1331)
+scale = Vector2(3.75034, 3.75034)
+
+[node name="Buttons" type="Node2D" parent="Selected"]
+position = Vector2(-5541, 942)
+scale = Vector2(8, 8)
+
+[node name="Combine" type="Button" parent="Selected/Buttons"]
+offset_left = 360.199
+offset_top = 230.693
+offset_right = 580.199
+offset_bottom = 264.693
+theme_override_fonts/font = ExtResource("5_g58ql")
+theme_override_font_sizes/font_size = 22
+text = "combine"
+
+[node name="Sell" type="Button" parent="Selected/Buttons"]
+offset_left = 360.199
+offset_top = 280.625
+offset_right = 580.199
+offset_bottom = 314.625
+theme_override_fonts/font = ExtResource("5_g58ql")
+theme_override_font_sizes/font_size = 22
+text = "sell"
+
+[node name="Equip" type="Button" parent="Selected/Buttons"]
+offset_left = 360.199
+offset_top = 328.75
+offset_right = 580.199
+offset_bottom = 362.75
+theme_override_fonts/font = ExtResource("5_g58ql")
+theme_override_font_sizes/font_size = 22
+text = "equip as passive"
+
+[node name="Close" type="Button" parent="Selected/Buttons"]
+offset_left = 360.199
+offset_top = 375.5
+offset_right = 580.199
+offset_bottom = 409.5
+theme_override_fonts/font = ExtResource("5_g58ql")
+theme_override_font_sizes/font_size = 22
+text = "close"
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Button0" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 475.0
+offset_top = 244.0
+offset_right = 1279.0
+offset_bottom = 824.0
+
+[node name="Button1" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1427.0
+offset_top = 254.0
+offset_right = 2231.0
+offset_bottom = 834.0
+
+[node name="Button2" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2440.0
+offset_top = 258.0
+offset_right = 3244.0
+offset_bottom = 838.0
+
+[node name="Button3" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 423.0
+offset_top = 1165.0
+offset_right = 1227.0
+offset_bottom = 1745.0
+
+[node name="Button4" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1440.0
+offset_top = 1178.0
+offset_right = 2244.0
+offset_bottom = 1758.0
+
+[node name="Button5" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2440.0
+offset_top = 1165.0
+offset_right = 3244.0
+offset_bottom = 1745.0
+
+[node name="Button6" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 418.0
+offset_top = 2025.0
+offset_right = 1222.0
+offset_bottom = 2605.0
+
+[node name="Button7" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1452.0
+offset_top = 2025.0
+offset_right = 2256.0
+offset_bottom = 2605.0
+
+[node name="Button8" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2461.0
+offset_top = 2034.0
+offset_right = 3265.0
+offset_bottom = 2614.0
+
+[node name="Button9" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 410.0
+offset_top = 2839.0
+offset_right = 1214.0
+offset_bottom = 3419.0
+
+[node name="Button10" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1444.0
+offset_top = 2831.0
+offset_right = 2248.0
+offset_bottom = 3411.0
+
+[node name="Button11" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2453.0
+offset_top = 2839.0
+offset_right = 3257.0
+offset_bottom = 3419.0
+
+[node name="Button12" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 418.0
+offset_top = 3627.0
+offset_right = 1222.0
+offset_bottom = 4207.0
+
+[node name="Button13" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1461.0
+offset_top = 3619.0
+offset_right = 2265.0
+offset_bottom = 4199.0
+
+[node name="Button14" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2461.0
+offset_top = 3636.0
+offset_right = 3265.0
+offset_bottom = 4216.0
+
+[connection signal="pressed" from="Selected/Buttons/Combine" to="." method="_on_combine_pressed"]
+[connection signal="pressed" from="Selected/Buttons/Sell" to="." method="_on_sell_pressed"]
+[connection signal="focus_entered" from="Selected/Buttons/Equip" to="." method="_on_equip_focus_entered"]
+[connection signal="pressed" from="Selected/Buttons/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Buttons/Button0" to="." method="_on_button_0_pressed"]
+[connection signal="pressed" from="Buttons/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Buttons/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Buttons/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Buttons/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Buttons/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Buttons/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Buttons/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="Buttons/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="Buttons/Button9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="Buttons/Button10" to="." method="_on_button_10_pressed"]
+[connection signal="pressed" from="Buttons/Button11" to="." method="_on_button_11_pressed"]
+[connection signal="pressed" from="Buttons/Button12" to="." method="_on_button_12_pressed"]
+[connection signal="pressed" from="Buttons/Button13" to="." method="_on_button_13_pressed"]
+[connection signal="pressed" from="Buttons/Button14" to="." method="_on_button_14_pressed"]

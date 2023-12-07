@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://xtyky0e04pef"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_Turret/Zeus/Warrior_Turret_Zeus_Arrow.gd" id="1_kukvg"]
+[ext_resource type="Texture2D" uid="uid://d2jsc0roj53pf" path="res://Assets/Images/Player/Attack1/Zeus/Lightning/scene00001.png" id="2_ebmta"]
+[ext_resource type="Texture2D" uid="uid://bjp1ohisoh2q2" path="res://Assets/Images/Player/Attack1/Zeus/Lightning/scene00004.png" id="3_dkr8a"]
+[ext_resource type="Texture2D" uid="uid://m082t8l0bunn" path="res://Assets/Images/Player/Attack1/Zeus/Lightning/scene00007.png" id="4_w5mge"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_60aqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ebmta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dkr8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w5mge")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ramb3"]
+size = Vector2(239, 30)
+
+[node name="Warrior_Turret_Zeus_Arrow" type="Node2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_kukvg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(5.00001, 0)
+scale = Vector2(0.585938, 0.391439)
+sprite_frames = SubResource("SpriteFrames_60aqq")
+autoplay = "default"
+frame_progress = 0.694122
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, -1)
+shape = SubResource("RectangleShape2D_ramb3")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

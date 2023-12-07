@@ -1,11 +1,11 @@
 extends Node2D
 
 var id=7
-var maxHp=500
+var maxHp=300
 var hp = maxHp
 var lastHpCheck=maxHp
 var damages = {
-	"damage":1.0,
+	"damage":3,
 	"projectileDamage":10.0
 	}
 
@@ -17,6 +17,8 @@ var maxHpBarWidth
 var hpBarWidth = maxHpBarWidth
 
 var speed = 2.0
+var verticalDir="down"
+var horizontalDir="right"
 
 var playerInside=false
 var centerPointInside=false
@@ -39,7 +41,14 @@ var attackSpeedModifierVar=[nextHitDelay]
 
 
 func _ready():
-	$AnimatedSprite2D.play("Flying")
+	maxHp=maxHp*AllSkillsValues.enemyBaseHpWaveMultiplier**(Global.WaveController.wave-1)
+	hp = maxHp
+	for i in range(0,damages.values().size(),1):
+		damages[damages.keys()[i]]*=AllSkillsValues.enemyBaseDamageWaveMultiplier**(Global.WaveController.wave-1)
+	if Global.WaveController.wave>10:
+		dracmas=2
+		
+	playAnimation()
 	maxHpBarWidth=$HPBar/Red.size.x
 	speed = float(RandomNumberGenerator.new().randi_range(10*speed/2, 10*speed))/10	
 	radSpeed=speed/2
@@ -57,7 +66,11 @@ func _process(_delta):
 	hpBarController()
 	
 
-	
+func playAnimation ():
+	var currentFrame = $AnimatedSprite2D.frame
+	$AnimatedSprite2D.play("Flying_"+verticalDir+"_"+horizontalDir)
+	$AnimatedSprite2D.frame = currentFrame+1
+
 func enableHit(nextHitDelayTarget):
 	if nextHitDelayTarget==0:
 		nextHitDelayPlayer=false
@@ -138,10 +151,21 @@ func move():
 		global_position+=Vector2(speed*cos(angle),speed*sin(angle))
 		#tryToMove(speed*cos(angle),speed*sin(angle))
 	
+	var last_horizontalDir = horizontalDir
+	var last_verticalDir = verticalDir
+	
 	if (global_position.x-(Global.player.global_position.x)>0):
-		$AnimatedSprite2D.flip_h=true
+		horizontalDir="left"
 	else:
-		$AnimatedSprite2D.flip_h=false
+		horizontalDir="right"
+	
+	if (global_position.y-(Global.player.global_position.y)>0):
+		verticalDir="up"
+	else:
+		verticalDir="down"
+	
+	if last_horizontalDir!= horizontalDir or last_verticalDir != verticalDir:
+		playAnimation()
 		
 func tryToMove(speedX,speedY):
 	var topSpeed = 150

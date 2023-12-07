@@ -1,0 +1,229 @@
+[gd_scene load_steps=54 format=3 uid="uid://buer8qtk6isip"]
+
+[ext_resource type="Script" path="res://Scripts/Game/Item.gd" id="1_qpt7x"]
+[ext_resource type="Texture2D" uid="uid://bdho2xtjt1rii" path="res://Assets/Images/Itens/Items/Ares'_Shield/AresShieldBronze.png" id="2_sk6ty"]
+[ext_resource type="Texture2D" uid="uid://bnsxfkxt52ixe" path="res://Assets/Images/Itens/Items/Ares'_Shield/AresShieldGold.png" id="3_u3xdc"]
+[ext_resource type="Texture2D" uid="uid://bdocif3oel0e4" path="res://Assets/Images/Itens/Items/Ares'_Shield/AresShieldRock.png" id="4_aghg7"]
+[ext_resource type="Texture2D" uid="uid://cl168xjeoy54f" path="res://Assets/Images/Itens/Items/Ares'_Shield/AresShieldSilver.png" id="5_tjmoc"]
+[ext_resource type="Texture2D" uid="uid://da2m5n4rpkykl" path="res://Assets/Images/Itens/Items/Ares'_Shield/AresShieldWood.png" id="6_hf2mo"]
+[ext_resource type="Texture2D" uid="uid://bx1atuf56wehc" path="res://Assets/Images/Itens/Items/Artemis'_Bow/ArtemisBow1.png" id="7_5aw6v"]
+[ext_resource type="Texture2D" uid="uid://dr8g2b8wodilc" path="res://Assets/Images/Itens/Items/Artemis'_Bow/ArtemisBow2.png" id="8_7wfdd"]
+[ext_resource type="Texture2D" uid="uid://ccyacqmlslri5" path="res://Assets/Images/Itens/Items/Artemis'_Bow/ArtemisBow3.png" id="9_6g6wi"]
+[ext_resource type="Texture2D" uid="uid://cvkh8syw38bu7" path="res://Assets/Images/Itens/Items/Artemis'_Bow/ArtemisBow4.png" id="10_3m05c"]
+[ext_resource type="Texture2D" uid="uid://cbbleolgbycdt" path="res://Assets/Images/Itens/Items/Artemis'_Bow/ArtemisBow5.png" id="11_d3isa"]
+[ext_resource type="Texture2D" uid="uid://cvsogf86whct4" path="res://Assets/Images/Itens/Items/Atenas'_Spear/AtenasSpearBronze.png" id="12_g04ta"]
+[ext_resource type="Texture2D" uid="uid://jy1l6j3dwmfr" path="res://Assets/Images/Itens/Items/Atenas'_Spear/AtenasSpearDIamond.png" id="13_7uylk"]
+[ext_resource type="Texture2D" uid="uid://pkcfrj6oybt4" path="res://Assets/Images/Itens/Items/Atenas'_Spear/AtenasSpearGold.png" id="14_wiy02"]
+[ext_resource type="Texture2D" uid="uid://cff8chjamiveg" path="res://Assets/Images/Itens/Items/Atenas'_Spear/AtenasSpearSilver.png" id="15_bg0u2"]
+[ext_resource type="Texture2D" uid="uid://dmixuyypqls7j" path="res://Assets/Images/Itens/Items/Atenas'_Spear/AtenasSpearWood.png" id="16_c03ff"]
+[ext_resource type="Texture2D" uid="uid://bv3tvdal8elyk" path="res://Assets/Images/Itens/Items/Demeter's_Cifer/DemetersCiferBronze.png" id="17_xl1ea"]
+[ext_resource type="Texture2D" uid="uid://b68kytlaev0nr" path="res://Assets/Images/Itens/Items/Demeter's_Cifer/DemetersCiferDiamond.png" id="18_qcnbu"]
+[ext_resource type="Texture2D" uid="uid://bodusc1ayda3t" path="res://Assets/Images/Itens/Items/Demeter's_Cifer/DemetersCiferGold.png" id="19_rg5lj"]
+[ext_resource type="Texture2D" uid="uid://dryl1a4708vxf" path="res://Assets/Images/Itens/Items/Demeter's_Cifer/DemetersCiferMetal.png" id="20_myqxn"]
+[ext_resource type="Texture2D" uid="uid://bo6xp25x82001" path="res://Assets/Images/Itens/Items/Demeter's_Cifer/DemetersCiferSilver.png" id="21_vl1hd"]
+[ext_resource type="Texture2D" uid="uid://c544qn57qf8rg" path="res://Assets/Images/Itens/Items/Dionisio's_CUP/DionisiosCupBronze.png" id="22_xhhw6"]
+[ext_resource type="Texture2D" uid="uid://bowos2n6bmh8a" path="res://Assets/Images/Itens/Items/Dionisio's_CUP/DionisiosCupDiamond.png" id="23_p2vdu"]
+[ext_resource type="Texture2D" uid="uid://dyvytuemp7or1" path="res://Assets/Images/Itens/Items/Dionisio's_CUP/DionisiosCupGold.png" id="24_ldju2"]
+[ext_resource type="Texture2D" uid="uid://ct6fabcp2txyv" path="res://Assets/Images/Itens/Items/Dionisio's_CUP/DionisiosCupSilver.png" id="25_xvi30"]
+[ext_resource type="Texture2D" uid="uid://j0voagv5nx76" path="res://Assets/Images/Itens/Items/Dionisio's_CUP/DionisiosCupWood.png" id="26_bxnhe"]
+[ext_resource type="Texture2D" uid="uid://b1jqetrbhq61s" path="res://Assets/Images/Itens/Items/Herme's_Shoes/HermesShoes2.png" id="27_d0xkn"]
+[ext_resource type="Texture2D" uid="uid://pnvud1s1jgje" path="res://Assets/Images/Itens/Items/Herme's_Shoes/HermesShoes3.png" id="28_qymh7"]
+[ext_resource type="Texture2D" uid="uid://cxkhfxar8p4dk" path="res://Assets/Images/Itens/Items/Herme's_Shoes/HermesShoes4.png" id="29_ojfeo"]
+[ext_resource type="Texture2D" uid="uid://cumv0pwvgw5mh" path="res://Assets/Images/Itens/Items/Herme's_Shoes/HermesShoes5.png" id="30_66whg"]
+[ext_resource type="Texture2D" uid="uid://cu4horg2jie67" path="res://Assets/Images/Itens/Items/Herme's_Shoes/HermesShoes.png" id="31_2bj8m"]
+[ext_resource type="Texture2D" uid="uid://w44b8e0120jv" path="res://Assets/Images/Itens/Items/Midas'_Hand/HandOfStealingBronze.png" id="32_yw0kg"]
+[ext_resource type="Texture2D" uid="uid://dk031w5kgdbkj" path="res://Assets/Images/Itens/Items/Midas'_Hand/HandOfStealingGold.png" id="33_on0u6"]
+[ext_resource type="Texture2D" uid="uid://comu4kgki52tb" path="res://Assets/Images/Itens/Items/Midas'_Hand/HandOfStealingGreen.png" id="34_j7v40"]
+[ext_resource type="Texture2D" uid="uid://c3gal3boympl6" path="res://Assets/Images/Itens/Items/Midas'_Hand/HandOfStealingHuman.png" id="35_seyul"]
+[ext_resource type="Texture2D" uid="uid://blaajv6cm616x" path="res://Assets/Images/Itens/Items/Midas'_Hand/HandOfStealingSilver.png" id="36_wil4h"]
+[ext_resource type="Texture2D" uid="uid://brlr36cgdsppr" path="res://Assets/Images/Itens/Items/Poseidon's_Staff/PoseidonsStaffBronze.png" id="37_1rmpm"]
+[ext_resource type="Texture2D" uid="uid://doecehyhgujfl" path="res://Assets/Images/Itens/Items/Poseidon's_Staff/PoseidonsStaffDiamond.png" id="38_g5wrw"]
+[ext_resource type="Texture2D" uid="uid://cay64227x6n30" path="res://Assets/Images/Itens/Items/Poseidon's_Staff/PoseidonsStaffGold.png" id="39_lojb5"]
+[ext_resource type="Texture2D" uid="uid://dys00do456jra" path="res://Assets/Images/Itens/Items/Poseidon's_Staff/PoseidonsStaffPurple.png" id="40_sv70a"]
+[ext_resource type="Texture2D" uid="uid://b04maepxh4hjp" path="res://Assets/Images/Itens/Items/Poseidon's_Staff/PoseidonsStaffSilver.png" id="41_bmecs"]
+[ext_resource type="Texture2D" uid="uid://0ma8y5d0xjit" path="res://Assets/Images/Itens/Items/Warrior's_Sword/SwoordBronze.png" id="42_n2ni3"]
+[ext_resource type="Texture2D" uid="uid://b4rle2c046bhd" path="res://Assets/Images/Itens/Items/Warrior's_Sword/SwordDiamond.png" id="43_osaau"]
+[ext_resource type="Texture2D" uid="uid://dwlriek7gdnhv" path="res://Assets/Images/Itens/Items/Warrior's_Sword/SwordGold.png" id="44_5usnx"]
+[ext_resource type="Texture2D" uid="uid://cr1g83nrxh2cj" path="res://Assets/Images/Itens/Items/Warrior's_Sword/SwordSilver.png" id="45_q46wb"]
+[ext_resource type="Texture2D" uid="uid://dorrvehm2so1h" path="res://Assets/Images/Itens/Items/Warrior's_Sword/SwordWood.png" id="46_x0u4i"]
+[ext_resource type="Texture2D" uid="uid://ctg5o0n6erpqg" path="res://Assets/Images/Itens/Items/Zeus'_Thunder/ZeusThunder2.png" id="47_ao1re"]
+[ext_resource type="Texture2D" uid="uid://c1mptcgdyutt3" path="res://Assets/Images/Itens/Items/Zeus'_Thunder/ZeusThunder3.png" id="48_chm11"]
+[ext_resource type="Texture2D" uid="uid://scalwyfw6dwu" path="res://Assets/Images/Itens/Items/Zeus'_Thunder/ZeusThunder4.png" id="49_wvqoe"]
+[ext_resource type="Texture2D" uid="uid://deqe260melr7x" path="res://Assets/Images/Itens/Items/Zeus'_Thunder/ZeusThunder5.png" id="50_sm5o8"]
+[ext_resource type="Texture2D" uid="uid://ciqtoq7ft0lck" path="res://Assets/Images/Itens/Items/Zeus'_Thunder/ZeusThunder.png" id="51_j00i6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_minkc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sk6ty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u3xdc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_aghg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tjmoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hf2mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5aw6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7wfdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6g6wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3m05c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d3isa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_g04ta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7uylk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wiy02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bg0u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_c03ff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_xl1ea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qcnbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_rg5lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_myqxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_vl1hd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xhhw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_p2vdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ldju2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_xvi30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_bxnhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_2bj8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_d0xkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_qymh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ojfeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_66whg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_yw0kg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_on0u6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_j7v40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_seyul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_wil4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_1rmpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_g5wrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_lojb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_sv70a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_bmecs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_n2ni3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_osaau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_5usnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_q46wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_x0u4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_j00i6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ao1re")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_chm11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_wvqoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_sm5o8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0euwa"]
+
+[node name="Item" type="Node2D"]
+script = ExtResource("1_qpt7x")
+
+[node name="Itens" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_minkc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(0.3942, 0.3942)
+shape = SubResource("RectangleShape2D_0euwa")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

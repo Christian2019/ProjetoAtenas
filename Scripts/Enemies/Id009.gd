@@ -1,10 +1,10 @@
 extends Node2D
 
 var id=9
-var maxHp=700
+var maxHp=1500
 var hp = maxHp
 var damages = {
-	"damage":3.0,
+	"damage":5.0,
 	"chargeDamage":30.0
 	}
 
@@ -17,6 +17,9 @@ var hpBarWidth = maxHpBarWidth
 
 var speed = 3.0
 var isMoving=true
+var currentAnimation="Walking"
+var verticalDir="down"
+var horizontalDir="right"
 
 var playerInside=false
 var centerPointInside=false
@@ -39,7 +42,14 @@ var minRadiusFromPlayer=500
 var attackSpeedModifierVar=[nextHitDelay,chargeCD]
 
 func _ready():
-	$AnimatedSprite2D.play("Walking")
+	maxHp=maxHp*AllSkillsValues.enemyBaseHpWaveMultiplier**(Global.WaveController.wave-1)
+	hp = maxHp
+	for i in range(0,damages.values().size(),1):
+		damages[damages.keys()[i]]*=AllSkillsValues.enemyBaseDamageWaveMultiplier**(Global.WaveController.wave-1)
+	if Global.WaveController.wave>10:
+		dracmas=2
+		
+	playAnimation(currentAnimation)
 	maxHpBarWidth=$HPBar/Red.size.x
 
 func enableHit(nextHitDelayTarget):
@@ -72,18 +82,23 @@ func _process(_delta):
 		isMoving=true
 		
 	hpBarController()
-	
+
+func playAnimation (animName):
+	$AnimatedSprite2D.play(animName+"_"+verticalDir+"_"+horizontalDir)
+
 func checkPlayerDistance():
 	if (global_position.distance_to(Global.player.global_position)<minRadiusFromPlayer and canCharge):
 		canCharge=false
 		charging=true
 		loading=true
-		$AnimatedSprite2D.play("Charging")
+		#$AnimatedSprite2D.play("Charging")
+		playAnimation("Charging")
 		Global.timerCreator("disableLoading",chargeLoading,[],self)
 
 func disableLoading():
 	loading=false
-	$AnimatedSprite2D.play("Walking")
+	#$AnimatedSprite2D.play("Dashing")
+	playAnimation("Dashing")
 	$AnimatedSprite2D.speed_scale=chargeSpeed/speed
 	
 	
@@ -103,14 +118,14 @@ func chargeFunction():
 			charging=false
 			canCharge=false
 			Global.timerCreator("enableCharge",attackSpeedModifierVar[1],[],self)
-	else:
-		var targetPointX= Global.player.position.x
-		var distanceXtotTarget = position.x-targetPointX
-		
-		if (distanceXtotTarget>0):
-			$AnimatedSprite2D.flip_h=true
-		else:
-			$AnimatedSprite2D.flip_h=false
+#	else:
+#		var targetPointX= Global.player.position.x
+#		var distanceXtotTarget = position.x-targetPointX
+#		
+#		if (distanceXtotTarget>0):
+#			$AnimatedSprite2D.flip_h=true
+#		else:
+#			$AnimatedSprite2D.flip_h=false
 
 			
 func enableCharge():
@@ -122,10 +137,10 @@ func chargeMove():
 	if (!tryToMove(movement.x,movement.y)):
 		chargeFrame=chargeMaxFrame
 
-	if (movement.z>0):
-		$AnimatedSprite2D.flip_h=true
-	else:
-		$AnimatedSprite2D.flip_h=false
+#	if (movement.z>0):
+#		$AnimatedSprite2D.flip_h=true
+#	else:
+#		$AnimatedSprite2D.flip_h=false
 
 func getSpeedModifier():
 	var targetPointX= Global.player.position.x
@@ -188,10 +203,24 @@ func getCloserTarget():
 		target=player
 	else:
 		target=center
+	
+	var distanceXtotTarget = position.x-target.position.x
+	var distanceYtoTarget = position.y-target.position.y
+	
+	if (distanceXtotTarget>0):
+		horizontalDir="left"
+	else:
+		horizontalDir="right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir="up"
+	else:
+		verticalDir="down"
 
 func attack():
-	if ($AnimatedSprite2D.animation!= "Attacking"):
-		$AnimatedSprite2D.animation= "Attacking"
+	if (currentAnimation!= "Attacking"):
+		currentAnimation= "Attacking"
+	playAnimation(currentAnimation)
 		
 	if (playerInside and !nextHitDelayPlayer):
 		nextHitDelayPlayer=true
@@ -223,8 +252,9 @@ func die():
 	call_deferred("queue_free")
 
 func move():
-	if ($AnimatedSprite2D.animation!= "Walking"):
-		$AnimatedSprite2D.animation= "Walking"
+	if (currentAnimation!= "Walking"):
+		currentAnimation= "Walking"
+	playAnimation(currentAnimation)
 
 	var targetPointX= target.position.x
 	var targetPointY= target.position.y
@@ -239,10 +269,10 @@ func move():
 	position.x -= speedXModifier
 	position.y -= speedYModifier
 	
-	if (distanceXtotTarget>0):
-		$AnimatedSprite2D.flip_h=true
-	else:
-		$AnimatedSprite2D.flip_h=false
+#	if (distanceXtotTarget>0):
+#		$AnimatedSprite2D.flip_h=true
+#	else:
+#		$AnimatedSprite2D.flip_h=false
 
 
 func _on_area_2d_area_entered(area):

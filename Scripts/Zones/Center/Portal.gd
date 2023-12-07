@@ -15,8 +15,9 @@ var minSpeedScale=0.1
 var maxSpeedScale=2
 
 func _ready():
-	$AnimatedSprite2D.modulate.a=startModulateA
-	$AnimatedSprite2D.speed_scale=minSpeedScale	
+	return
+	#$AnimatedSprite2D.modulate.a=startModulateA
+	#$AnimatedSprite2D.speed_scale=minSpeedScale	
 func _process(_delta):
 	if (playerIn and !cd):
 		if (framesInTeleport==maxFramesInTeleport):	
@@ -28,8 +29,8 @@ func _process(_delta):
 			if (framesInTeleport==0):
 				$AudioStreamPlayer.play()
 			framesInTeleport+=1
-			$AnimatedSprite2D.modulate.a=startModulateA+(1-startModulateA)*(float(framesInTeleport)/float(maxFramesInTeleport))
-			$AnimatedSprite2D.speed_scale=minSpeedScale+(maxSpeedScale-minSpeedScale)*(float(framesInTeleport)/float(maxFramesInTeleport))
+			#$AnimatedSprite2D.modulate.a=startModulateA+(1-startModulateA)*(float(framesInTeleport)/float(maxFramesInTeleport))
+			#$AnimatedSprite2D.speed_scale=minSpeedScale+(maxSpeedScale-minSpeedScale)*(float(framesInTeleport)/float(maxFramesInTeleport))
 
 func sendToTeleport(child):
 	onCd()
@@ -55,5 +56,5 @@ func _on_area_2d_area_exited(area):
 		if (framesInTeleport<120):
 			$AudioStreamPlayer.stop()
 		framesInTeleport=0
-		$AnimatedSprite2D.modulate.a=startModulateA
-		$AnimatedSprite2D.speed_scale=minSpeedScale		
+		#$AnimatedSprite2D.modulate.a=startModulateA
+		#$AnimatedSprite2D.speed_scale=minSpeedScale		

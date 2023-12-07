@@ -6,12 +6,29 @@ var transitionTime = 5
 var waveMusic
 var farmingMusic
 
+#References
+
+#Player
+#Attack2
+#Hades
+var soulSteal
+
 func _ready():
+	Global.SoundController=self
 	waveMusic=$WaveMusic
 	farmingMusic=$AOEMusic
 	farmingMusic.set_volume_db(-20)
 	farmingMusic.playing=true
+	getReferencers()
 
+func getReferencers():
+	soulSteal=get_node("SoundEffects/Player/Attack2/Hades/SoulSteal")
+	
+func playSound(node):
+	for i in range(0,node.get_child_count(),1):
+		if !node.get_child(i).playing:
+			node.get_child(i).playing=true
+			return
 
 func startBattleMusic(elite):
 	if (elite):

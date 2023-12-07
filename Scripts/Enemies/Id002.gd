@@ -15,6 +15,8 @@ var hpBarWidth = maxHpBarWidth
 
 var speed=5.0
 var isMoving=true
+var verticalDir="down"
+var horizontalDir="right"
 
 var playerInside=false
 
@@ -25,7 +27,14 @@ var dracmas=8
 var attackSpeedModifierVar=[nextHitDelay]
 
 func _ready():
-	$AnimatedSprite2D.play("Walking")
+	maxHp=maxHp*AllSkillsValues.enemyBaseHpWaveMultiplier**(Global.WaveController.wave-1)
+	hp = maxHp
+	for i in range(0,damages.values().size(),1):
+		damages[damages.keys()[i]]*=AllSkillsValues.enemyBaseDamageWaveMultiplier**(Global.WaveController.wave-1)
+	if Global.WaveController.wave>10:
+		dracmas=2
+	
+	playAnimation()
 	maxHpBarWidth=$HPBar/Red.size.x
 	getTarget()
 
@@ -104,15 +113,7 @@ func hpBarController():
 	$HPBar/Green.size.x=hpBarWidth
 
 func die():
-	for i in range(0,dracmas,1):
-		var dracma = PreLoads.dracma.instantiate()
-		dracma.global_position=global_position
-		Global.Game.get_node("Instances/Dracmas").add_child(dracma)
-	
-	var item = PreLoads.item.instantiate()
-	item.global_position=global_position
-	Global.Game.get_node("Instances/Itens").add_child(item)
-
+	Global.ItemController.dropIten(0.2,0.1,0,self)
 	#Animacao de morte
 	call_deferred("queue_free")
 
@@ -123,12 +124,28 @@ func move():
 	var movement = getSpeedModifier()
 	if (!tryToMove(movement.x,movement.y)):
 		getTarget()
-
-
-	if (movement.z<0):
-		$AnimatedSprite2D.flip_h=true
+	
+	var distanceXtoTarget = position.x-target.x
+	var distanceYtoTarget = position.y-target.y
+	
+	if (distanceXtoTarget>0):
+		horizontalDir = "left"
 	else:
-		$AnimatedSprite2D.flip_h=false
+		horizontalDir = "right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir = "up"
+	else:
+		verticalDir = "down"
+	
+	playAnimation()
+
+func playAnimation ():
+	var current_frame = $AnimatedSprite2D.get_frame()
+	var current_progress = $AnimatedSprite2D.get_frame_progress()
+	
+	$AnimatedSprite2D.play("Walking"+"_"+verticalDir+"_"+horizontalDir)
+	$AnimatedSprite2D.set_frame_and_progress(current_frame, current_progress)
 
 func getSpeedModifier():
 	var targetPointX= target.x

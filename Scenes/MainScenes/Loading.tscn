@@ -1,8 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://tifvlyj5mymv"]
+[gd_scene load_steps=9 format=3 uid="uid://tifvlyj5mymv"]
 
 [ext_resource type="Script" path="res://Scripts/MainScenes/Loading.gd" id="1_7bt5c"]
-[ext_resource type="FontFile" uid="uid://duy38o6o71nij" path="res://Assets/Fonts/Kurland.otf" id="2_lrpxh"]
 [ext_resource type="AudioStream" uid="uid://b82dirn1fyr7h" path="res://Assets/Sounds/Loading.wav" id="3_0s8mq"]
+[ext_resource type="Texture2D" uid="uid://b4hl8wnqlormh" path="res://Assets/Images/Loading/LoadingTextFrame1.png" id="3_5jgro"]
+[ext_resource type="Texture2D" uid="uid://exoobfvxawsu" path="res://Assets/Images/Loading/LoadingTextFrame2.png" id="4_k0ypf"]
+[ext_resource type="Texture2D" uid="uid://i8u2wrpwqr60" path="res://Assets/Images/Loading/LoadingTextFrame3.png" id="5_io8ex"]
+[ext_resource type="Texture2D" uid="uid://c1tlqjp483nbj" path="res://Assets/Images/Loading/LoadingTextFrame4.png" id="6_5y5dr"]
+[ext_resource type="Texture2D" uid="uid://7v8gbtk40otn" path="res://Assets/Images/Loading/Logo.png" id="7_x4i55"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_devv5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5jgro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k0ypf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_io8ex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5y5dr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Loading" type="Node2D"]
 script = ExtResource("1_7bt5c")
@@ -12,16 +36,19 @@ offset_right = 1027.0
 offset_bottom = 603.0
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
-offset_left = 377.0
-offset_top = 232.0
-offset_right = 676.0
-offset_bottom = 320.0
-theme_override_fonts/font = ExtResource("2_lrpxh")
-theme_override_font_sizes/font_size = 80
-text = "Loading..."
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Musica" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_0s8mq")
 volume_db = -10.16
 autoplay = true
+
+[node name="Loading" type="AnimatedSprite2D" parent="."]
+position = Vector2(961, 581)
+scale = Vector2(0.38755, 0.357143)
+sprite_frames = SubResource("SpriteFrames_devv5")
+autoplay = "default"
+frame_progress = 0.295672
+speed_scale = 0.5
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(737, 275)
+texture = ExtResource("7_x4i55")

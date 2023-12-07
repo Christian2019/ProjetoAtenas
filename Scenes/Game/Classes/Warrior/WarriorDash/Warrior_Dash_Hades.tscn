@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpfsjwg6byooj"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_dash/Warrior_Dash_Hades.gd" id="1_o3pp0"]
+
+[node name="Warrior_Dash_Hades" type="Node2D"]
+script = ExtResource("1_o3pp0")
+
+[node name="Animation" type="ColorRect" parent="."]
+offset_left = -20.0
+offset_top = -19.0
+offset_right = 20.0
+offset_bottom = 21.0
+color = Color(0.458824, 0, 0.768627, 0.156863)

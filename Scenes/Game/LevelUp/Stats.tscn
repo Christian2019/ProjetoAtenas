@@ -1,0 +1,365 @@
+[gd_scene load_steps=14 format=3 uid="uid://dvgvp2thpqg12"]
+
+[ext_resource type="Script" path="res://Scripts/Game/Stats.gd" id="1_cnx1u"]
+[ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="1_f3yfy"]
+[ext_resource type="Texture2D" uid="uid://ci5p1w6eb7qm2" path="res://Assets/Images/LevelUp/hp.png" id="2_pg8av"]
+[ext_resource type="Texture2D" uid="uid://dpeu8j8v2pgva" path="res://Assets/Images/LevelUp/hpRegeneration.png" id="3_fmusk"]
+[ext_resource type="Texture2D" uid="uid://dxvo3cpgj4knv" path="res://Assets/Images/LevelUp/lifeStealChance.png" id="4_37gm7"]
+[ext_resource type="Texture2D" uid="uid://de0orf26ul1x2" path="res://Assets/Images/LevelUp/percentDamage.png" id="5_tveyj"]
+[ext_resource type="Texture2D" uid="uid://b1lulqfh7dxl2" path="res://Assets/Images/LevelUp/baseDamage.png" id="6_ramqq"]
+[ext_resource type="Texture2D" uid="uid://cbth1bpv6l2tm" path="res://Assets/Images/LevelUp/percentCritDamage.png" id="7_cv6fe"]
+[ext_resource type="Texture2D" uid="uid://bvd0a355bubdf" path="res://Assets/Images/LevelUp/attack_Speed.png" id="8_u7bt6"]
+[ext_resource type="Texture2D" uid="uid://cxwuyt6m3b26w" path="res://Assets/Images/LevelUp/armor.png" id="9_2rlol"]
+[ext_resource type="Texture2D" uid="uid://cp1tv3148b287" path="res://Assets/Images/LevelUp/dodge.png" id="10_jpkbc"]
+[ext_resource type="Texture2D" uid="uid://bjhpim723r8pa" path="res://Assets/Images/LevelUp/moveSpeed.png" id="11_u0jbe"]
+[ext_resource type="Texture2D" uid="uid://buv505v5s2k07" path="res://Assets/Images/LevelUp/luck.png" id="12_0ahdh"]
+
+[node name="Stats" type="Node2D"]
+script = ExtResource("1_cnx1u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 284.0
+offset_bottom = 434.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 107.0
+offset_top = 19.0
+offset_right = 192.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 40
+text = "stats"
+
+[node name="AllStats" type="Node2D" parent="."]
+position = Vector2(25, -47)
+
+[node name="maxHp" type="Node2D" parent="AllStats"]
+position = Vector2(0, 25)
+
+[node name="Sprite2D" type="Sprite2D" parent="AllStats/maxHp"]
+position = Vector2(-3, 114)
+scale = Vector2(0.23494, 0.23494)
+texture = ExtResource("2_pg8av")
+
+[node name="Name" type="Label" parent="AllStats/maxHp"]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 153.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "Max Hp"
+
+[node name="Value" type="Label" parent="AllStats/maxHp"]
+offset_left = 149.0
+offset_top = 104.0
+offset_right = 234.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="maxHpPercentBonus" type="Node2D" parent="AllStats"]
+position = Vector2(0, 50)
+
+[node name="Name" type="Label" parent="AllStats/maxHpPercentBonus"]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 153.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "Max Hp % "
+
+[node name="Value" type="Label" parent="AllStats/maxHpPercentBonus"]
+offset_left = 149.0
+offset_top = 104.0
+offset_right = 234.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="hpRegeneration" type="Node2D" parent="AllStats"]
+position = Vector2(0, 75)
+
+[node name="Sprite2D" type="Sprite2D" parent="AllStats/hpRegeneration"]
+position = Vector2(-3, 114)
+scale = Vector2(0.23494, 0.23494)
+texture = ExtResource("3_fmusk")
+
+[node name="Name" type="Label" parent="AllStats/hpRegeneration"]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 153.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "Hp Regen"
+
+[node name="Value" type="Label" parent="AllStats/hpRegeneration"]
+offset_left = 149.0
+offset_top = 104.0
+offset_right = 234.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="lifeStealChance" type="Node2D" parent="AllStats"]
+position = Vector2(0, 100)
+
+[node name="Sprite2D" type="Sprite2D" parent="AllStats/lifeStealChance"]
+position = Vector2(-3, 114)
+scale = Vector2(0.23494, 0.23494)
+texture = ExtResource("4_37gm7")
+
+[node name="Name" type="Label" parent="AllStats/lifeStealChance"]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 153.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "life steal %"
+
+[node name="Value" type="Label" parent="AllStats/lifeStealChance"]
+offset_left = 149.0
+offset_top = 104.0
+offset_right = 234.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="percentDamage" type="Node2D" parent="AllStats"]
+position = Vector2(0, 125)
+
+[node name="Sprite2D" type="Sprite2D" parent="AllStats/percentDamage"]
+position = Vector2(-3, 114)
+scale = Vector2(0.23494, 0.23494)
+texture = ExtResource("5_tveyj")
+
+[node name="Name" type="Label" parent="AllStats/percentDamage"]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 153.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "Damage %"
+
+[node name="Value" type="Label" parent="AllStats/percentDamage"]
+offset_left = 149.0
+offset_top = 104.0
+offset_right = 234.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="baseDamage" type="Node2D" parent="AllStats"]
+position = Vector2(0, 150)
+
+[node name="Sprite2D" type="Sprite2D" parent="AllStats/baseDamage"]
+position = Vector2(-3, 114)
+scale = Vector2(0.23494, 0.23494)
+texture = ExtResource("6_ramqq")
+
+[node name="Name" type="Label" parent="AllStats/baseDamage"]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 153.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "Damage"
+
+[node name="Value" type="Label" parent="AllStats/baseDamage"]
+offset_left = 149.0
+offset_top = 104.0
+offset_right = 234.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="percentCritDamage" type="Node2D" parent="AllStats"]
+position = Vector2(0, 175)
+
+[node name="Sprite2D" type="Sprite2D" parent="AllStats/percentCritDamage"]
+position = Vector2(-3, 114)
+scale = Vector2(0.23494, 0.23494)
+texture = ExtResource("7_cv6fe")
+
+[node name="Name" type="Label" parent="AllStats/percentCritDamage"]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 153.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "Crit%"
+
+[node name="Value" type="Label" parent="AllStats/percentCritDamage"]
+offset_left = 149.0
+offset_top = 104.0
+offset_right = 234.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="attackSpeed" type="Node2D" parent="AllStats"]
+position = Vector2(0, 200)
+
+[node name="Sprite2D" type="Sprite2D" parent="AllStats/attackSpeed"]
+position = Vector2(-3, 114)
+scale = Vector2(0.23494, 0.23494)
+texture = ExtResource("8_u7bt6")
+
+[node name="Name" type="Label" parent="AllStats/attackSpeed"]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 153.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "attack speed%"
+
+[node name="Value" type="Label" parent="AllStats/attackSpeed"]
+offset_left = 149.0
+offset_top = 104.0
+offset_right = 234.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="armor" type="Node2D" parent="AllStats"]
+position = Vector2(0, 225)
+
+[node name="Sprite2D" type="Sprite2D" parent="AllStats/armor"]
+position = Vector2(-3, 114)
+scale = Vector2(0.23494, 0.23494)
+texture = ExtResource("9_2rlol")
+
+[node name="Name" type="Label" parent="AllStats/armor"]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 153.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "Armor"
+
+[node name="Value" type="Label" parent="AllStats/armor"]
+offset_left = 149.0
+offset_top = 104.0
+offset_right = 234.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="Dodge" type="Node2D" parent="AllStats"]
+position = Vector2(0, 250)
+
+[node name="Sprite2D" type="Sprite2D" parent="AllStats/Dodge"]
+position = Vector2(-3, 114)
+scale = Vector2(0.23494, 0.23494)
+texture = ExtResource("10_jpkbc")
+
+[node name="Name" type="Label" parent="AllStats/Dodge"]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 153.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "Dodge"
+
+[node name="Value" type="Label" parent="AllStats/Dodge"]
+offset_left = 149.0
+offset_top = 104.0
+offset_right = 234.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="maxDodge" type="Node2D" parent="AllStats"]
+position = Vector2(0, 275)
+
+[node name="Name" type="Label" parent="AllStats/maxDodge"]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 153.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "Max Dodge
+"
+
+[node name="Value" type="Label" parent="AllStats/maxDodge"]
+offset_left = 149.0
+offset_top = 104.0
+offset_right = 234.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="moveSpeed" type="Node2D" parent="AllStats"]
+position = Vector2(0, 300)
+
+[node name="Sprite2D" type="Sprite2D" parent="AllStats/moveSpeed"]
+position = Vector2(-3, 114)
+scale = Vector2(0.23494, 0.23494)
+texture = ExtResource("11_u0jbe")
+
+[node name="Name" type="Label" parent="AllStats/moveSpeed"]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 153.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "move speed %
+"
+
+[node name="Value" type="Label" parent="AllStats/moveSpeed"]
+offset_left = 149.0
+offset_top = 104.0
+offset_right = 234.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="luck" type="Node2D" parent="AllStats"]
+position = Vector2(0, 325)
+
+[node name="Sprite2D" type="Sprite2D" parent="AllStats/luck"]
+position = Vector2(-3, 114)
+scale = Vector2(0.23494, 0.23494)
+texture = ExtResource("12_0ahdh")
+
+[node name="Name" type="Label" parent="AllStats/luck"]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 153.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "Luck %"
+
+[node name="Value" type="Label" parent="AllStats/luck"]
+offset_left = 149.0
+offset_top = 104.0
+offset_right = 234.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_f3yfy")
+theme_override_font_sizes/font_size = 20
+text = "0"

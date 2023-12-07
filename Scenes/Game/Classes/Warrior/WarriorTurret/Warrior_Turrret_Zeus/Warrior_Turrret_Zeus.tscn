@@ -1,0 +1,130 @@
+[gd_scene load_steps=20 format=3 uid="uid://dgjd7hngwwmkx"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_Turret/Zeus/Warrior_Turrret_Zeus.gd" id="1_oxoj4"]
+[ext_resource type="Texture2D" uid="uid://dyud4g88vgl6q" path="res://Assets/Images/Player/Turrets/turretsSpritesheet/turret_zeus.png" id="2_ekraj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjfpd"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(0, 0, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjmyf"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(180, 156, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc4f3"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(120, 156, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6n1ed"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(60, 156, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7onlb"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(0, 156, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv2n2"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(180, 104, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_empyu"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(120, 104, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egysf"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(60, 104, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1pn6"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(0, 104, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fn8x0"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(180, 52, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_laksk"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(120, 52, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gd2nn"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(60, 52, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft62d"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(0, 52, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxj7r"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(180, 0, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvirv"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(120, 0, 60, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_801pf"]
+atlas = ExtResource("2_ekraj")
+region = Rect2(60, 0, 60, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vgnd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjfpd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjmyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bc4f3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6n1ed")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7onlb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xv2n2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_empyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egysf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1pn6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fn8x0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_laksk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gd2nn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ft62d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxj7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvirv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_801pf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Warrior_Turrret_Zeus" type="Node2D"]
+script = ExtResource("1_oxoj4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4vgnd")

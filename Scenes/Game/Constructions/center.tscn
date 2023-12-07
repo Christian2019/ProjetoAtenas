@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/Zones/Center/center.gd" id="1_fab01"]
 [ext_resource type="PackedScene" uid="uid://dumjr4t8822i1" path="res://Scenes/Game/Constructions/Portal.tscn" id="2_dx06x"]
-[ext_resource type="Texture2D" uid="uid://cs3igsuhbtryg" path="res://Assets/Images/Constructions/centroSemArco.png" id="2_vtmnd"]
-[ext_resource type="Texture2D" uid="uid://c57220vbb85ts" path="res://Assets/Images/Constructions/arcos.png" id="3_08ald"]
+[ext_resource type="Texture2D" uid="uid://cs3igsuhbtryg" path="res://Assets/Images/Constructions/Center/centroSemArco.png" id="2_galkm"]
+[ext_resource type="Texture2D" uid="uid://c57220vbb85ts" path="res://Assets/Images/Constructions/Center/arcos.png" id="3_k1h2s"]
 [ext_resource type="PackedScene" uid="uid://c0rurmnfon8nm" path="res://Scenes/Game/Constructions/Pool.tscn" id="3_ul00y"]
 [ext_resource type="Script" path="res://Scripts/Zones/Center/Towers.gd" id="5_r7e7g"]
 [ext_resource type="PackedScene" uid="uid://dtu5sjvquowls" path="res://Scenes/Game/Constructions/Defenses/Tower.tscn" id="6_idgco"]
@@ -17,19 +17,19 @@ script = ExtResource("1_fab01")
 [node name="DefenderPoint" type="Sprite2D" parent="."]
 position = Vector2(1300, 633)
 scale = Vector2(1.15, 1.15)
-texture = ExtResource("2_vtmnd")
+texture = ExtResource("2_galkm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 position = Vector2(1300, 633)
 scale = Vector2(1.15, 1.15)
-texture = ExtResource("3_08ald")
+texture = ExtResource("3_k1h2s")
 
 [node name="Portals" type="Node2D" parent="."]
 position = Vector2(29, -396)
 
 [node name="Portal" parent="Portals" instance=ExtResource("2_dx06x")]
-position = Vector2(1330, 992)
+position = Vector2(1355, 963)
 
 [node name="Portal2" parent="Portals" instance=ExtResource("2_dx06x")]
 position = Vector2(929, 1940)

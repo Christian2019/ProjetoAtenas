@@ -1,29 +1,44 @@
 [gd_scene load_steps=9 format=3 uid="uid://dxpgiuiley3xn"]
 
 [ext_resource type="Script" path="res://Scripts/Instances/Poison.gd" id="1_kbr7m"]
-[ext_resource type="Texture2D" uid="uid://dqkp5kvh3xg02" path="res://Assets/Images/Enemies/id020/Poison/scene00001-removebg-preview.png" id="2_ofikq"]
-[ext_resource type="Texture2D" uid="uid://b2r85c1rnyjqv" path="res://Assets/Images/Enemies/id020/Poison/scene00004-removebg-preview.png" id="3_v18sw"]
-[ext_resource type="Texture2D" uid="uid://dhwd554hsvka0" path="res://Assets/Images/Enemies/id020/Poison/scene00007-removebg-preview.png" id="4_gta86"]
-[ext_resource type="Texture2D" uid="uid://bg41b3qkd3k15" path="res://Assets/Images/Enemies/id020/Poison/scene00010-removebg-preview.png" id="5_1htq1"]
-[ext_resource type="Texture2D" uid="uid://y8nraud23v64" path="res://Assets/Images/Enemies/id020/Poison/scene00013-removebg-preview.png" id="6_87770"]
+[ext_resource type="Texture2D" uid="uid://bsujwnlrw2o8b" path="res://Assets/Images/Projectiles/EsferaVeneno.png" id="2_0e6e5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57lvo"]
+atlas = ExtResource("2_0e6e5")
+region = Rect2(0, 0, 60, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cubl4"]
+atlas = ExtResource("2_0e6e5")
+region = Rect2(120, 0, 60, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8jiy"]
+atlas = ExtResource("2_0e6e5")
+region = Rect2(0, 64, 60, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsuaf"]
+atlas = ExtResource("2_0e6e5")
+region = Rect2(60, 0, 60, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_60aqq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ofikq")
+"texture": SubResource("AtlasTexture_57lvo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_v18sw")
+"texture": SubResource("AtlasTexture_cubl4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_gta86")
+"texture": SubResource("AtlasTexture_v8jiy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_1htq1")
+"texture": SubResource("AtlasTexture_v8jiy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_87770")
+"texture": SubResource("AtlasTexture_cubl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsuaf")
 }],
 "loop": true,
 "name": &"default",
@@ -38,13 +53,13 @@ scale = Vector2(0.2, 0.2)
 script = ExtResource("1_kbr7m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.609645, 0.609645)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_60aqq")
 autoplay = "default"
-frame = 3
-frame_progress = 0.022511
+frame_progress = 0.0191418
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 scale = Vector2(0.692893, 0.692893)

@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://t3dku3vo8c2s"]
+
+[ext_resource type="Script" path="res://Scripts/Game/quadrant.gd" id="1_dennn"]
+[ext_resource type="Texture2D" uid="uid://b4f33xq4dy6i4" path="res://Assets/Images/Resources/collectable/PredaOro.png" id="3_ius8c"]
+[ext_resource type="Texture2D" uid="uid://6lqs4xg68jax" path="res://Assets/Images/Resources/collectable/Pedra.png" id="3_jt1d3"]
+[ext_resource type="Texture2D" uid="uid://dqcgx0txpq2wi" path="res://Assets/Images/Resources/collectable/arver.png" id="4_iwknl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_piwrl"]
+size = Vector2(64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kmr3q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ius8c")
+}],
+"loop": true,
+"name": &"gold",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jt1d3")
+}],
+"loop": true,
+"name": &"stone",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_iwknl")
+}],
+"loop": true,
+"name": &"wood",
+"speed": 5.0
+}]
+
+[node name="quadrant" type="Area2D"]
+script = ExtResource("1_dennn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32, 32)
+shape = SubResource("RectangleShape2D_piwrl")
+
+[node name="Resource" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(32, 31)
+scale = Vector2(1.17188, 1.17188)
+sprite_frames = SubResource("SpriteFrames_kmr3q")
+animation = &"wood"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.52549)
+offset_right = 64.0
+offset_bottom = 64.0
+color = Color(1, 1, 1, 0.576471)
+
+[node name="BarraDeVida" type="ColorRect" parent="."]
+visible = false
+offset_top = -15.0
+offset_right = 64.0
+color = Color(0.247059, 0.27451, 0.262745, 1)
+
+[node name="Level" type="ColorRect" parent="."]
+offset_right = 64.0
+offset_bottom = 64.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

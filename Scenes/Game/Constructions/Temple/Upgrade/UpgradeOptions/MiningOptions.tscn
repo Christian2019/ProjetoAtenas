@@ -1,0 +1,161 @@
+[gd_scene load_steps=8 format=3 uid="uid://3rfb2rkcrutr"]
+
+[ext_resource type="Script" path="res://Scripts/Zones/Temple/UpgradeOptions/MiningOptions.gd" id="1_bgbbw"]
+[ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="2_081o6"]
+[ext_resource type="Texture2D" uid="uid://detogg1xdpi7s" path="res://Assets/Images/LevelUp/dracma.png" id="3_svu1y"]
+[ext_resource type="Texture2D" uid="uid://bp4nnroubqrqp" path="res://Assets/Images/HUD/Loja/Ores/Gold.png" id="4_yfbck"]
+[ext_resource type="Texture2D" uid="uid://cvi4vcyjfl284" path="res://Assets/Images/HUD/Loja/Ores/Rock.png" id="5_5ghxr"]
+[ext_resource type="Texture2D" uid="uid://cxnn4leqp0b1i" path="res://Assets/Images/HUD/Loja/Ores/Wood.png" id="6_i5do7"]
+
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4rv0q"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_yfbck")
+}],
+"loop": true,
+"name": &"gold",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_5ghxr")
+}],
+"loop": true,
+"name": &"stone",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_i5do7")
+}],
+"loop": true,
+"name": &"wood",
+"speed": 5.0
+}]
+
+[node name="MiningOptions" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bgbbw")
+
+[node name="Imagem" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 140.0
+offset_bottom = 90.0
+scale = Vector2(1, 1.56)
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Aquired" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 61.0
+offset_right = 95.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_081o6")
+text = "Aquired"
+
+[node name="InfoDracma" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -158.0
+offset_right = -79.0
+offset_bottom = 83.0
+scale = Vector2(2, 2)
+color = Color(0, 0, 0, 0.541176)
+
+[node name="Titulo" type="Label" parent="InfoDracma"]
+layout_mode = 0
+offset_top = 0.5
+offset_right = 40.0
+offset_bottom = 16.5
+theme_override_fonts/font = ExtResource("2_081o6")
+theme_override_font_sizes/font_size = 10
+
+[node name="QtdDracma" type="Node2D" parent="InfoDracma"]
+position = Vector2(0, 16.5)
+
+[node name="Dracma" type="Sprite2D" parent="InfoDracma/QtdDracma"]
+position = Vector2(9, 9.5)
+scale = Vector2(0.171687, 0.175287)
+texture = ExtResource("3_svu1y")
+
+[node name="Price" type="Label" parent="InfoDracma/QtdDracma"]
+offset_left = 17.5
+offset_top = 3.5
+offset_right = 57.5
+offset_bottom = 19.5
+theme_override_fonts/font = ExtResource("2_081o6")
+theme_override_font_sizes/font_size = 12
+metadata/_edit_use_anchors_ = true
+
+[node name="QtdMinerio" type="Node2D" parent="InfoDracma"]
+position = Vector2(-0.5, 31.5)
+
+[node name="Minerio" type="AnimatedSprite2D" parent="InfoDracma/QtdMinerio"]
+position = Vector2(9, 12)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_4rv0q")
+animation = &"gold"
+
+[node name="Price" type="Label" parent="InfoDracma/QtdMinerio"]
+offset_left = 17.5
+offset_top = 3.5
+offset_right = 57.5
+offset_bottom = 19.5
+theme_override_fonts/font = ExtResource("2_081o6")
+theme_override_font_sizes/font_size = 12
+
+[node name="Upgrades" type="Node2D" parent="InfoDracma"]
+
+[node name="WhatUpgrades" type="Label" parent="InfoDracma/Upgrades"]
+offset_left = 1.5
+offset_top = 57.0
+offset_right = 41.5
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("2_081o6")
+theme_override_font_sizes/font_size = 12
+
+[node name="Ammount" type="Label" parent="InfoDracma/Upgrades"]
+offset_left = 43.0
+offset_top = 56.5
+offset_right = 77.0
+offset_bottom = 72.5
+theme_override_fonts/font = ExtResource("2_081o6")
+theme_override_font_sizes/font_size = 12
+
+[node name="WarningSign" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -3.0
+offset_top = 142.0
+offset_right = 145.0
+offset_bottom = 162.0
+color = Color(0, 0, 0, 0.45098)
+
+[node name="Warning" type="Label" parent="WarningSign"]
+layout_mode = 0
+offset_right = 148.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(1, 0.537255, 0.470588, 1)
+theme_override_fonts/font = ExtResource("2_081o6")
+text = "teste"
+
+[node name="TurnOffWarning" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.5
+
+[connection signal="focus_entered" from="Imagem" to="." method="_on_imagem_focus_entered"]
+[connection signal="focus_exited" from="Imagem" to="." method="_on_imagem_focus_exited"]
+[connection signal="mouse_entered" from="Imagem" to="." method="_on_botao_mouse_entered"]
+[connection signal="mouse_exited" from="Imagem" to="." method="_on_botao_mouse_exited"]
+[connection signal="pressed" from="Imagem" to="." method="_on_botao_pressed"]
+[connection signal="timeout" from="TurnOffWarning" to="." method="_on_turn_off_warning_timeout"]

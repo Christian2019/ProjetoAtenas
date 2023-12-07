@@ -1,11 +1,11 @@
 extends Node2D
 
 var id=18
-var maxHp=30000
+var maxHp=1000000
 var hp = maxHp
 var damages = {
-	"damage":1.0,
-	"projectileDamage":10.0
+	"damage":200.0,
+	"projectileDamage":300.0
 	}
 
 var nextHitDelayPlayer=false
@@ -18,6 +18,8 @@ var hpBarWidth = maxHpBarWidth
 var speed = 5.0
 
 var isMoving=true
+var verticalDir="down"
+var horizontalDir="right"
 
 var playerInside=false
 var centerPointInside=false
@@ -57,6 +59,13 @@ var t2StartDistanceFromPlayer=500
 var attackSpeedModifierVar=[nextHitDelay,cd]
 
 func _ready():
+	maxHp=maxHp*AllSkillsValues.enemyBaseHpWaveMultiplier**(Global.WaveController.wave-1)
+	hp = maxHp
+	for i in range(0,damages.values().size(),1):
+		damages[damages.keys()[i]]*=AllSkillsValues.enemyBaseDamageWaveMultiplier**(Global.WaveController.wave-1)
+	if Global.WaveController.wave>10:
+		dracmas=2
+		
 	maxHpBarWidth=$HPBar/Red.size.x
 	wave = Global.WaveController.get_child(Global.WaveController.wave-1)
 	getRandomMoveTarget()
@@ -145,10 +154,23 @@ func move():
 			
 		
 	if (distanceXtoTarget>0):
-		$AnimatedSprite2D.flip_h=true
+		horizontalDir = "left"
 	else:
-		$AnimatedSprite2D.flip_h=false
+		horizontalDir = "right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir = "up"
+	else:
+		verticalDir = "down"
+	
+	playAnimation()
 
+func playAnimation ():
+	var current_frame = $AnimatedSprite2D.get_frame()
+	var current_progress = $AnimatedSprite2D.get_frame_progress()
+	
+	$AnimatedSprite2D.play("Flying"+"_"+verticalDir+"_"+horizontalDir)
+	$AnimatedSprite2D.set_frame_and_progress(current_frame, current_progress)
 
 func tryToMove(speedX,speedY):
 	var topSpeed = 150

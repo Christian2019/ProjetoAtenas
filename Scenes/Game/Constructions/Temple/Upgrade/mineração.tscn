@@ -1,0 +1,159 @@
+[gd_scene load_steps=20 format=3 uid="uid://deg8hjpbk2ykd"]
+
+[ext_resource type="Script" path="res://Scripts/Zones/Temple/Mineração.gd" id="1_kikr4"]
+[ext_resource type="Texture2D" uid="uid://cuolto2djdbn6" path="res://Assets/Images/HUD/Loja/BackgroundUpgrade.png" id="2_n5u7x"]
+[ext_resource type="PackedScene" uid="uid://3rfb2rkcrutr" path="res://Scenes/Game/Constructions/Temple/Upgrade/UpgradeOptions/MiningOptions.tscn" id="3_dhi6b"]
+[ext_resource type="Texture2D" uid="uid://chwrvs0tbfe6w" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Level1.png" id="4_blu34"]
+[ext_resource type="Texture2D" uid="uid://cm4gdwyh5moli" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 27.png" id="5_gbo5q"]
+[ext_resource type="Texture2D" uid="uid://dsu7dgjjcfn88" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 33.png" id="6_dg3xk"]
+[ext_resource type="Texture2D" uid="uid://cuys4l4kq0nh2" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 24.png" id="7_fwjdk"]
+[ext_resource type="Texture2D" uid="uid://dmhmaanyeb3pi" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 34.png" id="8_sjihh"]
+[ext_resource type="Texture2D" uid="uid://bmobxe3d0m8l4" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 25.png" id="9_rscno"]
+[ext_resource type="Texture2D" uid="uid://rhlewolh2333" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 35.png" id="10_ajlr5"]
+[ext_resource type="Texture2D" uid="uid://cfn773mmr0u75" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Mineiracao/Group 26.png" id="11_nvbpy"]
+[ext_resource type="Texture2D" uid="uid://bre03wixp2mxa" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Level1.png" id="12_nybq7"]
+[ext_resource type="Texture2D" uid="uid://0krhv237uw5f" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 27.png" id="13_sqa8j"]
+[ext_resource type="Texture2D" uid="uid://0fd1564ivhwq" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 33.png" id="14_kh4ck"]
+[ext_resource type="Texture2D" uid="uid://dj6nmf1m3f3i" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 24.png" id="15_uotty"]
+[ext_resource type="Texture2D" uid="uid://qud37guvu8i8" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 34.png" id="16_5okpv"]
+[ext_resource type="Texture2D" uid="uid://cl4n385fydxku" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 25.png" id="17_i72gc"]
+[ext_resource type="Texture2D" uid="uid://cgibsoarljan3" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 35.png" id="18_0c1a6"]
+[ext_resource type="Texture2D" uid="uid://12y1urshsqad" path="res://Assets/Images/HUD/Loja/ItensUpgrade/Bag/Group 26.png" id="19_k3eyu"]
+
+[node name="Mineração" type="Node2D"]
+visible = false
+script = ExtResource("1_kikr4")
+
+[node name="BackgroundUpgrade" type="Sprite2D" parent="."]
+position = Vector2(520, 323.5)
+scale = Vector2(0.530021, 0.504915)
+texture = ExtResource("2_n5u7x")
+
+[node name="POWER" type="Node2D" parent="."]
+position = Vector2(139, 3)
+
+[node name="Level1" parent="POWER" instance=ExtResource("3_dhi6b")]
+offset_left = 61.0
+offset_top = 117.0
+offset_right = 61.0
+offset_bottom = 117.0
+titulo = "Mining Power Lvl 1"
+colorTitulo = Color(0, 0.486275, 0, 1)
+whatUpgrades = "Power"
+qtdDracma = 20
+qtdMinerios = 2
+Minerio = "wood"
+mining_valor = 1.0
+texture_normal = ExtResource("4_blu34")
+texture_hover = ExtResource("5_gbo5q")
+
+[node name="Level2" parent="POWER" instance=ExtResource("3_dhi6b")]
+offset_left = 219.0
+offset_top = 117.0
+offset_right = 219.0
+offset_bottom = 117.0
+titulo = "Mining Power Lvl 2"
+colorTitulo = Color(0.309804, 0.517647, 1, 1)
+whatUpgrades = "Power"
+qtdDracma = 40
+qtdMinerios = 5
+Minerio = "stone"
+mining_valor = 1.25
+texture_normal = ExtResource("6_dg3xk")
+texture_hover = ExtResource("7_fwjdk")
+
+[node name="Level3" parent="POWER" instance=ExtResource("3_dhi6b")]
+offset_left = 381.0
+offset_top = 117.0
+offset_right = 381.0
+offset_bottom = 117.0
+titulo = "Mining Power Lvl 3"
+colorTitulo = Color(0.654902, 0.313726, 1, 1)
+whatUpgrades = "Power"
+qtdDracma = 60
+qtdMinerios = 10
+Minerio = "wood"
+mining_valor = 2.5
+texture_normal = ExtResource("8_sjihh")
+texture_hover = ExtResource("9_rscno")
+
+[node name="Level4" parent="POWER" instance=ExtResource("3_dhi6b")]
+offset_left = 541.0
+offset_top = 117.0
+offset_right = 541.0
+offset_bottom = 117.0
+titulo = "Mining Power Lvl 4"
+colorTitulo = Color(1, 0.396078, 0, 1)
+whatUpgrades = "Power"
+qtdDracma = 80
+qtdMinerios = 20
+Minerio = "wood"
+mining_valor = 5.0
+texture_normal = ExtResource("10_ajlr5")
+texture_hover = ExtResource("11_nvbpy")
+
+[node name="BAG" type="Node2D" parent="."]
+position = Vector2(121, -10)
+
+[node name="Level1" parent="BAG" instance=ExtResource("3_dhi6b")]
+offset_left = 79.0
+offset_top = 388.0
+offset_right = 79.0
+offset_bottom = 388.0
+titulo = "Bag size Lvl 1"
+colorTitulo = Color(0, 0.8, 0, 1)
+whatUpgrades = "Bag"
+qtdDracma = 20
+qtdMinerios = 2
+Minerio = "wood"
+bag_valor = 2.0
+texture_normal = ExtResource("12_nybq7")
+texture_hover = ExtResource("13_sqa8j")
+
+[node name="Level2" parent="BAG" instance=ExtResource("3_dhi6b")]
+offset_left = 237.0
+offset_top = 388.0
+offset_right = 237.0
+offset_bottom = 388.0
+focus_neighbor_left = NodePath("../Level1")
+titulo = "Bag size Lvl 1"
+colorTitulo = Color(0.309804, 0.517647, 1, 1)
+whatUpgrades = "Bag"
+qtdDracma = 40
+qtdMinerios = 5
+Minerio = "stone"
+bag_valor = 3.0
+texture_normal = ExtResource("14_kh4ck")
+texture_hover = ExtResource("15_uotty")
+
+[node name="Level3" parent="BAG" instance=ExtResource("3_dhi6b")]
+offset_left = 399.0
+offset_top = 388.0
+offset_right = 399.0
+offset_bottom = 388.0
+focus_neighbor_left = NodePath("../Level2")
+titulo = "Bag size Lvl 1"
+colorTitulo = Color(0.654902, 0.313726, 1, 1)
+whatUpgrades = "Bag"
+qtdDracma = 60
+qtdMinerios = 10
+Minerio = "gold"
+bag_valor = 4.0
+texture_normal = ExtResource("16_5okpv")
+texture_hover = ExtResource("17_i72gc")
+
+[node name="Level4" parent="BAG" instance=ExtResource("3_dhi6b")]
+offset_left = 559.0
+offset_top = 388.0
+offset_right = 559.0
+offset_bottom = 388.0
+focus_neighbor_left = NodePath("../Level3")
+titulo = "Bag size Lvl 1"
+colorTitulo = Color(1, 0.396078, 0, 1)
+whatUpgrades = "Bag"
+qtdDracma = 80
+qtdMinerios = 20
+Minerio = "gold"
+bag_valor = 5.0
+texture_normal = ExtResource("18_0c1a6")
+texture_hover = ExtResource("19_k3eyu")

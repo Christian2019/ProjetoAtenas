@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://cybhysdkyjmx5"]
+
+[ext_resource type="Script" path="res://Scripts/Game/SoundController.gd" id="1_k40fo"]
+[ext_resource type="AudioStream" uid="uid://muwp777hkxqy" path="res://Assets/Sounds/AOMSoundTrack.mp3" id="2_r2tx3"]
+[ext_resource type="Script" path="res://Scripts/Game/BackgroundMusic.gd" id="3_0sxcc"]
+[ext_resource type="AudioStream" uid="uid://cg4ug0aknwkdt" path="res://Assets/Sounds/Wave.mp3" id="4_3x42c"]
+[ext_resource type="AudioStream" uid="uid://b44vxel7hbyp4" path="res://Assets/Sounds/Player/Dash.mp3" id="5_venqv"]
+[ext_resource type="AudioStream" uid="uid://b3exwrsopj804" path="res://Assets/Sounds/Game/Resources/dracma.mp3" id="6_5pubt"]
+[ext_resource type="AudioStream" uid="uid://cla1mp3rm1x6x" path="res://Assets/Sounds/Game/Enemies/EliteMusic.mp3" id="7_2o4qd"]
+[ext_resource type="AudioStream" uid="uid://enmts65q6d0j" path="res://Assets/Sounds/Player/Attack2/Hades/soulStealQuote.mp3" id="8_fo3oc"]
+
+[node name="SoundController" type="Node2D"]
+script = ExtResource("1_k40fo")
+
+[node name="AOEMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_r2tx3")
+script = ExtResource("3_0sxcc")
+
+[node name="WaveMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3x42c")
+
+[node name="Dash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_venqv")
+volume_db = -20.0
+
+[node name="Dracma" type="Node2D" parent="."]
+
+[node name="Sound" type="AudioStreamPlayer" parent="Dracma"]
+stream = ExtResource("6_5pubt")
+volume_db = -5.0
+
+[node name="Sound2" type="AudioStreamPlayer" parent="Dracma"]
+stream = ExtResource("6_5pubt")
+volume_db = -5.0
+
+[node name="Sound3" type="AudioStreamPlayer" parent="Dracma"]
+stream = ExtResource("6_5pubt")
+volume_db = -5.0
+
+[node name="Sound4" type="AudioStreamPlayer" parent="Dracma"]
+stream = ExtResource("6_5pubt")
+volume_db = -5.0
+
+[node name="EliteMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_2o4qd")
+
+[node name="SoundEffects" type="Node2D" parent="."]
+
+[node name="Player" type="Node2D" parent="SoundEffects"]
+
+[node name="Attack2" type="Node2D" parent="SoundEffects/Player"]
+
+[node name="Hades" type="Node2D" parent="SoundEffects/Player/Attack2"]
+
+[node name="SoulSteal" type="Node2D" parent="SoundEffects/Player/Attack2/Hades"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SoundEffects/Player/Attack2/Hades/SoulSteal"]
+stream = ExtResource("8_fo3oc")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="SoundEffects/Player/Attack2/Hades/SoulSteal"]
+stream = ExtResource("8_fo3oc")

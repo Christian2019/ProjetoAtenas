@@ -35,10 +35,13 @@ func heavyDamageInstance(i):
 	attackInstance.global_position=Global.player.global_position
 	
 	if (heavyDamageInstances-1==i):
+			
 		heavyDamageOn=false
 		heavyDamageHits=0
 		attackInstance.canFinish=true
 
+func test():
+	Global.player.permissions[0]=true
 
 func effect(target,finalDamage):
 	if (Global.MathController.checkIfExist(target.name,waterDamage)):

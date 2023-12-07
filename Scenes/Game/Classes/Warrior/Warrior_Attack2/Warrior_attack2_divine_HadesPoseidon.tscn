@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk3g1ybf5bhp5"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_attack2/Warrior_attack2_divine_HadesPoseidon.gd" id="1_38db2"]
+
+[node name="Warrior_attack2_divine_HadesPoseidon" type="Node2D"]
+script = ExtResource("1_38db2")

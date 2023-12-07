@@ -13,6 +13,7 @@ func _process(delta):
 	get_parent().waveTimer(self)
 	
 func waveBehavior():
+	spawn(1*60,1,PreLoads.id001,true)
 	spawn(1*60,2,PreLoads.id003,true)
 	spawn(4*60,3,PreLoads.id003,true)
 	spawn(6*60,3,PreLoads.id003,true)

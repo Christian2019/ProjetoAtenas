@@ -8,6 +8,9 @@ var attack2_zeus
 var attack2_poseidon
 var attack2_hades
 
+var dash_zeus
+var dash_poseidon
+
 func _ready():
 	Global.MathController=self
 	attack1_zeus= get_node("Attack1/Zeus")
@@ -17,18 +20,24 @@ func _ready():
 	attack2_zeus= get_node("Attack2/Zeus")
 	attack2_poseidon=get_node("Attack2/Poseidon")
 	attack2_hades=get_node("Attack2/Hades")
+	
+	dash_zeus=get_node("Dash/Zeus")
+	dash_poseidon=get_node("Dash/Poseidon")
 
 func clearArrays():
 	attack1_zeus.electrified.clear()
 	attack1_poseidon.waterDamage.clear()
 	attack1_poseidon.heavyDamageHits=0
+	attack2_hades.array.clear()
+	attack2_hades.positions.clear()
 
 func damageController(damage,target):
 	var finalDamage=damage
 	var crit=false
 	var miss=false
 	if (target.name=="Player"):
-		
+		enemyAttacksEffects()
+				
 		#Armor
 		var armor=Global.player.armor
 		var armorTankMultiplier
@@ -56,12 +65,23 @@ func damageController(damage,target):
 		spawnDamage(finalDamage,target,crit,true,miss,false)
 		
 	elif (target.name!="Center"):
-		
 		#Effects
 		finalDamage=effects(target,finalDamage)
 
 		#Stats Damage Extra
-		finalDamage*=Global.player.baseDamage*Global.player.percentDamage
+		var damageMultiplier1
+		var damageMultiplier2
+		if (Global.player.baseDamage<1):
+			damageMultiplier1=1
+		else:
+			damageMultiplier1=Global.player.baseDamage
+			
+		if (Global.player.percentDamage<0):
+			damageMultiplier2=0
+		else:
+			damageMultiplier2=Global.player.percentDamage
+				
+		finalDamage*=damageMultiplier1*damageMultiplier2
 
 		#Crit
 		if (Global.player.percentCritDamage>0):
@@ -83,7 +103,9 @@ func damageController(damage,target):
 
 	target.hp-=finalDamage
 
-
+func enemyAttacksEffects():
+	dash_poseidon.effect()
+	
 	
 func effects(target,finalDamage):
 	

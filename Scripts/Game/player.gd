@@ -1,21 +1,33 @@
 extends Node2D
 
-var dead = false
+var dead = false 
 
 ##Stats
-var maxHp=99999
+var baseMaxHp=20.0
+var maxHpPercentBonus=0.0
+var maxHp=baseMaxHp
 var hp = maxHp
+
 var hpRegeneration=0
-var lifeStealChance=0.1
+
+var lifeStealChance=0.0
+
 var percentDamage=1.0
 var baseDamage=1.0
+var percentCritDamage=0.0
+
 var attack_Speed = 1.0
-var percentCritDamage=0.1
-var armor=20
-var dodge=50
+
+var armor=0
+
+var dodge=0.0
 var maxDodge=70
-var move_Speed = 5.0
-var luck=0
+
+var baseMoveSpeed=4.0
+var move_Speed = baseMoveSpeed
+var moveSpeedPercentBonus=0
+
+var luck=0.0
 var collect_radios=200
 
 #Controle do ultimo movimento, pode ser N,S,W,E,NE,NW,SE,SW. Usado para controle da direacao do ataque
@@ -27,28 +39,30 @@ var attack2={"skill":PreLoads.warrior_attack2_noGod, "quality": "common"}
 var turret={"skill":PreLoads.warrior_turret_zeus, "quality": "common"}
 var dash={"skill":PreLoads.warrior_dash_noGod, "quality": "common"}
 var ultimate={"skill":PreLoads.warrior_ultimate_poseidon, "quality": "legendary"}
-var ultimateMaxActivations=5
-var ultimateWaveActivations=0
+
 #Passivos
 
 
 ## Se esta em CD
 var permissions = [
-	{"attack1_canUse" : true},
-	{"attack2_canUse" : true},
-	{"turret_canUse" : true},
-	{"dash_canUse" : true},
-	{"ultimate_canUse" : true},
+	true,
+	true,
+	true,
+	true,
+	true,
 	]
 
 #Resources
-var wood =0
-var stone =0
-var gold =0
-var dracma=0
+var startResources=0
+var wood = startResources
+var stone = startResources
+var gold = startResources
+var dracma=startResources
 var dracmaBag=0
 
 #Farming
+var itemsCarriage = []
+var MaxCarriage = 1
 var carryingItem
 
 var contactQuadrants = []
@@ -65,8 +79,45 @@ var reverseAlphaChange=false
 
 var animAttacking=false
 
+
+var current_level_sword = 0 
+var current_level_armor = 0
+
+var animation
+var cutAnim
+
 func _ready():
+	cutAnim = $CutAnimation
+	cutAnim.visible=false
 	Global.player = self
+	hpRegenerationFunction() 
+	animation = get_node("PlayerAnimations").get_child(current_level_armor).get_child(current_level_sword).get_child(0)
+	playAnimation ("Idle")
+	
+func hpRegenerationFunction():
+	Global.timerCreator("hpRegenerationFunction",1,[],self)
+	
+	if (hpRegeneration>0):
+		hp+=hpRegeneration
+		if (hp>maxHp):
+			hp=maxHp
+	
+func change_animation():
+	for i in range(0,get_node("PlayerAnimations").get_child_count()):
+		for j in range(0,get_node("PlayerAnimations").get_child(i).get_child_count()):
+			get_node("PlayerAnimations").get_child(i).get_child(j).get_child(0).stop()
+			get_node("PlayerAnimations").get_child(i).get_child(j).get_child(0).visible=false 
+	get_node("PlayerAnimations").get_child(current_level_armor).get_child(current_level_sword).get_child(0).visible=true 
+	animation = get_node("PlayerAnimations").get_child(current_level_armor).get_child(current_level_sword).get_child(0)
+	
+	if current_level_armor == 0:
+		cutAnim.set_sprite_frames(PreLoads.mine_leather)
+	elif current_level_armor == 1:
+		cutAnim.set_sprite_frames(PreLoads.mine_normal)
+	elif current_level_armor == 2:
+		cutAnim.set_sprite_frames(PreLoads.mine_gold)
+	elif current_level_armor == 3:
+		cutAnim.set_sprite_frames(PreLoads.mine_diamond)
 
 func _process(__delta):
 	if (dead):
@@ -76,16 +127,19 @@ func _process(__delta):
 		hp=0
 		dead=true
 		restartGame()
-		return
-
+		return 
+		
+	multiplierController()
 	animationController()
 	commandController()	
 	getCloserQuadrant()
-	
-	mining()
+	Global.PlayerMining.mining(farming,playerRight,closerQuadrant)
 	feedback()
-	
-	#contruction()
+
+
+func multiplierController():
+	maxHp=baseMaxHp*(1+maxHpPercentBonus)
+	move_Speed=baseMoveSpeed*(1+moveSpeedPercentBonus)	
 
 func restartGame():
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/Fatality.tscn")
@@ -93,9 +147,13 @@ func restartGame():
 func animationController():
 	if (dashing or animAttacking):
 		return
-	if ($CutAnimation.frame==6):
-		$CutAnimation.frame=0
-		$CutAnimation.stop()
+	
+	if (cutAnim.frame==5):
+		cutAnim.stop()
+		cutAnim.frame=0
+		cutAnim.visible=false
+		animation.visible=true
+	
 	if Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Right"):
 		playAnimation ("Run")
 	elif Input.is_action_pressed("Move_Down") and Input.is_action_pressed("Move_Left"):
@@ -112,33 +170,55 @@ func animationController():
 		playAnimation ("Run")
 	elif Input.is_action_pressed("Move_Left"):
 		playAnimation ("Run")
-	elif (!Input.is_action_pressed("Attack1")):
+	elif (permissions[0]):
 		playAnimation ("Idle")
 		
 func playAnimation (animName):
-	if (animName=="Run" and Input.is_action_pressed("Attack1")):
+	if (animName=="Run" and !permissions[0]):
 		animName="Attack1Run"
 		
 	if lastMovement=="S":
-		$Animation.play(animName+"_Down")
+		animation.play(animName+"_Down")
 	elif lastMovement=="SE":
-		$Animation.play(animName+"_Down_Right")
+		animation.play(animName+"_Down_Right")
 	elif lastMovement=="SW":
-		$Animation.play(animName+"_Down_Left")
+		animation.play(animName+"_Down_Left")
 	elif lastMovement=="N":
-		$Animation.play(animName+"_Up")
+		animation.play(animName+"_Up")
 	elif lastMovement=="NE":
-		$Animation.play(animName+"_Up_Right")
+		animation.play(animName+"_Up_Right")
 	elif lastMovement=="NW":
-		$Animation.play(animName+"_Up_Left")
+		animation.play(animName+"_Up_Left")
 	elif lastMovement=="E":
-		$Animation.play(animName+"_Right")
+		animation.play(animName+"_Right")
 	elif lastMovement=="W":
-		$Animation.play(animName+"_Left")
+		animation.play(animName+"_Left")
 	
 	if (animName=="Run"):
-		$Animation.speed_scale=move_Speed/5
+		animation.speed_scale=move_Speed/5
 		
+
+func playMineAnimation():
+	if !cutAnim.visible:
+		cutAnim.visible=true
+		animation.visible=false
+	
+	if lastMovement=="S":
+		cutAnim.play("mine_down")
+	elif lastMovement=="SE":
+		cutAnim.play("mine_down_right")
+	elif lastMovement=="SW":
+		cutAnim.play("mine_down_left")
+	elif lastMovement=="N":
+		cutAnim.play("mine_up")
+	elif lastMovement=="NE":
+		cutAnim.play("mine_up_right")
+	elif lastMovement=="NW":
+		cutAnim.play("mine_up_left")
+	elif lastMovement=="E":
+		cutAnim.play("mine_right")
+	elif lastMovement=="W":
+		cutAnim.play("mine_left")
 
 func commandController():
 	if (dashing):
@@ -241,7 +321,7 @@ func attack1Controller():
 		attackInstance.global_position=global_position
 
 		playAnimation ("Attack1")
-		$Animation.speed_scale=attack_Speed
+		animation.speed_scale=attack_Speed
 		
 		
 func creatAttackInstance(classChild):
@@ -252,8 +332,6 @@ func creatAttackInstance(classChild):
 		attackInstance= attack1.skill.instantiate()
 		attackInstance.quality= attack1.quality
 	elif(classChild==1):
-		if (attack2.skill==null):
-			return null
 		attackInstance= attack2.skill.instantiate()
 		attackInstance.quality= attack2.quality
 	elif(classChild==2):
@@ -279,22 +357,20 @@ func creatAttackInstance(classChild):
 
 func attack2Controller():
 	var classChild=1	
-	if (Input.is_action_pressed("Attack2") and permissions[classChild] and permissions[0]):
+	if (Input.is_action_pressed("Attack2") and permissions[classChild]):
 		var attackInstance = creatAttackInstance(classChild)
-		if (attackInstance==null):
-			return
 		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position
 		
 		animAttacking=true
 		playAnimation ("Attack2")
-		$Animation.speed_scale=attack_Speed
+		animation.speed_scale=attack_Speed
 		
 		
 func turretController():
 	var classChild=2	
 	if (Input.is_action_just_pressed("Turret")):
-		print("Turret")
+		#print("Turret")
 		var attackInstance = creatAttackInstance(classChild)
 		if (attackInstance==null):
 			return
@@ -303,27 +379,24 @@ func turretController():
 
 func dashController():
 	var classChild=3	
-	if (Input.is_action_just_pressed("Dash") and permissions[classChild]):
-		print("Dash")
+	if (Input.is_action_pressed("Dash") and permissions[classChild]):
+		#print("Dash")
 		var attackInstance = creatAttackInstance(classChild)
-		if (attackInstance==null):
-			return
 		attackInstance.direction= lastMovement
 		add_child(attackInstance)
 		playAnimation("Dash")
 		
 		
 func enableDisableAnimation():
-	if($Animation.is_playing()):
-		$Animation.stop()
+	if(animation.is_playing()):
+		animation.stop()
 	else:
-		$Animation.play()	
+		animation.play()	
 		
 func ultimateController():
 	var classChild=4	
-	if (Input.is_action_just_pressed("Ultimate") and permissions[classChild] and ultimateWaveActivations<ultimateMaxActivations):
-		print("Ultimate")
-		ultimateWaveActivations+=1
+	if (Input.is_action_just_pressed("Ultimate") and permissions[classChild]):
+		#print("Ultimate")
 		var attackInstance = creatAttackInstance(classChild)
 		if (attackInstance==null):
 			return
@@ -341,30 +414,6 @@ func getCloserQuadrant():
 	if (closerQuadrant!=null):
 		closerQuadrant.get_node("ColorRect").visible=true
 		
-func mining():
-	if (!farming):
-		return
-		
-	if Input.is_action_pressed("Attack1"):
-		if (playerRight):
-			$CutAnimation.flip_h=false
-		else:
-			$CutAnimation.flip_h=true
-		$CutAnimation.play()
-		if closerQuadrant!=null:
-			if closerQuadrant.get_node("Resource").visible:
-				closerQuadrant.get_node("Resource").visible=false
-				var collectable_instance = PreLoads.collectable.instantiate()
-				
-				if (closerQuadrant.get_node("Resource").animation=="wood"):
-					collectable_instance.get_node("AnimatedSprite2D").animation="wood"
-				elif (closerQuadrant.get_node("Resource").animation=="gold"):
-					collectable_instance.get_node("AnimatedSprite2D").animation="gold"
-				elif (closerQuadrant.get_node("Resource").animation=="stone"):
-					collectable_instance.get_node("AnimatedSprite2D").animation="stone"
-				
-				collectable_instance.global_position=closerQuadrant.get_node("Resource").global_position
-				Global.Game.get_node("Instances/Collectable_instances").add_child(collectable_instance)	
 
 func feedback():
 	if (feedBackAtive):
@@ -387,14 +436,6 @@ func disableFeeback():
 	feedBackAtive=false
 	modulate.a=1
 
-func contruction():
-	if (Input.is_action_just_pressed("Turret")):
-		if (closerQuadrant!=null and closerQuadrant.allowToConstruct):
-			var tower_instance = PreLoads.tower.instantiate()
-			tower_instance.position = closerQuadrant.position
-			closerQuadrant.tower = tower_instance
-			get_parent().get_node("Towers").add_child(tower_instance)
-
 func _on_body_area_entered(area):
 	if area.get_parent().name == "Center":
 		playerOnCenterPoint=true
@@ -404,23 +445,10 @@ func _on_body_area_exited(area):
 	if area.get_parent().name == "Center":
 		playerOnCenterPoint=false
 
-
-func _on_timer_timeout():
-	return
-	print("STATUS:")
-	print("hpRegeneration: ",hpRegeneration)
-	print("lifesteal: ",lifeStealChance)
-	print("percentDamage: ",percentDamage)
-	print("baseDamage: ",baseDamage)
-	print("attackspeed: ",attack_Speed)
-	print("percentCritDamage: ",percentCritDamage)
-	print("armor: ",armor)
-	print("dodge: ",dodge)
-	print("move_Speed: ",move_Speed)
-	print("luck: ",luck)
-	print("collect_radios: ",collect_radios)
-
-
 func _on_animation_animation_looped():
 	if (animAttacking):
 		animAttacking=false
+
+
+func _on_timer_timeout():
+	return

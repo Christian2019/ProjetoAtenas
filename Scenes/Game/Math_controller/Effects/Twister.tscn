@@ -1,30 +1,61 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwrfk4utqdm5"]
+[gd_scene load_steps=9 format=3 uid="uid://cwrfk4utqdm5"]
 
-[ext_resource type="Texture2D" uid="uid://cpuetsllbiglp" path="res://Assets/Images/Player/Attack1/Hades/Twister/scene00001-removebg-preview.png" id="1_yof5w"]
-[ext_resource type="Texture2D" uid="uid://iwg1hji03r2v" path="res://Assets/Images/Player/Attack1/Hades/Twister/scene00004-removebg-preview.png" id="2_51wba"]
-[ext_resource type="Texture2D" uid="uid://b4xrnm1ka45iw" path="res://Assets/Images/Player/Attack1/Hades/Twister/scene00007-removebg-preview.png" id="3_p2wio"]
+[ext_resource type="Texture2D" uid="uid://j717a23gajf1" path="res://Assets/Images/Projectiles/Furacao.png" id="1_bxrqb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4a5w"]
+atlas = ExtResource("1_bxrqb")
+region = Rect2(0, 0, 104, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42vhe"]
+atlas = ExtResource("1_bxrqb")
+region = Rect2(104, 0, 104, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4l6eh"]
+atlas = ExtResource("1_bxrqb")
+region = Rect2(208, 0, 104, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_maqri"]
+atlas = ExtResource("1_bxrqb")
+region = Rect2(0, 124, 104, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdxei"]
+atlas = ExtResource("1_bxrqb")
+region = Rect2(104, 124, 104, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umaog"]
+atlas = ExtResource("1_bxrqb")
+region = Rect2(208, 124, 104, 124)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6gkx2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_yof5w")
+"texture": SubResource("AtlasTexture_f4a5w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_51wba")
+"texture": SubResource("AtlasTexture_42vhe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_p2wio")
+"texture": SubResource("AtlasTexture_4l6eh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_maqri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdxei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umaog")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="Twister" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.0953024, 0.0953024)
+scale = Vector2(0.35, 0.35)
 sprite_frames = SubResource("SpriteFrames_6gkx2")
 autoplay = "default"
-frame_progress = 0.898536
+frame_progress = 0.769979

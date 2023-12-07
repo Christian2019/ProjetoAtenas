@@ -1,11 +1,11 @@
 extends Node2D
 
 var id=16
-var maxHp=500
+var maxHp=6000
 var hp = maxHp
 var damages = {
-	"damage":1.0,
-	"projectileDamage":10.0
+	"damage":80.0,
+	"projectileDamage":80.0
 	}
 
 var nextHitDelayPlayer=false
@@ -18,6 +18,8 @@ var hpBarWidth = maxHpBarWidth
 var speed = 2.0
 
 var isMoving=true
+var verticalDir="down"
+var horizontalDir="right"
 
 var playerInside=false
 var centerPointInside=false
@@ -41,11 +43,18 @@ var checkedHeads=false
 var attackSpeedModifierVar=[nextHitDelay,totalCd,headCd]
 
 func _ready():
+	maxHp=maxHp*AllSkillsValues.enemyBaseHpWaveMultiplier**(Global.WaveController.wave-1)
+	hp = maxHp
+	for i in range(0,damages.values().size(),1):
+		damages[damages.keys()[i]]*=AllSkillsValues.enemyBaseDamageWaveMultiplier**(Global.WaveController.wave-1)
+	if Global.WaveController.wave>10:
+		dracmas=2
+		
 	maxHpBarWidth=$HPBar/Red.size.x
 	getRandomMoveTarget()
-	$Head2.frame=7
-	$Head3.frame=3
-	$Head4.frame=12
+	#$Head2.frame=7
+	#$Head3.frame=3
+	
 
 func enableHit(nextHitDelayTarget):
 	if nextHitDelayTarget==0:
@@ -64,8 +73,8 @@ func _process(_delta):
 		
 	$Head1.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
 	$Head2.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
-	$Head3.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
 	$Head4.speed_scale=nextHitDelay/attackSpeedModifierVar[0]
+	
 
 	getTarget()
 	hpBarController()
@@ -81,13 +90,19 @@ func _process(_delta):
 func headsController():
 	if (!checkedHeads):
 		checkedHeads=true
-		if (heads==2):
-			$Head3.visible=false
+		if (heads == 4):
+			$Head1.visible=false
+			$Head2.visible=false
+			$Head4.visible=true
+		elif (heads==2):
+			$Head1.visible=false
+			$Head2.visible=true
 			$Head4.visible=false
+			
 		elif (heads==1):
-			$Head3.visible=false
+			$Head1.visible=true
+			$Head2.visible=false
 			$Head4.visible=false
-			$Head2.visible=false		
 	
 func getTarget():
 	
@@ -106,15 +121,15 @@ func attackController():
 	Global.timerCreator("enableAttack",attackSpeedModifierVar[1],[],self)
 	
 	if (heads==4):
-		createFireBall($Head1.global_position)
-		Global.timerCreator("createFireBall",attackSpeedModifierVar[2],[$Head2.global_position],self)
-		Global.timerCreator("createFireBall",attackSpeedModifierVar[2]*2,[$Head3.global_position],self)
-		Global.timerCreator("createFireBall",attackSpeedModifierVar[2]*3,[$Head4.global_position],self)
+		createFireBall($Pos1.global_position)
+		Global.timerCreator("createFireBall",attackSpeedModifierVar[2],[$Pos2.global_position],self)
+		Global.timerCreator("createFireBall",attackSpeedModifierVar[2]*2,[$Pos3.global_position],self)
+		Global.timerCreator("createFireBall",attackSpeedModifierVar[2]*3,[$Pos4.global_position],self)
 	elif(heads==2):
-		createFireBall($Head1.global_position)
-		Global.timerCreator("createFireBall",attackSpeedModifierVar[2],[$Head2.global_position],self)
+		createFireBall($Pos1.global_position)
+		Global.timerCreator("createFireBall",attackSpeedModifierVar[2],[$Pos2.global_position],self)
 	else:
-		createFireBall($Head1.global_position)
+		createFireBall($Pos1.global_position)
 		
 		
 		
@@ -196,16 +211,45 @@ func move():
 			getRandomMoveTarget()
 			
 		
+	
 	if (distanceXtoTarget>0):
-		$Head1.flip_h=true
-		$Head2.flip_h=true
-		$Head3.flip_h=true
-		$Head4.flip_h=true
+		horizontalDir = "left"
 	else:
-		$Head1.flip_h=false
-		$Head2.flip_h=false
-		$Head3.flip_h=false
-		$Head4.flip_h=false
+		horizontalDir = "right"
+	
+	if (distanceYtoTarget>0):
+		verticalDir = "up"
+	else:
+		verticalDir = "down"
+	
+	playAnimation ()
+
+func playAnimation ():
+	var current_frame
+	var current_progress
+	
+	if (heads == 4):
+		current_frame = $Head4.get_frame()
+		current_progress = $Head4.get_frame_progress()
+		
+		$Head4.play("Moving"+"_"+verticalDir+"_"+horizontalDir)
+		$Head4.set_frame_and_progress(current_frame, current_progress)
+		
+	elif (heads==2):
+		current_frame = $Head2.get_frame()
+		current_progress = $Head2.get_frame_progress()
+		
+		$Head2.play("Moving"+"_"+verticalDir+"_"+horizontalDir)
+		$Head2.set_frame_and_progress(current_frame, current_progress)
+		
+	elif (heads==1):
+		current_frame = $Head1.get_frame()
+		current_progress = $Head1.get_frame_progress()
+		
+		$Head1.play("Moving"+"_"+verticalDir+"_"+horizontalDir)
+		$Head1.set_frame_and_progress(current_frame, current_progress)
+		
+	
 
 func getRandomMoveTarget():
 	var x = RandomNumberGenerator.new().randi_range(0, 2561)

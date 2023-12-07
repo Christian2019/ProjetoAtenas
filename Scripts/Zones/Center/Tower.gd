@@ -4,6 +4,14 @@ var reloadTime = 5
 var allowToShoot = true
 var minDistance = 261
 
+var currentLevelStore = 0
+var speedArrowLevelUp = 3
+var damageLevelUp = 1
+
+func _ready():
+	Global.Tower = self
+
+
 func _process(_delta):
 	if (allowToShoot):
 		lookEnemies()
@@ -22,6 +30,8 @@ func shoot(enemy):
 	allowToShoot=false
 	Global.timerCreator("setAllowToShoot",reloadTime,[true],self)
 	var arrow = PreLoads.tower_projectile.instantiate()
+	arrow.speed = speedArrowLevelUp
+	arrow.damage = damageLevelUp
 	arrow.position = position
 	arrow.position.x+=28
 	arrow.target=enemy

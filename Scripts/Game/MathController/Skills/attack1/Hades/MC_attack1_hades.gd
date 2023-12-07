@@ -7,8 +7,8 @@ func _ready():
 	var twister = PreLoads.twister.instantiate()
 	Global.player.add_child(twister)
 	twister.global_position=Global.player.global_position
-	twister.get_node("AnimatedSprite2D").visible=true
-	twister.modulate.a=0.5
+	twister.get_node("AnimatedSprite2D").visible=false
+	twister.modulate.a=0.8
 	twister_effect=twister
 
 func addEntityASB(element,asb,frenzy,maxDuration):

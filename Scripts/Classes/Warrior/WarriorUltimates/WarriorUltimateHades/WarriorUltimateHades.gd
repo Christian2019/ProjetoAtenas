@@ -1,40 +1,53 @@
 extends Node2D
 
-var quality="common"
+var quality
 
-var skeletonDamage = 50
+var currentHPPercentDamage
 var skeletonQuantity=15
 
 #Duracao em segundos
-var cd = 5
+var cd 
 
 var frame=0
 var max_duration = 15
 
-var enableCerberus=true
-var cerberisDamage = 5
+var cerberusDamage
 var Allycerberus
 
+var divineReference
 
 func _ready():
+	cd= AllSkillsValues.warrior_ultimate_hades_cd
 	Global.Game.get_node("Night").visible=true
 	$Sprite2D.modulate.a=0
 	Global.timerCreator("destroy", max_duration,[],self)
 	$Music.play(10)
 	qualityStatus()
-	if (enableCerberus):
+	
+func qualityStatus():
+	if ( quality=="common"):
+		currentHPPercentDamage=AllSkillsValues.warrior_ultimate_hades_currentHPPercentDamage[0]
+		skeletonQuantity=AllSkillsValues.warrior_ultimate_hades_skeletonQuantity[0]
+	elif ( quality=="rare"):
+		currentHPPercentDamage=AllSkillsValues.warrior_ultimate_hades_currentHPPercentDamage[1]
+		skeletonQuantity=AllSkillsValues.warrior_ultimate_hades_skeletonQuantity[1]
+	elif ( quality=="epic"):
+		currentHPPercentDamage=AllSkillsValues.warrior_ultimate_hades_currentHPPercentDamage[2]
+		skeletonQuantity=AllSkillsValues.warrior_ultimate_hades_skeletonQuantity[2]
+	elif ( quality=="legendary"):
+		cerberusDamage=AllSkillsValues.warrior_ultimate_hades_cerberusDamage
+		currentHPPercentDamage=AllSkillsValues.warrior_ultimate_hades_currentHPPercentDamage[3]
+		skeletonQuantity=AllSkillsValues.warrior_ultimate_hades_skeletonQuantity[3]
+		creatCerberus()
+	elif ( quality=="divine"):
+		cerberusDamage=AllSkillsValues.warrior_ultimate_divine_hades_cerberusDamage
+		currentHPPercentDamage=AllSkillsValues.warrior_ultimate_divine_hades_currentHPPercentDamage
+		skeletonQuantity=AllSkillsValues.warrior_ultimate_divine_hades_skeletonQuantity
 		creatCerberus()
 
-func qualityStatus():
-	#Cooldown: 60/20/5/5/5s Max activations per wave 1/2/2/3/4
-	if ( quality=="common"):
-		skeletonDamage=500
-		skeletonQuantity=15
-		cd=5
-	
 func creatCerberus():
 	var cerberus=PreLoads.hades_cerberus.instantiate()
-	cerberus.damage=skeletonDamage
+	cerberus.damage=cerberusDamage
 	cerberus.ultimate=self
 	if (Global.WaveController.mining):
 		return
@@ -43,9 +56,13 @@ func creatCerberus():
 	Allycerberus=cerberus
 
 func destroy():
-	Global.hud.max_ultimate_frame=(cd)*60
-	Global.timerCreator("enableAttackUse",cd,[4],Global.player)
-	Global.Game.get_node("Night").visible=false
+	if (quality=="divine"):
+		if is_instance_valid(divineReference):
+			divineReference.skillsFinish+=1
+	else:
+		Global.hud.max_ultimate_frame=(cd)*60
+		Global.timerCreator("enableAttackUse",cd,[4],Global.player)
+		Global.Game.get_node("Night").visible=false
 	queue_free()
 
 func _process(delta):
@@ -64,7 +81,7 @@ func skeletonCreation():
 		
 func spawn():
 	var skeleton=PreLoads.hades_skeleton.instantiate()
-	skeleton.damage=skeletonDamage
+	skeleton.damage=Global.player.hp*currentHPPercentDamage
 	skeleton.cerberus=Allycerberus
 	if (Global.WaveController.mining):
 		return

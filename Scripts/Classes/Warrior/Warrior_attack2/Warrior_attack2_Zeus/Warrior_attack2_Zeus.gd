@@ -41,6 +41,8 @@ var disorientation
 
 var disorientationDuration=10*60
 
+var divineReference
+
 func _ready():
 	
 	startRotationAngle=90
@@ -53,17 +55,17 @@ func _ready():
 
 func qualityStatus():
 	if ( quality=="common"):
-		lightningBoltDamage=20
+		lightningBoltDamage=AllSkillsValues.warrior_attack2_zeus_lightningBoltDamage[0]
 	elif ( quality=="rare"):
-		lightningBoltDamage=48
+		lightningBoltDamage=AllSkillsValues.warrior_attack2_zeus_lightningBoltDamage[1]
 	elif ( quality=="epic"):
-		lightningBoltDamage=90
+		lightningBoltDamage=AllSkillsValues.warrior_attack2_zeus_lightningBoltDamage[2]
 	elif ( quality=="legendary"):
-		lightningBoltDamage=160
-		disorientation=0.9
+		lightningBoltDamage=AllSkillsValues.warrior_attack2_zeus_lightningBoltDamage[3]
+		disorientation=AllSkillsValues.warrior_attack2_zeus_disorientation
 	elif ( quality=="divine"):
-		lightningBoltDamage=400
-		disorientation=0.6
+		lightningBoltDamage=AllSkillsValues.warrior_attack2_divine_zeus_lightningBoltDamage
+		disorientation=AllSkillsValues.warrior_attack2_divine_zeus_disorientation
 	
 func createAnimation():
 	var anim = PreLoads.warrior_attack2_animations_effect.instantiate()
@@ -120,7 +122,13 @@ func animation():
 """
 
 func destroy():
-	Global.player.permissions[1]=true
+	
+	if (quality=="divine"):
+		if is_instance_valid(divineReference):
+			divineReference.skillsFinish+=1
+	else:
+		Global.player.permissions[1]=true
+			
 	animation.call_deferred("queue_free")
 	call_deferred("queue_free")
 
@@ -152,7 +160,6 @@ func move():
 	angle+=speed
 	relativePosition.y=startDistanceFromPlayer*cos(deg_to_rad(angle))
 	relativePosition.x=startDistanceFromPlayer*sin(deg_to_rad(angle))
-	$Animation.rotation=deg_to_rad(-angle)
 	global_position= Global.player.global_position+relativePosition
 	
 	if (angle>=startRotationAngle+360):

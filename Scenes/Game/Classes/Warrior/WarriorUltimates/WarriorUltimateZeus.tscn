@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=3 uid="uid://hivlcm55i6jy"]
 
-[ext_resource type="Script" path="res://Scripts/Classes/Warrior/WarriorUltimate.gd" id="1_sy0il"]
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/WarriorUltimates/WarriorUltimateZeus.gd" id="1_sy0il"]
 [ext_resource type="AudioStream" uid="uid://cwb8astmjglgm" path="res://Assets/Sounds/thunder.wav" id="2_7x0ai"]
 [ext_resource type="AudioStream" uid="uid://ch1danorl6kw4" path="res://Assets/Sounds/zeusvoice.mp3" id="3_puwtv"]
-[ext_resource type="Texture2D" uid="uid://dyq77bc1xhaea" path="res://Assets/Images/Player/thunder.png" id="4_nxeup"]
-[ext_resource type="Texture2D" uid="uid://gtkm5i1qkq6u" path="res://Assets/Images/Player/zeusUlt3.png" id="5_3b2ki"]
+[ext_resource type="Texture2D" uid="uid://dyq77bc1xhaea" path="res://Assets/Images/Player/Ultimates/Zeus/thunder.png" id="4_nxeup"]
+[ext_resource type="Texture2D" uid="uid://gtkm5i1qkq6u" path="res://Assets/Images/Player/Ultimates/Zeus/zeusUlt3.png" id="5_3b2ki"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gnbrf"]
 atlas = ExtResource("4_nxeup")
@@ -71,7 +71,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2tay"]
-size = Vector2(236, 237)
+size = Vector2(236, 340)
 
 [node name="WarriorUltimateZeus" type="Node2D"]
 script = ExtResource("1_sy0il")
@@ -91,13 +91,12 @@ z_index = 1
 position = Vector2(7, 91)
 sprite_frames = SubResource("SpriteFrames_2gk0k")
 autoplay = "default"
-frame = 7
-frame_progress = 0.629515
+frame_progress = 0.279597
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1, -21.5)
+position = Vector2(1, 30)
 shape = SubResource("RectangleShape2D_h2tay")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

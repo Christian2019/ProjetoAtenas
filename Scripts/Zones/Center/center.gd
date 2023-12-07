@@ -1,15 +1,18 @@
 extends Node2D
 
-var maxHp=9999
+var maxHp=2000
 var hp = maxHp
 
 ##Feedback por levar dano ou curar
 var feedBackAtive=false
 var reverseAlphaChange=false
 
-var heal=10
+var heal=1
 var nextHealDelay=false
 var nextHealDealy=0.1
+
+func _ready():
+	Global.Center=self
 
 func _process(delta):
 	if (hp<=0):

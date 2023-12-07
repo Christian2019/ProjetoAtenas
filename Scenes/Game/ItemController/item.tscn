@@ -1,0 +1,305 @@
+[gd_scene load_steps=59 format=3 uid="uid://sj2bep2rsd1g"]
+
+[ext_resource type="Texture2D" uid="uid://d8ydqptq0jku" path="res://Assets/Images/Itens/background/ItemGood.png" id="1_k331i"]
+[ext_resource type="Script" path="res://Scripts/Game/ItemController/ItemSelected.gd" id="1_shhps"]
+[ext_resource type="Texture2D" uid="uid://bvx2vk62vlqhp" path="res://Assets/Images/Itens/background/ItemBlue.png" id="2_ulxcc"]
+[ext_resource type="Texture2D" uid="uid://bucv3v2r5e4vt" path="res://Assets/Images/Itens/background/ItemPurple.png" id="3_m1ov0"]
+[ext_resource type="Texture2D" uid="uid://4rrrmt58fwou" path="res://Assets/Images/Itens/background/ItemOrange.png" id="4_y67rq"]
+[ext_resource type="Texture2D" uid="uid://bdho2xtjt1rii" path="res://Assets/Images/Itens/Items/Ares'_Shield/AresShieldBronze.png" id="5_m3ifq"]
+[ext_resource type="Texture2D" uid="uid://bnsxfkxt52ixe" path="res://Assets/Images/Itens/Items/Ares'_Shield/AresShieldGold.png" id="6_ca2jl"]
+[ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="6_hq151"]
+[ext_resource type="Texture2D" uid="uid://bdocif3oel0e4" path="res://Assets/Images/Itens/Items/Ares'_Shield/AresShieldRock.png" id="7_dw4ld"]
+[ext_resource type="Texture2D" uid="uid://cl168xjeoy54f" path="res://Assets/Images/Itens/Items/Ares'_Shield/AresShieldSilver.png" id="8_xy2bq"]
+[ext_resource type="Texture2D" uid="uid://da2m5n4rpkykl" path="res://Assets/Images/Itens/Items/Ares'_Shield/AresShieldWood.png" id="9_s58v2"]
+[ext_resource type="Texture2D" uid="uid://bx1atuf56wehc" path="res://Assets/Images/Itens/Items/Artemis'_Bow/ArtemisBow1.png" id="10_lk33a"]
+[ext_resource type="Texture2D" uid="uid://dr8g2b8wodilc" path="res://Assets/Images/Itens/Items/Artemis'_Bow/ArtemisBow2.png" id="11_nof6h"]
+[ext_resource type="Texture2D" uid="uid://ccyacqmlslri5" path="res://Assets/Images/Itens/Items/Artemis'_Bow/ArtemisBow3.png" id="12_35pw0"]
+[ext_resource type="Texture2D" uid="uid://cvkh8syw38bu7" path="res://Assets/Images/Itens/Items/Artemis'_Bow/ArtemisBow4.png" id="13_sq5cd"]
+[ext_resource type="Texture2D" uid="uid://cbbleolgbycdt" path="res://Assets/Images/Itens/Items/Artemis'_Bow/ArtemisBow5.png" id="14_wvgfx"]
+[ext_resource type="Texture2D" uid="uid://cvsogf86whct4" path="res://Assets/Images/Itens/Items/Atenas'_Spear/AtenasSpearBronze.png" id="15_eypmc"]
+[ext_resource type="Texture2D" uid="uid://jy1l6j3dwmfr" path="res://Assets/Images/Itens/Items/Atenas'_Spear/AtenasSpearDIamond.png" id="16_y7pm6"]
+[ext_resource type="Texture2D" uid="uid://pkcfrj6oybt4" path="res://Assets/Images/Itens/Items/Atenas'_Spear/AtenasSpearGold.png" id="17_0tasy"]
+[ext_resource type="Texture2D" uid="uid://cff8chjamiveg" path="res://Assets/Images/Itens/Items/Atenas'_Spear/AtenasSpearSilver.png" id="18_u53um"]
+[ext_resource type="Texture2D" uid="uid://dmixuyypqls7j" path="res://Assets/Images/Itens/Items/Atenas'_Spear/AtenasSpearWood.png" id="19_rwq6x"]
+[ext_resource type="Texture2D" uid="uid://bv3tvdal8elyk" path="res://Assets/Images/Itens/Items/Demeter's_Cifer/DemetersCiferBronze.png" id="20_435ie"]
+[ext_resource type="Texture2D" uid="uid://b68kytlaev0nr" path="res://Assets/Images/Itens/Items/Demeter's_Cifer/DemetersCiferDiamond.png" id="21_1fk6n"]
+[ext_resource type="Texture2D" uid="uid://bodusc1ayda3t" path="res://Assets/Images/Itens/Items/Demeter's_Cifer/DemetersCiferGold.png" id="22_v875l"]
+[ext_resource type="Texture2D" uid="uid://dryl1a4708vxf" path="res://Assets/Images/Itens/Items/Demeter's_Cifer/DemetersCiferMetal.png" id="23_wwlud"]
+[ext_resource type="Texture2D" uid="uid://bo6xp25x82001" path="res://Assets/Images/Itens/Items/Demeter's_Cifer/DemetersCiferSilver.png" id="24_6bgt0"]
+[ext_resource type="Texture2D" uid="uid://c544qn57qf8rg" path="res://Assets/Images/Itens/Items/Dionisio's_CUP/DionisiosCupBronze.png" id="25_bufgy"]
+[ext_resource type="Texture2D" uid="uid://bowos2n6bmh8a" path="res://Assets/Images/Itens/Items/Dionisio's_CUP/DionisiosCupDiamond.png" id="26_ovxr8"]
+[ext_resource type="Texture2D" uid="uid://dyvytuemp7or1" path="res://Assets/Images/Itens/Items/Dionisio's_CUP/DionisiosCupGold.png" id="27_btdf8"]
+[ext_resource type="Texture2D" uid="uid://ct6fabcp2txyv" path="res://Assets/Images/Itens/Items/Dionisio's_CUP/DionisiosCupSilver.png" id="28_y1s2i"]
+[ext_resource type="Texture2D" uid="uid://j0voagv5nx76" path="res://Assets/Images/Itens/Items/Dionisio's_CUP/DionisiosCupWood.png" id="29_w0x4b"]
+[ext_resource type="Texture2D" uid="uid://b1jqetrbhq61s" path="res://Assets/Images/Itens/Items/Herme's_Shoes/HermesShoes2.png" id="30_105g7"]
+[ext_resource type="Texture2D" uid="uid://pnvud1s1jgje" path="res://Assets/Images/Itens/Items/Herme's_Shoes/HermesShoes3.png" id="31_57y0g"]
+[ext_resource type="Texture2D" uid="uid://cxkhfxar8p4dk" path="res://Assets/Images/Itens/Items/Herme's_Shoes/HermesShoes4.png" id="32_2wh1o"]
+[ext_resource type="Texture2D" uid="uid://cumv0pwvgw5mh" path="res://Assets/Images/Itens/Items/Herme's_Shoes/HermesShoes5.png" id="33_8nc2o"]
+[ext_resource type="Texture2D" uid="uid://cu4horg2jie67" path="res://Assets/Images/Itens/Items/Herme's_Shoes/HermesShoes.png" id="34_gppg0"]
+[ext_resource type="Texture2D" uid="uid://w44b8e0120jv" path="res://Assets/Images/Itens/Items/Midas'_Hand/HandOfStealingBronze.png" id="35_p670i"]
+[ext_resource type="Texture2D" uid="uid://dk031w5kgdbkj" path="res://Assets/Images/Itens/Items/Midas'_Hand/HandOfStealingGold.png" id="36_7ysy1"]
+[ext_resource type="Texture2D" uid="uid://comu4kgki52tb" path="res://Assets/Images/Itens/Items/Midas'_Hand/HandOfStealingGreen.png" id="37_f2hod"]
+[ext_resource type="Texture2D" uid="uid://c3gal3boympl6" path="res://Assets/Images/Itens/Items/Midas'_Hand/HandOfStealingHuman.png" id="38_ak1hv"]
+[ext_resource type="Texture2D" uid="uid://blaajv6cm616x" path="res://Assets/Images/Itens/Items/Midas'_Hand/HandOfStealingSilver.png" id="39_uucip"]
+[ext_resource type="Texture2D" uid="uid://brlr36cgdsppr" path="res://Assets/Images/Itens/Items/Poseidon's_Staff/PoseidonsStaffBronze.png" id="40_r4m8e"]
+[ext_resource type="Texture2D" uid="uid://doecehyhgujfl" path="res://Assets/Images/Itens/Items/Poseidon's_Staff/PoseidonsStaffDiamond.png" id="41_3cava"]
+[ext_resource type="Texture2D" uid="uid://cay64227x6n30" path="res://Assets/Images/Itens/Items/Poseidon's_Staff/PoseidonsStaffGold.png" id="42_vguyl"]
+[ext_resource type="Texture2D" uid="uid://dys00do456jra" path="res://Assets/Images/Itens/Items/Poseidon's_Staff/PoseidonsStaffPurple.png" id="43_7h232"]
+[ext_resource type="Texture2D" uid="uid://b04maepxh4hjp" path="res://Assets/Images/Itens/Items/Poseidon's_Staff/PoseidonsStaffSilver.png" id="44_8bwo4"]
+[ext_resource type="Texture2D" uid="uid://0ma8y5d0xjit" path="res://Assets/Images/Itens/Items/Warrior's_Sword/SwoordBronze.png" id="45_6y46k"]
+[ext_resource type="Texture2D" uid="uid://b4rle2c046bhd" path="res://Assets/Images/Itens/Items/Warrior's_Sword/SwordDiamond.png" id="46_tk0cx"]
+[ext_resource type="Texture2D" uid="uid://dwlriek7gdnhv" path="res://Assets/Images/Itens/Items/Warrior's_Sword/SwordGold.png" id="47_er01g"]
+[ext_resource type="Texture2D" uid="uid://cr1g83nrxh2cj" path="res://Assets/Images/Itens/Items/Warrior's_Sword/SwordSilver.png" id="48_4i04r"]
+[ext_resource type="Texture2D" uid="uid://dorrvehm2so1h" path="res://Assets/Images/Itens/Items/Warrior's_Sword/SwordWood.png" id="49_81fpc"]
+[ext_resource type="Texture2D" uid="uid://ctg5o0n6erpqg" path="res://Assets/Images/Itens/Items/Zeus'_Thunder/ZeusThunder2.png" id="50_5oqrq"]
+[ext_resource type="Texture2D" uid="uid://c1mptcgdyutt3" path="res://Assets/Images/Itens/Items/Zeus'_Thunder/ZeusThunder3.png" id="51_afruv"]
+[ext_resource type="Texture2D" uid="uid://scalwyfw6dwu" path="res://Assets/Images/Itens/Items/Zeus'_Thunder/ZeusThunder4.png" id="52_pashk"]
+[ext_resource type="Texture2D" uid="uid://deqe260melr7x" path="res://Assets/Images/Itens/Items/Zeus'_Thunder/ZeusThunder5.png" id="53_ghe0h"]
+[ext_resource type="Texture2D" uid="uid://ciqtoq7ft0lck" path="res://Assets/Images/Itens/Items/Zeus'_Thunder/ZeusThunder.png" id="54_idasw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hyqdi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_k331i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ulxcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m1ov0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y67rq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_43i62"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_m3ifq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ca2jl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dw4ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xy2bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_s58v2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lk33a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nof6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_35pw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sq5cd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wvgfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_eypmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_y7pm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_0tasy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_u53um")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_rwq6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_435ie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1fk6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_v875l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_wwlud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_6bgt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_bufgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ovxr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_btdf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_y1s2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_w0x4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_gppg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_105g7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_57y0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_2wh1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_8nc2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_p670i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_7ysy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_f2hod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ak1hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_uucip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_r4m8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_3cava")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_vguyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_7h232")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_8bwo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_6y46k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_tk0cx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_er01g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_4i04r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_81fpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_idasw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_5oqrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_afruv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_pashk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_ghe0h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Item" type="Node2D"]
+script = ExtResource("1_shhps")
+
+[node name="Quality" type="AnimatedSprite2D" parent="."]
+position = Vector2(126.5, 92.057)
+scale = Vector2(1.40555, 1.02286)
+sprite_frames = SubResource("SpriteFrames_hyqdi")
+
+[node name="Icons" type="AnimatedSprite2D" parent="."]
+position = Vector2(51, 34)
+scale = Vector2(0.311111, 0.311111)
+sprite_frames = SubResource("SpriteFrames_43i62")
+
+[node name="item_name" type="Label" parent="."]
+offset_left = 73.0
+offset_top = 9.0
+offset_right = 217.0
+offset_bottom = 66.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_hq151")
+theme_override_font_sizes/font_size = 19
+text = "ares shield bronze"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 218.0
+offset_top = 35.0
+offset_right = 271.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.917647, 0.886275, 0.564706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_hq151")
+theme_override_font_sizes/font_size = 12
+text = "item"
+
+[node name="descriptionPositive" type="Label" parent="."]
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 240.0
+offset_bottom = 134.0
+theme_override_colors/font_color = Color(0, 0.894118, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_hq151")
+theme_override_font_sizes/font_size = 12
+text = "+ 3 max hp and + 2 hp regen and + 1% life steal and + 5% damage and + 3% move speed and + 3% dodge and + 1 armor and + 5% luck"
+autowrap_mode = 2
+
+[node name="descriptionNegative" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 116.0
+offset_right = 238.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(0.898039, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_hq151")
+theme_override_font_sizes/font_size = 12
+text = "+ 3 max hp and + 2 hp regen and + 1% life steal and + 5% damage and + 3% move speed and + 3% dodge and + 1 armor and + 5% luck"
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 254.0
+offset_bottom = 185.0
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]

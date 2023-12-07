@@ -1,9 +1,9 @@
 extends Node2D
 
-var quality="legendary"
+var quality
 
 #Duracao em segundos
-var cd = 5
+var cd = 20
 
 var frame=0
 var max_duration = 15
@@ -12,8 +12,7 @@ var nextHitDelay = 1
 
 var maxWaveScale
 
-var maxKnockback=10000
-var knockBackSpeed=50
+var knockBackSpeed=100
 #Monstros que foram atingidos pelo ataque
 var monstersHit = []
 
@@ -24,7 +23,10 @@ var damage = 10
 var tentaclesQuantity
 var krakenAlly
 
+var divineReference
+
 func _ready():
+	cd=AllSkillsValues.warrior_ultimate_poseidon_cd
 	$Sprite2D.modulate.a=0
 	$Sprite2D2.visible=false
 	Global.Game.get_node("Night").visible=true
@@ -32,20 +34,33 @@ func _ready():
 	Global.timerCreator("destroy", max_duration,[],self)
 	qualityStatus()
 	maxWaveScale=Vector2(6,6)
+	attackSpeedModifier()
+
+func attackSpeedModifier():
+	nextHitDelay=nextHitDelay/Global.player.attack_Speed
 
 func qualityStatus():
-	#Cooldown: 60/20/5/5/5s Max activations per wave 1/2/2/3/4
 	if ( quality=="common"):
-		cd=5
+		damage=AllSkillsValues.warrior_ultimate_poseidon_damage[0]
+	elif ( quality=="rare"):
+		damage==AllSkillsValues.warrior_ultimate_poseidon_damage[1]
+	elif ( quality=="epic"):
+		damage==AllSkillsValues.warrior_ultimate_poseidon_damage[2]
 	elif ( quality=="legendary"):
-		cd=5
-		tentaclesQuantity=5
-		$Sprite2D2.visible=true
-		$Sprite2D2.modulate.a=0
-		$AudioStreamPlayer.play()
+		damage==AllSkillsValues.warrior_ultimate_poseidon_damage[3]
+		tentaclesQuantity=AllSkillsValues.warrior_ultimate_poseidon_tentaclesQuantity
+		createTentacles()
+	elif ( quality=="divine"):
+		damage==AllSkillsValues.warrior_ultimate_divine_poseidon_damage
+		tentaclesQuantity=AllSkillsValues.warrior_ultimate_divine_poseidon_tentaclesQuantity
 		createTentacles()
 		
 func createTentacles():
+	if (Global.player.turret.skill==null):
+		return
+	$Sprite2D2.visible=true
+	$Sprite2D2.modulate.a=0
+	$AudioStreamPlayer.play()
 	var kraken = Node2D.new()
 	Global.Game.get_node("Allies").add_child(kraken)
 	for i in range(0,tentaclesQuantity,1):
@@ -57,7 +72,7 @@ func createTentacles():
 		kraken.add_child(tentacle)
 		tentacle.global_position=spawnPosition
 		turret.global_position=tentacle.get_node("TurretPosition").global_position
-		turret.get_node("Animations").visible=false
+		turret.get_node("AnimatedSprite2D").visible=false
 	krakenAlly=kraken
 	
 
@@ -111,28 +126,30 @@ func damageAction():
 			var i = getMonsterHitIndex(monstersInArea[j])
 			if itsValid(monstersHit[i]):
 				if (!monstersHit[i].onHitDelay):
-					
 					Global.MathController.damageController(damage,monstersHit[i].monster)
 					knockBack()
 					monstersHit[i].onHitDelay=true
 					Global.timerCreator("removeNextHitDelay",nextHitDelay,[i],self)
 
 func destroy():
-	Global.hud.max_ultimate_frame=(cd)*60
-	Global.timerCreator("enableAttackUse",cd,[4],Global.player)
-	Global.Game.get_node("Night").visible=false
-	if (quality=="legendary"):
-		krakenAlly.queue_free()
+	if (quality=="divine"):
+		if is_instance_valid(divineReference):
+			divineReference.skillsFinish+=1
+	else:
+		Global.hud.max_ultimate_frame=(cd)*600
+		Global.timerCreator("enableAttackUse",cd,[4],Global.player)
+		Global.Game.get_node("Night").visible=false
+
+	if (quality=="legendary" or quality=="divine"):
+		if (krakenAlly!=null):
+			krakenAlly.queue_free()
 	queue_free()
 
 func knockBack():
 	for i in range(0,monstersInArea.size(),1):
 		var monster = monstersInArea[i]
 		var monsterHitObject=monstersHit[getMonsterHitIndex(monster)]
-		if (monsterHitObject.knockback>=maxKnockback):
-			continue
 		var angle= global_position.angle_to_point(monster.global_position)
-		monstersHit[getMonsterHitIndex(monster)].knockback+=knockBackSpeed
 		tryToMove(knockBackSpeed*cos(angle),knockBackSpeed*sin(angle),monster)
 
 		
@@ -176,7 +193,7 @@ func addMonster(monster):
 	monstersInArea.append(monster)
 	
 	if (monstersHit.is_empty() or !checkIfExist(monster.name)):
-		monstersHit.append({"monster":monster,"onHitDelay":false,"knockback":0,"objectReference":weakref(monster)})
+		monstersHit.append({"monster":monster,"onHitDelay":false,"objectReference":weakref(monster)})
 		
 
 

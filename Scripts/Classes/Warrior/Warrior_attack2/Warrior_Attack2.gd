@@ -118,7 +118,6 @@ func move():
 	angle+=speed
 	relativePosition.y=startDistanceFromPlayer*cos(deg_to_rad(angle))
 	relativePosition.x=startDistanceFromPlayer*sin(deg_to_rad(angle))
-	$Animation.rotation=deg_to_rad(-angle)
 	global_position= Global.player.global_position+relativePosition
 	
 	if (angle>=startRotationAngle+360):

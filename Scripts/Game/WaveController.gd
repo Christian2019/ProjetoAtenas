@@ -1,6 +1,6 @@
 extends Node2D
 
-var mining_max_duration_frames = 5*60
+var mining_max_duration_frames = 60*60
 
 var wave = 1
 var maxWave=20
@@ -37,8 +37,8 @@ func battleEnd():
 	for i in range(0,Global.player.permissions.size(),1):
 		Global.player.permissions[i]=true
 
-	Global.player.ultimateWaveActivations=0
 	clearWave()
+	Global.ShopScreen.refresh(0)
 
 func clearWave():
 	clearChildren("Enemies")
@@ -47,6 +47,7 @@ func clearWave():
 	clearChildren("Instances/X")
 	clearChildren("Allies")
 	clearChildren("Instances/Explosions")
+	clearChildren("Instances/Itens")
 	
 	Global.MathController.clearArrays()
 	
@@ -69,7 +70,7 @@ func spawnX(enemy):
 	
 func spawnGoblin():
 	var x = RandomNumberGenerator.new().randi_range(0, 99)
-	var chance = 50
+	var chance = 5
 	if (x<chance):
 		spawnX(PreLoads.id002.instantiate())	
 

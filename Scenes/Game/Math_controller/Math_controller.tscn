@@ -1,10 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnbfdi1wf6kki"]
+[gd_scene load_steps=14 format=3 uid="uid://bnbfdi1wf6kki"]
 
 [ext_resource type="Script" path="res://Scripts/Game/MathController/MathController.gd" id="1_u0nxw"]
 [ext_resource type="Script" path="res://Scripts/Game/MathController/Skills/attack1/Zeus/MC_attack1_zeus.gd" id="2_v55ly"]
 [ext_resource type="Script" path="res://Scripts/Game/MathController/Skills/attack1/Poseidon/MC_attack1_poseidon.gd" id="3_t5ppd"]
 [ext_resource type="Script" path="res://Scripts/Game/MathController/Skills/attack1/Hades/MC_attack1_hades.gd" id="4_qp6wu"]
 [ext_resource type="Script" path="res://Scripts/Game/MathController/Skills/attack2/Zeus/MC_attack2_zeus.gd" id="5_jae66"]
+[ext_resource type="Script" path="res://Scripts/Game/MathController/BonusStatus/Active/Attack2/Poseidon.gd" id="6_7uycn"]
+[ext_resource type="Script" path="res://Scripts/Game/MathController/Skills/attack2/Hades/MC_attack2_hades.gd" id="6_hmded"]
+[ext_resource type="Script" path="res://Scripts/Game/MathController/BonusStatus/Active/Attack2/Hades.gd" id="7_dhljb"]
+[ext_resource type="Script" path="res://Scripts/Game/MathController/Skills/dash/Zeus/Zeus.gd" id="7_hc6pg"]
+[ext_resource type="Script" path="res://Scripts/Game/MathController/Skills/dash/Poseidon/Poseidon.gd" id="8_bje1t"]
+[ext_resource type="Script" path="res://Scripts/Game/MathController/BonusStatus/Active/Dash/Zeus.gd" id="9_f5scr"]
+[ext_resource type="Script" path="res://Scripts/Game/MathController/BonusStatus/Active/Dash/Poseidon.gd" id="12_6mtjv"]
+[ext_resource type="Script" path="res://Scripts/Game/MathController/BonusStatus/Active/Dash/Hades.gd" id="13_uy3st"]
 
 [node name="MathController" type="Node2D"]
 z_index = 1
@@ -29,3 +37,35 @@ script = ExtResource("5_jae66")
 [node name="Poseidon" type="Node2D" parent="Attack2"]
 
 [node name="Hades" type="Node2D" parent="Attack2"]
+script = ExtResource("6_hmded")
+
+[node name="Dash" type="Node2D" parent="."]
+
+[node name="Zeus" type="Node2D" parent="Dash"]
+script = ExtResource("7_hc6pg")
+
+[node name="Poseidon" type="Node2D" parent="Dash"]
+script = ExtResource("8_bje1t")
+
+[node name="BonusStatus" type="Node2D" parent="."]
+
+[node name="Active" type="Node2D" parent="BonusStatus"]
+
+[node name="Attack2" type="Node2D" parent="BonusStatus/Active"]
+
+[node name="Poseidon" type="Node2D" parent="BonusStatus/Active/Attack2"]
+script = ExtResource("6_7uycn")
+
+[node name="Hades" type="Node2D" parent="BonusStatus/Active/Attack2"]
+script = ExtResource("7_dhljb")
+
+[node name="Dash" type="Node2D" parent="BonusStatus/Active"]
+
+[node name="Zeus" type="Node2D" parent="BonusStatus/Active/Dash"]
+script = ExtResource("9_f5scr")
+
+[node name="Poseidon" type="Node2D" parent="BonusStatus/Active/Dash"]
+script = ExtResource("12_6mtjv")
+
+[node name="Hades" type="Node2D" parent="BonusStatus/Active/Dash"]
+script = ExtResource("13_uy3st")

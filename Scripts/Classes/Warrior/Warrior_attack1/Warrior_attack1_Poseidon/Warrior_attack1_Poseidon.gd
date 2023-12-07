@@ -20,7 +20,6 @@ var reverseOrder=false
 
 #Variaveis modificaveis pelo jogador:
 
-
 var quality="legendary"
 
 #Damages 
@@ -38,32 +37,29 @@ var divineReference
 
 var canFinish=true
 
-
 func _ready():
 	attackSpeedModifier()
 	Global.timerCreator("enableReverseOrder",max_duration/2,[],self)
 	$Animation.visible=false
 	qualityStatus()
 	
-
 func attackSpeedModifier():
 	max_duration=max_duration/Global.player.attack_Speed
 	speed=speed*Global.player.attack_Speed
 
 func qualityStatus():
 	if ( quality=="common"):
-		extraDamagePerConsHit=2
+		extraDamagePerConsHit=AllSkillsValues.warrior_attack1_poseidon_extraDamagePerConsHit[0]
 	elif ( quality=="rare"):
-		extraDamagePerConsHit=4
+		extraDamagePerConsHit=AllSkillsValues.warrior_attack1_poseidon_extraDamagePerConsHit[1]
 	elif ( quality=="epic"):
-		extraDamagePerConsHit=6
+		extraDamagePerConsHit=AllSkillsValues.warrior_attack1_poseidon_extraDamagePerConsHit[2]
 	elif ( quality=="legendary"):
-		extraDamagePerConsHit=8
-		Global.MathController.attack1_poseidon.heavyDamageInstances=10
+		extraDamagePerConsHit=AllSkillsValues.warrior_attack1_poseidon_extraDamagePerConsHit[3]
+		Global.MathController.attack1_poseidon.heavyDamageInstances=AllSkillsValues.warrior_attack1_poseidon_heavyDamageInstances
 	elif ( quality=="divine"):
-		extraDamagePerConsHit=10
-		Global.MathController.attack1_poseidon.heavyDamageInstances=20
-
+		extraDamagePerConsHit=AllSkillsValues.warrior_attack1_divine_poseidon_extraDamagePerConsHit
+		Global.MathController.attack1_poseidon.heavyDamageInstances=AllSkillsValues.warrior_attack1_divine_poseidon_heavyDamageInstances
 
 func _process(_delta):
 	animation()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dx6fwl7w3oap6"]
 
-[ext_resource type="Script" path="res://Scripts/Classes/Warrior/DashShadow.gd" id="1_7cp02"]
+[ext_resource type="Script" path="res://Scripts/Classes/Warrior/Warrior_dash/DashShadow.gd" id="1_7cp02"]
 
 [node name="DashShadow" type="Node2D"]
 script = ExtResource("1_7cp02")
