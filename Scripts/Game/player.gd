@@ -53,7 +53,7 @@ var permissions = [
 	]
 
 #Resources
-var startResources=1000
+var startResources=0
 var wood = startResources
 var stone = startResources
 var gold = startResources
