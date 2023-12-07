@@ -3,7 +3,7 @@ extends Node2D
 var dead = false 
 
 ##Stats
-var baseMaxHp=10000.0
+var baseMaxHp=20.0
 var maxHpPercentBonus=0.0
 var maxHp=baseMaxHp
 var hp = maxHp
@@ -53,10 +53,11 @@ var permissions = [
 	]
 
 #Resources
-var wood = 1000
-var stone = 1000
-var gold = 1000
-var dracma=1000
+var startResources=0
+var wood = startResources
+var stone = startResources
+var gold = startResources
+var dracma=startResources
 var dracmaBag=0
 
 #Farming

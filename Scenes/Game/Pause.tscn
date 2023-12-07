@@ -68,7 +68,10 @@ offset_top = 230.693
 offset_right = 580.199
 offset_bottom = 264.693
 focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = ExtResource("7_yuhk3")
+theme_override_font_sizes/font_size = 35
 text = "CONTINUE"
+flat = true
 
 [node name="Options" type="Button" parent="Pause"]
 offset_left = 360.199
@@ -77,7 +80,10 @@ offset_right = 580.199
 offset_bottom = 314.693
 focus_neighbor_top = NodePath("../Continue")
 focus_neighbor_bottom = NodePath("../Exit")
-text = "OPTIONS"
+theme_override_fonts/font = ExtResource("7_yuhk3")
+theme_override_font_sizes/font_size = 35
+text = "options"
+flat = true
 
 [node name="Exit" type="Button" parent="Pause"]
 offset_left = 360.199
@@ -85,7 +91,10 @@ offset_top = 328.693
 offset_right = 580.199
 offset_bottom = 362.693
 focus_neighbor_top = NodePath("../Options")
+theme_override_fonts/font = ExtResource("7_yuhk3")
+theme_override_font_sizes/font_size = 35
 text = "EXIT"
+flat = true
 
 [node name="ItensHud" type="Node2D" parent="."]
 position = Vector2(-11, -14)
