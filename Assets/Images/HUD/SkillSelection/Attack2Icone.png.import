@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b04yem0fkick8"
-path="res://.godot/imported/attack1hudNoGod.png-170d654e013173ac8b2647ed7c19d6f2.ctex"
+uid="uid://ciwo5r53s541r"
+path="res://.godot/imported/Attack2Icone.png-9993fede8b306566c8b0205196d3fae6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/HUD/SkillSelection/attack1hudNoGod.png"
-dest_files=["res://.godot/imported/attack1hudNoGod.png-170d654e013173ac8b2647ed7c19d6f2.ctex"]
+source_file="res://Assets/Images/HUD/SkillSelection/Attack2Icone.png"
+dest_files=["res://.godot/imported/Attack2Icone.png-9993fede8b306566c8b0205196d3fae6.ctex"]
 
 [params]
 

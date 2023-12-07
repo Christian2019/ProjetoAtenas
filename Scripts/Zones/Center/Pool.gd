@@ -1,6 +1,6 @@
 extends Node2D
 
-var heal=0.1
+var heal=10
 var nextHealDelayPlayer=false
 var nextHealDealy=0.1
 

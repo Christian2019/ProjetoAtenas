@@ -65,7 +65,6 @@ func damageController(damage,target):
 		spawnDamage(finalDamage,target,crit,true,miss,false)
 		
 	elif (target.name!="Center"):
-		
 		#Effects
 		finalDamage=effects(target,finalDamage)
 

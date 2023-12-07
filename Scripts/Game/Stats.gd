@@ -20,4 +20,4 @@ func _process(delta):
 		$AllStats/maxDodge/Value.text=str(Global.player.maxDodge)
 		$AllStats/moveSpeed/Value.text=str(Global.player.moveSpeedPercentBonus*100)
 		$AllStats/luck/Value.text=str(Global.player.luck*100)
-		$AllStats/dracma/Value.text=str(Global.player.dracma)
+	

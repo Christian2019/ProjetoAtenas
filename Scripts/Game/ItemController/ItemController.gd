@@ -97,7 +97,7 @@ func updateItemBagScreen():
 		$ItemBagScreen/Take/UnSelected.visible=true
 
 func getRandomValue(quality):
-	var valueTotal=3
+	var valueTotal=1
 	var wood=0
 	var stone=0
 	var gold=0

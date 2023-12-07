@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d30hsgavaxyb5"
-path="res://.godot/imported/dashNoGodHud.png-58bc6600e80af1c1374638019b774f43.ctex"
+uid="uid://bdpprxydleamp"
+path="res://.godot/imported/TorretaIcone.png-0bc74c770a0c16d1a1a2db0674e49c8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/HUD/SkillSelection/dashNoGodHud.png"
-dest_files=["res://.godot/imported/dashNoGodHud.png-58bc6600e80af1c1374638019b774f43.ctex"]
+source_file="res://Assets/Images/HUD/SkillSelection/TorretaIcone.png"
+dest_files=["res://.godot/imported/TorretaIcone.png-0bc74c770a0c16d1a1a2db0674e49c8f.ctex"]
 
 [params]
 

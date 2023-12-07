@@ -19,7 +19,7 @@ extends Control
 
 #Piscina
 @export var poolHeal = 0.0
-@export var poolHealDelay = 0.000000
+
 
 
 @export var texture_normal = Texture.new()
@@ -113,15 +113,7 @@ func upgrades():
 		else:
 			$InfoDracma/Upgrades/Ammount.text = "-"+str(poolHeal)
 			$InfoDracma/Upgrades/Ammount.add_theme_color_override("font_color",Color("ff0000"))
-			
-		$InfoDracma/Upgrades2/WhatUpgrades.text ="Heal speed: "
-		if(poolHealDelay > 0):  
-			$InfoDracma/Upgrades2/Ammount.text = "+"+str(poolHealDelay)
-			$InfoDracma/Upgrades2/Ammount.add_theme_color_override("font_color",Color("00cc00"))
-		else:
-			$InfoDracma/Upgrades2/Ammount.text = "-"+str(poolHealDelay)
-			$InfoDracma/Upgrades2/Ammount.add_theme_color_override("font_color",Color("ff0000"))
-		pass
+	
 
  
 
@@ -214,7 +206,6 @@ func _on_imagem_pressed():
 		if(qtdDracma <= Global.player.dracma and qtdMinerios <= qtd_ore_player):
 			get_parent().get_parent().current_level_piscina+=1 
 			Global.Pool.heal = poolHeal
-			Global.Pool.nextHealDealy = poolHealDelay
 			Global.Pool.get_node("Animacao").play("Level"+str(get_parent().get_parent().current_level_piscina))
 			decreaseOre()
 			get_node("Aquired").visible=true

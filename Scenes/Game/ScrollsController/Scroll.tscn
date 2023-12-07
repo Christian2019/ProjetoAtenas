@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b8treb1euqxo8"]
+[gd_scene load_steps=26 format=3 uid="uid://b8treb1euqxo8"]
 
 [ext_resource type="Texture2D" uid="uid://yjcswgm42ljb" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00001.png" id="1_kq8nj"]
 [ext_resource type="Texture2D" uid="uid://bliuur2u7r03c" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00004.png" id="2_m5psp"]
@@ -15,6 +15,11 @@
 [ext_resource type="Texture2D" uid="uid://btikammdiikmy" path="res://Assets/Images/HUD/Ultimates/zeus&poseidonUltHUD.png" id="13_87psm"]
 [ext_resource type="Texture2D" uid="uid://b30q73hel4bo6" path="res://Assets/Images/HUD/Ultimates/zeusUlt.png" id="14_6ddgs"]
 [ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="15_250qx"]
+[ext_resource type="Texture2D" uid="uid://b75250bpa2spo" path="res://Assets/Images/HUD/SkillSelection/IconeAttack1.png" id="16_3jsxu"]
+[ext_resource type="Texture2D" uid="uid://ciwo5r53s541r" path="res://Assets/Images/HUD/SkillSelection/Attack2Icone.png" id="17_2hudx"]
+[ext_resource type="Texture2D" uid="uid://bdpprxydleamp" path="res://Assets/Images/HUD/SkillSelection/TorretaIcone.png" id="18_84tpf"]
+[ext_resource type="Texture2D" uid="uid://4sd4nq1fm7cs" path="res://Assets/Images/HUD/SkillSelection/DashIcone.png" id="19_4qs2i"]
+[ext_resource type="Texture2D" uid="uid://d0hhuk6tjxndq" path="res://Assets/Images/HUD/SkillSelection/Zeus_Profile.png" id="20_1ras4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kl772"]
 animations = [{
@@ -96,6 +101,29 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_g6vgt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7qpnn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_3jsxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_2hudx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_84tpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4qs2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1ras4")
 }],
 "loop": true,
 "name": &"default",
@@ -368,6 +396,12 @@ autowrap_mode = 2
 visible = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Small"]
-position = Vector2(62, 55)
+position = Vector2(-57, 53)
 scale = Vector2(0.641414, 0.641414)
 sprite_frames = SubResource("SpriteFrames_26i73")
+frame = 1
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Small"]
+position = Vector2(278, 15)
+scale = Vector2(0.445286, 0.445286)
+sprite_frames = SubResource("SpriteFrames_7qpnn")

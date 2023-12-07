@@ -53,7 +53,7 @@ var permissions = [
 	]
 
 #Resources
-var startResources=0
+var startResources=1000
 var wood = startResources
 var stone = startResources
 var gold = startResources
@@ -357,7 +357,7 @@ func creatAttackInstance(classChild):
 
 func attack2Controller():
 	var classChild=1	
-	if (Input.is_action_pressed("Attack2") and permissions[classChild] and permissions[0]):
+	if (Input.is_action_pressed("Attack2") and permissions[classChild]):
 		var attackInstance = creatAttackInstance(classChild)
 		Global.Game.get_node("Instances/Projectiles").add_child(attackInstance)
 		attackInstance.global_position=global_position

@@ -42,6 +42,7 @@ func removeActiveFunction():
 	Global.PlayrHudController.changePlayerSkillFunction()
 
 func updateScroll(scroll):
+	scroll.get_node("Small/AnimatedSprite2D2").frame=skilltype
 	scroll.get_node("Scroll").frame=quality
 	scroll.get_node("Big/AnimatedSprite2D").frame=godType
 	scroll.get_node("Big/AnimatedSprite2D2").visible=false

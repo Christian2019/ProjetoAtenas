@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bqduy4u8regjo"]
+[gd_scene load_steps=18 format=3 uid="uid://bqduy4u8regjo"]
 
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/MainPage.gd" id="1_n2wv5"]
 [ext_resource type="Script" path="res://Scripts/Zones/Temple/ShopScript.gd" id="2_m5fe6"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://c8uedu3u1iprj" path="res://Assets/Images/HUD/Loja/BarraMenu.png" id="12_wrag8"]
 [ext_resource type="PackedScene" uid="uid://d3gj72p3eit3p" path="res://Scenes/Game/Constructions/Temple/Upgrade/personagem.tscn" id="13_mclth"]
 [ext_resource type="PackedScene" uid="uid://cooqeupudot5l" path="res://Scenes/Game/Constructions/Temple/Upgrade/defender_point.tscn" id="14_ij6xs"]
+[ext_resource type="Texture2D" uid="uid://05u58rbkivwr" path="res://Assets/Images/Resources/64x64.png" id="17_18oq5"]
 
 [node name="TempleScreen" type="Node2D"]
 script = ExtResource("1_n2wv5")
@@ -325,26 +326,57 @@ scale = Vector2(0.531574, 0.633803)
 texture = ExtResource("12_wrag8")
 
 [node name="Labels" type="Node2D" parent="BG/MenuPrincipal"]
-position = Vector2(-984.849, -43.3889)
+position = Vector2(-930.256, -43.3889)
 scale = Vector2(1.88488, 1.57778)
 
 [node name="Ouro" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 16.9869
+offset_left = 11.9766
 offset_top = 13.0
-offset_right = 56.9869
-offset_bottom = 36.0
+offset_right = 51.9766
+offset_bottom = 39.0
+text = "9999"
+autowrap_mode = 2
 
 [node name="Wood" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 93.9869
+offset_left = 88.8265
 offset_top = 13.0
-offset_right = 133.987
-offset_bottom = 36.0
+offset_right = 128.827
+offset_bottom = 39.0
+text = "9999"
 
 [node name="Stone" type="Label" parent="BG/MenuPrincipal/Labels"]
-offset_left = 181.987
-offset_top = 13.0
-offset_right = 221.985
-offset_bottom = 36.0
+offset_left = 168.671
+offset_top = 12.0
+offset_right = 208.669
+offset_bottom = 38.0
+text = "9999"
+
+[node name="Dracma" type="Label" parent="BG/MenuPrincipal/Labels"]
+offset_left = 241.528
+offset_top = 12.0
+offset_right = 281.526
+offset_bottom = 38.0
+text = "9999"
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/MenuPrincipal/Labels"]
+position = Vector2(-1.9961, 24)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_pnbkw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BG/MenuPrincipal/Labels"]
+position = Vector2(148.71, 21)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_irgpp")
+
+[node name="Sprite2D3" type="Sprite2D" parent="BG/MenuPrincipal/Labels"]
+position = Vector2(68.8655, 24)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_chtjw")
+
+[node name="Sprite2D4" type="Sprite2D" parent="BG/MenuPrincipal/Labels"]
+position = Vector2(224.561, 22)
+scale = Vector2(0.421174, 0.421174)
+texture = ExtResource("17_18oq5")
 
 [node name="Abas" type="Node2D" parent="BG/MenuPrincipal"]
 position = Vector2(-984.849, -43.3889)

@@ -45,10 +45,15 @@ func _ready():
 	$InfoDracma/Titulo.text = titulo
 	#Text
 	get_node("InfoDracma/QtdDracma/Price").text = str(qtdDracma)
-	if(qtd_ore_player==0 or qtd_ore_player == null):
-		$InfoDracma/QtdMinerio.visible = false
 	pass # Replace with function body.
  
+func _process(delta):
+	if(Minerio == "gold"):
+		qtd_ore_player = Global.player.gold
+	elif(Minerio == "stone"):
+		qtd_ore_player = Global.player.stone
+	elif(Minerio == "wood"):
+		qtd_ore_player = Global.player.wood
 		
 func upgrades():
 	if(whatUpgrades=="Attack"):
@@ -103,23 +108,23 @@ func upgrades():
 			$InfoDracma/Upgrade3/Price.add_theme_color_override("font_color",Color("ff0000"))  
 		$InfoDracma/Upgrade3/Upgrade3.animation="MaxDodge"
 
+
 func verificaOre():
-	if(qtdMinerios>0): 
+	if(qtdMinerios>=0):  
 			if(Minerio == "gold"):
 				get_node("InfoDracma/QtdMinerio/Minerio").animation = Minerio
-				get_node("InfoDracma/QtdMinerio/Price").text = str(qtdMinerios)
-				qtd_ore_player = Global.player.gold
+				get_node("InfoDracma/QtdMinerio/Price").text = str(qtdMinerios) 
 				pass
 			elif(Minerio == "stone"):
 				get_node("InfoDracma/QtdMinerio/Minerio").animation = Minerio
-				get_node("InfoDracma/QtdMinerio/Price").text = str(qtdMinerios)
-				qtd_ore_player = Global.player.stone
+				get_node("InfoDracma/QtdMinerio/Price").text = str(qtdMinerios) 
 				pass
 			elif(Minerio == "wood"):
 				get_node("InfoDracma/QtdMinerio/Minerio").animation = Minerio
-				get_node("InfoDracma/QtdMinerio/Price").text = str(qtdMinerios)
-				qtd_ore_player = Global.player.wood 
+				get_node("InfoDracma/QtdMinerio/Price").text = str(qtdMinerios) 
 				pass
+	else:
+		qtd_ore_player = 0
 
 func decreaseOre():
 		if(Minerio=="gold"):
@@ -155,6 +160,20 @@ func _on_imagem_pressed():
 			Global.player.change_animation()
 			decreaseOre()
 			get_node("Aquired").visible=true
+		else: 
+			turnOnWarning() 
+			if(qtdDracma > Global.player.dracma): 
+				get_node("WarningSign/Warning").text = "You need more Dracmas"
+			else: 
+				if(Minerio == "gold"):
+					if(qtd_ore_player < qtdMinerios): 
+						get_node("WarningSign/Warning").text = "You need more gold"
+				elif(Minerio == "stone"):
+					if(qtd_ore_player < qtdMinerios): 
+						get_node("WarningSign/Warning").text = "You need more stone"
+				elif(Minerio == "wood"):
+					if(qtd_ore_player < qtdMinerios): 
+						get_node("WarningSign/Warning").text = "You need more wood"
 	elif(whatUpgrades=="Defense"):  
 		if(qtdDracma <= Global.player.dracma and qtdMinerios <= qtd_ore_player):
 			get_parent().get_parent().current_level_defense+=1
@@ -166,9 +185,28 @@ func _on_imagem_pressed():
 			Global.player.change_animation()
 			decreaseOre()
 			get_node("Aquired").visible=true
+		else: 
+			turnOnWarning() 
+			if(qtdDracma > Global.player.dracma): 
+				get_node("WarningSign/Warning").text = "You need more Dracmas"
+			else: 
+				if(Minerio == "gold"):
+					if(qtd_ore_player < qtdMinerios): 
+						get_node("WarningSign/Warning").text = "You need more gold"
+				elif(Minerio == "stone"):
+					if(qtd_ore_player < qtdMinerios): 
+						get_node("WarningSign/Warning").text = "You need more stone"
+				elif(Minerio == "wood"):
+					if(qtd_ore_player < qtdMinerios): 
+						get_node("WarningSign/Warning").text = "You need more wood" 
 
-
-
+func turnOnWarning():
+	get_node("WarningSign").visible=true  
+	$TurnOffWarning.start()
+	
+func turnOffWarning():
+	get_node("WarningSign").visible=false
+	
 func _on_imagem_focus_entered():
 	if($Imagem.disabled==false):
 		$InfoDracma.visible = true
@@ -179,4 +217,10 @@ func _on_imagem_focus_entered():
 
 func _on_imagem_focus_exited():
 	get_node("InfoDracma").visible=false
+	pass # Replace with function body.
+
+
+func _on_turn_off_warning_timeout():
+	$TurnOffWarning.wait_time=0.2
+	turnOffWarning()
 	pass # Replace with function body.

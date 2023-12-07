@@ -12,12 +12,15 @@ func _ready():
 	get_node("BG/MenuPrincipal/Abas/Shop").disabled=true;  
 	
 func _process(delta):   
-	get_node("BG/MenuPrincipal/Labels/Ouro").text=str("Gold: ",Global.player.gold)
-	get_node("BG/MenuPrincipal/Labels/Wood").text=str("Wood: ",Global.player.wood)
-	get_node("BG/MenuPrincipal/Labels/Stone").text= str("Stone: ",Global.player.stone)  
-	if Input.is_action_just_pressed("Exit"): 
-		get_tree().paused = false
-		visible=false
+	get_node("BG/MenuPrincipal/Labels/Ouro").text=str(Global.player.gold)
+	get_node("BG/MenuPrincipal/Labels/Wood").text=str(Global.player.wood)
+	get_node("BG/MenuPrincipal/Labels/Stone").text= str(Global.player.stone)
+	get_node("BG/MenuPrincipal/Labels/Dracma").text= str(Global.player.dracma)   
+	
+	if Input.is_action_just_pressed("Exit"):
+		if (visible): 
+			get_tree().paused = false
+			visible=false
   
 func transition(numPage): 
 	for i in range(0,len(pages)):

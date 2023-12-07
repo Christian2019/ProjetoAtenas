@@ -1,3 +1,4 @@
+res://Assets/Images/HUD/SkillSelection
 res://Assets/Images/LevelUp
 res://Assets/Images/Projectiles
 res://Scripts/Game/Scrolls/Warrior/WarriorAttack1
@@ -18,6 +19,4 @@ res://Assets/Images/Scrolls
 res://Assets/Images/Enemies/id005
 res://Scripts/Game/ItemController/Itens/tier4
 res://Scripts/Game/ItemController/Itens/tier3
-res://Scripts/Game/ItemController/Itens/tier2
-res://Scenes/Game/ItemController
 D:/PUC/DESENVOLVIMENTO DE JOGOS DIGITAIS/Semestre 2/GP/ProjetoAtenas

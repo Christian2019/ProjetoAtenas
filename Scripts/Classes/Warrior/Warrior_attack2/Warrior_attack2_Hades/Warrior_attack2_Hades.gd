@@ -59,7 +59,6 @@ func qualityStatus():
 	elif ( quality=="divine"):
 		damage+=AllSkillsValues.warrior_attack2_divine_hades_damage
 	
-	damage=1
 func createAnimation():
 	var anim = PreLoads.warrior_attack2_animations_effect.instantiate()
 	Global.player.add_child(anim)

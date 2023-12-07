@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dvgvp2thpqg12"]
+[gd_scene load_steps=14 format=3 uid="uid://dvgvp2thpqg12"]
 
 [ext_resource type="Script" path="res://Scripts/Game/Stats.gd" id="1_cnx1u"]
 [ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="1_f3yfy"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://cp1tv3148b287" path="res://Assets/Images/LevelUp/dodge.png" id="10_jpkbc"]
 [ext_resource type="Texture2D" uid="uid://bjhpim723r8pa" path="res://Assets/Images/LevelUp/moveSpeed.png" id="11_u0jbe"]
 [ext_resource type="Texture2D" uid="uid://buv505v5s2k07" path="res://Assets/Images/LevelUp/luck.png" id="12_0ahdh"]
-[ext_resource type="Texture2D" uid="uid://detogg1xdpi7s" path="res://Assets/Images/LevelUp/dracma.png" id="14_v8nvg"]
 
 [node name="Stats" type="Node2D"]
 script = ExtResource("1_cnx1u")
@@ -357,32 +356,6 @@ theme_override_font_sizes/font_size = 20
 text = "Luck %"
 
 [node name="Value" type="Label" parent="AllStats/luck"]
-offset_left = 149.0
-offset_top = 104.0
-offset_right = 234.0
-offset_bottom = 150.0
-theme_override_fonts/font = ExtResource("1_f3yfy")
-theme_override_font_sizes/font_size = 20
-text = "0"
-
-[node name="dracma" type="Node2D" parent="AllStats"]
-position = Vector2(0, 350)
-
-[node name="Sprite2D" type="Sprite2D" parent="AllStats/dracma"]
-position = Vector2(-3, 114)
-scale = Vector2(0.23494, 0.23494)
-texture = ExtResource("14_v8nvg")
-
-[node name="Name" type="Label" parent="AllStats/dracma"]
-offset_left = 16.0
-offset_top = 104.0
-offset_right = 153.0
-offset_bottom = 150.0
-theme_override_fonts/font = ExtResource("1_f3yfy")
-theme_override_font_sizes/font_size = 20
-text = "Dracma"
-
-[node name="Value" type="Label" parent="AllStats/dracma"]
 offset_left = 149.0
 offset_top = 104.0
 offset_right = 234.0

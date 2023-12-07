@@ -72,6 +72,7 @@ func removeActiveFunction():
 
 #MEXER
 func updateScroll(scroll):
+	scroll.get_node("Small/AnimatedSprite2D2").frame=skilltype
 	var divine=true
 	
 	#NAO MEXER

@@ -1,13 +1,18 @@
-[gd_scene load_steps=44 format=3 uid="uid://b18nigm5wn5ab"]
+[gd_scene load_steps=46 format=3 uid="uid://b18nigm5wn5ab"]
 
 [ext_resource type="Script" path="res://Scripts/MainScenes/Game_ViewPort/HUD.gd" id="1_60mgy"]
 [ext_resource type="FontFile" uid="uid://df4il2aive3ok" path="res://Assets/Fonts/Zeus-Land.otf" id="2_owy1r"]
+[ext_resource type="Texture2D" uid="uid://b75250bpa2spo" path="res://Assets/Images/HUD/SkillSelection/IconeAttack1.png" id="6_fe724"]
 [ext_resource type="Texture2D" uid="uid://bsnfphv05rlds" path="res://Assets/Images/HUD/waves/wave1.png" id="10_ghb0x"]
 [ext_resource type="Texture2D" uid="uid://c8h4x6cdrpqpk" path="res://Assets/Images/HUD/waves/wave2.png" id="11_kusy4"]
 [ext_resource type="Texture2D" uid="uid://bys0o6q3rv1kr" path="res://Assets/Images/HUD/waves/wave3.png" id="12_1ax7q"]
 [ext_resource type="Texture2D" uid="uid://bxth4dkos64s" path="res://Assets/Images/HUD/waves/wave4.png" id="13_581s8"]
+[ext_resource type="Texture2D" uid="uid://ciwo5r53s541r" path="res://Assets/Images/HUD/SkillSelection/Attack2Icone.png" id="13_cek1r"]
 [ext_resource type="Texture2D" uid="uid://coxsmj54lptwp" path="res://Assets/Images/HUD/waves/wave5.png" id="14_6fkh8"]
+[ext_resource type="Texture2D" uid="uid://bdpprxydleamp" path="res://Assets/Images/HUD/SkillSelection/TorretaIcone.png" id="14_yxmaa"]
+[ext_resource type="Texture2D" uid="uid://4sd4nq1fm7cs" path="res://Assets/Images/HUD/SkillSelection/DashIcone.png" id="15_2lmo8"]
 [ext_resource type="Texture2D" uid="uid://ckt6j1doftmd0" path="res://Assets/Images/HUD/waves/wave6.png" id="15_edd8s"]
+[ext_resource type="Texture2D" uid="uid://d0hhuk6tjxndq" path="res://Assets/Images/HUD/SkillSelection/Zeus_Profile.png" id="15_ojmqj"]
 [ext_resource type="Texture2D" uid="uid://enhn0dupvb3s" path="res://Assets/Images/HUD/waves/wave7.png" id="16_at322"]
 [ext_resource type="Texture2D" uid="uid://c4bqokigkd1xr" path="res://Assets/Images/HUD/waves/wave8.png" id="17_3cmjo"]
 [ext_resource type="Texture2D" uid="uid://bfxfl80s5xqds" path="res://Assets/Images/HUD/waves/wave9.png" id="18_g0fqi"]
@@ -29,11 +34,8 @@
 [ext_resource type="Texture2D" uid="uid://bliuur2u7r03c" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00004.png" id="33_afn4i"]
 [ext_resource type="Texture2D" uid="uid://r22njvg8r0py" path="res://Assets/Images/HUD/SkillSelection/Divine/scene00007.png" id="34_53nyw"]
 [ext_resource type="Texture2D" uid="uid://btikammdiikmy" path="res://Assets/Images/HUD/Ultimates/zeus&poseidonUltHUD.png" id="35_pokj2"]
-[ext_resource type="Texture2D" uid="uid://b04yem0fkick8" path="res://Assets/Images/HUD/SkillSelection/attack1hudNoGod.png" id="36_78yll"]
 [ext_resource type="Texture2D" uid="uid://ddnc0v2drshda" path="res://Assets/Images/HUD/Ultimates/hades&poseidonUltHUD.png" id="37_egsng"]
 [ext_resource type="Texture2D" uid="uid://dc80dk8ypu453" path="res://Assets/Images/HUD/Ultimates/zeus&hadesUltHUD.png" id="38_dqj6i"]
-[ext_resource type="Texture2D" uid="uid://d30hsgavaxyb5" path="res://Assets/Images/HUD/SkillSelection/dashNoGodHud.png" id="39_753by"]
-[ext_resource type="Texture2D" uid="uid://bxyb1duvesmhk" path="res://Assets/Images/HUD/SkillSelection/attack2hudNoGod.png" id="39_yx88j"]
 [ext_resource type="Texture2D" uid="uid://k6210wyey2t4" path="res://Assets/Images/HUD/HUD GAME3.png" id="41_jfwtf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_22btt"]
@@ -61,7 +63,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("36_78yll")
+"texture": ExtResource("6_fe724")
 }, {
 "duration": 1.0,
 "texture": ExtResource("29_35oqo")
@@ -90,7 +92,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("39_yx88j")
+"texture": ExtResource("13_cek1r")
 }, {
 "duration": 1.0,
 "texture": ExtResource("29_35oqo")
@@ -119,7 +121,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("14_yxmaa")
 }, {
 "duration": 1.0,
 "texture": ExtResource("29_35oqo")
@@ -148,7 +150,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("39_753by")
+"texture": ExtResource("15_2lmo8")
 }, {
 "duration": 1.0,
 "texture": ExtResource("29_35oqo")
@@ -177,7 +179,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("15_ojmqj")
 }, {
 "duration": 1.0,
 "texture": ExtResource("29_35oqo")
@@ -307,6 +309,7 @@ color = Color(0.835294, 0.764706, 0.231373, 1)
 scale = Vector2(1.72, 1.72)
 
 [node name="Selected" type="ColorRect" parent="Skills"]
+visible = false
 offset_left = 211.046
 offset_top = 555.233
 offset_right = 227.046
@@ -340,7 +343,7 @@ autoplay = "default"
 frame_progress = 0.51503
 
 [node name="Attack1" type="AnimatedSprite2D" parent="Skills/Attack1"]
-scale = Vector2(0.0244695, 0.040404)
+scale = Vector2(0.035, 0.035)
 sprite_frames = SubResource("SpriteFrames_0f3i7")
 frame = 1
 
@@ -361,7 +364,7 @@ autoplay = "default"
 frame_progress = 0.260363
 
 [node name="Attack2" type="AnimatedSprite2D" parent="Skills/Attack2"]
-scale = Vector2(0.0225119, 0.0391523)
+scale = Vector2(0.035, 0.035)
 sprite_frames = SubResource("SpriteFrames_3g5ue")
 frame = 1
 
@@ -382,7 +385,7 @@ autoplay = "default"
 frame_progress = 0.75954
 
 [node name="Turret" type="AnimatedSprite2D" parent="Skills/Turret"]
-scale = Vector2(0.0254483, 0.040404)
+scale = Vector2(0.035, 0.035)
 sprite_frames = SubResource("SpriteFrames_4n63o")
 frame = 1
 
@@ -403,7 +406,7 @@ autoplay = "default"
 frame_progress = 0.866052
 
 [node name="Dash" type="AnimatedSprite2D" parent="Skills/Dash"]
-scale = Vector2(0.0244695, 0.040404)
+scale = Vector2(0.035, 0.035)
 sprite_frames = SubResource("SpriteFrames_ecpgq")
 frame = 1
 
@@ -424,11 +427,12 @@ autoplay = "default"
 frame_progress = 0.845002
 
 [node name="Ultimate" type="AnimatedSprite2D" parent="Skills/Ultimate"]
-scale = Vector2(0.0225119, 0.0393806)
+scale = Vector2(0.035, 0.035)
 sprite_frames = SubResource("SpriteFrames_k2oq7")
 frame = 1
 
 [node name="cd" type="Node2D" parent="Skills/Ultimate"]
+visible = false
 position = Vector2(-14, -17.5)
 
 [node name="ColorRect" type="ColorRect" parent="Skills/Ultimate/cd"]
