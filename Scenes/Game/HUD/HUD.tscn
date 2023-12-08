@@ -432,7 +432,6 @@ sprite_frames = SubResource("SpriteFrames_k2oq7")
 frame = 1
 
 [node name="cd" type="Node2D" parent="Skills/Ultimate"]
-visible = false
 position = Vector2(-14, -17.5)
 
 [node name="ColorRect" type="ColorRect" parent="Skills/Ultimate/cd"]

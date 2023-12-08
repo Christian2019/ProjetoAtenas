@@ -96,11 +96,11 @@ var warrior_attack2_zeus_disorientation=0.9
 ##Divine
 #Hades
 var warrior_turret_divine_hades_passive=hp*5
-var warrior_turret_divine_hades_damage=40
+var warrior_turret_divine_hades_damage=100
 var warrior_turret_divine_hades_area=2
 #Poseidon
 var warrior_turret_divine_poseidon_passive=percentDamage*5
-var warrior_turret_divine_poseidon_sd=20
+var warrior_turret_divine_poseidon_sd=70
 var warrior_turret_divine_poseidon_pierce=4
 var warrior_turret_divine_poseidon_waterDamage=2
 #Zeus
@@ -111,12 +111,12 @@ var warrior_turret_divine_zeus_extraBounces=8
 ##Normal
 #Hades
 var warrior_turret_hades_passive=[hp,hp*2,hp*3,hp*4]
-var warrior_turret_hades_damage=[10,15,20,30]
+var warrior_turret_hades_damage=[25,40,50,60]
 var warrior_turret_hades_area=1.5
 
 #Poseidon
 var warrior_turret_poseidon_passive=[percentDamage*1,percentDamage*2,percentDamage*3,percentDamage*4]
-var warrior_turret_poseidon_sd=[2,4,8,10]
+var warrior_turret_poseidon_sd=[20,30,40,50]
 var warrior_turret_poseidon_pierce=[0,1,2,3]
 var warrior_turret_poseidon_waterDamage=1
 #Zeus
@@ -159,35 +159,35 @@ var warrior_dash_zeus_bonusSpeedDuration=2
 ##Divine
 #Hades
 var warrior_ultimate_divine_hades_passive=hp*5
-var warrior_ultimate_divine_hades_currentHPPercentDamage=0.5
+var warrior_ultimate_divine_hades_currentHPPercentDamage=0.05
 var warrior_ultimate_divine_hades_skeletonQuantity=90
-var warrior_ultimate_divine_hades_cerberusDamage=3000
+var warrior_ultimate_divine_hades_cerberusDamage=300
 #Poseidon
 var warrior_ultimate_divine_poseidon_passive=percentDamage*5
-var warrior_ultimate_divine_poseidon_damage=4500
+var warrior_ultimate_divine_poseidon_damage=450
 var warrior_ultimate_divine_poseidon_tentaclesQuantity=10
 #Zeus
 var warrior_ultimate_divine_zeus_passive=16
-var warrior_ultimate_divine_zeus_damage=900
-var warrior_ultimate_divine_zeus_cdReduction=2
+var warrior_ultimate_divine_zeus_damage=90
+var warrior_ultimate_divine_zeus_cdReduction=29
 
 ##Normal
 #Hades
 var warrior_ultimate_hades_passive=[hp,hp*2,hp*3,hp*4]
 var warrior_ultimate_hades_cd=20
-var warrior_ultimate_hades_currentHPPercentDamage=[0.1,0.15,0.2,0.3]
+var warrior_ultimate_hades_currentHPPercentDamage=[0.01,0.015,0.02,0.03]
 var warrior_ultimate_hades_skeletonQuantity=[15,30,45,60]
-var warrior_ultimate_hades_cerberusDamage=1500
+var warrior_ultimate_hades_cerberusDamage=100
 
 #Poseidon
 var warrior_ultimate_poseidon_passive=[percentDamage*1,percentDamage*2,percentDamage*3,percentDamage*4]
 var warrior_ultimate_poseidon_cd=20
-var warrior_ultimate_poseidon_damage=[1000,1500,2000,3000]
+var warrior_ultimate_poseidon_damage=[100,150,200,300]
 var warrior_ultimate_poseidon_tentaclesQuantity=5
 
 #Zeus
 var warrior_ultimate_zeus_passive=[1,2,4,8]
 var warrior_ultimate_zeus_cd=30
-var warrior_ultimate_zeus_damage=[200,300,400,600]
-var warrior_ultimate_zeus_cdReduction=1
+var warrior_ultimate_zeus_damage=[20,30,40,60]
+var warrior_ultimate_zeus_cdReduction=15
 	

@@ -25,7 +25,8 @@ func destroy():
 func createDivineInstance(god):
 	var attackInstance = god.instantiate()
 	attackInstance.quality= "divine"
+	attackInstance.divineReference=self
 	Global.Game.get_node("Instances/Ultimates").add_child(attackInstance)
 	attackInstance.global_position=global_position
-	attackInstance.divineReference=self
+	
 

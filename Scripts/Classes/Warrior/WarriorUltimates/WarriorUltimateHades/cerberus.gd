@@ -1,6 +1,6 @@
 extends Node2D
 
-var damage=500
+var damage
 var totalHeal=0
 
 var speed = 10

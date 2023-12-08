@@ -94,6 +94,6 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/Cooldown/value").text=str(cd)+"s"
 	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive[quality])+" damage " 
 	scroll.get_node("Big/Labels/Active/value").text="zeus will make a rain of lightning bolts for 15 seconds causing "+str(warrior_ultimate_zeus_damage[quality])+" sd to enemies every 0.2s that explode."
-	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="reduce the cooldown by every electrified* enemy for "+ str(warrior_ultimate_zeus_cdReduction) +"s. limit 0.1s cooldown."
+	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="reduce the cooldown by "+ str(warrior_ultimate_zeus_cdReduction) +"s."
 	scroll.get_node("Big/Labels/ExtraInfo").visible=false
 	#scroll.get_node("Big/Labels/ExtraInfo/value").text="cerberus*: creature that deals " + str(warrior_ultimate_hades_cerberusDamage) +" sd plus the amount of hp gain by your skeletons."
