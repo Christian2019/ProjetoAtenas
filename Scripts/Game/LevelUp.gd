@@ -6,6 +6,7 @@ var nextLevelExp=5.0
 var upgrades=0
 var selected=4
 var rerollPrice=1
+var freeChooseButton=false
 
 #Base values Upgrade
 var hp=AllSkillsValues.hp
@@ -199,6 +200,9 @@ func lvlupController():
 		update()
 	
 	elif (Input.is_action_just_pressed("Select")):
+		if !freeChooseButton:
+			freeChooseButton=true
+			return
 		if (selected==4 and Global.player.dracma>rerollPrice):
 			Global.player.dracma-=rerollPrice
 			rerollPrice+=1
@@ -257,5 +261,6 @@ func levelUp():
 	if (levelExperience>=nextLevelExp):
 		level+=1
 		levelExperience=0
-		nextLevelExp*=1.5
+		nextLevelExp*=1.2
 		upgrades+=1
+		freeChooseButton=false
