@@ -94,5 +94,5 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive[quality])+" max hp " 
 	scroll.get_node("Big/Labels/Active/value").text="hades will make an army of "+ str(warrior_ultimate_hades_skeletonQuantity[quality])+" skeletons for 15s causing "+str(warrior_ultimate_hades_currentHPPercentDamage[quality]*100)+"% current hp and heal you 1 hp per attack."
 	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="create a cerberus* for the rest of the wave"
-	#scroll.get_node("Big/Labels/ExtraInfo").visible=false
+	scroll.get_node("Big/Labels/ExtraInfo").visible=true
 	scroll.get_node("Big/Labels/ExtraInfo/value").text="cerberus*: creature that deals " + str(warrior_ultimate_hades_cerberusDamage) +" sd plus the amount of hp gain by your skeletons."

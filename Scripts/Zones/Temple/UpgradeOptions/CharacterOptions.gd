@@ -57,7 +57,6 @@ func _process(delta):
 		
 func upgrades():
 	if(whatUpgrades=="Attack"):
-		print(percentDamage)
 		#Upgrades
 		if(percentDamage>0):
 			$InfoDracma/Upgrade1/Price.text = "+"+str(percentDamage*AllSkillsValues.percentDamage*100)+"%"

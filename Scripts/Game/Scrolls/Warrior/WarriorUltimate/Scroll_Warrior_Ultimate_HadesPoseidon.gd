@@ -102,5 +102,5 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive)+" max hp "+ "+ "+str(passive2*100)+"% damage" 
 	scroll.get_node("Big/Labels/Active/value").text="hades will make an army of "+ str(warrior_ultimate_divine_hades_skeletonQuantity)+" skeletons for 15s causing "+str(warrior_ultimate_divine_hades_currentHPPercentDamage*100)+"% current hp and heal you 1 hp per attack. "+"poseidon will make a tsunami causing "+str(warrior_ultimate_divine_poseidon_damage)+" sd to enemies and knockback 100."
 	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="create a cerberus* for the rest of the wave."+" create a kraken for 5 seconds with "+str(warrior_ultimate_divine_poseidon_tentaclesQuantity)+" tentacles. each tentacle copys turret skill."
-	#scroll.get_node("Big/Labels/ExtraInfo").visible=false
+	scroll.get_node("Big/Labels/ExtraInfo").visible=true
 	scroll.get_node("Big/Labels/ExtraInfo/value").text="cerberus*: creature that deals " + str(warrior_ultimate_divine_hades_cerberusDamage) +" sd plus the amount of hp gain by your skeletons."

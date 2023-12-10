@@ -100,6 +100,6 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/Cooldown/value").text=str(cd)+"s"
 	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive)+" max hp "+"+ "+str(passive2*100)+"% damage" 
 	scroll.get_node("Big/Labels/Active/value").text="gain temporary "+str(warrior_attack1_divine_hades_attackSpeedBonusPercent*100) +"% attack speed for 5 seconds after hitting an enemy."+" gain water damage* "+ str(warrior_attack1_divine_poseidon_extraDamagePerConsHit) +" sd"
-	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="gain frenezy* "+str(warrior_attack1_divine_hades_frenzyPercent*100)+"%."+" after 20 hits with attack1 your next attack2 cause heavyDamage* "+ str(warrior_attack1_divine_poseidon_heavyDamageInstances)
-	#scroll.get_node("Big/Labels/ExtraInfo").visible=false
+	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="gain frenezy* "+str(warrior_attack1_divine_hades_frenzyPercent*100)+"%."+" after "+str(AllSkillsValues.warrior_attack1_poseidon_heavyDamageMaxHits)+" hits with attack1 your next attack2 cause heavyDamage* "+ str(warrior_attack1_divine_poseidon_heavyDamageInstances)
+	scroll.get_node("Big/Labels/ExtraInfo").visible=true
 	scroll.get_node("Big/Labels/ExtraInfo/value").text="frenezy*: gain  life steal for every x of your attack speed."+" heavyDamage*: x instances of attack1 in a short time. water damage*: extra x sd against same enemy."

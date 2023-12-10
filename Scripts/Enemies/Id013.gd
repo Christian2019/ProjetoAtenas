@@ -183,6 +183,7 @@ func spawnArrow(rel_position,angle):
 		
 
 func die():
+	Global.ItemController.dropIten(0.0,0.0,1.0,self)
 	for i in range(0,dracmas,1):
 		var dracma = PreLoads.dracma.instantiate()
 		dracma.global_position=global_position

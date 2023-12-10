@@ -54,10 +54,24 @@ var skills=[{"skill":0,"quality":0},
 {"skill":0,"quality":0},
 {"skill":0,"quality":0}
 ]
+var testMode=false
 
 func _ready():
 	Global.PlayrHudController=self
 	Global.timerCreator("changePlayerSkillFunction",0.1,[],self)
+	if (testMode):
+		Global.timerCreator("testModeFunction",0.1,[],self)
+
+func testModeFunction():
+	Global.player.baseMaxHp=500000.0
+	Global.player.hpRegeneration=10000
+	var startResources=1000000
+	Global.Center.maxHp=1000000
+	Global.Center.heal=10000
+	Global.player.wood = startResources
+	Global.player.stone = startResources
+	Global.player.gold = startResources
+	Global.player.dracma=startResources
 
 func changePlayerSkillFunction():
 	Global.player.attack1={"skill":attack1[skills[0].skill], "quality": qualitys[skills[0].quality]}

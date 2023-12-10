@@ -24,8 +24,7 @@ func mining(farming,playerRight,closerQuadrant):
 						
 						var collectable_instance = PreLoads.collectable.instantiate()
 						collectable_instance.value = closerQuadrant.value
-						print(closerQuadrant.value)
-						
+							
 						itenDrop(closerQuadrant)
 						
 						if (closerQuadrant.get_node("Resource").animation=="wood"):

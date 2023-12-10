@@ -76,10 +76,10 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/God/value").set("theme_override_colors/font_color", colors[2])
 	scroll.get_node("Big/Labels/SkillType/value").text="dash"
 	scroll.get_node("Big/Labels/Cooldown/var").text="cooldown:"
-	scroll.get_node("Big/Labels/Active/value").text="increase your movement speed by "+str(warrior_dash_zeus_moveSpeedPercentBonus[quality])+"% for "+str(warrior_dash_zeus_bonusSpeedDuration)+" seconds after dashes, cannot stack."
+	scroll.get_node("Big/Labels/Active/value").text="increase your movement speed by "+str(warrior_dash_zeus_moveSpeedPercentBonus[quality]*100)+"% for "+str(warrior_dash_zeus_bonusSpeedDuration)+" seconds after dashes, cannot stack."
 	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="gain ultra instinct* "+str(warrior_dash_zeus_UltraInstinct.armor)+"/"+str(warrior_dash_zeus_UltraInstinct.dodge*100)+"%."
 	scroll.get_node("Big/Labels/ExtraInfo/value").text="ultra instinct*: increase dodge and armor by that amount. Max dodge cap at "+str(warrior_dash_zeus_UltraInstinct.maxDodge)+"%"
-	
+	scroll.get_node("Big/Labels/ExtraInfo/value").visible=true
 	#Nao mexer
 	scroll.get_node("Big/Labels/Cooldown/value").text=str(cd[quality])+"s"
 	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive[quality])+"damage"

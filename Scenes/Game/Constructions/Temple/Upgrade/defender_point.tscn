@@ -109,8 +109,8 @@ whatUpgrades = "Center"
 qtdDracma = 25
 qtdMinerios = 2
 Minerio = "wood"
-heal = 5.0
-maxHp = 5000.0
+heal = 10.0
+maxHp = 10000.0
 texture_normal = ExtResource("12_2qt4m")
 texture_hover = ExtResource("13_7msxv")
 
@@ -129,8 +129,8 @@ whatUpgrades = "Center"
 qtdDracma = 40
 qtdMinerios = 5
 Minerio = "stone"
-heal = 15.0
-maxHp = 15000.0
+heal = 30.0
+maxHp = 30000.0
 texture_normal = ExtResource("14_x5i7r")
 texture_hover = ExtResource("15_ndqou")
 
@@ -148,8 +148,8 @@ whatUpgrades = "Center"
 qtdDracma = 80
 qtdMinerios = 10
 Minerio = "gold"
-heal = 50.0
-maxHp = 50000.0
+heal = 100.0
+maxHp = 100000.0
 texture_normal = ExtResource("16_kdgtr")
 texture_hover = ExtResource("17_mif5m")
 

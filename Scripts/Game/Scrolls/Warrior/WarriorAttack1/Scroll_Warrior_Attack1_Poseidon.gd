@@ -31,7 +31,6 @@ func start():
 	warrior_attack1_poseidon_extraDamagePerConsHit=AllSkillsValues.warrior_attack1_poseidon_extraDamagePerConsHit
 	warrior_attack1_poseidon_heavyDamageInstances=AllSkillsValues.warrior_attack1_poseidon_heavyDamageInstances
 
-
 func addPassiveFunction():
 	#Poseidon
 	Global.player.percentDamage+=passive[quality]
@@ -92,6 +91,6 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/Cooldown/value").text=str(cd)+"s"
 	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive[quality]*100)+"% damage" 
 	scroll.get_node("Big/Labels/Active/value").text="gain water damage* "+ str(warrior_attack1_poseidon_extraDamagePerConsHit[quality]) +" sd"
-	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="after 20 hits with attack1 your next attack2 cause heavyDamage* "+ str(warrior_attack1_poseidon_heavyDamageInstances)
-	#scroll.get_node("Big/Labels/ExtraInfo").visible=false
+	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="after "+str(AllSkillsValues.warrior_attack1_poseidon_heavyDamageMaxHits)+" hits with attack1 your next attack2 cause heavyDamage* "+ str(warrior_attack1_poseidon_heavyDamageInstances)
+	scroll.get_node("Big/Labels/ExtraInfo").visible=true
 	scroll.get_node("Big/Labels/ExtraInfo/value").text="heavyDamage*: x instances of attack1 in a short time. water damage*: extra x sd against same enemy after consecutives attacks."

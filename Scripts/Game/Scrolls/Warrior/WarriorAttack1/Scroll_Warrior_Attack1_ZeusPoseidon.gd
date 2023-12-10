@@ -103,6 +103,6 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/Cooldown/value").text=str(cd)+"s"
 	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive)+" damage "+"+ "+str(passive2*100)+"% damage" 
 	scroll.get_node("Big/Labels/Active/value").text="your attack1 emits a chain-lightning that deals "+str(warrior_attack1_divine_zeus_lightningDamage)+" sd when you damage an enemy.  produce "+str(warrior_attack1_divine_zeus_extraBounces)+" extra bounce. "+" gain water damage* "+ str(warrior_attack1_divine_poseidon_extraDamagePerConsHit) +" sd"
-	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="enemies hit by attack1 get electrified* " +str((warrior_attack1_divine_zeus_extraPercentDamage-1)*100)+"%."+" after 20 hits with attack1 your next attack2 cause heavyDamage* "+ str(warrior_attack1_divine_poseidon_heavyDamageInstances)
-	#scroll.get_node("Big/Labels/ExtraInfo").visible=false
+	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="enemies hit by attack1 get electrified* " +str((warrior_attack1_divine_zeus_extraPercentDamage-1)*100)+"%."+" after "+str(AllSkillsValues.warrior_attack1_poseidon_heavyDamageMaxHits)+" hits with attack1 your next attack2 cause heavyDamage* "+ str(warrior_attack1_divine_poseidon_heavyDamageInstances)
+	scroll.get_node("Big/Labels/ExtraInfo").visible=true
 	scroll.get_node("Big/Labels/ExtraInfo/value").text="electrified*: receive extra x damage from all sources for 5 seconds."+" heavyDamage*: x instances of attack1 in a short time. water damage*: extra x sd against same enemy."

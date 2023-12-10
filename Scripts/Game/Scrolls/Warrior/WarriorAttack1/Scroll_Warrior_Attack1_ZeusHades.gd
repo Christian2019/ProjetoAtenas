@@ -105,5 +105,5 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive)+" damage "+"+ "+str(passive2)+" max hp " 
 	scroll.get_node("Big/Labels/Active/value").text="your attack1 emits a chain-lightning that deals "+str(warrior_attack1_divine_zeus_lightningDamage)+" sd when you damage an enemy.  produce "+str(warrior_attack1_divine_zeus_extraBounces)+" extra bounce. "+"gain temporary "+str(warrior_attack1_divine_hades_attackSpeedBonusPercent*100) +"% attack speed for 5 seconds after hitting an enemy."
 	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="enemies hit by attack1 get electrified* " +str((warrior_attack1_divine_zeus_extraPercentDamage-1)*100)+"%."+" gain frenezy* "+str(warrior_attack1_divine_hades_frenzyPercent*100)+"%."
-	#scroll.get_node("Big/Labels/ExtraInfo").visible=false
+	scroll.get_node("Big/Labels/ExtraInfo").visible=true
 	scroll.get_node("Big/Labels/ExtraInfo/value").text="electrified*: receive extra x damage from all sources for 5 seconds."+" frenezy*: gain  life steal for every x of your attack speed."

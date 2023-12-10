@@ -103,5 +103,5 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive2*100)+"% damage "+ "+ "+str(passive)+" damage" 
 	scroll.get_node("Big/Labels/Active/value").text="zeus will make a rain of lightning bolts for 15 seconds causing "+str(warrior_ultimate_divine_zeus_damage)+" sd to enemies every 0.2s that explode."+" poseidon will make a tsunami causing "+str(warrior_ultimate_divine_poseidon_damage)+" sd to enemies and knockback 100."
 	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="reduce the cooldown by "+ str(warrior_ultimate_divine_zeus_cdReduction) +"s."+" create a kraken for 5 seconds with "+str(warrior_ultimate_divine_poseidon_tentaclesQuantity)+" tentacles. each tentacle copys turret skill."
-	#scroll.get_node("Big/Labels/ExtraInfo").visible=false
+	scroll.get_node("Big/Labels/ExtraInfo").visible=true
 	scroll.get_node("Big/Labels/ExtraInfo/value").text="electrified*: receive extra x damage from all sources for 5 seconds."

@@ -104,5 +104,5 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive)+" damage " +"+ "+str(passive2*100)+"% damage" 
 	scroll.get_node("Big/Labels/Active/value").text="turret’s attack causes a lightning bolt that deal "+ str(warrior_turret_divine_poseidon_sd+warrior_turret_divine_zeus_damage) +" sd to strike nearby foes."+" turrets’s create an arrow that causes "+str(warrior_turret_divine_zeus_damage+warrior_turret_divine_poseidon_sd)+" sd. it also pierce for "+str(warrior_turret_divine_poseidon_pierce)
 	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="turret’s attack became chain-lightning produce "+ str(warrior_turret_divine_zeus_extraBounces) +" extra bounce. " +" arrow causes water damage*"+str(warrior_turret_divine_poseidon_waterDamage)
-	#scroll.get_node("Big/Labels/ExtraInfo").visible=false
+	scroll.get_node("Big/Labels/ExtraInfo").visible=true
 	scroll.get_node("Big/Labels/ExtraInfo/value").text="waterDamage*: extra x sd against same enemy after consecutives attacks."

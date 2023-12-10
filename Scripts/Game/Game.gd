@@ -60,7 +60,7 @@ func _ready():
 
 
 func _process(_delta):
-	
+
 	if (Input.is_action_just_pressed("zoomOut")):
 		Global.camera.zoom.x=0.5
 		Global.camera.zoom.y=0.5

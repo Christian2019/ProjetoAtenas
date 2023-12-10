@@ -69,9 +69,12 @@ func _process(delta):
 func extraBonus():
 	if quality=="legendary":
 		cd=cd-AllSkillsValues.warrior_ultimate_zeus_cdReduction
+		if (cd<=0):
+			cd=1
 	if quality=="divine":
 		divineReference.cd=divineReference.cd-AllSkillsValues.warrior_ultimate_divine_zeus_cdReduction
-
+		if (divineReference.cd<=0):
+			divineReference.cd=1
 func damageAction():
 	if (monstersInArea.is_empty()):
 		return

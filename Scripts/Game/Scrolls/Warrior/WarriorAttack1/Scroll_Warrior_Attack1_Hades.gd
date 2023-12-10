@@ -93,5 +93,5 @@ func updateScroll(scroll):
 	scroll.get_node("Big/Labels/Passive/value").text="+ "+str(passive[quality])+" max hp " 
 	scroll.get_node("Big/Labels/Active/value").text="Gain temporary "+str(warrior_attack1_hades_attackSpeedBonusPercent[quality]*100) +"% attack speed for 5 seconds after hitting an enemy."
 	scroll.get_node("Big/Labels/LegendaryDivineBonus/value").text="gain frenezy* "+str(warrior_attack1_hades_frenzyPercent*100)+"%"
-	#scroll.get_node("Big/Labels/ExtraInfo").visible=false
+	scroll.get_node("Big/Labels/ExtraInfo").visible=true
 	scroll.get_node("Big/Labels/ExtraInfo/value").text="frenezy*: gain  life steal for every x of your attack speed"

@@ -158,7 +158,6 @@ func upgradeCentro():
 
 func upgradeMineracao(): 
 	if(whatUpgrades=="Power"):  
-		print()
 		if(qtdDracma <= Global.player.dracma): 
 			get_parent().get_parent().current_level_Power+=1 
 			Global.PlayerMining.damage_mining = valor 

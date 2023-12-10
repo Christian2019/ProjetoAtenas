@@ -2,6 +2,15 @@ extends Node2D
 
 var waterDamage=[]
 
+var heavyDamageHits=0
+var heavyDamageMaxHits
+var heavyDamageOn=false
+var heavyDamageInstances=0
+
+func _ready():
+	heavyDamageMaxHits=AllSkillsValues.warrior_attack1_poseidon_heavyDamageMaxHits
+
+
 func addEntityWaterDamage(element,extraDamagePerConsHit):
 	if (waterDamage.is_empty() or !Global.MathController.checkIfExist(element.name,waterDamage)):
 		var obj= {"element":element,"objectReference":weakref(element),"ConsHit":1,
@@ -11,11 +20,6 @@ func addEntityWaterDamage(element,extraDamagePerConsHit):
 	else:
 		var i=Global.MathController.getElementIndex(element,waterDamage)
 		waterDamage[i].ConsHit+=1
-
-var heavyDamageHits=0
-var heavyDamageMaxHits=20
-var heavyDamageOn=false
-var heavyDamageInstances=0
 
 func heavyDamageActivation():
 	heavyDamageOn=true
@@ -40,16 +44,12 @@ func heavyDamageInstance(i):
 		heavyDamageHits=0
 		attackInstance.canFinish=true
 
-func test():
-	Global.player.permissions[0]=true
-
 func effect(target,finalDamage):
 	if (Global.MathController.checkIfExist(target.name,waterDamage)):
 		var wd=waterDamage[Global.MathController.getElementIndex(target,waterDamage)]
 		finalDamage+=(wd.ConsHit*wd.extraDamagePerConsHit)
 
 	return finalDamage
-	
 
 func heavyDamageVerification():
 	if (heavyDamageHits>heavyDamageMaxHits and !heavyDamageOn):

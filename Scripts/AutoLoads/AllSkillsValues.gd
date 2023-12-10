@@ -14,8 +14,8 @@ var moveSpeed=0.03
 var luck=0.05
 
 #Enemies
-var enemyBaseHpWaveMultiplier=1.5
-var enemyBaseDamageWaveMultiplier=1.01
+var enemyBaseHpWaveMultiplier=2
+var enemyBaseDamageWaveMultiplier=1.1
 
 ####All
 ###WARRIOR
@@ -53,6 +53,7 @@ var warrior_attack1_hades_frenzyPercent=0.01
 var warrior_attack1_poseidon_passive=[percentDamage*1,percentDamage*2,percentDamage*3,percentDamage*4]
 var warrior_attack1_poseidon_extraDamagePerConsHit=[2,4,6,8]
 var warrior_attack1_poseidon_heavyDamageInstances=10
+var warrior_attack1_poseidon_heavyDamageMaxHits=3
 
 #Zeus
 var warrior_attack1_zeus_passive=[1,2,4,8]
